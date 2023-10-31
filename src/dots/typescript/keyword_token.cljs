@@ -96,14 +96,6 @@
   (^js [keyword-token cb-node cb-node-array]
    (.forEachChild ^js keyword-token cb-node cb-node-array)))
 
-(defn decorators
-  ^js [keyword-token]
-  (.-decorators ^js keyword-token))
-
-(defn modifiers
-  ^js [keyword-token]
-  (.-modifiers ^js keyword-token))
-
 (defn pos
   ^js [keyword-token]
   (.-pos ^js keyword-token))

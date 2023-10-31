@@ -101,14 +101,6 @@
   (^js [js-doc-variadic-type cb-node cb-node-array]
    (.forEachChild ^js js-doc-variadic-type cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-variadic-type]
-  (.-decorators ^js js-doc-variadic-type))
-
-(defn modifiers
-  ^js [js-doc-variadic-type]
-  (.-modifiers ^js js-doc-variadic-type))
-
 (defn pos
   ^js [js-doc-variadic-type]
   (.-pos ^js js-doc-variadic-type))

@@ -29,14 +29,14 @@
   (set! (.-isMemberCompletion ^js completion-info) value))
 
 (defn optional-replacement-span
-  "In the absence of `CompletionEntry[\"replacementSpan\"], the editor may choose whether to use
+  "In the absence of `CompletionEntry[\"replacementSpan\"]`, the editor may choose whether to use
    this span or its default one. If `CompletionEntry[\"replacementSpan\"]` is defined, that span
    must be used to commit that completion entry."
   ^js [completion-info]
   (.-optionalReplacementSpan ^js completion-info))
 
 (defn set-optional-replacement-span!
-  "In the absence of `CompletionEntry[\"replacementSpan\"], the editor may choose whether to use
+  "In the absence of `CompletionEntry[\"replacementSpan\"]`, the editor may choose whether to use
    this span or its default one. If `CompletionEntry[\"replacementSpan\"]` is defined, that span
    must be used to commit that completion entry."
   ^js [completion-info value]

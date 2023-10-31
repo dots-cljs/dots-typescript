@@ -100,14 +100,6 @@
   (^js [unparsed-section cb-node cb-node-array]
    (.forEachChild ^js unparsed-section cb-node cb-node-array)))
 
-(defn decorators
-  ^js [unparsed-section]
-  (.-decorators ^js unparsed-section))
-
-(defn modifiers
-  ^js [unparsed-section]
-  (.-modifiers ^js unparsed-section))
-
 (defn pos
   ^js [unparsed-section]
   (.-pos ^js unparsed-section))

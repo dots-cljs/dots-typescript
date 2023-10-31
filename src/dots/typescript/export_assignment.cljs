@@ -115,10 +115,6 @@
   (^js [export-assignment cb-node cb-node-array]
    (.forEachChild ^js export-assignment cb-node cb-node-array)))
 
-(defn decorators
-  ^js [export-assignment]
-  (.-decorators ^js export-assignment))
-
 (defn pos
   ^js [export-assignment]
   (.-pos ^js export-assignment))

@@ -104,14 +104,6 @@
   (^js [bundle cb-node cb-node-array]
    (.forEachChild ^js bundle cb-node cb-node-array)))
 
-(defn decorators
-  ^js [bundle]
-  (.-decorators ^js bundle))
-
-(defn modifiers
-  ^js [bundle]
-  (.-modifiers ^js bundle))
-
 (defn pos
   ^js [bundle]
   (.-pos ^js bundle))

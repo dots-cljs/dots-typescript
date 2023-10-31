@@ -128,14 +128,6 @@
   (^js [template-tail cb-node cb-node-array]
    (.forEachChild ^js template-tail cb-node cb-node-array)))
 
-(defn decorators
-  ^js [template-tail]
-  (.-decorators ^js template-tail))
-
-(defn modifiers
-  ^js [template-tail]
-  (.-modifiers ^js template-tail))
-
 (defn pos
   ^js [template-tail]
   (.-pos ^js template-tail))

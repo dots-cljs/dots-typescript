@@ -96,14 +96,6 @@
   (^js [true-literal cb-node cb-node-array]
    (.forEachChild ^js true-literal cb-node cb-node-array)))
 
-(defn decorators
-  ^js [true-literal]
-  (.-decorators ^js true-literal))
-
-(defn modifiers
-  ^js [true-literal]
-  (.-modifiers ^js true-literal))
-
 (defn pos
   ^js [true-literal]
   (.-pos ^js true-literal))

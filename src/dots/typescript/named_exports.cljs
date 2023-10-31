@@ -100,14 +100,6 @@
   (^js [named-exports cb-node cb-node-array]
    (.forEachChild ^js named-exports cb-node cb-node-array)))
 
-(defn decorators
-  ^js [named-exports]
-  (.-decorators ^js named-exports))
-
-(defn modifiers
-  ^js [named-exports]
-  (.-modifiers ^js named-exports))
-
 (defn pos
   ^js [named-exports]
   (.-pos ^js named-exports))

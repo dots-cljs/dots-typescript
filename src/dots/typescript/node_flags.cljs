@@ -8,6 +8,10 @@
 
 (def const (.-Const typescript/NodeFlags))
 
+(def using (.-Using typescript/NodeFlags))
+
+(def await-using (.-AwaitUsing typescript/NodeFlags))
+
 (def nested-namespace (.-NestedNamespace typescript/NodeFlags))
 
 (def synthesized (.-Synthesized typescript/NodeFlags))
@@ -51,6 +55,8 @@
 (def json-file (.-JsonFile typescript/NodeFlags))
 
 (def block-scoped (.-BlockScoped typescript/NodeFlags))
+
+(def constant (.-Constant typescript/NodeFlags))
 
 (def reachability-check-flags (.-ReachabilityCheckFlags typescript/NodeFlags))
 

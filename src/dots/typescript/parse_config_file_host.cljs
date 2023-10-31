@@ -36,6 +36,19 @@
   ^js [parse-config-file-host s]
   (.trace ^js parse-config-file-host s))
 
+(defn directory-exists?
+  ^js [parse-config-file-host directory-name]
+  (.directoryExists ^js parse-config-file-host directory-name))
+
+(defn realpath
+  "Resolve a symbolic link."
+  ^js [parse-config-file-host path]
+  (.realpath ^js parse-config-file-host path))
+
+(defn directories
+  ^js [parse-config-file-host path]
+  (.getDirectories ^js parse-config-file-host path))
+
 (defn on-un-recoverable-config-file-diagnostic
   "Reports unrecoverable error when parsing config file"
   ^js [parse-config-file-host]

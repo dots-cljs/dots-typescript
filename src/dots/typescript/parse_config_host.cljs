@@ -30,3 +30,20 @@
 (defn trace
   ^js [parse-config-host s]
   (.trace ^js parse-config-host s))
+
+(defn directory-exists?
+  ^js [parse-config-host directory-name]
+  (.directoryExists ^js parse-config-host directory-name))
+
+(defn realpath
+  "Resolve a symbolic link."
+  ^js [parse-config-host path]
+  (.realpath ^js parse-config-host path))
+
+(defn current-directory
+  ^js [parse-config-host]
+  (.getCurrentDirectory ^js parse-config-host))
+
+(defn directories
+  ^js [parse-config-host path]
+  (.getDirectories ^js parse-config-host path))

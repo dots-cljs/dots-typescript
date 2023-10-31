@@ -122,14 +122,6 @@
   (^js [js-doc-parameter-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-parameter-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-parameter-tag]
-  (.-decorators ^js js-doc-parameter-tag))
-
-(defn modifiers
-  ^js [js-doc-parameter-tag]
-  (.-modifiers ^js js-doc-parameter-tag))
-
 (defn pos
   ^js [js-doc-parameter-tag]
   (.-pos ^js js-doc-parameter-tag))

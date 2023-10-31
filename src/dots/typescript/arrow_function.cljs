@@ -113,10 +113,6 @@
   (^js [arrow-function cb-node cb-node-array]
    (.forEachChild ^js arrow-function cb-node cb-node-array)))
 
-(defn decorators
-  ^js [arrow-function]
-  (.-decorators ^js arrow-function))
-
 (defn pos
   ^js [arrow-function]
   (.-pos ^js arrow-function))

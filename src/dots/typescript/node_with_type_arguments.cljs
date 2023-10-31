@@ -100,14 +100,6 @@
   (^js [node-with-type-arguments cb-node cb-node-array]
    (.forEachChild ^js node-with-type-arguments cb-node cb-node-array)))
 
-(defn decorators
-  ^js [node-with-type-arguments]
-  (.-decorators ^js node-with-type-arguments))
-
-(defn modifiers
-  ^js [node-with-type-arguments]
-  (.-modifiers ^js node-with-type-arguments))
-
 (defn pos
   ^js [node-with-type-arguments]
   (.-pos ^js node-with-type-arguments))

@@ -10,6 +10,10 @@
   ^js [identifier]
   (.-escapedText ^js identifier))
 
+(defn text
+  ^js [identifier]
+  (.-text ^js identifier))
+
 (defn original-keyword-kind
   ^js [identifier]
   (.-originalKeywordKind ^js identifier))
@@ -17,14 +21,6 @@
 (defn in-js-doc-namespace?
   ^js [identifier]
   (.-isInJSDocNamespace ^js identifier))
-
-(defn set-is-in-js-doc-namespace!
-  ^js [identifier value]
-  (set! (.-isInJSDocNamespace ^js identifier) value))
-
-(defn text
-  ^js [identifier]
-  (.-text ^js identifier))
 
 (defn flags
   ^js [identifier]
@@ -117,14 +113,6 @@
    (.forEachChild ^js identifier cb-node))
   (^js [identifier cb-node cb-node-array]
    (.forEachChild ^js identifier cb-node cb-node-array)))
-
-(defn decorators
-  ^js [identifier]
-  (.-decorators ^js identifier))
-
-(defn modifiers
-  ^js [identifier]
-  (.-modifiers ^js identifier))
 
 (defn pos
   ^js [identifier]

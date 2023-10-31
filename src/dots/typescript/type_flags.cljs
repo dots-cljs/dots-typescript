@@ -64,6 +64,8 @@
 
 (def unit (.-Unit typescript/TypeFlags))
 
+(def freshable (.-Freshable typescript/TypeFlags))
+
 (def string-or-number-literal (.-StringOrNumberLiteral typescript/TypeFlags))
 
 (def possibly-falsy (.-PossiblyFalsy typescript/TypeFlags))

@@ -108,14 +108,6 @@
   (^js [super-element-access-expression cb-node cb-node-array]
    (.forEachChild ^js super-element-access-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [super-element-access-expression]
-  (.-decorators ^js super-element-access-expression))
-
-(defn modifiers
-  ^js [super-element-access-expression]
-  (.-modifiers ^js super-element-access-expression))
-
 (defn pos
   ^js [super-element-access-expression]
   (.-pos ^js super-element-access-expression))

@@ -101,14 +101,6 @@
   (^js [namespace-export-declaration cb-node cb-node-array]
    (.forEachChild ^js namespace-export-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [namespace-export-declaration]
-  (.-decorators ^js namespace-export-declaration))
-
-(defn modifiers
-  ^js [namespace-export-declaration]
-  (.-modifiers ^js namespace-export-declaration))
-
 (defn pos
   ^js [namespace-export-declaration]
   (.-pos ^js namespace-export-declaration))

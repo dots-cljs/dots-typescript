@@ -120,14 +120,6 @@
   (^js [regular-expression-literal cb-node cb-node-array]
    (.forEachChild ^js regular-expression-literal cb-node cb-node-array)))
 
-(defn decorators
-  ^js [regular-expression-literal]
-  (.-decorators ^js regular-expression-literal))
-
-(defn modifiers
-  ^js [regular-expression-literal]
-  (.-modifiers ^js regular-expression-literal))
-
 (defn pos
   ^js [regular-expression-literal]
   (.-pos ^js regular-expression-literal))

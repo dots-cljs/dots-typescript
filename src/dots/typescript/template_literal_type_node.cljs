@@ -108,14 +108,6 @@
   (^js [template-literal-type-node cb-node cb-node-array]
    (.forEachChild ^js template-literal-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [template-literal-type-node]
-  (.-decorators ^js template-literal-type-node))
-
-(defn modifiers
-  ^js [template-literal-type-node]
-  (.-modifiers ^js template-literal-type-node))
-
 (defn pos
   ^js [template-literal-type-node]
   (.-pos ^js template-literal-type-node))

@@ -100,14 +100,6 @@
   (^js [tuple-type-node cb-node cb-node-array]
    (.forEachChild ^js tuple-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [tuple-type-node]
-  (.-decorators ^js tuple-type-node))
-
-(defn modifiers
-  ^js [tuple-type-node]
-  (.-modifiers ^js tuple-type-node))
-
 (defn pos
   ^js [tuple-type-node]
   (.-pos ^js tuple-type-node))

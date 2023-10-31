@@ -104,14 +104,6 @@
   (^js [while-statement cb-node cb-node-array]
    (.forEachChild ^js while-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [while-statement]
-  (.-decorators ^js while-statement))
-
-(defn modifiers
-  ^js [while-statement]
-  (.-modifiers ^js while-statement))
-
 (defn pos
   ^js [while-statement]
   (.-pos ^js while-statement))

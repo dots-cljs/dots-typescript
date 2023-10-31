@@ -104,14 +104,6 @@
   (^js [jsx-expression cb-node cb-node-array]
    (.forEachChild ^js jsx-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-expression]
-  (.-decorators ^js jsx-expression))
-
-(defn modifiers
-  ^js [jsx-expression]
-  (.-modifiers ^js jsx-expression))
-
 (defn pos
   ^js [jsx-expression]
   (.-pos ^js jsx-expression))

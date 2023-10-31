@@ -162,3 +162,10 @@
    (.flat ^js sorted-readonly-array))
   (^js [sorted-readonly-array depth]
    (.flat ^js sorted-readonly-array depth)))
+
+(defn at
+  "Takes an integer value and returns the item at that index,
+   allowing for positive and negative integers.
+   Negative integers count back from the last item in the array."
+  ^js [sorted-readonly-array index]
+  (.at ^js sorted-readonly-array index))

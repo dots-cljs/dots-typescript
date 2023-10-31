@@ -120,14 +120,6 @@
   (^js [literal-like-node cb-node cb-node-array]
    (.forEachChild ^js literal-like-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [literal-like-node]
-  (.-decorators ^js literal-like-node))
-
-(defn modifiers
-  ^js [literal-like-node]
-  (.-modifiers ^js literal-like-node))
-
 (defn pos
   ^js [literal-like-node]
   (.-pos ^js literal-like-node))

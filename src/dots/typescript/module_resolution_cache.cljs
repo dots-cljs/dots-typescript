@@ -5,6 +5,16 @@
   ^js [module-resolution-cache]
   (.getPackageJsonInfoCache ^js module-resolution-cache))
 
+(defn from-directory-cache
+  (^js [module-resolution-cache name]
+   (.getFromDirectoryCache ^js module-resolution-cache name))
+  (^js [module-resolution-cache name mode]
+   (.getFromDirectoryCache ^js module-resolution-cache name mode))
+  (^js [module-resolution-cache name mode directory-name]
+   (.getFromDirectoryCache ^js module-resolution-cache name mode directory-name))
+  (^js [module-resolution-cache name mode directory-name redirected-reference]
+   (.getFromDirectoryCache ^js module-resolution-cache name mode directory-name redirected-reference)))
+
 (defn or-create-cache-for-directory
   (^js [module-resolution-cache directory-name]
    (.getOrCreateCacheForDirectory ^js module-resolution-cache directory-name))
@@ -28,3 +38,21 @@
    (.getOrCreateCacheForModuleName ^js module-resolution-cache non-relative-module-name mode))
   (^js [module-resolution-cache non-relative-module-name mode redirected-reference]
    (.getOrCreateCacheForModuleName ^js module-resolution-cache non-relative-module-name mode redirected-reference)))
+
+(defn from-non-relative-name-cache
+  (^js [module-resolution-cache non-relative-name]
+   (.getFromNonRelativeNameCache ^js module-resolution-cache non-relative-name))
+  (^js [module-resolution-cache non-relative-name mode]
+   (.getFromNonRelativeNameCache ^js module-resolution-cache non-relative-name mode))
+  (^js [module-resolution-cache non-relative-name mode directory-name]
+   (.getFromNonRelativeNameCache ^js module-resolution-cache non-relative-name mode directory-name))
+  (^js [module-resolution-cache non-relative-name mode directory-name redirected-reference]
+   (.getFromNonRelativeNameCache ^js module-resolution-cache non-relative-name mode directory-name redirected-reference)))
+
+(defn or-create-cache-for-non-relative-name
+  (^js [module-resolution-cache non-relative-name]
+   (.getOrCreateCacheForNonRelativeName ^js module-resolution-cache non-relative-name))
+  (^js [module-resolution-cache non-relative-name mode]
+   (.getOrCreateCacheForNonRelativeName ^js module-resolution-cache non-relative-name mode))
+  (^js [module-resolution-cache non-relative-name mode redirected-reference]
+   (.getOrCreateCacheForNonRelativeName ^js module-resolution-cache non-relative-name mode redirected-reference)))

@@ -108,14 +108,6 @@
   (^js [tagged-template-expression cb-node cb-node-array]
    (.forEachChild ^js tagged-template-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [tagged-template-expression]
-  (.-decorators ^js tagged-template-expression))
-
-(defn modifiers
-  ^js [tagged-template-expression]
-  (.-modifiers ^js tagged-template-expression))
-
 (defn pos
   ^js [tagged-template-expression]
   (.-pos ^js tagged-template-expression))

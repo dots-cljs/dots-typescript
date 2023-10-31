@@ -102,14 +102,6 @@
   (^js [semicolon-class-element cb-node cb-node-array]
    (.forEachChild ^js semicolon-class-element cb-node cb-node-array)))
 
-(defn decorators
-  ^js [semicolon-class-element]
-  (.-decorators ^js semicolon-class-element))
-
-(defn modifiers
-  ^js [semicolon-class-element]
-  (.-modifiers ^js semicolon-class-element))
-
 (defn pos
   ^js [semicolon-class-element]
   (.-pos ^js semicolon-class-element))

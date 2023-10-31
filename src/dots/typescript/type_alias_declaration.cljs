@@ -113,10 +113,6 @@
   (^js [type-alias-declaration cb-node cb-node-array]
    (.forEachChild ^js type-alias-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [type-alias-declaration]
-  (.-decorators ^js type-alias-declaration))
-
 (defn pos
   ^js [type-alias-declaration]
   (.-pos ^js type-alias-declaration))

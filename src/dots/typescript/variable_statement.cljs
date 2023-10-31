@@ -104,10 +104,6 @@
   (^js [variable-statement cb-node cb-node-array]
    (.forEachChild ^js variable-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [variable-statement]
-  (.-decorators ^js variable-statement))
-
 (defn pos
   ^js [variable-statement]
   (.-pos ^js variable-statement))

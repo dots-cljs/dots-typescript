@@ -20,6 +20,14 @@
   ^js [completion-entry-data-resolved value]
   (set! (.-exportName ^js completion-entry-data-resolved) value))
 
+(defn export-map-key
+  ^js [completion-entry-data-resolved]
+  (.-exportMapKey ^js completion-entry-data-resolved))
+
+(defn set-export-map-key!
+  ^js [completion-entry-data-resolved value]
+  (set! (.-exportMapKey ^js completion-entry-data-resolved) value))
+
 (defn file-name
   "The file name declaring the export's module symbol, if it was an external module"
   ^js [completion-entry-data-resolved]

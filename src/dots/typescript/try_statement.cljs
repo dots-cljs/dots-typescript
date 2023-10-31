@@ -108,14 +108,6 @@
   (^js [try-statement cb-node cb-node-array]
    (.forEachChild ^js try-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [try-statement]
-  (.-decorators ^js try-statement))
-
-(defn modifiers
-  ^js [try-statement]
-  (.-modifiers ^js try-statement))
-
 (defn pos
   ^js [try-statement]
   (.-pos ^js try-statement))

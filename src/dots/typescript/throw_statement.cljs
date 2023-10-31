@@ -100,14 +100,6 @@
   (^js [throw-statement cb-node cb-node-array]
    (.forEachChild ^js throw-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [throw-statement]
-  (.-decorators ^js throw-statement))
-
-(defn modifiers
-  ^js [throw-statement]
-  (.-modifiers ^js throw-statement))
-
 (defn pos
   ^js [throw-statement]
   (.-pos ^js throw-statement))

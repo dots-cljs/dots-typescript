@@ -105,14 +105,6 @@
   (^js [enum-member cb-node cb-node-array]
    (.forEachChild ^js enum-member cb-node cb-node-array)))
 
-(defn decorators
-  ^js [enum-member]
-  (.-decorators ^js enum-member))
-
-(defn modifiers
-  ^js [enum-member]
-  (.-modifiers ^js enum-member))
-
 (defn pos
   ^js [enum-member]
   (.-pos ^js enum-member))

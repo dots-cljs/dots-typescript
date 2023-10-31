@@ -96,14 +96,6 @@
   (^js [type-node cb-node cb-node-array]
    (.forEachChild ^js type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [type-node]
-  (.-decorators ^js type-node))
-
-(defn modifiers
-  ^js [type-node]
-  (.-modifiers ^js type-node))
-
 (defn pos
   ^js [type-node]
   (.-pos ^js type-node))

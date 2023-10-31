@@ -42,3 +42,15 @@
   "True if `resolvedFileName` comes from `node_modules`."
   ^js [resolved-module-full value]
   (set! (.-isExternalLibraryImport ^js resolved-module-full) value))
+
+(defn resolved-using-ts-extension?
+  "True if the original module reference used a .ts extension to refer directly to a .ts file,
+   which should produce an error during checking if emit is enabled."
+  ^js [resolved-module-full]
+  (.-resolvedUsingTsExtension ^js resolved-module-full))
+
+(defn set-resolved-using-ts-extension!
+  "True if the original module reference used a .ts extension to refer directly to a .ts file,
+   which should produce an error during checking if emit is enabled."
+  ^js [resolved-module-full value]
+  (set! (.-resolvedUsingTsExtension ^js resolved-module-full) value))

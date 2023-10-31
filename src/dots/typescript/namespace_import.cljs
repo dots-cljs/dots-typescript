@@ -101,14 +101,6 @@
   (^js [namespace-import cb-node cb-node-array]
    (.forEachChild ^js namespace-import cb-node cb-node-array)))
 
-(defn decorators
-  ^js [namespace-import]
-  (.-decorators ^js namespace-import))
-
-(defn modifiers
-  ^js [namespace-import]
-  (.-modifiers ^js namespace-import))
-
 (defn pos
   ^js [namespace-import]
   (.-pos ^js namespace-import))

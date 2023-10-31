@@ -100,14 +100,6 @@
   (^js [block cb-node cb-node-array]
    (.forEachChild ^js block cb-node cb-node-array)))
 
-(defn decorators
-  ^js [block]
-  (.-decorators ^js block))
-
-(defn modifiers
-  ^js [block]
-  (.-modifiers ^js block))
-
 (defn pos
   ^js [block]
   (.-pos ^js block))

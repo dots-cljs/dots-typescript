@@ -49,6 +49,14 @@
   "Inside function"
   (.-localVariableElement typescript/ScriptElementKind))
 
+(def variable-using-element
+  "using foo = ..."
+  (.-variableUsingElement typescript/ScriptElementKind))
+
+(def variable-await-using-element
+  "await using foo = ..."
+  (.-variableAwaitUsingElement typescript/ScriptElementKind))
+
 (def function-element
   "Inside module and script only
    function f() { }"
@@ -72,6 +80,10 @@
   "class X { [public|private]* foo:number; }
    interface Y { foo:number; }"
   (.-memberVariableElement typescript/ScriptElementKind))
+
+(def member-accessor-variable-element
+  "class X { [public|private]* accessor foo: number; }"
+  (.-memberAccessorVariableElement typescript/ScriptElementKind))
 
 (def constructor-implementation-element
   "class X { constructor() { } }
@@ -119,13 +131,13 @@
   (.-string typescript/ScriptElementKind))
 
 (def link
-  "Jsdoc @link: in `{@link C link text}`, the before and after text \"{@link \" and \"}\""
+  "Jsdoc"
   (.-link typescript/ScriptElementKind))
 
 (def link-name
-  "Jsdoc @link: in `{@link C link text}`, the entity name \"C\""
+  "Jsdoc"
   (.-linkName typescript/ScriptElementKind))
 
 (def link-text
-  "Jsdoc @link: in `{@link C link text}`, the link text \"link text\""
+  "Jsdoc"
   (.-linkText typescript/ScriptElementKind))

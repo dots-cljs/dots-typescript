@@ -113,14 +113,6 @@
   (^js [variable-declaration cb-node cb-node-array]
    (.forEachChild ^js variable-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [variable-declaration]
-  (.-decorators ^js variable-declaration))
-
-(defn modifiers
-  ^js [variable-declaration]
-  (.-modifiers ^js variable-declaration))
-
 (defn pos
   ^js [variable-declaration]
   (.-pos ^js variable-declaration))

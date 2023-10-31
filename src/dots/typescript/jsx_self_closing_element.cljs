@@ -108,14 +108,6 @@
   (^js [jsx-self-closing-element cb-node cb-node-array]
    (.forEachChild ^js jsx-self-closing-element cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-self-closing-element]
-  (.-decorators ^js jsx-self-closing-element))
-
-(defn modifiers
-  ^js [jsx-self-closing-element]
-  (.-modifiers ^js jsx-self-closing-element))
-
 (defn pos
   ^js [jsx-self-closing-element]
   (.-pos ^js jsx-self-closing-element))

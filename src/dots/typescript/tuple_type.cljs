@@ -10,26 +10,32 @@
   (set! (.-elementFlags ^js tuple-type) value))
 
 (defn min-length
+  "Number of required or variadic elements"
   ^js [tuple-type]
   (.-minLength ^js tuple-type))
 
 (defn set-min-length!
+  "Number of required or variadic elements"
   ^js [tuple-type value]
   (set! (.-minLength ^js tuple-type) value))
 
 (defn fixed-length
+  "Number of initial required or optional elements"
   ^js [tuple-type]
   (.-fixedLength ^js tuple-type))
 
 (defn set-fixed-length!
+  "Number of initial required or optional elements"
   ^js [tuple-type value]
   (set! (.-fixedLength ^js tuple-type) value))
 
 (defn has-rest-element?
+  "True if tuple has any rest or variadic elements"
   ^js [tuple-type]
   (.-hasRestElement ^js tuple-type))
 
 (defn set-has-rest-element!
+  "True if tuple has any rest or variadic elements"
   ^js [tuple-type value]
   (set! (.-hasRestElement ^js tuple-type) value))
 

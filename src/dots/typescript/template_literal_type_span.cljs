@@ -105,14 +105,6 @@
   (^js [template-literal-type-span cb-node cb-node-array]
    (.forEachChild ^js template-literal-type-span cb-node cb-node-array)))
 
-(defn decorators
-  ^js [template-literal-type-span]
-  (.-decorators ^js template-literal-type-span))
-
-(defn modifiers
-  ^js [template-literal-type-span]
-  (.-modifiers ^js template-literal-type-span))
-
 (defn pos
   ^js [template-literal-type-span]
   (.-pos ^js template-literal-type-span))

@@ -1,12 +1,10 @@
 (ns dots.typescript.completion-entry-data-unresolved)
 
 (defn export-map-key
-  "The key in the `ExportMapCache` where the completion entry's `SymbolExportInfo[]` is found"
   ^js [completion-entry-data-unresolved]
   (.-exportMapKey ^js completion-entry-data-unresolved))
 
 (defn set-export-map-key!
-  "The key in the `ExportMapCache` where the completion entry's `SymbolExportInfo[]` is found"
   ^js [completion-entry-data-unresolved value]
   (set! (.-exportMapKey ^js completion-entry-data-unresolved) value))
 

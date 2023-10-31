@@ -80,7 +80,6 @@
   (.getModuleResolutionCache ^js compiler-host))
 
 (defn resolve-type-reference-directives
-  "This method is a companion for 'resolveModuleNames' and is used to resolve 'types' references to actual type declaration files"
   (^js [compiler-host type-reference-directive-names containing-file]
    (.resolveTypeReferenceDirectives ^js compiler-host type-reference-directive-names containing-file))
   (^js [compiler-host type-reference-directive-names containing-file redirected-reference]
@@ -90,9 +89,38 @@
   (^js [compiler-host type-reference-directive-names containing-file redirected-reference options containing-file-mode]
    (.resolveTypeReferenceDirectives ^js compiler-host type-reference-directive-names containing-file redirected-reference options containing-file-mode)))
 
+(defn resolve-module-name-literals
+  (^js [compiler-host module-literals containing-file]
+   (.resolveModuleNameLiterals ^js compiler-host module-literals containing-file))
+  (^js [compiler-host module-literals containing-file redirected-reference]
+   (.resolveModuleNameLiterals ^js compiler-host module-literals containing-file redirected-reference))
+  (^js [compiler-host module-literals containing-file redirected-reference options]
+   (.resolveModuleNameLiterals ^js compiler-host module-literals containing-file redirected-reference options))
+  (^js [compiler-host module-literals containing-file redirected-reference options containing-source-file]
+   (.resolveModuleNameLiterals ^js compiler-host module-literals containing-file redirected-reference options containing-source-file))
+  (^js [compiler-host module-literals containing-file redirected-reference options containing-source-file reused-names]
+   (.resolveModuleNameLiterals ^js compiler-host module-literals containing-file redirected-reference options containing-source-file reused-names)))
+
+(defn resolve-type-reference-directive-references
+  (^js [compiler-host type-directive-references containing-file]
+   (.resolveTypeReferenceDirectiveReferences ^js compiler-host type-directive-references containing-file))
+  (^js [compiler-host type-directive-references containing-file redirected-reference]
+   (.resolveTypeReferenceDirectiveReferences ^js compiler-host type-directive-references containing-file redirected-reference))
+  (^js [compiler-host type-directive-references containing-file redirected-reference options]
+   (.resolveTypeReferenceDirectiveReferences ^js compiler-host type-directive-references containing-file redirected-reference options))
+  (^js [compiler-host type-directive-references containing-file redirected-reference options containing-source-file]
+   (.resolveTypeReferenceDirectiveReferences ^js compiler-host type-directive-references containing-file redirected-reference options containing-source-file))
+  (^js [compiler-host type-directive-references containing-file redirected-reference options containing-source-file reused-names]
+   (.resolveTypeReferenceDirectiveReferences ^js compiler-host type-directive-references containing-file redirected-reference options containing-source-file reused-names)))
+
 (defn environment-variable
   ^js [compiler-host name]
   (.getEnvironmentVariable ^js compiler-host name))
+
+(defn has-invalidated-resolutions?
+  "If provided along with custom resolveModuleNames or resolveTypeReferenceDirectives, used to determine if unchanged file path needs to re-resolve modules/type reference directives"
+  ^js [compiler-host file-path]
+  (.hasInvalidatedResolutions ^js compiler-host file-path))
 
 (defn create-hash
   ^js [compiler-host data]

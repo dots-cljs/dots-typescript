@@ -1,5 +1,13 @@
 (ns dots.typescript.compiler-options)
 
+(defn allow-importing-ts-extensions?
+  ^js [compiler-options]
+  (.-allowImportingTsExtensions ^js compiler-options))
+
+(defn set-allow-importing-ts-extensions!
+  ^js [compiler-options value]
+  (set! (.-allowImportingTsExtensions ^js compiler-options) value))
+
 (defn allow-js?
   ^js [compiler-options]
   (.-allowJs ^js compiler-options))
@@ -7,6 +15,14 @@
 (defn set-allow-js!
   ^js [compiler-options value]
   (set! (.-allowJs ^js compiler-options) value))
+
+(defn allow-arbitrary-extensions?
+  ^js [compiler-options]
+  (.-allowArbitraryExtensions ^js compiler-options))
+
+(defn set-allow-arbitrary-extensions!
+  ^js [compiler-options value]
+  (set! (.-allowArbitraryExtensions ^js compiler-options) value))
 
 (defn allow-synthetic-default-imports?
   ^js [compiler-options]
@@ -71,6 +87,14 @@
 (defn set-check-js!
   ^js [compiler-options value]
   (set! (.-checkJs ^js compiler-options) value))
+
+(defn custom-conditions
+  ^js [compiler-options]
+  (.-customConditions ^js compiler-options))
+
+(defn set-custom-conditions!
+  ^js [compiler-options value]
+  (set! (.-customConditions ^js compiler-options) value))
 
 (defn declaration?
   ^js [compiler-options]
@@ -183,6 +207,14 @@
 (defn set-force-consistent-casing-in-file-names!
   ^js [compiler-options value]
   (set! (.-forceConsistentCasingInFileNames ^js compiler-options) value))
+
+(defn ignore-deprecations
+  ^js [compiler-options]
+  (.-ignoreDeprecations ^js compiler-options))
+
+(defn set-ignore-deprecations!
+  ^js [compiler-options value]
+  (set! (.-ignoreDeprecations ^js compiler-options) value))
 
 (defn import-helpers?
   ^js [compiler-options]
@@ -584,6 +616,22 @@
   ^js [compiler-options value]
   (set! (.-removeComments ^js compiler-options) value))
 
+(defn resolve-package-json-exports?
+  ^js [compiler-options]
+  (.-resolvePackageJsonExports ^js compiler-options))
+
+(defn set-resolve-package-json-exports!
+  ^js [compiler-options value]
+  (set! (.-resolvePackageJsonExports ^js compiler-options) value))
+
+(defn resolve-package-json-imports?
+  ^js [compiler-options]
+  (.-resolvePackageJsonImports ^js compiler-options))
+
+(defn set-resolve-package-json-imports!
+  ^js [compiler-options value]
+  (set! (.-resolvePackageJsonImports ^js compiler-options) value))
+
 (defn root-dir
   ^js [compiler-options]
   (.-rootDir ^js compiler-options))
@@ -745,6 +793,14 @@
   "Paths used to compute primary types search locations"
   ^js [compiler-options value]
   (set! (.-typeRoots ^js compiler-options) value))
+
+(defn verbatim-module-syntax?
+  ^js [compiler-options]
+  (.-verbatimModuleSyntax ^js compiler-options))
+
+(defn set-verbatim-module-syntax!
+  ^js [compiler-options value]
+  (set! (.-verbatimModuleSyntax ^js compiler-options) value))
 
 (defn es-module-interop?
   ^js [compiler-options]

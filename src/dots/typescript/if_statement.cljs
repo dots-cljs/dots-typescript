@@ -108,14 +108,6 @@
   (^js [if-statement cb-node cb-node-array]
    (.forEachChild ^js if-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [if-statement]
-  (.-decorators ^js if-statement))
-
-(defn modifiers
-  ^js [if-statement]
-  (.-modifiers ^js if-statement))
-
 (defn pos
   ^js [if-statement]
   (.-pos ^js if-statement))

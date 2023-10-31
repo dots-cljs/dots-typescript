@@ -100,14 +100,6 @@
   (^js [break-statement cb-node cb-node-array]
    (.forEachChild ^js break-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [break-statement]
-  (.-decorators ^js break-statement))
-
-(defn modifiers
-  ^js [break-statement]
-  (.-modifiers ^js break-statement))
-
 (defn pos
   ^js [break-statement]
   (.-pos ^js break-statement))

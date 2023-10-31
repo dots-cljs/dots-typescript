@@ -100,14 +100,6 @@
   (^js [case-block cb-node cb-node-array]
    (.forEachChild ^js case-block cb-node cb-node-array)))
 
-(defn decorators
-  ^js [case-block]
-  (.-decorators ^js case-block))
-
-(defn modifiers
-  ^js [case-block]
-  (.-modifiers ^js case-block))
-
 (defn pos
   ^js [case-block]
   (.-pos ^js case-block))

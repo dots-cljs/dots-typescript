@@ -20,6 +20,20 @@
   ^js [get-completions-at-position-options value]
   (set! (.-triggerKind ^js get-completions-at-position-options) value))
 
+(defn include-symbol?
+  "Include a `symbol` property on each completion entry object.
+   Symbols reference cyclic data structures and sometimes an entire TypeChecker instance,
+   so use caution when serializing or retaining completion entries retrieved with this option."
+  ^js [get-completions-at-position-options]
+  (.-includeSymbol ^js get-completions-at-position-options))
+
+(defn set-include-symbol!
+  "Include a `symbol` property on each completion entry object.
+   Symbols reference cyclic data structures and sometimes an entire TypeChecker instance,
+   so use caution when serializing or retaining completion entries retrieved with this option."
+  ^js [get-completions-at-position-options value]
+  (set! (.-includeSymbol ^js get-completions-at-position-options) value))
+
 (defn include-external-module-exports?
   ^js [get-completions-at-position-options]
   (.-includeExternalModuleExports ^js get-completions-at-position-options))
@@ -141,6 +155,10 @@
   ^js [get-completions-at-position-options]
   (.-includeInlayEnumMemberValueHints ^js get-completions-at-position-options))
 
+(defn interactive-inlay-hints?
+  ^js [get-completions-at-position-options]
+  (.-interactiveInlayHints ^js get-completions-at-position-options))
+
 (defn allow-rename-of-import-path?
   ^js [get-completions-at-position-options]
   (.-allowRenameOfImportPath ^js get-completions-at-position-options))
@@ -148,3 +166,27 @@
 (defn auto-import-file-exclude-patterns
   ^js [get-completions-at-position-options]
   (.-autoImportFileExcludePatterns ^js get-completions-at-position-options))
+
+(defn organize-imports-ignore-case?
+  ^js [get-completions-at-position-options]
+  (.-organizeImportsIgnoreCase ^js get-completions-at-position-options))
+
+(defn organize-imports-collation
+  ^js [get-completions-at-position-options]
+  (.-organizeImportsCollation ^js get-completions-at-position-options))
+
+(defn organize-imports-locale
+  ^js [get-completions-at-position-options]
+  (.-organizeImportsLocale ^js get-completions-at-position-options))
+
+(defn organize-imports-numeric-collation?
+  ^js [get-completions-at-position-options]
+  (.-organizeImportsNumericCollation ^js get-completions-at-position-options))
+
+(defn organize-imports-accent-collation?
+  ^js [get-completions-at-position-options]
+  (.-organizeImportsAccentCollation ^js get-completions-at-position-options))
+
+(defn organize-imports-case-first
+  ^js [get-completions-at-position-options]
+  (.-organizeImportsCaseFirst ^js get-completions-at-position-options))

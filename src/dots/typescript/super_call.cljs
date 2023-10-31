@@ -112,14 +112,6 @@
   (^js [super-call cb-node cb-node-array]
    (.forEachChild ^js super-call cb-node cb-node-array)))
 
-(defn decorators
-  ^js [super-call]
-  (.-decorators ^js super-call))
-
-(defn modifiers
-  ^js [super-call]
-  (.-modifiers ^js super-call))
-
 (defn pos
   ^js [super-call]
   (.-pos ^js super-call))

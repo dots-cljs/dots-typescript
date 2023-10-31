@@ -122,14 +122,6 @@
   (^js [mapped-type-node cb-node cb-node-array]
    (.forEachChild ^js mapped-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [mapped-type-node]
-  (.-decorators ^js mapped-type-node))
-
-(defn modifiers
-  ^js [mapped-type-node]
-  (.-modifiers ^js mapped-type-node))
-
 (defn pos
   ^js [mapped-type-node]
   (.-pos ^js mapped-type-node))

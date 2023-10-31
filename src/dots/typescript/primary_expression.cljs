@@ -96,14 +96,6 @@
   (^js [primary-expression cb-node cb-node-array]
    (.forEachChild ^js primary-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [primary-expression]
-  (.-decorators ^js primary-expression))
-
-(defn modifiers
-  ^js [primary-expression]
-  (.-modifiers ^js primary-expression))
-
 (defn pos
   ^js [primary-expression]
   (.-pos ^js primary-expression))

@@ -11,5 +11,3 @@
 (def invalid-project-outputs-skipped (.-InvalidProject_OutputsSkipped typescript/ExitStatus))
 
 (def project-reference-cycle-outputs-skipped (.-ProjectReferenceCycle_OutputsSkipped typescript/ExitStatus))
-
-(def project-reference-cycle-outputs-skupped (.-ProjectReferenceCycle_OutputsSkupped typescript/ExitStatus))

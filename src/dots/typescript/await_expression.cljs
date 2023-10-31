@@ -100,14 +100,6 @@
   (^js [await-expression cb-node cb-node-array]
    (.forEachChild ^js await-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [await-expression]
-  (.-decorators ^js await-expression))
-
-(defn modifiers
-  ^js [await-expression]
-  (.-modifiers ^js await-expression))
-
 (defn pos
   ^js [await-expression]
   (.-pos ^js await-expression))

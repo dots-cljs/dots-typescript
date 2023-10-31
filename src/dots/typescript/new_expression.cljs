@@ -108,14 +108,6 @@
   (^js [new-expression cb-node cb-node-array]
    (.forEachChild ^js new-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [new-expression]
-  (.-decorators ^js new-expression))
-
-(defn modifiers
-  ^js [new-expression]
-  (.-modifiers ^js new-expression))
-
 (defn pos
   ^js [new-expression]
   (.-pos ^js new-expression))

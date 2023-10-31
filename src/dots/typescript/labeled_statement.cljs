@@ -104,14 +104,6 @@
   (^js [labeled-statement cb-node cb-node-array]
    (.forEachChild ^js labeled-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [labeled-statement]
-  (.-decorators ^js labeled-statement))
-
-(defn modifiers
-  ^js [labeled-statement]
-  (.-modifiers ^js labeled-statement))
-
 (defn pos
   ^js [labeled-statement]
   (.-pos ^js labeled-statement))

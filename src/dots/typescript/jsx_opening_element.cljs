@@ -108,14 +108,6 @@
   (^js [jsx-opening-element cb-node cb-node-array]
    (.forEachChild ^js jsx-opening-element cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-opening-element]
-  (.-decorators ^js jsx-opening-element))
-
-(defn modifiers
-  ^js [jsx-opening-element]
-  (.-modifiers ^js jsx-opening-element))
-
 (defn pos
   ^js [jsx-opening-element]
   (.-pos ^js jsx-opening-element))

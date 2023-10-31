@@ -96,14 +96,6 @@
   (^js [keyword-type-node cb-node cb-node-array]
    (.forEachChild ^js keyword-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [keyword-type-node]
-  (.-decorators ^js keyword-type-node))
-
-(defn modifiers
-  ^js [keyword-type-node]
-  (.-modifiers ^js keyword-type-node))
-
 (defn pos
   ^js [keyword-type-node]
   (.-pos ^js keyword-type-node))

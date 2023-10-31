@@ -100,14 +100,6 @@
   (^js [unparsed-text-like cb-node cb-node-array]
    (.forEachChild ^js unparsed-text-like cb-node cb-node-array)))
 
-(defn decorators
-  ^js [unparsed-text-like]
-  (.-decorators ^js unparsed-text-like))
-
-(defn modifiers
-  ^js [unparsed-text-like]
-  (.-modifiers ^js unparsed-text-like))
-
 (defn pos
   ^js [unparsed-text-like]
   (.-pos ^js unparsed-text-like))

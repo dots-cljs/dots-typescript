@@ -122,6 +122,30 @@
   (^js [language-service-host type-directive-names containing-file redirected-reference options containing-file-mode]
    (.resolveTypeReferenceDirectives ^js language-service-host type-directive-names containing-file redirected-reference options containing-file-mode)))
 
+(defn resolve-module-name-literals
+  (^js [language-service-host module-literals containing-file]
+   (.resolveModuleNameLiterals ^js language-service-host module-literals containing-file))
+  (^js [language-service-host module-literals containing-file redirected-reference]
+   (.resolveModuleNameLiterals ^js language-service-host module-literals containing-file redirected-reference))
+  (^js [language-service-host module-literals containing-file redirected-reference options]
+   (.resolveModuleNameLiterals ^js language-service-host module-literals containing-file redirected-reference options))
+  (^js [language-service-host module-literals containing-file redirected-reference options containing-source-file]
+   (.resolveModuleNameLiterals ^js language-service-host module-literals containing-file redirected-reference options containing-source-file))
+  (^js [language-service-host module-literals containing-file redirected-reference options containing-source-file reused-names]
+   (.resolveModuleNameLiterals ^js language-service-host module-literals containing-file redirected-reference options containing-source-file reused-names)))
+
+(defn resolve-type-reference-directive-references
+  (^js [language-service-host type-directive-references containing-file]
+   (.resolveTypeReferenceDirectiveReferences ^js language-service-host type-directive-references containing-file))
+  (^js [language-service-host type-directive-references containing-file redirected-reference]
+   (.resolveTypeReferenceDirectiveReferences ^js language-service-host type-directive-references containing-file redirected-reference))
+  (^js [language-service-host type-directive-references containing-file redirected-reference options]
+   (.resolveTypeReferenceDirectiveReferences ^js language-service-host type-directive-references containing-file redirected-reference options))
+  (^js [language-service-host type-directive-references containing-file redirected-reference options containing-source-file]
+   (.resolveTypeReferenceDirectiveReferences ^js language-service-host type-directive-references containing-file redirected-reference options containing-source-file))
+  (^js [language-service-host type-directive-references containing-file redirected-reference options containing-source-file reused-names]
+   (.resolveTypeReferenceDirectiveReferences ^js language-service-host type-directive-references containing-file redirected-reference options containing-source-file reused-names)))
+
 (defn directories
   ^js [language-service-host directory-name]
   (.getDirectories ^js language-service-host directory-name))
@@ -147,10 +171,10 @@
   ^js [language-service-host file-name]
   (.getParsedCommandLine ^js language-service-host file-name))
 
-(defn directory-exists?
-  ^js [language-service-host directory-name]
-  (.directoryExists ^js language-service-host directory-name))
-
 (defn compiler-host
   ^js [language-service-host]
   (.getCompilerHost ^js language-service-host))
+
+(defn directory-exists?
+  ^js [language-service-host directory-name]
+  (.directoryExists ^js language-service-host directory-name))

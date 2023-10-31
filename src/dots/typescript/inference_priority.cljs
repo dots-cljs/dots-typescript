@@ -1,6 +1,8 @@
 (ns dots.typescript.inference-priority
   (:require ["typescript" :as typescript]))
 
+(def none (.-None typescript/InferencePriority))
+
 (def naked-type-variable (.-NakedTypeVariable typescript/InferencePriority))
 
 (def speculative-tuple (.-SpeculativeTuple typescript/InferencePriority))

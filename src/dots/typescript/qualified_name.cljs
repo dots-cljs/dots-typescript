@@ -104,14 +104,6 @@
   (^js [qualified-name cb-node cb-node-array]
    (.forEachChild ^js qualified-name cb-node cb-node-array)))
 
-(defn decorators
-  ^js [qualified-name]
-  (.-decorators ^js qualified-name))
-
-(defn modifiers
-  ^js [qualified-name]
-  (.-modifiers ^js qualified-name))
-
 (defn pos
   ^js [qualified-name]
   (.-pos ^js qualified-name))

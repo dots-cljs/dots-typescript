@@ -76,6 +76,10 @@
   ^js [format-code-settings]
   (.-semicolons ^js format-code-settings))
 
+(defn indent-switch-case?
+  ^js [format-code-settings]
+  (.-indentSwitchCase ^js format-code-settings))
+
 (defn base-indent-size
   ^js [format-code-settings]
   (.-baseIndentSize ^js format-code-settings))

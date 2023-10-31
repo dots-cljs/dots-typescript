@@ -110,14 +110,6 @@
   (^js [property-access-entity-name-expression cb-node cb-node-array]
    (.forEachChild ^js property-access-entity-name-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [property-access-entity-name-expression]
-  (.-decorators ^js property-access-entity-name-expression))
-
-(defn modifiers
-  ^js [property-access-entity-name-expression]
-  (.-modifiers ^js property-access-entity-name-expression))
-
 (defn pos
   ^js [property-access-entity-name-expression]
   (.-pos ^js property-access-entity-name-expression))

@@ -17,14 +17,6 @@
   ^js [property-assignment]
   (.-initializer ^js property-assignment))
 
-(defn question-token
-  ^js [property-assignment]
-  (.-questionToken ^js property-assignment))
-
-(defn exclamation-token
-  ^js [property-assignment]
-  (.-exclamationToken ^js property-assignment))
-
 (defn flags
   ^js [property-assignment]
   (.-flags ^js property-assignment))
@@ -112,14 +104,6 @@
    (.forEachChild ^js property-assignment cb-node))
   (^js [property-assignment cb-node cb-node-array]
    (.forEachChild ^js property-assignment cb-node cb-node-array)))
-
-(defn decorators
-  ^js [property-assignment]
-  (.-decorators ^js property-assignment))
-
-(defn modifiers
-  ^js [property-assignment]
-  (.-modifiers ^js property-assignment))
 
 (defn pos
   ^js [property-assignment]

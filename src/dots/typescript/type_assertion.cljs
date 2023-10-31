@@ -105,14 +105,6 @@
   (^js [type-assertion cb-node cb-node-array]
    (.forEachChild ^js type-assertion cb-node cb-node-array)))
 
-(defn decorators
-  ^js [type-assertion]
-  (.-decorators ^js type-assertion))
-
-(defn modifiers
-  ^js [type-assertion]
-  (.-modifiers ^js type-assertion))
-
 (defn pos
   ^js [type-assertion]
   (.-pos ^js type-assertion))

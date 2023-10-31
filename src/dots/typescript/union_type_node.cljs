@@ -100,14 +100,6 @@
   (^js [union-type-node cb-node cb-node-array]
    (.forEachChild ^js union-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [union-type-node]
-  (.-decorators ^js union-type-node))
-
-(defn modifiers
-  ^js [union-type-node]
-  (.-modifiers ^js union-type-node))
-
 (defn pos
   ^js [union-type-node]
   (.-pos ^js union-type-node))

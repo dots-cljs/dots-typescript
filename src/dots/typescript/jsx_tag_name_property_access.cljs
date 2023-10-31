@@ -109,14 +109,6 @@
   (^js [jsx-tag-name-property-access cb-node cb-node-array]
    (.forEachChild ^js jsx-tag-name-property-access cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-tag-name-property-access]
-  (.-decorators ^js jsx-tag-name-property-access))
-
-(defn modifiers
-  ^js [jsx-tag-name-property-access]
-  (.-modifiers ^js jsx-tag-name-property-access))
-
 (defn pos
   ^js [jsx-tag-name-property-access]
   (.-pos ^js jsx-tag-name-property-access))

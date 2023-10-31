@@ -104,14 +104,6 @@
   (^js [indexed-access-type-node cb-node cb-node-array]
    (.forEachChild ^js indexed-access-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [indexed-access-type-node]
-  (.-decorators ^js indexed-access-type-node))
-
-(defn modifiers
-  ^js [indexed-access-type-node]
-  (.-modifiers ^js indexed-access-type-node))
-
 (defn pos
   ^js [indexed-access-type-node]
   (.-pos ^js indexed-access-type-node))

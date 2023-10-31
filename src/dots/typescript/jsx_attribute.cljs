@@ -105,14 +105,6 @@
   (^js [jsx-attribute cb-node cb-node-array]
    (.forEachChild ^js jsx-attribute cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-attribute]
-  (.-decorators ^js jsx-attribute))
-
-(defn modifiers
-  ^js [jsx-attribute]
-  (.-modifiers ^js jsx-attribute))
-
 (defn pos
   ^js [jsx-attribute]
   (.-pos ^js jsx-attribute))

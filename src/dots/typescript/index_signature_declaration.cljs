@@ -117,10 +117,6 @@
   (^js [index-signature-declaration cb-node cb-node-array]
    (.forEachChild ^js index-signature-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [index-signature-declaration]
-  (.-decorators ^js index-signature-declaration))
-
 (defn pos
   ^js [index-signature-declaration]
   (.-pos ^js index-signature-declaration))

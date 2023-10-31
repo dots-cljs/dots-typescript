@@ -104,14 +104,6 @@
   (^js [catch-clause cb-node cb-node-array]
    (.forEachChild ^js catch-clause cb-node cb-node-array)))
 
-(defn decorators
-  ^js [catch-clause]
-  (.-decorators ^js catch-clause))
-
-(defn modifiers
-  ^js [catch-clause]
-  (.-modifiers ^js catch-clause))
-
 (defn pos
   ^js [catch-clause]
   (.-pos ^js catch-clause))

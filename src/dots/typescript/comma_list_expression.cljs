@@ -101,14 +101,6 @@
   (^js [comma-list-expression cb-node cb-node-array]
    (.forEachChild ^js comma-list-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [comma-list-expression]
-  (.-decorators ^js comma-list-expression))
-
-(defn modifiers
-  ^js [comma-list-expression]
-  (.-modifiers ^js comma-list-expression))
-
 (defn pos
   ^js [comma-list-expression]
   (.-pos ^js comma-list-expression))

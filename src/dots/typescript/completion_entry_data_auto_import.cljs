@@ -12,6 +12,14 @@
   ^js [completion-entry-data-auto-import value]
   (set! (.-exportName ^js completion-entry-data-auto-import) value))
 
+(defn export-map-key
+  ^js [completion-entry-data-auto-import]
+  (.-exportMapKey ^js completion-entry-data-auto-import))
+
+(defn set-export-map-key!
+  ^js [completion-entry-data-auto-import value]
+  (set! (.-exportMapKey ^js completion-entry-data-auto-import) value))
+
 (defn module-specifier
   ^js [completion-entry-data-auto-import]
   (.-moduleSpecifier ^js completion-entry-data-auto-import))

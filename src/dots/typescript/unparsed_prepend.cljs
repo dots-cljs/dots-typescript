@@ -104,14 +104,6 @@
   (^js [unparsed-prepend cb-node cb-node-array]
    (.forEachChild ^js unparsed-prepend cb-node cb-node-array)))
 
-(defn decorators
-  ^js [unparsed-prepend]
-  (.-decorators ^js unparsed-prepend))
-
-(defn modifiers
-  ^js [unparsed-prepend]
-  (.-modifiers ^js unparsed-prepend))
-
 (defn pos
   ^js [unparsed-prepend]
   (.-pos ^js unparsed-prepend))

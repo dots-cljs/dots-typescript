@@ -104,14 +104,6 @@
   (^js [import-type-assertion-container cb-node cb-node-array]
    (.forEachChild ^js import-type-assertion-container cb-node cb-node-array)))
 
-(defn decorators
-  ^js [import-type-assertion-container]
-  (.-decorators ^js import-type-assertion-container))
-
-(defn modifiers
-  ^js [import-type-assertion-container]
-  (.-modifiers ^js import-type-assertion-container))
-
 (defn pos
   ^js [import-type-assertion-container]
   (.-pos ^js import-type-assertion-container))

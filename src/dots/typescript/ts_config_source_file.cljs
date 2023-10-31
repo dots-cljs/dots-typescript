@@ -271,14 +271,6 @@
   (^js [ts-config-source-file cb-node cb-node-array]
    (.forEachChild ^js ts-config-source-file cb-node cb-node-array)))
 
-(defn decorators
-  ^js [ts-config-source-file]
-  (.-decorators ^js ts-config-source-file))
-
-(defn modifiers
-  ^js [ts-config-source-file]
-  (.-modifiers ^js ts-config-source-file))
-
 (defn pos
   ^js [ts-config-source-file]
   (.-pos ^js ts-config-source-file))

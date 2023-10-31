@@ -100,14 +100,6 @@
   (^js [void-expression cb-node cb-node-array]
    (.forEachChild ^js void-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [void-expression]
-  (.-decorators ^js void-expression))
-
-(defn modifiers
-  ^js [void-expression]
-  (.-modifiers ^js void-expression))
-
 (defn pos
   ^js [void-expression]
   (.-pos ^js void-expression))

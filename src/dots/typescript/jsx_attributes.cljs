@@ -1,5 +1,9 @@
 (ns dots.typescript.jsx-attributes)
 
+(defn properties
+  ^js [jsx-attributes]
+  (.-properties ^js jsx-attributes))
+
 (defn kind
   ^js [jsx-attributes]
   (.-kind ^js jsx-attributes))
@@ -7,10 +11,6 @@
 (defn parent
   ^js [jsx-attributes]
   (.-parent ^js jsx-attributes))
-
-(defn properties
-  ^js [jsx-attributes]
-  (.-properties ^js jsx-attributes))
 
 (defn flags
   ^js [jsx-attributes]
@@ -99,14 +99,6 @@
    (.forEachChild ^js jsx-attributes cb-node))
   (^js [jsx-attributes cb-node cb-node-array]
    (.forEachChild ^js jsx-attributes cb-node cb-node-array)))
-
-(defn decorators
-  ^js [jsx-attributes]
-  (.-decorators ^js jsx-attributes))
-
-(defn modifiers
-  ^js [jsx-attributes]
-  (.-modifiers ^js jsx-attributes))
 
 (defn pos
   ^js [jsx-attributes]

@@ -124,14 +124,6 @@
   (^js [jsx-text cb-node cb-node-array]
    (.forEachChild ^js jsx-text cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-text]
-  (.-decorators ^js jsx-text))
-
-(defn modifiers
-  ^js [jsx-text]
-  (.-modifiers ^js jsx-text))
-
 (defn pos
   ^js [jsx-text]
   (.-pos ^js jsx-text))

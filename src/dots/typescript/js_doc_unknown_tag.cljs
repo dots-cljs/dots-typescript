@@ -105,14 +105,6 @@
   (^js [js-doc-unknown-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-unknown-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-unknown-tag]
-  (.-decorators ^js js-doc-unknown-tag))
-
-(defn modifiers
-  ^js [js-doc-unknown-tag]
-  (.-modifiers ^js js-doc-unknown-tag))
-
 (defn pos
   ^js [js-doc-unknown-tag]
   (.-pos ^js js-doc-unknown-tag))

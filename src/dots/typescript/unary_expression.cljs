@@ -96,14 +96,6 @@
   (^js [unary-expression cb-node cb-node-array]
    (.forEachChild ^js unary-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [unary-expression]
-  (.-decorators ^js unary-expression))
-
-(defn modifiers
-  ^js [unary-expression]
-  (.-modifiers ^js unary-expression))
-
 (defn pos
   ^js [unary-expression]
   (.-pos ^js unary-expression))

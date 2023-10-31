@@ -1,13 +1,5 @@
 (ns dots.typescript.type-acquisition)
 
-(defn enable-auto-discovery?
-  ^js [type-acquisition]
-  (.-enableAutoDiscovery ^js type-acquisition))
-
-(defn set-enable-auto-discovery!
-  ^js [type-acquisition value]
-  (set! (.-enableAutoDiscovery ^js type-acquisition) value))
-
 (defn enable?
   ^js [type-acquisition]
   (.-enable ^js type-acquisition))

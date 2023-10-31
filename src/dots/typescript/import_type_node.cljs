@@ -116,14 +116,6 @@
   (^js [import-type-node cb-node cb-node-array]
    (.forEachChild ^js import-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [import-type-node]
-  (.-decorators ^js import-type-node))
-
-(defn modifiers
-  ^js [import-type-node]
-  (.-modifiers ^js import-type-node))
-
 (defn pos
   ^js [import-type-node]
   (.-pos ^js import-type-node))

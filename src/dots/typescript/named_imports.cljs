@@ -100,14 +100,6 @@
   (^js [named-imports cb-node cb-node-array]
    (.forEachChild ^js named-imports cb-node cb-node-array)))
 
-(defn decorators
-  ^js [named-imports]
-  (.-decorators ^js named-imports))
-
-(defn modifiers
-  ^js [named-imports]
-  (.-modifiers ^js named-imports))
-
 (defn pos
   ^js [named-imports]
   (.-pos ^js named-imports))

@@ -96,14 +96,6 @@
   (^js [import-expression cb-node cb-node-array]
    (.forEachChild ^js import-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [import-expression]
-  (.-decorators ^js import-expression))
-
-(defn modifiers
-  ^js [import-expression]
-  (.-modifiers ^js import-expression))
-
 (defn pos
   ^js [import-expression]
   (.-pos ^js import-expression))

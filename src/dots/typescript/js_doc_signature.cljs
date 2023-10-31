@@ -109,14 +109,6 @@
   (^js [js-doc-signature cb-node cb-node-array]
    (.forEachChild ^js js-doc-signature cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-signature]
-  (.-decorators ^js js-doc-signature))
-
-(defn modifiers
-  ^js [js-doc-signature]
-  (.-modifiers ^js js-doc-signature))
-
 (defn pos
   ^js [js-doc-signature]
   (.-pos ^js js-doc-signature))

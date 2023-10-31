@@ -108,14 +108,6 @@
   (^js [element-access-chain cb-node cb-node-array]
    (.forEachChild ^js element-access-chain cb-node cb-node-array)))
 
-(defn decorators
-  ^js [element-access-chain]
-  (.-decorators ^js element-access-chain))
-
-(defn modifiers
-  ^js [element-access-chain]
-  (.-modifiers ^js element-access-chain))
-
 (defn pos
   ^js [element-access-chain]
   (.-pos ^js element-access-chain))

@@ -96,14 +96,6 @@
   (^js [not-emitted-statement cb-node cb-node-array]
    (.forEachChild ^js not-emitted-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [not-emitted-statement]
-  (.-decorators ^js not-emitted-statement))
-
-(defn modifiers
-  ^js [not-emitted-statement]
-  (.-modifiers ^js not-emitted-statement))
-
 (defn pos
   ^js [not-emitted-statement]
   (.-pos ^js not-emitted-statement))

@@ -48,3 +48,15 @@
   "The hierarchical dotted name of the refactor action."
   ^js [refactor-action-info value]
   (set! (.-kind ^js refactor-action-info) value))
+
+(defn interactive?
+  "Indicates that the action requires additional arguments to be passed
+   when calling `getEditsForRefactor`."
+  ^js [refactor-action-info]
+  (.-isInteractive ^js refactor-action-info))
+
+(defn set-is-interactive!
+  "Indicates that the action requires additional arguments to be passed
+   when calling `getEditsForRefactor`."
+  ^js [refactor-action-info value]
+  (set! (.-isInteractive ^js refactor-action-info) value))

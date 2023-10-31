@@ -1,10 +1,5 @@
 (ns dots.typescript.builder-program-host)
 
-(defn use-case-sensitive-file-names?
-  "return true if file names are treated with case sensitivity"
-  ^js [builder-program-host]
-  (.useCaseSensitiveFileNames ^js builder-program-host))
-
 (defn create-hash
   "If provided this would be used this hash instead of actual file shape text for detecting changes"
   ^js [builder-program-host]

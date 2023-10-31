@@ -17,6 +17,8 @@
 
 (def readonly (.-Readonly typescript/ModifierFlags))
 
+(def accessor (.-Accessor typescript/ModifierFlags))
+
 (def abstract (.-Abstract typescript/ModifierFlags))
 
 (def async (.-Async typescript/ModifierFlags))

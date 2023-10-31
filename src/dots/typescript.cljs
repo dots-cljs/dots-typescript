@@ -1,23 +1,6 @@
 (ns dots.typescript
   (:require ["typescript" :as typescript]))
 
-(defn version-major-minor
-  ^js []
-  typescript/versionMajorMinor)
-
-(defn version
-  "The version of the TypeScript compiler release"
-  ^js []
-  typescript/version)
-
-(defn node-major-version
-  ^js []
-  (typescript/getNodeMajorVersion))
-
-(defn sys
-  ^js []
-  typescript/sys)
-
 (defn token-to-string
   ^js [t]
   (typescript/tokenToString t))
@@ -278,6 +261,12 @@
   ^js [identifier-or-private-name]
   (typescript/idText identifier-or-private-name))
 
+(defn identifier-to-keyword-kind
+  "If the text of an Identifier matches a keyword (including contextual and TypeScript-specific keywords), returns the
+   SyntaxKind for the matching keyword."
+  ^js [node]
+  (typescript/identifierToKeywordKind node))
+
 (defn symbol-name
   ^js [symbol]
   (typescript/symbolName symbol))
@@ -379,6 +368,10 @@
   ^js [node]
   (typescript/getJSDocTemplateTag node))
 
+(defn js-doc-satisfies-tag
+  ^js [node]
+  (typescript/getJSDocSatisfiesTag node))
+
 (defn js-doc-type-tag
   "Gets the JSDoc type tag for the node if present and valid"
   ^js [node]
@@ -423,8 +416,7 @@
    This does *not* return type parameters from a jsdoc reference to a generic type, eg
    
    type Id = <T>(x: T) => T
-   /** @type {Id} /
-   function id(x) { return x }"
+   /**"
   ^js [node]
   (typescript/getEffectiveTypeParameterDeclarations node))
 
@@ -518,6 +510,14 @@
   ^js [node]
   (typescript/isImportOrExportSpecifier node))
 
+(defn type-only-import-declaration?
+  ^js [node]
+  (typescript/isTypeOnlyImportDeclaration node))
+
+(defn type-only-export-declaration?
+  ^js [node]
+  (typescript/isTypeOnlyExportDeclaration node))
+
 (defn type-only-import-or-export-declaration?
   ^js [node]
   (typescript/isTypeOnlyImportOrExportDeclaration node))
@@ -564,6 +564,10 @@
   ^js [node]
   (typescript/isAccessor node))
 
+(defn auto-accessor-property-declaration?
+  ^js [node]
+  (typescript/isAutoAccessorPropertyDeclaration node))
+
 (defn modifier-like?
   ^js [node]
   (typescript/isModifierLike node))
@@ -591,6 +595,10 @@
   ^js [node]
   (typescript/isFunctionOrConstructorTypeNode node))
 
+(defn array-binding-element?
+  ^js [node]
+  (typescript/isArrayBindingElement node))
+
 (defn property-access-or-qualified-name?
   ^js [node]
   (typescript/isPropertyAccessOrQualifiedName node))
@@ -607,6 +615,19 @@
   ^js [node]
   (typescript/isTemplateLiteral node))
 
+(defn left-hand-side-expression?
+  ^js [node]
+  (typescript/isLeftHandSideExpression node))
+
+(defn literal-type-literal?
+  ^js [node]
+  (typescript/isLiteralTypeLiteral node))
+
+(defn expression?
+  "Determines whether a node is an expression based only on its kind."
+  ^js [node]
+  (typescript/isExpression node))
+
 (defn assertion-expression?
   ^js [node]
   (typescript/isAssertionExpression node))
@@ -616,6 +637,46 @@
                [node look-in-labeled-statements?])}
   ^js [a b]
   (typescript/isIterationStatement a b))
+
+(defn concise-body?
+  ^js [node]
+  (typescript/isConciseBody node))
+
+(defn for-initializer?
+  ^js [node]
+  (typescript/isForInitializer node))
+
+(defn module-body?
+  ^js [node]
+  (typescript/isModuleBody node))
+
+(defn named-import-bindings?
+  ^js [node]
+  (typescript/isNamedImportBindings node))
+
+(defn statement?
+  ^js [node]
+  (typescript/isStatement node))
+
+(defn module-reference?
+  ^js [node]
+  (typescript/isModuleReference node))
+
+(defn jsx-tag-name-expression?
+  ^js [node]
+  (typescript/isJsxTagNameExpression node))
+
+(defn jsx-child?
+  ^js [node]
+  (typescript/isJsxChild node))
+
+(defn jsx-attribute-like?
+  ^js [node]
+  (typescript/isJsxAttributeLike node))
+
+(defn string-literal-or-jsx-expression?
+  ^js [node]
+  (typescript/isStringLiteralOrJsxExpression node))
 
 (defn jsx-opening-like-element?
   ^js [node]
@@ -663,9 +724,23 @@
   ^js [node]
   (typescript/isRestParameter node))
 
-(defn unchanged-text-change-range
-  ^js []
-  typescript/unchangedTextChangeRange)
+(defn js-doc-comments-and-tags
+  "This function checks multiple locations for JSDoc comments that apply to a host node.
+   At each location, the whole comment may apply to the node, or only a specific tag in
+   the comment. In the first case, location adds the entire {@link JSDoc } object. In the
+   second case, it adds the applicable {@link JSDocTag }.
+   
+   For example, a JSDoc comment before a parameter adds the entire {@link JSDoc }. But a
+   `@param` tag on the parent function only adds the {@link JSDocTag } for the `@param`.
+   
+   ```ts
+   /** JSDoc will be returned for `a` *\\/
+   const a = 0
+   /**
+    * Entire JSDoc will be returned for `b`
+    *"
+  ^js [host-node]
+  (typescript/getJSDocCommentsAndTags host-node))
 
 (defn create-unparsed-source-file
   {:arglists '([input-file type]
@@ -714,10 +789,6 @@
    (typescript/setOriginalNode node))
   (^js [node original]
    (typescript/setOriginalNode node original)))
-
-(defn factory
-  ^js []
-  typescript/factory)
 
 (defn dispose-emit-nodes
   "Clears any `EmitNode` entries from parse-tree nodes."
@@ -890,6 +961,26 @@
   ^js [node]
   (typescript/isAsteriskToken node))
 
+(defn exclamation-token?
+  ^js [node]
+  (typescript/isExclamationToken node))
+
+(defn question-token?
+  ^js [node]
+  (typescript/isQuestionToken node))
+
+(defn colon-token?
+  ^js [node]
+  (typescript/isColonToken node))
+
+(defn question-dot-token?
+  ^js [node]
+  (typescript/isQuestionDotToken node))
+
+(defn equals-greater-than-token?
+  ^js [node]
+  (typescript/isEqualsGreaterThanToken node))
+
 (defn identifier?
   ^js [node]
   (typescript/isIdentifier node))
@@ -897,6 +988,14 @@
 (defn private-identifier?
   ^js [node]
   (typescript/isPrivateIdentifier node))
+
+(defn asserts-keyword?
+  ^js [node]
+  (typescript/isAssertsKeyword node))
+
+(defn await-keyword?
+  ^js [node]
+  (typescript/isAwaitKeyword node))
 
 (defn qualified-name?
   ^js [node]
@@ -1174,6 +1273,10 @@
   ^js [node]
   (typescript/isAsExpression node))
 
+(defn satisfies-expression?
+  ^js [node]
+  (typescript/isSatisfiesExpression node))
+
 (defn non-null-expression?
   ^js [node]
   (typescript/isNonNullExpression node))
@@ -1434,6 +1537,10 @@
   ^js [node]
   (typescript/isJsxExpression node))
 
+(defn jsx-namespaced-name?
+  ^js [node]
+  (typescript/isJsxNamespacedName node))
+
 (defn case-clause?
   ^js [node]
   (typescript/isCaseClause node))
@@ -1586,6 +1693,10 @@
   ^js [node]
   (typescript/isJSDocOverrideTag node))
 
+(defn js-doc-overload-tag?
+  ^js [node]
+  (typescript/isJSDocOverloadTag node))
+
 (defn js-doc-deprecated-tag?
   ^js [node]
   (typescript/isJSDocDeprecatedTag node))
@@ -1633,6 +1744,38 @@
 (defn js-doc-implements-tag?
   ^js [node]
   (typescript/isJSDocImplementsTag node))
+
+(defn js-doc-satisfies-tag?
+  ^js [node]
+  (typescript/isJSDocSatisfiesTag node))
+
+(defn js-doc-throws-tag?
+  ^js [node]
+  (typescript/isJSDocThrowsTag node))
+
+(defn question-or-exclamation-token?
+  ^js [node]
+  (typescript/isQuestionOrExclamationToken node))
+
+(defn identifier-or-this-type-node?
+  ^js [node]
+  (typescript/isIdentifierOrThisTypeNode node))
+
+(defn readonly-keyword-or-plus-or-minus-token?
+  ^js [node]
+  (typescript/isReadonlyKeywordOrPlusOrMinusToken node))
+
+(defn question-or-plus-or-minus-token?
+  ^js [node]
+  (typescript/isQuestionOrPlusOrMinusToken node))
+
+(defn module-name?
+  ^js [node]
+  (typescript/isModuleName node))
+
+(defn binary-operator-token?
+  ^js [node]
+  (typescript/isBinaryOperatorToken node))
 
 (defn set-text-range
   (^js [range]
@@ -1806,7 +1949,9 @@
   (^js [current-directory canonical-file-name]
    (typescript/createModuleResolutionCache current-directory canonical-file-name))
   (^js [current-directory canonical-file-name options]
-   (typescript/createModuleResolutionCache current-directory canonical-file-name options)))
+   (typescript/createModuleResolutionCache current-directory canonical-file-name options))
+  (^js [current-directory canonical-file-name options package-json-info-cache]
+   (typescript/createModuleResolutionCache current-directory canonical-file-name options package-json-info-cache)))
 
 (defn create-type-reference-directive-resolution-cache
   (^js [current-directory canonical-file-name]
@@ -1832,6 +1977,14 @@
   (^js [module-name containing-file compiler-options host cache redirected-reference resolution-mode]
    (typescript/resolveModuleName module-name containing-file compiler-options host cache redirected-reference resolution-mode)))
 
+(defn bundler-module-name-resolver
+  (^js [module-name containing-file compiler-options host]
+   (typescript/bundlerModuleNameResolver module-name containing-file compiler-options host))
+  (^js [module-name containing-file compiler-options host cache]
+   (typescript/bundlerModuleNameResolver module-name containing-file compiler-options host cache))
+  (^js [module-name containing-file compiler-options host cache redirected-reference]
+   (typescript/bundlerModuleNameResolver module-name containing-file compiler-options host cache redirected-reference)))
+
 (defn node-module-name-resolver
   (^js [module-name containing-file compiler-options host]
    (typescript/nodeModuleNameResolver module-name containing-file compiler-options host))
@@ -1849,11 +2002,13 @@
    (typescript/classicNameResolver module-name containing-file compiler-options host cache redirected-reference)))
 
 (defn visit-node
-  "Visits a Node using the supplied visitor, possibly returning a new Node in its place."
-  (^js []
-   (typescript/visitNode))
-  (^js [node]
-   (typescript/visitNode node))
+  "Visits a Node using the supplied visitor, possibly returning a new Node in its place.
+   
+   - If the input node is undefined, then the output is undefined.
+   - If the visitor returns undefined, then the output is undefined.
+   - If the output node is not undefined, then it will satisfy the test function.
+   - In order to obtain a return type that is more specific than `Node`, a test
+     function _must_ be provided, and that function must be a type predicate."
   (^js [node visitor]
    (typescript/visitNode node visitor))
   (^js [node visitor test]
@@ -1862,11 +2017,13 @@
    (typescript/visitNode node visitor test lift)))
 
 (defn visit-nodes
-  "Visits a NodeArray using the supplied visitor, possibly returning a new NodeArray in its place."
-  (^js []
-   (typescript/visitNodes))
-  (^js [nodes]
-   (typescript/visitNodes nodes))
+  "Visits a NodeArray using the supplied visitor, possibly returning a new NodeArray in its place.
+   
+   - If the input node array is undefined, the output is undefined.
+   - If the visitor can return undefined, the node it visits in the array will be reused.
+   - If the output node array is not undefined, then its contents will satisfy the test.
+   - In order to obtain a return type that is more specific than `NodeArray<Node>`, a test
+     function _must_ be provided, and that function must be a type predicate."
   (^js [nodes visitor]
    (typescript/visitNodes nodes visitor))
   (^js [nodes visitor test]
@@ -1920,6 +2077,13 @@
   "Visits an iteration body, adding any block-scoped variables required by the transformation."
   ^js [body visitor context]
   (typescript/visitIterationBody body visitor context))
+
+(defn visit-comma-list-elements
+  "Visits the elements of a {@link CommaListExpression }."
+  (^js [elements visitor]
+   (typescript/visitCommaListElements elements visitor))
+  (^js [elements visitor discard-visitor]
+   (typescript/visitCommaListElements elements visitor discard-visitor)))
 
 (defn visit-each-child
   "Visits each child of a Node using the supplied visitor, possibly returning a new Node of the same kind in its place."
@@ -2057,10 +2221,8 @@
 (defn resolve-project-reference-path
   "Returns the target config filename of a project reference.
    Note: The file might not exist."
-  (^js [ref]
-   (typescript/resolveProjectReferencePath ref))
-  (^js [host ref]
-   (typescript/resolveProjectReferencePath host ref)))
+  ^js [ref]
+  (typescript/resolveProjectReferencePath ref))
 
 (defn create-semantic-diagnostics-builder-program
   "Create the builder to manage semantic diagnostics and cache them"
@@ -2332,11 +2494,6 @@
   ^js [options]
   (typescript/getDefaultLibFilePath options))
 
-(defn services-version
-  "The version of the language service API"
-  ^js []
-  typescript/servicesVersion)
-
 (defn transform
   "Transform one or more nodes using the supplied transformers."
   (^js [source transformers]
@@ -2344,1390 +2501,28 @@
   (^js [source transformers compiler-options]
    (typescript/transform source transformers compiler-options)))
 
-(defn create-node-array
+(defn version-major-minor
   ^js []
-  typescript/createNodeArray)
+  typescript/versionMajorMinor)
 
-(defn create-numeric-literal
+(defn version
+  "The version of the TypeScript compiler release"
   ^js []
-  typescript/createNumericLiteral)
+  typescript/version)
 
-(defn create-big-int-literal
+(defn sys
   ^js []
-  typescript/createBigIntLiteral)
+  typescript/sys)
 
-(defn create-string-literal
+(defn unchanged-text-change-range
   ^js []
-  typescript/createStringLiteral)
+  typescript/unchangedTextChangeRange)
 
-(defn create-string-literal-from-node
+(defn factory
   ^js []
-  typescript/createStringLiteralFromNode)
+  typescript/factory)
 
-(defn create-regular-expression-literal
+(defn services-version
+  "The version of the language service API"
   ^js []
-  typescript/createRegularExpressionLiteral)
-
-(defn create-loop-variable
-  ^js []
-  typescript/createLoopVariable)
-
-(defn create-unique-name
-  ^js []
-  typescript/createUniqueName)
-
-(defn create-private-identifier
-  ^js []
-  typescript/createPrivateIdentifier)
-
-(defn create-super
-  ^js []
-  typescript/createSuper)
-
-(defn create-this
-  ^js []
-  typescript/createThis)
-
-(defn create-null
-  ^js []
-  typescript/createNull)
-
-(defn create-true
-  ^js []
-  typescript/createTrue)
-
-(defn create-false
-  ^js []
-  typescript/createFalse)
-
-(defn create-modifier
-  ^js []
-  typescript/createModifier)
-
-(defn create-modifiers-from-modifier-flags
-  ^js []
-  typescript/createModifiersFromModifierFlags)
-
-(defn create-qualified-name
-  ^js []
-  typescript/createQualifiedName)
-
-(defn update-qualified-name
-  ^js []
-  typescript/updateQualifiedName)
-
-(defn create-computed-property-name
-  ^js []
-  typescript/createComputedPropertyName)
-
-(defn update-computed-property-name
-  ^js []
-  typescript/updateComputedPropertyName)
-
-(defn create-type-parameter-declaration
-  ^js []
-  typescript/createTypeParameterDeclaration)
-
-(defn update-type-parameter-declaration
-  ^js []
-  typescript/updateTypeParameterDeclaration)
-
-(defn create-parameter
-  ^js []
-  typescript/createParameter)
-
-(defn update-parameter
-  ^js []
-  typescript/updateParameter)
-
-(defn create-decorator
-  ^js []
-  typescript/createDecorator)
-
-(defn update-decorator
-  ^js []
-  typescript/updateDecorator)
-
-(defn create-property
-  ^js []
-  typescript/createProperty)
-
-(defn update-property
-  ^js []
-  typescript/updateProperty)
-
-(defn create-method
-  ^js []
-  typescript/createMethod)
-
-(defn update-method
-  ^js []
-  typescript/updateMethod)
-
-(defn create-constructor
-  ^js []
-  typescript/createConstructor)
-
-(defn update-constructor
-  ^js []
-  typescript/updateConstructor)
-
-(defn create-get-accessor
-  ^js []
-  typescript/createGetAccessor)
-
-(defn update-get-accessor
-  ^js []
-  typescript/updateGetAccessor)
-
-(defn create-set-accessor
-  ^js []
-  typescript/createSetAccessor)
-
-(defn update-set-accessor
-  ^js []
-  typescript/updateSetAccessor)
-
-(defn create-call-signature
-  ^js []
-  typescript/createCallSignature)
-
-(defn update-call-signature
-  ^js []
-  typescript/updateCallSignature)
-
-(defn create-construct-signature
-  ^js []
-  typescript/createConstructSignature)
-
-(defn update-construct-signature
-  ^js []
-  typescript/updateConstructSignature)
-
-(defn update-index-signature
-  ^js []
-  typescript/updateIndexSignature)
-
-(defn create-keyword-type-node
-  ^js []
-  typescript/createKeywordTypeNode)
-
-(defn create-type-predicate-node-with-modifier
-  ^js []
-  typescript/createTypePredicateNodeWithModifier)
-
-(defn update-type-predicate-node-with-modifier
-  ^js []
-  typescript/updateTypePredicateNodeWithModifier)
-
-(defn create-type-reference-node
-  ^js []
-  typescript/createTypeReferenceNode)
-
-(defn update-type-reference-node
-  ^js []
-  typescript/updateTypeReferenceNode)
-
-(defn create-function-type-node
-  ^js []
-  typescript/createFunctionTypeNode)
-
-(defn update-function-type-node
-  ^js []
-  typescript/updateFunctionTypeNode)
-
-(defn create-constructor-type-node
-  ^js []
-  typescript/createConstructorTypeNode)
-
-(defn update-constructor-type-node
-  ^js []
-  typescript/updateConstructorTypeNode)
-
-(defn create-type-query-node
-  ^js []
-  typescript/createTypeQueryNode)
-
-(defn update-type-query-node
-  ^js []
-  typescript/updateTypeQueryNode)
-
-(defn create-type-literal-node
-  ^js []
-  typescript/createTypeLiteralNode)
-
-(defn update-type-literal-node
-  ^js []
-  typescript/updateTypeLiteralNode)
-
-(defn create-array-type-node
-  ^js []
-  typescript/createArrayTypeNode)
-
-(defn update-array-type-node
-  ^js []
-  typescript/updateArrayTypeNode)
-
-(defn create-tuple-type-node
-  ^js []
-  typescript/createTupleTypeNode)
-
-(defn update-tuple-type-node
-  ^js []
-  typescript/updateTupleTypeNode)
-
-(defn create-optional-type-node
-  ^js []
-  typescript/createOptionalTypeNode)
-
-(defn update-optional-type-node
-  ^js []
-  typescript/updateOptionalTypeNode)
-
-(defn create-rest-type-node
-  ^js []
-  typescript/createRestTypeNode)
-
-(defn update-rest-type-node
-  ^js []
-  typescript/updateRestTypeNode)
-
-(defn create-union-type-node
-  ^js []
-  typescript/createUnionTypeNode)
-
-(defn update-union-type-node
-  ^js []
-  typescript/updateUnionTypeNode)
-
-(defn create-intersection-type-node
-  ^js []
-  typescript/createIntersectionTypeNode)
-
-(defn update-intersection-type-node
-  ^js []
-  typescript/updateIntersectionTypeNode)
-
-(defn create-conditional-type-node
-  ^js []
-  typescript/createConditionalTypeNode)
-
-(defn update-conditional-type-node
-  ^js []
-  typescript/updateConditionalTypeNode)
-
-(defn create-infer-type-node
-  ^js []
-  typescript/createInferTypeNode)
-
-(defn update-infer-type-node
-  ^js []
-  typescript/updateInferTypeNode)
-
-(defn create-import-type-node
-  ^js []
-  typescript/createImportTypeNode)
-
-(defn update-import-type-node
-  ^js []
-  typescript/updateImportTypeNode)
-
-(defn create-parenthesized-type
-  ^js []
-  typescript/createParenthesizedType)
-
-(defn update-parenthesized-type
-  ^js []
-  typescript/updateParenthesizedType)
-
-(defn create-this-type-node
-  ^js []
-  typescript/createThisTypeNode)
-
-(defn update-type-operator-node
-  ^js []
-  typescript/updateTypeOperatorNode)
-
-(defn create-indexed-access-type-node
-  ^js []
-  typescript/createIndexedAccessTypeNode)
-
-(defn update-indexed-access-type-node
-  ^js []
-  typescript/updateIndexedAccessTypeNode)
-
-(defn create-mapped-type-node
-  ^js []
-  typescript/createMappedTypeNode)
-
-(defn update-mapped-type-node
-  ^js []
-  typescript/updateMappedTypeNode)
-
-(defn create-literal-type-node
-  ^js []
-  typescript/createLiteralTypeNode)
-
-(defn update-literal-type-node
-  ^js []
-  typescript/updateLiteralTypeNode)
-
-(defn create-object-binding-pattern
-  ^js []
-  typescript/createObjectBindingPattern)
-
-(defn update-object-binding-pattern
-  ^js []
-  typescript/updateObjectBindingPattern)
-
-(defn create-array-binding-pattern
-  ^js []
-  typescript/createArrayBindingPattern)
-
-(defn update-array-binding-pattern
-  ^js []
-  typescript/updateArrayBindingPattern)
-
-(defn create-binding-element
-  ^js []
-  typescript/createBindingElement)
-
-(defn update-binding-element
-  ^js []
-  typescript/updateBindingElement)
-
-(defn create-array-literal
-  ^js []
-  typescript/createArrayLiteral)
-
-(defn update-array-literal
-  ^js []
-  typescript/updateArrayLiteral)
-
-(defn create-object-literal
-  ^js []
-  typescript/createObjectLiteral)
-
-(defn update-object-literal
-  ^js []
-  typescript/updateObjectLiteral)
-
-(defn create-property-access
-  ^js []
-  typescript/createPropertyAccess)
-
-(defn update-property-access
-  ^js []
-  typescript/updatePropertyAccess)
-
-(defn create-property-access-chain
-  ^js []
-  typescript/createPropertyAccessChain)
-
-(defn update-property-access-chain
-  ^js []
-  typescript/updatePropertyAccessChain)
-
-(defn create-element-access
-  ^js []
-  typescript/createElementAccess)
-
-(defn update-element-access
-  ^js []
-  typescript/updateElementAccess)
-
-(defn create-element-access-chain
-  ^js []
-  typescript/createElementAccessChain)
-
-(defn update-element-access-chain
-  ^js []
-  typescript/updateElementAccessChain)
-
-(defn create-call
-  ^js []
-  typescript/createCall)
-
-(defn update-call
-  ^js []
-  typescript/updateCall)
-
-(defn create-call-chain
-  ^js []
-  typescript/createCallChain)
-
-(defn update-call-chain
-  ^js []
-  typescript/updateCallChain)
-
-(defn create-new
-  ^js []
-  typescript/createNew)
-
-(defn update-new
-  ^js []
-  typescript/updateNew)
-
-(defn create-type-assertion
-  ^js []
-  typescript/createTypeAssertion)
-
-(defn update-type-assertion
-  ^js []
-  typescript/updateTypeAssertion)
-
-(defn create-paren
-  ^js []
-  typescript/createParen)
-
-(defn update-paren
-  ^js []
-  typescript/updateParen)
-
-(defn create-function-expression
-  ^js []
-  typescript/createFunctionExpression)
-
-(defn update-function-expression
-  ^js []
-  typescript/updateFunctionExpression)
-
-(defn create-delete
-  ^js []
-  typescript/createDelete)
-
-(defn update-delete
-  ^js []
-  typescript/updateDelete)
-
-(defn create-type-of
-  ^js []
-  typescript/createTypeOf)
-
-(defn update-type-of
-  ^js []
-  typescript/updateTypeOf)
-
-(defn create-void
-  ^js []
-  typescript/createVoid)
-
-(defn update-void
-  ^js []
-  typescript/updateVoid)
-
-(defn create-await
-  ^js []
-  typescript/createAwait)
-
-(defn update-await
-  ^js []
-  typescript/updateAwait)
-
-(defn create-prefix
-  ^js []
-  typescript/createPrefix)
-
-(defn update-prefix
-  ^js []
-  typescript/updatePrefix)
-
-(defn create-postfix
-  ^js []
-  typescript/createPostfix)
-
-(defn update-postfix
-  ^js []
-  typescript/updatePostfix)
-
-(defn create-binary
-  ^js []
-  typescript/createBinary)
-
-(defn update-conditional
-  ^js []
-  typescript/updateConditional)
-
-(defn create-template-expression
-  ^js []
-  typescript/createTemplateExpression)
-
-(defn update-template-expression
-  ^js []
-  typescript/updateTemplateExpression)
-
-(defn create-template-head
-  ^js []
-  typescript/createTemplateHead)
-
-(defn create-template-middle
-  ^js []
-  typescript/createTemplateMiddle)
-
-(defn create-template-tail
-  ^js []
-  typescript/createTemplateTail)
-
-(defn create-no-substitution-template-literal
-  ^js []
-  typescript/createNoSubstitutionTemplateLiteral)
-
-(defn update-yield
-  ^js []
-  typescript/updateYield)
-
-(defn create-spread
-  ^js []
-  typescript/createSpread)
-
-(defn update-spread
-  ^js []
-  typescript/updateSpread)
-
-(defn create-omitted-expression
-  ^js []
-  typescript/createOmittedExpression)
-
-(defn create-as-expression
-  ^js []
-  typescript/createAsExpression)
-
-(defn update-as-expression
-  ^js []
-  typescript/updateAsExpression)
-
-(defn create-non-null-expression
-  ^js []
-  typescript/createNonNullExpression)
-
-(defn update-non-null-expression
-  ^js []
-  typescript/updateNonNullExpression)
-
-(defn create-non-null-chain
-  ^js []
-  typescript/createNonNullChain)
-
-(defn update-non-null-chain
-  ^js []
-  typescript/updateNonNullChain)
-
-(defn create-meta-property
-  ^js []
-  typescript/createMetaProperty)
-
-(defn update-meta-property
-  ^js []
-  typescript/updateMetaProperty)
-
-(defn create-template-span
-  ^js []
-  typescript/createTemplateSpan)
-
-(defn update-template-span
-  ^js []
-  typescript/updateTemplateSpan)
-
-(defn create-semicolon-class-element
-  ^js []
-  typescript/createSemicolonClassElement)
-
-(defn create-block
-  ^js []
-  typescript/createBlock)
-
-(defn update-block
-  ^js []
-  typescript/updateBlock)
-
-(defn create-variable-statement
-  ^js []
-  typescript/createVariableStatement)
-
-(defn update-variable-statement
-  ^js []
-  typescript/updateVariableStatement)
-
-(defn create-empty-statement
-  ^js []
-  typescript/createEmptyStatement)
-
-(defn create-expression-statement
-  ^js []
-  typescript/createExpressionStatement)
-
-(defn update-expression-statement
-  ^js []
-  typescript/updateExpressionStatement)
-
-(defn create-statement
-  ^js []
-  typescript/createStatement)
-
-(defn update-statement
-  ^js []
-  typescript/updateStatement)
-
-(defn create-if
-  ^js []
-  typescript/createIf)
-
-(defn update-if
-  ^js []
-  typescript/updateIf)
-
-(defn create-do
-  ^js []
-  typescript/createDo)
-
-(defn update-do
-  ^js []
-  typescript/updateDo)
-
-(defn create-while
-  ^js []
-  typescript/createWhile)
-
-(defn update-while
-  ^js []
-  typescript/updateWhile)
-
-(defn create-for
-  ^js []
-  typescript/createFor)
-
-(defn update-for
-  ^js []
-  typescript/updateFor)
-
-(defn create-for-in
-  ^js []
-  typescript/createForIn)
-
-(defn update-for-in
-  ^js []
-  typescript/updateForIn)
-
-(defn create-for-of
-  ^js []
-  typescript/createForOf)
-
-(defn update-for-of
-  ^js []
-  typescript/updateForOf)
-
-(defn create-continue
-  ^js []
-  typescript/createContinue)
-
-(defn update-continue
-  ^js []
-  typescript/updateContinue)
-
-(defn create-break
-  ^js []
-  typescript/createBreak)
-
-(defn update-break
-  ^js []
-  typescript/updateBreak)
-
-(defn create-return
-  ^js []
-  typescript/createReturn)
-
-(defn update-return
-  ^js []
-  typescript/updateReturn)
-
-(defn create-with
-  ^js []
-  typescript/createWith)
-
-(defn update-with
-  ^js []
-  typescript/updateWith)
-
-(defn create-switch
-  ^js []
-  typescript/createSwitch)
-
-(defn update-switch
-  ^js []
-  typescript/updateSwitch)
-
-(defn create-label
-  ^js []
-  typescript/createLabel)
-
-(defn update-label
-  ^js []
-  typescript/updateLabel)
-
-(defn create-throw
-  ^js []
-  typescript/createThrow)
-
-(defn update-throw
-  ^js []
-  typescript/updateThrow)
-
-(defn create-try
-  ^js []
-  typescript/createTry)
-
-(defn update-try
-  ^js []
-  typescript/updateTry)
-
-(defn create-debugger-statement
-  ^js []
-  typescript/createDebuggerStatement)
-
-(defn create-variable-declaration-list
-  ^js []
-  typescript/createVariableDeclarationList)
-
-(defn update-variable-declaration-list
-  ^js []
-  typescript/updateVariableDeclarationList)
-
-(defn create-function-declaration
-  ^js []
-  typescript/createFunctionDeclaration)
-
-(defn update-function-declaration
-  ^js []
-  typescript/updateFunctionDeclaration)
-
-(defn create-class-declaration
-  ^js []
-  typescript/createClassDeclaration)
-
-(defn update-class-declaration
-  ^js []
-  typescript/updateClassDeclaration)
-
-(defn create-interface-declaration
-  ^js []
-  typescript/createInterfaceDeclaration)
-
-(defn update-interface-declaration
-  ^js []
-  typescript/updateInterfaceDeclaration)
-
-(defn create-type-alias-declaration
-  ^js []
-  typescript/createTypeAliasDeclaration)
-
-(defn update-type-alias-declaration
-  ^js []
-  typescript/updateTypeAliasDeclaration)
-
-(defn create-enum-declaration
-  ^js []
-  typescript/createEnumDeclaration)
-
-(defn update-enum-declaration
-  ^js []
-  typescript/updateEnumDeclaration)
-
-(defn create-module-declaration
-  ^js []
-  typescript/createModuleDeclaration)
-
-(defn update-module-declaration
-  ^js []
-  typescript/updateModuleDeclaration)
-
-(defn create-module-block
-  ^js []
-  typescript/createModuleBlock)
-
-(defn update-module-block
-  ^js []
-  typescript/updateModuleBlock)
-
-(defn create-case-block
-  ^js []
-  typescript/createCaseBlock)
-
-(defn update-case-block
-  ^js []
-  typescript/updateCaseBlock)
-
-(defn create-namespace-export-declaration
-  ^js []
-  typescript/createNamespaceExportDeclaration)
-
-(defn update-namespace-export-declaration
-  ^js []
-  typescript/updateNamespaceExportDeclaration)
-
-(defn create-import-equals-declaration
-  ^js []
-  typescript/createImportEqualsDeclaration)
-
-(defn update-import-equals-declaration
-  ^js []
-  typescript/updateImportEqualsDeclaration)
-
-(defn create-import-declaration
-  ^js []
-  typescript/createImportDeclaration)
-
-(defn update-import-declaration
-  ^js []
-  typescript/updateImportDeclaration)
-
-(defn create-namespace-import
-  ^js []
-  typescript/createNamespaceImport)
-
-(defn update-namespace-import
-  ^js []
-  typescript/updateNamespaceImport)
-
-(defn create-named-imports
-  ^js []
-  typescript/createNamedImports)
-
-(defn update-named-imports
-  ^js []
-  typescript/updateNamedImports)
-
-(defn create-import-specifier
-  ^js []
-  typescript/createImportSpecifier)
-
-(defn update-import-specifier
-  ^js []
-  typescript/updateImportSpecifier)
-
-(defn create-export-assignment
-  ^js []
-  typescript/createExportAssignment)
-
-(defn update-export-assignment
-  ^js []
-  typescript/updateExportAssignment)
-
-(defn create-named-exports
-  ^js []
-  typescript/createNamedExports)
-
-(defn update-named-exports
-  ^js []
-  typescript/updateNamedExports)
-
-(defn create-export-specifier
-  ^js []
-  typescript/createExportSpecifier)
-
-(defn update-export-specifier
-  ^js []
-  typescript/updateExportSpecifier)
-
-(defn create-external-module-reference
-  ^js []
-  typescript/createExternalModuleReference)
-
-(defn update-external-module-reference
-  ^js []
-  typescript/updateExternalModuleReference)
-
-(defn create-js-doc-type-expression
-  ^js []
-  typescript/createJSDocTypeExpression)
-
-(defn create-js-doc-type-tag
-  ^js []
-  typescript/createJSDocTypeTag)
-
-(defn create-js-doc-return-tag
-  ^js []
-  typescript/createJSDocReturnTag)
-
-(defn create-js-doc-this-tag
-  ^js []
-  typescript/createJSDocThisTag)
-
-(defn create-js-doc-comment
-  ^js []
-  typescript/createJSDocComment)
-
-(defn create-js-doc-parameter-tag
-  ^js []
-  typescript/createJSDocParameterTag)
-
-(defn create-js-doc-class-tag
-  ^js []
-  typescript/createJSDocClassTag)
-
-(defn create-js-doc-augments-tag
-  ^js []
-  typescript/createJSDocAugmentsTag)
-
-(defn create-js-doc-enum-tag
-  ^js []
-  typescript/createJSDocEnumTag)
-
-(defn create-js-doc-template-tag
-  ^js []
-  typescript/createJSDocTemplateTag)
-
-(defn create-js-doc-typedef-tag
-  ^js []
-  typescript/createJSDocTypedefTag)
-
-(defn create-js-doc-callback-tag
-  ^js []
-  typescript/createJSDocCallbackTag)
-
-(defn create-js-doc-signature
-  ^js []
-  typescript/createJSDocSignature)
-
-(defn create-js-doc-property-tag
-  ^js []
-  typescript/createJSDocPropertyTag)
-
-(defn create-js-doc-type-literal
-  ^js []
-  typescript/createJSDocTypeLiteral)
-
-(defn create-js-doc-implements-tag
-  ^js []
-  typescript/createJSDocImplementsTag)
-
-(defn create-js-doc-author-tag
-  ^js []
-  typescript/createJSDocAuthorTag)
-
-(defn create-js-doc-public-tag
-  ^js []
-  typescript/createJSDocPublicTag)
-
-(defn create-js-doc-private-tag
-  ^js []
-  typescript/createJSDocPrivateTag)
-
-(defn create-js-doc-protected-tag
-  ^js []
-  typescript/createJSDocProtectedTag)
-
-(defn create-js-doc-readonly-tag
-  ^js []
-  typescript/createJSDocReadonlyTag)
-
-(defn create-js-doc-tag
-  ^js []
-  typescript/createJSDocTag)
-
-(defn create-jsx-element
-  ^js []
-  typescript/createJsxElement)
-
-(defn update-jsx-element
-  ^js []
-  typescript/updateJsxElement)
-
-(defn create-jsx-self-closing-element
-  ^js []
-  typescript/createJsxSelfClosingElement)
-
-(defn update-jsx-self-closing-element
-  ^js []
-  typescript/updateJsxSelfClosingElement)
-
-(defn create-jsx-opening-element
-  ^js []
-  typescript/createJsxOpeningElement)
-
-(defn update-jsx-opening-element
-  ^js []
-  typescript/updateJsxOpeningElement)
-
-(defn create-jsx-closing-element
-  ^js []
-  typescript/createJsxClosingElement)
-
-(defn update-jsx-closing-element
-  ^js []
-  typescript/updateJsxClosingElement)
-
-(defn create-jsx-fragment
-  ^js []
-  typescript/createJsxFragment)
-
-(defn create-jsx-text
-  ^js []
-  typescript/createJsxText)
-
-(defn update-jsx-text
-  ^js []
-  typescript/updateJsxText)
-
-(defn create-jsx-opening-fragment
-  ^js []
-  typescript/createJsxOpeningFragment)
-
-(defn create-jsx-jsx-closing-fragment
-  ^js []
-  typescript/createJsxJsxClosingFragment)
-
-(defn update-jsx-fragment
-  ^js []
-  typescript/updateJsxFragment)
-
-(defn create-jsx-attribute
-  ^js []
-  typescript/createJsxAttribute)
-
-(defn update-jsx-attribute
-  ^js []
-  typescript/updateJsxAttribute)
-
-(defn create-jsx-attributes
-  ^js []
-  typescript/createJsxAttributes)
-
-(defn update-jsx-attributes
-  ^js []
-  typescript/updateJsxAttributes)
-
-(defn create-jsx-spread-attribute
-  ^js []
-  typescript/createJsxSpreadAttribute)
-
-(defn update-jsx-spread-attribute
-  ^js []
-  typescript/updateJsxSpreadAttribute)
-
-(defn create-jsx-expression
-  ^js []
-  typescript/createJsxExpression)
-
-(defn update-jsx-expression
-  ^js []
-  typescript/updateJsxExpression)
-
-(defn create-case-clause
-  ^js []
-  typescript/createCaseClause)
-
-(defn update-case-clause
-  ^js []
-  typescript/updateCaseClause)
-
-(defn create-default-clause
-  ^js []
-  typescript/createDefaultClause)
-
-(defn update-default-clause
-  ^js []
-  typescript/updateDefaultClause)
-
-(defn create-heritage-clause
-  ^js []
-  typescript/createHeritageClause)
-
-(defn update-heritage-clause
-  ^js []
-  typescript/updateHeritageClause)
-
-(defn create-catch-clause
-  ^js []
-  typescript/createCatchClause)
-
-(defn update-catch-clause
-  ^js []
-  typescript/updateCatchClause)
-
-(defn create-property-assignment
-  ^js []
-  typescript/createPropertyAssignment)
-
-(defn update-property-assignment
-  ^js []
-  typescript/updatePropertyAssignment)
-
-(defn create-shorthand-property-assignment
-  ^js []
-  typescript/createShorthandPropertyAssignment)
-
-(defn update-shorthand-property-assignment
-  ^js []
-  typescript/updateShorthandPropertyAssignment)
-
-(defn create-spread-assignment
-  ^js []
-  typescript/createSpreadAssignment)
-
-(defn update-spread-assignment
-  ^js []
-  typescript/updateSpreadAssignment)
-
-(defn create-enum-member
-  ^js []
-  typescript/createEnumMember)
-
-(defn update-enum-member
-  ^js []
-  typescript/updateEnumMember)
-
-(defn update-source-file-node
-  ^js []
-  typescript/updateSourceFileNode)
-
-(defn create-not-emitted-statement
-  ^js []
-  typescript/createNotEmittedStatement)
-
-(defn create-partially-emitted-expression
-  ^js []
-  typescript/createPartiallyEmittedExpression)
-
-(defn update-partially-emitted-expression
-  ^js []
-  typescript/updatePartiallyEmittedExpression)
-
-(defn create-comma-list
-  ^js []
-  typescript/createCommaList)
-
-(defn update-comma-list
-  ^js []
-  typescript/updateCommaList)
-
-(defn create-bundle
-  ^js []
-  typescript/createBundle)
-
-(defn update-bundle
-  ^js []
-  typescript/updateBundle)
-
-(defn create-immediately-invoked-function-expression
-  ^js []
-  typescript/createImmediatelyInvokedFunctionExpression)
-
-(defn create-immediately-invoked-arrow-function
-  ^js []
-  typescript/createImmediatelyInvokedArrowFunction)
-
-(defn create-void-zero
-  ^js []
-  typescript/createVoidZero)
-
-(defn create-export-default
-  ^js []
-  typescript/createExportDefault)
-
-(defn create-external-module-export
-  ^js []
-  typescript/createExternalModuleExport)
-
-(defn create-namespace-export
-  ^js []
-  typescript/createNamespaceExport)
-
-(defn update-namespace-export
-  ^js []
-  typescript/updateNamespaceExport)
-
-(defn create-token
-  ^js []
-  typescript/createToken)
-
-(defn create-identifier
-  ^js []
-  typescript/createIdentifier)
-
-(defn create-temp-variable
-  ^js []
-  typescript/createTempVariable)
-
-(defn generated-name-for-node
-  ^js []
-  typescript/getGeneratedNameForNode)
-
-(defn create-optimistic-unique-name
-  ^js []
-  typescript/createOptimisticUniqueName)
-
-(defn create-file-level-unique-name
-  ^js []
-  typescript/createFileLevelUniqueName)
-
-(defn create-index-signature
-  ^js []
-  typescript/createIndexSignature)
-
-(defn create-type-predicate-node
-  ^js []
-  typescript/createTypePredicateNode)
-
-(defn update-type-predicate-node
-  ^js []
-  typescript/updateTypePredicateNode)
-
-(defn create-literal
-  ^js []
-  typescript/createLiteral)
-
-(defn create-method-signature
-  ^js []
-  typescript/createMethodSignature)
-
-(defn update-method-signature
-  ^js []
-  typescript/updateMethodSignature)
-
-(defn create-type-operator-node
-  ^js []
-  typescript/createTypeOperatorNode)
-
-(defn create-tagged-template
-  ^js []
-  typescript/createTaggedTemplate)
-
-(defn update-tagged-template
-  ^js []
-  typescript/updateTaggedTemplate)
-
-(defn update-binary
-  ^js []
-  typescript/updateBinary)
-
-(defn create-conditional
-  ^js []
-  typescript/createConditional)
-
-(defn create-yield
-  ^js []
-  typescript/createYield)
-
-(defn create-class-expression
-  ^js []
-  typescript/createClassExpression)
-
-(defn update-class-expression
-  ^js []
-  typescript/updateClassExpression)
-
-(defn create-property-signature
-  ^js []
-  typescript/createPropertySignature)
-
-(defn update-property-signature
-  ^js []
-  typescript/updatePropertySignature)
-
-(defn create-expression-with-type-arguments
-  ^js []
-  typescript/createExpressionWithTypeArguments)
-
-(defn update-expression-with-type-arguments
-  ^js []
-  typescript/updateExpressionWithTypeArguments)
-
-(defn create-arrow-function
-  ^js []
-  typescript/createArrowFunction)
-
-(defn update-arrow-function
-  ^js []
-  typescript/updateArrowFunction)
-
-(defn create-variable-declaration
-  ^js []
-  typescript/createVariableDeclaration)
-
-(defn update-variable-declaration
-  ^js []
-  typescript/updateVariableDeclaration)
-
-(defn create-import-clause
-  ^js []
-  typescript/createImportClause)
-
-(defn update-import-clause
-  ^js []
-  typescript/updateImportClause)
-
-(defn create-export-declaration
-  ^js []
-  typescript/createExportDeclaration)
-
-(defn update-export-declaration
-  ^js []
-  typescript/updateExportDeclaration)
-
-(defn create-js-doc-param-tag
-  ^js []
-  typescript/createJSDocParamTag)
-
-(defn create-comma
-  ^js []
-  typescript/createComma)
-
-(defn create-less-than
-  ^js []
-  typescript/createLessThan)
-
-(defn create-assignment
-  ^js []
-  typescript/createAssignment)
-
-(defn create-strict-equality
-  ^js []
-  typescript/createStrictEquality)
-
-(defn create-strict-inequality
-  ^js []
-  typescript/createStrictInequality)
-
-(defn create-add
-  ^js []
-  typescript/createAdd)
-
-(defn create-subtract
-  ^js []
-  typescript/createSubtract)
-
-(defn create-logical-and
-  ^js []
-  typescript/createLogicalAnd)
-
-(defn create-logical-or
-  ^js []
-  typescript/createLogicalOr)
-
-(defn create-postfix-increment
-  ^js []
-  typescript/createPostfixIncrement)
-
-(defn create-logical-not
-  ^js []
-  typescript/createLogicalNot)
-
-(defn create-node
-  ^js []
-  typescript/createNode)
-
-(defn mutable-clone
-  "Creates a shallow, memberwise clone of a node ~for mutation~ with its `pos`, `end`, and `parent` set.
-   
-   NOTE: It is unsafe to change any properties of a `Node` that relate to its AST children, as those changes won't be
-   captured with respect to transformations."
-  ^js []
-  typescript/getMutableClone)
-
-(defn type-assertion
-  ^js []
-  typescript/isTypeAssertion)
-
-(defn identifier-or-private-identifier
-  ^js []
-  typescript/isIdentifierOrPrivateIdentifier)
+  typescript/servicesVersion)

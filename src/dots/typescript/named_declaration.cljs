@@ -101,14 +101,6 @@
   (^js [named-declaration cb-node cb-node-array]
    (.forEachChild ^js named-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [named-declaration]
-  (.-decorators ^js named-declaration))
-
-(defn modifiers
-  ^js [named-declaration]
-  (.-modifiers ^js named-declaration))
-
 (defn pos
   ^js [named-declaration]
   (.-pos ^js named-declaration))

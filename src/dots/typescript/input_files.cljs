@@ -160,14 +160,6 @@
   (^js [input-files cb-node cb-node-array]
    (.forEachChild ^js input-files cb-node cb-node-array)))
 
-(defn decorators
-  ^js [input-files]
-  (.-decorators ^js input-files))
-
-(defn modifiers
-  ^js [input-files]
-  (.-modifiers ^js input-files))
-
 (defn pos
   ^js [input-files]
   (.-pos ^js input-files))

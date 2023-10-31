@@ -100,14 +100,6 @@
   (^js [array-binding-pattern cb-node cb-node-array]
    (.forEachChild ^js array-binding-pattern cb-node cb-node-array)))
 
-(defn decorators
-  ^js [array-binding-pattern]
-  (.-decorators ^js array-binding-pattern))
-
-(defn modifiers
-  ^js [array-binding-pattern]
-  (.-modifiers ^js array-binding-pattern))
-
 (defn pos
   ^js [array-binding-pattern]
   (.-pos ^js array-binding-pattern))

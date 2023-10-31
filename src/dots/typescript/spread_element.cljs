@@ -100,14 +100,6 @@
   (^js [spread-element cb-node cb-node-array]
    (.forEachChild ^js spread-element cb-node cb-node-array)))
 
-(defn decorators
-  ^js [spread-element]
-  (.-decorators ^js spread-element))
-
-(defn modifiers
-  ^js [spread-element]
-  (.-modifiers ^js spread-element))
-
 (defn pos
   ^js [spread-element]
   (.-pos ^js spread-element))

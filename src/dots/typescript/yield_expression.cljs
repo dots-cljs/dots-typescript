@@ -104,14 +104,6 @@
   (^js [yield-expression cb-node cb-node-array]
    (.forEachChild ^js yield-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [yield-expression]
-  (.-decorators ^js yield-expression))
-
-(defn modifiers
-  ^js [yield-expression]
-  (.-modifiers ^js yield-expression))
-
 (defn pos
   ^js [yield-expression]
   (.-pos ^js yield-expression))

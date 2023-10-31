@@ -105,14 +105,6 @@
   (^js [js-doc-nullable-type cb-node cb-node-array]
    (.forEachChild ^js js-doc-nullable-type cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-nullable-type]
-  (.-decorators ^js js-doc-nullable-type))
-
-(defn modifiers
-  ^js [js-doc-nullable-type]
-  (.-modifiers ^js js-doc-nullable-type))
-
 (defn pos
   ^js [js-doc-nullable-type]
   (.-pos ^js js-doc-nullable-type))

@@ -132,10 +132,13 @@
    (.getRenameInfo ^js a b c d)))
 
 (defn find-rename-locations
+  {:arglists '([language-service file-name position find-in-strings? find-in-comments?]
+               [language-service file-name position find-in-strings? find-in-comments? preferences]
+               [language-service file-name position find-in-strings? find-in-comments? provide-prefix-and-suffix-text-for-rename?])}
   (^js [language-service file-name position find-in-strings? find-in-comments?]
    (.findRenameLocations ^js language-service file-name position find-in-strings? find-in-comments?))
-  (^js [language-service file-name position find-in-strings? find-in-comments? provide-prefix-and-suffix-text-for-rename?]
-   (.findRenameLocations ^js language-service file-name position find-in-strings? find-in-comments? provide-prefix-and-suffix-text-for-rename?)))
+  (^js [a b c d e f]
+   (.findRenameLocations ^js a b c d e f)))
 
 (defn smart-selection-range
   ^js [language-service file-name position]
@@ -172,10 +175,6 @@
 (defn file-references
   ^js [language-service file-name]
   (.getFileReferences ^js language-service file-name))
-
-(defn occurrences-at-position
-  ^js [language-service file-name position]
-  (.getOccurrencesAtPosition ^js language-service file-name position))
 
 (defn navigate-to-items
   (^js [language-service search-value]
@@ -245,7 +244,9 @@
   (^js [language-service file-name position]
    (.getDocCommentTemplateAtPosition ^js language-service file-name position))
   (^js [language-service file-name position options]
-   (.getDocCommentTemplateAtPosition ^js language-service file-name position options)))
+   (.getDocCommentTemplateAtPosition ^js language-service file-name position options))
+  (^js [language-service file-name position options format-options]
+   (.getDocCommentTemplateAtPosition ^js language-service file-name position options format-options)))
 
 (defn valid-brace-completion-at-position?
   ^js [language-service file-name position opening-brace]
@@ -256,6 +257,10 @@
    Editors should call this after `>` is typed."
   ^js [language-service file-name position]
   (.getJsxClosingTagAtPosition ^js language-service file-name position))
+
+(defn linked-editing-range-at-position
+  ^js [language-service file-name position]
+  (.getLinkedEditingRangeAtPosition ^js language-service file-name position))
 
 (defn span-of-enclosing-comment
   ^js [language-service file-name position only-multi-line?]
@@ -290,13 +295,27 @@
   (^js [language-service file-name position-or-range preferences trigger-reason]
    (.getApplicableRefactors ^js language-service file-name position-or-range preferences trigger-reason))
   (^js [language-service file-name position-or-range preferences trigger-reason kind]
-   (.getApplicableRefactors ^js language-service file-name position-or-range preferences trigger-reason kind)))
+   (.getApplicableRefactors ^js language-service file-name position-or-range preferences trigger-reason kind))
+  (^js [language-service file-name position-or-range preferences trigger-reason kind include-interactive-actions?]
+   (.getApplicableRefactors ^js language-service file-name position-or-range preferences trigger-reason kind include-interactive-actions?)))
 
 (defn edits-for-refactor
   (^js [language-service file-name format-options position-or-range refactor-name action-name]
    (.getEditsForRefactor ^js language-service file-name format-options position-or-range refactor-name action-name))
   (^js [language-service file-name format-options position-or-range refactor-name action-name preferences]
-   (.getEditsForRefactor ^js language-service file-name format-options position-or-range refactor-name action-name preferences)))
+   (.getEditsForRefactor ^js language-service file-name format-options position-or-range refactor-name action-name preferences))
+  (^js [language-service file-name format-options position-or-range refactor-name action-name preferences interactive-refactor-arguments]
+   (.getEditsForRefactor ^js language-service file-name format-options position-or-range refactor-name action-name preferences interactive-refactor-arguments)))
+
+(defn move-to-refactoring-file-suggestions
+  (^js [language-service file-name position-or-range]
+   (.getMoveToRefactoringFileSuggestions ^js language-service file-name position-or-range))
+  (^js [language-service file-name position-or-range preferences]
+   (.getMoveToRefactoringFileSuggestions ^js language-service file-name position-or-range preferences))
+  (^js [language-service file-name position-or-range preferences trigger-reason]
+   (.getMoveToRefactoringFileSuggestions ^js language-service file-name position-or-range preferences trigger-reason))
+  (^js [language-service file-name position-or-range preferences trigger-reason kind]
+   (.getMoveToRefactoringFileSuggestions ^js language-service file-name position-or-range preferences trigger-reason kind)))
 
 (defn organize-imports
   (^js [language-service args format-options]
@@ -337,6 +356,12 @@
 (defn uncomment-selection
   ^js [language-service file-name text-range]
   (.uncommentSelection ^js language-service file-name text-range))
+
+(defn supported-code-fixes
+  (^js [language-service]
+   (.getSupportedCodeFixes ^js language-service))
+  (^js [language-service file-name]
+   (.getSupportedCodeFixes ^js language-service file-name)))
 
 (defn dispose
   ^js [language-service]

@@ -1,6 +1,22 @@
 (ns dots.typescript.enum-type
   (:refer-clojure :exclude [symbol]))
 
+(defn fresh-type
+  ^js [enum-type]
+  (.-freshType ^js enum-type))
+
+(defn set-fresh-type!
+  ^js [enum-type value]
+  (set! (.-freshType ^js enum-type) value))
+
+(defn regular-type
+  ^js [enum-type]
+  (.-regularType ^js enum-type))
+
+(defn set-regular-type!
+  ^js [enum-type value]
+  (set! (.-regularType ^js enum-type) value))
+
 (defn flags
   ^js [enum-type]
   (.-flags ^js enum-type))

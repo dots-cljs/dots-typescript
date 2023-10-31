@@ -100,14 +100,6 @@
   (^js [infer-type-node cb-node cb-node-array]
    (.forEachChild ^js infer-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [infer-type-node]
-  (.-decorators ^js infer-type-node))
-
-(defn modifiers
-  ^js [infer-type-node]
-  (.-modifiers ^js infer-type-node))
-
 (defn pos
   ^js [infer-type-node]
   (.-pos ^js infer-type-node))

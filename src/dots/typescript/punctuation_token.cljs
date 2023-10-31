@@ -96,14 +96,6 @@
   (^js [punctuation-token cb-node cb-node-array]
    (.forEachChild ^js punctuation-token cb-node cb-node-array)))
 
-(defn decorators
-  ^js [punctuation-token]
-  (.-decorators ^js punctuation-token))
-
-(defn modifiers
-  ^js [punctuation-token]
-  (.-modifiers ^js punctuation-token))
-
 (defn pos
   ^js [punctuation-token]
   (.-pos ^js punctuation-token))

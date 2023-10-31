@@ -128,14 +128,6 @@
   (^js [template-head cb-node cb-node-array]
    (.forEachChild ^js template-head cb-node cb-node-array)))
 
-(defn decorators
-  ^js [template-head]
-  (.-decorators ^js template-head))
-
-(defn modifiers
-  ^js [template-head]
-  (.-modifiers ^js template-head))
-
 (defn pos
   ^js [template-head]
   (.-pos ^js template-head))

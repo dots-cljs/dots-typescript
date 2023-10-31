@@ -122,10 +122,6 @@
   (^js [type-parameter-declaration cb-node cb-node-array]
    (.forEachChild ^js type-parameter-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [type-parameter-declaration]
-  (.-decorators ^js type-parameter-declaration))
-
 (defn pos
   ^js [type-parameter-declaration]
   (.-pos ^js type-parameter-declaration))

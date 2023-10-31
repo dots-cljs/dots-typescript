@@ -96,14 +96,6 @@
   (^js [modifier-token cb-node cb-node-array]
    (.forEachChild ^js modifier-token cb-node cb-node-array)))
 
-(defn decorators
-  ^js [modifier-token]
-  (.-decorators ^js modifier-token))
-
-(defn modifiers
-  ^js [modifier-token]
-  (.-modifiers ^js modifier-token))
-
 (defn pos
   ^js [modifier-token]
   (.-pos ^js modifier-token))

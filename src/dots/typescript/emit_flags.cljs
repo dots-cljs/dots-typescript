@@ -5,6 +5,8 @@
 
 (def single-line (.-SingleLine typescript/EmitFlags))
 
+(def multi-line (.-MultiLine typescript/EmitFlags))
+
 (def advise-on-emit-node (.-AdviseOnEmitNode typescript/EmitFlags))
 
 (def no-substitution (.-NoSubstitution typescript/EmitFlags))
@@ -52,8 +54,6 @@
 (def custom-prologue (.-CustomPrologue typescript/EmitFlags))
 
 (def no-hoisting (.-NoHoisting typescript/EmitFlags))
-
-(def has-end-of-declaration-marker (.-HasEndOfDeclarationMarker typescript/EmitFlags))
 
 (def iterator (.-Iterator typescript/EmitFlags))
 

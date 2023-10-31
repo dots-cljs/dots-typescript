@@ -109,14 +109,6 @@
   (^js [export-specifier cb-node cb-node-array]
    (.forEachChild ^js export-specifier cb-node cb-node-array)))
 
-(defn decorators
-  ^js [export-specifier]
-  (.-decorators ^js export-specifier))
-
-(defn modifiers
-  ^js [export-specifier]
-  (.-modifiers ^js export-specifier))
-
 (defn pos
   ^js [export-specifier]
   (.-pos ^js export-specifier))

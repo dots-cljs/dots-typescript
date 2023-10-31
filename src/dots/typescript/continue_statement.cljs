@@ -100,14 +100,6 @@
   (^js [continue-statement cb-node cb-node-array]
    (.forEachChild ^js continue-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [continue-statement]
-  (.-decorators ^js continue-statement))
-
-(defn modifiers
-  ^js [continue-statement]
-  (.-modifiers ^js continue-statement))
-
 (defn pos
   ^js [continue-statement]
   (.-pos ^js continue-statement))

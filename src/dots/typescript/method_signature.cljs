@@ -117,10 +117,6 @@
   (^js [method-signature cb-node cb-node-array]
    (.forEachChild ^js method-signature cb-node cb-node-array)))
 
-(defn decorators
-  ^js [method-signature]
-  (.-decorators ^js method-signature))
-
 (defn pos
   ^js [method-signature]
   (.-pos ^js method-signature))

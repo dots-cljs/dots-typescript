@@ -133,10 +133,6 @@
   (^js [get-accessor-declaration cb-node cb-node-array]
    (.forEachChild ^js get-accessor-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [get-accessor-declaration]
-  (.-decorators ^js get-accessor-declaration))
-
 (defn pos
   ^js [get-accessor-declaration]
   (.-pos ^js get-accessor-declaration))

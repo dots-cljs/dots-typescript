@@ -100,14 +100,6 @@
   (^js [partially-emitted-expression cb-node cb-node-array]
    (.forEachChild ^js partially-emitted-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [partially-emitted-expression]
-  (.-decorators ^js partially-emitted-expression))
-
-(defn modifiers
-  ^js [partially-emitted-expression]
-  (.-modifiers ^js partially-emitted-expression))
-
 (defn pos
   ^js [partially-emitted-expression]
   (.-pos ^js partially-emitted-expression))

@@ -104,14 +104,6 @@
   (^js [case-clause cb-node cb-node-array]
    (.forEachChild ^js case-clause cb-node cb-node-array)))
 
-(defn decorators
-  ^js [case-clause]
-  (.-decorators ^js case-clause))
-
-(defn modifiers
-  ^js [case-clause]
-  (.-modifiers ^js case-clause))
-
 (defn pos
   ^js [case-clause]
   (.-pos ^js case-clause))

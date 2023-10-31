@@ -101,14 +101,6 @@
   (^js [function-or-constructor-type-node-base cb-node cb-node-array]
    (.forEachChild ^js function-or-constructor-type-node-base cb-node cb-node-array)))
 
-(defn decorators
-  ^js [function-or-constructor-type-node-base]
-  (.-decorators ^js function-or-constructor-type-node-base))
-
-(defn modifiers
-  ^js [function-or-constructor-type-node-base]
-  (.-modifiers ^js function-or-constructor-type-node-base))
-
 (defn pos
   ^js [function-or-constructor-type-node-base]
   (.-pos ^js function-or-constructor-type-node-base))

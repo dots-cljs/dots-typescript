@@ -96,14 +96,6 @@
   (^js [left-hand-side-expression cb-node cb-node-array]
    (.forEachChild ^js left-hand-side-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [left-hand-side-expression]
-  (.-decorators ^js left-hand-side-expression))
-
-(defn modifiers
-  ^js [left-hand-side-expression]
-  (.-modifiers ^js left-hand-side-expression))
-
 (defn pos
   ^js [left-hand-side-expression]
   (.-pos ^js left-hand-side-expression))

@@ -108,14 +108,6 @@
   (^js [for-in-statement cb-node cb-node-array]
    (.forEachChild ^js for-in-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [for-in-statement]
-  (.-decorators ^js for-in-statement))
-
-(defn modifiers
-  ^js [for-in-statement]
-  (.-modifiers ^js for-in-statement))
-
 (defn pos
   ^js [for-in-statement]
   (.-pos ^js for-in-statement))

@@ -5,10 +5,6 @@
   ^js [function-type-node]
   (.-kind ^js function-type-node))
 
-(defn modifiers
-  ^js [function-type-node]
-  (.-modifiers ^js function-type-node))
-
 (defn type
   ^js [function-type-node]
   (.-type ^js function-type-node))
@@ -104,10 +100,6 @@
    (.forEachChild ^js function-type-node cb-node))
   (^js [function-type-node cb-node cb-node-array]
    (.forEachChild ^js function-type-node cb-node cb-node-array)))
-
-(defn decorators
-  ^js [function-type-node]
-  (.-decorators ^js function-type-node))
 
 (defn pos
   ^js [function-type-node]

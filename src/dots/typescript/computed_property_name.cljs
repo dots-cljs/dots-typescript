@@ -100,14 +100,6 @@
   (^js [computed-property-name cb-node cb-node-array]
    (.forEachChild ^js computed-property-name cb-node cb-node-array)))
 
-(defn decorators
-  ^js [computed-property-name]
-  (.-decorators ^js computed-property-name))
-
-(defn modifiers
-  ^js [computed-property-name]
-  (.-modifiers ^js computed-property-name))
-
 (defn pos
   ^js [computed-property-name]
   (.-pos ^js computed-property-name))

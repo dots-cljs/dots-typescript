@@ -104,14 +104,6 @@
   (^js [json-minus-numeric-literal cb-node cb-node-array]
    (.forEachChild ^js json-minus-numeric-literal cb-node cb-node-array)))
 
-(defn decorators
-  ^js [json-minus-numeric-literal]
-  (.-decorators ^js json-minus-numeric-literal))
-
-(defn modifiers
-  ^js [json-minus-numeric-literal]
-  (.-modifiers ^js json-minus-numeric-literal))
-
 (defn pos
   ^js [json-minus-numeric-literal]
   (.-pos ^js json-minus-numeric-literal))

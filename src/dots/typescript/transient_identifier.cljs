@@ -18,6 +18,10 @@
   ^js [transient-identifier]
   (.-escapedText ^js transient-identifier))
 
+(defn text
+  ^js [transient-identifier]
+  (.-text ^js transient-identifier))
+
 (defn original-keyword-kind
   ^js [transient-identifier]
   (.-originalKeywordKind ^js transient-identifier))
@@ -25,14 +29,6 @@
 (defn in-js-doc-namespace?
   ^js [transient-identifier]
   (.-isInJSDocNamespace ^js transient-identifier))
-
-(defn set-is-in-js-doc-namespace!
-  ^js [transient-identifier value]
-  (set! (.-isInJSDocNamespace ^js transient-identifier) value))
-
-(defn text
-  ^js [transient-identifier]
-  (.-text ^js transient-identifier))
 
 (defn flags
   ^js [transient-identifier]
@@ -125,14 +121,6 @@
    (.forEachChild ^js transient-identifier cb-node))
   (^js [transient-identifier cb-node cb-node-array]
    (.forEachChild ^js transient-identifier cb-node cb-node-array)))
-
-(defn decorators
-  ^js [transient-identifier]
-  (.-decorators ^js transient-identifier))
-
-(defn modifiers
-  ^js [transient-identifier]
-  (.-modifiers ^js transient-identifier))
 
 (defn pos
   ^js [transient-identifier]

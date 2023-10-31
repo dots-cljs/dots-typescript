@@ -17,13 +17,13 @@
   ^js [substitution-type value]
   (set! (.-baseType ^js substitution-type) value))
 
-(defn substitute
+(defn constraint
   ^js [substitution-type]
-  (.-substitute ^js substitution-type))
+  (.-constraint ^js substitution-type))
 
-(defn set-substitute!
+(defn set-constraint!
   ^js [substitution-type value]
-  (set! (.-substitute ^js substitution-type) value))
+  (set! (.-constraint ^js substitution-type) value))
 
 (defn flags
   ^js [substitution-type]
@@ -109,7 +109,7 @@
   ^js [substitution-type]
   (.getNonNullableType ^js substitution-type))
 
-(defn constraint
+(defn get-constraint
   ^js [substitution-type]
   (.getConstraint ^js substitution-type))
 

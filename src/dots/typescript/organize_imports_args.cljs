@@ -9,6 +9,14 @@
   ^js [organize-imports-args value]
   (set! (.-skipDestructiveCodeActions ^js organize-imports-args) value))
 
+(defn mode
+  ^js [organize-imports-args]
+  (.-mode ^js organize-imports-args))
+
+(defn set-mode!
+  ^js [organize-imports-args value]
+  (set! (.-mode ^js organize-imports-args) value))
+
 (defn type
   ^js [organize-imports-args]
   (.-type ^js organize-imports-args))

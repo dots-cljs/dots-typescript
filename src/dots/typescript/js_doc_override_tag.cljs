@@ -105,14 +105,6 @@
   (^js [js-doc-override-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-override-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-override-tag]
-  (.-decorators ^js js-doc-override-tag))
-
-(defn modifiers
-  ^js [js-doc-override-tag]
-  (.-modifiers ^js js-doc-override-tag))
-
 (defn pos
   ^js [js-doc-override-tag]
   (.-pos ^js js-doc-override-tag))

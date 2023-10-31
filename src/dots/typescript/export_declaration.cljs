@@ -123,10 +123,6 @@
   (^js [export-declaration cb-node cb-node-array]
    (.forEachChild ^js export-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [export-declaration]
-  (.-decorators ^js export-declaration))
-
 (defn pos
   ^js [export-declaration]
   (.-pos ^js export-declaration))

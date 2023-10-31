@@ -1,5 +1,5 @@
 (ns dots.typescript.completion-entry
-  (:refer-clojure :exclude [name]))
+  (:refer-clojure :exclude [name symbol]))
 
 (defn name
   ^js [completion-entry]
@@ -40,6 +40,14 @@
 (defn set-insert-text!
   ^js [completion-entry value]
   (set! (.-insertText ^js completion-entry) value))
+
+(defn filter-text
+  ^js [completion-entry]
+  (.-filterText ^js completion-entry))
+
+(defn set-filter-text!
+  ^js [completion-entry value]
+  (set! (.-filterText ^js completion-entry) value))
 
 (defn snippet
   ^js [completion-entry]
@@ -126,6 +134,18 @@
 (defn set-is-import-statement-completion!
   ^js [completion-entry value]
   (set! (.-isImportStatementCompletion ^js completion-entry) value))
+
+(defn symbol
+  "For API purposes.
+   Included for non-string completions only when `includeSymbol: true` option is passed to `getCompletionsAtPosition`."
+  ^js [completion-entry]
+  (.-symbol ^js completion-entry))
+
+(defn set-symbol!
+  "For API purposes.
+   Included for non-string completions only when `includeSymbol: true` option is passed to `getCompletionsAtPosition`."
+  ^js [completion-entry value]
+  (set! (.-symbol ^js completion-entry) value))
 
 (defn data
   "A property to be sent back to TS Server in the CompletionDetailsRequest, along with `name`,

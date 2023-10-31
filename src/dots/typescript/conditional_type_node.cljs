@@ -112,14 +112,6 @@
   (^js [conditional-type-node cb-node cb-node-array]
    (.forEachChild ^js conditional-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [conditional-type-node]
-  (.-decorators ^js conditional-type-node))
-
-(defn modifiers
-  ^js [conditional-type-node]
-  (.-modifiers ^js conditional-type-node))
-
 (defn pos
   ^js [conditional-type-node]
   (.-pos ^js conditional-type-node))

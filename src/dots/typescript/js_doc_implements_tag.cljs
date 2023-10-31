@@ -109,14 +109,6 @@
   (^js [js-doc-implements-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-implements-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-implements-tag]
-  (.-decorators ^js js-doc-implements-tag))
-
-(defn modifiers
-  ^js [js-doc-implements-tag]
-  (.-modifiers ^js js-doc-implements-tag))
-
 (defn pos
   ^js [js-doc-implements-tag]
   (.-pos ^js js-doc-implements-tag))

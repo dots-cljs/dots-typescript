@@ -116,10 +116,6 @@
   (^js [import-equals-declaration cb-node cb-node-array]
    (.forEachChild ^js import-equals-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [import-equals-declaration]
-  (.-decorators ^js import-equals-declaration))
-
 (defn pos
   ^js [import-equals-declaration]
   (.-pos ^js import-equals-declaration))

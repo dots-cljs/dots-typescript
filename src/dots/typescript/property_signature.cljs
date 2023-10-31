@@ -5,6 +5,10 @@
   ^js [property-signature]
   (.-kind ^js property-signature))
 
+(defn parent
+  ^js [property-signature]
+  (.-parent ^js property-signature))
+
 (defn modifiers
   ^js [property-signature]
   (.-modifiers ^js property-signature))
@@ -21,17 +25,9 @@
   ^js [property-signature]
   (.-type ^js property-signature))
 
-(defn initializer
-  ^js [property-signature]
-  (.-initializer ^js property-signature))
-
 (defn flags
   ^js [property-signature]
   (.-flags ^js property-signature))
-
-(defn parent
-  ^js [property-signature]
-  (.-parent ^js property-signature))
 
 (defn source-file
   ^js [property-signature]
@@ -116,10 +112,6 @@
    (.forEachChild ^js property-signature cb-node))
   (^js [property-signature cb-node cb-node-array]
    (.forEachChild ^js property-signature cb-node cb-node-array)))
-
-(defn decorators
-  ^js [property-signature]
-  (.-decorators ^js property-signature))
 
 (defn pos
   ^js [property-signature]

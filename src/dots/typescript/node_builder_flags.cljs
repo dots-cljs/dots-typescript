@@ -43,8 +43,6 @@
 
 (def allow-qualified-name-in-place-of-identifier (.-AllowQualifiedNameInPlaceOfIdentifier typescript/NodeBuilderFlags))
 
-(def allow-qualifed-name-in-place-of-identifier (.-AllowQualifedNameInPlaceOfIdentifier typescript/NodeBuilderFlags))
-
 (def allow-anonymous-identifier (.-AllowAnonymousIdentifier typescript/NodeBuilderFlags))
 
 (def allow-empty-union-or-intersection (.-AllowEmptyUnionOrIntersection typescript/NodeBuilderFlags))

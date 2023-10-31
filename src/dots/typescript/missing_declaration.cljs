@@ -101,14 +101,6 @@
   (^js [missing-declaration cb-node cb-node-array]
    (.forEachChild ^js missing-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [missing-declaration]
-  (.-decorators ^js missing-declaration))
-
-(defn modifiers
-  ^js [missing-declaration]
-  (.-modifiers ^js missing-declaration))
-
 (defn pos
   ^js [missing-declaration]
   (.-pos ^js missing-declaration))

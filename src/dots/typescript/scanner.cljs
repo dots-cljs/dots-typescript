@@ -8,6 +8,18 @@
   ^js [scanner]
   (.getToken ^js scanner))
 
+(defn token-full-start
+  ^js [scanner]
+  (.getTokenFullStart ^js scanner))
+
+(defn token-start
+  ^js [scanner]
+  (.getTokenStart ^js scanner))
+
+(defn token-end
+  ^js [scanner]
+  (.getTokenEnd ^js scanner))
+
 (defn text-pos
   ^js [scanner]
   (.getTextPos ^js scanner))
@@ -145,6 +157,10 @@
 (defn set-text-pos
   ^js [scanner text-pos]
   (.setTextPos ^js scanner text-pos))
+
+(defn reset-token-state
+  ^js [scanner pos]
+  (.resetTokenState ^js scanner pos))
 
 (defn look-ahead
   ^js [scanner callback]

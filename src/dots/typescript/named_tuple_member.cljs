@@ -113,14 +113,6 @@
   (^js [named-tuple-member cb-node cb-node-array]
    (.forEachChild ^js named-tuple-member cb-node cb-node-array)))
 
-(defn decorators
-  ^js [named-tuple-member]
-  (.-decorators ^js named-tuple-member))
-
-(defn modifiers
-  ^js [named-tuple-member]
-  (.-modifiers ^js named-tuple-member))
-
 (defn pos
   ^js [named-tuple-member]
   (.-pos ^js named-tuple-member))

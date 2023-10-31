@@ -135,14 +135,6 @@
   (^js [function-like-declaration-base cb-node cb-node-array]
    (.forEachChild ^js function-like-declaration-base cb-node cb-node-array)))
 
-(defn decorators
-  ^js [function-like-declaration-base]
-  (.-decorators ^js function-like-declaration-base))
-
-(defn modifiers
-  ^js [function-like-declaration-base]
-  (.-modifiers ^js function-like-declaration-base))
-
 (defn pos
   ^js [function-like-declaration-base]
   (.-pos ^js function-like-declaration-base))

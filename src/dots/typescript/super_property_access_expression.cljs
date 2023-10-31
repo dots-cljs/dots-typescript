@@ -109,14 +109,6 @@
   (^js [super-property-access-expression cb-node cb-node-array]
    (.forEachChild ^js super-property-access-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [super-property-access-expression]
-  (.-decorators ^js super-property-access-expression))
-
-(defn modifiers
-  ^js [super-property-access-expression]
-  (.-modifiers ^js super-property-access-expression))
-
 (defn pos
   ^js [super-property-access-expression]
   (.-pos ^js super-property-access-expression))

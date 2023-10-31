@@ -45,6 +45,4 @@
 
 (def in-type-alias (.-InTypeAlias typescript/TypeFormatFlags))
 
-(def write-own-name-for-any-like (.-WriteOwnNameForAnyLike typescript/TypeFormatFlags))
-
 (def node-builder-flags-mask (.-NodeBuilderFlagsMask typescript/TypeFormatFlags))

@@ -100,14 +100,6 @@
   (^js [iteration-statement cb-node cb-node-array]
    (.forEachChild ^js iteration-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [iteration-statement]
-  (.-decorators ^js iteration-statement))
-
-(defn modifiers
-  ^js [iteration-statement]
-  (.-modifiers ^js iteration-statement))
-
 (defn pos
   ^js [iteration-statement]
   (.-pos ^js iteration-statement))

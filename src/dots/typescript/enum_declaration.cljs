@@ -109,10 +109,6 @@
   (^js [enum-declaration cb-node cb-node-array]
    (.forEachChild ^js enum-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [enum-declaration]
-  (.-decorators ^js enum-declaration))
-
 (defn pos
   ^js [enum-declaration]
   (.-pos ^js enum-declaration))

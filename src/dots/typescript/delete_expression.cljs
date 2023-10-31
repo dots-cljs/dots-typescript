@@ -100,14 +100,6 @@
   (^js [delete-expression cb-node cb-node-array]
    (.forEachChild ^js delete-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [delete-expression]
-  (.-decorators ^js delete-expression))
-
-(defn modifiers
-  ^js [delete-expression]
-  (.-modifiers ^js delete-expression))
-
 (defn pos
   ^js [delete-expression]
   (.-pos ^js delete-expression))

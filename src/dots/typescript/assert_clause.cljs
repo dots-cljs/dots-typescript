@@ -104,14 +104,6 @@
   (^js [assert-clause cb-node cb-node-array]
    (.forEachChild ^js assert-clause cb-node cb-node-array)))
 
-(defn decorators
-  ^js [assert-clause]
-  (.-decorators ^js assert-clause))
-
-(defn modifiers
-  ^js [assert-clause]
-  (.-modifiers ^js assert-clause))
-
 (defn pos
   ^js [assert-clause]
   (.-pos ^js assert-clause))

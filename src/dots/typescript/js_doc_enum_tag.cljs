@@ -109,14 +109,6 @@
   (^js [js-doc-enum-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-enum-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-enum-tag]
-  (.-decorators ^js js-doc-enum-tag))
-
-(defn modifiers
-  ^js [js-doc-enum-tag]
-  (.-modifiers ^js js-doc-enum-tag))
-
 (defn pos
   ^js [js-doc-enum-tag]
   (.-pos ^js js-doc-enum-tag))

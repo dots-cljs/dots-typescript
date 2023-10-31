@@ -105,6 +105,10 @@
   ^js [user-preferences]
   (.-includeInlayEnumMemberValueHints ^js user-preferences))
 
+(defn interactive-inlay-hints?
+  ^js [user-preferences]
+  (.-interactiveInlayHints ^js user-preferences))
+
 (defn allow-rename-of-import-path?
   ^js [user-preferences]
   (.-allowRenameOfImportPath ^js user-preferences))
@@ -112,3 +116,27 @@
 (defn auto-import-file-exclude-patterns
   ^js [user-preferences]
   (.-autoImportFileExcludePatterns ^js user-preferences))
+
+(defn organize-imports-ignore-case?
+  ^js [user-preferences]
+  (.-organizeImportsIgnoreCase ^js user-preferences))
+
+(defn organize-imports-collation
+  ^js [user-preferences]
+  (.-organizeImportsCollation ^js user-preferences))
+
+(defn organize-imports-locale
+  ^js [user-preferences]
+  (.-organizeImportsLocale ^js user-preferences))
+
+(defn organize-imports-numeric-collation?
+  ^js [user-preferences]
+  (.-organizeImportsNumericCollation ^js user-preferences))
+
+(defn organize-imports-accent-collation?
+  ^js [user-preferences]
+  (.-organizeImportsAccentCollation ^js user-preferences))
+
+(defn organize-imports-case-first
+  ^js [user-preferences]
+  (.-organizeImportsCaseFirst ^js user-preferences))

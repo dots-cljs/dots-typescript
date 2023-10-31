@@ -104,14 +104,6 @@
   (^js [private-identifier cb-node cb-node-array]
    (.forEachChild ^js private-identifier cb-node cb-node-array)))
 
-(defn decorators
-  ^js [private-identifier]
-  (.-decorators ^js private-identifier))
-
-(defn modifiers
-  ^js [private-identifier]
-  (.-modifiers ^js private-identifier))
-
 (defn pos
   ^js [private-identifier]
   (.-pos ^js private-identifier))

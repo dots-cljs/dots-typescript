@@ -105,14 +105,6 @@
   (^js [js-doc-private-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-private-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-private-tag]
-  (.-decorators ^js js-doc-private-tag))
-
-(defn modifiers
-  ^js [js-doc-private-tag]
-  (.-modifiers ^js js-doc-private-tag))
-
 (defn pos
   ^js [js-doc-private-tag]
   (.-pos ^js js-doc-private-tag))

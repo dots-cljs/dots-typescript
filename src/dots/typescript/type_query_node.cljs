@@ -104,14 +104,6 @@
   (^js [type-query-node cb-node cb-node-array]
    (.forEachChild ^js type-query-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [type-query-node]
-  (.-decorators ^js type-query-node))
-
-(defn modifiers
-  ^js [type-query-node]
-  (.-modifiers ^js type-query-node))
-
 (defn pos
   ^js [type-query-node]
   (.-pos ^js type-query-node))

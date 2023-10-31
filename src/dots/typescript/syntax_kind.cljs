@@ -18,6 +18,8 @@
 
 (def conflict-marker-trivia (.-ConflictMarkerTrivia typescript/SyntaxKind))
 
+(def non-text-file-marker-trivia (.-NonTextFileMarkerTrivia typescript/SyntaxKind))
+
 (def numeric-literal (.-NumericLiteral typescript/SyntaxKind))
 
 (def big-int-literal (.-BigIntLiteral typescript/SyntaxKind))
@@ -260,6 +262,8 @@
 
 (def abstract-keyword (.-AbstractKeyword typescript/SyntaxKind))
 
+(def accessor-keyword (.-AccessorKeyword typescript/SyntaxKind))
+
 (def as-keyword (.-AsKeyword typescript/SyntaxKind))
 
 (def asserts-keyword (.-AssertsKeyword typescript/SyntaxKind))
@@ -302,6 +306,8 @@
 
 (def object-keyword (.-ObjectKeyword typescript/SyntaxKind))
 
+(def satisfies-keyword (.-SatisfiesKeyword typescript/SyntaxKind))
+
 (def set-keyword (.-SetKeyword typescript/SyntaxKind))
 
 (def string-keyword (.-StringKeyword typescript/SyntaxKind))
@@ -315,6 +321,8 @@
 (def unique-keyword (.-UniqueKeyword typescript/SyntaxKind))
 
 (def unknown-keyword (.-UnknownKeyword typescript/SyntaxKind))
+
+(def using-keyword (.-UsingKeyword typescript/SyntaxKind))
 
 (def from-keyword (.-FromKeyword typescript/SyntaxKind))
 
@@ -470,6 +478,8 @@
 
 (def synthetic-expression (.-SyntheticExpression typescript/SyntaxKind))
 
+(def satisfies-expression (.-SatisfiesExpression typescript/SyntaxKind))
+
 (def template-span (.-TemplateSpan typescript/SyntaxKind))
 
 (def semicolon-class-element (.-SemicolonClassElement typescript/SyntaxKind))
@@ -582,6 +592,8 @@
 
 (def jsx-expression (.-JsxExpression typescript/SyntaxKind))
 
+(def jsx-namespaced-name (.-JsxNamespacedName typescript/SyntaxKind))
+
 (def case-clause (.-CaseClause typescript/SyntaxKind))
 
 (def default-clause (.-DefaultClause typescript/SyntaxKind))
@@ -684,6 +696,8 @@
 
 (def js-doc-callback-tag (.-JSDocCallbackTag typescript/SyntaxKind))
 
+(def js-doc-overload-tag (.-JSDocOverloadTag typescript/SyntaxKind))
+
 (def js-doc-enum-tag (.-JSDocEnumTag typescript/SyntaxKind))
 
 (def js-doc-parameter-tag (.-JSDocParameterTag typescript/SyntaxKind))
@@ -702,6 +716,10 @@
 
 (def js-doc-property-tag (.-JSDocPropertyTag typescript/SyntaxKind))
 
+(def js-doc-throws-tag (.-JSDocThrowsTag typescript/SyntaxKind))
+
+(def js-doc-satisfies-tag (.-JSDocSatisfiesTag typescript/SyntaxKind))
+
 (def syntax-list (.-SyntaxList typescript/SyntaxKind))
 
 (def not-emitted-statement (.-NotEmittedStatement typescript/SyntaxKind))
@@ -709,10 +727,6 @@
 (def partially-emitted-expression (.-PartiallyEmittedExpression typescript/SyntaxKind))
 
 (def comma-list-expression (.-CommaListExpression typescript/SyntaxKind))
-
-(def merge-declaration-marker (.-MergeDeclarationMarker typescript/SyntaxKind))
-
-(def end-of-declaration-marker (.-EndOfDeclarationMarker typescript/SyntaxKind))
 
 (def synthetic-reference-expression (.-SyntheticReferenceExpression typescript/SyntaxKind))
 

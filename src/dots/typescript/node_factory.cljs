@@ -74,6 +74,16 @@
   ^js [node-factory text]
   (.createPrivateIdentifier ^js node-factory text))
 
+(defn create-unique-private-name
+  (^js [node-factory]
+   (.createUniquePrivateName ^js node-factory))
+  (^js [node-factory text]
+   (.createUniquePrivateName ^js node-factory text)))
+
+(defn generated-private-name-for-node
+  ^js [node-factory node]
+  (.getGeneratedPrivateNameForNode ^js node-factory node))
+
 (defn create-token
   ^js [node-factory token]
   (.createToken ^js node-factory token))
@@ -123,108 +133,60 @@
   (.updateComputedPropertyName ^js node-factory node expression))
 
 (defn create-type-parameter-declaration
-  {:arglists '([node-factory]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name constraint]
-               [node-factory modifiers name constraint default-type]
-               [node-factory name]
-               [node-factory name constraint]
-               [node-factory name constraint default-type])}
   (^js [node-factory]
    (.createTypeParameterDeclaration ^js node-factory))
-  (^js [a b]
-   (.createTypeParameterDeclaration ^js a b))
-  (^js [a b c]
-   (.createTypeParameterDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createTypeParameterDeclaration ^js a b c d))
+  (^js [node-factory modifiers]
+   (.createTypeParameterDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createTypeParameterDeclaration ^js node-factory modifiers name))
+  (^js [node-factory modifiers name constraint]
+   (.createTypeParameterDeclaration ^js node-factory modifiers name constraint))
   (^js [node-factory modifiers name constraint default-type]
    (.createTypeParameterDeclaration ^js node-factory modifiers name constraint default-type)))
 
 (defn update-type-parameter-declaration
-  {:arglists '([node-factory node]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name constraint]
-               [node-factory node modifiers name constraint default-type]
-               [node-factory node name]
-               [node-factory node name constraint]
-               [node-factory node name constraint default-type])}
   (^js [node-factory node]
    (.updateTypeParameterDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateTypeParameterDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateTypeParameterDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateTypeParameterDeclaration ^js a b c d e))
+  (^js [node-factory node modifiers]
+   (.updateTypeParameterDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updateTypeParameterDeclaration ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name constraint]
+   (.updateTypeParameterDeclaration ^js node-factory node modifiers name constraint))
   (^js [node-factory node modifiers name constraint default-type]
    (.updateTypeParameterDeclaration ^js node-factory node modifiers name constraint default-type)))
 
 (defn create-parameter-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers dot-dot-dot-token]
-               [node-factory decorators modifiers dot-dot-dot-token name]
-               [node-factory decorators modifiers dot-dot-dot-token name question-token]
-               [node-factory decorators modifiers dot-dot-dot-token name question-token type]
-               [node-factory decorators modifiers dot-dot-dot-token name question-token type initializer]
-               [node-factory modifiers]
-               [node-factory modifiers dot-dot-dot-token]
-               [node-factory modifiers dot-dot-dot-token name]
-               [node-factory modifiers dot-dot-dot-token name question-token]
-               [node-factory modifiers dot-dot-dot-token name question-token type]
-               [node-factory modifiers dot-dot-dot-token name question-token type initializer])}
   (^js [node-factory]
    (.createParameterDeclaration ^js node-factory))
-  (^js [a b]
-   (.createParameterDeclaration ^js a b))
-  (^js [a b c]
-   (.createParameterDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createParameterDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createParameterDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.createParameterDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.createParameterDeclaration ^js a b c d e f g))
-  (^js [node-factory decorators modifiers dot-dot-dot-token name question-token type initializer]
-   (.createParameterDeclaration ^js node-factory decorators modifiers dot-dot-dot-token name question-token type initializer)))
+  (^js [node-factory modifiers]
+   (.createParameterDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers dot-dot-dot-token]
+   (.createParameterDeclaration ^js node-factory modifiers dot-dot-dot-token))
+  (^js [node-factory modifiers dot-dot-dot-token name]
+   (.createParameterDeclaration ^js node-factory modifiers dot-dot-dot-token name))
+  (^js [node-factory modifiers dot-dot-dot-token name question-token]
+   (.createParameterDeclaration ^js node-factory modifiers dot-dot-dot-token name question-token))
+  (^js [node-factory modifiers dot-dot-dot-token name question-token type]
+   (.createParameterDeclaration ^js node-factory modifiers dot-dot-dot-token name question-token type))
+  (^js [node-factory modifiers dot-dot-dot-token name question-token type initializer]
+   (.createParameterDeclaration ^js node-factory modifiers dot-dot-dot-token name question-token type initializer)))
 
 (defn update-parameter-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers dot-dot-dot-token]
-               [node-factory node decorators modifiers dot-dot-dot-token name]
-               [node-factory node decorators modifiers dot-dot-dot-token name question-token]
-               [node-factory node decorators modifiers dot-dot-dot-token name question-token type]
-               [node-factory node decorators modifiers dot-dot-dot-token name question-token type initializer]
-               [node-factory node modifiers]
-               [node-factory node modifiers dot-dot-dot-token]
-               [node-factory node modifiers dot-dot-dot-token name]
-               [node-factory node modifiers dot-dot-dot-token name question-token]
-               [node-factory node modifiers dot-dot-dot-token name question-token type]
-               [node-factory node modifiers dot-dot-dot-token name question-token type initializer])}
   (^js [node-factory node]
    (.updateParameterDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateParameterDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateParameterDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateParameterDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateParameterDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.updateParameterDeclaration ^js a b c d e f g))
-  (^js [a b c d e f g h]
-   (.updateParameterDeclaration ^js a b c d e f g h))
-  (^js [node-factory node decorators modifiers dot-dot-dot-token name question-token type initializer]
-   (.updateParameterDeclaration ^js node-factory node decorators modifiers dot-dot-dot-token name question-token type initializer)))
+  (^js [node-factory node modifiers]
+   (.updateParameterDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers dot-dot-dot-token]
+   (.updateParameterDeclaration ^js node-factory node modifiers dot-dot-dot-token))
+  (^js [node-factory node modifiers dot-dot-dot-token name]
+   (.updateParameterDeclaration ^js node-factory node modifiers dot-dot-dot-token name))
+  (^js [node-factory node modifiers dot-dot-dot-token name question-token]
+   (.updateParameterDeclaration ^js node-factory node modifiers dot-dot-dot-token name question-token))
+  (^js [node-factory node modifiers dot-dot-dot-token name question-token type]
+   (.updateParameterDeclaration ^js node-factory node modifiers dot-dot-dot-token name question-token type))
+  (^js [node-factory node modifiers dot-dot-dot-token name question-token type initializer]
+   (.updateParameterDeclaration ^js node-factory node modifiers dot-dot-dot-token name question-token type initializer)))
 
 (defn create-decorator
   ^js [node-factory expression]
@@ -259,60 +221,32 @@
    (.updatePropertySignature ^js node-factory node modifiers name question-token type)))
 
 (defn create-property-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers name]
-               [node-factory decorators modifiers name question-or-exclamation-token]
-               [node-factory decorators modifiers name question-or-exclamation-token type]
-               [node-factory decorators modifiers name question-or-exclamation-token type initializer]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name question-or-exclamation-token]
-               [node-factory modifiers name question-or-exclamation-token type]
-               [node-factory modifiers name question-or-exclamation-token type initializer])}
   (^js [node-factory]
    (.createPropertyDeclaration ^js node-factory))
-  (^js [a b]
-   (.createPropertyDeclaration ^js a b))
-  (^js [a b c]
-   (.createPropertyDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createPropertyDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createPropertyDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.createPropertyDeclaration ^js a b c d e f))
-  (^js [node-factory decorators modifiers name question-or-exclamation-token type initializer]
-   (.createPropertyDeclaration ^js node-factory decorators modifiers name question-or-exclamation-token type initializer)))
+  (^js [node-factory modifiers]
+   (.createPropertyDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createPropertyDeclaration ^js node-factory modifiers name))
+  (^js [node-factory modifiers name question-or-exclamation-token]
+   (.createPropertyDeclaration ^js node-factory modifiers name question-or-exclamation-token))
+  (^js [node-factory modifiers name question-or-exclamation-token type]
+   (.createPropertyDeclaration ^js node-factory modifiers name question-or-exclamation-token type))
+  (^js [node-factory modifiers name question-or-exclamation-token type initializer]
+   (.createPropertyDeclaration ^js node-factory modifiers name question-or-exclamation-token type initializer)))
 
 (defn update-property-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers name]
-               [node-factory node decorators modifiers name question-or-exclamation-token]
-               [node-factory node decorators modifiers name question-or-exclamation-token type]
-               [node-factory node decorators modifiers name question-or-exclamation-token type initializer]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name question-or-exclamation-token]
-               [node-factory node modifiers name question-or-exclamation-token type]
-               [node-factory node modifiers name question-or-exclamation-token type initializer])}
   (^js [node-factory node]
    (.updatePropertyDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updatePropertyDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updatePropertyDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updatePropertyDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updatePropertyDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.updatePropertyDeclaration ^js a b c d e f g))
-  (^js [node-factory node decorators modifiers name question-or-exclamation-token type initializer]
-   (.updatePropertyDeclaration ^js node-factory node decorators modifiers name question-or-exclamation-token type initializer)))
+  (^js [node-factory node modifiers]
+   (.updatePropertyDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updatePropertyDeclaration ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name question-or-exclamation-token]
+   (.updatePropertyDeclaration ^js node-factory node modifiers name question-or-exclamation-token))
+  (^js [node-factory node modifiers name question-or-exclamation-token type]
+   (.updatePropertyDeclaration ^js node-factory node modifiers name question-or-exclamation-token type))
+  (^js [node-factory node modifiers name question-or-exclamation-token type initializer]
+   (.updatePropertyDeclaration ^js node-factory node modifiers name question-or-exclamation-token type initializer)))
 
 (defn create-method-signature
   (^js [node-factory]
@@ -347,228 +281,116 @@
    (.updateMethodSignature ^js node-factory node modifiers name question-token type-parameters parameters type)))
 
 (defn create-method-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers asterisk-token]
-               [node-factory decorators modifiers asterisk-token name]
-               [node-factory decorators modifiers asterisk-token name question-token]
-               [node-factory decorators modifiers asterisk-token name question-token type-parameters]
-               [node-factory decorators modifiers asterisk-token name question-token type-parameters parameters]
-               [node-factory decorators modifiers asterisk-token name question-token type-parameters parameters type]
-               [node-factory decorators modifiers asterisk-token name question-token type-parameters parameters type body]
-               [node-factory modifiers]
-               [node-factory modifiers asterisk-token]
-               [node-factory modifiers asterisk-token name]
-               [node-factory modifiers asterisk-token name question-token]
-               [node-factory modifiers asterisk-token name question-token type-parameters]
-               [node-factory modifiers asterisk-token name question-token type-parameters parameters]
-               [node-factory modifiers asterisk-token name question-token type-parameters parameters type]
-               [node-factory modifiers asterisk-token name question-token type-parameters parameters type body])}
   (^js [node-factory]
    (.createMethodDeclaration ^js node-factory))
-  (^js [a b]
-   (.createMethodDeclaration ^js a b))
-  (^js [a b c]
-   (.createMethodDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createMethodDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createMethodDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.createMethodDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.createMethodDeclaration ^js a b c d e f g))
-  (^js [a b c d e f g h]
-   (.createMethodDeclaration ^js a b c d e f g h))
-  (^js [a b c d e f g h i]
-   (.createMethodDeclaration ^js a b c d e f g h i))
-  (^js [node-factory decorators modifiers asterisk-token name question-token type-parameters parameters type body]
-   (.createMethodDeclaration ^js node-factory decorators modifiers asterisk-token name question-token type-parameters parameters type body)))
+  (^js [node-factory modifiers]
+   (.createMethodDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers asterisk-token]
+   (.createMethodDeclaration ^js node-factory modifiers asterisk-token))
+  (^js [node-factory modifiers asterisk-token name]
+   (.createMethodDeclaration ^js node-factory modifiers asterisk-token name))
+  (^js [node-factory modifiers asterisk-token name question-token]
+   (.createMethodDeclaration ^js node-factory modifiers asterisk-token name question-token))
+  (^js [node-factory modifiers asterisk-token name question-token type-parameters]
+   (.createMethodDeclaration ^js node-factory modifiers asterisk-token name question-token type-parameters))
+  (^js [node-factory modifiers asterisk-token name question-token type-parameters parameters]
+   (.createMethodDeclaration ^js node-factory modifiers asterisk-token name question-token type-parameters parameters))
+  (^js [node-factory modifiers asterisk-token name question-token type-parameters parameters type]
+   (.createMethodDeclaration ^js node-factory modifiers asterisk-token name question-token type-parameters parameters type))
+  (^js [node-factory modifiers asterisk-token name question-token type-parameters parameters type body]
+   (.createMethodDeclaration ^js node-factory modifiers asterisk-token name question-token type-parameters parameters type body)))
 
 (defn update-method-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers asterisk-token]
-               [node-factory node decorators modifiers asterisk-token name]
-               [node-factory node decorators modifiers asterisk-token name question-token]
-               [node-factory node decorators modifiers asterisk-token name question-token type-parameters]
-               [node-factory node decorators modifiers asterisk-token name question-token type-parameters parameters]
-               [node-factory node decorators modifiers asterisk-token name question-token type-parameters parameters type]
-               [node-factory node decorators modifiers asterisk-token name question-token type-parameters parameters type body]
-               [node-factory node modifiers]
-               [node-factory node modifiers asterisk-token]
-               [node-factory node modifiers asterisk-token name]
-               [node-factory node modifiers asterisk-token name question-token]
-               [node-factory node modifiers asterisk-token name question-token type-parameters]
-               [node-factory node modifiers asterisk-token name question-token type-parameters parameters]
-               [node-factory node modifiers asterisk-token name question-token type-parameters parameters type]
-               [node-factory node modifiers asterisk-token name question-token type-parameters parameters type body])}
   (^js [node-factory node]
    (.updateMethodDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateMethodDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateMethodDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateMethodDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateMethodDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.updateMethodDeclaration ^js a b c d e f g))
-  (^js [a b c d e f g h]
-   (.updateMethodDeclaration ^js a b c d e f g h))
-  (^js [a b c d e f g h i]
-   (.updateMethodDeclaration ^js a b c d e f g h i))
-  (^js [a b c d e f g h i j]
-   (.updateMethodDeclaration ^js a b c d e f g h i j))
-  (^js [node-factory node decorators modifiers asterisk-token name question-token type-parameters parameters type body]
-   (.updateMethodDeclaration ^js node-factory node decorators modifiers asterisk-token name question-token type-parameters parameters type body)))
+  (^js [node-factory node modifiers]
+   (.updateMethodDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers asterisk-token]
+   (.updateMethodDeclaration ^js node-factory node modifiers asterisk-token))
+  (^js [node-factory node modifiers asterisk-token name]
+   (.updateMethodDeclaration ^js node-factory node modifiers asterisk-token name))
+  (^js [node-factory node modifiers asterisk-token name question-token]
+   (.updateMethodDeclaration ^js node-factory node modifiers asterisk-token name question-token))
+  (^js [node-factory node modifiers asterisk-token name question-token type-parameters]
+   (.updateMethodDeclaration ^js node-factory node modifiers asterisk-token name question-token type-parameters))
+  (^js [node-factory node modifiers asterisk-token name question-token type-parameters parameters]
+   (.updateMethodDeclaration ^js node-factory node modifiers asterisk-token name question-token type-parameters parameters))
+  (^js [node-factory node modifiers asterisk-token name question-token type-parameters parameters type]
+   (.updateMethodDeclaration ^js node-factory node modifiers asterisk-token name question-token type-parameters parameters type))
+  (^js [node-factory node modifiers asterisk-token name question-token type-parameters parameters type body]
+   (.updateMethodDeclaration ^js node-factory node modifiers asterisk-token name question-token type-parameters parameters type body)))
 
 (defn create-constructor-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers parameters]
-               [node-factory decorators modifiers parameters body]
-               [node-factory modifiers]
-               [node-factory modifiers parameters]
-               [node-factory modifiers parameters body])}
   (^js [node-factory]
    (.createConstructorDeclaration ^js node-factory))
-  (^js [a b]
-   (.createConstructorDeclaration ^js a b))
-  (^js [a b c]
-   (.createConstructorDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createConstructorDeclaration ^js a b c d))
-  (^js [node-factory decorators modifiers parameters body]
-   (.createConstructorDeclaration ^js node-factory decorators modifiers parameters body)))
+  (^js [node-factory modifiers]
+   (.createConstructorDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers parameters]
+   (.createConstructorDeclaration ^js node-factory modifiers parameters))
+  (^js [node-factory modifiers parameters body]
+   (.createConstructorDeclaration ^js node-factory modifiers parameters body)))
 
 (defn update-constructor-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers parameters]
-               [node-factory node decorators modifiers parameters body]
-               [node-factory node modifiers]
-               [node-factory node modifiers parameters]
-               [node-factory node modifiers parameters body])}
   (^js [node-factory node]
    (.updateConstructorDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateConstructorDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateConstructorDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateConstructorDeclaration ^js a b c d e))
-  (^js [node-factory node decorators modifiers parameters body]
-   (.updateConstructorDeclaration ^js node-factory node decorators modifiers parameters body)))
+  (^js [node-factory node modifiers]
+   (.updateConstructorDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers parameters]
+   (.updateConstructorDeclaration ^js node-factory node modifiers parameters))
+  (^js [node-factory node modifiers parameters body]
+   (.updateConstructorDeclaration ^js node-factory node modifiers parameters body)))
 
 (defn create-get-accessor-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers name]
-               [node-factory decorators modifiers name parameters]
-               [node-factory decorators modifiers name parameters type]
-               [node-factory decorators modifiers name parameters type body]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name parameters]
-               [node-factory modifiers name parameters type]
-               [node-factory modifiers name parameters type body])}
   (^js [node-factory]
    (.createGetAccessorDeclaration ^js node-factory))
-  (^js [a b]
-   (.createGetAccessorDeclaration ^js a b))
-  (^js [a b c]
-   (.createGetAccessorDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createGetAccessorDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createGetAccessorDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.createGetAccessorDeclaration ^js a b c d e f))
-  (^js [node-factory decorators modifiers name parameters type body]
-   (.createGetAccessorDeclaration ^js node-factory decorators modifiers name parameters type body)))
+  (^js [node-factory modifiers]
+   (.createGetAccessorDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createGetAccessorDeclaration ^js node-factory modifiers name))
+  (^js [node-factory modifiers name parameters]
+   (.createGetAccessorDeclaration ^js node-factory modifiers name parameters))
+  (^js [node-factory modifiers name parameters type]
+   (.createGetAccessorDeclaration ^js node-factory modifiers name parameters type))
+  (^js [node-factory modifiers name parameters type body]
+   (.createGetAccessorDeclaration ^js node-factory modifiers name parameters type body)))
 
 (defn update-get-accessor-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers name]
-               [node-factory node decorators modifiers name parameters]
-               [node-factory node decorators modifiers name parameters type]
-               [node-factory node decorators modifiers name parameters type body]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name parameters]
-               [node-factory node modifiers name parameters type]
-               [node-factory node modifiers name parameters type body])}
   (^js [node-factory node]
    (.updateGetAccessorDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateGetAccessorDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateGetAccessorDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateGetAccessorDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateGetAccessorDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.updateGetAccessorDeclaration ^js a b c d e f g))
-  (^js [node-factory node decorators modifiers name parameters type body]
-   (.updateGetAccessorDeclaration ^js node-factory node decorators modifiers name parameters type body)))
+  (^js [node-factory node modifiers]
+   (.updateGetAccessorDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updateGetAccessorDeclaration ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name parameters]
+   (.updateGetAccessorDeclaration ^js node-factory node modifiers name parameters))
+  (^js [node-factory node modifiers name parameters type]
+   (.updateGetAccessorDeclaration ^js node-factory node modifiers name parameters type))
+  (^js [node-factory node modifiers name parameters type body]
+   (.updateGetAccessorDeclaration ^js node-factory node modifiers name parameters type body)))
 
 (defn create-set-accessor-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers name]
-               [node-factory decorators modifiers name parameters]
-               [node-factory decorators modifiers name parameters body]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name parameters]
-               [node-factory modifiers name parameters body])}
   (^js [node-factory]
    (.createSetAccessorDeclaration ^js node-factory))
-  (^js [a b]
-   (.createSetAccessorDeclaration ^js a b))
-  (^js [a b c]
-   (.createSetAccessorDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createSetAccessorDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createSetAccessorDeclaration ^js a b c d e))
-  (^js [node-factory decorators modifiers name parameters body]
-   (.createSetAccessorDeclaration ^js node-factory decorators modifiers name parameters body)))
+  (^js [node-factory modifiers]
+   (.createSetAccessorDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createSetAccessorDeclaration ^js node-factory modifiers name))
+  (^js [node-factory modifiers name parameters]
+   (.createSetAccessorDeclaration ^js node-factory modifiers name parameters))
+  (^js [node-factory modifiers name parameters body]
+   (.createSetAccessorDeclaration ^js node-factory modifiers name parameters body)))
 
 (defn update-set-accessor-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers name]
-               [node-factory node decorators modifiers name parameters]
-               [node-factory node decorators modifiers name parameters body]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name parameters]
-               [node-factory node modifiers name parameters body])}
   (^js [node-factory node]
    (.updateSetAccessorDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateSetAccessorDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateSetAccessorDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateSetAccessorDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateSetAccessorDeclaration ^js a b c d e f))
-  (^js [node-factory node decorators modifiers name parameters body]
-   (.updateSetAccessorDeclaration ^js node-factory node decorators modifiers name parameters body)))
+  (^js [node-factory node modifiers]
+   (.updateSetAccessorDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updateSetAccessorDeclaration ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name parameters]
+   (.updateSetAccessorDeclaration ^js node-factory node modifiers name parameters))
+  (^js [node-factory node modifiers name parameters body]
+   (.updateSetAccessorDeclaration ^js node-factory node modifiers name parameters body)))
 
 (defn create-call-signature
   (^js [node-factory]
@@ -611,44 +433,24 @@
    (.updateConstructSignature ^js node-factory node type-parameters parameters type)))
 
 (defn create-index-signature
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers parameters]
-               [node-factory decorators modifiers parameters type]
-               [node-factory modifiers]
-               [node-factory modifiers parameters]
-               [node-factory modifiers parameters type])}
   (^js [node-factory]
    (.createIndexSignature ^js node-factory))
-  (^js [a b]
-   (.createIndexSignature ^js a b))
-  (^js [a b c]
-   (.createIndexSignature ^js a b c))
-  (^js [a b c d]
-   (.createIndexSignature ^js a b c d))
-  (^js [node-factory decorators modifiers parameters type]
-   (.createIndexSignature ^js node-factory decorators modifiers parameters type)))
+  (^js [node-factory modifiers]
+   (.createIndexSignature ^js node-factory modifiers))
+  (^js [node-factory modifiers parameters]
+   (.createIndexSignature ^js node-factory modifiers parameters))
+  (^js [node-factory modifiers parameters type]
+   (.createIndexSignature ^js node-factory modifiers parameters type)))
 
 (defn update-index-signature
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers parameters]
-               [node-factory node decorators modifiers parameters type]
-               [node-factory node modifiers]
-               [node-factory node modifiers parameters]
-               [node-factory node modifiers parameters type])}
   (^js [node-factory node]
    (.updateIndexSignature ^js node-factory node))
-  (^js [a b c]
-   (.updateIndexSignature ^js a b c))
-  (^js [a b c d]
-   (.updateIndexSignature ^js a b c d))
-  (^js [a b c d e]
-   (.updateIndexSignature ^js a b c d e))
-  (^js [node-factory node decorators modifiers parameters type]
-   (.updateIndexSignature ^js node-factory node decorators modifiers parameters type)))
+  (^js [node-factory node modifiers]
+   (.updateIndexSignature ^js node-factory node modifiers))
+  (^js [node-factory node modifiers parameters]
+   (.updateIndexSignature ^js node-factory node modifiers parameters))
+  (^js [node-factory node modifiers parameters type]
+   (.updateIndexSignature ^js node-factory node modifiers parameters type)))
 
 (defn create-template-literal-type-span
   ^js [node-factory type literal]
@@ -659,34 +461,12 @@
   (.updateTemplateLiteralTypeSpan ^js node-factory node type literal))
 
 (defn create-class-static-block-declaration
-  {:arglists '([node-factory]
-               [node-factory body]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers body])}
-  (^js [node-factory]
-   (.createClassStaticBlockDeclaration ^js node-factory))
-  (^js [a b]
-   (.createClassStaticBlockDeclaration ^js a b))
-  (^js [node-factory decorators modifiers]
-   (.createClassStaticBlockDeclaration ^js node-factory decorators modifiers))
-  (^js [node-factory decorators modifiers body]
-   (.createClassStaticBlockDeclaration ^js node-factory decorators modifiers body)))
+  ^js [node-factory body]
+  (.createClassStaticBlockDeclaration ^js node-factory body))
 
 (defn update-class-static-block-declaration
-  {:arglists '([node-factory node]
-               [node-factory node body]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers body])}
-  (^js [node-factory node]
-   (.updateClassStaticBlockDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateClassStaticBlockDeclaration ^js a b c))
-  (^js [node-factory node decorators modifiers]
-   (.updateClassStaticBlockDeclaration ^js node-factory node decorators modifiers))
-  (^js [node-factory node decorators modifiers body]
-   (.updateClassStaticBlockDeclaration ^js node-factory node decorators modifiers body)))
+  ^js [node-factory node body]
+  (.updateClassStaticBlockDeclaration ^js node-factory node body))
 
 (defn create-keyword-type-node
   ^js [node-factory kind]
@@ -745,42 +525,26 @@
    (.updateFunctionTypeNode ^js node-factory node type-parameters parameters type)))
 
 (defn create-constructor-type-node
-  {:arglists '([node-factory]
-               [node-factory modifiers]
-               [node-factory modifiers type-parameters]
-               [node-factory modifiers type-parameters parameters]
-               [node-factory modifiers type-parameters parameters type]
-               [node-factory type-parameters]
-               [node-factory type-parameters parameters]
-               [node-factory type-parameters parameters type])}
   (^js [node-factory]
    (.createConstructorTypeNode ^js node-factory))
-  (^js [a b]
-   (.createConstructorTypeNode ^js a b))
-  (^js [a b c]
-   (.createConstructorTypeNode ^js a b c))
-  (^js [a b c d]
-   (.createConstructorTypeNode ^js a b c d))
+  (^js [node-factory modifiers]
+   (.createConstructorTypeNode ^js node-factory modifiers))
+  (^js [node-factory modifiers type-parameters]
+   (.createConstructorTypeNode ^js node-factory modifiers type-parameters))
+  (^js [node-factory modifiers type-parameters parameters]
+   (.createConstructorTypeNode ^js node-factory modifiers type-parameters parameters))
   (^js [node-factory modifiers type-parameters parameters type]
    (.createConstructorTypeNode ^js node-factory modifiers type-parameters parameters type)))
 
 (defn update-constructor-type-node
-  {:arglists '([node-factory node]
-               [node-factory node modifiers]
-               [node-factory node modifiers type-parameters]
-               [node-factory node modifiers type-parameters parameters]
-               [node-factory node modifiers type-parameters parameters type]
-               [node-factory node type-parameters]
-               [node-factory node type-parameters parameters]
-               [node-factory node type-parameters parameters type])}
   (^js [node-factory node]
    (.updateConstructorTypeNode ^js node-factory node))
-  (^js [a b c]
-   (.updateConstructorTypeNode ^js a b c))
-  (^js [a b c d]
-   (.updateConstructorTypeNode ^js a b c d))
-  (^js [a b c d e]
-   (.updateConstructorTypeNode ^js a b c d e))
+  (^js [node-factory node modifiers]
+   (.updateConstructorTypeNode ^js node-factory node modifiers))
+  (^js [node-factory node modifiers type-parameters]
+   (.updateConstructorTypeNode ^js node-factory node modifiers type-parameters))
+  (^js [node-factory node modifiers type-parameters parameters]
+   (.updateConstructorTypeNode ^js node-factory node modifiers type-parameters parameters))
   (^js [node-factory node modifiers type-parameters parameters type]
    (.updateConstructorTypeNode ^js node-factory node modifiers type-parameters parameters type)))
 
@@ -895,42 +659,26 @@
   (.updateInferTypeNode ^js node-factory node type-parameter))
 
 (defn create-import-type-node
-  {:arglists '([node-factory argument]
-               [node-factory argument assertions]
-               [node-factory argument assertions qualifier]
-               [node-factory argument assertions qualifier type-arguments]
-               [node-factory argument assertions qualifier type-arguments type-of?]
-               [node-factory argument qualifier]
-               [node-factory argument qualifier type-arguments]
-               [node-factory argument qualifier type-arguments type-of?])}
   (^js [node-factory argument]
    (.createImportTypeNode ^js node-factory argument))
-  (^js [a b c]
-   (.createImportTypeNode ^js a b c))
-  (^js [a b c d]
-   (.createImportTypeNode ^js a b c d))
-  (^js [a b c d e]
-   (.createImportTypeNode ^js a b c d e))
+  (^js [node-factory argument assertions]
+   (.createImportTypeNode ^js node-factory argument assertions))
+  (^js [node-factory argument assertions qualifier]
+   (.createImportTypeNode ^js node-factory argument assertions qualifier))
+  (^js [node-factory argument assertions qualifier type-arguments]
+   (.createImportTypeNode ^js node-factory argument assertions qualifier type-arguments))
   (^js [node-factory argument assertions qualifier type-arguments type-of?]
    (.createImportTypeNode ^js node-factory argument assertions qualifier type-arguments type-of?)))
 
 (defn update-import-type-node
-  {:arglists '([node-factory node argument]
-               [node-factory node argument assertions]
-               [node-factory node argument assertions qualifier]
-               [node-factory node argument assertions qualifier type-arguments]
-               [node-factory node argument assertions qualifier type-arguments type-of?]
-               [node-factory node argument qualifier]
-               [node-factory node argument qualifier type-arguments]
-               [node-factory node argument qualifier type-arguments type-of?])}
   (^js [node-factory node argument]
    (.updateImportTypeNode ^js node-factory node argument))
-  (^js [a b c d]
-   (.updateImportTypeNode ^js a b c d))
-  (^js [a b c d e]
-   (.updateImportTypeNode ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateImportTypeNode ^js a b c d e f))
+  (^js [node-factory node argument assertions]
+   (.updateImportTypeNode ^js node-factory node argument assertions))
+  (^js [node-factory node argument assertions qualifier]
+   (.updateImportTypeNode ^js node-factory node argument assertions qualifier))
+  (^js [node-factory node argument assertions qualifier type-arguments]
+   (.updateImportTypeNode ^js node-factory node argument assertions qualifier type-arguments))
   (^js [node-factory node argument assertions qualifier type-arguments type-of?]
    (.updateImportTypeNode ^js node-factory node argument assertions qualifier type-arguments type-of?)))
 
@@ -1417,60 +1165,32 @@
   (.updateSpreadElement ^js node-factory node expression))
 
 (defn create-class-expression
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers name]
-               [node-factory decorators modifiers name type-parameters]
-               [node-factory decorators modifiers name type-parameters heritage-clauses]
-               [node-factory decorators modifiers name type-parameters heritage-clauses members]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name type-parameters]
-               [node-factory modifiers name type-parameters heritage-clauses]
-               [node-factory modifiers name type-parameters heritage-clauses members])}
   (^js [node-factory]
    (.createClassExpression ^js node-factory))
-  (^js [a b]
-   (.createClassExpression ^js a b))
-  (^js [a b c]
-   (.createClassExpression ^js a b c))
-  (^js [a b c d]
-   (.createClassExpression ^js a b c d))
-  (^js [a b c d e]
-   (.createClassExpression ^js a b c d e))
-  (^js [a b c d e f]
-   (.createClassExpression ^js a b c d e f))
-  (^js [node-factory decorators modifiers name type-parameters heritage-clauses members]
-   (.createClassExpression ^js node-factory decorators modifiers name type-parameters heritage-clauses members)))
+  (^js [node-factory modifiers]
+   (.createClassExpression ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createClassExpression ^js node-factory modifiers name))
+  (^js [node-factory modifiers name type-parameters]
+   (.createClassExpression ^js node-factory modifiers name type-parameters))
+  (^js [node-factory modifiers name type-parameters heritage-clauses]
+   (.createClassExpression ^js node-factory modifiers name type-parameters heritage-clauses))
+  (^js [node-factory modifiers name type-parameters heritage-clauses members]
+   (.createClassExpression ^js node-factory modifiers name type-parameters heritage-clauses members)))
 
 (defn update-class-expression
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers name]
-               [node-factory node decorators modifiers name type-parameters]
-               [node-factory node decorators modifiers name type-parameters heritage-clauses]
-               [node-factory node decorators modifiers name type-parameters heritage-clauses members]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name type-parameters]
-               [node-factory node modifiers name type-parameters heritage-clauses]
-               [node-factory node modifiers name type-parameters heritage-clauses members])}
   (^js [node-factory node]
    (.updateClassExpression ^js node-factory node))
-  (^js [a b c]
-   (.updateClassExpression ^js a b c))
-  (^js [a b c d]
-   (.updateClassExpression ^js a b c d))
-  (^js [a b c d e]
-   (.updateClassExpression ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateClassExpression ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.updateClassExpression ^js a b c d e f g))
-  (^js [node-factory node decorators modifiers name type-parameters heritage-clauses members]
-   (.updateClassExpression ^js node-factory node decorators modifiers name type-parameters heritage-clauses members)))
+  (^js [node-factory node modifiers]
+   (.updateClassExpression ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updateClassExpression ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name type-parameters]
+   (.updateClassExpression ^js node-factory node modifiers name type-parameters))
+  (^js [node-factory node modifiers name type-parameters heritage-clauses]
+   (.updateClassExpression ^js node-factory node modifiers name type-parameters heritage-clauses))
+  (^js [node-factory node modifiers name type-parameters heritage-clauses members]
+   (.updateClassExpression ^js node-factory node modifiers name type-parameters heritage-clauses members)))
 
 (defn create-omitted-expression
   ^js [node-factory]
@@ -1519,6 +1239,14 @@
 (defn update-meta-property
   ^js [node-factory node name]
   (.updateMetaProperty ^js node-factory node name))
+
+(defn create-satisfies-expression
+  ^js [node-factory expression type]
+  (.createSatisfiesExpression ^js node-factory expression type))
+
+(defn update-satisfies-expression
+  ^js [node-factory node expression type]
+  (.updateSatisfiesExpression ^js node-factory node expression type))
 
 (defn create-template-span
   ^js [node-factory expression literal]
@@ -1773,320 +1501,162 @@
   (.updateVariableDeclarationList ^js node-factory node declarations))
 
 (defn create-function-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers asterisk-token]
-               [node-factory decorators modifiers asterisk-token name]
-               [node-factory decorators modifiers asterisk-token name type-parameters]
-               [node-factory decorators modifiers asterisk-token name type-parameters parameters]
-               [node-factory decorators modifiers asterisk-token name type-parameters parameters type]
-               [node-factory decorators modifiers asterisk-token name type-parameters parameters type body]
-               [node-factory modifiers]
-               [node-factory modifiers asterisk-token]
-               [node-factory modifiers asterisk-token name]
-               [node-factory modifiers asterisk-token name type-parameters]
-               [node-factory modifiers asterisk-token name type-parameters parameters]
-               [node-factory modifiers asterisk-token name type-parameters parameters type]
-               [node-factory modifiers asterisk-token name type-parameters parameters type body])}
   (^js [node-factory]
    (.createFunctionDeclaration ^js node-factory))
-  (^js [a b]
-   (.createFunctionDeclaration ^js a b))
-  (^js [a b c]
-   (.createFunctionDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createFunctionDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createFunctionDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.createFunctionDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.createFunctionDeclaration ^js a b c d e f g))
-  (^js [a b c d e f g h]
-   (.createFunctionDeclaration ^js a b c d e f g h))
-  (^js [node-factory decorators modifiers asterisk-token name type-parameters parameters type body]
-   (.createFunctionDeclaration ^js node-factory decorators modifiers asterisk-token name type-parameters parameters type body)))
+  (^js [node-factory modifiers]
+   (.createFunctionDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers asterisk-token]
+   (.createFunctionDeclaration ^js node-factory modifiers asterisk-token))
+  (^js [node-factory modifiers asterisk-token name]
+   (.createFunctionDeclaration ^js node-factory modifiers asterisk-token name))
+  (^js [node-factory modifiers asterisk-token name type-parameters]
+   (.createFunctionDeclaration ^js node-factory modifiers asterisk-token name type-parameters))
+  (^js [node-factory modifiers asterisk-token name type-parameters parameters]
+   (.createFunctionDeclaration ^js node-factory modifiers asterisk-token name type-parameters parameters))
+  (^js [node-factory modifiers asterisk-token name type-parameters parameters type]
+   (.createFunctionDeclaration ^js node-factory modifiers asterisk-token name type-parameters parameters type))
+  (^js [node-factory modifiers asterisk-token name type-parameters parameters type body]
+   (.createFunctionDeclaration ^js node-factory modifiers asterisk-token name type-parameters parameters type body)))
 
 (defn update-function-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers asterisk-token]
-               [node-factory node decorators modifiers asterisk-token name]
-               [node-factory node decorators modifiers asterisk-token name type-parameters]
-               [node-factory node decorators modifiers asterisk-token name type-parameters parameters]
-               [node-factory node decorators modifiers asterisk-token name type-parameters parameters type]
-               [node-factory node decorators modifiers asterisk-token name type-parameters parameters type body]
-               [node-factory node modifiers]
-               [node-factory node modifiers asterisk-token]
-               [node-factory node modifiers asterisk-token name]
-               [node-factory node modifiers asterisk-token name type-parameters]
-               [node-factory node modifiers asterisk-token name type-parameters parameters]
-               [node-factory node modifiers asterisk-token name type-parameters parameters type]
-               [node-factory node modifiers asterisk-token name type-parameters parameters type body])}
   (^js [node-factory node]
    (.updateFunctionDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateFunctionDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateFunctionDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateFunctionDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateFunctionDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.updateFunctionDeclaration ^js a b c d e f g))
-  (^js [a b c d e f g h]
-   (.updateFunctionDeclaration ^js a b c d e f g h))
-  (^js [a b c d e f g h i]
-   (.updateFunctionDeclaration ^js a b c d e f g h i))
-  (^js [node-factory node decorators modifiers asterisk-token name type-parameters parameters type body]
-   (.updateFunctionDeclaration ^js node-factory node decorators modifiers asterisk-token name type-parameters parameters type body)))
+  (^js [node-factory node modifiers]
+   (.updateFunctionDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers asterisk-token]
+   (.updateFunctionDeclaration ^js node-factory node modifiers asterisk-token))
+  (^js [node-factory node modifiers asterisk-token name]
+   (.updateFunctionDeclaration ^js node-factory node modifiers asterisk-token name))
+  (^js [node-factory node modifiers asterisk-token name type-parameters]
+   (.updateFunctionDeclaration ^js node-factory node modifiers asterisk-token name type-parameters))
+  (^js [node-factory node modifiers asterisk-token name type-parameters parameters]
+   (.updateFunctionDeclaration ^js node-factory node modifiers asterisk-token name type-parameters parameters))
+  (^js [node-factory node modifiers asterisk-token name type-parameters parameters type]
+   (.updateFunctionDeclaration ^js node-factory node modifiers asterisk-token name type-parameters parameters type))
+  (^js [node-factory node modifiers asterisk-token name type-parameters parameters type body]
+   (.updateFunctionDeclaration ^js node-factory node modifiers asterisk-token name type-parameters parameters type body)))
 
 (defn create-class-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers name]
-               [node-factory decorators modifiers name type-parameters]
-               [node-factory decorators modifiers name type-parameters heritage-clauses]
-               [node-factory decorators modifiers name type-parameters heritage-clauses members]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name type-parameters]
-               [node-factory modifiers name type-parameters heritage-clauses]
-               [node-factory modifiers name type-parameters heritage-clauses members])}
   (^js [node-factory]
    (.createClassDeclaration ^js node-factory))
-  (^js [a b]
-   (.createClassDeclaration ^js a b))
-  (^js [a b c]
-   (.createClassDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createClassDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createClassDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.createClassDeclaration ^js a b c d e f))
-  (^js [node-factory decorators modifiers name type-parameters heritage-clauses members]
-   (.createClassDeclaration ^js node-factory decorators modifiers name type-parameters heritage-clauses members)))
+  (^js [node-factory modifiers]
+   (.createClassDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createClassDeclaration ^js node-factory modifiers name))
+  (^js [node-factory modifiers name type-parameters]
+   (.createClassDeclaration ^js node-factory modifiers name type-parameters))
+  (^js [node-factory modifiers name type-parameters heritage-clauses]
+   (.createClassDeclaration ^js node-factory modifiers name type-parameters heritage-clauses))
+  (^js [node-factory modifiers name type-parameters heritage-clauses members]
+   (.createClassDeclaration ^js node-factory modifiers name type-parameters heritage-clauses members)))
 
 (defn update-class-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers name]
-               [node-factory node decorators modifiers name type-parameters]
-               [node-factory node decorators modifiers name type-parameters heritage-clauses]
-               [node-factory node decorators modifiers name type-parameters heritage-clauses members]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name type-parameters]
-               [node-factory node modifiers name type-parameters heritage-clauses]
-               [node-factory node modifiers name type-parameters heritage-clauses members])}
   (^js [node-factory node]
    (.updateClassDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateClassDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateClassDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateClassDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateClassDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.updateClassDeclaration ^js a b c d e f g))
-  (^js [node-factory node decorators modifiers name type-parameters heritage-clauses members]
-   (.updateClassDeclaration ^js node-factory node decorators modifiers name type-parameters heritage-clauses members)))
+  (^js [node-factory node modifiers]
+   (.updateClassDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updateClassDeclaration ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name type-parameters]
+   (.updateClassDeclaration ^js node-factory node modifiers name type-parameters))
+  (^js [node-factory node modifiers name type-parameters heritage-clauses]
+   (.updateClassDeclaration ^js node-factory node modifiers name type-parameters heritage-clauses))
+  (^js [node-factory node modifiers name type-parameters heritage-clauses members]
+   (.updateClassDeclaration ^js node-factory node modifiers name type-parameters heritage-clauses members)))
 
 (defn create-interface-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers name]
-               [node-factory decorators modifiers name type-parameters]
-               [node-factory decorators modifiers name type-parameters heritage-clauses]
-               [node-factory decorators modifiers name type-parameters heritage-clauses members]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name type-parameters]
-               [node-factory modifiers name type-parameters heritage-clauses]
-               [node-factory modifiers name type-parameters heritage-clauses members])}
   (^js [node-factory]
    (.createInterfaceDeclaration ^js node-factory))
-  (^js [a b]
-   (.createInterfaceDeclaration ^js a b))
-  (^js [a b c]
-   (.createInterfaceDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createInterfaceDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createInterfaceDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.createInterfaceDeclaration ^js a b c d e f))
-  (^js [node-factory decorators modifiers name type-parameters heritage-clauses members]
-   (.createInterfaceDeclaration ^js node-factory decorators modifiers name type-parameters heritage-clauses members)))
+  (^js [node-factory modifiers]
+   (.createInterfaceDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createInterfaceDeclaration ^js node-factory modifiers name))
+  (^js [node-factory modifiers name type-parameters]
+   (.createInterfaceDeclaration ^js node-factory modifiers name type-parameters))
+  (^js [node-factory modifiers name type-parameters heritage-clauses]
+   (.createInterfaceDeclaration ^js node-factory modifiers name type-parameters heritage-clauses))
+  (^js [node-factory modifiers name type-parameters heritage-clauses members]
+   (.createInterfaceDeclaration ^js node-factory modifiers name type-parameters heritage-clauses members)))
 
 (defn update-interface-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers name]
-               [node-factory node decorators modifiers name type-parameters]
-               [node-factory node decorators modifiers name type-parameters heritage-clauses]
-               [node-factory node decorators modifiers name type-parameters heritage-clauses members]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name type-parameters]
-               [node-factory node modifiers name type-parameters heritage-clauses]
-               [node-factory node modifiers name type-parameters heritage-clauses members])}
   (^js [node-factory node]
    (.updateInterfaceDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateInterfaceDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateInterfaceDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateInterfaceDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateInterfaceDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.updateInterfaceDeclaration ^js a b c d e f g))
-  (^js [node-factory node decorators modifiers name type-parameters heritage-clauses members]
-   (.updateInterfaceDeclaration ^js node-factory node decorators modifiers name type-parameters heritage-clauses members)))
+  (^js [node-factory node modifiers]
+   (.updateInterfaceDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updateInterfaceDeclaration ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name type-parameters]
+   (.updateInterfaceDeclaration ^js node-factory node modifiers name type-parameters))
+  (^js [node-factory node modifiers name type-parameters heritage-clauses]
+   (.updateInterfaceDeclaration ^js node-factory node modifiers name type-parameters heritage-clauses))
+  (^js [node-factory node modifiers name type-parameters heritage-clauses members]
+   (.updateInterfaceDeclaration ^js node-factory node modifiers name type-parameters heritage-clauses members)))
 
 (defn create-type-alias-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers name]
-               [node-factory decorators modifiers name type-parameters]
-               [node-factory decorators modifiers name type-parameters type]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name type-parameters]
-               [node-factory modifiers name type-parameters type])}
   (^js [node-factory]
    (.createTypeAliasDeclaration ^js node-factory))
-  (^js [a b]
-   (.createTypeAliasDeclaration ^js a b))
-  (^js [a b c]
-   (.createTypeAliasDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createTypeAliasDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createTypeAliasDeclaration ^js a b c d e))
-  (^js [node-factory decorators modifiers name type-parameters type]
-   (.createTypeAliasDeclaration ^js node-factory decorators modifiers name type-parameters type)))
+  (^js [node-factory modifiers]
+   (.createTypeAliasDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createTypeAliasDeclaration ^js node-factory modifiers name))
+  (^js [node-factory modifiers name type-parameters]
+   (.createTypeAliasDeclaration ^js node-factory modifiers name type-parameters))
+  (^js [node-factory modifiers name type-parameters type]
+   (.createTypeAliasDeclaration ^js node-factory modifiers name type-parameters type)))
 
 (defn update-type-alias-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers name]
-               [node-factory node decorators modifiers name type-parameters]
-               [node-factory node decorators modifiers name type-parameters type]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name type-parameters]
-               [node-factory node modifiers name type-parameters type])}
   (^js [node-factory node]
    (.updateTypeAliasDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateTypeAliasDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateTypeAliasDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateTypeAliasDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateTypeAliasDeclaration ^js a b c d e f))
-  (^js [node-factory node decorators modifiers name type-parameters type]
-   (.updateTypeAliasDeclaration ^js node-factory node decorators modifiers name type-parameters type)))
+  (^js [node-factory node modifiers]
+   (.updateTypeAliasDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updateTypeAliasDeclaration ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name type-parameters]
+   (.updateTypeAliasDeclaration ^js node-factory node modifiers name type-parameters))
+  (^js [node-factory node modifiers name type-parameters type]
+   (.updateTypeAliasDeclaration ^js node-factory node modifiers name type-parameters type)))
 
 (defn create-enum-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers name]
-               [node-factory decorators modifiers name members]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name members])}
   (^js [node-factory]
    (.createEnumDeclaration ^js node-factory))
-  (^js [a b]
-   (.createEnumDeclaration ^js a b))
-  (^js [a b c]
-   (.createEnumDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createEnumDeclaration ^js a b c d))
-  (^js [node-factory decorators modifiers name members]
-   (.createEnumDeclaration ^js node-factory decorators modifiers name members)))
+  (^js [node-factory modifiers]
+   (.createEnumDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createEnumDeclaration ^js node-factory modifiers name))
+  (^js [node-factory modifiers name members]
+   (.createEnumDeclaration ^js node-factory modifiers name members)))
 
 (defn update-enum-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers name]
-               [node-factory node decorators modifiers name members]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name members])}
   (^js [node-factory node]
    (.updateEnumDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateEnumDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateEnumDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateEnumDeclaration ^js a b c d e))
-  (^js [node-factory node decorators modifiers name members]
-   (.updateEnumDeclaration ^js node-factory node decorators modifiers name members)))
+  (^js [node-factory node modifiers]
+   (.updateEnumDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updateEnumDeclaration ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name members]
+   (.updateEnumDeclaration ^js node-factory node modifiers name members)))
 
 (defn create-module-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers name]
-               [node-factory decorators modifiers name body]
-               [node-factory decorators modifiers name body flags]
-               [node-factory modifiers]
-               [node-factory modifiers name]
-               [node-factory modifiers name body]
-               [node-factory modifiers name body flags])}
   (^js [node-factory]
    (.createModuleDeclaration ^js node-factory))
-  (^js [a b]
-   (.createModuleDeclaration ^js a b))
-  (^js [a b c]
-   (.createModuleDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createModuleDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createModuleDeclaration ^js a b c d e))
-  (^js [node-factory decorators modifiers name body flags]
-   (.createModuleDeclaration ^js node-factory decorators modifiers name body flags)))
+  (^js [node-factory modifiers]
+   (.createModuleDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers name]
+   (.createModuleDeclaration ^js node-factory modifiers name))
+  (^js [node-factory modifiers name body]
+   (.createModuleDeclaration ^js node-factory modifiers name body))
+  (^js [node-factory modifiers name body flags]
+   (.createModuleDeclaration ^js node-factory modifiers name body flags)))
 
 (defn update-module-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers name]
-               [node-factory node decorators modifiers name body]
-               [node-factory node modifiers]
-               [node-factory node modifiers name]
-               [node-factory node modifiers name body])}
   (^js [node-factory node]
    (.updateModuleDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateModuleDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateModuleDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateModuleDeclaration ^js a b c d e))
-  (^js [node-factory node decorators modifiers name body]
-   (.updateModuleDeclaration ^js node-factory node decorators modifiers name body)))
+  (^js [node-factory node modifiers]
+   (.updateModuleDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers name]
+   (.updateModuleDeclaration ^js node-factory node modifiers name))
+  (^js [node-factory node modifiers name body]
+   (.updateModuleDeclaration ^js node-factory node modifiers name body)))
 
 (defn create-module-block
   ^js [node-factory statements]
@@ -2113,100 +1683,52 @@
   (.updateNamespaceExportDeclaration ^js node-factory node name))
 
 (defn create-import-equals-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers type-only?]
-               [node-factory decorators modifiers type-only? name]
-               [node-factory decorators modifiers type-only? name module-reference]
-               [node-factory modifiers]
-               [node-factory modifiers type-only?]
-               [node-factory modifiers type-only? name]
-               [node-factory modifiers type-only? name module-reference])}
   (^js [node-factory]
    (.createImportEqualsDeclaration ^js node-factory))
-  (^js [a b]
-   (.createImportEqualsDeclaration ^js a b))
-  (^js [a b c]
-   (.createImportEqualsDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createImportEqualsDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createImportEqualsDeclaration ^js a b c d e))
-  (^js [node-factory decorators modifiers type-only? name module-reference]
-   (.createImportEqualsDeclaration ^js node-factory decorators modifiers type-only? name module-reference)))
+  (^js [node-factory modifiers]
+   (.createImportEqualsDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers type-only?]
+   (.createImportEqualsDeclaration ^js node-factory modifiers type-only?))
+  (^js [node-factory modifiers type-only? name]
+   (.createImportEqualsDeclaration ^js node-factory modifiers type-only? name))
+  (^js [node-factory modifiers type-only? name module-reference]
+   (.createImportEqualsDeclaration ^js node-factory modifiers type-only? name module-reference)))
 
 (defn update-import-equals-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers type-only?]
-               [node-factory node decorators modifiers type-only? name]
-               [node-factory node decorators modifiers type-only? name module-reference]
-               [node-factory node modifiers]
-               [node-factory node modifiers type-only?]
-               [node-factory node modifiers type-only? name]
-               [node-factory node modifiers type-only? name module-reference])}
   (^js [node-factory node]
    (.updateImportEqualsDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateImportEqualsDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateImportEqualsDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateImportEqualsDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateImportEqualsDeclaration ^js a b c d e f))
-  (^js [node-factory node decorators modifiers type-only? name module-reference]
-   (.updateImportEqualsDeclaration ^js node-factory node decorators modifiers type-only? name module-reference)))
+  (^js [node-factory node modifiers]
+   (.updateImportEqualsDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers type-only?]
+   (.updateImportEqualsDeclaration ^js node-factory node modifiers type-only?))
+  (^js [node-factory node modifiers type-only? name]
+   (.updateImportEqualsDeclaration ^js node-factory node modifiers type-only? name))
+  (^js [node-factory node modifiers type-only? name module-reference]
+   (.updateImportEqualsDeclaration ^js node-factory node modifiers type-only? name module-reference)))
 
 (defn create-import-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers import-clause]
-               [node-factory decorators modifiers import-clause module-specifier]
-               [node-factory decorators modifiers import-clause module-specifier assert-clause]
-               [node-factory modifiers]
-               [node-factory modifiers import-clause]
-               [node-factory modifiers import-clause module-specifier]
-               [node-factory modifiers import-clause module-specifier assert-clause])}
   (^js [node-factory]
    (.createImportDeclaration ^js node-factory))
-  (^js [a b]
-   (.createImportDeclaration ^js a b))
-  (^js [a b c]
-   (.createImportDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createImportDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createImportDeclaration ^js a b c d e))
-  (^js [node-factory decorators modifiers import-clause module-specifier assert-clause]
-   (.createImportDeclaration ^js node-factory decorators modifiers import-clause module-specifier assert-clause)))
+  (^js [node-factory modifiers]
+   (.createImportDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers import-clause]
+   (.createImportDeclaration ^js node-factory modifiers import-clause))
+  (^js [node-factory modifiers import-clause module-specifier]
+   (.createImportDeclaration ^js node-factory modifiers import-clause module-specifier))
+  (^js [node-factory modifiers import-clause module-specifier assert-clause]
+   (.createImportDeclaration ^js node-factory modifiers import-clause module-specifier assert-clause)))
 
 (defn update-import-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers import-clause]
-               [node-factory node decorators modifiers import-clause module-specifier]
-               [node-factory node decorators modifiers import-clause module-specifier assert-clause]
-               [node-factory node modifiers]
-               [node-factory node modifiers import-clause]
-               [node-factory node modifiers import-clause module-specifier]
-               [node-factory node modifiers import-clause module-specifier assert-clause])}
   (^js [node-factory node]
    (.updateImportDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateImportDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateImportDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateImportDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateImportDeclaration ^js a b c d e f))
-  (^js [node-factory node decorators modifiers import-clause module-specifier assert-clause]
-   (.updateImportDeclaration ^js node-factory node decorators modifiers import-clause module-specifier assert-clause)))
+  (^js [node-factory node modifiers]
+   (.updateImportDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers import-clause]
+   (.updateImportDeclaration ^js node-factory node modifiers import-clause))
+  (^js [node-factory node modifiers import-clause module-specifier]
+   (.updateImportDeclaration ^js node-factory node modifiers import-clause module-specifier))
+  (^js [node-factory node modifiers import-clause module-specifier assert-clause]
+   (.updateImportDeclaration ^js node-factory node modifiers import-clause module-specifier assert-clause)))
 
 (defn create-import-clause
   (^js [node-factory type-only?]
@@ -2297,96 +1819,50 @@
    (.updateImportSpecifier ^js node-factory node type-only? property-name name)))
 
 (defn create-export-assignment
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers export-equals?]
-               [node-factory decorators modifiers export-equals? expression]
-               [node-factory modifiers]
-               [node-factory modifiers export-equals?]
-               [node-factory modifiers export-equals? expression])}
   (^js [node-factory]
    (.createExportAssignment ^js node-factory))
-  (^js [a b]
-   (.createExportAssignment ^js a b))
-  (^js [a b c]
-   (.createExportAssignment ^js a b c))
-  (^js [a b c d]
-   (.createExportAssignment ^js a b c d))
-  (^js [node-factory decorators modifiers export-equals? expression]
-   (.createExportAssignment ^js node-factory decorators modifiers export-equals? expression)))
+  (^js [node-factory modifiers]
+   (.createExportAssignment ^js node-factory modifiers))
+  (^js [node-factory modifiers export-equals?]
+   (.createExportAssignment ^js node-factory modifiers export-equals?))
+  (^js [node-factory modifiers export-equals? expression]
+   (.createExportAssignment ^js node-factory modifiers export-equals? expression)))
 
 (defn update-export-assignment
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers expression]
-               [node-factory node modifiers]
-               [node-factory node modifiers expression])}
   (^js [node-factory node]
    (.updateExportAssignment ^js node-factory node))
-  (^js [a b c]
-   (.updateExportAssignment ^js a b c))
-  (^js [a b c d]
-   (.updateExportAssignment ^js a b c d))
-  (^js [node-factory node decorators modifiers expression]
-   (.updateExportAssignment ^js node-factory node decorators modifiers expression)))
+  (^js [node-factory node modifiers]
+   (.updateExportAssignment ^js node-factory node modifiers))
+  (^js [node-factory node modifiers expression]
+   (.updateExportAssignment ^js node-factory node modifiers expression)))
 
 (defn create-export-declaration
-  {:arglists '([node-factory]
-               [node-factory decorators]
-               [node-factory decorators modifiers]
-               [node-factory decorators modifiers type-only?]
-               [node-factory decorators modifiers type-only? export-clause]
-               [node-factory decorators modifiers type-only? export-clause module-specifier]
-               [node-factory decorators modifiers type-only? export-clause module-specifier assert-clause]
-               [node-factory modifiers]
-               [node-factory modifiers type-only?]
-               [node-factory modifiers type-only? export-clause]
-               [node-factory modifiers type-only? export-clause module-specifier]
-               [node-factory modifiers type-only? export-clause module-specifier assert-clause])}
   (^js [node-factory]
    (.createExportDeclaration ^js node-factory))
-  (^js [a b]
-   (.createExportDeclaration ^js a b))
-  (^js [a b c]
-   (.createExportDeclaration ^js a b c))
-  (^js [a b c d]
-   (.createExportDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.createExportDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.createExportDeclaration ^js a b c d e f))
-  (^js [node-factory decorators modifiers type-only? export-clause module-specifier assert-clause]
-   (.createExportDeclaration ^js node-factory decorators modifiers type-only? export-clause module-specifier assert-clause)))
+  (^js [node-factory modifiers]
+   (.createExportDeclaration ^js node-factory modifiers))
+  (^js [node-factory modifiers type-only?]
+   (.createExportDeclaration ^js node-factory modifiers type-only?))
+  (^js [node-factory modifiers type-only? export-clause]
+   (.createExportDeclaration ^js node-factory modifiers type-only? export-clause))
+  (^js [node-factory modifiers type-only? export-clause module-specifier]
+   (.createExportDeclaration ^js node-factory modifiers type-only? export-clause module-specifier))
+  (^js [node-factory modifiers type-only? export-clause module-specifier assert-clause]
+   (.createExportDeclaration ^js node-factory modifiers type-only? export-clause module-specifier assert-clause)))
 
 (defn update-export-declaration
-  {:arglists '([node-factory node]
-               [node-factory node decorators]
-               [node-factory node decorators modifiers]
-               [node-factory node decorators modifiers type-only?]
-               [node-factory node decorators modifiers type-only? export-clause]
-               [node-factory node decorators modifiers type-only? export-clause module-specifier]
-               [node-factory node decorators modifiers type-only? export-clause module-specifier assert-clause]
-               [node-factory node modifiers]
-               [node-factory node modifiers type-only?]
-               [node-factory node modifiers type-only? export-clause]
-               [node-factory node modifiers type-only? export-clause module-specifier]
-               [node-factory node modifiers type-only? export-clause module-specifier assert-clause])}
   (^js [node-factory node]
    (.updateExportDeclaration ^js node-factory node))
-  (^js [a b c]
-   (.updateExportDeclaration ^js a b c))
-  (^js [a b c d]
-   (.updateExportDeclaration ^js a b c d))
-  (^js [a b c d e]
-   (.updateExportDeclaration ^js a b c d e))
-  (^js [a b c d e f]
-   (.updateExportDeclaration ^js a b c d e f))
-  (^js [a b c d e f g]
-   (.updateExportDeclaration ^js a b c d e f g))
-  (^js [node-factory node decorators modifiers type-only? export-clause module-specifier assert-clause]
-   (.updateExportDeclaration ^js node-factory node decorators modifiers type-only? export-clause module-specifier assert-clause)))
+  (^js [node-factory node modifiers]
+   (.updateExportDeclaration ^js node-factory node modifiers))
+  (^js [node-factory node modifiers type-only?]
+   (.updateExportDeclaration ^js node-factory node modifiers type-only?))
+  (^js [node-factory node modifiers type-only? export-clause]
+   (.updateExportDeclaration ^js node-factory node modifiers type-only? export-clause))
+  (^js [node-factory node modifiers type-only? export-clause module-specifier]
+   (.updateExportDeclaration ^js node-factory node modifiers type-only? export-clause module-specifier))
+  (^js [node-factory node modifiers type-only? export-clause module-specifier assert-clause]
+   (.updateExportDeclaration ^js node-factory node modifiers type-only? export-clause module-specifier assert-clause)))
 
 (defn create-named-exports
   ^js [node-factory elements]
@@ -2828,6 +2304,26 @@
   (^js [node-factory node tag-name type-expression full-name comment]
    (.updateJSDocCallbackTag ^js node-factory node tag-name type-expression full-name comment)))
 
+(defn create-js-doc-overload-tag
+  (^js [node-factory]
+   (.createJSDocOverloadTag ^js node-factory))
+  (^js [node-factory tag-name]
+   (.createJSDocOverloadTag ^js node-factory tag-name))
+  (^js [node-factory tag-name type-expression]
+   (.createJSDocOverloadTag ^js node-factory tag-name type-expression))
+  (^js [node-factory tag-name type-expression comment]
+   (.createJSDocOverloadTag ^js node-factory tag-name type-expression comment)))
+
+(defn update-js-doc-overload-tag
+  (^js [node-factory node]
+   (.updateJSDocOverloadTag ^js node-factory node))
+  (^js [node-factory node tag-name]
+   (.updateJSDocOverloadTag ^js node-factory node tag-name))
+  (^js [node-factory node tag-name type-expression]
+   (.updateJSDocOverloadTag ^js node-factory node tag-name type-expression))
+  (^js [node-factory node tag-name type-expression comment]
+   (.updateJSDocOverloadTag ^js node-factory node tag-name type-expression comment)))
+
 (defn create-js-doc-augments-tag
   (^js [node-factory]
    (.createJSDocAugmentsTag ^js node-factory))
@@ -2977,28 +2473,74 @@
    (.updateJSDocUnknownTag ^js node-factory node tag-name comment)))
 
 (defn create-js-doc-deprecated-tag
+  (^js [node-factory]
+   (.createJSDocDeprecatedTag ^js node-factory))
   (^js [node-factory tag-name]
    (.createJSDocDeprecatedTag ^js node-factory tag-name))
   (^js [node-factory tag-name comment]
    (.createJSDocDeprecatedTag ^js node-factory tag-name comment)))
 
 (defn update-js-doc-deprecated-tag
+  (^js [node-factory node]
+   (.updateJSDocDeprecatedTag ^js node-factory node))
   (^js [node-factory node tag-name]
    (.updateJSDocDeprecatedTag ^js node-factory node tag-name))
   (^js [node-factory node tag-name comment]
    (.updateJSDocDeprecatedTag ^js node-factory node tag-name comment)))
 
 (defn create-js-doc-override-tag
+  (^js [node-factory]
+   (.createJSDocOverrideTag ^js node-factory))
   (^js [node-factory tag-name]
    (.createJSDocOverrideTag ^js node-factory tag-name))
   (^js [node-factory tag-name comment]
    (.createJSDocOverrideTag ^js node-factory tag-name comment)))
 
 (defn update-js-doc-override-tag
+  (^js [node-factory node]
+   (.updateJSDocOverrideTag ^js node-factory node))
   (^js [node-factory node tag-name]
    (.updateJSDocOverrideTag ^js node-factory node tag-name))
   (^js [node-factory node tag-name comment]
    (.updateJSDocOverrideTag ^js node-factory node tag-name comment)))
+
+(defn create-js-doc-throws-tag
+  (^js [node-factory tag-name]
+   (.createJSDocThrowsTag ^js node-factory tag-name))
+  (^js [node-factory tag-name type-expression]
+   (.createJSDocThrowsTag ^js node-factory tag-name type-expression))
+  (^js [node-factory tag-name type-expression comment]
+   (.createJSDocThrowsTag ^js node-factory tag-name type-expression comment)))
+
+(defn update-js-doc-throws-tag
+  (^js [node-factory node]
+   (.updateJSDocThrowsTag ^js node-factory node))
+  (^js [node-factory node tag-name]
+   (.updateJSDocThrowsTag ^js node-factory node tag-name))
+  (^js [node-factory node tag-name type-expression]
+   (.updateJSDocThrowsTag ^js node-factory node tag-name type-expression))
+  (^js [node-factory node tag-name type-expression comment]
+   (.updateJSDocThrowsTag ^js node-factory node tag-name type-expression comment)))
+
+(defn create-js-doc-satisfies-tag
+  (^js [node-factory]
+   (.createJSDocSatisfiesTag ^js node-factory))
+  (^js [node-factory tag-name]
+   (.createJSDocSatisfiesTag ^js node-factory tag-name))
+  (^js [node-factory tag-name type-expression]
+   (.createJSDocSatisfiesTag ^js node-factory tag-name type-expression))
+  (^js [node-factory tag-name type-expression comment]
+   (.createJSDocSatisfiesTag ^js node-factory tag-name type-expression comment)))
+
+(defn update-js-doc-satisfies-tag
+  (^js [node-factory node]
+   (.updateJSDocSatisfiesTag ^js node-factory node))
+  (^js [node-factory node tag-name]
+   (.updateJSDocSatisfiesTag ^js node-factory node tag-name))
+  (^js [node-factory node tag-name type-expression]
+   (.updateJSDocSatisfiesTag ^js node-factory node tag-name type-expression))
+  (^js [node-factory node tag-name type-expression comment]
+   (.updateJSDocSatisfiesTag ^js node-factory node tag-name type-expression comment)))
 
 (defn create-js-doc-text
   ^js [node-factory text]
@@ -3141,6 +2683,14 @@
    (.updateJsxExpression ^js node-factory node))
   (^js [node-factory node expression]
    (.updateJsxExpression ^js node-factory node expression)))
+
+(defn create-jsx-namespaced-name
+  ^js [node-factory namespace name]
+  (.createJsxNamespacedName ^js node-factory namespace name))
+
+(defn update-jsx-namespaced-name
+  ^js [node-factory node namespace name]
+  (.updateJsxNamespacedName ^js node-factory node namespace name))
 
 (defn create-case-clause
   ^js [node-factory expression statements]

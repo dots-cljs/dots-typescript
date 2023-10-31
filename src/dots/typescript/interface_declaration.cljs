@@ -117,10 +117,6 @@
   (^js [interface-declaration cb-node cb-node-array]
    (.forEachChild ^js interface-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [interface-declaration]
-  (.-decorators ^js interface-declaration))
-
 (defn pos
   ^js [interface-declaration]
   (.-pos ^js interface-declaration))

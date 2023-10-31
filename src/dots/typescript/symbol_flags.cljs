@@ -100,9 +100,11 @@
 
 (def method-excludes (.-MethodExcludes typescript/SymbolFlags))
 
-(def accessor-excludes (.-GetAccessorExcludes typescript/SymbolFlags))
+(def get-accessor-excludes (.-GetAccessorExcludes typescript/SymbolFlags))
 
 (def set-accessor-excludes (.-SetAccessorExcludes typescript/SymbolFlags))
+
+(def accessor-excludes (.-AccessorExcludes typescript/SymbolFlags))
 
 (def type-parameter-excludes (.-TypeParameterExcludes typescript/SymbolFlags))
 

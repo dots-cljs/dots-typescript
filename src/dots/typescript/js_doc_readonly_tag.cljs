@@ -105,14 +105,6 @@
   (^js [js-doc-readonly-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-readonly-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-readonly-tag]
-  (.-decorators ^js js-doc-readonly-tag))
-
-(defn modifiers
-  ^js [js-doc-readonly-tag]
-  (.-modifiers ^js js-doc-readonly-tag))
-
 (defn pos
   ^js [js-doc-readonly-tag]
   (.-pos ^js js-doc-readonly-tag))

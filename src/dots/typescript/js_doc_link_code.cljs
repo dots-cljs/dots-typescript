@@ -109,14 +109,6 @@
   (^js [js-doc-link-code cb-node cb-node-array]
    (.forEachChild ^js js-doc-link-code cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-link-code]
-  (.-decorators ^js js-doc-link-code))
-
-(defn modifiers
-  ^js [js-doc-link-code]
-  (.-modifiers ^js js-doc-link-code))
-
 (defn pos
   ^js [js-doc-link-code]
   (.-pos ^js js-doc-link-code))

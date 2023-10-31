@@ -104,14 +104,6 @@
   (^js [object-literal-expression-base cb-node cb-node-array]
    (.forEachChild ^js object-literal-expression-base cb-node cb-node-array)))
 
-(defn decorators
-  ^js [object-literal-expression-base]
-  (.-decorators ^js object-literal-expression-base))
-
-(defn modifiers
-  ^js [object-literal-expression-base]
-  (.-modifiers ^js object-literal-expression-base))
-
 (defn pos
   ^js [object-literal-expression-base]
   (.-pos ^js object-literal-expression-base))

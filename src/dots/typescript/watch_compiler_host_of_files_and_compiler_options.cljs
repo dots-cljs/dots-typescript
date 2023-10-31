@@ -141,7 +141,6 @@
   (.getEnvironmentVariable ^js watch-compiler-host-of-files-and-compiler-options name))
 
 (defn resolve-module-names
-  "If provided, used to resolve the module names, otherwise typescript's default module resolution"
   (^js [watch-compiler-host-of-files-and-compiler-options module-names containing-file]
    (.resolveModuleNames ^js watch-compiler-host-of-files-and-compiler-options module-names containing-file))
   (^js [watch-compiler-host-of-files-and-compiler-options module-names containing-file reused-names]
@@ -154,7 +153,6 @@
    (.resolveModuleNames ^js watch-compiler-host-of-files-and-compiler-options module-names containing-file reused-names redirected-reference options containing-source-file)))
 
 (defn resolve-type-reference-directives
-  "If provided, used to resolve type reference directives, otherwise typescript's default resolution"
   (^js [watch-compiler-host-of-files-and-compiler-options type-reference-directive-names containing-file]
    (.resolveTypeReferenceDirectives ^js watch-compiler-host-of-files-and-compiler-options type-reference-directive-names containing-file))
   (^js [watch-compiler-host-of-files-and-compiler-options type-reference-directive-names containing-file redirected-reference]
@@ -163,6 +161,35 @@
    (.resolveTypeReferenceDirectives ^js watch-compiler-host-of-files-and-compiler-options type-reference-directive-names containing-file redirected-reference options))
   (^js [watch-compiler-host-of-files-and-compiler-options type-reference-directive-names containing-file redirected-reference options containing-file-mode]
    (.resolveTypeReferenceDirectives ^js watch-compiler-host-of-files-and-compiler-options type-reference-directive-names containing-file redirected-reference options containing-file-mode)))
+
+(defn resolve-module-name-literals
+  (^js [watch-compiler-host-of-files-and-compiler-options module-literals containing-file]
+   (.resolveModuleNameLiterals ^js watch-compiler-host-of-files-and-compiler-options module-literals containing-file))
+  (^js [watch-compiler-host-of-files-and-compiler-options module-literals containing-file redirected-reference]
+   (.resolveModuleNameLiterals ^js watch-compiler-host-of-files-and-compiler-options module-literals containing-file redirected-reference))
+  (^js [watch-compiler-host-of-files-and-compiler-options module-literals containing-file redirected-reference options]
+   (.resolveModuleNameLiterals ^js watch-compiler-host-of-files-and-compiler-options module-literals containing-file redirected-reference options))
+  (^js [watch-compiler-host-of-files-and-compiler-options module-literals containing-file redirected-reference options containing-source-file]
+   (.resolveModuleNameLiterals ^js watch-compiler-host-of-files-and-compiler-options module-literals containing-file redirected-reference options containing-source-file))
+  (^js [watch-compiler-host-of-files-and-compiler-options module-literals containing-file redirected-reference options containing-source-file reused-names]
+   (.resolveModuleNameLiterals ^js watch-compiler-host-of-files-and-compiler-options module-literals containing-file redirected-reference options containing-source-file reused-names)))
+
+(defn resolve-type-reference-directive-references
+  (^js [watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file]
+   (.resolveTypeReferenceDirectiveReferences ^js watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file))
+  (^js [watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file redirected-reference]
+   (.resolveTypeReferenceDirectiveReferences ^js watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file redirected-reference))
+  (^js [watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file redirected-reference options]
+   (.resolveTypeReferenceDirectiveReferences ^js watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file redirected-reference options))
+  (^js [watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file redirected-reference options containing-source-file]
+   (.resolveTypeReferenceDirectiveReferences ^js watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file redirected-reference options containing-source-file))
+  (^js [watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file redirected-reference options containing-source-file reused-names]
+   (.resolveTypeReferenceDirectiveReferences ^js watch-compiler-host-of-files-and-compiler-options type-directive-references containing-file redirected-reference options containing-source-file reused-names)))
+
+(defn has-invalidated-resolutions?
+  "If provided along with custom resolveModuleNames or resolveTypeReferenceDirectives, used to determine if unchanged file path needs to re-resolve modules/type reference directives"
+  ^js [watch-compiler-host-of-files-and-compiler-options file-path]
+  (.hasInvalidatedResolutions ^js watch-compiler-host-of-files-and-compiler-options file-path))
 
 (defn module-resolution-cache
   "Returns the module resolution cache used by a provided `resolveModuleNames` implementation so that any non-name module resolution operations (eg, package.json lookup) can reuse it"

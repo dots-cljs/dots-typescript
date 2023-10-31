@@ -21,18 +21,6 @@
   ^js [shorthand-property-assignment]
   (.-objectAssignmentInitializer ^js shorthand-property-assignment))
 
-(defn modifiers
-  ^js [shorthand-property-assignment]
-  (.-modifiers ^js shorthand-property-assignment))
-
-(defn question-token
-  ^js [shorthand-property-assignment]
-  (.-questionToken ^js shorthand-property-assignment))
-
-(defn exclamation-token
-  ^js [shorthand-property-assignment]
-  (.-exclamationToken ^js shorthand-property-assignment))
-
 (defn flags
   ^js [shorthand-property-assignment]
   (.-flags ^js shorthand-property-assignment))
@@ -120,10 +108,6 @@
    (.forEachChild ^js shorthand-property-assignment cb-node))
   (^js [shorthand-property-assignment cb-node cb-node-array]
    (.forEachChild ^js shorthand-property-assignment cb-node cb-node-array)))
-
-(defn decorators
-  ^js [shorthand-property-assignment]
-  (.-decorators ^js shorthand-property-assignment))
 
 (defn pos
   ^js [shorthand-property-assignment]

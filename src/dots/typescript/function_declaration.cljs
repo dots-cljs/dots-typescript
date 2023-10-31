@@ -133,10 +133,6 @@
   (^js [function-declaration cb-node cb-node-array]
    (.forEachChild ^js function-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [function-declaration]
-  (.-decorators ^js function-declaration))
-
 (defn pos
   ^js [function-declaration]
   (.-pos ^js function-declaration))

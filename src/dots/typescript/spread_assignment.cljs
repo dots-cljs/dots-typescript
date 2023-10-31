@@ -105,14 +105,6 @@
   (^js [spread-assignment cb-node cb-node-array]
    (.forEachChild ^js spread-assignment cb-node cb-node-array)))
 
-(defn decorators
-  ^js [spread-assignment]
-  (.-decorators ^js spread-assignment))
-
-(defn modifiers
-  ^js [spread-assignment]
-  (.-modifiers ^js spread-assignment))
-
 (defn pos
   ^js [spread-assignment]
   (.-pos ^js spread-assignment))

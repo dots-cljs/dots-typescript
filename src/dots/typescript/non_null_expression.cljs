@@ -100,14 +100,6 @@
   (^js [non-null-expression cb-node cb-node-array]
    (.forEachChild ^js non-null-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [non-null-expression]
-  (.-decorators ^js non-null-expression))
-
-(defn modifiers
-  ^js [non-null-expression]
-  (.-modifiers ^js non-null-expression))
-
 (defn pos
   ^js [non-null-expression]
   (.-pos ^js non-null-expression))

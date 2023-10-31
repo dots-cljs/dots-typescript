@@ -33,3 +33,11 @@
 (defn set-commands!
   ^js [refactor-edit-info value]
   (set! (.-commands ^js refactor-edit-info) value))
+
+(defn not-applicable-reason
+  ^js [refactor-edit-info]
+  (.-notApplicableReason ^js refactor-edit-info))
+
+(defn set-not-applicable-reason!
+  ^js [refactor-edit-info value]
+  (set! (.-notApplicableReason ^js refactor-edit-info) value))

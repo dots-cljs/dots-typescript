@@ -96,14 +96,6 @@
   (^js [debugger-statement cb-node cb-node-array]
    (.forEachChild ^js debugger-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [debugger-statement]
-  (.-decorators ^js debugger-statement))
-
-(defn modifiers
-  ^js [debugger-statement]
-  (.-modifiers ^js debugger-statement))
-
 (defn pos
   ^js [debugger-statement]
   (.-pos ^js debugger-statement))

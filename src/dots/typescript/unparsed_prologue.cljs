@@ -100,14 +100,6 @@
   (^js [unparsed-prologue cb-node cb-node-array]
    (.forEachChild ^js unparsed-prologue cb-node cb-node-array)))
 
-(defn decorators
-  ^js [unparsed-prologue]
-  (.-decorators ^js unparsed-prologue))
-
-(defn modifiers
-  ^js [unparsed-prologue]
-  (.-modifiers ^js unparsed-prologue))
-
 (defn pos
   ^js [unparsed-prologue]
   (.-pos ^js unparsed-prologue))

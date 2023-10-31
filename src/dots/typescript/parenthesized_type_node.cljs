@@ -101,14 +101,6 @@
   (^js [parenthesized-type-node cb-node cb-node-array]
    (.forEachChild ^js parenthesized-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [parenthesized-type-node]
-  (.-decorators ^js parenthesized-type-node))
-
-(defn modifiers
-  ^js [parenthesized-type-node]
-  (.-modifiers ^js parenthesized-type-node))
-
 (defn pos
   ^js [parenthesized-type-node]
   (.-pos ^js parenthesized-type-node))

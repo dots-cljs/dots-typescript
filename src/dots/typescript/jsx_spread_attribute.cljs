@@ -105,14 +105,6 @@
   (^js [jsx-spread-attribute cb-node cb-node-array]
    (.forEachChild ^js jsx-spread-attribute cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-spread-attribute]
-  (.-decorators ^js jsx-spread-attribute))
-
-(defn modifiers
-  ^js [jsx-spread-attribute]
-  (.-modifiers ^js jsx-spread-attribute))
-
 (defn pos
   ^js [jsx-spread-attribute]
   (.-pos ^js jsx-spread-attribute))

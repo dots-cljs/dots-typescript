@@ -112,14 +112,6 @@
   (^js [switch-statement cb-node cb-node-array]
    (.forEachChild ^js switch-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [switch-statement]
-  (.-decorators ^js switch-statement))
-
-(defn modifiers
-  ^js [switch-statement]
-  (.-modifiers ^js switch-statement))
-
 (defn pos
   ^js [switch-statement]
   (.-pos ^js switch-statement))

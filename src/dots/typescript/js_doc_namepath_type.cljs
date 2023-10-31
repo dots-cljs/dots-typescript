@@ -101,14 +101,6 @@
   (^js [js-doc-namepath-type cb-node cb-node-array]
    (.forEachChild ^js js-doc-namepath-type cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-namepath-type]
-  (.-decorators ^js js-doc-namepath-type))
-
-(defn modifiers
-  ^js [js-doc-namepath-type]
-  (.-modifiers ^js js-doc-namepath-type))
-
 (defn pos
   ^js [js-doc-namepath-type]
   (.-pos ^js js-doc-namepath-type))

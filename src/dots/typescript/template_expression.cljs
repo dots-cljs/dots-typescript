@@ -104,14 +104,6 @@
   (^js [template-expression cb-node cb-node-array]
    (.forEachChild ^js template-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [template-expression]
-  (.-decorators ^js template-expression))
-
-(defn modifiers
-  ^js [template-expression]
-  (.-modifiers ^js template-expression))
-
 (defn pos
   ^js [template-expression]
   (.-pos ^js template-expression))

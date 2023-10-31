@@ -108,14 +108,6 @@
   (^js [object-destructuring-assignment cb-node cb-node-array]
    (.forEachChild ^js object-destructuring-assignment cb-node cb-node-array)))
 
-(defn decorators
-  ^js [object-destructuring-assignment]
-  (.-decorators ^js object-destructuring-assignment))
-
-(defn modifiers
-  ^js [object-destructuring-assignment]
-  (.-modifiers ^js object-destructuring-assignment))
-
 (defn pos
   ^js [object-destructuring-assignment]
   (.-pos ^js object-destructuring-assignment))

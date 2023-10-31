@@ -105,14 +105,6 @@
   (^js [class-static-block-declaration cb-node cb-node-array]
    (.forEachChild ^js class-static-block-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [class-static-block-declaration]
-  (.-decorators ^js class-static-block-declaration))
-
-(defn modifiers
-  ^js [class-static-block-declaration]
-  (.-modifiers ^js class-static-block-declaration))
-
 (defn pos
   ^js [class-static-block-declaration]
   (.-pos ^js class-static-block-declaration))

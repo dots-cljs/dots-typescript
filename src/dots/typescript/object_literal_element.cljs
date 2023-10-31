@@ -101,14 +101,6 @@
   (^js [object-literal-element cb-node cb-node-array]
    (.forEachChild ^js object-literal-element cb-node cb-node-array)))
 
-(defn decorators
-  ^js [object-literal-element]
-  (.-decorators ^js object-literal-element))
-
-(defn modifiers
-  ^js [object-literal-element]
-  (.-modifiers ^js object-literal-element))
-
 (defn pos
   ^js [object-literal-element]
   (.-pos ^js object-literal-element))

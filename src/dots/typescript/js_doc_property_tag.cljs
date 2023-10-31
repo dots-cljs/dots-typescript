@@ -122,14 +122,6 @@
   (^js [js-doc-property-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-property-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-property-tag]
-  (.-decorators ^js js-doc-property-tag))
-
-(defn modifiers
-  ^js [js-doc-property-tag]
-  (.-modifiers ^js js-doc-property-tag))
-
 (defn pos
   ^js [js-doc-property-tag]
   (.-pos ^js js-doc-property-tag))

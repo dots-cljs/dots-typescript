@@ -159,6 +159,13 @@
   (^js [node-array depth]
    (.flat ^js node-array depth)))
 
+(defn at
+  "Takes an integer value and returns the item at that index,
+   allowing for positive and negative integers.
+   Negative integers count back from the last item in the array."
+  ^js [node-array index]
+  (.at ^js node-array index))
+
 (defn pos
   ^js [node-array]
   (.-pos ^js node-array))

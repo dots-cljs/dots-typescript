@@ -105,14 +105,6 @@
   (^js [js-doc-type-literal cb-node cb-node-array]
    (.forEachChild ^js js-doc-type-literal cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-type-literal]
-  (.-decorators ^js js-doc-type-literal))
-
-(defn modifiers
-  ^js [js-doc-type-literal]
-  (.-modifiers ^js js-doc-type-literal))
-
 (defn pos
   ^js [js-doc-type-literal]
   (.-pos ^js js-doc-type-literal))

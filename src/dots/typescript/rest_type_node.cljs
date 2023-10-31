@@ -101,14 +101,6 @@
   (^js [rest-type-node cb-node cb-node-array]
    (.forEachChild ^js rest-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [rest-type-node]
-  (.-decorators ^js rest-type-node))
-
-(defn modifiers
-  ^js [rest-type-node]
-  (.-modifiers ^js rest-type-node))
-
 (defn pos
   ^js [rest-type-node]
   (.-pos ^js rest-type-node))

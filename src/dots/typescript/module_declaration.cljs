@@ -109,10 +109,6 @@
   (^js [module-declaration cb-node cb-node-array]
    (.forEachChild ^js module-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [module-declaration]
-  (.-decorators ^js module-declaration))
-
 (defn pos
   ^js [module-declaration]
   (.-pos ^js module-declaration))

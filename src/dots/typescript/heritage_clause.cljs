@@ -104,14 +104,6 @@
   (^js [heritage-clause cb-node cb-node-array]
    (.forEachChild ^js heritage-clause cb-node cb-node-array)))
 
-(defn decorators
-  ^js [heritage-clause]
-  (.-decorators ^js heritage-clause))
-
-(defn modifiers
-  ^js [heritage-clause]
-  (.-modifiers ^js heritage-clause))
-
 (defn pos
   ^js [heritage-clause]
   (.-pos ^js heritage-clause))

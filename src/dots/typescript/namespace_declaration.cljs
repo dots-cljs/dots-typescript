@@ -109,10 +109,6 @@
   (^js [namespace-declaration cb-node cb-node-array]
    (.forEachChild ^js namespace-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [namespace-declaration]
-  (.-decorators ^js namespace-declaration))
-
 (defn pos
   ^js [namespace-declaration]
   (.-pos ^js namespace-declaration))

@@ -100,14 +100,6 @@
   (^js [return-statement cb-node cb-node-array]
    (.forEachChild ^js return-statement cb-node cb-node-array)))
 
-(defn decorators
-  ^js [return-statement]
-  (.-decorators ^js return-statement))
-
-(defn modifiers
-  ^js [return-statement]
-  (.-modifiers ^js return-statement))
-
 (defn pos
   ^js [return-statement]
   (.-pos ^js return-statement))

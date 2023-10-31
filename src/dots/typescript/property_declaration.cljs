@@ -121,10 +121,6 @@
   (^js [property-declaration cb-node cb-node-array]
    (.forEachChild ^js property-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [property-declaration]
-  (.-decorators ^js property-declaration))
-
 (defn pos
   ^js [property-declaration]
   (.-pos ^js property-declaration))

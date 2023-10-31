@@ -117,14 +117,6 @@
   (^js [js-doc-callback-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-callback-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-callback-tag]
-  (.-decorators ^js js-doc-callback-tag))
-
-(defn modifiers
-  ^js [js-doc-callback-tag]
-  (.-modifiers ^js js-doc-callback-tag))
-
 (defn pos
   ^js [js-doc-callback-tag]
   (.-pos ^js js-doc-callback-tag))

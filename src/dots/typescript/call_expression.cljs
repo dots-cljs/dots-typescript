@@ -112,14 +112,6 @@
   (^js [call-expression cb-node cb-node-array]
    (.forEachChild ^js call-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [call-expression]
-  (.-decorators ^js call-expression))
-
-(defn modifiers
-  ^js [call-expression]
-  (.-modifiers ^js call-expression))
-
 (defn pos
   ^js [call-expression]
   (.-pos ^js call-expression))

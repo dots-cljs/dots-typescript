@@ -108,14 +108,6 @@
   (^js [assignment-expression cb-node cb-node-array]
    (.forEachChild ^js assignment-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [assignment-expression]
-  (.-decorators ^js assignment-expression))
-
-(defn modifiers
-  ^js [assignment-expression]
-  (.-modifiers ^js assignment-expression))
-
 (defn pos
   ^js [assignment-expression]
   (.-pos ^js assignment-expression))

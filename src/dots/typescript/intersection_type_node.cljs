@@ -100,14 +100,6 @@
   (^js [intersection-type-node cb-node cb-node-array]
    (.forEachChild ^js intersection-type-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [intersection-type-node]
-  (.-decorators ^js intersection-type-node))
-
-(defn modifiers
-  ^js [intersection-type-node]
-  (.-modifiers ^js intersection-type-node))
-
 (defn pos
   ^js [intersection-type-node]
   (.-pos ^js intersection-type-node))

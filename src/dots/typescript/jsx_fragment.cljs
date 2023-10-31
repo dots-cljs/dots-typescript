@@ -108,14 +108,6 @@
   (^js [jsx-fragment cb-node cb-node-array]
    (.forEachChild ^js jsx-fragment cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-fragment]
-  (.-decorators ^js jsx-fragment))
-
-(defn modifiers
-  ^js [jsx-fragment]
-  (.-modifiers ^js jsx-fragment))
-
 (defn pos
   ^js [jsx-fragment]
   (.-pos ^js jsx-fragment))

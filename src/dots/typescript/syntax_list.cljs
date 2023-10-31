@@ -100,14 +100,6 @@
   (^js [syntax-list cb-node cb-node-array]
    (.forEachChild ^js syntax-list cb-node cb-node-array)))
 
-(defn decorators
-  ^js [syntax-list]
-  (.-decorators ^js syntax-list))
-
-(defn modifiers
-  ^js [syntax-list]
-  (.-modifiers ^js syntax-list))
-
 (defn pos
   ^js [syntax-list]
   (.-pos ^js syntax-list))

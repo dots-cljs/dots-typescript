@@ -4,6 +4,10 @@
   ^js [type-checker symbol node]
   (.getTypeOfSymbolAtLocation ^js type-checker symbol node))
 
+(defn type-of-symbol
+  ^js [type-checker symbol]
+  (.getTypeOfSymbol ^js type-checker symbol))
+
 (defn declared-type-of-symbol
   ^js [type-checker symbol]
   (.getDeclaredTypeOfSymbol ^js type-checker symbol))
@@ -27,6 +31,14 @@
 (defn index-infos-of-type
   ^js [type-checker type]
   (.getIndexInfosOfType ^js type-checker type))
+
+(defn index-infos-of-index-symbol
+  ^js [type-checker]
+  (.-getIndexInfosOfIndexSymbol ^js type-checker))
+
+(defn set-get-index-infos-of-index-symbol!
+  ^js [type-checker value]
+  (set! (.-getIndexInfosOfIndexSymbol ^js type-checker) value))
 
 (defn signatures-of-type
   ^js [type-checker type kind]
@@ -321,6 +333,92 @@
 (defn default-from-type-parameter
   ^js [type-checker type]
   (.getDefaultFromTypeParameter ^js type-checker type))
+
+(defn any-type
+  "Gets the intrinsic `any` type. There are multiple types that act as `any` used internally in the compiler,
+   so the type returned by this function should not be used in equality checks to determine if another type
+   is `any`. Instead, use `type.flags & TypeFlags.Any`."
+  ^js [type-checker]
+  (.getAnyType ^js type-checker))
+
+(defn string-type
+  ^js [type-checker]
+  (.getStringType ^js type-checker))
+
+(defn string-literal-type
+  ^js [type-checker value]
+  (.getStringLiteralType ^js type-checker value))
+
+(defn number-type
+  ^js [type-checker]
+  (.getNumberType ^js type-checker))
+
+(defn number-literal-type
+  ^js [type-checker value]
+  (.getNumberLiteralType ^js type-checker value))
+
+(defn big-int-type
+  ^js [type-checker]
+  (.getBigIntType ^js type-checker))
+
+(defn boolean-type
+  ^js [type-checker]
+  (.getBooleanType ^js type-checker))
+
+(defn false-type
+  ^js [type-checker]
+  (.getFalseType ^js type-checker))
+
+(defn true-type
+  ^js [type-checker]
+  (.getTrueType ^js type-checker))
+
+(defn void-type
+  ^js [type-checker]
+  (.getVoidType ^js type-checker))
+
+(defn undefined-type
+  "Gets the intrinsic `undefined` type. There are multiple types that act as `undefined` used internally in the compiler
+   depending on compiler options, so the type returned by this function should not be used in equality checks to determine
+   if another type is `undefined`. Instead, use `type.flags & TypeFlags.Undefined`."
+  ^js [type-checker]
+  (.getUndefinedType ^js type-checker))
+
+(defn null-type
+  "Gets the intrinsic `null` type. There are multiple types that act as `null` used internally in the compiler,
+   so the type returned by this function should not be used in equality checks to determine if another type
+   is `null`. Instead, use `type.flags & TypeFlags.Null`."
+  ^js [type-checker]
+  (.getNullType ^js type-checker))
+
+(defn es-symbol-type
+  ^js [type-checker]
+  (.getESSymbolType ^js type-checker))
+
+(defn never-type
+  "Gets the intrinsic `never` type. There are multiple types that act as `never` used internally in the compiler,
+   so the type returned by this function should not be used in equality checks to determine if another type
+   is `never`. Instead, use `type.flags & TypeFlags.Never`."
+  ^js [type-checker]
+  (.getNeverType ^js type-checker))
+
+(defn array-type?
+  "True if this type is the `Array` or `ReadonlyArray` type from lib.d.ts.
+   This function will _not_ return true if passed a type which
+   extends `Array` (for example, the TypeScript AST's `NodeArray` type)."
+  ^js [type-checker type]
+  (.isArrayType ^js type-checker type))
+
+(defn tuple-type?
+  "True if this type is a tuple type. This function will _not_ return true if
+   passed a type which extends from a tuple."
+  ^js [type-checker type]
+  (.isTupleType ^js type-checker type))
+
+(defn array-like-type?
+  "True if this type is assignable to `ReadonlyArray<any>`."
+  ^js [type-checker type]
+  (.isArrayLikeType ^js type-checker type))
 
 (defn type-predicate-of-signature
   ^js [type-checker signature]

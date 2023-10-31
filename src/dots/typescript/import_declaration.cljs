@@ -113,10 +113,6 @@
   (^js [import-declaration cb-node cb-node-array]
    (.forEachChild ^js import-declaration cb-node cb-node-array)))
 
-(defn decorators
-  ^js [import-declaration]
-  (.-decorators ^js import-declaration))
-
 (defn pos
   ^js [import-declaration]
   (.-pos ^js import-declaration))

@@ -113,14 +113,6 @@
   (^js [signature-declaration-base cb-node cb-node-array]
    (.forEachChild ^js signature-declaration-base cb-node cb-node-array)))
 
-(defn decorators
-  ^js [signature-declaration-base]
-  (.-decorators ^js signature-declaration-base))
-
-(defn modifiers
-  ^js [signature-declaration-base]
-  (.-modifiers ^js signature-declaration-base))
-
 (defn pos
   ^js [signature-declaration-base]
   (.-pos ^js signature-declaration-base))

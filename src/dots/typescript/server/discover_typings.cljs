@@ -12,10 +12,6 @@
   ^js [discover-typings]
   (.-compilerOptions ^js discover-typings))
 
-(defn watch-options
-  ^js [discover-typings]
-  (.-watchOptions ^js discover-typings))
-
 (defn type-acquisition
   ^js [discover-typings]
   (.-typeAcquisition ^js discover-typings))

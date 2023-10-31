@@ -96,14 +96,6 @@
   (^js [jsx-opening-fragment cb-node cb-node-array]
    (.forEachChild ^js jsx-opening-fragment cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-opening-fragment]
-  (.-decorators ^js jsx-opening-fragment))
-
-(defn modifiers
-  ^js [jsx-opening-fragment]
-  (.-modifiers ^js jsx-opening-fragment))
-
 (defn pos
   ^js [jsx-opening-fragment]
   (.-pos ^js jsx-opening-fragment))

@@ -109,14 +109,6 @@
   (^js [type-predicate-node cb-node cb-node-array]
    (.forEachChild ^js type-predicate-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [type-predicate-node]
-  (.-decorators ^js type-predicate-node))
-
-(defn modifiers
-  ^js [type-predicate-node]
-  (.-modifiers ^js type-predicate-node))
-
 (defn pos
   ^js [type-predicate-node]
   (.-pos ^js type-predicate-node))

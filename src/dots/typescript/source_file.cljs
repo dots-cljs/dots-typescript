@@ -263,14 +263,6 @@
   (^js [source-file cb-node cb-node-array]
    (.forEachChild ^js source-file cb-node cb-node-array)))
 
-(defn decorators
-  ^js [source-file]
-  (.-decorators ^js source-file))
-
-(defn modifiers
-  ^js [source-file]
-  (.-modifiers ^js source-file))
-
 (defn pos
   ^js [source-file]
   (.-pos ^js source-file))

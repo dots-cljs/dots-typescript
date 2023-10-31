@@ -180,14 +180,6 @@
   (^js [unparsed-source cb-node cb-node-array]
    (.forEachChild ^js unparsed-source cb-node cb-node-array)))
 
-(defn decorators
-  ^js [unparsed-source]
-  (.-decorators ^js unparsed-source))
-
-(defn modifiers
-  ^js [unparsed-source]
-  (.-modifiers ^js unparsed-source))
-
 (defn pos
   ^js [unparsed-source]
   (.-pos ^js unparsed-source))

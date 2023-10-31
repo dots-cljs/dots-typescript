@@ -100,14 +100,6 @@
   (^js [jsx-closing-element cb-node cb-node-array]
    (.forEachChild ^js jsx-closing-element cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-closing-element]
-  (.-decorators ^js jsx-closing-element))
-
-(defn modifiers
-  ^js [jsx-closing-element]
-  (.-modifiers ^js jsx-closing-element))
-
 (defn pos
   ^js [jsx-closing-element]
   (.-pos ^js jsx-closing-element))

@@ -100,14 +100,6 @@
   (^js [external-module-reference cb-node cb-node-array]
    (.forEachChild ^js external-module-reference cb-node cb-node-array)))
 
-(defn decorators
-  ^js [external-module-reference]
-  (.-decorators ^js external-module-reference))
-
-(defn modifiers
-  ^js [external-module-reference]
-  (.-modifiers ^js external-module-reference))
-
 (defn pos
   ^js [external-module-reference]
   (.-pos ^js external-module-reference))

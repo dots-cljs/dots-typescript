@@ -104,14 +104,6 @@
   (^js [type-reference-node cb-node cb-node-array]
    (.forEachChild ^js type-reference-node cb-node cb-node-array)))
 
-(defn decorators
-  ^js [type-reference-node]
-  (.-decorators ^js type-reference-node))
-
-(defn modifiers
-  ^js [type-reference-node]
-  (.-modifiers ^js type-reference-node))
-
 (defn pos
   ^js [type-reference-node]
   (.-pos ^js type-reference-node))

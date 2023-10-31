@@ -108,14 +108,6 @@
   (^js [binary-expression cb-node cb-node-array]
    (.forEachChild ^js binary-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [binary-expression]
-  (.-decorators ^js binary-expression))
-
-(defn modifiers
-  ^js [binary-expression]
-  (.-modifiers ^js binary-expression))
-
 (defn pos
   ^js [binary-expression]
   (.-pos ^js binary-expression))

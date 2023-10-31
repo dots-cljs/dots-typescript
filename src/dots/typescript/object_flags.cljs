@@ -1,6 +1,8 @@
 (ns dots.typescript.object-flags
   (:require ["typescript" :as typescript]))
 
+(def none (.-None typescript/ObjectFlags))
+
 (def class (.-Class typescript/ObjectFlags))
 
 (def interface (.-Interface typescript/ObjectFlags))

@@ -100,14 +100,6 @@
   (^js [default-clause cb-node cb-node-array]
    (.forEachChild ^js default-clause cb-node cb-node-array)))
 
-(defn decorators
-  ^js [default-clause]
-  (.-decorators ^js default-clause))
-
-(defn modifiers
-  ^js [default-clause]
-  (.-modifiers ^js default-clause))
-
 (defn pos
   ^js [default-clause]
   (.-pos ^js default-clause))

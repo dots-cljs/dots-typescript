@@ -105,14 +105,6 @@
   (^js [assert-entry cb-node cb-node-array]
    (.forEachChild ^js assert-entry cb-node cb-node-array)))
 
-(defn decorators
-  ^js [assert-entry]
-  (.-decorators ^js assert-entry))
-
-(defn modifiers
-  ^js [assert-entry]
-  (.-modifiers ^js assert-entry))
-
 (defn pos
   ^js [assert-entry]
   (.-pos ^js assert-entry))

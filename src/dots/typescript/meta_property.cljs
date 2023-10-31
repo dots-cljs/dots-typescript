@@ -105,14 +105,6 @@
   (^js [meta-property cb-node cb-node-array]
    (.forEachChild ^js meta-property cb-node cb-node-array)))
 
-(defn decorators
-  ^js [meta-property]
-  (.-decorators ^js meta-property))
-
-(defn modifiers
-  ^js [meta-property]
-  (.-modifiers ^js meta-property))
-
 (defn pos
   ^js [meta-property]
   (.-pos ^js meta-property))

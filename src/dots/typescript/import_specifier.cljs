@@ -109,14 +109,6 @@
   (^js [import-specifier cb-node cb-node-array]
    (.forEachChild ^js import-specifier cb-node cb-node-array)))
 
-(defn decorators
-  ^js [import-specifier]
-  (.-decorators ^js import-specifier))
-
-(defn modifiers
-  ^js [import-specifier]
-  (.-modifiers ^js import-specifier))
-
 (defn pos
   ^js [import-specifier]
   (.-pos ^js import-specifier))

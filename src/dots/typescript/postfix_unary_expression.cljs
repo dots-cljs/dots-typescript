@@ -104,14 +104,6 @@
   (^js [postfix-unary-expression cb-node cb-node-array]
    (.forEachChild ^js postfix-unary-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [postfix-unary-expression]
-  (.-decorators ^js postfix-unary-expression))
-
-(defn modifiers
-  ^js [postfix-unary-expression]
-  (.-modifiers ^js postfix-unary-expression))
-
 (defn pos
   ^js [postfix-unary-expression]
   (.-pos ^js postfix-unary-expression))

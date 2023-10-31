@@ -105,14 +105,6 @@
   (^js [js-doc cb-node cb-node-array]
    (.forEachChild ^js js-doc cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc]
-  (.-decorators ^js js-doc))
-
-(defn modifiers
-  ^js [js-doc]
-  (.-modifiers ^js js-doc))
-
 (defn pos
   ^js [js-doc]
   (.-pos ^js js-doc))

@@ -113,14 +113,6 @@
   (^js [binding-element cb-node cb-node-array]
    (.forEachChild ^js binding-element cb-node cb-node-array)))
 
-(defn decorators
-  ^js [binding-element]
-  (.-decorators ^js binding-element))
-
-(defn modifiers
-  ^js [binding-element]
-  (.-modifiers ^js binding-element))
-
 (defn pos
   ^js [binding-element]
   (.-pos ^js binding-element))

@@ -96,14 +96,6 @@
   (^js [jsx-closing-fragment cb-node cb-node-array]
    (.forEachChild ^js jsx-closing-fragment cb-node cb-node-array)))
 
-(defn decorators
-  ^js [jsx-closing-fragment]
-  (.-decorators ^js jsx-closing-fragment))
-
-(defn modifiers
-  ^js [jsx-closing-fragment]
-  (.-modifiers ^js jsx-closing-fragment))
-
 (defn pos
   ^js [jsx-closing-fragment]
   (.-pos ^js jsx-closing-fragment))

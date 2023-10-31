@@ -113,14 +113,6 @@
   (^js [class-like-declaration-base cb-node cb-node-array]
    (.forEachChild ^js class-like-declaration-base cb-node cb-node-array)))
 
-(defn decorators
-  ^js [class-like-declaration-base]
-  (.-decorators ^js class-like-declaration-base))
-
-(defn modifiers
-  ^js [class-like-declaration-base]
-  (.-modifiers ^js class-like-declaration-base))
-
 (defn pos
   ^js [class-like-declaration-base]
   (.-pos ^js class-like-declaration-base))

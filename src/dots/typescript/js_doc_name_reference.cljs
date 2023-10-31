@@ -101,14 +101,6 @@
   (^js [js-doc-name-reference cb-node cb-node-array]
    (.forEachChild ^js js-doc-name-reference cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-name-reference]
-  (.-decorators ^js js-doc-name-reference))
-
-(defn modifiers
-  ^js [js-doc-name-reference]
-  (.-modifiers ^js js-doc-name-reference))
-
 (defn pos
   ^js [js-doc-name-reference]
   (.-pos ^js js-doc-name-reference))

@@ -109,14 +109,6 @@
   (^js [synthetic-expression cb-node cb-node-array]
    (.forEachChild ^js synthetic-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [synthetic-expression]
-  (.-decorators ^js synthetic-expression))
-
-(defn modifiers
-  ^js [synthetic-expression]
-  (.-modifiers ^js synthetic-expression))
-
 (defn pos
   ^js [synthetic-expression]
   (.-pos ^js synthetic-expression))

@@ -100,14 +100,6 @@
   (^js [unparsed-synthetic-reference cb-node cb-node-array]
    (.forEachChild ^js unparsed-synthetic-reference cb-node cb-node-array)))
 
-(defn decorators
-  ^js [unparsed-synthetic-reference]
-  (.-decorators ^js unparsed-synthetic-reference))
-
-(defn modifiers
-  ^js [unparsed-synthetic-reference]
-  (.-modifiers ^js unparsed-synthetic-reference))
-
 (defn pos
   ^js [unparsed-synthetic-reference]
   (.-pos ^js unparsed-synthetic-reference))

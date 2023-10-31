@@ -96,14 +96,6 @@
   (^js [omitted-expression cb-node cb-node-array]
    (.forEachChild ^js omitted-expression cb-node cb-node-array)))
 
-(defn decorators
-  ^js [omitted-expression]
-  (.-decorators ^js omitted-expression))
-
-(defn modifiers
-  ^js [omitted-expression]
-  (.-modifiers ^js omitted-expression))
-
 (defn pos
   ^js [omitted-expression]
   (.-pos ^js omitted-expression))

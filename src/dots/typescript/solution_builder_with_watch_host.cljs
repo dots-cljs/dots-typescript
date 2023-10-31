@@ -143,7 +143,6 @@
   (.getEnvironmentVariable ^js solution-builder-with-watch-host name))
 
 (defn resolve-module-names
-  "If provided, used to resolve the module names, otherwise typescript's default module resolution"
   (^js [solution-builder-with-watch-host module-names containing-file]
    (.resolveModuleNames ^js solution-builder-with-watch-host module-names containing-file))
   (^js [solution-builder-with-watch-host module-names containing-file reused-names]
@@ -156,7 +155,6 @@
    (.resolveModuleNames ^js solution-builder-with-watch-host module-names containing-file reused-names redirected-reference options containing-source-file)))
 
 (defn resolve-type-reference-directives
-  "If provided, used to resolve type reference directives, otherwise typescript's default resolution"
   (^js [solution-builder-with-watch-host type-reference-directive-names containing-file]
    (.resolveTypeReferenceDirectives ^js solution-builder-with-watch-host type-reference-directive-names containing-file))
   (^js [solution-builder-with-watch-host type-reference-directive-names containing-file redirected-reference]
@@ -165,6 +163,35 @@
    (.resolveTypeReferenceDirectives ^js solution-builder-with-watch-host type-reference-directive-names containing-file redirected-reference options))
   (^js [solution-builder-with-watch-host type-reference-directive-names containing-file redirected-reference options containing-file-mode]
    (.resolveTypeReferenceDirectives ^js solution-builder-with-watch-host type-reference-directive-names containing-file redirected-reference options containing-file-mode)))
+
+(defn resolve-module-name-literals
+  (^js [solution-builder-with-watch-host module-literals containing-file]
+   (.resolveModuleNameLiterals ^js solution-builder-with-watch-host module-literals containing-file))
+  (^js [solution-builder-with-watch-host module-literals containing-file redirected-reference]
+   (.resolveModuleNameLiterals ^js solution-builder-with-watch-host module-literals containing-file redirected-reference))
+  (^js [solution-builder-with-watch-host module-literals containing-file redirected-reference options]
+   (.resolveModuleNameLiterals ^js solution-builder-with-watch-host module-literals containing-file redirected-reference options))
+  (^js [solution-builder-with-watch-host module-literals containing-file redirected-reference options containing-source-file]
+   (.resolveModuleNameLiterals ^js solution-builder-with-watch-host module-literals containing-file redirected-reference options containing-source-file))
+  (^js [solution-builder-with-watch-host module-literals containing-file redirected-reference options containing-source-file reused-names]
+   (.resolveModuleNameLiterals ^js solution-builder-with-watch-host module-literals containing-file redirected-reference options containing-source-file reused-names)))
+
+(defn resolve-type-reference-directive-references
+  (^js [solution-builder-with-watch-host type-directive-references containing-file]
+   (.resolveTypeReferenceDirectiveReferences ^js solution-builder-with-watch-host type-directive-references containing-file))
+  (^js [solution-builder-with-watch-host type-directive-references containing-file redirected-reference]
+   (.resolveTypeReferenceDirectiveReferences ^js solution-builder-with-watch-host type-directive-references containing-file redirected-reference))
+  (^js [solution-builder-with-watch-host type-directive-references containing-file redirected-reference options]
+   (.resolveTypeReferenceDirectiveReferences ^js solution-builder-with-watch-host type-directive-references containing-file redirected-reference options))
+  (^js [solution-builder-with-watch-host type-directive-references containing-file redirected-reference options containing-source-file]
+   (.resolveTypeReferenceDirectiveReferences ^js solution-builder-with-watch-host type-directive-references containing-file redirected-reference options containing-source-file))
+  (^js [solution-builder-with-watch-host type-directive-references containing-file redirected-reference options containing-source-file reused-names]
+   (.resolveTypeReferenceDirectiveReferences ^js solution-builder-with-watch-host type-directive-references containing-file redirected-reference options containing-source-file reused-names)))
+
+(defn has-invalidated-resolutions?
+  "If provided along with custom resolveModuleNames or resolveTypeReferenceDirectives, used to determine if unchanged file path needs to re-resolve modules/type reference directives"
+  ^js [solution-builder-with-watch-host file-path]
+  (.hasInvalidatedResolutions ^js solution-builder-with-watch-host file-path))
 
 (defn module-resolution-cache
   "Returns the module resolution cache used by a provided `resolveModuleNames` implementation so that any non-name module resolution operations (eg, package.json lookup) can reuse it"

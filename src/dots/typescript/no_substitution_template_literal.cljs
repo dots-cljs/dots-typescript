@@ -120,14 +120,6 @@
   (^js [no-substitution-template-literal cb-node cb-node-array]
    (.forEachChild ^js no-substitution-template-literal cb-node cb-node-array)))
 
-(defn decorators
-  ^js [no-substitution-template-literal]
-  (.-decorators ^js no-substitution-template-literal))
-
-(defn modifiers
-  ^js [no-substitution-template-literal]
-  (.-modifiers ^js no-substitution-template-literal))
-
 (defn pos
   ^js [no-substitution-template-literal]
   (.-pos ^js no-substitution-template-literal))

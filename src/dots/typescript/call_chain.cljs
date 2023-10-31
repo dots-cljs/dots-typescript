@@ -112,14 +112,6 @@
   (^js [call-chain cb-node cb-node-array]
    (.forEachChild ^js call-chain cb-node cb-node-array)))
 
-(defn decorators
-  ^js [call-chain]
-  (.-decorators ^js call-chain))
-
-(defn modifiers
-  ^js [call-chain]
-  (.-modifiers ^js call-chain))
-
 (defn pos
   ^js [call-chain]
   (.-pos ^js call-chain))

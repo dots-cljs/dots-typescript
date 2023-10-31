@@ -109,14 +109,6 @@
   (^js [js-doc-deprecated-tag cb-node cb-node-array]
    (.forEachChild ^js js-doc-deprecated-tag cb-node cb-node-array)))
 
-(defn decorators
-  ^js [js-doc-deprecated-tag]
-  (.-decorators ^js js-doc-deprecated-tag))
-
-(defn modifiers
-  ^js [js-doc-deprecated-tag]
-  (.-modifiers ^js js-doc-deprecated-tag))
-
 (defn pos
   ^js [js-doc-deprecated-tag]
   (.-pos ^js js-doc-deprecated-tag))
