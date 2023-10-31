@@ -87,8 +87,8 @@
 (defn splice
   "Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements."
   {:arglists '([sorted-array start]
-               [sorted-array start delete-count]
-               [sorted-array start delete-count items])}
+               [sorted-array start & delete-count]
+               [sorted-array start delete-count & items])}
   (^js [sorted-array start]
    (.splice ^js sorted-array start))
   (^js [a b c & more]
