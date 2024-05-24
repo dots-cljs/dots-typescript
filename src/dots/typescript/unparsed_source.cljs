@@ -97,28 +97,47 @@
   (.-parent ^js unparsed-source))
 
 (defn source-file
+  "**Returns:** `SourceFile`"
   ^js [unparsed-source]
   (.getSourceFile ^js unparsed-source))
 
 (defn child-count
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [unparsed-source]
    (.getChildCount ^js unparsed-source))
   (^js [unparsed-source source-file]
    (.getChildCount ^js unparsed-source source-file)))
 
 (defn child-at
+  "**Parameters:**
+   - `index`: `number`
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node`"
   (^js [unparsed-source index]
    (.getChildAt ^js unparsed-source index))
   (^js [unparsed-source index source-file]
    (.getChildAt ^js unparsed-source index source-file)))
 
 (defn children
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node[]`"
   (^js [unparsed-source]
    (.getChildren ^js unparsed-source))
   (^js [unparsed-source source-file]
    (.getChildren ^js unparsed-source source-file)))
 
 (defn start
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   - `include-js-doc-comment?`: `boolean | undefined`
+   
+   **Returns:** `number`"
   (^js [unparsed-source]
    (.getStart ^js unparsed-source))
   (^js [unparsed-source source-file]
@@ -127,54 +146,86 @@
    (.getStart ^js unparsed-source source-file include-js-doc-comment?)))
 
 (defn full-start
+  "**Returns:** `number`"
   ^js [unparsed-source]
   (.getFullStart ^js unparsed-source))
 
 (defn get-end
+  "**Returns:** `number`"
   ^js [unparsed-source]
   (.getEnd ^js unparsed-source))
 
 (defn width
+  "**Parameters:**
+   - `source-file`: `SourceFileLike | undefined`
+   
+   **Returns:** `number`"
   (^js [unparsed-source]
    (.getWidth ^js unparsed-source))
   (^js [unparsed-source source-file]
    (.getWidth ^js unparsed-source source-file)))
 
 (defn full-width
+  "**Returns:** `number`"
   ^js [unparsed-source]
   (.getFullWidth ^js unparsed-source))
 
 (defn leading-trivia-width
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [unparsed-source]
    (.getLeadingTriviaWidth ^js unparsed-source))
   (^js [unparsed-source source-file]
    (.getLeadingTriviaWidth ^js unparsed-source source-file)))
 
 (defn full-text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [unparsed-source]
    (.getFullText ^js unparsed-source))
   (^js [unparsed-source source-file]
    (.getFullText ^js unparsed-source source-file)))
 
 (defn get-text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [unparsed-source]
    (.getText ^js unparsed-source))
   (^js [unparsed-source source-file]
    (.getText ^js unparsed-source source-file)))
 
 (defn first-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [unparsed-source]
    (.getFirstToken ^js unparsed-source))
   (^js [unparsed-source source-file]
    (.getFirstToken ^js unparsed-source source-file)))
 
 (defn last-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [unparsed-source]
    (.getLastToken ^js unparsed-source))
   (^js [unparsed-source source-file]
    (.getLastToken ^js unparsed-source source-file)))
 
 (defn for-each-child
+  "**Parameters:**
+   - `cb-node`: `(node: Node) => T | undefined`
+   - `cb-node-array`: `((nodes: NodeArray<Node>) => T | undefined) | undefined`
+   
+   **Returns:** `T | undefined`"
   (^js [unparsed-source cb-node]
    (.forEachChild ^js unparsed-source cb-node))
   (^js [unparsed-source cb-node cb-node-array]

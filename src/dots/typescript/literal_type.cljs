@@ -66,93 +66,119 @@
   (set! (.-aliasTypeArguments ^js literal-type) value))
 
 (defn get-flags
+  "**Returns:** `TypeFlags`"
   ^js [literal-type]
   (.getFlags ^js literal-type))
 
 (defn get-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [literal-type]
   (.getSymbol ^js literal-type))
 
 (defn properties
+  "**Returns:** `Symbol[]`"
   ^js [literal-type]
   (.getProperties ^js literal-type))
 
 (defn property
+  "**Parameters:**
+   - `property-name`: `string`
+   
+   **Returns:** `Symbol | undefined`"
   ^js [literal-type property-name]
   (.getProperty ^js literal-type property-name))
 
 (defn apparent-properties
+  "**Returns:** `Symbol[]`"
   ^js [literal-type]
   (.getApparentProperties ^js literal-type))
 
 (defn call-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [literal-type]
   (.getCallSignatures ^js literal-type))
 
 (defn construct-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [literal-type]
   (.getConstructSignatures ^js literal-type))
 
 (defn string-index-type
+  "**Returns:** `Type | undefined`"
   ^js [literal-type]
   (.getStringIndexType ^js literal-type))
 
 (defn number-index-type
+  "**Returns:** `Type | undefined`"
   ^js [literal-type]
   (.getNumberIndexType ^js literal-type))
 
 (defn base-types
+  "**Returns:** `BaseType[] | undefined`"
   ^js [literal-type]
   (.getBaseTypes ^js literal-type))
 
 (defn non-nullable-type
+  "**Returns:** `Type`"
   ^js [literal-type]
   (.getNonNullableType ^js literal-type))
 
 (defn constraint
+  "**Returns:** `Type | undefined`"
   ^js [literal-type]
   (.getConstraint ^js literal-type))
 
 (defn default
+  "**Returns:** `Type | undefined`"
   ^js [literal-type]
   (.getDefault ^js literal-type))
 
 (defn union?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isUnion ^js literal-type))
 
 (defn intersection?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isIntersection ^js literal-type))
 
 (defn union-or-intersection?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isUnionOrIntersection ^js literal-type))
 
 (defn literal?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isLiteral ^js literal-type))
 
 (defn string-literal?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isStringLiteral ^js literal-type))
 
 (defn number-literal?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isNumberLiteral ^js literal-type))
 
 (defn type-parameter?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isTypeParameter ^js literal-type))
 
 (defn class-or-interface?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isClassOrInterface ^js literal-type))
 
 (defn class?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isClass ^js literal-type))
 
 (defn index-type?
+  "**Returns:** `boolean`"
   ^js [literal-type]
   (.isIndexType ^js literal-type))

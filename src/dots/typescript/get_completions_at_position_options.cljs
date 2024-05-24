@@ -167,6 +167,10 @@
   ^js [get-completions-at-position-options]
   (.-autoImportFileExcludePatterns ^js get-completions-at-position-options))
 
+(defn prefer-type-only-auto-imports?
+  ^js [get-completions-at-position-options]
+  (.-preferTypeOnlyAutoImports ^js get-completions-at-position-options))
+
 (defn organize-imports-ignore-case?
   ^js [get-completions-at-position-options]
   (.-organizeImportsIgnoreCase ^js get-completions-at-position-options))
@@ -190,3 +194,11 @@
 (defn organize-imports-case-first
   ^js [get-completions-at-position-options]
   (.-organizeImportsCaseFirst ^js get-completions-at-position-options))
+
+(defn organize-imports-type-order
+  ^js [get-completions-at-position-options]
+  (.-organizeImportsTypeOrder ^js get-completions-at-position-options))
+
+(defn exclude-library-symbols-in-nav-to?
+  ^js [get-completions-at-position-options]
+  (.-excludeLibrarySymbolsInNavTo ^js get-completions-at-position-options))

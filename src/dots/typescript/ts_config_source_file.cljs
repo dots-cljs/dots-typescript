@@ -160,22 +160,41 @@
   (set! (.-impliedNodeFormat ^js ts-config-source-file) value))
 
 (defn line-and-character-of-position
+  "**Parameters:**
+   - `pos`: `number`
+   
+   **Returns:** `LineAndCharacter`"
   ^js [ts-config-source-file pos]
   (.getLineAndCharacterOfPosition ^js ts-config-source-file pos))
 
 (defn line-end-of-position
+  "**Parameters:**
+   - `pos`: `number`
+   
+   **Returns:** `number`"
   ^js [ts-config-source-file pos]
   (.getLineEndOfPosition ^js ts-config-source-file pos))
 
 (defn line-starts
+  "**Returns:** `readonly number[]`"
   ^js [ts-config-source-file]
   (.getLineStarts ^js ts-config-source-file))
 
 (defn position-of-line-and-character
+  "**Parameters:**
+   - `line`: `number`
+   - `character`: `number`
+   
+   **Returns:** `number`"
   ^js [ts-config-source-file line character]
   (.getPositionOfLineAndCharacter ^js ts-config-source-file line character))
 
 (defn update
+  "**Parameters:**
+   - `new-text`: `string`
+   - `text-change-range`: `TextChangeRange`
+   
+   **Returns:** `SourceFile`"
   ^js [ts-config-source-file new-text text-change-range]
   (.update ^js ts-config-source-file new-text text-change-range))
 
@@ -188,28 +207,47 @@
   (.-parent ^js ts-config-source-file))
 
 (defn source-file
+  "**Returns:** `SourceFile`"
   ^js [ts-config-source-file]
   (.getSourceFile ^js ts-config-source-file))
 
 (defn child-count
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [ts-config-source-file]
    (.getChildCount ^js ts-config-source-file))
   (^js [ts-config-source-file source-file]
    (.getChildCount ^js ts-config-source-file source-file)))
 
 (defn child-at
+  "**Parameters:**
+   - `index`: `number`
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node`"
   (^js [ts-config-source-file index]
    (.getChildAt ^js ts-config-source-file index))
   (^js [ts-config-source-file index source-file]
    (.getChildAt ^js ts-config-source-file index source-file)))
 
 (defn children
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node[]`"
   (^js [ts-config-source-file]
    (.getChildren ^js ts-config-source-file))
   (^js [ts-config-source-file source-file]
    (.getChildren ^js ts-config-source-file source-file)))
 
 (defn start
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   - `include-js-doc-comment?`: `boolean | undefined`
+   
+   **Returns:** `number`"
   (^js [ts-config-source-file]
    (.getStart ^js ts-config-source-file))
   (^js [ts-config-source-file source-file]
@@ -218,54 +256,86 @@
    (.getStart ^js ts-config-source-file source-file include-js-doc-comment?)))
 
 (defn full-start
+  "**Returns:** `number`"
   ^js [ts-config-source-file]
   (.getFullStart ^js ts-config-source-file))
 
 (defn get-end
+  "**Returns:** `number`"
   ^js [ts-config-source-file]
   (.getEnd ^js ts-config-source-file))
 
 (defn width
+  "**Parameters:**
+   - `source-file`: `SourceFileLike | undefined`
+   
+   **Returns:** `number`"
   (^js [ts-config-source-file]
    (.getWidth ^js ts-config-source-file))
   (^js [ts-config-source-file source-file]
    (.getWidth ^js ts-config-source-file source-file)))
 
 (defn full-width
+  "**Returns:** `number`"
   ^js [ts-config-source-file]
   (.getFullWidth ^js ts-config-source-file))
 
 (defn leading-trivia-width
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [ts-config-source-file]
    (.getLeadingTriviaWidth ^js ts-config-source-file))
   (^js [ts-config-source-file source-file]
    (.getLeadingTriviaWidth ^js ts-config-source-file source-file)))
 
 (defn full-text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [ts-config-source-file]
    (.getFullText ^js ts-config-source-file))
   (^js [ts-config-source-file source-file]
    (.getFullText ^js ts-config-source-file source-file)))
 
 (defn get-text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [ts-config-source-file]
    (.getText ^js ts-config-source-file))
   (^js [ts-config-source-file source-file]
    (.getText ^js ts-config-source-file source-file)))
 
 (defn first-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [ts-config-source-file]
    (.getFirstToken ^js ts-config-source-file))
   (^js [ts-config-source-file source-file]
    (.getFirstToken ^js ts-config-source-file source-file)))
 
 (defn last-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [ts-config-source-file]
    (.getLastToken ^js ts-config-source-file))
   (^js [ts-config-source-file source-file]
    (.getLastToken ^js ts-config-source-file source-file)))
 
 (defn for-each-child
+  "**Parameters:**
+   - `cb-node`: `(node: Node) => T | undefined`
+   - `cb-node-array`: `((nodes: NodeArray<Node>) => T | undefined) | undefined`
+   
+   **Returns:** `T | undefined`"
   (^js [ts-config-source-file cb-node]
    (.forEachChild ^js ts-config-source-file cb-node))
   (^js [ts-config-source-file cb-node cb-node-array]

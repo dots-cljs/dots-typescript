@@ -74,93 +74,119 @@
   (set! (.-aliasTypeArguments ^js tuple-type-reference) value))
 
 (defn get-flags
+  "**Returns:** `TypeFlags`"
   ^js [tuple-type-reference]
   (.getFlags ^js tuple-type-reference))
 
 (defn get-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [tuple-type-reference]
   (.getSymbol ^js tuple-type-reference))
 
 (defn properties
+  "**Returns:** `Symbol[]`"
   ^js [tuple-type-reference]
   (.getProperties ^js tuple-type-reference))
 
 (defn property
+  "**Parameters:**
+   - `property-name`: `string`
+   
+   **Returns:** `Symbol | undefined`"
   ^js [tuple-type-reference property-name]
   (.getProperty ^js tuple-type-reference property-name))
 
 (defn apparent-properties
+  "**Returns:** `Symbol[]`"
   ^js [tuple-type-reference]
   (.getApparentProperties ^js tuple-type-reference))
 
 (defn call-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [tuple-type-reference]
   (.getCallSignatures ^js tuple-type-reference))
 
 (defn construct-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [tuple-type-reference]
   (.getConstructSignatures ^js tuple-type-reference))
 
 (defn string-index-type
+  "**Returns:** `Type | undefined`"
   ^js [tuple-type-reference]
   (.getStringIndexType ^js tuple-type-reference))
 
 (defn number-index-type
+  "**Returns:** `Type | undefined`"
   ^js [tuple-type-reference]
   (.getNumberIndexType ^js tuple-type-reference))
 
 (defn base-types
+  "**Returns:** `BaseType[] | undefined`"
   ^js [tuple-type-reference]
   (.getBaseTypes ^js tuple-type-reference))
 
 (defn non-nullable-type
+  "**Returns:** `Type`"
   ^js [tuple-type-reference]
   (.getNonNullableType ^js tuple-type-reference))
 
 (defn constraint
+  "**Returns:** `Type | undefined`"
   ^js [tuple-type-reference]
   (.getConstraint ^js tuple-type-reference))
 
 (defn default
+  "**Returns:** `Type | undefined`"
   ^js [tuple-type-reference]
   (.getDefault ^js tuple-type-reference))
 
 (defn union?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isUnion ^js tuple-type-reference))
 
 (defn intersection?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isIntersection ^js tuple-type-reference))
 
 (defn union-or-intersection?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isUnionOrIntersection ^js tuple-type-reference))
 
 (defn literal?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isLiteral ^js tuple-type-reference))
 
 (defn string-literal?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isStringLiteral ^js tuple-type-reference))
 
 (defn number-literal?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isNumberLiteral ^js tuple-type-reference))
 
 (defn type-parameter?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isTypeParameter ^js tuple-type-reference))
 
 (defn class-or-interface?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isClassOrInterface ^js tuple-type-reference))
 
 (defn class?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isClass ^js tuple-type-reference))
 
 (defn index-type?
+  "**Returns:** `boolean`"
   ^js [tuple-type-reference]
   (.isIndexType ^js tuple-type-reference))

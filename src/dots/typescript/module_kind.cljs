@@ -22,3 +22,5 @@
 (def node-16 (.-Node16 typescript/ModuleKind))
 
 (def node-next (.-NodeNext typescript/ModuleKind))
+
+(def preserve (.-Preserve typescript/ModuleKind))

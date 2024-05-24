@@ -117,6 +117,10 @@
   ^js [user-preferences]
   (.-autoImportFileExcludePatterns ^js user-preferences))
 
+(defn prefer-type-only-auto-imports?
+  ^js [user-preferences]
+  (.-preferTypeOnlyAutoImports ^js user-preferences))
+
 (defn organize-imports-ignore-case?
   ^js [user-preferences]
   (.-organizeImportsIgnoreCase ^js user-preferences))
@@ -140,3 +144,11 @@
 (defn organize-imports-case-first
   ^js [user-preferences]
   (.-organizeImportsCaseFirst ^js user-preferences))
+
+(defn organize-imports-type-order
+  ^js [user-preferences]
+  (.-organizeImportsTypeOrder ^js user-preferences))
+
+(defn exclude-library-symbols-in-nav-to?
+  ^js [user-preferences]
+  (.-excludeLibrarySymbolsInNavTo ^js user-preferences))

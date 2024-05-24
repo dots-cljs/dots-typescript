@@ -14,3 +14,5 @@
 (def embedded-statement (.-EmbeddedStatement typescript/EmitHint))
 
 (def jsx-attribute-value (.-JsxAttributeValue typescript/EmitHint))
+
+(def import-type-node-attributes (.-ImportTypeNodeAttributes typescript/EmitHint))

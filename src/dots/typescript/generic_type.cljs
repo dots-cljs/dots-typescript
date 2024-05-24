@@ -82,94 +82,120 @@
   (set! (.-aliasTypeArguments ^js generic-type) value))
 
 (defn get-flags
+  "**Returns:** `TypeFlags`"
   ^js [generic-type]
   (.getFlags ^js generic-type))
 
 (defn get-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [generic-type]
   (.getSymbol ^js generic-type))
 
 (defn properties
+  "**Returns:** `Symbol[]`"
   ^js [generic-type]
   (.getProperties ^js generic-type))
 
 (defn property
+  "**Parameters:**
+   - `property-name`: `string`
+   
+   **Returns:** `Symbol | undefined`"
   ^js [generic-type property-name]
   (.getProperty ^js generic-type property-name))
 
 (defn apparent-properties
+  "**Returns:** `Symbol[]`"
   ^js [generic-type]
   (.getApparentProperties ^js generic-type))
 
 (defn call-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [generic-type]
   (.getCallSignatures ^js generic-type))
 
 (defn construct-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [generic-type]
   (.getConstructSignatures ^js generic-type))
 
 (defn string-index-type
+  "**Returns:** `Type | undefined`"
   ^js [generic-type]
   (.getStringIndexType ^js generic-type))
 
 (defn number-index-type
+  "**Returns:** `Type | undefined`"
   ^js [generic-type]
   (.getNumberIndexType ^js generic-type))
 
 (defn base-types
+  "**Returns:** `BaseType[] | undefined`"
   ^js [generic-type]
   (.getBaseTypes ^js generic-type))
 
 (defn non-nullable-type
+  "**Returns:** `Type`"
   ^js [generic-type]
   (.getNonNullableType ^js generic-type))
 
 (defn constraint
+  "**Returns:** `Type | undefined`"
   ^js [generic-type]
   (.getConstraint ^js generic-type))
 
 (defn default
+  "**Returns:** `Type | undefined`"
   ^js [generic-type]
   (.getDefault ^js generic-type))
 
 (defn union?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isUnion ^js generic-type))
 
 (defn intersection?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isIntersection ^js generic-type))
 
 (defn union-or-intersection?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isUnionOrIntersection ^js generic-type))
 
 (defn literal?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isLiteral ^js generic-type))
 
 (defn string-literal?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isStringLiteral ^js generic-type))
 
 (defn number-literal?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isNumberLiteral ^js generic-type))
 
 (defn type-parameter?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isTypeParameter ^js generic-type))
 
 (defn class-or-interface?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isClassOrInterface ^js generic-type))
 
 (defn class?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isClass ^js generic-type))
 
 (defn index-type?
+  "**Returns:** `boolean`"
   ^js [generic-type]
   (.isIndexType ^js generic-type))
 

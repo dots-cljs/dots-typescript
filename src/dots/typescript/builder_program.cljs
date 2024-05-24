@@ -2,46 +2,75 @@
   "Builder to manage the program state changes")
 
 (defn program
-  "Returns current program"
+  "Returns current program
+   
+   **Returns:** `Program`"
   ^js [builder-program]
   (.getProgram ^js builder-program))
 
 (defn compiler-options
-  "Get compiler options of the program"
+  "Get compiler options of the program
+   
+   **Returns:** `CompilerOptions`"
   ^js [builder-program]
   (.getCompilerOptions ^js builder-program))
 
 (defn source-file
-  "Get the source file in the program with file name"
+  "Get the source file in the program with file name
+   
+   **Parameters:**
+   - `file-name`: `string`
+   
+   **Returns:** `SourceFile | undefined`"
   ^js [builder-program file-name]
   (.getSourceFile ^js builder-program file-name))
 
 (defn source-files
-  "Get a list of files in the program"
+  "Get a list of files in the program
+   
+   **Returns:** `readonly SourceFile[]`"
   ^js [builder-program]
   (.getSourceFiles ^js builder-program))
 
 (defn options-diagnostics
-  "Get the diagnostics for compiler options"
+  "Get the diagnostics for compiler options
+   
+   **Parameters:**
+   - `cancellation-token`: `CancellationToken | undefined`
+   
+   **Returns:** `readonly Diagnostic[]`"
   (^js [builder-program]
    (.getOptionsDiagnostics ^js builder-program))
   (^js [builder-program cancellation-token]
    (.getOptionsDiagnostics ^js builder-program cancellation-token)))
 
 (defn global-diagnostics
-  "Get the diagnostics that dont belong to any file"
+  "Get the diagnostics that dont belong to any file
+   
+   **Parameters:**
+   - `cancellation-token`: `CancellationToken | undefined`
+   
+   **Returns:** `readonly Diagnostic[]`"
   (^js [builder-program]
    (.getGlobalDiagnostics ^js builder-program))
   (^js [builder-program cancellation-token]
    (.getGlobalDiagnostics ^js builder-program cancellation-token)))
 
 (defn config-file-parsing-diagnostics
-  "Get the diagnostics from config file parsing"
+  "Get the diagnostics from config file parsing
+   
+   **Returns:** `readonly Diagnostic[]`"
   ^js [builder-program]
   (.getConfigFileParsingDiagnostics ^js builder-program))
 
 (defn syntactic-diagnostics
-  "Get the syntax diagnostics, for all source files if source file is not supplied"
+  "Get the syntax diagnostics, for all source files if source file is not supplied
+   
+   **Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   - `cancellation-token`: `CancellationToken | undefined`
+   
+   **Returns:** `readonly Diagnostic[]`"
   (^js [builder-program]
    (.getSyntacticDiagnostics ^js builder-program))
   (^js [builder-program source-file]
@@ -50,7 +79,13 @@
    (.getSyntacticDiagnostics ^js builder-program source-file cancellation-token)))
 
 (defn declaration-diagnostics
-  "Get the declaration diagnostics, for all source files if source file is not supplied"
+  "Get the declaration diagnostics, for all source files if source file is not supplied
+   
+   **Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   - `cancellation-token`: `CancellationToken | undefined`
+   
+   **Returns:** `readonly DiagnosticWithLocation[]`"
   (^js [builder-program]
    (.getDeclarationDiagnostics ^js builder-program))
   (^js [builder-program source-file]
@@ -59,7 +94,12 @@
    (.getDeclarationDiagnostics ^js builder-program source-file cancellation-token)))
 
 (defn all-dependencies
-  "Get all the dependencies of the file"
+  "Get all the dependencies of the file
+   
+   **Parameters:**
+   - `source-file`: `SourceFile`
+   
+   **Returns:** `readonly string[]`"
   ^js [builder-program source-file]
   (.getAllDependencies ^js builder-program source-file))
 
@@ -69,7 +109,13 @@
    Note that it is assumed that when asked about semantic diagnostics through this API,
    the file has been taken out of affected files so it is safe to use cache or get from program and cache the diagnostics
    In case of SemanticDiagnosticsBuilderProgram if the source file is not provided,
-   it will iterate through all the affected files, to ensure that cache stays valid and yet provide a way to get all semantic diagnostics"
+   it will iterate through all the affected files, to ensure that cache stays valid and yet provide a way to get all semantic diagnostics
+   
+   **Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   - `cancellation-token`: `CancellationToken | undefined`
+   
+   **Returns:** `readonly Diagnostic[]`"
   (^js [builder-program]
    (.getSemanticDiagnostics ^js builder-program))
   (^js [builder-program source-file]
@@ -86,7 +132,16 @@
    it will only emit all the affected files instead of whole program
    
    The first of writeFile if provided, writeFile of BuilderProgramHost if provided, writeFile of compiler host
-   in that order would be used to write the files"
+   in that order would be used to write the files
+   
+   **Parameters:**
+   - `target-source-file`: `SourceFile | undefined`
+   - `write-file`: `WriteFileCallback | undefined`
+   - `cancellation-token`: `CancellationToken | undefined`
+   - `emit-only-dts-files?`: `boolean | undefined`
+   - `custom-transformers`: `CustomTransformers | undefined`
+   
+   **Returns:** `EmitResult`"
   (^js [builder-program]
    (.emit ^js builder-program))
   (^js [builder-program target-source-file]
@@ -101,6 +156,8 @@
    (.emit ^js builder-program target-source-file write-file cancellation-token emit-only-dts-files? custom-transformers)))
 
 (defn current-directory
-  "Get the current directory of the program"
+  "Get the current directory of the program
+   
+   **Returns:** `string`"
   ^js [builder-program]
   (.getCurrentDirectory ^js builder-program))

@@ -4,6 +4,10 @@
   ^js [package-installed-response]
   (.-kind ^js package-installed-response))
 
+(defn id
+  ^js [package-installed-response]
+  (.-id ^js package-installed-response))
+
 (defn success?
   ^js [package-installed-response]
   (.-success ^js package-installed-response))

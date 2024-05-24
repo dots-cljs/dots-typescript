@@ -35,3 +35,11 @@
    check specified by `isFileProbablyExternalModule` will be used to set the field."
   ^js [create-source-file-options value]
   (set! (.-setExternalModuleIndicator ^js create-source-file-options) value))
+
+(defn js-doc-parsing-mode
+  ^js [create-source-file-options]
+  (.-jsDocParsingMode ^js create-source-file-options))
+
+(defn set-js-doc-parsing-mode!
+  ^js [create-source-file-options value]
+  (set! (.-jsDocParsingMode ^js create-source-file-options) value))

@@ -25,5 +25,9 @@
   (set! (.-skipTrivia ^js source-map-source) value))
 
 (defn line-and-character-of-position
+  "**Parameters:**
+   - `pos`: `number`
+   
+   **Returns:** `LineAndCharacter`"
   ^js [source-map-source pos]
   (.getLineAndCharacterOfPosition ^js source-map-source pos))

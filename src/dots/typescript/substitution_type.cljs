@@ -66,93 +66,119 @@
   (set! (.-aliasTypeArguments ^js substitution-type) value))
 
 (defn get-flags
+  "**Returns:** `TypeFlags`"
   ^js [substitution-type]
   (.getFlags ^js substitution-type))
 
 (defn get-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [substitution-type]
   (.getSymbol ^js substitution-type))
 
 (defn properties
+  "**Returns:** `Symbol[]`"
   ^js [substitution-type]
   (.getProperties ^js substitution-type))
 
 (defn property
+  "**Parameters:**
+   - `property-name`: `string`
+   
+   **Returns:** `Symbol | undefined`"
   ^js [substitution-type property-name]
   (.getProperty ^js substitution-type property-name))
 
 (defn apparent-properties
+  "**Returns:** `Symbol[]`"
   ^js [substitution-type]
   (.getApparentProperties ^js substitution-type))
 
 (defn call-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [substitution-type]
   (.getCallSignatures ^js substitution-type))
 
 (defn construct-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [substitution-type]
   (.getConstructSignatures ^js substitution-type))
 
 (defn string-index-type
+  "**Returns:** `Type | undefined`"
   ^js [substitution-type]
   (.getStringIndexType ^js substitution-type))
 
 (defn number-index-type
+  "**Returns:** `Type | undefined`"
   ^js [substitution-type]
   (.getNumberIndexType ^js substitution-type))
 
 (defn base-types
+  "**Returns:** `BaseType[] | undefined`"
   ^js [substitution-type]
   (.getBaseTypes ^js substitution-type))
 
 (defn non-nullable-type
+  "**Returns:** `Type`"
   ^js [substitution-type]
   (.getNonNullableType ^js substitution-type))
 
 (defn get-constraint
+  "**Returns:** `Type | undefined`"
   ^js [substitution-type]
   (.getConstraint ^js substitution-type))
 
 (defn default
+  "**Returns:** `Type | undefined`"
   ^js [substitution-type]
   (.getDefault ^js substitution-type))
 
 (defn union?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isUnion ^js substitution-type))
 
 (defn intersection?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isIntersection ^js substitution-type))
 
 (defn union-or-intersection?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isUnionOrIntersection ^js substitution-type))
 
 (defn literal?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isLiteral ^js substitution-type))
 
 (defn string-literal?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isStringLiteral ^js substitution-type))
 
 (defn number-literal?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isNumberLiteral ^js substitution-type))
 
 (defn type-parameter?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isTypeParameter ^js substitution-type))
 
 (defn class-or-interface?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isClassOrInterface ^js substitution-type))
 
 (defn class?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isClass ^js substitution-type))
 
 (defn index-type?
+  "**Returns:** `boolean`"
   ^js [substitution-type]
   (.isIndexType ^js substitution-type))

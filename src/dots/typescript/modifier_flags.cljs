@@ -3,23 +3,25 @@
 
 (def none (.-None typescript/ModifierFlags))
 
-(def export (.-Export typescript/ModifierFlags))
-
-(def ambient (.-Ambient typescript/ModifierFlags))
-
 (def public (.-Public typescript/ModifierFlags))
 
 (def private (.-Private typescript/ModifierFlags))
 
 (def protected (.-Protected typescript/ModifierFlags))
 
-(def static (.-Static typescript/ModifierFlags))
-
 (def readonly (.-Readonly typescript/ModifierFlags))
 
-(def accessor (.-Accessor typescript/ModifierFlags))
+(def override (.-Override typescript/ModifierFlags))
+
+(def export (.-Export typescript/ModifierFlags))
 
 (def abstract (.-Abstract typescript/ModifierFlags))
+
+(def ambient (.-Ambient typescript/ModifierFlags))
+
+(def static (.-Static typescript/ModifierFlags))
+
+(def accessor (.-Accessor typescript/ModifierFlags))
 
 (def async (.-Async typescript/ModifierFlags))
 
@@ -27,17 +29,15 @@
 
 (def const (.-Const typescript/ModifierFlags))
 
-(def has-computed-js-doc-modifiers (.-HasComputedJSDocModifiers typescript/ModifierFlags))
-
-(def deprecated (.-Deprecated typescript/ModifierFlags))
-
-(def override (.-Override typescript/ModifierFlags))
-
 (def in (.-In typescript/ModifierFlags))
 
 (def out (.-Out typescript/ModifierFlags))
 
 (def decorator (.-Decorator typescript/ModifierFlags))
+
+(def deprecated (.-Deprecated typescript/ModifierFlags))
+
+(def has-computed-js-doc-modifiers (.-HasComputedJSDocModifiers typescript/ModifierFlags))
 
 (def has-computed-flags (.-HasComputedFlags typescript/ModifierFlags))
 

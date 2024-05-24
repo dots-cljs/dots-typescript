@@ -62,28 +62,40 @@
   (.-name ^js symbol))
 
 (defn get-flags
+  "**Returns:** `SymbolFlags`"
   ^js [symbol]
   (.getFlags ^js symbol))
 
 (defn get-escaped-name
+  "**Returns:** `__String`"
   ^js [symbol]
   (.getEscapedName ^js symbol))
 
 (defn get-name
+  "**Returns:** `string`"
   ^js [symbol]
   (.getName ^js symbol))
 
 (defn get-declarations
+  "**Returns:** `Declaration[] | undefined`"
   ^js [symbol]
   (.getDeclarations ^js symbol))
 
 (defn documentation-comment
+  "**Parameters:**
+   - `type-checker`: `TypeChecker | undefined`
+   
+   **Returns:** `SymbolDisplayPart[]`"
   (^js [symbol]
    (.getDocumentationComment ^js symbol))
   (^js [symbol type-checker]
    (.getDocumentationComment ^js symbol type-checker)))
 
 (defn js-doc-tags
+  "**Parameters:**
+   - `checker`: `TypeChecker | undefined`
+   
+   **Returns:** `JSDocTagInfo[]`"
   (^js [symbol]
    (.getJsDocTags ^js symbol))
   (^js [symbol checker]

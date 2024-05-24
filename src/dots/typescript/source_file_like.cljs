@@ -6,5 +6,9 @@
   (.-text ^js source-file-like))
 
 (defn line-and-character-of-position
+  "**Parameters:**
+   - `pos`: `number`
+   
+   **Returns:** `LineAndCharacter`"
   ^js [source-file-like pos]
   (.getLineAndCharacterOfPosition ^js source-file-like pos))

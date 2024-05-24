@@ -7,6 +7,8 @@
 
 (def write-array-as-generic-type (.-WriteArrayAsGenericType typescript/TypeFormatFlags))
 
+(def generate-names-for-shadowed-type-params (.-GenerateNamesForShadowedTypeParams typescript/TypeFormatFlags))
+
 (def use-structural-fallback (.-UseStructuralFallback typescript/TypeFormatFlags))
 
 (def write-type-arguments-of-signature (.-WriteTypeArgumentsOfSignature typescript/TypeFormatFlags))

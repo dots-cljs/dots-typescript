@@ -152,22 +152,41 @@
   (set! (.-impliedNodeFormat ^js source-file) value))
 
 (defn line-and-character-of-position
+  "**Parameters:**
+   - `pos`: `number`
+   
+   **Returns:** `LineAndCharacter`"
   ^js [source-file pos]
   (.getLineAndCharacterOfPosition ^js source-file pos))
 
 (defn line-end-of-position
+  "**Parameters:**
+   - `pos`: `number`
+   
+   **Returns:** `number`"
   ^js [source-file pos]
   (.getLineEndOfPosition ^js source-file pos))
 
 (defn line-starts
+  "**Returns:** `readonly number[]`"
   ^js [source-file]
   (.getLineStarts ^js source-file))
 
 (defn position-of-line-and-character
+  "**Parameters:**
+   - `line`: `number`
+   - `character`: `number`
+   
+   **Returns:** `number`"
   ^js [source-file line character]
   (.getPositionOfLineAndCharacter ^js source-file line character))
 
 (defn update
+  "**Parameters:**
+   - `new-text`: `string`
+   - `text-change-range`: `TextChangeRange`
+   
+   **Returns:** `SourceFile`"
   ^js [source-file new-text text-change-range]
   (.update ^js source-file new-text text-change-range))
 
@@ -180,28 +199,47 @@
   (.-parent ^js source-file))
 
 (defn source-file
+  "**Returns:** `SourceFile`"
   ^js [source-file]
   (.getSourceFile ^js source-file))
 
 (defn child-count
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [source-file]
    (.getChildCount ^js source-file))
   (^js [this-source-file source-file]
    (.getChildCount ^js this-source-file source-file)))
 
 (defn child-at
+  "**Parameters:**
+   - `index`: `number`
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node`"
   (^js [source-file index]
    (.getChildAt ^js source-file index))
   (^js [this-source-file index source-file]
    (.getChildAt ^js this-source-file index source-file)))
 
 (defn children
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node[]`"
   (^js [source-file]
    (.getChildren ^js source-file))
   (^js [this-source-file source-file]
    (.getChildren ^js this-source-file source-file)))
 
 (defn start
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   - `include-js-doc-comment?`: `boolean | undefined`
+   
+   **Returns:** `number`"
   (^js [source-file]
    (.getStart ^js source-file))
   (^js [this-source-file source-file]
@@ -210,54 +248,86 @@
    (.getStart ^js this-source-file source-file include-js-doc-comment?)))
 
 (defn full-start
+  "**Returns:** `number`"
   ^js [source-file]
   (.getFullStart ^js source-file))
 
 (defn get-end
+  "**Returns:** `number`"
   ^js [source-file]
   (.getEnd ^js source-file))
 
 (defn width
+  "**Parameters:**
+   - `source-file`: `SourceFileLike | undefined`
+   
+   **Returns:** `number`"
   (^js [source-file]
    (.getWidth ^js source-file))
   (^js [this-source-file source-file]
    (.getWidth ^js this-source-file source-file)))
 
 (defn full-width
+  "**Returns:** `number`"
   ^js [source-file]
   (.getFullWidth ^js source-file))
 
 (defn leading-trivia-width
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [source-file]
    (.getLeadingTriviaWidth ^js source-file))
   (^js [this-source-file source-file]
    (.getLeadingTriviaWidth ^js this-source-file source-file)))
 
 (defn full-text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [source-file]
    (.getFullText ^js source-file))
   (^js [this-source-file source-file]
    (.getFullText ^js this-source-file source-file)))
 
 (defn get-text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [source-file]
    (.getText ^js source-file))
   (^js [this-source-file source-file]
    (.getText ^js this-source-file source-file)))
 
 (defn first-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [source-file]
    (.getFirstToken ^js source-file))
   (^js [this-source-file source-file]
    (.getFirstToken ^js this-source-file source-file)))
 
 (defn last-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [source-file]
    (.getLastToken ^js source-file))
   (^js [this-source-file source-file]
    (.getLastToken ^js this-source-file source-file)))
 
 (defn for-each-child
+  "**Parameters:**
+   - `cb-node`: `(node: Node) => T | undefined`
+   - `cb-node-array`: `((nodes: NodeArray<Node>) => T | undefined) | undefined`
+   
+   **Returns:** `T | undefined`"
   (^js [source-file cb-node]
    (.forEachChild ^js source-file cb-node))
   (^js [source-file cb-node cb-node-array]

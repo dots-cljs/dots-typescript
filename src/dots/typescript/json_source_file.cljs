@@ -152,22 +152,41 @@
   (set! (.-impliedNodeFormat ^js json-source-file) value))
 
 (defn line-and-character-of-position
+  "**Parameters:**
+   - `pos`: `number`
+   
+   **Returns:** `LineAndCharacter`"
   ^js [json-source-file pos]
   (.getLineAndCharacterOfPosition ^js json-source-file pos))
 
 (defn line-end-of-position
+  "**Parameters:**
+   - `pos`: `number`
+   
+   **Returns:** `number`"
   ^js [json-source-file pos]
   (.getLineEndOfPosition ^js json-source-file pos))
 
 (defn line-starts
+  "**Returns:** `readonly number[]`"
   ^js [json-source-file]
   (.getLineStarts ^js json-source-file))
 
 (defn position-of-line-and-character
+  "**Parameters:**
+   - `line`: `number`
+   - `character`: `number`
+   
+   **Returns:** `number`"
   ^js [json-source-file line character]
   (.getPositionOfLineAndCharacter ^js json-source-file line character))
 
 (defn update
+  "**Parameters:**
+   - `new-text`: `string`
+   - `text-change-range`: `TextChangeRange`
+   
+   **Returns:** `SourceFile`"
   ^js [json-source-file new-text text-change-range]
   (.update ^js json-source-file new-text text-change-range))
 
@@ -180,28 +199,47 @@
   (.-parent ^js json-source-file))
 
 (defn source-file
+  "**Returns:** `SourceFile`"
   ^js [json-source-file]
   (.getSourceFile ^js json-source-file))
 
 (defn child-count
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [json-source-file]
    (.getChildCount ^js json-source-file))
   (^js [json-source-file source-file]
    (.getChildCount ^js json-source-file source-file)))
 
 (defn child-at
+  "**Parameters:**
+   - `index`: `number`
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node`"
   (^js [json-source-file index]
    (.getChildAt ^js json-source-file index))
   (^js [json-source-file index source-file]
    (.getChildAt ^js json-source-file index source-file)))
 
 (defn children
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node[]`"
   (^js [json-source-file]
    (.getChildren ^js json-source-file))
   (^js [json-source-file source-file]
    (.getChildren ^js json-source-file source-file)))
 
 (defn start
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   - `include-js-doc-comment?`: `boolean | undefined`
+   
+   **Returns:** `number`"
   (^js [json-source-file]
    (.getStart ^js json-source-file))
   (^js [json-source-file source-file]
@@ -210,54 +248,86 @@
    (.getStart ^js json-source-file source-file include-js-doc-comment?)))
 
 (defn full-start
+  "**Returns:** `number`"
   ^js [json-source-file]
   (.getFullStart ^js json-source-file))
 
 (defn get-end
+  "**Returns:** `number`"
   ^js [json-source-file]
   (.getEnd ^js json-source-file))
 
 (defn width
+  "**Parameters:**
+   - `source-file`: `SourceFileLike | undefined`
+   
+   **Returns:** `number`"
   (^js [json-source-file]
    (.getWidth ^js json-source-file))
   (^js [json-source-file source-file]
    (.getWidth ^js json-source-file source-file)))
 
 (defn full-width
+  "**Returns:** `number`"
   ^js [json-source-file]
   (.getFullWidth ^js json-source-file))
 
 (defn leading-trivia-width
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [json-source-file]
    (.getLeadingTriviaWidth ^js json-source-file))
   (^js [json-source-file source-file]
    (.getLeadingTriviaWidth ^js json-source-file source-file)))
 
 (defn full-text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [json-source-file]
    (.getFullText ^js json-source-file))
   (^js [json-source-file source-file]
    (.getFullText ^js json-source-file source-file)))
 
 (defn get-text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [json-source-file]
    (.getText ^js json-source-file))
   (^js [json-source-file source-file]
    (.getText ^js json-source-file source-file)))
 
 (defn first-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [json-source-file]
    (.getFirstToken ^js json-source-file))
   (^js [json-source-file source-file]
    (.getFirstToken ^js json-source-file source-file)))
 
 (defn last-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [json-source-file]
    (.getLastToken ^js json-source-file))
   (^js [json-source-file source-file]
    (.getLastToken ^js json-source-file source-file)))
 
 (defn for-each-child
+  "**Parameters:**
+   - `cb-node`: `(node: Node) => T | undefined`
+   - `cb-node-array`: `((nodes: NodeArray<Node>) => T | undefined) | undefined`
+   
+   **Returns:** `T | undefined`"
   (^js [json-source-file cb-node]
    (.forEachChild ^js json-source-file cb-node))
   (^js [json-source-file cb-node cb-node-array]

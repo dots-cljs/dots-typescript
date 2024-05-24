@@ -60,6 +60,8 @@
 
 (def module-exports (.-ModuleExports typescript/SymbolFlags))
 
+(def all (.-All typescript/SymbolFlags))
+
 (def enum (.-Enum typescript/SymbolFlags))
 
 (def variable (.-Variable typescript/SymbolFlags))

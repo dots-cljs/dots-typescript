@@ -21,21 +21,41 @@
   (set! (.-diagnostics ^js transformation-result) value))
 
 (defn substitute-node
-  "Gets a substitute for a node, if one is available; otherwise, returns the original node."
+  "Gets a substitute for a node, if one is available; otherwise, returns the original node.
+   
+   **Parameters:**
+   - `hint`: `EmitHint` - A hint as to the intended usage of the node.
+   - `node`: `Node` - The node to substitute.
+   
+   **Returns:** `Node`"
   ^js [transformation-result hint node]
   (.substituteNode ^js transformation-result hint node))
 
 (defn emit-node-with-notification
-  "Emits a node with possible notification."
+  "Emits a node with possible notification.
+   
+   **Parameters:**
+   - `hint`: `EmitHint` - A hint as to the intended usage of the node.
+   - `node`: `Node` - The node to emit.
+   - `emit-callback`: `(hint: EmitHint, node: Node) => void` - A callback used to emit the node.
+   
+   **Returns:** `void`"
   ^js [transformation-result hint node emit-callback]
   (.emitNodeWithNotification ^js transformation-result hint node emit-callback))
 
 (defn emit-notification-enabled?
-  "Indicates if a given node needs an emit notification"
+  "Indicates if a given node needs an emit notification
+   
+   **Parameters:**
+   - `node`: `Node` - The node to emit.
+   
+   **Returns:** `boolean`"
   ^js [transformation-result node]
   (.isEmitNotificationEnabled ^js transformation-result node))
 
 (defn dispose
-  "Clean up EmitNode entries on any parse-tree nodes."
+  "Clean up EmitNode entries on any parse-tree nodes.
+   
+   **Returns:** `void`"
   ^js [transformation-result]
   (.dispose ^js transformation-result))

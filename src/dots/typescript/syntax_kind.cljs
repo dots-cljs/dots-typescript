@@ -602,6 +602,10 @@
 
 (def catch-clause (.-CatchClause typescript/SyntaxKind))
 
+(def import-attributes (.-ImportAttributes typescript/SyntaxKind))
+
+(def import-attribute (.-ImportAttribute typescript/SyntaxKind))
+
 (def assert-clause (.-AssertClause typescript/SyntaxKind))
 
 (def assert-entry (.-AssertEntry typescript/SyntaxKind))

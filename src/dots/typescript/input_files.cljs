@@ -77,28 +77,47 @@
   (.-parent ^js input-files))
 
 (defn source-file
+  "**Returns:** `SourceFile`"
   ^js [input-files]
   (.getSourceFile ^js input-files))
 
 (defn child-count
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [input-files]
    (.getChildCount ^js input-files))
   (^js [input-files source-file]
    (.getChildCount ^js input-files source-file)))
 
 (defn child-at
+  "**Parameters:**
+   - `index`: `number`
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node`"
   (^js [input-files index]
    (.getChildAt ^js input-files index))
   (^js [input-files index source-file]
    (.getChildAt ^js input-files index source-file)))
 
 (defn children
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node[]`"
   (^js [input-files]
    (.getChildren ^js input-files))
   (^js [input-files source-file]
    (.getChildren ^js input-files source-file)))
 
 (defn start
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   - `include-js-doc-comment?`: `boolean | undefined`
+   
+   **Returns:** `number`"
   (^js [input-files]
    (.getStart ^js input-files))
   (^js [input-files source-file]
@@ -107,54 +126,86 @@
    (.getStart ^js input-files source-file include-js-doc-comment?)))
 
 (defn full-start
+  "**Returns:** `number`"
   ^js [input-files]
   (.getFullStart ^js input-files))
 
 (defn get-end
+  "**Returns:** `number`"
   ^js [input-files]
   (.getEnd ^js input-files))
 
 (defn width
+  "**Parameters:**
+   - `source-file`: `SourceFileLike | undefined`
+   
+   **Returns:** `number`"
   (^js [input-files]
    (.getWidth ^js input-files))
   (^js [input-files source-file]
    (.getWidth ^js input-files source-file)))
 
 (defn full-width
+  "**Returns:** `number`"
   ^js [input-files]
   (.getFullWidth ^js input-files))
 
 (defn leading-trivia-width
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `number`"
   (^js [input-files]
    (.getLeadingTriviaWidth ^js input-files))
   (^js [input-files source-file]
    (.getLeadingTriviaWidth ^js input-files source-file)))
 
 (defn full-text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [input-files]
    (.getFullText ^js input-files))
   (^js [input-files source-file]
    (.getFullText ^js input-files source-file)))
 
 (defn text
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `string`"
   (^js [input-files]
    (.getText ^js input-files))
   (^js [input-files source-file]
    (.getText ^js input-files source-file)))
 
 (defn first-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [input-files]
    (.getFirstToken ^js input-files))
   (^js [input-files source-file]
    (.getFirstToken ^js input-files source-file)))
 
 (defn last-token
+  "**Parameters:**
+   - `source-file`: `SourceFile | undefined`
+   
+   **Returns:** `Node | undefined`"
   (^js [input-files]
    (.getLastToken ^js input-files))
   (^js [input-files source-file]
    (.getLastToken ^js input-files source-file)))
 
 (defn for-each-child
+  "**Parameters:**
+   - `cb-node`: `(node: Node) => T | undefined`
+   - `cb-node-array`: `((nodes: NodeArray<Node>) => T | undefined) | undefined`
+   
+   **Returns:** `T | undefined`"
   (^js [input-files cb-node]
    (.forEachChild ^js input-files cb-node))
   (^js [input-files cb-node cb-node-array]

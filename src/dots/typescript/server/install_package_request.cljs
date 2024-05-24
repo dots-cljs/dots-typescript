@@ -16,6 +16,10 @@
   ^js [install-package-request]
   (.-projectRootPath ^js install-package-request))
 
+(defn id
+  ^js [install-package-request]
+  (.-id ^js install-package-request))
+
 (defn project-name
   ^js [install-package-request]
   (.-projectName ^js install-package-request))

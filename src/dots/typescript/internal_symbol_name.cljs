@@ -35,3 +35,7 @@
 (def default (.-Default typescript/InternalSymbolName))
 
 (def this (.-This typescript/InternalSymbolName))
+
+(def instantiation-expression (.-InstantiationExpression typescript/InternalSymbolName))
+
+(def import-attributes (.-ImportAttributes typescript/InternalSymbolName))

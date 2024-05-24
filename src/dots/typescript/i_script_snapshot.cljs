@@ -4,12 +4,20 @@
    the same values.")
 
 (defn text
-  "Gets a portion of the script snapshot specified by [start, end)."
+  "Gets a portion of the script snapshot specified by [start, end).
+   
+   **Parameters:**
+   - `start`: `number`
+   - `end`: `number`
+   
+   **Returns:** `string`"
   ^js [i-script-snapshot start end]
   (.getText ^js i-script-snapshot start end))
 
 (defn length
-  "Gets the length of this script snapshot."
+  "Gets the length of this script snapshot.
+   
+   **Returns:** `number`"
   ^js [i-script-snapshot]
   (.getLength ^js i-script-snapshot))
 
@@ -18,11 +26,18 @@
    an older version.  This information is used by the incremental parser to determine
    what sections of the script need to be re-parsed.  'undefined' can be returned if the
    change range cannot be determined.  However, in that case, incremental parsing will
-   not happen and the entire document will be re - parsed."
+   not happen and the entire document will be re - parsed.
+   
+   **Parameters:**
+   - `old-snapshot`: `IScriptSnapshot`
+   
+   **Returns:** `TextChangeRange | undefined`"
   ^js [i-script-snapshot old-snapshot]
   (.getChangeRange ^js i-script-snapshot old-snapshot))
 
 (defn dispose
-  "Releases all resources held by this script snapshot"
+  "Releases all resources held by this script snapshot
+   
+   **Returns:** `void`"
   ^js [i-script-snapshot]
   (.dispose ^js i-script-snapshot))

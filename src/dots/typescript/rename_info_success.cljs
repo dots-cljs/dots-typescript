@@ -29,10 +29,14 @@
   (set! (.-displayName ^js rename-info-success) value))
 
 (defn full-display-name
+  "Full display name of item to be renamed.
+   If item to be renamed is a file, then this is the original text of the module specifer"
   ^js [rename-info-success]
   (.-fullDisplayName ^js rename-info-success))
 
 (defn set-full-display-name!
+  "Full display name of item to be renamed.
+   If item to be renamed is a file, then this is the original text of the module specifer"
   ^js [rename-info-success value]
   (set! (.-fullDisplayName ^js rename-info-success) value))
 

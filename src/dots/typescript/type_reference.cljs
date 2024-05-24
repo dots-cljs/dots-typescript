@@ -82,93 +82,119 @@
   (set! (.-aliasTypeArguments ^js type-reference) value))
 
 (defn get-flags
+  "**Returns:** `TypeFlags`"
   ^js [type-reference]
   (.getFlags ^js type-reference))
 
 (defn get-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [type-reference]
   (.getSymbol ^js type-reference))
 
 (defn properties
+  "**Returns:** `Symbol[]`"
   ^js [type-reference]
   (.getProperties ^js type-reference))
 
 (defn property
+  "**Parameters:**
+   - `property-name`: `string`
+   
+   **Returns:** `Symbol | undefined`"
   ^js [type-reference property-name]
   (.getProperty ^js type-reference property-name))
 
 (defn apparent-properties
+  "**Returns:** `Symbol[]`"
   ^js [type-reference]
   (.getApparentProperties ^js type-reference))
 
 (defn call-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [type-reference]
   (.getCallSignatures ^js type-reference))
 
 (defn construct-signatures
+  "**Returns:** `readonly Signature[]`"
   ^js [type-reference]
   (.getConstructSignatures ^js type-reference))
 
 (defn string-index-type
+  "**Returns:** `Type | undefined`"
   ^js [type-reference]
   (.getStringIndexType ^js type-reference))
 
 (defn number-index-type
+  "**Returns:** `Type | undefined`"
   ^js [type-reference]
   (.getNumberIndexType ^js type-reference))
 
 (defn base-types
+  "**Returns:** `BaseType[] | undefined`"
   ^js [type-reference]
   (.getBaseTypes ^js type-reference))
 
 (defn non-nullable-type
+  "**Returns:** `Type`"
   ^js [type-reference]
   (.getNonNullableType ^js type-reference))
 
 (defn constraint
+  "**Returns:** `Type | undefined`"
   ^js [type-reference]
   (.getConstraint ^js type-reference))
 
 (defn default
+  "**Returns:** `Type | undefined`"
   ^js [type-reference]
   (.getDefault ^js type-reference))
 
 (defn union?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isUnion ^js type-reference))
 
 (defn intersection?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isIntersection ^js type-reference))
 
 (defn union-or-intersection?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isUnionOrIntersection ^js type-reference))
 
 (defn literal?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isLiteral ^js type-reference))
 
 (defn string-literal?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isStringLiteral ^js type-reference))
 
 (defn number-literal?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isNumberLiteral ^js type-reference))
 
 (defn type-parameter?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isTypeParameter ^js type-reference))
 
 (defn class-or-interface?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isClassOrInterface ^js type-reference))
 
 (defn class?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isClass ^js type-reference))
 
 (defn index-type?
+  "**Returns:** `boolean`"
   ^js [type-reference]
   (.isIndexType ^js type-reference))

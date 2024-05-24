@@ -81,6 +81,8 @@
 
 (def object-literal-expression-properties (.-ObjectLiteralExpressionProperties typescript/ListFormat))
 
+(def import-attributes (.-ImportAttributes typescript/ListFormat))
+
 (def import-clause-entries (.-ImportClauseEntries typescript/ListFormat))
 
 (def array-literal-expression-elements (.-ArrayLiteralExpressionElements typescript/ListFormat))

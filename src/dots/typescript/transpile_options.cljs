@@ -47,3 +47,11 @@
 (defn set-transformers!
   ^js [transpile-options value]
   (set! (.-transformers ^js transpile-options) value))
+
+(defn js-doc-parsing-mode
+  ^js [transpile-options]
+  (.-jsDocParsingMode ^js transpile-options))
+
+(defn set-js-doc-parsing-mode!
+  ^js [transpile-options value]
+  (set! (.-jsDocParsingMode ^js transpile-options) value))
