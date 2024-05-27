@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.diagnostic-event-body)
 
 (defn file
-  "The file for which diagnostic information is reported."
+  "The file for which diagnostic information is reported.
+   
+   **Returns:** `string`"
   ^js [diagnostic-event-body]
   (.-file ^js diagnostic-event-body))
 
@@ -11,7 +13,9 @@
   (set! (.-file ^js diagnostic-event-body) value))
 
 (defn diagnostics
-  "An array of diagnostic information items."
+  "An array of diagnostic information items.
+   
+   **Returns:** `Diagnostic[]`"
   ^js [diagnostic-event-body]
   (.-diagnostics ^js diagnostic-event-body))
 

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [comment]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocDeprecatedTag`"
   ^js [js-doc-deprecated-tag]
   (.-kind ^js js-doc-deprecated-tag))
 
@@ -10,18 +11,22 @@
   (set! (.-kind ^js js-doc-deprecated-tag) value))
 
 (defn parent
+  "**Returns:** `JSDoc | JSDocTypeLiteral`"
   ^js [js-doc-deprecated-tag]
   (.-parent ^js js-doc-deprecated-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-deprecated-tag]
   (.-tagName ^js js-doc-deprecated-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-deprecated-tag]
   (.-comment ^js js-doc-deprecated-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-deprecated-tag]
   (.-flags ^js js-doc-deprecated-tag))
 
@@ -161,9 +166,11 @@
    (.forEachChild ^js js-doc-deprecated-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-deprecated-tag]
   (.-pos ^js js-doc-deprecated-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-deprecated-tag]
   (.-end ^js js-doc-deprecated-tag))

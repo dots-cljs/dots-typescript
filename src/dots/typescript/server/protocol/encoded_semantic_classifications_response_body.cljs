@@ -2,6 +2,7 @@
   "Implementation response message. Gives series of text spans depending on the format ar.")
 
 (defn end-of-line-state
+  "**Returns:** `EndOfLineState`"
   ^js [encoded-semantic-classifications-response-body]
   (.-endOfLineState ^js encoded-semantic-classifications-response-body))
 
@@ -10,6 +11,7 @@
   (set! (.-endOfLineState ^js encoded-semantic-classifications-response-body) value))
 
 (defn spans
+  "**Returns:** `number[]`"
   ^js [encoded-semantic-classifications-response-body]
   (.-spans ^js encoded-semantic-classifications-response-body))
 

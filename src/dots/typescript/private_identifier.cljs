@@ -1,22 +1,27 @@
 (ns dots.typescript.private-identifier)
 
 (defn kind
+  "**Returns:** `SyntaxKind.PrivateIdentifier`"
   ^js [private-identifier]
   (.-kind ^js private-identifier))
 
 (defn escaped-text
+  "**Returns:** `__String`"
   ^js [private-identifier]
   (.-escapedText ^js private-identifier))
 
 (defn text
+  "**Returns:** `string`"
   ^js [private-identifier]
   (.-text ^js private-identifier))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [private-identifier]
   (.-flags ^js private-identifier))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [private-identifier]
   (.-parent ^js private-identifier))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js private-identifier cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [private-identifier]
   (.-pos ^js private-identifier))
 
 (defn end
+  "**Returns:** `number`"
   ^js [private-identifier]
   (.-end ^js private-identifier))

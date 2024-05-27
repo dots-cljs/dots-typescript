@@ -6,6 +6,7 @@
    questions like 'what parameter is the user currently contained within?'.")
 
 (defn variadic?
+  "**Returns:** `boolean`"
   ^js [signature-help-item]
   (.-isVariadic ^js signature-help-item))
 
@@ -14,6 +15,7 @@
   (set! (.-isVariadic ^js signature-help-item) value))
 
 (defn prefix-display-parts
+  "**Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-item]
   (.-prefixDisplayParts ^js signature-help-item))
 
@@ -22,6 +24,7 @@
   (set! (.-prefixDisplayParts ^js signature-help-item) value))
 
 (defn suffix-display-parts
+  "**Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-item]
   (.-suffixDisplayParts ^js signature-help-item))
 
@@ -30,6 +33,7 @@
   (set! (.-suffixDisplayParts ^js signature-help-item) value))
 
 (defn separator-display-parts
+  "**Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-item]
   (.-separatorDisplayParts ^js signature-help-item))
 
@@ -38,6 +42,7 @@
   (set! (.-separatorDisplayParts ^js signature-help-item) value))
 
 (defn parameters
+  "**Returns:** `SignatureHelpParameter[]`"
   ^js [signature-help-item]
   (.-parameters ^js signature-help-item))
 
@@ -46,6 +51,7 @@
   (set! (.-parameters ^js signature-help-item) value))
 
 (defn documentation
+  "**Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-item]
   (.-documentation ^js signature-help-item))
 
@@ -54,6 +60,7 @@
   (set! (.-documentation ^js signature-help-item) value))
 
 (defn tags
+  "**Returns:** `JSDocTagInfo[]`"
   ^js [signature-help-item]
   (.-tags ^js signature-help-item))
 

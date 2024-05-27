@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ShorthandPropertyAssignment`"
   ^js [shorthand-property-assignment]
   (.-kind ^js shorthand-property-assignment))
 
 (defn parent
+  "**Returns:** `ObjectLiteralExpression`"
   ^js [shorthand-property-assignment]
   (.-parent ^js shorthand-property-assignment))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [shorthand-property-assignment]
   (.-name ^js shorthand-property-assignment))
 
 (defn equals-token
+  "**Returns:** `EqualsToken | undefined`"
   ^js [shorthand-property-assignment]
   (.-equalsToken ^js shorthand-property-assignment))
 
 (defn object-assignment-initializer
+  "**Returns:** `Expression | undefined`"
   ^js [shorthand-property-assignment]
   (.-objectAssignmentInitializer ^js shorthand-property-assignment))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [shorthand-property-assignment]
   (.-flags ^js shorthand-property-assignment))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js shorthand-property-assignment cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [shorthand-property-assignment]
   (.-pos ^js shorthand-property-assignment))
 
 (defn end
+  "**Returns:** `number`"
   ^js [shorthand-property-assignment]
   (.-end ^js shorthand-property-assignment))

@@ -2,7 +2,9 @@
   "Part of a symbol description.")
 
 (defn text
-  "Text of an item describing the symbol."
+  "Text of an item describing the symbol.
+   
+   **Returns:** `string`"
   ^js [symbol-display-part]
   (.-text ^js symbol-display-part))
 
@@ -12,7 +14,9 @@
   (set! (.-text ^js symbol-display-part) value))
 
 (defn kind
-  "The symbol's kind (such as 'className' or 'parameterName' or plain 'text')."
+  "The symbol's kind (such as 'className' or 'parameterName' or plain 'text').
+   
+   **Returns:** `string`"
   ^js [symbol-display-part]
   (.-kind ^js symbol-display-part))
 

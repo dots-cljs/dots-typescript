@@ -1,18 +1,22 @@
 (ns dots.typescript.spread-element)
 
 (defn kind
+  "**Returns:** `SyntaxKind.SpreadElement`"
   ^js [spread-element]
   (.-kind ^js spread-element))
 
 (defn parent
+  "**Returns:** `CallExpression | NewExpression | ArrayLiteralExpression`"
   ^js [spread-element]
   (.-parent ^js spread-element))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [spread-element]
   (.-expression ^js spread-element))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [spread-element]
   (.-flags ^js spread-element))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js spread-element cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [spread-element]
   (.-pos ^js spread-element))
 
 (defn end
+  "**Returns:** `number`"
   ^js [spread-element]
   (.-end ^js spread-element))

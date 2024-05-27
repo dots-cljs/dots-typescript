@@ -2,38 +2,47 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.Parameter`"
   ^js [parameter-declaration]
   (.-kind ^js parameter-declaration))
 
 (defn parent
+  "**Returns:** `SignatureDeclaration`"
   ^js [parameter-declaration]
   (.-parent ^js parameter-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [parameter-declaration]
   (.-modifiers ^js parameter-declaration))
 
 (defn dot-dot-dot-token
+  "**Returns:** `DotDotDotToken | undefined`"
   ^js [parameter-declaration]
   (.-dotDotDotToken ^js parameter-declaration))
 
 (defn name
+  "**Returns:** `BindingName`"
   ^js [parameter-declaration]
   (.-name ^js parameter-declaration))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [parameter-declaration]
   (.-questionToken ^js parameter-declaration))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [parameter-declaration]
   (.-type ^js parameter-declaration))
 
 (defn initializer
+  "**Returns:** `Expression | undefined`"
   ^js [parameter-declaration]
   (.-initializer ^js parameter-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [parameter-declaration]
   (.-flags ^js parameter-declaration))
 
@@ -173,9 +182,11 @@
    (.forEachChild ^js parameter-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [parameter-declaration]
   (.-pos ^js parameter-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [parameter-declaration]
   (.-end ^js parameter-declaration))

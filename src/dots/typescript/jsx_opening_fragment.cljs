@@ -1,14 +1,17 @@
 (ns dots.typescript.jsx-opening-fragment)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxOpeningFragment`"
   ^js [jsx-opening-fragment]
   (.-kind ^js jsx-opening-fragment))
 
 (defn parent
+  "**Returns:** `JsxFragment`"
   ^js [jsx-opening-fragment]
   (.-parent ^js jsx-opening-fragment))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-opening-fragment]
   (.-flags ^js jsx-opening-fragment))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js jsx-opening-fragment cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-opening-fragment]
   (.-pos ^js jsx-opening-fragment))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-opening-fragment]
   (.-end ^js jsx-opening-fragment))

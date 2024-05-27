@@ -1,22 +1,27 @@
 (ns dots.typescript.catch-clause)
 
 (defn kind
+  "**Returns:** `SyntaxKind.CatchClause`"
   ^js [catch-clause]
   (.-kind ^js catch-clause))
 
 (defn parent
+  "**Returns:** `TryStatement`"
   ^js [catch-clause]
   (.-parent ^js catch-clause))
 
 (defn variable-declaration
+  "**Returns:** `VariableDeclaration | undefined`"
   ^js [catch-clause]
   (.-variableDeclaration ^js catch-clause))
 
 (defn block
+  "**Returns:** `Block`"
   ^js [catch-clause]
   (.-block ^js catch-clause))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [catch-clause]
   (.-flags ^js catch-clause))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js catch-clause cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [catch-clause]
   (.-pos ^js catch-clause))
 
 (defn end
+  "**Returns:** `number`"
   ^js [catch-clause]
   (.-end ^js catch-clause))

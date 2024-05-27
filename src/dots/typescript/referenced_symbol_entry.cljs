@@ -1,6 +1,7 @@
 (ns dots.typescript.referenced-symbol-entry)
 
 (defn definition?
+  "**Returns:** `boolean | undefined`"
   ^js [referenced-symbol-entry]
   (.-isDefinition ^js referenced-symbol-entry))
 
@@ -9,6 +10,7 @@
   (set! (.-isDefinition ^js referenced-symbol-entry) value))
 
 (defn write-access?
+  "**Returns:** `boolean`"
   ^js [referenced-symbol-entry]
   (.-isWriteAccess ^js referenced-symbol-entry))
 
@@ -17,6 +19,7 @@
   (set! (.-isWriteAccess ^js referenced-symbol-entry) value))
 
 (defn in-string
+  "**Returns:** `true | undefined`"
   ^js [referenced-symbol-entry]
   (.-isInString ^js referenced-symbol-entry))
 
@@ -25,6 +28,7 @@
   (set! (.-isInString ^js referenced-symbol-entry) value))
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [referenced-symbol-entry]
   (.-textSpan ^js referenced-symbol-entry))
 
@@ -33,6 +37,7 @@
   (set! (.-textSpan ^js referenced-symbol-entry) value))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [referenced-symbol-entry]
   (.-fileName ^js referenced-symbol-entry))
 
@@ -42,7 +47,9 @@
 
 (defn original-text-span
   "If the span represents a location that was remapped (e.g. via a .d.ts.map file),
-   then the original filename and span will be specified here"
+   then the original filename and span will be specified here
+   
+   **Returns:** `TextSpan | undefined`"
   ^js [referenced-symbol-entry]
   (.-originalTextSpan ^js referenced-symbol-entry))
 
@@ -53,6 +60,7 @@
   (set! (.-originalTextSpan ^js referenced-symbol-entry) value))
 
 (defn original-file-name
+  "**Returns:** `string | undefined`"
   ^js [referenced-symbol-entry]
   (.-originalFileName ^js referenced-symbol-entry))
 
@@ -62,7 +70,9 @@
 
 (defn context-span
   "If DocumentSpan.textSpan is the span for name of the declaration,
-   then this is the span for relevant declaration"
+   then this is the span for relevant declaration
+   
+   **Returns:** `TextSpan | undefined`"
   ^js [referenced-symbol-entry]
   (.-contextSpan ^js referenced-symbol-entry))
 
@@ -73,6 +83,7 @@
   (set! (.-contextSpan ^js referenced-symbol-entry) value))
 
 (defn original-context-span
+  "**Returns:** `TextSpan | undefined`"
   ^js [referenced-symbol-entry]
   (.-originalContextSpan ^js referenced-symbol-entry))
 

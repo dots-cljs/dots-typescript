@@ -1,6 +1,7 @@
 (ns dots.typescript.rename-info-success)
 
 (defn can-rename
+  "**Returns:** `true`"
   ^js [rename-info-success]
   (.-canRename ^js rename-info-success))
 
@@ -10,7 +11,9 @@
 
 (defn file-to-rename
   "File or directory to rename.
-   If set, `getEditsForFileRename` should be called instead of `findRenameLocations`."
+   If set, `getEditsForFileRename` should be called instead of `findRenameLocations`.
+   
+   **Returns:** `string | undefined`"
   ^js [rename-info-success]
   (.-fileToRename ^js rename-info-success))
 
@@ -21,6 +24,7 @@
   (set! (.-fileToRename ^js rename-info-success) value))
 
 (defn display-name
+  "**Returns:** `string`"
   ^js [rename-info-success]
   (.-displayName ^js rename-info-success))
 
@@ -30,7 +34,9 @@
 
 (defn full-display-name
   "Full display name of item to be renamed.
-   If item to be renamed is a file, then this is the original text of the module specifer"
+   If item to be renamed is a file, then this is the original text of the module specifer
+   
+   **Returns:** `string`"
   ^js [rename-info-success]
   (.-fullDisplayName ^js rename-info-success))
 
@@ -41,6 +47,7 @@
   (set! (.-fullDisplayName ^js rename-info-success) value))
 
 (defn kind
+  "**Returns:** `ScriptElementKind`"
   ^js [rename-info-success]
   (.-kind ^js rename-info-success))
 
@@ -49,6 +56,7 @@
   (set! (.-kind ^js rename-info-success) value))
 
 (defn kind-modifiers
+  "**Returns:** `string`"
   ^js [rename-info-success]
   (.-kindModifiers ^js rename-info-success))
 
@@ -57,6 +65,7 @@
   (set! (.-kindModifiers ^js rename-info-success) value))
 
 (defn trigger-span
+  "**Returns:** `TextSpan`"
   ^js [rename-info-success]
   (.-triggerSpan ^js rename-info-success))
 

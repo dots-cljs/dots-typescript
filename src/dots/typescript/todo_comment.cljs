@@ -1,6 +1,7 @@
 (ns dots.typescript.todo-comment)
 
 (defn descriptor
+  "**Returns:** `TodoCommentDescriptor`"
   ^js [todo-comment]
   (.-descriptor ^js todo-comment))
 
@@ -9,6 +10,7 @@
   (set! (.-descriptor ^js todo-comment) value))
 
 (defn message
+  "**Returns:** `string`"
   ^js [todo-comment]
   (.-message ^js todo-comment))
 
@@ -17,6 +19,7 @@
   (set! (.-message ^js todo-comment) value))
 
 (defn position
+  "**Returns:** `number`"
   ^js [todo-comment]
   (.-position ^js todo-comment))
 

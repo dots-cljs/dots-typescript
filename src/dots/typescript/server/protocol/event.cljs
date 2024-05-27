@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [event]
   (.-type ^js event))
 
@@ -11,7 +12,9 @@
   (set! (.-type ^js event) value))
 
 (defn event
-  "Name of event"
+  "Name of event
+   
+   **Returns:** `string`"
   ^js [event]
   (.-event ^js event))
 
@@ -21,7 +24,9 @@
   (set! (.-event ^js event) value))
 
 (defn body
-  "Event-specific information"
+  "Event-specific information
+   
+   **Returns:** `any`"
   ^js [event]
   (.-body ^js event))
 
@@ -31,7 +36,9 @@
   (set! (.-body ^js event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [event]
   (.-seq ^js event))
 

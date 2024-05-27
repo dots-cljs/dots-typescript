@@ -70,6 +70,7 @@
   (.getIndexInfosOfType ^js type-checker type))
 
 (defn index-infos-of-index-symbol
+  "**Returns:** `(indexSymbol: Symbol) => IndexInfo[]`"
   ^js [type-checker]
   (.-getIndexInfosOfIndexSymbol ^js type-checker))
 

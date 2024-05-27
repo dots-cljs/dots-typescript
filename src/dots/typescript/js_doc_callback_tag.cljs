@@ -2,34 +2,42 @@
   (:refer-clojure :exclude [comment name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocCallbackTag`"
   ^js [js-doc-callback-tag]
   (.-kind ^js js-doc-callback-tag))
 
 (defn parent
+  "**Returns:** `JSDoc`"
   ^js [js-doc-callback-tag]
   (.-parent ^js js-doc-callback-tag))
 
 (defn full-name
+  "**Returns:** `Identifier | JSDocNamespaceDeclaration | undefined`"
   ^js [js-doc-callback-tag]
   (.-fullName ^js js-doc-callback-tag))
 
 (defn name
+  "**Returns:** `Identifier | undefined`"
   ^js [js-doc-callback-tag]
   (.-name ^js js-doc-callback-tag))
 
 (defn type-expression
+  "**Returns:** `JSDocSignature`"
   ^js [js-doc-callback-tag]
   (.-typeExpression ^js js-doc-callback-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-callback-tag]
   (.-tagName ^js js-doc-callback-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-callback-tag]
   (.-comment ^js js-doc-callback-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-callback-tag]
   (.-flags ^js js-doc-callback-tag))
 
@@ -169,9 +177,11 @@
    (.forEachChild ^js js-doc-callback-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-callback-tag]
   (.-pos ^js js-doc-callback-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-callback-tag]
   (.-end ^js js-doc-callback-tag))

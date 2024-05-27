@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [response]
   (.-type ^js response))
 
@@ -11,7 +12,9 @@
   (set! (.-type ^js response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [response]
   (.-request_seq ^js response))
 
@@ -21,7 +24,9 @@
   (set! (.-request_seq ^js response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [response]
   (.-success ^js response))
 
@@ -31,7 +36,9 @@
   (set! (.-success ^js response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [response]
   (.-command ^js response))
 
@@ -42,7 +49,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [response]
   (.-message ^js response))
 
@@ -53,7 +62,9 @@
   (set! (.-message ^js response) value))
 
 (defn body
-  "Contains message body if success === true."
+  "Contains message body if success === true.
+   
+   **Returns:** `any`"
   ^js [response]
   (.-body ^js response))
 
@@ -63,7 +74,9 @@
   (set! (.-body ^js response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [response]
   (.-metadata ^js response))
 
@@ -73,7 +86,9 @@
   (set! (.-metadata ^js response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [response]
   (.-performanceData ^js response))
 
@@ -83,7 +98,9 @@
   (set! (.-performanceData ^js response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [response]
   (.-seq ^js response))
 

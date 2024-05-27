@@ -1,22 +1,27 @@
 (ns dots.typescript.postfix-unary-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.PostfixUnaryExpression`"
   ^js [postfix-unary-expression]
   (.-kind ^js postfix-unary-expression))
 
 (defn operand
+  "**Returns:** `LeftHandSideExpression`"
   ^js [postfix-unary-expression]
   (.-operand ^js postfix-unary-expression))
 
 (defn operator
+  "**Returns:** `PostfixUnaryOperator`"
   ^js [postfix-unary-expression]
   (.-operator ^js postfix-unary-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [postfix-unary-expression]
   (.-flags ^js postfix-unary-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [postfix-unary-expression]
   (.-parent ^js postfix-unary-expression))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js postfix-unary-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [postfix-unary-expression]
   (.-pos ^js postfix-unary-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [postfix-unary-expression]
   (.-end ^js postfix-unary-expression))

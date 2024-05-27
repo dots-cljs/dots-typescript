@@ -1,18 +1,22 @@
 (ns dots.typescript.jsx-closing-element)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxClosingElement`"
   ^js [jsx-closing-element]
   (.-kind ^js jsx-closing-element))
 
 (defn parent
+  "**Returns:** `JsxElement`"
   ^js [jsx-closing-element]
   (.-parent ^js jsx-closing-element))
 
 (defn tag-name
+  "**Returns:** `JsxTagNameExpression`"
   ^js [jsx-closing-element]
   (.-tagName ^js jsx-closing-element))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-closing-element]
   (.-flags ^js jsx-closing-element))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js jsx-closing-element cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-closing-element]
   (.-pos ^js jsx-closing-element))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-closing-element]
   (.-end ^js jsx-closing-element))

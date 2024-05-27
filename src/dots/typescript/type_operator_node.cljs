@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.TypeOperator`"
   ^js [type-operator-node]
   (.-kind ^js type-operator-node))
 
 (defn operator
+  "**Returns:** `SyntaxKind.KeyOfKeyword | SyntaxKind.ReadonlyKeyword | SyntaxKind.UniqueKeyword`"
   ^js [type-operator-node]
   (.-operator ^js type-operator-node))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [type-operator-node]
   (.-type ^js type-operator-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [type-operator-node]
   (.-flags ^js type-operator-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [type-operator-node]
   (.-parent ^js type-operator-node))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js type-operator-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [type-operator-node]
   (.-pos ^js type-operator-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [type-operator-node]
   (.-end ^js type-operator-node))

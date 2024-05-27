@@ -3,7 +3,9 @@
 
 (defn config-file-name
   "For configured project, this is the normalized path of the 'tsconfig.json' file
-   For inferred project, this is undefined"
+   For inferred project, this is undefined
+   
+   **Returns:** `string`"
   ^js [project-info]
   (.-configFileName ^js project-info))
 
@@ -14,7 +16,9 @@
   (set! (.-configFileName ^js project-info) value))
 
 (defn file-names
-  "The list of normalized file name in the project, including 'lib.d.ts'"
+  "The list of normalized file name in the project, including 'lib.d.ts'
+   
+   **Returns:** `string[] | undefined`"
   ^js [project-info]
   (.-fileNames ^js project-info))
 
@@ -24,7 +28,9 @@
   (set! (.-fileNames ^js project-info) value))
 
 (defn language-service-disabled?
-  "Indicates if the project has a active language service instance"
+  "Indicates if the project has a active language service instance
+   
+   **Returns:** `boolean | undefined`"
   ^js [project-info]
   (.-languageServiceDisabled ^js project-info))
 

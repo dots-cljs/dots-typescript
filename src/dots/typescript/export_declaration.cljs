@@ -2,44 +2,56 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ExportDeclaration`"
   ^js [export-declaration]
   (.-kind ^js export-declaration))
 
 (defn parent
+  "**Returns:** `SourceFile | ModuleBlock`"
   ^js [export-declaration]
   (.-parent ^js export-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [export-declaration]
   (.-modifiers ^js export-declaration))
 
 (defn type-only?
+  "**Returns:** `boolean`"
   ^js [export-declaration]
   (.-isTypeOnly ^js export-declaration))
 
 (defn export-clause
-  "Will not be assigned in the case of `export * from \"foo\";`"
+  "Will not be assigned in the case of `export * from \"foo\";`
+   
+   **Returns:** `NamedExportBindings | undefined`"
   ^js [export-declaration]
   (.-exportClause ^js export-declaration))
 
 (defn module-specifier
-  "If this is not a StringLiteral it will be a grammar error."
+  "If this is not a StringLiteral it will be a grammar error.
+   
+   **Returns:** `Expression | undefined`"
   ^js [export-declaration]
   (.-moduleSpecifier ^js export-declaration))
 
 (defn assert-clause
+  "**Returns:** `AssertClause | undefined`"
   ^js [export-declaration]
   (.-assertClause ^js export-declaration))
 
 (defn attributes
+  "**Returns:** `ImportAttributes | undefined`"
   ^js [export-declaration]
   (.-attributes ^js export-declaration))
 
 (defn name
+  "**Returns:** `Identifier | StringLiteral | NumericLiteral | undefined`"
   ^js [export-declaration]
   (.-name ^js export-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [export-declaration]
   (.-flags ^js export-declaration))
 
@@ -179,9 +191,11 @@
    (.forEachChild ^js export-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [export-declaration]
   (.-pos ^js export-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [export-declaration]
   (.-end ^js export-declaration))

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `InlayHintItem[] | undefined`"
   ^js [inlay-hints-response]
   (.-body ^js inlay-hints-response))
 
@@ -10,6 +11,7 @@
   (set! (.-body ^js inlay-hints-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [inlay-hints-response]
   (.-type ^js inlay-hints-response))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js inlay-hints-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [inlay-hints-response]
   (.-request_seq ^js inlay-hints-response))
 
@@ -28,7 +32,9 @@
   (set! (.-request_seq ^js inlay-hints-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [inlay-hints-response]
   (.-success ^js inlay-hints-response))
 
@@ -38,7 +44,9 @@
   (set! (.-success ^js inlay-hints-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [inlay-hints-response]
   (.-command ^js inlay-hints-response))
 
@@ -49,7 +57,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [inlay-hints-response]
   (.-message ^js inlay-hints-response))
 
@@ -60,7 +70,9 @@
   (set! (.-message ^js inlay-hints-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [inlay-hints-response]
   (.-metadata ^js inlay-hints-response))
 
@@ -70,7 +82,9 @@
   (set! (.-metadata ^js inlay-hints-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [inlay-hints-response]
   (.-performanceData ^js inlay-hints-response))
 
@@ -80,7 +94,9 @@
   (set! (.-performanceData ^js inlay-hints-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [inlay-hints-response]
   (.-seq ^js inlay-hints-response))
 

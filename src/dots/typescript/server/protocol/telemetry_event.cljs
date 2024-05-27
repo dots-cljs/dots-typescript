@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn event
+  "**Returns:** `\"telemetry\"`"
   ^js [telemetry-event]
   (.-event ^js telemetry-event))
 
@@ -10,6 +11,7 @@
   (set! (.-event ^js telemetry-event) value))
 
 (defn body
+  "**Returns:** `TelemetryEventBody`"
   ^js [telemetry-event]
   (.-body ^js telemetry-event))
 
@@ -18,6 +20,7 @@
   (set! (.-body ^js telemetry-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [telemetry-event]
   (.-type ^js telemetry-event))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js telemetry-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [telemetry-event]
   (.-seq ^js telemetry-event))
 

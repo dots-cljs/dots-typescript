@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ConstructorType`"
   ^js [constructor-type-node]
   (.-kind ^js constructor-type-node))
 
 (defn modifiers
+  "**Returns:** `NodeArray<Modifier> | undefined`"
   ^js [constructor-type-node]
   (.-modifiers ^js constructor-type-node))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [constructor-type-node]
   (.-type ^js constructor-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [constructor-type-node]
   (.-flags ^js constructor-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [constructor-type-node]
   (.-parent ^js constructor-type-node))
 
@@ -157,21 +162,26 @@
    (.forEachChild ^js constructor-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [constructor-type-node]
   (.-pos ^js constructor-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [constructor-type-node]
   (.-end ^js constructor-type-node))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [constructor-type-node]
   (.-name ^js constructor-type-node))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [constructor-type-node]
   (.-typeParameters ^js constructor-type-node))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [constructor-type-node]
   (.-parameters ^js constructor-type-node))

@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ArrowFunction`"
   ^js [arrow-function]
   (.-kind ^js arrow-function))
 
 (defn modifiers
+  "**Returns:** `NodeArray<Modifier> | undefined`"
   ^js [arrow-function]
   (.-modifiers ^js arrow-function))
 
 (defn equals-greater-than-token
+  "**Returns:** `EqualsGreaterThanToken`"
   ^js [arrow-function]
   (.-equalsGreaterThanToken ^js arrow-function))
 
 (defn body
+  "**Returns:** `ConciseBody`"
   ^js [arrow-function]
   (.-body ^js arrow-function))
 
 (defn name
+  "**Returns:** `never`"
   ^js [arrow-function]
   (.-name ^js arrow-function))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [arrow-function]
   (.-flags ^js arrow-function))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [arrow-function]
   (.-parent ^js arrow-function))
 
@@ -165,33 +172,41 @@
    (.forEachChild ^js arrow-function cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [arrow-function]
   (.-pos ^js arrow-function))
 
 (defn end
+  "**Returns:** `number`"
   ^js [arrow-function]
   (.-end ^js arrow-function))
 
 (defn asterisk-token
+  "**Returns:** `AsteriskToken | undefined`"
   ^js [arrow-function]
   (.-asteriskToken ^js arrow-function))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [arrow-function]
   (.-questionToken ^js arrow-function))
 
 (defn exclamation-token
+  "**Returns:** `ExclamationToken | undefined`"
   ^js [arrow-function]
   (.-exclamationToken ^js arrow-function))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [arrow-function]
   (.-typeParameters ^js arrow-function))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [arrow-function]
   (.-parameters ^js arrow-function))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [arrow-function]
   (.-type ^js arrow-function))

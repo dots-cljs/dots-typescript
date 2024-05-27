@@ -2,7 +2,9 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
-  "Name of the JSDoc tag"
+  "Name of the JSDoc tag
+   
+   **Returns:** `string`"
   ^js [js-doc-tag-info]
   (.-name ^js js-doc-tag-info))
 
@@ -13,7 +15,9 @@
 
 (defn text
   "Comment text after the JSDoc tag -- the text after the tag name until the next tag or end of comment
-   Display parts when UserPreferences.displayPartsForJSDoc is true, flattened to string otherwise."
+   Display parts when UserPreferences.displayPartsForJSDoc is true, flattened to string otherwise.
+   
+   **Returns:** `string | SymbolDisplayPart[] | undefined`"
   ^js [js-doc-tag-info]
   (.-text ^js js-doc-tag-info))
 

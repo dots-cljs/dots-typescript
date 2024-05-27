@@ -5,6 +5,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.NavBar`"
   ^js [nav-bar-request]
   (.-command ^js nav-bar-request))
 
@@ -13,6 +14,7 @@
   (set! (.-command ^js nav-bar-request) value))
 
 (defn arguments
+  "**Returns:** `FileRequestArgs`"
   ^js [nav-bar-request]
   (.-arguments ^js nav-bar-request))
 
@@ -21,6 +23,7 @@
   (set! (.-arguments ^js nav-bar-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [nav-bar-request]
   (.-type ^js nav-bar-request))
 
@@ -29,7 +32,9 @@
   (set! (.-type ^js nav-bar-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [nav-bar-request]
   (.-seq ^js nav-bar-request))
 

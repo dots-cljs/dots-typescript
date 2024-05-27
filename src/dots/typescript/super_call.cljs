@@ -1,30 +1,37 @@
 (ns dots.typescript.super-call)
 
 (defn expression
+  "**Returns:** `SuperExpression`"
   ^js [super-call]
   (.-expression ^js super-call))
 
 (defn kind
+  "**Returns:** `SyntaxKind.CallExpression`"
   ^js [super-call]
   (.-kind ^js super-call))
 
 (defn question-dot-token
+  "**Returns:** `QuestionDotToken | undefined`"
   ^js [super-call]
   (.-questionDotToken ^js super-call))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [super-call]
   (.-typeArguments ^js super-call))
 
 (defn arguments
+  "**Returns:** `NodeArray<Expression>`"
   ^js [super-call]
   (.-arguments ^js super-call))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [super-call]
   (.-flags ^js super-call))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [super-call]
   (.-parent ^js super-call))
 
@@ -164,9 +171,11 @@
    (.forEachChild ^js super-call cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [super-call]
   (.-pos ^js super-call))
 
 (defn end
+  "**Returns:** `number`"
   ^js [super-call]
   (.-end ^js super-call))

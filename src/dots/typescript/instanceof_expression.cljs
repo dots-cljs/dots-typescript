@@ -1,26 +1,32 @@
 (ns dots.typescript.instanceof-expression)
 
 (defn operator-token
+  "**Returns:** `Token<SyntaxKind.InstanceOfKeyword>`"
   ^js [instanceof-expression]
   (.-operatorToken ^js instanceof-expression))
 
 (defn kind
+  "**Returns:** `SyntaxKind.BinaryExpression`"
   ^js [instanceof-expression]
   (.-kind ^js instanceof-expression))
 
 (defn left
+  "**Returns:** `Expression`"
   ^js [instanceof-expression]
   (.-left ^js instanceof-expression))
 
 (defn right
+  "**Returns:** `Expression`"
   ^js [instanceof-expression]
   (.-right ^js instanceof-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [instanceof-expression]
   (.-flags ^js instanceof-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [instanceof-expression]
   (.-parent ^js instanceof-expression))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js instanceof-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [instanceof-expression]
   (.-pos ^js instanceof-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [instanceof-expression]
   (.-end ^js instanceof-expression))

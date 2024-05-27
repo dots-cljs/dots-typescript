@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Indentation`"
   ^js [indentation-request]
   (.-command ^js indentation-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js indentation-request) value))
 
 (defn arguments
+  "**Returns:** `IndentationRequestArgs`"
   ^js [indentation-request]
   (.-arguments ^js indentation-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js indentation-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [indentation-request]
   (.-type ^js indentation-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js indentation-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [indentation-request]
   (.-seq ^js indentation-request))
 

@@ -1,26 +1,32 @@
 (ns dots.typescript.jsx-self-closing-element)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxSelfClosingElement`"
   ^js [jsx-self-closing-element]
   (.-kind ^js jsx-self-closing-element))
 
 (defn tag-name
+  "**Returns:** `JsxTagNameExpression`"
   ^js [jsx-self-closing-element]
   (.-tagName ^js jsx-self-closing-element))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [jsx-self-closing-element]
   (.-typeArguments ^js jsx-self-closing-element))
 
 (defn attributes
+  "**Returns:** `JsxAttributes`"
   ^js [jsx-self-closing-element]
   (.-attributes ^js jsx-self-closing-element))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-self-closing-element]
   (.-flags ^js jsx-self-closing-element))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [jsx-self-closing-element]
   (.-parent ^js jsx-self-closing-element))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js jsx-self-closing-element cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-self-closing-element]
   (.-pos ^js jsx-self-closing-element))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-self-closing-element]
   (.-end ^js jsx-self-closing-element))

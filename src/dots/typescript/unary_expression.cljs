@@ -1,14 +1,17 @@
 (ns dots.typescript.unary-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [unary-expression]
   (.-kind ^js unary-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [unary-expression]
   (.-flags ^js unary-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [unary-expression]
   (.-parent ^js unary-expression))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js unary-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [unary-expression]
   (.-pos ^js unary-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [unary-expression]
   (.-end ^js unary-expression))

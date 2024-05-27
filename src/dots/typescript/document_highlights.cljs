@@ -1,6 +1,7 @@
 (ns dots.typescript.document-highlights)
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [document-highlights]
   (.-fileName ^js document-highlights))
 
@@ -9,6 +10,7 @@
   (set! (.-fileName ^js document-highlights) value))
 
 (defn highlight-spans
+  "**Returns:** `HighlightSpan[]`"
   ^js [document-highlights]
   (.-highlightSpans ^js document-highlights))
 

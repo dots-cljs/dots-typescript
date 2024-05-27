@@ -1,6 +1,7 @@
 (ns dots.typescript.completion-entry-data-unresolved)
 
 (defn export-map-key
+  "**Returns:** `ExportMapInfoKey`"
   ^js [completion-entry-data-unresolved]
   (.-exportMapKey ^js completion-entry-data-unresolved))
 
@@ -10,7 +11,9 @@
 
 (defn export-name
   "The name of the property or export in the module's symbol table. Differs from the completion name
-   in the case of InternalSymbolName.ExportEquals and InternalSymbolName.Default."
+   in the case of InternalSymbolName.ExportEquals and InternalSymbolName.Default.
+   
+   **Returns:** `string`"
   ^js [completion-entry-data-unresolved]
   (.-exportName ^js completion-entry-data-unresolved))
 
@@ -21,6 +24,7 @@
   (set! (.-exportName ^js completion-entry-data-unresolved) value))
 
 (defn module-specifier
+  "**Returns:** `string | undefined`"
   ^js [completion-entry-data-unresolved]
   (.-moduleSpecifier ^js completion-entry-data-unresolved))
 
@@ -29,7 +33,9 @@
   (set! (.-moduleSpecifier ^js completion-entry-data-unresolved) value))
 
 (defn file-name
-  "The file name declaring the export's module symbol, if it was an external module"
+  "The file name declaring the export's module symbol, if it was an external module
+   
+   **Returns:** `string | undefined`"
   ^js [completion-entry-data-unresolved]
   (.-fileName ^js completion-entry-data-unresolved))
 
@@ -39,7 +45,9 @@
   (set! (.-fileName ^js completion-entry-data-unresolved) value))
 
 (defn ambient-module-name
-  "The module name (with quotes stripped) of the export's module symbol, if it was an ambient module"
+  "The module name (with quotes stripped) of the export's module symbol, if it was an ambient module
+   
+   **Returns:** `string | undefined`"
   ^js [completion-entry-data-unresolved]
   (.-ambientModuleName ^js completion-entry-data-unresolved))
 
@@ -49,7 +57,9 @@
   (set! (.-ambientModuleName ^js completion-entry-data-unresolved) value))
 
 (defn package-json-import
-  "True if the export was found in the package.json AutoImportProvider"
+  "True if the export was found in the package.json AutoImportProvider
+   
+   **Returns:** `true | undefined`"
   ^js [completion-entry-data-unresolved]
   (.-isPackageJsonImport ^js completion-entry-data-unresolved))
 

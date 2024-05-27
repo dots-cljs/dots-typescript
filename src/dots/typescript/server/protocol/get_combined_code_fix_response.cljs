@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `CombinedCodeActions`"
   ^js [get-combined-code-fix-response]
   (.-body ^js get-combined-code-fix-response))
 
@@ -10,6 +11,7 @@
   (set! (.-body ^js get-combined-code-fix-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [get-combined-code-fix-response]
   (.-type ^js get-combined-code-fix-response))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js get-combined-code-fix-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [get-combined-code-fix-response]
   (.-request_seq ^js get-combined-code-fix-response))
 
@@ -28,7 +32,9 @@
   (set! (.-request_seq ^js get-combined-code-fix-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [get-combined-code-fix-response]
   (.-success ^js get-combined-code-fix-response))
 
@@ -38,7 +44,9 @@
   (set! (.-success ^js get-combined-code-fix-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [get-combined-code-fix-response]
   (.-command ^js get-combined-code-fix-response))
 
@@ -49,7 +57,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [get-combined-code-fix-response]
   (.-message ^js get-combined-code-fix-response))
 
@@ -60,7 +70,9 @@
   (set! (.-message ^js get-combined-code-fix-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [get-combined-code-fix-response]
   (.-metadata ^js get-combined-code-fix-response))
 
@@ -70,7 +82,9 @@
   (set! (.-metadata ^js get-combined-code-fix-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [get-combined-code-fix-response]
   (.-performanceData ^js get-combined-code-fix-response))
 
@@ -80,7 +94,9 @@
   (set! (.-performanceData ^js get-combined-code-fix-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [get-combined-code-fix-response]
   (.-seq ^js get-combined-code-fix-response))
 

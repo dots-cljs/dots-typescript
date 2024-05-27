@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.large-file-referenced-event-body)
 
 (defn file
-  "name of the large file being loaded"
+  "name of the large file being loaded
+   
+   **Returns:** `string`"
   ^js [large-file-referenced-event-body]
   (.-file ^js large-file-referenced-event-body))
 
@@ -11,7 +13,9 @@
   (set! (.-file ^js large-file-referenced-event-body) value))
 
 (defn file-size
-  "size of the file"
+  "size of the file
+   
+   **Returns:** `number`"
   ^js [large-file-referenced-event-body]
   (.-fileSize ^js large-file-referenced-event-body))
 
@@ -21,7 +25,9 @@
   (set! (.-fileSize ^js large-file-referenced-event-body) value))
 
 (defn max-file-size
-  "max file size allowed on the server"
+  "max file size allowed on the server
+   
+   **Returns:** `number`"
   ^js [large-file-referenced-event-body]
   (.-maxFileSize ^js large-file-referenced-event-body))
 

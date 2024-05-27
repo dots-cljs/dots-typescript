@@ -1,26 +1,32 @@
 (ns dots.typescript.binary-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.BinaryExpression`"
   ^js [binary-expression]
   (.-kind ^js binary-expression))
 
 (defn left
+  "**Returns:** `Expression`"
   ^js [binary-expression]
   (.-left ^js binary-expression))
 
 (defn operator-token
+  "**Returns:** `BinaryOperatorToken`"
   ^js [binary-expression]
   (.-operatorToken ^js binary-expression))
 
 (defn right
+  "**Returns:** `Expression`"
   ^js [binary-expression]
   (.-right ^js binary-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [binary-expression]
   (.-flags ^js binary-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [binary-expression]
   (.-parent ^js binary-expression))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js binary-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [binary-expression]
   (.-pos ^js binary-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [binary-expression]
   (.-end ^js binary-expression))

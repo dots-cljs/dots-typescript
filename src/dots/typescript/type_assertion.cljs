@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.TypeAssertionExpression`"
   ^js [type-assertion]
   (.-kind ^js type-assertion))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [type-assertion]
   (.-type ^js type-assertion))
 
 (defn expression
+  "**Returns:** `UnaryExpression`"
   ^js [type-assertion]
   (.-expression ^js type-assertion))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [type-assertion]
   (.-flags ^js type-assertion))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [type-assertion]
   (.-parent ^js type-assertion))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js type-assertion cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [type-assertion]
   (.-pos ^js type-assertion))
 
 (defn end
+  "**Returns:** `number`"
   ^js [type-assertion]
   (.-end ^js type-assertion))

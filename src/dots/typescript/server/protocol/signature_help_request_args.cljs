@@ -3,7 +3,9 @@
 
 (defn trigger-reason
   "Reason why signature help was invoked.
-   See each individual possible"
+   See each individual possible
+   
+   **Returns:** `SignatureHelpTriggerReason | undefined`"
   ^js [signature-help-request-args]
   (.-triggerReason ^js signature-help-request-args))
 
@@ -14,7 +16,9 @@
   (set! (.-triggerReason ^js signature-help-request-args) value))
 
 (defn line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [signature-help-request-args]
   (.-line ^js signature-help-request-args))
 
@@ -24,7 +28,9 @@
   (set! (.-line ^js signature-help-request-args) value))
 
 (defn offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [signature-help-request-args]
   (.-offset ^js signature-help-request-args))
 
@@ -34,7 +40,9 @@
   (set! (.-offset ^js signature-help-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [signature-help-request-args]
   (.-file ^js signature-help-request-args))
 
@@ -44,6 +52,7 @@
   (set! (.-file ^js signature-help-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [signature-help-request-args]
   (.-projectFileName ^js signature-help-request-args))
 

@@ -10,6 +10,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Geterr`"
   ^js [geterr-request]
   (.-command ^js geterr-request))
 
@@ -18,6 +19,7 @@
   (set! (.-command ^js geterr-request) value))
 
 (defn arguments
+  "**Returns:** `GeterrRequestArgs`"
   ^js [geterr-request]
   (.-arguments ^js geterr-request))
 
@@ -26,6 +28,7 @@
   (set! (.-arguments ^js geterr-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [geterr-request]
   (.-type ^js geterr-request))
 
@@ -34,7 +37,9 @@
   (set! (.-type ^js geterr-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [geterr-request]
   (.-seq ^js geterr-request))
 

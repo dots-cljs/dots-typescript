@@ -6,6 +6,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.OrganizeImports`"
   ^js [organize-imports-request]
   (.-command ^js organize-imports-request))
 
@@ -14,6 +15,7 @@
   (set! (.-command ^js organize-imports-request) value))
 
 (defn arguments
+  "**Returns:** `OrganizeImportsRequestArgs`"
   ^js [organize-imports-request]
   (.-arguments ^js organize-imports-request))
 
@@ -22,6 +24,7 @@
   (set! (.-arguments ^js organize-imports-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [organize-imports-request]
   (.-type ^js organize-imports-request))
 
@@ -30,7 +33,9 @@
   (set! (.-type ^js organize-imports-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [organize-imports-request]
   (.-seq ^js organize-imports-request))
 

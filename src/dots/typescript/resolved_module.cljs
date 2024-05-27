@@ -6,7 +6,9 @@
    Prefer to return a `ResolvedModuleFull` so that the file type does not have to be inferred.")
 
 (defn resolved-file-name
-  "Path of the file the module was resolved to."
+  "Path of the file the module was resolved to.
+   
+   **Returns:** `string`"
   ^js [resolved-module]
   (.-resolvedFileName ^js resolved-module))
 
@@ -16,7 +18,9 @@
   (set! (.-resolvedFileName ^js resolved-module) value))
 
 (defn external-library-import?
-  "True if `resolvedFileName` comes from `node_modules`."
+  "True if `resolvedFileName` comes from `node_modules`.
+   
+   **Returns:** `boolean | undefined`"
   ^js [resolved-module]
   (.-isExternalLibraryImport ^js resolved-module))
 
@@ -27,7 +31,9 @@
 
 (defn resolved-using-ts-extension?
   "True if the original module reference used a .ts extension to refer directly to a .ts file,
-   which should produce an error during checking if emit is enabled."
+   which should produce an error during checking if emit is enabled.
+   
+   **Returns:** `boolean | undefined`"
   ^js [resolved-module]
   (.-resolvedUsingTsExtension ^js resolved-module))
 

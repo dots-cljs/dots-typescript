@@ -1,7 +1,9 @@
 (ns dots.typescript.program-host)
 
 (defn create-program
-  "Used to create the program when need for program creation or recreation detected"
+  "Used to create the program when need for program creation or recreation detected
+   
+   **Returns:** `CreateProgram<T>`"
   ^js [program-host]
   (.-createProgram ^js program-host))
 
@@ -242,6 +244,7 @@
   (.getModuleResolutionCache ^js program-host))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [program-host]
   (.-jsDocParsingMode ^js program-host))
 

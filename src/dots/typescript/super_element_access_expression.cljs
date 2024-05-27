@@ -1,26 +1,32 @@
 (ns dots.typescript.super-element-access-expression)
 
 (defn expression
+  "**Returns:** `SuperExpression`"
   ^js [super-element-access-expression]
   (.-expression ^js super-element-access-expression))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ElementAccessExpression`"
   ^js [super-element-access-expression]
   (.-kind ^js super-element-access-expression))
 
 (defn question-dot-token
+  "**Returns:** `QuestionDotToken | undefined`"
   ^js [super-element-access-expression]
   (.-questionDotToken ^js super-element-access-expression))
 
 (defn argument-expression
+  "**Returns:** `Expression`"
   ^js [super-element-access-expression]
   (.-argumentExpression ^js super-element-access-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [super-element-access-expression]
   (.-flags ^js super-element-access-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [super-element-access-expression]
   (.-parent ^js super-element-access-expression))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js super-element-access-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [super-element-access-expression]
   (.-pos ^js super-element-access-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [super-element-access-expression]
   (.-end ^js super-element-access-expression))

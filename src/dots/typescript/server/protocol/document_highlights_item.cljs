@@ -2,7 +2,9 @@
   "Represents a set of highligh spans for a give name")
 
 (defn file
-  "File containing highlight spans."
+  "File containing highlight spans.
+   
+   **Returns:** `string`"
   ^js [document-highlights-item]
   (.-file ^js document-highlights-item))
 
@@ -12,7 +14,9 @@
   (set! (.-file ^js document-highlights-item) value))
 
 (defn highlight-spans
-  "Spans to highlight in file."
+  "Spans to highlight in file.
+   
+   **Returns:** `HighlightSpan[]`"
   ^js [document-highlights-item]
   (.-highlightSpans ^js document-highlights-item))
 

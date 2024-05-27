@@ -2,7 +2,9 @@
   "Contains a list of files that should be regenerated in a project")
 
 (defn project-file-name
-  "Project name"
+  "Project name
+   
+   **Returns:** `string`"
   ^js [compile-on-save-affected-file-list-single-project]
   (.-projectFileName ^js compile-on-save-affected-file-list-single-project))
 
@@ -12,7 +14,9 @@
   (set! (.-projectFileName ^js compile-on-save-affected-file-list-single-project) value))
 
 (defn file-names
-  "List of files names that should be recompiled"
+  "List of files names that should be recompiled
+   
+   **Returns:** `string[]`"
   ^js [compile-on-save-affected-file-list-single-project]
   (.-fileNames ^js compile-on-save-affected-file-list-single-project))
 
@@ -22,7 +26,9 @@
   (set! (.-fileNames ^js compile-on-save-affected-file-list-single-project) value))
 
 (defn project-uses-out-file?
-  "true if project uses outFile or out compiler option"
+  "true if project uses outFile or out compiler option
+   
+   **Returns:** `boolean`"
   ^js [compile-on-save-affected-file-list-single-project]
   (.-projectUsesOutFile ^js compile-on-save-affected-file-list-single-project))
 

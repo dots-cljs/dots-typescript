@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [concat every? filter map pop reduce reverse some? sort]))
 
 (defn sorted-array-brand
+  "**Returns:** `any`"
   ^js [sorted-array]
   (.-" __sortedArrayBrand" ^js sorted-array))
 
@@ -10,7 +11,9 @@
   (set! (.-" __sortedArrayBrand" ^js sorted-array) value))
 
 (defn length
-  "Gets or sets the length of the array. This is a number one higher than the highest index in the array."
+  "Gets or sets the length of the array. This is a number one higher than the highest index in the array.
+   
+   **Returns:** `number`"
   ^js [sorted-array]
   (.-length ^js sorted-array))
 

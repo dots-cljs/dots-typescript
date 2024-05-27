@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.apply-code-action-command-request-args)
 
 (defn command
-  "May also be an array of commands."
+  "May also be an array of commands.
+   
+   **Returns:** `{}`"
   ^js [apply-code-action-command-request-args]
   (.-command ^js apply-code-action-command-request-args))
 

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn event
+  "**Returns:** `\"surveyReady\"`"
   ^js [survey-ready-event]
   (.-event ^js survey-ready-event))
 
@@ -10,6 +11,7 @@
   (set! (.-event ^js survey-ready-event) value))
 
 (defn body
+  "**Returns:** `SurveyReadyEventBody`"
   ^js [survey-ready-event]
   (.-body ^js survey-ready-event))
 
@@ -18,6 +20,7 @@
   (set! (.-body ^js survey-ready-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [survey-ready-event]
   (.-type ^js survey-ready-event))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js survey-ready-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [survey-ready-event]
   (.-seq ^js survey-ready-event))
 

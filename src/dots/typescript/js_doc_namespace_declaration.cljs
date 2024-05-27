@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [js-doc-namespace-declaration]
   (.-name ^js js-doc-namespace-declaration))
 
 (defn body
+  "**Returns:** `JSDocNamespaceBody | undefined`"
   ^js [js-doc-namespace-declaration]
   (.-body ^js js-doc-namespace-declaration))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ModuleDeclaration`"
   ^js [js-doc-namespace-declaration]
   (.-kind ^js js-doc-namespace-declaration))
 
 (defn parent
+  "**Returns:** `SourceFile | ModuleBody`"
   ^js [js-doc-namespace-declaration]
   (.-parent ^js js-doc-namespace-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [js-doc-namespace-declaration]
   (.-modifiers ^js js-doc-namespace-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-namespace-declaration]
   (.-flags ^js js-doc-namespace-declaration))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js js-doc-namespace-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-namespace-declaration]
   (.-pos ^js js-doc-namespace-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-namespace-declaration]
   (.-end ^js js-doc-namespace-declaration))

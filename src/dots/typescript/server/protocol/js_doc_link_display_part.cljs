@@ -2,7 +2,9 @@
   "A part of a symbol description that links from a jsdoc")
 
 (defn target
-  "The location of the declaration that the"
+  "The location of the declaration that the
+   
+   **Returns:** `FileSpan`"
   ^js [js-doc-link-display-part]
   (.-target ^js js-doc-link-display-part))
 
@@ -12,7 +14,9 @@
   (set! (.-target ^js js-doc-link-display-part) value))
 
 (defn text
-  "Text of an item describing the symbol."
+  "Text of an item describing the symbol.
+   
+   **Returns:** `string`"
   ^js [js-doc-link-display-part]
   (.-text ^js js-doc-link-display-part))
 
@@ -22,7 +26,9 @@
   (set! (.-text ^js js-doc-link-display-part) value))
 
 (defn kind
-  "The symbol's kind (such as 'className' or 'parameterName' or plain 'text')."
+  "The symbol's kind (such as 'className' or 'parameterName' or plain 'text').
+   
+   **Returns:** `string`"
   ^js [js-doc-link-display-part]
   (.-kind ^js js-doc-link-display-part))
 

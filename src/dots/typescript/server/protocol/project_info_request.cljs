@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.ProjectInfo`"
   ^js [project-info-request]
   (.-command ^js project-info-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js project-info-request) value))
 
 (defn arguments
+  "**Returns:** `ProjectInfoRequestArgs`"
   ^js [project-info-request]
   (.-arguments ^js project-info-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js project-info-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [project-info-request]
   (.-type ^js project-info-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js project-info-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [project-info-request]
   (.-seq ^js project-info-request))
 

@@ -1,6 +1,7 @@
 (ns dots.typescript.inlay-hints-context)
 
 (defn file
+  "**Returns:** `SourceFile`"
   ^js [inlay-hints-context]
   (.-file ^js inlay-hints-context))
 
@@ -9,6 +10,7 @@
   (set! (.-file ^js inlay-hints-context) value))
 
 (defn program
+  "**Returns:** `Program`"
   ^js [inlay-hints-context]
   (.-program ^js inlay-hints-context))
 
@@ -17,6 +19,7 @@
   (set! (.-program ^js inlay-hints-context) value))
 
 (defn cancellation-token
+  "**Returns:** `CancellationToken`"
   ^js [inlay-hints-context]
   (.-cancellationToken ^js inlay-hints-context))
 
@@ -25,6 +28,7 @@
   (set! (.-cancellationToken ^js inlay-hints-context) value))
 
 (defn host
+  "**Returns:** `LanguageServiceHost`"
   ^js [inlay-hints-context]
   (.-host ^js inlay-hints-context))
 
@@ -33,6 +37,7 @@
   (set! (.-host ^js inlay-hints-context) value))
 
 (defn span
+  "**Returns:** `TextSpan`"
   ^js [inlay-hints-context]
   (.-span ^js inlay-hints-context))
 
@@ -41,6 +46,7 @@
   (set! (.-span ^js inlay-hints-context) value))
 
 (defn preferences
+  "**Returns:** `UserPreferences`"
   ^js [inlay-hints-context]
   (.-preferences ^js inlay-hints-context))
 

@@ -1,10 +1,12 @@
 (ns dots.typescript.invalidated-project-base)
 
 (defn kind
+  "**Returns:** `InvalidatedProjectKind`"
   ^js [invalidated-project-base]
   (.-kind ^js invalidated-project-base))
 
 (defn project
+  "**Returns:** `ResolvedConfigFileName`"
   ^js [invalidated-project-base]
   (.-project ^js invalidated-project-base))
 

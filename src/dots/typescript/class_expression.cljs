@@ -2,34 +2,42 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ClassExpression`"
   ^js [class-expression]
   (.-kind ^js class-expression))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [class-expression]
   (.-modifiers ^js class-expression))
 
 (defn name
+  "**Returns:** `Identifier | undefined`"
   ^js [class-expression]
   (.-name ^js class-expression))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [class-expression]
   (.-typeParameters ^js class-expression))
 
 (defn heritage-clauses
+  "**Returns:** `NodeArray<HeritageClause> | undefined`"
   ^js [class-expression]
   (.-heritageClauses ^js class-expression))
 
 (defn members
+  "**Returns:** `NodeArray<ClassElement>`"
   ^js [class-expression]
   (.-members ^js class-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [class-expression]
   (.-flags ^js class-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [class-expression]
   (.-parent ^js class-expression))
 
@@ -169,9 +177,11 @@
    (.forEachChild ^js class-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [class-expression]
   (.-pos ^js class-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [class-expression]
   (.-end ^js class-expression))

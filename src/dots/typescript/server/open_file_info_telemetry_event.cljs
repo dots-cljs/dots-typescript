@@ -4,9 +4,11 @@
    Currently this is only sent for '.js' files.")
 
 (defn event-name
+  "**Returns:** `\"openFileInfo\"`"
   ^js [open-file-info-telemetry-event]
   (.-eventName ^js open-file-info-telemetry-event))
 
 (defn data
+  "**Returns:** `OpenFileInfoTelemetryEventData`"
   ^js [open-file-info-telemetry-event]
   (.-data ^js open-file-info-telemetry-event))

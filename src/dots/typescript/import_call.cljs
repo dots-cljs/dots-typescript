@@ -1,30 +1,37 @@
 (ns dots.typescript.import-call)
 
 (defn expression
+  "**Returns:** `ImportExpression`"
   ^js [import-call]
   (.-expression ^js import-call))
 
 (defn kind
+  "**Returns:** `SyntaxKind.CallExpression`"
   ^js [import-call]
   (.-kind ^js import-call))
 
 (defn question-dot-token
+  "**Returns:** `QuestionDotToken | undefined`"
   ^js [import-call]
   (.-questionDotToken ^js import-call))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [import-call]
   (.-typeArguments ^js import-call))
 
 (defn arguments
+  "**Returns:** `NodeArray<Expression>`"
   ^js [import-call]
   (.-arguments ^js import-call))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [import-call]
   (.-flags ^js import-call))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [import-call]
   (.-parent ^js import-call))
 
@@ -164,9 +171,11 @@
    (.forEachChild ^js import-call cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [import-call]
   (.-pos ^js import-call))
 
 (defn end
+  "**Returns:** `number`"
   ^js [import-call]
   (.-end ^js import-call))

@@ -1,18 +1,22 @@
 (ns dots.typescript.expression-with-type-arguments)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ExpressionWithTypeArguments`"
   ^js [expression-with-type-arguments]
   (.-kind ^js expression-with-type-arguments))
 
 (defn expression
+  "**Returns:** `LeftHandSideExpression`"
   ^js [expression-with-type-arguments]
   (.-expression ^js expression-with-type-arguments))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [expression-with-type-arguments]
   (.-flags ^js expression-with-type-arguments))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [expression-with-type-arguments]
   (.-parent ^js expression-with-type-arguments))
 
@@ -152,13 +156,16 @@
    (.forEachChild ^js expression-with-type-arguments cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [expression-with-type-arguments]
   (.-pos ^js expression-with-type-arguments))
 
 (defn end
+  "**Returns:** `number`"
   ^js [expression-with-type-arguments]
   (.-end ^js expression-with-type-arguments))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [expression-with-type-arguments]
   (.-typeArguments ^js expression-with-type-arguments))

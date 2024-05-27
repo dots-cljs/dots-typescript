@@ -2,34 +2,42 @@
   (:refer-clojure :exclude [comment name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocTypedefTag`"
   ^js [js-doc-typedef-tag]
   (.-kind ^js js-doc-typedef-tag))
 
 (defn parent
+  "**Returns:** `JSDoc`"
   ^js [js-doc-typedef-tag]
   (.-parent ^js js-doc-typedef-tag))
 
 (defn full-name
+  "**Returns:** `Identifier | JSDocNamespaceDeclaration | undefined`"
   ^js [js-doc-typedef-tag]
   (.-fullName ^js js-doc-typedef-tag))
 
 (defn name
+  "**Returns:** `Identifier | undefined`"
   ^js [js-doc-typedef-tag]
   (.-name ^js js-doc-typedef-tag))
 
 (defn type-expression
+  "**Returns:** `JSDocTypeExpression | JSDocTypeLiteral | undefined`"
   ^js [js-doc-typedef-tag]
   (.-typeExpression ^js js-doc-typedef-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-typedef-tag]
   (.-tagName ^js js-doc-typedef-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-typedef-tag]
   (.-comment ^js js-doc-typedef-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-typedef-tag]
   (.-flags ^js js-doc-typedef-tag))
 
@@ -169,9 +177,11 @@
    (.forEachChild ^js js-doc-typedef-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-typedef-tag]
   (.-pos ^js js-doc-typedef-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-typedef-tag]
   (.-end ^js js-doc-typedef-tag))

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [apply-code-action-command-response]
   (.-type ^js apply-code-action-command-response))
 
@@ -10,7 +11,9 @@
   (set! (.-type ^js apply-code-action-command-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [apply-code-action-command-response]
   (.-request_seq ^js apply-code-action-command-response))
 
@@ -20,7 +23,9 @@
   (set! (.-request_seq ^js apply-code-action-command-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [apply-code-action-command-response]
   (.-success ^js apply-code-action-command-response))
 
@@ -30,7 +35,9 @@
   (set! (.-success ^js apply-code-action-command-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [apply-code-action-command-response]
   (.-command ^js apply-code-action-command-response))
 
@@ -41,7 +48,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [apply-code-action-command-response]
   (.-message ^js apply-code-action-command-response))
 
@@ -52,7 +61,9 @@
   (set! (.-message ^js apply-code-action-command-response) value))
 
 (defn body
-  "Contains message body if success === true."
+  "Contains message body if success === true.
+   
+   **Returns:** `any`"
   ^js [apply-code-action-command-response]
   (.-body ^js apply-code-action-command-response))
 
@@ -62,7 +73,9 @@
   (set! (.-body ^js apply-code-action-command-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [apply-code-action-command-response]
   (.-metadata ^js apply-code-action-command-response))
 
@@ -72,7 +85,9 @@
   (set! (.-metadata ^js apply-code-action-command-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [apply-code-action-command-response]
   (.-performanceData ^js apply-code-action-command-response))
 
@@ -82,7 +97,9 @@
   (set! (.-performanceData ^js apply-code-action-command-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [apply-code-action-command-response]
   (.-seq ^js apply-code-action-command-response))
 

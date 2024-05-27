@@ -3,7 +3,9 @@
    The top node is always a script or module node.")
 
 (defn text
-  "Name of the declaration, or a short description, e.g. \"<class>\"."
+  "Name of the declaration, or a short description, e.g. \"<class>\".
+   
+   **Returns:** `string`"
   ^js [navigation-tree]
   (.-text ^js navigation-tree))
 
@@ -13,6 +15,7 @@
   (set! (.-text ^js navigation-tree) value))
 
 (defn kind
+  "**Returns:** `ScriptElementKind`"
   ^js [navigation-tree]
   (.-kind ^js navigation-tree))
 
@@ -21,7 +24,9 @@
   (set! (.-kind ^js navigation-tree) value))
 
 (defn kind-modifiers
-  "ScriptElementKindModifier separated by commas, e.g. \"public,abstract\""
+  "ScriptElementKindModifier separated by commas, e.g. \"public,abstract\"
+   
+   **Returns:** `string`"
   ^js [navigation-tree]
   (.-kindModifiers ^js navigation-tree))
 
@@ -32,7 +37,9 @@
 
 (defn spans
   "Spans of the nodes that generated this declaration.
-   There will be more than one if this is the result of merging."
+   There will be more than one if this is the result of merging.
+   
+   **Returns:** `TextSpan[]`"
   ^js [navigation-tree]
   (.-spans ^js navigation-tree))
 
@@ -43,6 +50,7 @@
   (set! (.-spans ^js navigation-tree) value))
 
 (defn name-span
+  "**Returns:** `TextSpan | undefined`"
   ^js [navigation-tree]
   (.-nameSpan ^js navigation-tree))
 
@@ -51,7 +59,9 @@
   (set! (.-nameSpan ^js navigation-tree) value))
 
 (defn child-items
-  "Present if non-empty"
+  "Present if non-empty
+   
+   **Returns:** `NavigationTree[] | undefined`"
   ^js [navigation-tree]
   (.-childItems ^js navigation-tree))
 

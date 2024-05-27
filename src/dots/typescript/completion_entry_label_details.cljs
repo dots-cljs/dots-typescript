@@ -1,6 +1,7 @@
 (ns dots.typescript.completion-entry-label-details)
 
 (defn detail
+  "**Returns:** `string | undefined`"
   ^js [completion-entry-label-details]
   (.-detail ^js completion-entry-label-details))
 
@@ -9,6 +10,7 @@
   (set! (.-detail ^js completion-entry-label-details) value))
 
 (defn description
+  "**Returns:** `string | undefined`"
   ^js [completion-entry-label-details]
   (.-description ^js completion-entry-label-details))
 

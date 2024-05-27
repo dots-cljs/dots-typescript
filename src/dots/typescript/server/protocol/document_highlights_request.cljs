@@ -5,6 +5,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.DocumentHighlights`"
   ^js [document-highlights-request]
   (.-command ^js document-highlights-request))
 
@@ -13,6 +14,7 @@
   (set! (.-command ^js document-highlights-request) value))
 
 (defn arguments
+  "**Returns:** `DocumentHighlightsRequestArgs`"
   ^js [document-highlights-request]
   (.-arguments ^js document-highlights-request))
 
@@ -21,6 +23,7 @@
   (set! (.-arguments ^js document-highlights-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [document-highlights-request]
   (.-type ^js document-highlights-request))
 
@@ -29,7 +32,9 @@
   (set! (.-type ^js document-highlights-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [document-highlights-request]
   (.-seq ^js document-highlights-request))
 

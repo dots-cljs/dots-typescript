@@ -1,22 +1,27 @@
 (ns dots.typescript.import-type-assertion-container)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ImportTypeAssertionContainer`"
   ^js [import-type-assertion-container]
   (.-kind ^js import-type-assertion-container))
 
 (defn parent
+  "**Returns:** `ImportTypeNode`"
   ^js [import-type-assertion-container]
   (.-parent ^js import-type-assertion-container))
 
 (defn assert-clause
+  "**Returns:** `AssertClause`"
   ^js [import-type-assertion-container]
   (.-assertClause ^js import-type-assertion-container))
 
 (defn multi-line?
+  "**Returns:** `boolean | undefined`"
   ^js [import-type-assertion-container]
   (.-multiLine ^js import-type-assertion-container))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [import-type-assertion-container]
   (.-flags ^js import-type-assertion-container))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js import-type-assertion-container cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [import-type-assertion-container]
   (.-pos ^js import-type-assertion-container))
 
 (defn end
+  "**Returns:** `number`"
   ^js [import-type-assertion-container]
   (.-end ^js import-type-assertion-container))

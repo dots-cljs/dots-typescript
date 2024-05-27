@@ -1,6 +1,7 @@
 (ns dots.typescript.syntax-list)
 
 (defn kind
+  "**Returns:** `SyntaxKind.SyntaxList`"
   ^js [syntax-list]
   (.-kind ^js syntax-list))
 
@@ -9,10 +10,12 @@
   (set! (.-kind ^js syntax-list) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [syntax-list]
   (.-flags ^js syntax-list))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [syntax-list]
   (.-parent ^js syntax-list))
 
@@ -152,9 +155,11 @@
    (.forEachChild ^js syntax-list cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [syntax-list]
   (.-pos ^js syntax-list))
 
 (defn end
+  "**Returns:** `number`"
   ^js [syntax-list]
   (.-end ^js syntax-list))

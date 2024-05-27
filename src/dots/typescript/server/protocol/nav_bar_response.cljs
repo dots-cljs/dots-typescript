@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `NavigationBarItem[] | undefined`"
   ^js [nav-bar-response]
   (.-body ^js nav-bar-response))
 
@@ -10,6 +11,7 @@
   (set! (.-body ^js nav-bar-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [nav-bar-response]
   (.-type ^js nav-bar-response))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js nav-bar-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [nav-bar-response]
   (.-request_seq ^js nav-bar-response))
 
@@ -28,7 +32,9 @@
   (set! (.-request_seq ^js nav-bar-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [nav-bar-response]
   (.-success ^js nav-bar-response))
 
@@ -38,7 +44,9 @@
   (set! (.-success ^js nav-bar-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [nav-bar-response]
   (.-command ^js nav-bar-response))
 
@@ -49,7 +57,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [nav-bar-response]
   (.-message ^js nav-bar-response))
 
@@ -60,7 +70,9 @@
   (set! (.-message ^js nav-bar-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [nav-bar-response]
   (.-metadata ^js nav-bar-response))
 
@@ -70,7 +82,9 @@
   (set! (.-metadata ^js nav-bar-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [nav-bar-response]
   (.-performanceData ^js nav-bar-response))
 
@@ -80,7 +94,9 @@
   (set! (.-performanceData ^js nav-bar-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [nav-bar-response]
   (.-seq ^js nav-bar-response))
 

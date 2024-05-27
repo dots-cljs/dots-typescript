@@ -1,6 +1,7 @@
 (ns dots.typescript.transpile-options)
 
 (defn compiler-options
+  "**Returns:** `CompilerOptions | undefined`"
   ^js [transpile-options]
   (.-compilerOptions ^js transpile-options))
 
@@ -9,6 +10,7 @@
   (set! (.-compilerOptions ^js transpile-options) value))
 
 (defn file-name
+  "**Returns:** `string | undefined`"
   ^js [transpile-options]
   (.-fileName ^js transpile-options))
 
@@ -17,6 +19,7 @@
   (set! (.-fileName ^js transpile-options) value))
 
 (defn report-diagnostics?
+  "**Returns:** `boolean | undefined`"
   ^js [transpile-options]
   (.-reportDiagnostics ^js transpile-options))
 
@@ -25,6 +28,7 @@
   (set! (.-reportDiagnostics ^js transpile-options) value))
 
 (defn module-name
+  "**Returns:** `string | undefined`"
   ^js [transpile-options]
   (.-moduleName ^js transpile-options))
 
@@ -33,6 +37,7 @@
   (set! (.-moduleName ^js transpile-options) value))
 
 (defn renamed-dependencies
+  "**Returns:** `MapLike<string> | undefined`"
   ^js [transpile-options]
   (.-renamedDependencies ^js transpile-options))
 
@@ -41,6 +46,7 @@
   (set! (.-renamedDependencies ^js transpile-options) value))
 
 (defn transformers
+  "**Returns:** `CustomTransformers | undefined`"
   ^js [transpile-options]
   (.-transformers ^js transpile-options))
 
@@ -49,6 +55,7 @@
   (set! (.-transformers ^js transpile-options) value))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [transpile-options]
   (.-jsDocParsingMode ^js transpile-options))
 

@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.CallSignature`"
   ^js [call-signature-declaration]
   (.-kind ^js call-signature-declaration))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [call-signature-declaration]
   (.-name ^js call-signature-declaration))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [call-signature-declaration]
   (.-typeParameters ^js call-signature-declaration))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [call-signature-declaration]
   (.-parameters ^js call-signature-declaration))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [call-signature-declaration]
   (.-type ^js call-signature-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [call-signature-declaration]
   (.-flags ^js call-signature-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [call-signature-declaration]
   (.-parent ^js call-signature-declaration))
 
@@ -165,13 +172,16 @@
    (.forEachChild ^js call-signature-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [call-signature-declaration]
   (.-pos ^js call-signature-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [call-signature-declaration]
   (.-end ^js call-signature-declaration))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [call-signature-declaration]
   (.-questionToken ^js call-signature-declaration))

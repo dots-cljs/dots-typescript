@@ -1,6 +1,7 @@
 (ns dots.typescript.source-map-source)
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [source-map-source]
   (.-fileName ^js source-map-source))
 
@@ -9,6 +10,7 @@
   (set! (.-fileName ^js source-map-source) value))
 
 (defn text
+  "**Returns:** `string`"
   ^js [source-map-source]
   (.-text ^js source-map-source))
 
@@ -17,6 +19,7 @@
   (set! (.-text ^js source-map-source) value))
 
 (defn skip-trivia
+  "**Returns:** `((pos: number) => number) | undefined`"
   ^js [source-map-source]
   (.-skipTrivia ^js source-map-source))
 

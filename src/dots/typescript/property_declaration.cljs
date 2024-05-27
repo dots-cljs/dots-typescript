@@ -2,38 +2,47 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.PropertyDeclaration`"
   ^js [property-declaration]
   (.-kind ^js property-declaration))
 
 (defn parent
+  "**Returns:** `ClassLikeDeclaration`"
   ^js [property-declaration]
   (.-parent ^js property-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [property-declaration]
   (.-modifiers ^js property-declaration))
 
 (defn name
+  "**Returns:** `PropertyName`"
   ^js [property-declaration]
   (.-name ^js property-declaration))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [property-declaration]
   (.-questionToken ^js property-declaration))
 
 (defn exclamation-token
+  "**Returns:** `ExclamationToken | undefined`"
   ^js [property-declaration]
   (.-exclamationToken ^js property-declaration))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [property-declaration]
   (.-type ^js property-declaration))
 
 (defn initializer
+  "**Returns:** `Expression | undefined`"
   ^js [property-declaration]
   (.-initializer ^js property-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [property-declaration]
   (.-flags ^js property-declaration))
 
@@ -173,9 +182,11 @@
    (.forEachChild ^js property-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [property-declaration]
   (.-pos ^js property-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [property-declaration]
   (.-end ^js property-declaration))

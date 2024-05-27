@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.FunctionType`"
   ^js [function-type-node]
   (.-kind ^js function-type-node))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [function-type-node]
   (.-type ^js function-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [function-type-node]
   (.-flags ^js function-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [function-type-node]
   (.-parent ^js function-type-node))
 
@@ -153,21 +157,26 @@
    (.forEachChild ^js function-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [function-type-node]
   (.-pos ^js function-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [function-type-node]
   (.-end ^js function-type-node))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [function-type-node]
   (.-name ^js function-type-node))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [function-type-node]
   (.-typeParameters ^js function-type-node))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [function-type-node]
   (.-parameters ^js function-type-node))

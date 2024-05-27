@@ -1,6 +1,7 @@
 (ns dots.typescript.emit-result)
 
 (defn emit-skipped?
+  "**Returns:** `boolean`"
   ^js [emit-result]
   (.-emitSkipped ^js emit-result))
 
@@ -9,7 +10,9 @@
   (set! (.-emitSkipped ^js emit-result) value))
 
 (defn diagnostics
-  "Contains declaration emit diagnostics"
+  "Contains declaration emit diagnostics
+   
+   **Returns:** `readonly Diagnostic[]`"
   ^js [emit-result]
   (.-diagnostics ^js emit-result))
 
@@ -19,6 +22,7 @@
   (set! (.-diagnostics ^js emit-result) value))
 
 (defn emitted-files
+  "**Returns:** `string[] | undefined`"
   ^js [emit-result]
   (.-emittedFiles ^js emit-result))
 

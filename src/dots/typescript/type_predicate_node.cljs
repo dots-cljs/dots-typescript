@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.TypePredicate`"
   ^js [type-predicate-node]
   (.-kind ^js type-predicate-node))
 
 (defn parent
+  "**Returns:** `SignatureDeclaration | JSDocTypeExpression`"
   ^js [type-predicate-node]
   (.-parent ^js type-predicate-node))
 
 (defn asserts-modifier
+  "**Returns:** `AssertsKeyword | undefined`"
   ^js [type-predicate-node]
   (.-assertsModifier ^js type-predicate-node))
 
 (defn parameter-name
+  "**Returns:** `Identifier | ThisTypeNode`"
   ^js [type-predicate-node]
   (.-parameterName ^js type-predicate-node))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [type-predicate-node]
   (.-type ^js type-predicate-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [type-predicate-node]
   (.-flags ^js type-predicate-node))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js type-predicate-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [type-predicate-node]
   (.-pos ^js type-predicate-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [type-predicate-node]
   (.-end ^js type-predicate-node))

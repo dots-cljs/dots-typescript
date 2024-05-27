@@ -1,26 +1,32 @@
 (ns dots.typescript.jsx-element)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxElement`"
   ^js [jsx-element]
   (.-kind ^js jsx-element))
 
 (defn opening-element
+  "**Returns:** `JsxOpeningElement`"
   ^js [jsx-element]
   (.-openingElement ^js jsx-element))
 
 (defn children
+  "**Returns:** `NodeArray<JsxChild>`"
   ^js [jsx-element]
   (.-children ^js jsx-element))
 
 (defn closing-element
+  "**Returns:** `JsxClosingElement`"
   ^js [jsx-element]
   (.-closingElement ^js jsx-element))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-element]
   (.-flags ^js jsx-element))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [jsx-element]
   (.-parent ^js jsx-element))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js jsx-element cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-element]
   (.-pos ^js jsx-element))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-element]
   (.-end ^js jsx-element))

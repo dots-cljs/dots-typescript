@@ -1,26 +1,32 @@
 (ns dots.typescript.new-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.NewExpression`"
   ^js [new-expression]
   (.-kind ^js new-expression))
 
 (defn expression
+  "**Returns:** `LeftHandSideExpression`"
   ^js [new-expression]
   (.-expression ^js new-expression))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [new-expression]
   (.-typeArguments ^js new-expression))
 
 (defn arguments
+  "**Returns:** `NodeArray<Expression> | undefined`"
   ^js [new-expression]
   (.-arguments ^js new-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [new-expression]
   (.-flags ^js new-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [new-expression]
   (.-parent ^js new-expression))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js new-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [new-expression]
   (.-pos ^js new-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [new-expression]
   (.-end ^js new-expression))

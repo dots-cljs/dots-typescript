@@ -7,6 +7,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Close`"
   ^js [close-request]
   (.-command ^js close-request))
 
@@ -15,6 +16,7 @@
   (set! (.-command ^js close-request) value))
 
 (defn arguments
+  "**Returns:** `FileRequestArgs`"
   ^js [close-request]
   (.-arguments ^js close-request))
 
@@ -23,6 +25,7 @@
   (set! (.-arguments ^js close-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [close-request]
   (.-type ^js close-request))
 
@@ -31,7 +34,9 @@
   (set! (.-type ^js close-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [close-request]
   (.-seq ^js close-request))
 

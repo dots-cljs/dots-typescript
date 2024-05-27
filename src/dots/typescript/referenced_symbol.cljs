@@ -1,6 +1,7 @@
 (ns dots.typescript.referenced-symbol)
 
 (defn definition
+  "**Returns:** `ReferencedSymbolDefinitionInfo`"
   ^js [referenced-symbol]
   (.-definition ^js referenced-symbol))
 
@@ -9,6 +10,7 @@
   (set! (.-definition ^js referenced-symbol) value))
 
 (defn references
+  "**Returns:** `ReferencedSymbolEntry[]`"
   ^js [referenced-symbol]
   (.-references ^js referenced-symbol))
 

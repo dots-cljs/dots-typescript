@@ -1,6 +1,7 @@
 (ns dots.typescript.literal-expression)
 
 (defn text
+  "**Returns:** `string`"
   ^js [literal-expression]
   (.-text ^js literal-expression))
 
@@ -9,6 +10,7 @@
   (set! (.-text ^js literal-expression) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [literal-expression]
   (.-isUnterminated ^js literal-expression))
 
@@ -17,6 +19,7 @@
   (set! (.-isUnterminated ^js literal-expression) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [literal-expression]
   (.-hasExtendedUnicodeEscape ^js literal-expression))
 
@@ -25,14 +28,17 @@
   (set! (.-hasExtendedUnicodeEscape ^js literal-expression) value))
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [literal-expression]
   (.-kind ^js literal-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [literal-expression]
   (.-flags ^js literal-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [literal-expression]
   (.-parent ^js literal-expression))
 
@@ -172,9 +178,11 @@
    (.forEachChild ^js literal-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [literal-expression]
   (.-pos ^js literal-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [literal-expression]
   (.-end ^js literal-expression))

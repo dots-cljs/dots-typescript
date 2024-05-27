@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.inlay-hints-request-args)
 
 (defn start
-  "Start position of the span."
+  "Start position of the span.
+   
+   **Returns:** `number`"
   ^js [inlay-hints-request-args]
   (.-start ^js inlay-hints-request-args))
 
@@ -11,7 +13,9 @@
   (set! (.-start ^js inlay-hints-request-args) value))
 
 (defn length
-  "Length of the span."
+  "Length of the span.
+   
+   **Returns:** `number`"
   ^js [inlay-hints-request-args]
   (.-length ^js inlay-hints-request-args))
 
@@ -21,7 +25,9 @@
   (set! (.-length ^js inlay-hints-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [inlay-hints-request-args]
   (.-file ^js inlay-hints-request-args))
 
@@ -31,6 +37,7 @@
   (set! (.-file ^js inlay-hints-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [inlay-hints-request-args]
   (.-projectFileName ^js inlay-hints-request-args))
 

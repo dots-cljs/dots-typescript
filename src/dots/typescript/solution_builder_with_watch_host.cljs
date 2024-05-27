@@ -24,6 +24,7 @@
    (.writeFile ^js solution-builder-with-watch-host path data write-byte-order-mark?)))
 
 (defn custom-transformers
+  "**Returns:** `((project: string) => CustomTransformers | undefined) | undefined`"
   ^js [solution-builder-with-watch-host]
   (.-getCustomTransformers ^js solution-builder-with-watch-host))
 
@@ -65,6 +66,7 @@
   (.getParsedCommandLine ^js solution-builder-with-watch-host file-name))
 
 (defn report-diagnostic
+  "**Returns:** `DiagnosticReporter`"
   ^js [solution-builder-with-watch-host]
   (.-reportDiagnostic ^js solution-builder-with-watch-host))
 
@@ -73,6 +75,7 @@
   (set! (.-reportDiagnostic ^js solution-builder-with-watch-host) value))
 
 (defn report-solution-builder-status
+  "**Returns:** `DiagnosticReporter`"
   ^js [solution-builder-with-watch-host]
   (.-reportSolutionBuilderStatus ^js solution-builder-with-watch-host))
 
@@ -89,7 +92,9 @@
   (.afterProgramEmitAndDiagnostics ^js solution-builder-with-watch-host program))
 
 (defn create-program
-  "Used to create the program when need for program creation or recreation detected"
+  "Used to create the program when need for program creation or recreation detected
+   
+   **Returns:** `CreateProgram<T>`"
   ^js [solution-builder-with-watch-host]
   (.-createProgram ^js solution-builder-with-watch-host))
 
@@ -330,6 +335,7 @@
   (.getModuleResolutionCache ^js solution-builder-with-watch-host))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [solution-builder-with-watch-host]
   (.-jsDocParsingMode ^js solution-builder-with-watch-host))
 

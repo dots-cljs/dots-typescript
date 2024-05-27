@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.status-response-body)
 
 (defn version
-  "The TypeScript version (`ts.version`)."
+  "The TypeScript version (`ts.version`).
+   
+   **Returns:** `string`"
   ^js [status-response-body]
   (.-version ^js status-response-body))
 

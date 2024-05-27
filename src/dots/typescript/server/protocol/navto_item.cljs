@@ -3,7 +3,9 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
-  "The symbol's name."
+  "The symbol's name.
+   
+   **Returns:** `string`"
   ^js [navto-item]
   (.-name ^js navto-item))
 
@@ -13,7 +15,9 @@
   (set! (.-name ^js navto-item) value))
 
 (defn kind
-  "The symbol's kind (such as 'className' or 'parameterName')."
+  "The symbol's kind (such as 'className' or 'parameterName').
+   
+   **Returns:** `ScriptElementKind`"
   ^js [navto-item]
   (.-kind ^js navto-item))
 
@@ -23,7 +27,9 @@
   (set! (.-kind ^js navto-item) value))
 
 (defn match-kind
-  "exact, substring, or prefix."
+  "exact, substring, or prefix.
+   
+   **Returns:** `string`"
   ^js [navto-item]
   (.-matchKind ^js navto-item))
 
@@ -33,7 +39,9 @@
   (set! (.-matchKind ^js navto-item) value))
 
 (defn case-sensitive?
-  "If this was a case sensitive or insensitive match."
+  "If this was a case sensitive or insensitive match.
+   
+   **Returns:** `boolean`"
   ^js [navto-item]
   (.-isCaseSensitive ^js navto-item))
 
@@ -43,7 +51,9 @@
   (set! (.-isCaseSensitive ^js navto-item) value))
 
 (defn kind-modifiers
-  "Optional modifiers for the kind (such as 'public')."
+  "Optional modifiers for the kind (such as 'public').
+   
+   **Returns:** `string | undefined`"
   ^js [navto-item]
   (.-kindModifiers ^js navto-item))
 
@@ -54,7 +64,9 @@
 
 (defn container-name
   "Name of symbol's container symbol (if any); for example,
-   the class name if symbol is a class member."
+   the class name if symbol is a class member.
+   
+   **Returns:** `string | undefined`"
   ^js [navto-item]
   (.-containerName ^js navto-item))
 
@@ -65,7 +77,9 @@
   (set! (.-containerName ^js navto-item) value))
 
 (defn container-kind
-  "Kind of symbol's container symbol (if any)."
+  "Kind of symbol's container symbol (if any).
+   
+   **Returns:** `ScriptElementKind | undefined`"
   ^js [navto-item]
   (.-containerKind ^js navto-item))
 
@@ -75,7 +89,9 @@
   (set! (.-containerKind ^js navto-item) value))
 
 (defn file
-  "File containing text span."
+  "File containing text span.
+   
+   **Returns:** `string`"
   ^js [navto-item]
   (.-file ^js navto-item))
 
@@ -85,7 +101,9 @@
   (set! (.-file ^js navto-item) value))
 
 (defn start
-  "First character of the definition."
+  "First character of the definition.
+   
+   **Returns:** `Location`"
   ^js [navto-item]
   (.-start ^js navto-item))
 
@@ -95,7 +113,9 @@
   (set! (.-start ^js navto-item) value))
 
 (defn end
-  "One character past last character of the definition."
+  "One character past last character of the definition.
+   
+   **Returns:** `Location`"
   ^js [navto-item]
   (.-end ^js navto-item))
 

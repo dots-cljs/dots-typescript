@@ -28,7 +28,9 @@
   (.afterProgramCreate ^js watch-compiler-host program))
 
 (defn create-program
-  "Used to create the program when need for program creation or recreation detected"
+  "Used to create the program when need for program creation or recreation detected
+   
+   **Returns:** `CreateProgram<T>`"
   ^js [watch-compiler-host]
   (.-createProgram ^js watch-compiler-host))
 
@@ -269,6 +271,7 @@
   (.getModuleResolutionCache ^js watch-compiler-host))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [watch-compiler-host]
   (.-jsDocParsingMode ^js watch-compiler-host))
 

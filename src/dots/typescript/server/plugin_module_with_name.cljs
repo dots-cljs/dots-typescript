@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
+  "**Returns:** `string`"
   ^js [plugin-module-with-name]
   (.-name ^js plugin-module-with-name))
 
@@ -10,6 +11,7 @@
   (set! (.-name ^js plugin-module-with-name) value))
 
 (defn module
+  "**Returns:** `PluginModule`"
   ^js [plugin-module-with-name]
   (.-module ^js plugin-module-with-name))
 

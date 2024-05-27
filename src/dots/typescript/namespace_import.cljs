@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.NamespaceImport`"
   ^js [namespace-import]
   (.-kind ^js namespace-import))
 
 (defn parent
+  "**Returns:** `ImportClause`"
   ^js [namespace-import]
   (.-parent ^js namespace-import))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [namespace-import]
   (.-name ^js namespace-import))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [namespace-import]
   (.-flags ^js namespace-import))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js namespace-import cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [namespace-import]
   (.-pos ^js namespace-import))
 
 (defn end
+  "**Returns:** `number`"
   ^js [namespace-import]
   (.-end ^js namespace-import))

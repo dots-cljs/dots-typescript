@@ -1,6 +1,7 @@
 (ns dots.typescript.server.plugin-create-info)
 
 (defn project
+  "**Returns:** `Project`"
   ^js [plugin-create-info]
   (.-project ^js plugin-create-info))
 
@@ -9,6 +10,7 @@
   (set! (.-project ^js plugin-create-info) value))
 
 (defn language-service
+  "**Returns:** `LanguageService`"
   ^js [plugin-create-info]
   (.-languageService ^js plugin-create-info))
 
@@ -17,6 +19,7 @@
   (set! (.-languageService ^js plugin-create-info) value))
 
 (defn language-service-host
+  "**Returns:** `LanguageServiceHost`"
   ^js [plugin-create-info]
   (.-languageServiceHost ^js plugin-create-info))
 
@@ -25,6 +28,7 @@
   (set! (.-languageServiceHost ^js plugin-create-info) value))
 
 (defn server-host
+  "**Returns:** `ServerHost`"
   ^js [plugin-create-info]
   (.-serverHost ^js plugin-create-info))
 
@@ -33,6 +37,7 @@
   (set! (.-serverHost ^js plugin-create-info) value))
 
 (defn session
+  "**Returns:** `Session<unknown> | undefined`"
   ^js [plugin-create-info]
   (.-session ^js plugin-create-info))
 
@@ -41,6 +46,7 @@
   (set! (.-session ^js plugin-create-info) value))
 
 (defn config
+  "**Returns:** `any`"
   ^js [plugin-create-info]
   (.-config ^js plugin-create-info))
 

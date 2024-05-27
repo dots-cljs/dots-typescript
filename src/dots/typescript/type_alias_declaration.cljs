@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.TypeAliasDeclaration`"
   ^js [type-alias-declaration]
   (.-kind ^js type-alias-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [type-alias-declaration]
   (.-modifiers ^js type-alias-declaration))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [type-alias-declaration]
   (.-name ^js type-alias-declaration))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [type-alias-declaration]
   (.-typeParameters ^js type-alias-declaration))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [type-alias-declaration]
   (.-type ^js type-alias-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [type-alias-declaration]
   (.-flags ^js type-alias-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [type-alias-declaration]
   (.-parent ^js type-alias-declaration))
 
@@ -165,9 +172,11 @@
    (.forEachChild ^js type-alias-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [type-alias-declaration]
   (.-pos ^js type-alias-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [type-alias-declaration]
   (.-end ^js type-alias-declaration))

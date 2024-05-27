@@ -1,26 +1,32 @@
 (ns dots.typescript.tagged-template-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TaggedTemplateExpression`"
   ^js [tagged-template-expression]
   (.-kind ^js tagged-template-expression))
 
 (defn tag
+  "**Returns:** `LeftHandSideExpression`"
   ^js [tagged-template-expression]
   (.-tag ^js tagged-template-expression))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [tagged-template-expression]
   (.-typeArguments ^js tagged-template-expression))
 
 (defn template
+  "**Returns:** `TemplateLiteral`"
   ^js [tagged-template-expression]
   (.-template ^js tagged-template-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [tagged-template-expression]
   (.-flags ^js tagged-template-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [tagged-template-expression]
   (.-parent ^js tagged-template-expression))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js tagged-template-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [tagged-template-expression]
   (.-pos ^js tagged-template-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [tagged-template-expression]
   (.-end ^js tagged-template-expression))

@@ -1,18 +1,22 @@
 (ns dots.typescript.unparsed-section)
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [unparsed-section]
   (.-kind ^js unparsed-section))
 
 (defn parent
+  "**Returns:** `UnparsedSource`"
   ^js [unparsed-section]
   (.-parent ^js unparsed-section))
 
 (defn data
+  "**Returns:** `string | undefined`"
   ^js [unparsed-section]
   (.-data ^js unparsed-section))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [unparsed-section]
   (.-flags ^js unparsed-section))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js unparsed-section cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [unparsed-section]
   (.-pos ^js unparsed-section))
 
 (defn end
+  "**Returns:** `number`"
   ^js [unparsed-section]
   (.-end ^js unparsed-section))

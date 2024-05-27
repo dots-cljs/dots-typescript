@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol type]))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [string-mapping-type]
   (.-symbol ^js string-mapping-type))
 
@@ -10,6 +11,7 @@
   (set! (.-symbol ^js string-mapping-type) value))
 
 (defn type
+  "**Returns:** `Type`"
   ^js [string-mapping-type]
   (.-type ^js string-mapping-type))
 
@@ -18,6 +20,7 @@
   (set! (.-type ^js string-mapping-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [string-mapping-type]
   (.-flags ^js string-mapping-type))
 
@@ -26,6 +29,7 @@
   (set! (.-flags ^js string-mapping-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [string-mapping-type]
   (.-pattern ^js string-mapping-type))
 
@@ -34,6 +38,7 @@
   (set! (.-pattern ^js string-mapping-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [string-mapping-type]
   (.-aliasSymbol ^js string-mapping-type))
 
@@ -42,6 +47,7 @@
   (set! (.-aliasSymbol ^js string-mapping-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [string-mapping-type]
   (.-aliasTypeArguments ^js string-mapping-type))
 

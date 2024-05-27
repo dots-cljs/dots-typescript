@@ -1,6 +1,7 @@
 (ns dots.typescript.signature-help-items-options)
 
 (defn trigger-reason
+  "**Returns:** `SignatureHelpTriggerReason | undefined`"
   ^js [signature-help-items-options]
   (.-triggerReason ^js signature-help-items-options))
 

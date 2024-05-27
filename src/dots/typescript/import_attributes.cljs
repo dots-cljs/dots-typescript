@@ -1,26 +1,32 @@
 (ns dots.typescript.import-attributes)
 
 (defn token
+  "**Returns:** `SyntaxKind.WithKeyword | SyntaxKind.AssertKeyword`"
   ^js [import-attributes]
   (.-token ^js import-attributes))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ImportAttributes`"
   ^js [import-attributes]
   (.-kind ^js import-attributes))
 
 (defn parent
+  "**Returns:** `ExportDeclaration | ImportDeclaration`"
   ^js [import-attributes]
   (.-parent ^js import-attributes))
 
 (defn elements
+  "**Returns:** `NodeArray<ImportAttribute>`"
   ^js [import-attributes]
   (.-elements ^js import-attributes))
 
 (defn multi-line?
+  "**Returns:** `boolean | undefined`"
   ^js [import-attributes]
   (.-multiLine ^js import-attributes))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [import-attributes]
   (.-flags ^js import-attributes))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js import-attributes cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [import-attributes]
   (.-pos ^js import-attributes))
 
 (defn end
+  "**Returns:** `number`"
   ^js [import-attributes]
   (.-end ^js import-attributes))

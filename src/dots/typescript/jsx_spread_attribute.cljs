@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxSpreadAttribute`"
   ^js [jsx-spread-attribute]
   (.-kind ^js jsx-spread-attribute))
 
 (defn parent
+  "**Returns:** `JsxAttributes`"
   ^js [jsx-spread-attribute]
   (.-parent ^js jsx-spread-attribute))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [jsx-spread-attribute]
   (.-expression ^js jsx-spread-attribute))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [jsx-spread-attribute]
   (.-name ^js jsx-spread-attribute))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-spread-attribute]
   (.-flags ^js jsx-spread-attribute))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js jsx-spread-attribute cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-spread-attribute]
   (.-pos ^js jsx-spread-attribute))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-spread-attribute]
   (.-end ^js jsx-spread-attribute))

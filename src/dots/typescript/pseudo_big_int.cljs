@@ -2,6 +2,7 @@
   "Represents a bigint literal value without requiring bigint support")
 
 (defn negative?
+  "**Returns:** `boolean`"
   ^js [pseudo-big-int]
   (.-negative ^js pseudo-big-int))
 
@@ -10,6 +11,7 @@
   (set! (.-negative ^js pseudo-big-int) value))
 
 (defn base-10-value
+  "**Returns:** `string`"
   ^js [pseudo-big-int]
   (.-base10Value ^js pseudo-big-int))
 

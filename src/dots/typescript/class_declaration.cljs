@@ -2,35 +2,44 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ClassDeclaration`"
   ^js [class-declaration]
   (.-kind ^js class-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [class-declaration]
   (.-modifiers ^js class-declaration))
 
 (defn name
-  "May be undefined in `export default class { ... }`."
+  "May be undefined in `export default class { ... }`.
+   
+   **Returns:** `Identifier | undefined`"
   ^js [class-declaration]
   (.-name ^js class-declaration))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [class-declaration]
   (.-typeParameters ^js class-declaration))
 
 (defn heritage-clauses
+  "**Returns:** `NodeArray<HeritageClause> | undefined`"
   ^js [class-declaration]
   (.-heritageClauses ^js class-declaration))
 
 (defn members
+  "**Returns:** `NodeArray<ClassElement>`"
   ^js [class-declaration]
   (.-members ^js class-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [class-declaration]
   (.-flags ^js class-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [class-declaration]
   (.-parent ^js class-declaration))
 
@@ -170,9 +179,11 @@
    (.forEachChild ^js class-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [class-declaration]
   (.-pos ^js class-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [class-declaration]
   (.-end ^js class-declaration))

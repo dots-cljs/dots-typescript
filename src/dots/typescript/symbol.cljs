@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [name]))
 
 (defn flags
+  "**Returns:** `SymbolFlags`"
   ^js [symbol]
   (.-flags ^js symbol))
 
@@ -10,6 +11,7 @@
   (set! (.-flags ^js symbol) value))
 
 (defn escaped-name
+  "**Returns:** `__String`"
   ^js [symbol]
   (.-escapedName ^js symbol))
 
@@ -18,6 +20,7 @@
   (set! (.-escapedName ^js symbol) value))
 
 (defn declarations
+  "**Returns:** `Declaration[] | undefined`"
   ^js [symbol]
   (.-declarations ^js symbol))
 
@@ -26,6 +29,7 @@
   (set! (.-declarations ^js symbol) value))
 
 (defn value-declaration
+  "**Returns:** `Declaration | undefined`"
   ^js [symbol]
   (.-valueDeclaration ^js symbol))
 
@@ -34,6 +38,7 @@
   (set! (.-valueDeclaration ^js symbol) value))
 
 (defn members
+  "**Returns:** `any`"
   ^js [symbol]
   (.-members ^js symbol))
 
@@ -42,6 +47,7 @@
   (set! (.-members ^js symbol) value))
 
 (defn exports
+  "**Returns:** `any`"
   ^js [symbol]
   (.-exports ^js symbol))
 
@@ -50,6 +56,7 @@
   (set! (.-exports ^js symbol) value))
 
 (defn global-exports
+  "**Returns:** `any`"
   ^js [symbol]
   (.-globalExports ^js symbol))
 
@@ -58,6 +65,7 @@
   (set! (.-globalExports ^js symbol) value))
 
 (defn name
+  "**Returns:** `string`"
   ^js [symbol]
   (.-name ^js symbol))
 

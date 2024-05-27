@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn event
+  "**Returns:** `\"beginInstallTypes\"`"
   ^js [begin-install-types-event]
   (.-event ^js begin-install-types-event))
 
@@ -10,6 +11,7 @@
   (set! (.-event ^js begin-install-types-event) value))
 
 (defn body
+  "**Returns:** `BeginInstallTypesEventBody`"
   ^js [begin-install-types-event]
   (.-body ^js begin-install-types-event))
 
@@ -18,6 +20,7 @@
   (set! (.-body ^js begin-install-types-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [begin-install-types-event]
   (.-type ^js begin-install-types-event))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js begin-install-types-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [begin-install-types-event]
   (.-seq ^js begin-install-types-event))
 

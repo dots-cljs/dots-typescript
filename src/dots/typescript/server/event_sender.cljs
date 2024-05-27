@@ -1,6 +1,7 @@
 (ns dots.typescript.server.event-sender)
 
 (defn event
+  "**Returns:** `Event`"
   ^js [event-sender]
   (.-event ^js event-sender))
 

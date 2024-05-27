@@ -1,7 +1,9 @@
 (ns dots.typescript.line-and-character)
 
 (defn line
-  "0-based."
+  "0-based.
+   
+   **Returns:** `number`"
   ^js [line-and-character]
   (.-line ^js line-and-character))
 
@@ -11,6 +13,7 @@
   (set! (.-line ^js line-and-character) value))
 
 (defn character
+  "**Returns:** `number`"
   ^js [line-and-character]
   (.-character ^js line-and-character))
 

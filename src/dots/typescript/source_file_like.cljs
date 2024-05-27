@@ -2,6 +2,7 @@
   "Subset of properties from SourceFile that are used in multiple utility functions")
 
 (defn text
+  "**Returns:** `string`"
   ^js [source-file-like]
   (.-text ^js source-file-like))
 

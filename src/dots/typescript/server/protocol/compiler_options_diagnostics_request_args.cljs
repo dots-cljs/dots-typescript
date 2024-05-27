@@ -2,7 +2,9 @@
   "Arguments for CompilerOptionsDiagnosticsRequest request.")
 
 (defn project-file-name
-  "Name of the project to retrieve compiler options diagnostics."
+  "Name of the project to retrieve compiler options diagnostics.
+   
+   **Returns:** `string`"
   ^js [compiler-options-diagnostics-request-args]
   (.-projectFileName ^js compiler-options-diagnostics-request-args))
 

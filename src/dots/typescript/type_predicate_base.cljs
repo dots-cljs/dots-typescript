@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `TypePredicateKind`"
   ^js [type-predicate-base]
   (.-kind ^js type-predicate-base))
 
@@ -10,6 +11,7 @@
   (set! (.-kind ^js type-predicate-base) value))
 
 (defn type
+  "**Returns:** `Type | undefined`"
   ^js [type-predicate-base]
   (.-type ^js type-predicate-base))
 

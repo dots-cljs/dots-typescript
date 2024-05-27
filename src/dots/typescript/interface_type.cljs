@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [interface-type]
   (.-typeParameters ^js interface-type))
 
@@ -11,6 +12,7 @@
   (set! (.-typeParameters ^js interface-type) value))
 
 (defn outer-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [interface-type]
   (.-outerTypeParameters ^js interface-type))
 
@@ -19,6 +21,7 @@
   (set! (.-outerTypeParameters ^js interface-type) value))
 
 (defn local-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [interface-type]
   (.-localTypeParameters ^js interface-type))
 
@@ -27,6 +30,7 @@
   (set! (.-localTypeParameters ^js interface-type) value))
 
 (defn this-type
+  "**Returns:** `TypeParameter | undefined`"
   ^js [interface-type]
   (.-thisType ^js interface-type))
 
@@ -35,6 +39,7 @@
   (set! (.-thisType ^js interface-type) value))
 
 (defn object-flags
+  "**Returns:** `ObjectFlags`"
   ^js [interface-type]
   (.-objectFlags ^js interface-type))
 
@@ -43,6 +48,7 @@
   (set! (.-objectFlags ^js interface-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [interface-type]
   (.-flags ^js interface-type))
 
@@ -51,6 +57,7 @@
   (set! (.-flags ^js interface-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [interface-type]
   (.-symbol ^js interface-type))
 
@@ -59,6 +66,7 @@
   (set! (.-symbol ^js interface-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [interface-type]
   (.-pattern ^js interface-type))
 
@@ -67,6 +75,7 @@
   (set! (.-pattern ^js interface-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [interface-type]
   (.-aliasSymbol ^js interface-type))
 
@@ -75,6 +84,7 @@
   (set! (.-aliasSymbol ^js interface-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [interface-type]
   (.-aliasTypeArguments ^js interface-type))
 

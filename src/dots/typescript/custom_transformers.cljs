@@ -1,7 +1,9 @@
 (ns dots.typescript.custom-transformers)
 
 (defn before
-  "Custom transformers to evaluate before built-in .js transformations."
+  "Custom transformers to evaluate before built-in .js transformations.
+   
+   **Returns:** `(CustomTransformerFactory | TransformerFactory<SourceFile>)[] | undefined`"
   ^js [custom-transformers]
   (.-before ^js custom-transformers))
 
@@ -11,7 +13,9 @@
   (set! (.-before ^js custom-transformers) value))
 
 (defn after
-  "Custom transformers to evaluate after built-in .js transformations."
+  "Custom transformers to evaluate after built-in .js transformations.
+   
+   **Returns:** `(CustomTransformerFactory | TransformerFactory<SourceFile>)[] | undefined`"
   ^js [custom-transformers]
   (.-after ^js custom-transformers))
 
@@ -21,7 +25,9 @@
   (set! (.-after ^js custom-transformers) value))
 
 (defn after-declarations
-  "Custom transformers to evaluate after built-in .d.ts transformations."
+  "Custom transformers to evaluate after built-in .d.ts transformations.
+   
+   **Returns:** `(CustomTransformerFactory | TransformerFactory<SourceFile | Bundle>)[] | undefined`"
   ^js [custom-transformers]
   (.-afterDeclarations ^js custom-transformers))
 

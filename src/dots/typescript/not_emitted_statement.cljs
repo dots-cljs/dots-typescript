@@ -1,14 +1,17 @@
 (ns dots.typescript.not-emitted-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.NotEmittedStatement`"
   ^js [not-emitted-statement]
   (.-kind ^js not-emitted-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [not-emitted-statement]
   (.-flags ^js not-emitted-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [not-emitted-statement]
   (.-parent ^js not-emitted-statement))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js not-emitted-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [not-emitted-statement]
   (.-pos ^js not-emitted-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [not-emitted-statement]
   (.-end ^js not-emitted-statement))

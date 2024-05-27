@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocNameReference`"
   ^js [js-doc-name-reference]
   (.-kind ^js js-doc-name-reference))
 
 (defn name
+  "**Returns:** `EntityName | JSDocMemberName`"
   ^js [js-doc-name-reference]
   (.-name ^js js-doc-name-reference))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-name-reference]
   (.-flags ^js js-doc-name-reference))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-name-reference]
   (.-parent ^js js-doc-name-reference))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js js-doc-name-reference cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-name-reference]
   (.-pos ^js js-doc-name-reference))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-name-reference]
   (.-end ^js js-doc-name-reference))

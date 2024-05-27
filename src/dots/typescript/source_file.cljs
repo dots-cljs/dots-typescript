@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [update]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.SourceFile`"
   ^js [source-file]
   (.-kind ^js source-file))
 
 (defn statements
+  "**Returns:** `NodeArray<Statement>`"
   ^js [source-file]
   (.-statements ^js source-file))
 
 (defn end-of-file-token
+  "**Returns:** `Token<SyntaxKind.EndOfFileToken>`"
   ^js [source-file]
   (.-endOfFileToken ^js source-file))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [source-file]
   (.-fileName ^js source-file))
 
@@ -22,6 +26,7 @@
   (set! (.-fileName ^js source-file) value))
 
 (defn text
+  "**Returns:** `string`"
   ^js [source-file]
   (.-text ^js source-file))
 
@@ -30,6 +35,7 @@
   (set! (.-text ^js source-file) value))
 
 (defn amd-dependencies
+  "**Returns:** `readonly AmdDependency[]`"
   ^js [source-file]
   (.-amdDependencies ^js source-file))
 
@@ -38,6 +44,7 @@
   (set! (.-amdDependencies ^js source-file) value))
 
 (defn module-name
+  "**Returns:** `string | undefined`"
   ^js [source-file]
   (.-moduleName ^js source-file))
 
@@ -46,6 +53,7 @@
   (set! (.-moduleName ^js source-file) value))
 
 (defn referenced-files
+  "**Returns:** `readonly FileReference[]`"
   ^js [source-file]
   (.-referencedFiles ^js source-file))
 
@@ -54,6 +62,7 @@
   (set! (.-referencedFiles ^js source-file) value))
 
 (defn type-reference-directives
+  "**Returns:** `readonly FileReference[]`"
   ^js [source-file]
   (.-typeReferenceDirectives ^js source-file))
 
@@ -62,6 +71,7 @@
   (set! (.-typeReferenceDirectives ^js source-file) value))
 
 (defn lib-reference-directives
+  "**Returns:** `readonly FileReference[]`"
   ^js [source-file]
   (.-libReferenceDirectives ^js source-file))
 
@@ -70,6 +80,7 @@
   (set! (.-libReferenceDirectives ^js source-file) value))
 
 (defn language-variant
+  "**Returns:** `LanguageVariant`"
   ^js [source-file]
   (.-languageVariant ^js source-file))
 
@@ -78,6 +89,7 @@
   (set! (.-languageVariant ^js source-file) value))
 
 (defn declaration-file?
+  "**Returns:** `boolean`"
   ^js [source-file]
   (.-isDeclarationFile ^js source-file))
 
@@ -91,7 +103,9 @@
     /// <reference no-default-lib=\"true\"/>
    
    If any other file has this comment, it signals not to include lib.d.ts
-   because this containing file is intended to act as a default library."
+   because this containing file is intended to act as a default library.
+   
+   **Returns:** `boolean`"
   ^js [source-file]
   (.-hasNoDefaultLib ^js source-file))
 
@@ -106,6 +120,7 @@
   (set! (.-hasNoDefaultLib ^js source-file) value))
 
 (defn language-version
+  "**Returns:** `ScriptTarget`"
   ^js [source-file]
   (.-languageVersion ^js source-file))
 
@@ -128,7 +143,9 @@
    `moduleResolution` is `Node16` or `NodeNext`, which is implied by the `module` setting
    of `Node16` or `NodeNext`, respectively, but may be overriden (eg, by a `moduleResolution`
    of `node`). If so, this field will be unset and source files will be considered to be
-   CommonJS-output-format by the node module transformer and type checker, regardless of extension or context."
+   CommonJS-output-format by the node module transformer and type checker, regardless of extension or context.
+   
+   **Returns:** `ResolutionMode`"
   ^js [source-file]
   (.-impliedNodeFormat ^js source-file))
 
@@ -191,10 +208,12 @@
   (.update ^js source-file new-text text-change-range))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [source-file]
   (.-flags ^js source-file))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [source-file]
   (.-parent ^js source-file))
 
@@ -334,9 +353,11 @@
    (.forEachChild ^js source-file cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [source-file]
   (.-pos ^js source-file))
 
 (defn end
+  "**Returns:** `number`"
   ^js [source-file]
   (.-end ^js source-file))

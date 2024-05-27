@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.UncommentSelection`"
   ^js [uncomment-selection-request]
   (.-command ^js uncomment-selection-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js uncomment-selection-request) value))
 
 (defn arguments
+  "**Returns:** `FileRangeRequestArgs`"
   ^js [uncomment-selection-request]
   (.-arguments ^js uncomment-selection-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js uncomment-selection-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [uncomment-selection-request]
   (.-type ^js uncomment-selection-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js uncomment-selection-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [uncomment-selection-request]
   (.-seq ^js uncomment-selection-request))
 

@@ -1,14 +1,17 @@
 (ns dots.typescript.this-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ThisType`"
   ^js [this-type-node]
   (.-kind ^js this-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [this-type-node]
   (.-flags ^js this-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [this-type-node]
   (.-parent ^js this-type-node))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js this-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [this-type-node]
   (.-pos ^js this-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [this-type-node]
   (.-end ^js this-type-node))

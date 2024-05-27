@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.RestType`"
   ^js [rest-type-node]
   (.-kind ^js rest-type-node))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [rest-type-node]
   (.-type ^js rest-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [rest-type-node]
   (.-flags ^js rest-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [rest-type-node]
   (.-parent ^js rest-type-node))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js rest-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [rest-type-node]
   (.-pos ^js rest-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [rest-type-node]
   (.-end ^js rest-type-node))

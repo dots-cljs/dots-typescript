@@ -2,7 +2,9 @@
   "Object found in response messages defining a span of text in source code.")
 
 (defn start
-  "First character of the definition."
+  "First character of the definition.
+   
+   **Returns:** `Location`"
   ^js [text-span]
   (.-start ^js text-span))
 
@@ -12,7 +14,9 @@
   (set! (.-start ^js text-span) value))
 
 (defn end
-  "One character past last character of the definition."
+  "One character past last character of the definition.
+   
+   **Returns:** `Location`"
   ^js [text-span]
   (.-end ^js text-span))
 

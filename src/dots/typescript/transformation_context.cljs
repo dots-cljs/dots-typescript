@@ -42,7 +42,9 @@
    are emitted by the pretty printer.
    
    NOTE: Transformation hooks should only be modified during `Transformer` initialization,
-   before returning the `NodeTransformer` callback."
+   before returning the `NodeTransformer` callback.
+   
+   **Returns:** `(hint: EmitHint, node: Node) => Node`"
   ^js [transformation-context]
   (.-onSubstituteNode ^js transformation-context))
 
@@ -82,7 +84,9 @@
    the printer emits a node.
    
    NOTE: Transformation hooks should only be modified during `Transformer` initialization,
-   before returning the `NodeTransformer` callback."
+   before returning the `NodeTransformer` callback.
+   
+   **Returns:** `(hint: EmitHint, node: Node, emitCallback: (hint: EmitHint, node: Node) => void) => void`"
   ^js [transformation-context]
   (.-onEmitNode ^js transformation-context))
 
@@ -96,6 +100,7 @@
   (set! (.-onEmitNode ^js transformation-context) value))
 
 (defn factory
+  "**Returns:** `NodeFactory`"
   ^js [transformation-context]
   (.-factory ^js transformation-context))
 

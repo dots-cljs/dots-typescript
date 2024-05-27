@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn target
+  "**Returns:** `GenericType`"
   ^js [deferred-type-reference]
   (.-target ^js deferred-type-reference))
 
@@ -10,6 +11,7 @@
   (set! (.-target ^js deferred-type-reference) value))
 
 (defn node
+  "**Returns:** `TypeReferenceNode | ArrayTypeNode | TupleTypeNode | undefined`"
   ^js [deferred-type-reference]
   (.-node ^js deferred-type-reference))
 
@@ -18,6 +20,7 @@
   (set! (.-node ^js deferred-type-reference) value))
 
 (defn type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [deferred-type-reference]
   (.-typeArguments ^js deferred-type-reference))
 
@@ -26,6 +29,7 @@
   (set! (.-typeArguments ^js deferred-type-reference) value))
 
 (defn object-flags
+  "**Returns:** `ObjectFlags`"
   ^js [deferred-type-reference]
   (.-objectFlags ^js deferred-type-reference))
 
@@ -34,6 +38,7 @@
   (set! (.-objectFlags ^js deferred-type-reference) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [deferred-type-reference]
   (.-flags ^js deferred-type-reference))
 
@@ -42,6 +47,7 @@
   (set! (.-flags ^js deferred-type-reference) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [deferred-type-reference]
   (.-symbol ^js deferred-type-reference))
 
@@ -50,6 +56,7 @@
   (set! (.-symbol ^js deferred-type-reference) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [deferred-type-reference]
   (.-pattern ^js deferred-type-reference))
 
@@ -58,6 +65,7 @@
   (set! (.-pattern ^js deferred-type-reference) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [deferred-type-reference]
   (.-aliasSymbol ^js deferred-type-reference))
 
@@ -66,6 +74,7 @@
   (set! (.-aliasSymbol ^js deferred-type-reference) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [deferred-type-reference]
   (.-aliasTypeArguments ^js deferred-type-reference))
 

@@ -2,39 +2,49 @@
   (:refer-clojure :exclude [comment name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocPropertyTag`"
   ^js [js-doc-property-tag]
   (.-kind ^js js-doc-property-tag))
 
 (defn parent
+  "**Returns:** `JSDoc`"
   ^js [js-doc-property-tag]
   (.-parent ^js js-doc-property-tag))
 
 (defn name
+  "**Returns:** `EntityName`"
   ^js [js-doc-property-tag]
   (.-name ^js js-doc-property-tag))
 
 (defn type-expression
+  "**Returns:** `JSDocTypeExpression | undefined`"
   ^js [js-doc-property-tag]
   (.-typeExpression ^js js-doc-property-tag))
 
 (defn name-first?
-  "Whether the property name came before the type -- non-standard for JSDoc, but Typescript-like"
+  "Whether the property name came before the type -- non-standard for JSDoc, but Typescript-like
+   
+   **Returns:** `boolean`"
   ^js [js-doc-property-tag]
   (.-isNameFirst ^js js-doc-property-tag))
 
 (defn bracketed?
+  "**Returns:** `boolean`"
   ^js [js-doc-property-tag]
   (.-isBracketed ^js js-doc-property-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-property-tag]
   (.-tagName ^js js-doc-property-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-property-tag]
   (.-comment ^js js-doc-property-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-property-tag]
   (.-flags ^js js-doc-property-tag))
 
@@ -174,9 +184,11 @@
    (.forEachChild ^js js-doc-property-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-property-tag]
   (.-pos ^js js-doc-property-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-property-tag]
   (.-end ^js js-doc-property-tag))

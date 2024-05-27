@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn types
+  "**Returns:** `Type[]`"
   ^js [union-or-intersection-type]
   (.-types ^js union-or-intersection-type))
 
@@ -10,6 +11,7 @@
   (set! (.-types ^js union-or-intersection-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [union-or-intersection-type]
   (.-flags ^js union-or-intersection-type))
 
@@ -18,6 +20,7 @@
   (set! (.-flags ^js union-or-intersection-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [union-or-intersection-type]
   (.-symbol ^js union-or-intersection-type))
 
@@ -26,6 +29,7 @@
   (set! (.-symbol ^js union-or-intersection-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [union-or-intersection-type]
   (.-pattern ^js union-or-intersection-type))
 
@@ -34,6 +38,7 @@
   (set! (.-pattern ^js union-or-intersection-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [union-or-intersection-type]
   (.-aliasSymbol ^js union-or-intersection-type))
 
@@ -42,6 +47,7 @@
   (set! (.-aliasSymbol ^js union-or-intersection-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [union-or-intersection-type]
   (.-aliasTypeArguments ^js union-or-intersection-type))
 

@@ -6,6 +6,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Navto`"
   ^js [navto-request]
   (.-command ^js navto-request))
 
@@ -14,6 +15,7 @@
   (set! (.-command ^js navto-request) value))
 
 (defn arguments
+  "**Returns:** `NavtoRequestArgs`"
   ^js [navto-request]
   (.-arguments ^js navto-request))
 
@@ -22,6 +24,7 @@
   (set! (.-arguments ^js navto-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [navto-request]
   (.-type ^js navto-request))
 
@@ -30,7 +33,9 @@
   (set! (.-type ^js navto-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [navto-request]
   (.-seq ^js navto-request))
 

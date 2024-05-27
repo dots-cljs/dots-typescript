@@ -1,6 +1,7 @@
 (ns dots.typescript.editor-options)
 
 (defn base-indent-size
+  "**Returns:** `number | undefined`"
   ^js [editor-options]
   (.-BaseIndentSize ^js editor-options))
 
@@ -9,6 +10,7 @@
   (set! (.-BaseIndentSize ^js editor-options) value))
 
 (defn indent-size
+  "**Returns:** `number`"
   ^js [editor-options]
   (.-IndentSize ^js editor-options))
 
@@ -17,6 +19,7 @@
   (set! (.-IndentSize ^js editor-options) value))
 
 (defn tab-size
+  "**Returns:** `number`"
   ^js [editor-options]
   (.-TabSize ^js editor-options))
 
@@ -25,6 +28,7 @@
   (set! (.-TabSize ^js editor-options) value))
 
 (defn new-line-character
+  "**Returns:** `string`"
   ^js [editor-options]
   (.-NewLineCharacter ^js editor-options))
 
@@ -33,6 +37,7 @@
   (set! (.-NewLineCharacter ^js editor-options) value))
 
 (defn convert-tabs-to-spaces?
+  "**Returns:** `boolean`"
   ^js [editor-options]
   (.-ConvertTabsToSpaces ^js editor-options))
 
@@ -41,6 +46,7 @@
   (set! (.-ConvertTabsToSpaces ^js editor-options) value))
 
 (defn indent-style
+  "**Returns:** `IndentStyle`"
   ^js [editor-options]
   (.-IndentStyle ^js editor-options))
 

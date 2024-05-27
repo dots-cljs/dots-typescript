@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
+  "**Returns:** `string`"
   ^js [completion-entry-details]
   (.-name ^js completion-entry-details))
 
@@ -10,6 +11,7 @@
   (set! (.-name ^js completion-entry-details) value))
 
 (defn kind
+  "**Returns:** `ScriptElementKind`"
   ^js [completion-entry-details]
   (.-kind ^js completion-entry-details))
 
@@ -18,6 +20,7 @@
   (set! (.-kind ^js completion-entry-details) value))
 
 (defn kind-modifiers
+  "**Returns:** `string`"
   ^js [completion-entry-details]
   (.-kindModifiers ^js completion-entry-details))
 
@@ -26,6 +29,7 @@
   (set! (.-kindModifiers ^js completion-entry-details) value))
 
 (defn display-parts
+  "**Returns:** `SymbolDisplayPart[]`"
   ^js [completion-entry-details]
   (.-displayParts ^js completion-entry-details))
 
@@ -34,6 +38,7 @@
   (set! (.-displayParts ^js completion-entry-details) value))
 
 (defn documentation
+  "**Returns:** `SymbolDisplayPart[] | undefined`"
   ^js [completion-entry-details]
   (.-documentation ^js completion-entry-details))
 
@@ -42,6 +47,7 @@
   (set! (.-documentation ^js completion-entry-details) value))
 
 (defn tags
+  "**Returns:** `JSDocTagInfo[] | undefined`"
   ^js [completion-entry-details]
   (.-tags ^js completion-entry-details))
 
@@ -50,6 +56,7 @@
   (set! (.-tags ^js completion-entry-details) value))
 
 (defn code-actions
+  "**Returns:** `CodeAction[] | undefined`"
   ^js [completion-entry-details]
   (.-codeActions ^js completion-entry-details))
 
@@ -58,6 +65,7 @@
   (set! (.-codeActions ^js completion-entry-details) value))
 
 (defn source
+  "**Returns:** `SymbolDisplayPart[] | undefined`"
   ^js [completion-entry-details]
   (.-source ^js completion-entry-details))
 
@@ -66,6 +74,7 @@
   (set! (.-source ^js completion-entry-details) value))
 
 (defn source-display
+  "**Returns:** `SymbolDisplayPart[] | undefined`"
   ^js [completion-entry-details]
   (.-sourceDisplay ^js completion-entry-details))
 

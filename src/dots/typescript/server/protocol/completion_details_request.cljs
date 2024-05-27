@@ -6,6 +6,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.CompletionDetails`"
   ^js [completion-details-request]
   (.-command ^js completion-details-request))
 
@@ -14,6 +15,7 @@
   (set! (.-command ^js completion-details-request) value))
 
 (defn arguments
+  "**Returns:** `CompletionDetailsRequestArgs`"
   ^js [completion-details-request]
   (.-arguments ^js completion-details-request))
 
@@ -22,6 +24,7 @@
   (set! (.-arguments ^js completion-details-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [completion-details-request]
   (.-type ^js completion-details-request))
 
@@ -30,7 +33,9 @@
   (set! (.-type ^js completion-details-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [completion-details-request]
   (.-seq ^js completion-details-request))
 

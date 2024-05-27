@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.editor-settings)
 
 (defn base-indent-size
+  "**Returns:** `number | undefined`"
   ^js [editor-settings]
   (.-baseIndentSize ^js editor-settings))
 
@@ -9,6 +10,7 @@
   (set! (.-baseIndentSize ^js editor-settings) value))
 
 (defn indent-size
+  "**Returns:** `number | undefined`"
   ^js [editor-settings]
   (.-indentSize ^js editor-settings))
 
@@ -17,6 +19,7 @@
   (set! (.-indentSize ^js editor-settings) value))
 
 (defn tab-size
+  "**Returns:** `number | undefined`"
   ^js [editor-settings]
   (.-tabSize ^js editor-settings))
 
@@ -25,6 +28,7 @@
   (set! (.-tabSize ^js editor-settings) value))
 
 (defn new-line-character
+  "**Returns:** `string | undefined`"
   ^js [editor-settings]
   (.-newLineCharacter ^js editor-settings))
 
@@ -33,6 +37,7 @@
   (set! (.-newLineCharacter ^js editor-settings) value))
 
 (defn convert-tabs-to-spaces?
+  "**Returns:** `boolean | undefined`"
   ^js [editor-settings]
   (.-convertTabsToSpaces ^js editor-settings))
 
@@ -41,6 +46,7 @@
   (set! (.-convertTabsToSpaces ^js editor-settings) value))
 
 (defn indent-style
+  "**Returns:** `ts.server.protocol.IndentStyle | ts.IndentStyle | undefined`"
   ^js [editor-settings]
   (.-indentStyle ^js editor-settings))
 
@@ -49,6 +55,7 @@
   (set! (.-indentStyle ^js editor-settings) value))
 
 (defn trim-trailing-whitespace?
+  "**Returns:** `boolean | undefined`"
   ^js [editor-settings]
   (.-trimTrailingWhitespace ^js editor-settings))
 

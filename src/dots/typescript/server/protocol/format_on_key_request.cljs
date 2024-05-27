@@ -8,6 +8,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Formatonkey`"
   ^js [format-on-key-request]
   (.-command ^js format-on-key-request))
 
@@ -16,6 +17,7 @@
   (set! (.-command ^js format-on-key-request) value))
 
 (defn arguments
+  "**Returns:** `FormatOnKeyRequestArgs`"
   ^js [format-on-key-request]
   (.-arguments ^js format-on-key-request))
 
@@ -24,6 +26,7 @@
   (set! (.-arguments ^js format-on-key-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [format-on-key-request]
   (.-type ^js format-on-key-request))
 
@@ -32,7 +35,9 @@
   (set! (.-type ^js format-on-key-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [format-on-key-request]
   (.-seq ^js format-on-key-request))
 

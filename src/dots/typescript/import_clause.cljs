@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ImportClause`"
   ^js [import-clause]
   (.-kind ^js import-clause))
 
 (defn parent
+  "**Returns:** `ImportDeclaration`"
   ^js [import-clause]
   (.-parent ^js import-clause))
 
 (defn type-only?
+  "**Returns:** `boolean`"
   ^js [import-clause]
   (.-isTypeOnly ^js import-clause))
 
 (defn name
+  "**Returns:** `Identifier | undefined`"
   ^js [import-clause]
   (.-name ^js import-clause))
 
 (defn named-bindings
+  "**Returns:** `NamedImportBindings | undefined`"
   ^js [import-clause]
   (.-namedBindings ^js import-clause))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [import-clause]
   (.-flags ^js import-clause))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js import-clause cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [import-clause]
   (.-pos ^js import-clause))
 
 (defn end
+  "**Returns:** `number`"
   ^js [import-clause]
   (.-end ^js import-clause))

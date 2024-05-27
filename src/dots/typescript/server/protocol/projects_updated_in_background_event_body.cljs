@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.projects-updated-in-background-event-body)
 
 (defn open-files
-  "Current set of open files"
+  "Current set of open files
+   
+   **Returns:** `string[]`"
   ^js [projects-updated-in-background-event-body]
   (.-openFiles ^js projects-updated-in-background-event-body))
 

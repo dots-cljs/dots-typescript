@@ -1,18 +1,22 @@
 (ns dots.typescript.type-of-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TypeOfExpression`"
   ^js [type-of-expression]
   (.-kind ^js type-of-expression))
 
 (defn expression
+  "**Returns:** `UnaryExpression`"
   ^js [type-of-expression]
   (.-expression ^js type-of-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [type-of-expression]
   (.-flags ^js type-of-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [type-of-expression]
   (.-parent ^js type-of-expression))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js type-of-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [type-of-expression]
   (.-pos ^js type-of-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [type-of-expression]
   (.-end ^js type-of-expression))

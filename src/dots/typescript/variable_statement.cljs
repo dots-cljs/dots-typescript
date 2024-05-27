@@ -1,22 +1,27 @@
 (ns dots.typescript.variable-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.VariableStatement`"
   ^js [variable-statement]
   (.-kind ^js variable-statement))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [variable-statement]
   (.-modifiers ^js variable-statement))
 
 (defn declaration-list
+  "**Returns:** `VariableDeclarationList`"
   ^js [variable-statement]
   (.-declarationList ^js variable-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [variable-statement]
   (.-flags ^js variable-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [variable-statement]
   (.-parent ^js variable-statement))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js variable-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [variable-statement]
   (.-pos ^js variable-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [variable-statement]
   (.-end ^js variable-statement))

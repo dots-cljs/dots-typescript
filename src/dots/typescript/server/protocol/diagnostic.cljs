@@ -2,7 +2,9 @@
   "Item of diagnostic information found in a DiagnosticEvent message.")
 
 (defn start
-  "Starting file location at which text applies."
+  "Starting file location at which text applies.
+   
+   **Returns:** `Location`"
   ^js [diagnostic]
   (.-start ^js diagnostic))
 
@@ -12,7 +14,9 @@
   (set! (.-start ^js diagnostic) value))
 
 (defn end
-  "The last file location at which the text applies."
+  "The last file location at which the text applies.
+   
+   **Returns:** `Location`"
   ^js [diagnostic]
   (.-end ^js diagnostic))
 
@@ -22,7 +26,9 @@
   (set! (.-end ^js diagnostic) value))
 
 (defn text
-  "Text of diagnostic message."
+  "Text of diagnostic message.
+   
+   **Returns:** `string`"
   ^js [diagnostic]
   (.-text ^js diagnostic))
 
@@ -32,7 +38,9 @@
   (set! (.-text ^js diagnostic) value))
 
 (defn category
-  "The category of the diagnostic message, e.g. \"error\", \"warning\", or \"suggestion\"."
+  "The category of the diagnostic message, e.g. \"error\", \"warning\", or \"suggestion\".
+   
+   **Returns:** `string`"
   ^js [diagnostic]
   (.-category ^js diagnostic))
 
@@ -42,6 +50,7 @@
   (set! (.-category ^js diagnostic) value))
 
 (defn reports-unnecessary
+  "**Returns:** `{} | undefined`"
   ^js [diagnostic]
   (.-reportsUnnecessary ^js diagnostic))
 
@@ -50,6 +59,7 @@
   (set! (.-reportsUnnecessary ^js diagnostic) value))
 
 (defn reports-deprecated
+  "**Returns:** `{} | undefined`"
   ^js [diagnostic]
   (.-reportsDeprecated ^js diagnostic))
 
@@ -58,7 +68,9 @@
   (set! (.-reportsDeprecated ^js diagnostic) value))
 
 (defn related-information
-  "Any related spans the diagnostic may have, such as other locations relevant to an error, such as declarartion sites"
+  "Any related spans the diagnostic may have, such as other locations relevant to an error, such as declarartion sites
+   
+   **Returns:** `DiagnosticRelatedInformation[] | undefined`"
   ^js [diagnostic]
   (.-relatedInformation ^js diagnostic))
 
@@ -68,7 +80,9 @@
   (set! (.-relatedInformation ^js diagnostic) value))
 
 (defn code
-  "The error code of the diagnostic message."
+  "The error code of the diagnostic message.
+   
+   **Returns:** `number | undefined`"
   ^js [diagnostic]
   (.-code ^js diagnostic))
 
@@ -78,7 +92,9 @@
   (set! (.-code ^js diagnostic) value))
 
 (defn source
-  "The name of the plugin reporting the message."
+  "The name of the plugin reporting the message.
+   
+   **Returns:** `string | undefined`"
   ^js [diagnostic]
   (.-source ^js diagnostic))
 

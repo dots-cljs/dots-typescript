@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `CodeEdit[] | undefined`"
   ^js [format-response]
   (.-body ^js format-response))
 
@@ -11,6 +12,7 @@
   (set! (.-body ^js format-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [format-response]
   (.-type ^js format-response))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js format-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [format-response]
   (.-request_seq ^js format-response))
 
@@ -29,7 +33,9 @@
   (set! (.-request_seq ^js format-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [format-response]
   (.-success ^js format-response))
 
@@ -39,7 +45,9 @@
   (set! (.-success ^js format-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [format-response]
   (.-command ^js format-response))
 
@@ -50,7 +58,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [format-response]
   (.-message ^js format-response))
 
@@ -61,7 +71,9 @@
   (set! (.-message ^js format-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [format-response]
   (.-metadata ^js format-response))
 
@@ -71,7 +83,9 @@
   (set! (.-metadata ^js format-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [format-response]
   (.-performanceData ^js format-response))
 
@@ -81,7 +95,9 @@
   (set! (.-performanceData ^js format-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [format-response]
   (.-seq ^js format-response))
 

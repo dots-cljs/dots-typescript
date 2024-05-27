@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.GetCombinedCodeFix`"
   ^js [get-combined-code-fix-request]
   (.-command ^js get-combined-code-fix-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js get-combined-code-fix-request) value))
 
 (defn arguments
+  "**Returns:** `GetCombinedCodeFixRequestArgs`"
   ^js [get-combined-code-fix-request]
   (.-arguments ^js get-combined-code-fix-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js get-combined-code-fix-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [get-combined-code-fix-request]
   (.-type ^js get-combined-code-fix-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js get-combined-code-fix-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [get-combined-code-fix-request]
   (.-seq ^js get-combined-code-fix-request))
 

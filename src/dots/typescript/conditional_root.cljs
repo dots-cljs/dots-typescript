@@ -1,6 +1,7 @@
 (ns dots.typescript.conditional-root)
 
 (defn node
+  "**Returns:** `ConditionalTypeNode`"
   ^js [conditional-root]
   (.-node ^js conditional-root))
 
@@ -9,6 +10,7 @@
   (set! (.-node ^js conditional-root) value))
 
 (defn check-type
+  "**Returns:** `Type`"
   ^js [conditional-root]
   (.-checkType ^js conditional-root))
 
@@ -17,6 +19,7 @@
   (set! (.-checkType ^js conditional-root) value))
 
 (defn extends-type
+  "**Returns:** `Type`"
   ^js [conditional-root]
   (.-extendsType ^js conditional-root))
 
@@ -25,6 +28,7 @@
   (set! (.-extendsType ^js conditional-root) value))
 
 (defn distributive?
+  "**Returns:** `boolean`"
   ^js [conditional-root]
   (.-isDistributive ^js conditional-root))
 
@@ -33,6 +37,7 @@
   (set! (.-isDistributive ^js conditional-root) value))
 
 (defn infer-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [conditional-root]
   (.-inferTypeParameters ^js conditional-root))
 
@@ -41,6 +46,7 @@
   (set! (.-inferTypeParameters ^js conditional-root) value))
 
 (defn outer-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [conditional-root]
   (.-outerTypeParameters ^js conditional-root))
 
@@ -49,6 +55,7 @@
   (set! (.-outerTypeParameters ^js conditional-root) value))
 
 (defn instantiations
+  "**Returns:** `any`"
   ^js [conditional-root]
   (.-instantiations ^js conditional-root))
 
@@ -57,6 +64,7 @@
   (set! (.-instantiations ^js conditional-root) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [conditional-root]
   (.-aliasSymbol ^js conditional-root))
 
@@ -65,6 +73,7 @@
   (set! (.-aliasSymbol ^js conditional-root) value))
 
 (defn alias-type-arguments
+  "**Returns:** `Type[] | undefined`"
   ^js [conditional-root]
   (.-aliasTypeArguments ^js conditional-root))
 

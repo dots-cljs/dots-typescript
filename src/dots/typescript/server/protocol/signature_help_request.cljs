@@ -5,6 +5,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.SignatureHelp`"
   ^js [signature-help-request]
   (.-command ^js signature-help-request))
 
@@ -13,6 +14,7 @@
   (set! (.-command ^js signature-help-request) value))
 
 (defn arguments
+  "**Returns:** `SignatureHelpRequestArgs`"
   ^js [signature-help-request]
   (.-arguments ^js signature-help-request))
 
@@ -21,6 +23,7 @@
   (set! (.-arguments ^js signature-help-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [signature-help-request]
   (.-type ^js signature-help-request))
 
@@ -29,7 +32,9 @@
   (set! (.-type ^js signature-help-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [signature-help-request]
   (.-seq ^js signature-help-request))
 

@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [name]))
 
 (defn expression
+  "**Returns:** `SuperExpression`"
   ^js [super-property-access-expression]
   (.-expression ^js super-property-access-expression))
 
 (defn kind
+  "**Returns:** `SyntaxKind.PropertyAccessExpression`"
   ^js [super-property-access-expression]
   (.-kind ^js super-property-access-expression))
 
 (defn question-dot-token
+  "**Returns:** `QuestionDotToken | undefined`"
   ^js [super-property-access-expression]
   (.-questionDotToken ^js super-property-access-expression))
 
 (defn name
+  "**Returns:** `MemberName`"
   ^js [super-property-access-expression]
   (.-name ^js super-property-access-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [super-property-access-expression]
   (.-flags ^js super-property-access-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [super-property-access-expression]
   (.-parent ^js super-property-access-expression))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js super-property-access-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [super-property-access-expression]
   (.-pos ^js super-property-access-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [super-property-access-expression]
   (.-end ^js super-property-access-expression))

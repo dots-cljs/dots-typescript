@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ClassExpression | SyntaxKind.ClassDeclaration`"
   ^js [class-like-declaration-base]
   (.-kind ^js class-like-declaration-base))
 
 (defn name
+  "**Returns:** `Identifier | undefined`"
   ^js [class-like-declaration-base]
   (.-name ^js class-like-declaration-base))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [class-like-declaration-base]
   (.-typeParameters ^js class-like-declaration-base))
 
 (defn heritage-clauses
+  "**Returns:** `NodeArray<HeritageClause> | undefined`"
   ^js [class-like-declaration-base]
   (.-heritageClauses ^js class-like-declaration-base))
 
 (defn members
+  "**Returns:** `NodeArray<ClassElement>`"
   ^js [class-like-declaration-base]
   (.-members ^js class-like-declaration-base))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [class-like-declaration-base]
   (.-flags ^js class-like-declaration-base))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [class-like-declaration-base]
   (.-parent ^js class-like-declaration-base))
 
@@ -165,9 +172,11 @@
    (.forEachChild ^js class-like-declaration-base cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [class-like-declaration-base]
   (.-pos ^js class-like-declaration-base))
 
 (defn end
+  "**Returns:** `number`"
   ^js [class-like-declaration-base]
   (.-end ^js class-like-declaration-base))

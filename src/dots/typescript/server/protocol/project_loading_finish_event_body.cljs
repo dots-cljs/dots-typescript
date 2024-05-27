@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.project-loading-finish-event-body)
 
 (defn project-name
-  "name of the project"
+  "name of the project
+   
+   **Returns:** `string`"
   ^js [project-loading-finish-event-body]
   (.-projectName ^js project-loading-finish-event-body))
 

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn element-flags
+  "**Returns:** `readonly ElementFlags[]`"
   ^js [tuple-type]
   (.-elementFlags ^js tuple-type))
 
@@ -10,7 +11,9 @@
   (set! (.-elementFlags ^js tuple-type) value))
 
 (defn min-length
-  "Number of required or variadic elements"
+  "Number of required or variadic elements
+   
+   **Returns:** `number`"
   ^js [tuple-type]
   (.-minLength ^js tuple-type))
 
@@ -20,7 +23,9 @@
   (set! (.-minLength ^js tuple-type) value))
 
 (defn fixed-length
-  "Number of initial required or optional elements"
+  "Number of initial required or optional elements
+   
+   **Returns:** `number`"
   ^js [tuple-type]
   (.-fixedLength ^js tuple-type))
 
@@ -30,7 +35,9 @@
   (set! (.-fixedLength ^js tuple-type) value))
 
 (defn has-rest-element?
-  "True if tuple has any rest or variadic elements"
+  "True if tuple has any rest or variadic elements
+   
+   **Returns:** `boolean`"
   ^js [tuple-type]
   (.-hasRestElement ^js tuple-type))
 
@@ -40,6 +47,7 @@
   (set! (.-hasRestElement ^js tuple-type) value))
 
 (defn combined-flags
+  "**Returns:** `ElementFlags`"
   ^js [tuple-type]
   (.-combinedFlags ^js tuple-type))
 
@@ -48,6 +56,7 @@
   (set! (.-combinedFlags ^js tuple-type) value))
 
 (defn readonly?
+  "**Returns:** `boolean`"
   ^js [tuple-type]
   (.-readonly ^js tuple-type))
 
@@ -56,6 +65,7 @@
   (set! (.-readonly ^js tuple-type) value))
 
 (defn labeled-element-declarations
+  "**Returns:** `readonly (ParameterDeclaration | NamedTupleMember | undefined)[] | undefined`"
   ^js [tuple-type]
   (.-labeledElementDeclarations ^js tuple-type))
 
@@ -64,6 +74,7 @@
   (set! (.-labeledElementDeclarations ^js tuple-type) value))
 
 (defn type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [tuple-type]
   (.-typeParameters ^js tuple-type))
 
@@ -72,6 +83,7 @@
   (set! (.-typeParameters ^js tuple-type) value))
 
 (defn outer-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [tuple-type]
   (.-outerTypeParameters ^js tuple-type))
 
@@ -80,6 +92,7 @@
   (set! (.-outerTypeParameters ^js tuple-type) value))
 
 (defn local-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [tuple-type]
   (.-localTypeParameters ^js tuple-type))
 
@@ -88,6 +101,7 @@
   (set! (.-localTypeParameters ^js tuple-type) value))
 
 (defn this-type
+  "**Returns:** `TypeParameter | undefined`"
   ^js [tuple-type]
   (.-thisType ^js tuple-type))
 
@@ -96,6 +110,7 @@
   (set! (.-thisType ^js tuple-type) value))
 
 (defn object-flags
+  "**Returns:** `ObjectFlags`"
   ^js [tuple-type]
   (.-objectFlags ^js tuple-type))
 
@@ -104,6 +119,7 @@
   (set! (.-objectFlags ^js tuple-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [tuple-type]
   (.-flags ^js tuple-type))
 
@@ -112,6 +128,7 @@
   (set! (.-flags ^js tuple-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [tuple-type]
   (.-symbol ^js tuple-type))
 
@@ -120,6 +137,7 @@
   (set! (.-symbol ^js tuple-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [tuple-type]
   (.-pattern ^js tuple-type))
 
@@ -128,6 +146,7 @@
   (set! (.-pattern ^js tuple-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [tuple-type]
   (.-aliasSymbol ^js tuple-type))
 
@@ -136,6 +155,7 @@
   (set! (.-aliasSymbol ^js tuple-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [tuple-type]
   (.-aliasTypeArguments ^js tuple-type))
 
@@ -262,6 +282,7 @@
   (.isIndexType ^js tuple-type))
 
 (defn target
+  "**Returns:** `GenericType`"
   ^js [tuple-type]
   (.-target ^js tuple-type))
 
@@ -270,6 +291,7 @@
   (set! (.-target ^js tuple-type) value))
 
 (defn node
+  "**Returns:** `TypeReferenceNode | ArrayTypeNode | TupleTypeNode | undefined`"
   ^js [tuple-type]
   (.-node ^js tuple-type))
 
@@ -278,6 +300,7 @@
   (set! (.-node ^js tuple-type) value))
 
 (defn type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [tuple-type]
   (.-typeArguments ^js tuple-type))
 

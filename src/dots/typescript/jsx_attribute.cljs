@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxAttribute`"
   ^js [jsx-attribute]
   (.-kind ^js jsx-attribute))
 
 (defn parent
+  "**Returns:** `JsxAttributes`"
   ^js [jsx-attribute]
   (.-parent ^js jsx-attribute))
 
 (defn name
+  "**Returns:** `JsxAttributeName`"
   ^js [jsx-attribute]
   (.-name ^js jsx-attribute))
 
 (defn initializer
+  "**Returns:** `JsxAttributeValue | undefined`"
   ^js [jsx-attribute]
   (.-initializer ^js jsx-attribute))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-attribute]
   (.-flags ^js jsx-attribute))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js jsx-attribute cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-attribute]
   (.-pos ^js jsx-attribute))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-attribute]
   (.-end ^js jsx-attribute))

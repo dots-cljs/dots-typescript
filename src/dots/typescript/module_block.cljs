@@ -1,18 +1,22 @@
 (ns dots.typescript.module-block)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ModuleBlock`"
   ^js [module-block]
   (.-kind ^js module-block))
 
 (defn parent
+  "**Returns:** `ModuleDeclaration`"
   ^js [module-block]
   (.-parent ^js module-block))
 
 (defn statements
+  "**Returns:** `NodeArray<Statement>`"
   ^js [module-block]
   (.-statements ^js module-block))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [module-block]
   (.-flags ^js module-block))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js module-block cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [module-block]
   (.-pos ^js module-block))
 
 (defn end
+  "**Returns:** `number`"
   ^js [module-block]
   (.-end ^js module-block))

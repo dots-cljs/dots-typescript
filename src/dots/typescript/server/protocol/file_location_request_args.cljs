@@ -3,7 +3,9 @@
    (file, line, character offset), where line and character offset are 1-based.")
 
 (defn line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [file-location-request-args]
   (.-line ^js file-location-request-args))
 
@@ -13,7 +15,9 @@
   (set! (.-line ^js file-location-request-args) value))
 
 (defn offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [file-location-request-args]
   (.-offset ^js file-location-request-args))
 
@@ -23,7 +27,9 @@
   (set! (.-offset ^js file-location-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [file-location-request-args]
   (.-file ^js file-location-request-args))
 
@@ -33,6 +39,7 @@
   (set! (.-file ^js file-location-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [file-location-request-args]
   (.-projectFileName ^js file-location-request-args))
 

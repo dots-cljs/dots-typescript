@@ -1,18 +1,22 @@
 (ns dots.typescript.intersection-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.IntersectionType`"
   ^js [intersection-type-node]
   (.-kind ^js intersection-type-node))
 
 (defn types
+  "**Returns:** `NodeArray<TypeNode>`"
   ^js [intersection-type-node]
   (.-types ^js intersection-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [intersection-type-node]
   (.-flags ^js intersection-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [intersection-type-node]
   (.-parent ^js intersection-type-node))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js intersection-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [intersection-type-node]
   (.-pos ^js intersection-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [intersection-type-node]
   (.-end ^js intersection-type-node))

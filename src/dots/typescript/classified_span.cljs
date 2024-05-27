@@ -1,6 +1,7 @@
 (ns dots.typescript.classified-span)
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [classified-span]
   (.-textSpan ^js classified-span))
 
@@ -9,6 +10,7 @@
   (set! (.-textSpan ^js classified-span) value))
 
 (defn classification-type
+  "**Returns:** `ClassificationTypeNames`"
   ^js [classified-span]
   (.-classificationType ^js classified-span))
 

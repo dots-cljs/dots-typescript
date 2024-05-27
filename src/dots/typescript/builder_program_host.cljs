@@ -1,7 +1,9 @@
 (ns dots.typescript.builder-program-host)
 
 (defn create-hash
-  "If provided this would be used this hash instead of actual file shape text for detecting changes"
+  "If provided this would be used this hash instead of actual file shape text for detecting changes
+   
+   **Returns:** `((data: string) => string) | undefined`"
   ^js [builder-program-host]
   (.-createHash ^js builder-program-host))
 
@@ -12,7 +14,9 @@
 
 (defn write-file
   "When emit or emitNextAffectedFile are called without writeFile,
-   this callback if present would be used to write files"
+   this callback if present would be used to write files
+   
+   **Returns:** `WriteFileCallback | undefined`"
   ^js [builder-program-host]
   (.-writeFile ^js builder-program-host))
 

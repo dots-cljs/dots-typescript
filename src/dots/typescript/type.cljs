@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [type]
   (.-flags ^js type))
 
@@ -10,6 +11,7 @@
   (set! (.-flags ^js type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [type]
   (.-symbol ^js type))
 
@@ -18,6 +20,7 @@
   (set! (.-symbol ^js type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [type]
   (.-pattern ^js type))
 
@@ -26,6 +29,7 @@
   (set! (.-pattern ^js type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [type]
   (.-aliasSymbol ^js type))
 
@@ -34,6 +38,7 @@
   (set! (.-aliasSymbol ^js type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [type]
   (.-aliasTypeArguments ^js type))
 

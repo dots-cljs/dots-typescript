@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.inlay-hint-item)
 
 (defn text
-  "This property will be the empty string when displayParts is set."
+  "This property will be the empty string when displayParts is set.
+   
+   **Returns:** `string`"
   ^js [inlay-hint-item]
   (.-text ^js inlay-hint-item))
 
@@ -11,6 +13,7 @@
   (set! (.-text ^js inlay-hint-item) value))
 
 (defn position
+  "**Returns:** `Location`"
   ^js [inlay-hint-item]
   (.-position ^js inlay-hint-item))
 
@@ -19,6 +22,7 @@
   (set! (.-position ^js inlay-hint-item) value))
 
 (defn kind
+  "**Returns:** `InlayHintKind`"
   ^js [inlay-hint-item]
   (.-kind ^js inlay-hint-item))
 
@@ -27,6 +31,7 @@
   (set! (.-kind ^js inlay-hint-item) value))
 
 (defn whitespace-before?
+  "**Returns:** `boolean | undefined`"
   ^js [inlay-hint-item]
   (.-whitespaceBefore ^js inlay-hint-item))
 
@@ -35,6 +40,7 @@
   (set! (.-whitespaceBefore ^js inlay-hint-item) value))
 
 (defn whitespace-after?
+  "**Returns:** `boolean | undefined`"
   ^js [inlay-hint-item]
   (.-whitespaceAfter ^js inlay-hint-item))
 
@@ -43,6 +49,7 @@
   (set! (.-whitespaceAfter ^js inlay-hint-item) value))
 
 (defn display-parts
+  "**Returns:** `InlayHintItemDisplayPart[] | undefined`"
   ^js [inlay-hint-item]
   (.-displayParts ^js inlay-hint-item))
 

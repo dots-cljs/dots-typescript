@@ -1,14 +1,17 @@
 (ns dots.typescript.true-literal)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TrueKeyword`"
   ^js [true-literal]
   (.-kind ^js true-literal))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [true-literal]
   (.-flags ^js true-literal))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [true-literal]
   (.-parent ^js true-literal))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js true-literal cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [true-literal]
   (.-pos ^js true-literal))
 
 (defn end
+  "**Returns:** `number`"
   ^js [true-literal]
   (.-end ^js true-literal))

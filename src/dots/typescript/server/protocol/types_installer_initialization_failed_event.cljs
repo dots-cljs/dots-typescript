@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn event
+  "**Returns:** `\"typesInstallerInitializationFailed\"`"
   ^js [types-installer-initialization-failed-event]
   (.-event ^js types-installer-initialization-failed-event))
 
@@ -10,6 +11,7 @@
   (set! (.-event ^js types-installer-initialization-failed-event) value))
 
 (defn body
+  "**Returns:** `TypesInstallerInitializationFailedEventBody`"
   ^js [types-installer-initialization-failed-event]
   (.-body ^js types-installer-initialization-failed-event))
 
@@ -18,6 +20,7 @@
   (set! (.-body ^js types-installer-initialization-failed-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [types-installer-initialization-failed-event]
   (.-type ^js types-installer-initialization-failed-event))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js types-installer-initialization-failed-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [types-installer-initialization-failed-event]
   (.-seq ^js types-installer-initialization-failed-event))
 

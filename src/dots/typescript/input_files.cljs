@@ -1,10 +1,12 @@
 (ns dots.typescript.input-files)
 
 (defn kind
+  "**Returns:** `SyntaxKind.InputFiles`"
   ^js [input-files]
   (.-kind ^js input-files))
 
 (defn javascript-path
+  "**Returns:** `string | undefined`"
   ^js [input-files]
   (.-javascriptPath ^js input-files))
 
@@ -13,6 +15,7 @@
   (set! (.-javascriptPath ^js input-files) value))
 
 (defn javascript-text
+  "**Returns:** `string`"
   ^js [input-files]
   (.-javascriptText ^js input-files))
 
@@ -21,6 +24,7 @@
   (set! (.-javascriptText ^js input-files) value))
 
 (defn javascript-map-path
+  "**Returns:** `string | undefined`"
   ^js [input-files]
   (.-javascriptMapPath ^js input-files))
 
@@ -29,6 +33,7 @@
   (set! (.-javascriptMapPath ^js input-files) value))
 
 (defn javascript-map-text
+  "**Returns:** `string | undefined`"
   ^js [input-files]
   (.-javascriptMapText ^js input-files))
 
@@ -37,6 +42,7 @@
   (set! (.-javascriptMapText ^js input-files) value))
 
 (defn declaration-path
+  "**Returns:** `string | undefined`"
   ^js [input-files]
   (.-declarationPath ^js input-files))
 
@@ -45,6 +51,7 @@
   (set! (.-declarationPath ^js input-files) value))
 
 (defn declaration-text
+  "**Returns:** `string`"
   ^js [input-files]
   (.-declarationText ^js input-files))
 
@@ -53,6 +60,7 @@
   (set! (.-declarationText ^js input-files) value))
 
 (defn declaration-map-path
+  "**Returns:** `string | undefined`"
   ^js [input-files]
   (.-declarationMapPath ^js input-files))
 
@@ -61,6 +69,7 @@
   (set! (.-declarationMapPath ^js input-files) value))
 
 (defn declaration-map-text
+  "**Returns:** `string | undefined`"
   ^js [input-files]
   (.-declarationMapText ^js input-files))
 
@@ -69,10 +78,12 @@
   (set! (.-declarationMapText ^js input-files) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [input-files]
   (.-flags ^js input-files))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [input-files]
   (.-parent ^js input-files))
 
@@ -212,9 +223,11 @@
    (.forEachChild ^js input-files cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [input-files]
   (.-pos ^js input-files))
 
 (defn end
+  "**Returns:** `number`"
   ^js [input-files]
   (.-end ^js input-files))

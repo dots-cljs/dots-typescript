@@ -2,7 +2,9 @@
   "Argument for RenameRequest request.")
 
 (defn find-in-comments?
-  "Should text at specified location be found/changed in comments?"
+  "Should text at specified location be found/changed in comments?
+   
+   **Returns:** `boolean | undefined`"
   ^js [rename-request-args]
   (.-findInComments ^js rename-request-args))
 
@@ -12,7 +14,9 @@
   (set! (.-findInComments ^js rename-request-args) value))
 
 (defn find-in-strings?
-  "Should text at specified location be found/changed in strings?"
+  "Should text at specified location be found/changed in strings?
+   
+   **Returns:** `boolean | undefined`"
   ^js [rename-request-args]
   (.-findInStrings ^js rename-request-args))
 
@@ -22,7 +26,9 @@
   (set! (.-findInStrings ^js rename-request-args) value))
 
 (defn line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [rename-request-args]
   (.-line ^js rename-request-args))
 
@@ -32,7 +38,9 @@
   (set! (.-line ^js rename-request-args) value))
 
 (defn offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [rename-request-args]
   (.-offset ^js rename-request-args))
 
@@ -42,7 +50,9 @@
   (set! (.-offset ^js rename-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [rename-request-args]
   (.-file ^js rename-request-args))
 
@@ -52,6 +62,7 @@
   (set! (.-file ^js rename-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [rename-request-args]
   (.-projectFileName ^js rename-request-args))
 

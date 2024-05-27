@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.end-install-types-event-body)
 
 (defn success?
-  "true if installation succeeded, otherwise false"
+  "true if installation succeeded, otherwise false
+   
+   **Returns:** `boolean`"
   ^js [end-install-types-event-body]
   (.-success ^js end-install-types-event-body))
 
@@ -11,7 +13,9 @@
   (set! (.-success ^js end-install-types-event-body) value))
 
 (defn event-id
-  "correlation id to match begin and end events"
+  "correlation id to match begin and end events
+   
+   **Returns:** `number`"
   ^js [end-install-types-event-body]
   (.-eventId ^js end-install-types-event-body))
 
@@ -21,7 +25,9 @@
   (set! (.-eventId ^js end-install-types-event-body) value))
 
 (defn packages
-  "list of packages to install"
+  "list of packages to install
+   
+   **Returns:** `readonly string[]`"
   ^js [end-install-types-event-body]
   (.-packages ^js end-install-types-event-body))
 

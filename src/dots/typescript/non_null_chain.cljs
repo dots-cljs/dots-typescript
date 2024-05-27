@@ -1,18 +1,22 @@
 (ns dots.typescript.non-null-chain)
 
 (defn kind
+  "**Returns:** `SyntaxKind.NonNullExpression`"
   ^js [non-null-chain]
   (.-kind ^js non-null-chain))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [non-null-chain]
   (.-expression ^js non-null-chain))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [non-null-chain]
   (.-flags ^js non-null-chain))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [non-null-chain]
   (.-parent ^js non-null-chain))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js non-null-chain cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [non-null-chain]
   (.-pos ^js non-null-chain))
 
 (defn end
+  "**Returns:** `number`"
   ^js [non-null-chain]
   (.-end ^js non-null-chain))

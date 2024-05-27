@@ -2,14 +2,17 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocFunctionType`"
   ^js [js-doc-function-type]
   (.-kind ^js js-doc-function-type))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-function-type]
   (.-flags ^js js-doc-function-type))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-function-type]
   (.-parent ^js js-doc-function-type))
 
@@ -149,25 +152,31 @@
    (.forEachChild ^js js-doc-function-type cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-function-type]
   (.-pos ^js js-doc-function-type))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-function-type]
   (.-end ^js js-doc-function-type))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [js-doc-function-type]
   (.-name ^js js-doc-function-type))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [js-doc-function-type]
   (.-typeParameters ^js js-doc-function-type))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [js-doc-function-type]
   (.-parameters ^js js-doc-function-type))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [js-doc-function-type]
   (.-type ^js js-doc-function-type))

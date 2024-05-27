@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.rename-response-body)
 
 (defn info
-  "Information about the item to be renamed."
+  "Information about the item to be renamed.
+   
+   **Returns:** `RenameInfo`"
   ^js [rename-response-body]
   (.-info ^js rename-response-body))
 
@@ -11,7 +13,9 @@
   (set! (.-info ^js rename-response-body) value))
 
 (defn locs
-  "An array of span groups (one per file) that refer to the item to be renamed."
+  "An array of span groups (one per file) that refer to the item to be renamed.
+   
+   **Returns:** `readonly SpanGroup[]`"
   ^js [rename-response-body]
   (.-locs ^js rename-response-body))
 

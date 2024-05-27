@@ -1,10 +1,12 @@
 (ns dots.typescript.regular-expression-literal)
 
 (defn kind
+  "**Returns:** `SyntaxKind.RegularExpressionLiteral`"
   ^js [regular-expression-literal]
   (.-kind ^js regular-expression-literal))
 
 (defn text
+  "**Returns:** `string`"
   ^js [regular-expression-literal]
   (.-text ^js regular-expression-literal))
 
@@ -13,6 +15,7 @@
   (set! (.-text ^js regular-expression-literal) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [regular-expression-literal]
   (.-isUnterminated ^js regular-expression-literal))
 
@@ -21,6 +24,7 @@
   (set! (.-isUnterminated ^js regular-expression-literal) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [regular-expression-literal]
   (.-hasExtendedUnicodeEscape ^js regular-expression-literal))
 
@@ -29,10 +33,12 @@
   (set! (.-hasExtendedUnicodeEscape ^js regular-expression-literal) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [regular-expression-literal]
   (.-flags ^js regular-expression-literal))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [regular-expression-literal]
   (.-parent ^js regular-expression-literal))
 
@@ -172,9 +178,11 @@
    (.forEachChild ^js regular-expression-literal cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [regular-expression-literal]
   (.-pos ^js regular-expression-literal))
 
 (defn end
+  "**Returns:** `number`"
   ^js [regular-expression-literal]
   (.-end ^js regular-expression-literal))

@@ -1,18 +1,22 @@
 (ns dots.typescript.json-object-expression-statement)
 
 (defn expression
+  "**Returns:** `JsonObjectExpression`"
   ^js [json-object-expression-statement]
   (.-expression ^js json-object-expression-statement))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ExpressionStatement`"
   ^js [json-object-expression-statement]
   (.-kind ^js json-object-expression-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [json-object-expression-statement]
   (.-flags ^js json-object-expression-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [json-object-expression-statement]
   (.-parent ^js json-object-expression-statement))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js json-object-expression-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [json-object-expression-statement]
   (.-pos ^js json-object-expression-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [json-object-expression-statement]
   (.-end ^js json-object-expression-statement))

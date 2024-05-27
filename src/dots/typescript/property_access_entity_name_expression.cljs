@@ -3,26 +3,32 @@
   (:refer-clojure :exclude [name]))
 
 (defn expression
+  "**Returns:** `EntityNameExpression`"
   ^js [property-access-entity-name-expression]
   (.-expression ^js property-access-entity-name-expression))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [property-access-entity-name-expression]
   (.-name ^js property-access-entity-name-expression))
 
 (defn kind
+  "**Returns:** `SyntaxKind.PropertyAccessExpression`"
   ^js [property-access-entity-name-expression]
   (.-kind ^js property-access-entity-name-expression))
 
 (defn question-dot-token
+  "**Returns:** `QuestionDotToken | undefined`"
   ^js [property-access-entity-name-expression]
   (.-questionDotToken ^js property-access-entity-name-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [property-access-entity-name-expression]
   (.-flags ^js property-access-entity-name-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [property-access-entity-name-expression]
   (.-parent ^js property-access-entity-name-expression))
 
@@ -162,9 +168,11 @@
    (.forEachChild ^js property-access-entity-name-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [property-access-entity-name-expression]
   (.-pos ^js property-access-entity-name-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [property-access-entity-name-expression]
   (.-end ^js property-access-entity-name-expression))

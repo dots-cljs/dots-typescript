@@ -2,10 +2,12 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `CallHierarchyIncomingCall[]`"
   ^js [provide-call-hierarchy-incoming-calls-response]
   (.-body ^js provide-call-hierarchy-incoming-calls-response))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [provide-call-hierarchy-incoming-calls-response]
   (.-type ^js provide-call-hierarchy-incoming-calls-response))
 
@@ -14,7 +16,9 @@
   (set! (.-type ^js provide-call-hierarchy-incoming-calls-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [provide-call-hierarchy-incoming-calls-response]
   (.-request_seq ^js provide-call-hierarchy-incoming-calls-response))
 
@@ -24,7 +28,9 @@
   (set! (.-request_seq ^js provide-call-hierarchy-incoming-calls-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [provide-call-hierarchy-incoming-calls-response]
   (.-success ^js provide-call-hierarchy-incoming-calls-response))
 
@@ -34,7 +40,9 @@
   (set! (.-success ^js provide-call-hierarchy-incoming-calls-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [provide-call-hierarchy-incoming-calls-response]
   (.-command ^js provide-call-hierarchy-incoming-calls-response))
 
@@ -45,7 +53,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [provide-call-hierarchy-incoming-calls-response]
   (.-message ^js provide-call-hierarchy-incoming-calls-response))
 
@@ -56,7 +66,9 @@
   (set! (.-message ^js provide-call-hierarchy-incoming-calls-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [provide-call-hierarchy-incoming-calls-response]
   (.-metadata ^js provide-call-hierarchy-incoming-calls-response))
 
@@ -66,7 +78,9 @@
   (set! (.-metadata ^js provide-call-hierarchy-incoming-calls-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [provide-call-hierarchy-incoming-calls-response]
   (.-performanceData ^js provide-call-hierarchy-incoming-calls-response))
 
@@ -76,7 +90,9 @@
   (set! (.-performanceData ^js provide-call-hierarchy-incoming-calls-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [provide-call-hierarchy-incoming-calls-response]
   (.-seq ^js provide-call-hierarchy-incoming-calls-response))
 

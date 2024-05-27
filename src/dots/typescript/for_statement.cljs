@@ -1,30 +1,37 @@
 (ns dots.typescript.for-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ForStatement`"
   ^js [for-statement]
   (.-kind ^js for-statement))
 
 (defn initializer
+  "**Returns:** `ForInitializer | undefined`"
   ^js [for-statement]
   (.-initializer ^js for-statement))
 
 (defn condition
+  "**Returns:** `Expression | undefined`"
   ^js [for-statement]
   (.-condition ^js for-statement))
 
 (defn incrementor
+  "**Returns:** `Expression | undefined`"
   ^js [for-statement]
   (.-incrementor ^js for-statement))
 
 (defn statement
+  "**Returns:** `Statement`"
   ^js [for-statement]
   (.-statement ^js for-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [for-statement]
   (.-flags ^js for-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [for-statement]
   (.-parent ^js for-statement))
 
@@ -164,9 +171,11 @@
    (.forEachChild ^js for-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [for-statement]
   (.-pos ^js for-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [for-statement]
   (.-end ^js for-statement))

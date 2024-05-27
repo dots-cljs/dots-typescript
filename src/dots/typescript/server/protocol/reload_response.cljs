@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [reload-response]
   (.-type ^js reload-response))
 
@@ -12,7 +13,9 @@
   (set! (.-type ^js reload-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [reload-response]
   (.-request_seq ^js reload-response))
 
@@ -22,7 +25,9 @@
   (set! (.-request_seq ^js reload-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [reload-response]
   (.-success ^js reload-response))
 
@@ -32,7 +37,9 @@
   (set! (.-success ^js reload-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [reload-response]
   (.-command ^js reload-response))
 
@@ -43,7 +50,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [reload-response]
   (.-message ^js reload-response))
 
@@ -54,7 +63,9 @@
   (set! (.-message ^js reload-response) value))
 
 (defn body
-  "Contains message body if success === true."
+  "Contains message body if success === true.
+   
+   **Returns:** `any`"
   ^js [reload-response]
   (.-body ^js reload-response))
 
@@ -64,7 +75,9 @@
   (set! (.-body ^js reload-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [reload-response]
   (.-metadata ^js reload-response))
 
@@ -74,7 +87,9 @@
   (set! (.-metadata ^js reload-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [reload-response]
   (.-performanceData ^js reload-response))
 
@@ -84,7 +99,9 @@
   (set! (.-performanceData ^js reload-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [reload-response]
   (.-seq ^js reload-response))
 

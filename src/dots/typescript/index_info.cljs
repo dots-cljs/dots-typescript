@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [type]))
 
 (defn key-type
+  "**Returns:** `Type`"
   ^js [index-info]
   (.-keyType ^js index-info))
 
@@ -10,6 +11,7 @@
   (set! (.-keyType ^js index-info) value))
 
 (defn type
+  "**Returns:** `Type`"
   ^js [index-info]
   (.-type ^js index-info))
 
@@ -18,6 +20,7 @@
   (set! (.-type ^js index-info) value))
 
 (defn readonly?
+  "**Returns:** `boolean`"
   ^js [index-info]
   (.-isReadonly ^js index-info))
 
@@ -26,6 +29,7 @@
   (set! (.-isReadonly ^js index-info) value))
 
 (defn declaration
+  "**Returns:** `IndexSignatureDeclaration | undefined`"
   ^js [index-info]
   (.-declaration ^js index-info))
 

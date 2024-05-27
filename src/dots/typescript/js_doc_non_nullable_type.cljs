@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocNonNullableType`"
   ^js [js-doc-non-nullable-type]
   (.-kind ^js js-doc-non-nullable-type))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [js-doc-non-nullable-type]
   (.-type ^js js-doc-non-nullable-type))
 
 (defn postfix?
+  "**Returns:** `boolean`"
   ^js [js-doc-non-nullable-type]
   (.-postfix ^js js-doc-non-nullable-type))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-non-nullable-type]
   (.-flags ^js js-doc-non-nullable-type))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-non-nullable-type]
   (.-parent ^js js-doc-non-nullable-type))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js js-doc-non-nullable-type cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-non-nullable-type]
   (.-pos ^js js-doc-non-nullable-type))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-non-nullable-type]
   (.-end ^js js-doc-non-nullable-type))

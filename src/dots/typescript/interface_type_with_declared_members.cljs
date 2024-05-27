@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn declared-properties
+  "**Returns:** `Symbol[]`"
   ^js [interface-type-with-declared-members]
   (.-declaredProperties ^js interface-type-with-declared-members))
 
@@ -10,6 +11,7 @@
   (set! (.-declaredProperties ^js interface-type-with-declared-members) value))
 
 (defn declared-call-signatures
+  "**Returns:** `Signature[]`"
   ^js [interface-type-with-declared-members]
   (.-declaredCallSignatures ^js interface-type-with-declared-members))
 
@@ -18,6 +20,7 @@
   (set! (.-declaredCallSignatures ^js interface-type-with-declared-members) value))
 
 (defn declared-construct-signatures
+  "**Returns:** `Signature[]`"
   ^js [interface-type-with-declared-members]
   (.-declaredConstructSignatures ^js interface-type-with-declared-members))
 
@@ -26,6 +29,7 @@
   (set! (.-declaredConstructSignatures ^js interface-type-with-declared-members) value))
 
 (defn declared-index-infos
+  "**Returns:** `IndexInfo[]`"
   ^js [interface-type-with-declared-members]
   (.-declaredIndexInfos ^js interface-type-with-declared-members))
 
@@ -34,6 +38,7 @@
   (set! (.-declaredIndexInfos ^js interface-type-with-declared-members) value))
 
 (defn type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [interface-type-with-declared-members]
   (.-typeParameters ^js interface-type-with-declared-members))
 
@@ -42,6 +47,7 @@
   (set! (.-typeParameters ^js interface-type-with-declared-members) value))
 
 (defn outer-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [interface-type-with-declared-members]
   (.-outerTypeParameters ^js interface-type-with-declared-members))
 
@@ -50,6 +56,7 @@
   (set! (.-outerTypeParameters ^js interface-type-with-declared-members) value))
 
 (defn local-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [interface-type-with-declared-members]
   (.-localTypeParameters ^js interface-type-with-declared-members))
 
@@ -58,6 +65,7 @@
   (set! (.-localTypeParameters ^js interface-type-with-declared-members) value))
 
 (defn this-type
+  "**Returns:** `TypeParameter | undefined`"
   ^js [interface-type-with-declared-members]
   (.-thisType ^js interface-type-with-declared-members))
 
@@ -66,6 +74,7 @@
   (set! (.-thisType ^js interface-type-with-declared-members) value))
 
 (defn object-flags
+  "**Returns:** `ObjectFlags`"
   ^js [interface-type-with-declared-members]
   (.-objectFlags ^js interface-type-with-declared-members))
 
@@ -74,6 +83,7 @@
   (set! (.-objectFlags ^js interface-type-with-declared-members) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [interface-type-with-declared-members]
   (.-flags ^js interface-type-with-declared-members))
 
@@ -82,6 +92,7 @@
   (set! (.-flags ^js interface-type-with-declared-members) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [interface-type-with-declared-members]
   (.-symbol ^js interface-type-with-declared-members))
 
@@ -90,6 +101,7 @@
   (set! (.-symbol ^js interface-type-with-declared-members) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [interface-type-with-declared-members]
   (.-pattern ^js interface-type-with-declared-members))
 
@@ -98,6 +110,7 @@
   (set! (.-pattern ^js interface-type-with-declared-members) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [interface-type-with-declared-members]
   (.-aliasSymbol ^js interface-type-with-declared-members))
 
@@ -106,6 +119,7 @@
   (set! (.-aliasSymbol ^js interface-type-with-declared-members) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [interface-type-with-declared-members]
   (.-aliasTypeArguments ^js interface-type-with-declared-members))
 

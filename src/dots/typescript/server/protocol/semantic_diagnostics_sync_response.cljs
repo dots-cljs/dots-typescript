@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `Diagnostic[] | DiagnosticWithLinePosition[] | undefined`"
   ^js [semantic-diagnostics-sync-response]
   (.-body ^js semantic-diagnostics-sync-response))
 
@@ -11,6 +12,7 @@
   (set! (.-body ^js semantic-diagnostics-sync-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [semantic-diagnostics-sync-response]
   (.-type ^js semantic-diagnostics-sync-response))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js semantic-diagnostics-sync-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [semantic-diagnostics-sync-response]
   (.-request_seq ^js semantic-diagnostics-sync-response))
 
@@ -29,7 +33,9 @@
   (set! (.-request_seq ^js semantic-diagnostics-sync-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [semantic-diagnostics-sync-response]
   (.-success ^js semantic-diagnostics-sync-response))
 
@@ -39,7 +45,9 @@
   (set! (.-success ^js semantic-diagnostics-sync-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [semantic-diagnostics-sync-response]
   (.-command ^js semantic-diagnostics-sync-response))
 
@@ -50,7 +58,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [semantic-diagnostics-sync-response]
   (.-message ^js semantic-diagnostics-sync-response))
 
@@ -61,7 +71,9 @@
   (set! (.-message ^js semantic-diagnostics-sync-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [semantic-diagnostics-sync-response]
   (.-metadata ^js semantic-diagnostics-sync-response))
 
@@ -71,7 +83,9 @@
   (set! (.-metadata ^js semantic-diagnostics-sync-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [semantic-diagnostics-sync-response]
   (.-performanceData ^js semantic-diagnostics-sync-response))
 
@@ -81,7 +95,9 @@
   (set! (.-performanceData ^js semantic-diagnostics-sync-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [semantic-diagnostics-sync-response]
   (.-seq ^js semantic-diagnostics-sync-response))
 

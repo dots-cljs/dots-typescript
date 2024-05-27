@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol type]))
 
 (defn type
+  "**Returns:** `UnionOrIntersectionType | InstantiableType`"
   ^js [index-type]
   (.-type ^js index-type))
 
@@ -10,6 +11,7 @@
   (set! (.-type ^js index-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [index-type]
   (.-flags ^js index-type))
 
@@ -18,6 +20,7 @@
   (set! (.-flags ^js index-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [index-type]
   (.-symbol ^js index-type))
 
@@ -26,6 +29,7 @@
   (set! (.-symbol ^js index-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [index-type]
   (.-pattern ^js index-type))
 
@@ -34,6 +38,7 @@
   (set! (.-pattern ^js index-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [index-type]
   (.-aliasSymbol ^js index-type))
 
@@ -42,6 +47,7 @@
   (set! (.-aliasSymbol ^js index-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [index-type]
   (.-aliasTypeArguments ^js index-type))
 

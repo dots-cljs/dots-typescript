@@ -1,14 +1,17 @@
 (ns dots.typescript.template-head)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TemplateHead`"
   ^js [template-head]
   (.-kind ^js template-head))
 
 (defn parent
+  "**Returns:** `TemplateLiteralTypeNode | TemplateExpression`"
   ^js [template-head]
   (.-parent ^js template-head))
 
 (defn raw-text
+  "**Returns:** `string | undefined`"
   ^js [template-head]
   (.-rawText ^js template-head))
 
@@ -17,6 +20,7 @@
   (set! (.-rawText ^js template-head) value))
 
 (defn text
+  "**Returns:** `string`"
   ^js [template-head]
   (.-text ^js template-head))
 
@@ -25,6 +29,7 @@
   (set! (.-text ^js template-head) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [template-head]
   (.-isUnterminated ^js template-head))
 
@@ -33,6 +38,7 @@
   (set! (.-isUnterminated ^js template-head) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [template-head]
   (.-hasExtendedUnicodeEscape ^js template-head))
 
@@ -41,6 +47,7 @@
   (set! (.-hasExtendedUnicodeEscape ^js template-head) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [template-head]
   (.-flags ^js template-head))
 
@@ -180,9 +187,11 @@
    (.forEachChild ^js template-head cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [template-head]
   (.-pos ^js template-head))
 
 (defn end
+  "**Returns:** `number`"
   ^js [template-head]
   (.-end ^js template-head))

@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [set-compiler-options-for-inferred-projects-response]
   (.-type ^js set-compiler-options-for-inferred-projects-response))
 
@@ -12,7 +13,9 @@
   (set! (.-type ^js set-compiler-options-for-inferred-projects-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [set-compiler-options-for-inferred-projects-response]
   (.-request_seq ^js set-compiler-options-for-inferred-projects-response))
 
@@ -22,7 +25,9 @@
   (set! (.-request_seq ^js set-compiler-options-for-inferred-projects-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [set-compiler-options-for-inferred-projects-response]
   (.-success ^js set-compiler-options-for-inferred-projects-response))
 
@@ -32,7 +37,9 @@
   (set! (.-success ^js set-compiler-options-for-inferred-projects-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [set-compiler-options-for-inferred-projects-response]
   (.-command ^js set-compiler-options-for-inferred-projects-response))
 
@@ -43,7 +50,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [set-compiler-options-for-inferred-projects-response]
   (.-message ^js set-compiler-options-for-inferred-projects-response))
 
@@ -54,7 +63,9 @@
   (set! (.-message ^js set-compiler-options-for-inferred-projects-response) value))
 
 (defn body
-  "Contains message body if success === true."
+  "Contains message body if success === true.
+   
+   **Returns:** `any`"
   ^js [set-compiler-options-for-inferred-projects-response]
   (.-body ^js set-compiler-options-for-inferred-projects-response))
 
@@ -64,7 +75,9 @@
   (set! (.-body ^js set-compiler-options-for-inferred-projects-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [set-compiler-options-for-inferred-projects-response]
   (.-metadata ^js set-compiler-options-for-inferred-projects-response))
 
@@ -74,7 +87,9 @@
   (set! (.-metadata ^js set-compiler-options-for-inferred-projects-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [set-compiler-options-for-inferred-projects-response]
   (.-performanceData ^js set-compiler-options-for-inferred-projects-response))
 
@@ -84,7 +99,9 @@
   (set! (.-performanceData ^js set-compiler-options-for-inferred-projects-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [set-compiler-options-for-inferred-projects-response]
   (.-seq ^js set-compiler-options-for-inferred-projects-response))
 

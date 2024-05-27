@@ -2,10 +2,12 @@
   (:refer-clojure :exclude [range]))
 
 (defn gc-timer
+  "**Returns:** `any`"
   ^js [session]
   (.-gcTimer ^js session))
 
 (defn project-service
+  "**Returns:** `ProjectService`"
   ^js [session]
   (.-projectService ^js session))
 
@@ -14,6 +16,7 @@
   (set! (.-projectService ^js session) value))
 
 (defn change-seq
+  "**Returns:** `any`"
   ^js [session]
   (.-changeSeq ^js session))
 
@@ -22,6 +25,7 @@
   (set! (.-changeSeq ^js session) value))
 
 (defn performance-data
+  "**Returns:** `any`"
   ^js [session]
   (.-performanceData ^js session))
 
@@ -30,6 +34,7 @@
   (set! (.-performanceData ^js session) value))
 
 (defn current-request-id
+  "**Returns:** `any`"
   ^js [session]
   (.-currentRequestId ^js session))
 
@@ -38,6 +43,7 @@
   (set! (.-currentRequestId ^js session) value))
 
 (defn error-check
+  "**Returns:** `any`"
   ^js [session]
   (.-errorCheck ^js session))
 
@@ -46,6 +52,7 @@
   (set! (.-errorCheck ^js session) value))
 
 (defn host
+  "**Returns:** `ServerHost`"
   ^js [session]
   (.-host ^js session))
 
@@ -54,14 +61,17 @@
   (set! (.-host ^js session) value))
 
 (defn cancellation-token
+  "**Returns:** `any`"
   ^js [session]
   (.-cancellationToken ^js session))
 
 (defn typings-installer
+  "**Returns:** `ITypingsInstaller`"
   ^js [session]
   (.-typingsInstaller ^js session))
 
 (defn byte-length
+  "**Returns:** `(buf: string, encoding?: BufferEncoding | undefined) => number`"
   ^js [session]
   (.-byteLength ^js session))
 
@@ -70,6 +80,7 @@
   (set! (.-byteLength ^js session) value))
 
 (defn hrtime
+  "**Returns:** `any`"
   ^js [session]
   (.-hrtime ^js session))
 
@@ -78,6 +89,7 @@
   (set! (.-hrtime ^js session) value))
 
 (defn logger
+  "**Returns:** `Logger`"
   ^js [session]
   (.-logger ^js session))
 
@@ -86,6 +98,7 @@
   (set! (.-logger ^js session) value))
 
 (defn can-use-events?
+  "**Returns:** `boolean`"
   ^js [session]
   (.-canUseEvents ^js session))
 
@@ -94,6 +107,7 @@
   (set! (.-canUseEvents ^js session) value))
 
 (defn suppress-diagnostic-events
+  "**Returns:** `any`"
   ^js [session]
   (.-suppressDiagnosticEvents ^js session))
 
@@ -102,6 +116,7 @@
   (set! (.-suppressDiagnosticEvents ^js session) value))
 
 (defn event-handler
+  "**Returns:** `any`"
   ^js [session]
   (.-eventHandler ^js session))
 
@@ -110,10 +125,12 @@
   (set! (.-eventHandler ^js session) value))
 
 (defn no-get-err-on-background-update
+  "**Returns:** `any`"
   ^js [session]
   (.-noGetErrOnBackgroundUpdate ^js session))
 
 (defn send-request-completed-event
+  "**Returns:** `any`"
   ^js [session]
   (.-sendRequestCompletedEvent ^js session))
 
@@ -122,6 +139,7 @@
   (set! (.-sendRequestCompletedEvent ^js session) value))
 
 (defn add-performance-data
+  "**Returns:** `any`"
   ^js [session]
   (.-addPerformanceData ^js session))
 
@@ -130,6 +148,7 @@
   (set! (.-addPerformanceData ^js session) value))
 
 (defn performance-event-handler
+  "**Returns:** `any`"
   ^js [session]
   (.-performanceEventHandler ^js session))
 
@@ -138,6 +157,7 @@
   (set! (.-performanceEventHandler ^js session) value))
 
 (defn default-event-handler
+  "**Returns:** `any`"
   ^js [session]
   (.-defaultEventHandler ^js session))
 
@@ -146,6 +166,7 @@
   (set! (.-defaultEventHandler ^js session) value))
 
 (defn projects-updated-in-background-event
+  "**Returns:** `any`"
   ^js [session]
   (.-projectsUpdatedInBackgroundEvent ^js session))
 
@@ -163,6 +184,7 @@
   (.logError ^js session err cmd))
 
 (defn log-error-worker
+  "**Returns:** `any`"
   ^js [session]
   (.-logErrorWorker ^js session))
 
@@ -196,6 +218,7 @@
   (.event ^js session body event-name))
 
 (defn semantic-check
+  "**Returns:** `any`"
   ^js [session]
   (.-semanticCheck ^js session))
 
@@ -204,6 +227,7 @@
   (set! (.-semanticCheck ^js session) value))
 
 (defn syntactic-check
+  "**Returns:** `any`"
   ^js [session]
   (.-syntacticCheck ^js session))
 
@@ -212,6 +236,7 @@
   (set! (.-syntacticCheck ^js session) value))
 
 (defn suggestion-check
+  "**Returns:** `any`"
   ^js [session]
   (.-suggestionCheck ^js session))
 
@@ -220,6 +245,7 @@
   (set! (.-suggestionCheck ^js session) value))
 
 (defn send-diagnostics-event
+  "**Returns:** `any`"
   ^js [session]
   (.-sendDiagnosticsEvent ^js session))
 
@@ -228,7 +254,9 @@
   (set! (.-sendDiagnosticsEvent ^js session) value))
 
 (defn update-error-check
-  "It is the caller's responsibility to verify that `!this.suppressDiagnosticEvents`."
+  "It is the caller's responsibility to verify that `!this.suppressDiagnosticEvents`.
+   
+   **Returns:** `any`"
   ^js [session]
   (.-updateErrorCheck ^js session))
 
@@ -238,6 +266,7 @@
   (set! (.-updateErrorCheck ^js session) value))
 
 (defn clean-projects
+  "**Returns:** `any`"
   ^js [session]
   (.-cleanProjects ^js session))
 
@@ -246,6 +275,7 @@
   (set! (.-cleanProjects ^js session) value))
 
 (defn cleanup
+  "**Returns:** `any`"
   ^js [session]
   (.-cleanup ^js session))
 
@@ -254,6 +284,7 @@
   (set! (.-cleanup ^js session) value))
 
 (defn encoded-syntactic-classifications
+  "**Returns:** `any`"
   ^js [session]
   (.-getEncodedSyntacticClassifications ^js session))
 
@@ -262,6 +293,7 @@
   (set! (.-getEncodedSyntacticClassifications ^js session) value))
 
 (defn encoded-semantic-classifications
+  "**Returns:** `any`"
   ^js [session]
   (.-getEncodedSemanticClassifications ^js session))
 
@@ -270,6 +302,7 @@
   (set! (.-getEncodedSemanticClassifications ^js session) value))
 
 (defn project
+  "**Returns:** `any`"
   ^js [session]
   (.-getProject ^js session))
 
@@ -278,6 +311,7 @@
   (set! (.-getProject ^js session) value))
 
 (defn config-file-and-project
+  "**Returns:** `any`"
   ^js [session]
   (.-getConfigFileAndProject ^js session))
 
@@ -286,6 +320,7 @@
   (set! (.-getConfigFileAndProject ^js session) value))
 
 (defn config-file-diagnostics
+  "**Returns:** `any`"
   ^js [session]
   (.-getConfigFileDiagnostics ^js session))
 
@@ -294,6 +329,7 @@
   (set! (.-getConfigFileDiagnostics ^js session) value))
 
 (defn convert-to-diagnostics-with-line-position-from-diagnostic-file
+  "**Returns:** `any`"
   ^js [session]
   (.-convertToDiagnosticsWithLinePositionFromDiagnosticFile ^js session))
 
@@ -302,6 +338,7 @@
   (set! (.-convertToDiagnosticsWithLinePositionFromDiagnosticFile ^js session) value))
 
 (defn compiler-options-diagnostics
+  "**Returns:** `any`"
   ^js [session]
   (.-getCompilerOptionsDiagnostics ^js session))
 
@@ -310,6 +347,7 @@
   (set! (.-getCompilerOptionsDiagnostics ^js session) value))
 
 (defn convert-to-diagnostics-with-line-position
+  "**Returns:** `any`"
   ^js [session]
   (.-convertToDiagnosticsWithLinePosition ^js session))
 
@@ -318,6 +356,7 @@
   (set! (.-convertToDiagnosticsWithLinePosition ^js session) value))
 
 (defn diagnostics-worker
+  "**Returns:** `any`"
   ^js [session]
   (.-getDiagnosticsWorker ^js session))
 
@@ -326,6 +365,7 @@
   (set! (.-getDiagnosticsWorker ^js session) value))
 
 (defn definition
+  "**Returns:** `any`"
   ^js [session]
   (.-getDefinition ^js session))
 
@@ -334,6 +374,7 @@
   (set! (.-getDefinition ^js session) value))
 
 (defn map-definition-info-locations
+  "**Returns:** `any`"
   ^js [session]
   (.-mapDefinitionInfoLocations ^js session))
 
@@ -342,6 +383,7 @@
   (set! (.-mapDefinitionInfoLocations ^js session) value))
 
 (defn definition-and-bound-span
+  "**Returns:** `any`"
   ^js [session]
   (.-getDefinitionAndBoundSpan ^js session))
 
@@ -350,6 +392,7 @@
   (set! (.-getDefinitionAndBoundSpan ^js session) value))
 
 (defn find-source-definition
+  "**Returns:** `any`"
   ^js [session]
   (.-findSourceDefinition ^js session))
 
@@ -358,6 +401,7 @@
   (set! (.-findSourceDefinition ^js session) value))
 
 (defn emit-output
+  "**Returns:** `any`"
   ^js [session]
   (.-getEmitOutput ^js session))
 
@@ -366,6 +410,7 @@
   (set! (.-getEmitOutput ^js session) value))
 
 (defn map-js-doc-tag-info
+  "**Returns:** `any`"
   ^js [session]
   (.-mapJSDocTagInfo ^js session))
 
@@ -374,6 +419,7 @@
   (set! (.-mapJSDocTagInfo ^js session) value))
 
 (defn map-display-parts
+  "**Returns:** `any`"
   ^js [session]
   (.-mapDisplayParts ^js session))
 
@@ -382,6 +428,7 @@
   (set! (.-mapDisplayParts ^js session) value))
 
 (defn map-signature-help-items
+  "**Returns:** `any`"
   ^js [session]
   (.-mapSignatureHelpItems ^js session))
 
@@ -390,6 +437,7 @@
   (set! (.-mapSignatureHelpItems ^js session) value))
 
 (defn map-definition-info
+  "**Returns:** `any`"
   ^js [session]
   (.-mapDefinitionInfo ^js session))
 
@@ -398,6 +446,7 @@
   (set! (.-mapDefinitionInfo ^js session) value))
 
 (defn to-file-span
+  "**Returns:** `any`"
   ^js [session]
   (.-toFileSpan ^js session))
 
@@ -406,6 +455,7 @@
   (set! (.-toFileSpan ^js session) value))
 
 (defn to-file-span-with-context
+  "**Returns:** `any`"
   ^js [session]
   (.-toFileSpanWithContext ^js session))
 
@@ -414,6 +464,7 @@
   (set! (.-toFileSpanWithContext ^js session) value))
 
 (defn type-definition
+  "**Returns:** `any`"
   ^js [session]
   (.-getTypeDefinition ^js session))
 
@@ -422,6 +473,7 @@
   (set! (.-getTypeDefinition ^js session) value))
 
 (defn map-implementation-locations
+  "**Returns:** `any`"
   ^js [session]
   (.-mapImplementationLocations ^js session))
 
@@ -430,6 +482,7 @@
   (set! (.-mapImplementationLocations ^js session) value))
 
 (defn implementation
+  "**Returns:** `any`"
   ^js [session]
   (.-getImplementation ^js session))
 
@@ -438,6 +491,7 @@
   (set! (.-getImplementation ^js session) value))
 
 (defn syntactic-diagnostics-sync
+  "**Returns:** `any`"
   ^js [session]
   (.-getSyntacticDiagnosticsSync ^js session))
 
@@ -446,6 +500,7 @@
   (set! (.-getSyntacticDiagnosticsSync ^js session) value))
 
 (defn semantic-diagnostics-sync
+  "**Returns:** `any`"
   ^js [session]
   (.-getSemanticDiagnosticsSync ^js session))
 
@@ -454,6 +509,7 @@
   (set! (.-getSemanticDiagnosticsSync ^js session) value))
 
 (defn suggestion-diagnostics-sync
+  "**Returns:** `any`"
   ^js [session]
   (.-getSuggestionDiagnosticsSync ^js session))
 
@@ -462,6 +518,7 @@
   (set! (.-getSuggestionDiagnosticsSync ^js session) value))
 
 (defn jsx-closing-tag
+  "**Returns:** `any`"
   ^js [session]
   (.-getJsxClosingTag ^js session))
 
@@ -470,6 +527,7 @@
   (set! (.-getJsxClosingTag ^js session) value))
 
 (defn linked-editing-range
+  "**Returns:** `any`"
   ^js [session]
   (.-getLinkedEditingRange ^js session))
 
@@ -478,6 +536,7 @@
   (set! (.-getLinkedEditingRange ^js session) value))
 
 (defn document-highlights
+  "**Returns:** `any`"
   ^js [session]
   (.-getDocumentHighlights ^js session))
 
@@ -486,6 +545,7 @@
   (set! (.-getDocumentHighlights ^js session) value))
 
 (defn provide-inlay-hints
+  "**Returns:** `any`"
   ^js [session]
   (.-provideInlayHints ^js session))
 
@@ -494,6 +554,7 @@
   (set! (.-provideInlayHints ^js session) value))
 
 (defn set-compiler-options-for-inferred-projects
+  "**Returns:** `any`"
   ^js [session]
   (.-setCompilerOptionsForInferredProjects ^js session))
 
@@ -502,6 +563,7 @@
   (set! (.-setCompilerOptionsForInferredProjects ^js session) value))
 
 (defn project-info
+  "**Returns:** `any`"
   ^js [session]
   (.-getProjectInfo ^js session))
 
@@ -510,6 +572,7 @@
   (set! (.-getProjectInfo ^js session) value))
 
 (defn project-info-worker
+  "**Returns:** `any`"
   ^js [session]
   (.-getProjectInfoWorker ^js session))
 
@@ -518,6 +581,7 @@
   (set! (.-getProjectInfoWorker ^js session) value))
 
 (defn rename-info
+  "**Returns:** `any`"
   ^js [session]
   (.-getRenameInfo ^js session))
 
@@ -526,6 +590,7 @@
   (set! (.-getRenameInfo ^js session) value))
 
 (defn projects
+  "**Returns:** `any`"
   ^js [session]
   (.-getProjects ^js session))
 
@@ -534,6 +599,7 @@
   (set! (.-getProjects ^js session) value))
 
 (defn default-project
+  "**Returns:** `any`"
   ^js [session]
   (.-getDefaultProject ^js session))
 
@@ -542,6 +608,7 @@
   (set! (.-getDefaultProject ^js session) value))
 
 (defn rename-locations
+  "**Returns:** `any`"
   ^js [session]
   (.-getRenameLocations ^js session))
 
@@ -550,6 +617,7 @@
   (set! (.-getRenameLocations ^js session) value))
 
 (defn map-rename-info
+  "**Returns:** `any`"
   ^js [session]
   (.-mapRenameInfo ^js session))
 
@@ -558,6 +626,7 @@
   (set! (.-mapRenameInfo ^js session) value))
 
 (defn to-span-groups
+  "**Returns:** `any`"
   ^js [session]
   (.-toSpanGroups ^js session))
 
@@ -566,6 +635,7 @@
   (set! (.-toSpanGroups ^js session) value))
 
 (defn references
+  "**Returns:** `any`"
   ^js [session]
   (.-getReferences ^js session))
 
@@ -574,6 +644,7 @@
   (set! (.-getReferences ^js session) value))
 
 (defn file-references
+  "**Returns:** `any`"
   ^js [session]
   (.-getFileReferences ^js session))
 
@@ -582,6 +653,7 @@
   (set! (.-getFileReferences ^js session) value))
 
 (defn open-client-file
+  "**Returns:** `any`"
   ^js [session]
   (.-openClientFile ^js session))
 
@@ -590,6 +662,7 @@
   (set! (.-openClientFile ^js session) value))
 
 (defn position
+  "**Returns:** `any`"
   ^js [session]
   (.-getPosition ^js session))
 
@@ -598,6 +671,7 @@
   (set! (.-getPosition ^js session) value))
 
 (defn position-in-file
+  "**Returns:** `any`"
   ^js [session]
   (.-getPositionInFile ^js session))
 
@@ -606,6 +680,7 @@
   (set! (.-getPositionInFile ^js session) value))
 
 (defn file-and-project
+  "**Returns:** `any`"
   ^js [session]
   (.-getFileAndProject ^js session))
 
@@ -614,6 +689,7 @@
   (set! (.-getFileAndProject ^js session) value))
 
 (defn file-and-language-service-for-syntactic-operation
+  "**Returns:** `any`"
   ^js [session]
   (.-getFileAndLanguageServiceForSyntacticOperation ^js session))
 
@@ -622,6 +698,7 @@
   (set! (.-getFileAndLanguageServiceForSyntacticOperation ^js session) value))
 
 (defn file-and-project-worker
+  "**Returns:** `any`"
   ^js [session]
   (.-getFileAndProjectWorker ^js session))
 
@@ -630,6 +707,7 @@
   (set! (.-getFileAndProjectWorker ^js session) value))
 
 (defn outlining-spans
+  "**Returns:** `any`"
   ^js [session]
   (.-getOutliningSpans ^js session))
 
@@ -638,6 +716,7 @@
   (set! (.-getOutliningSpans ^js session) value))
 
 (defn todo-comments
+  "**Returns:** `any`"
   ^js [session]
   (.-getTodoComments ^js session))
 
@@ -646,6 +725,7 @@
   (set! (.-getTodoComments ^js session) value))
 
 (defn doc-comment-template
+  "**Returns:** `any`"
   ^js [session]
   (.-getDocCommentTemplate ^js session))
 
@@ -654,6 +734,7 @@
   (set! (.-getDocCommentTemplate ^js session) value))
 
 (defn span-of-enclosing-comment
+  "**Returns:** `any`"
   ^js [session]
   (.-getSpanOfEnclosingComment ^js session))
 
@@ -662,6 +743,7 @@
   (set! (.-getSpanOfEnclosingComment ^js session) value))
 
 (defn indentation
+  "**Returns:** `any`"
   ^js [session]
   (.-getIndentation ^js session))
 
@@ -670,6 +752,7 @@
   (set! (.-getIndentation ^js session) value))
 
 (defn breakpoint-statement
+  "**Returns:** `any`"
   ^js [session]
   (.-getBreakpointStatement ^js session))
 
@@ -678,6 +761,7 @@
   (set! (.-getBreakpointStatement ^js session) value))
 
 (defn name-or-dotted-name-span
+  "**Returns:** `any`"
   ^js [session]
   (.-getNameOrDottedNameSpan ^js session))
 
@@ -686,6 +770,7 @@
   (set! (.-getNameOrDottedNameSpan ^js session) value))
 
 (defn valid-brace-completion
+  "**Returns:** `any`"
   ^js [session]
   (.-isValidBraceCompletion ^js session))
 
@@ -694,6 +779,7 @@
   (set! (.-isValidBraceCompletion ^js session) value))
 
 (defn quick-info-worker
+  "**Returns:** `any`"
   ^js [session]
   (.-getQuickInfoWorker ^js session))
 
@@ -702,6 +788,7 @@
   (set! (.-getQuickInfoWorker ^js session) value))
 
 (defn formatting-edits-for-range
+  "**Returns:** `any`"
   ^js [session]
   (.-getFormattingEditsForRange ^js session))
 
@@ -710,6 +797,7 @@
   (set! (.-getFormattingEditsForRange ^js session) value))
 
 (defn formatting-edits-for-range-full
+  "**Returns:** `any`"
   ^js [session]
   (.-getFormattingEditsForRangeFull ^js session))
 
@@ -718,6 +806,7 @@
   (set! (.-getFormattingEditsForRangeFull ^js session) value))
 
 (defn formatting-edits-for-document-full
+  "**Returns:** `any`"
   ^js [session]
   (.-getFormattingEditsForDocumentFull ^js session))
 
@@ -726,6 +815,7 @@
   (set! (.-getFormattingEditsForDocumentFull ^js session) value))
 
 (defn formatting-edits-after-keystroke-full
+  "**Returns:** `any`"
   ^js [session]
   (.-getFormattingEditsAfterKeystrokeFull ^js session))
 
@@ -734,6 +824,7 @@
   (set! (.-getFormattingEditsAfterKeystrokeFull ^js session) value))
 
 (defn formatting-edits-after-keystroke
+  "**Returns:** `any`"
   ^js [session]
   (.-getFormattingEditsAfterKeystroke ^js session))
 
@@ -742,6 +833,7 @@
   (set! (.-getFormattingEditsAfterKeystroke ^js session) value))
 
 (defn completions
+  "**Returns:** `any`"
   ^js [session]
   (.-getCompletions ^js session))
 
@@ -750,6 +842,7 @@
   (set! (.-getCompletions ^js session) value))
 
 (defn completion-entry-details
+  "**Returns:** `any`"
   ^js [session]
   (.-getCompletionEntryDetails ^js session))
 
@@ -758,6 +851,7 @@
   (set! (.-getCompletionEntryDetails ^js session) value))
 
 (defn compile-on-save-affected-file-list
+  "**Returns:** `any`"
   ^js [session]
   (.-getCompileOnSaveAffectedFileList ^js session))
 
@@ -766,6 +860,7 @@
   (set! (.-getCompileOnSaveAffectedFileList ^js session) value))
 
 (defn emit-file
+  "**Returns:** `any`"
   ^js [session]
   (.-emitFile ^js session))
 
@@ -774,6 +869,7 @@
   (set! (.-emitFile ^js session) value))
 
 (defn signature-help-items
+  "**Returns:** `any`"
   ^js [session]
   (.-getSignatureHelpItems ^js session))
 
@@ -782,6 +878,7 @@
   (set! (.-getSignatureHelpItems ^js session) value))
 
 (defn to-pending-error-check
+  "**Returns:** `any`"
   ^js [session]
   (.-toPendingErrorCheck ^js session))
 
@@ -790,6 +887,7 @@
   (set! (.-toPendingErrorCheck ^js session) value))
 
 (defn diagnostics
+  "**Returns:** `any`"
   ^js [session]
   (.-getDiagnostics ^js session))
 
@@ -798,6 +896,7 @@
   (set! (.-getDiagnostics ^js session) value))
 
 (defn change
+  "**Returns:** `any`"
   ^js [session]
   (.-change ^js session))
 
@@ -806,6 +905,7 @@
   (set! (.-change ^js session) value))
 
 (defn reload
+  "**Returns:** `any`"
   ^js [session]
   (.-reload ^js session))
 
@@ -814,6 +914,7 @@
   (set! (.-reload ^js session) value))
 
 (defn save-to-tmp
+  "**Returns:** `any`"
   ^js [session]
   (.-saveToTmp ^js session))
 
@@ -822,6 +923,7 @@
   (set! (.-saveToTmp ^js session) value))
 
 (defn close-client-file
+  "**Returns:** `any`"
   ^js [session]
   (.-closeClientFile ^js session))
 
@@ -830,6 +932,7 @@
   (set! (.-closeClientFile ^js session) value))
 
 (defn map-location-navigation-bar-items
+  "**Returns:** `any`"
   ^js [session]
   (.-mapLocationNavigationBarItems ^js session))
 
@@ -838,6 +941,7 @@
   (set! (.-mapLocationNavigationBarItems ^js session) value))
 
 (defn navigation-bar-items
+  "**Returns:** `any`"
   ^js [session]
   (.-getNavigationBarItems ^js session))
 
@@ -846,6 +950,7 @@
   (set! (.-getNavigationBarItems ^js session) value))
 
 (defn to-location-navigation-tree
+  "**Returns:** `any`"
   ^js [session]
   (.-toLocationNavigationTree ^js session))
 
@@ -854,6 +959,7 @@
   (set! (.-toLocationNavigationTree ^js session) value))
 
 (defn navigation-tree
+  "**Returns:** `any`"
   ^js [session]
   (.-getNavigationTree ^js session))
 
@@ -862,6 +968,7 @@
   (set! (.-getNavigationTree ^js session) value))
 
 (defn navigate-to-items
+  "**Returns:** `any`"
   ^js [session]
   (.-getNavigateToItems ^js session))
 
@@ -870,6 +977,7 @@
   (set! (.-getNavigateToItems ^js session) value))
 
 (defn full-navigate-to-items
+  "**Returns:** `any`"
   ^js [session]
   (.-getFullNavigateToItems ^js session))
 
@@ -878,6 +986,7 @@
   (set! (.-getFullNavigateToItems ^js session) value))
 
 (defn supported-code-fixes
+  "**Returns:** `any`"
   ^js [session]
   (.-getSupportedCodeFixes ^js session))
 
@@ -886,6 +995,7 @@
   (set! (.-getSupportedCodeFixes ^js session) value))
 
 (defn location
+  "**Returns:** `any`"
   ^js [session]
   (.-isLocation ^js session))
 
@@ -894,6 +1004,7 @@
   (set! (.-isLocation ^js session) value))
 
 (defn extract-position-or-range
+  "**Returns:** `any`"
   ^js [session]
   (.-extractPositionOrRange ^js session))
 
@@ -902,6 +1013,7 @@
   (set! (.-extractPositionOrRange ^js session) value))
 
 (defn range
+  "**Returns:** `any`"
   ^js [session]
   (.-getRange ^js session))
 
@@ -910,6 +1022,7 @@
   (set! (.-getRange ^js session) value))
 
 (defn applicable-refactors
+  "**Returns:** `any`"
   ^js [session]
   (.-getApplicableRefactors ^js session))
 
@@ -918,6 +1031,7 @@
   (set! (.-getApplicableRefactors ^js session) value))
 
 (defn edits-for-refactor
+  "**Returns:** `any`"
   ^js [session]
   (.-getEditsForRefactor ^js session))
 
@@ -926,6 +1040,7 @@
   (set! (.-getEditsForRefactor ^js session) value))
 
 (defn move-to-refactoring-file-suggestions
+  "**Returns:** `any`"
   ^js [session]
   (.-getMoveToRefactoringFileSuggestions ^js session))
 
@@ -934,6 +1049,7 @@
   (set! (.-getMoveToRefactoringFileSuggestions ^js session) value))
 
 (defn organize-imports
+  "**Returns:** `any`"
   ^js [session]
   (.-organizeImports ^js session))
 
@@ -942,6 +1058,7 @@
   (set! (.-organizeImports ^js session) value))
 
 (defn edits-for-file-rename
+  "**Returns:** `any`"
   ^js [session]
   (.-getEditsForFileRename ^js session))
 
@@ -950,6 +1067,7 @@
   (set! (.-getEditsForFileRename ^js session) value))
 
 (defn code-fixes
+  "**Returns:** `any`"
   ^js [session]
   (.-getCodeFixes ^js session))
 
@@ -958,6 +1076,7 @@
   (set! (.-getCodeFixes ^js session) value))
 
 (defn combined-code-fix
+  "**Returns:** `any`"
   ^js [session]
   (.-getCombinedCodeFix ^js session))
 
@@ -966,6 +1085,7 @@
   (set! (.-getCombinedCodeFix ^js session) value))
 
 (defn apply-code-action-command
+  "**Returns:** `any`"
   ^js [session]
   (.-applyCodeActionCommand ^js session))
 
@@ -974,6 +1094,7 @@
   (set! (.-applyCodeActionCommand ^js session) value))
 
 (defn start-and-end-position
+  "**Returns:** `any`"
   ^js [session]
   (.-getStartAndEndPosition ^js session))
 
@@ -982,6 +1103,7 @@
   (set! (.-getStartAndEndPosition ^js session) value))
 
 (defn map-code-action
+  "**Returns:** `any`"
   ^js [session]
   (.-mapCodeAction ^js session))
 
@@ -990,6 +1112,7 @@
   (set! (.-mapCodeAction ^js session) value))
 
 (defn map-code-fix-action
+  "**Returns:** `any`"
   ^js [session]
   (.-mapCodeFixAction ^js session))
 
@@ -998,6 +1121,7 @@
   (set! (.-mapCodeFixAction ^js session) value))
 
 (defn map-text-changes-to-code-edits
+  "**Returns:** `any`"
   ^js [session]
   (.-mapTextChangesToCodeEdits ^js session))
 
@@ -1006,6 +1130,7 @@
   (set! (.-mapTextChangesToCodeEdits ^js session) value))
 
 (defn map-text-change-to-code-edit
+  "**Returns:** `any`"
   ^js [session]
   (.-mapTextChangeToCodeEdit ^js session))
 
@@ -1014,6 +1139,7 @@
   (set! (.-mapTextChangeToCodeEdit ^js session) value))
 
 (defn convert-text-change-to-code-edit
+  "**Returns:** `any`"
   ^js [session]
   (.-convertTextChangeToCodeEdit ^js session))
 
@@ -1022,6 +1148,7 @@
   (set! (.-convertTextChangeToCodeEdit ^js session) value))
 
 (defn brace-matching
+  "**Returns:** `any`"
   ^js [session]
   (.-getBraceMatching ^js session))
 
@@ -1030,6 +1157,7 @@
   (set! (.-getBraceMatching ^js session) value))
 
 (defn diagnostics-for-project
+  "**Returns:** `any`"
   ^js [session]
   (.-getDiagnosticsForProject ^js session))
 
@@ -1038,6 +1166,7 @@
   (set! (.-getDiagnosticsForProject ^js session) value))
 
 (defn configure-plugin
+  "**Returns:** `any`"
   ^js [session]
   (.-configurePlugin ^js session))
 
@@ -1046,6 +1175,7 @@
   (set! (.-configurePlugin ^js session) value))
 
 (defn smart-selection-range
+  "**Returns:** `any`"
   ^js [session]
   (.-getSmartSelectionRange ^js session))
 
@@ -1054,6 +1184,7 @@
   (set! (.-getSmartSelectionRange ^js session) value))
 
 (defn toggle-line-comment
+  "**Returns:** `any`"
   ^js [session]
   (.-toggleLineComment ^js session))
 
@@ -1062,6 +1193,7 @@
   (set! (.-toggleLineComment ^js session) value))
 
 (defn toggle-multiline-comment
+  "**Returns:** `any`"
   ^js [session]
   (.-toggleMultilineComment ^js session))
 
@@ -1070,6 +1202,7 @@
   (set! (.-toggleMultilineComment ^js session) value))
 
 (defn comment-selection
+  "**Returns:** `any`"
   ^js [session]
   (.-commentSelection ^js session))
 
@@ -1078,6 +1211,7 @@
   (set! (.-commentSelection ^js session) value))
 
 (defn uncomment-selection
+  "**Returns:** `any`"
   ^js [session]
   (.-uncommentSelection ^js session))
 
@@ -1086,6 +1220,7 @@
   (set! (.-uncommentSelection ^js session) value))
 
 (defn map-selection-range
+  "**Returns:** `any`"
   ^js [session]
   (.-mapSelectionRange ^js session))
 
@@ -1094,6 +1229,7 @@
   (set! (.-mapSelectionRange ^js session) value))
 
 (defn script-info-from-project-service
+  "**Returns:** `any`"
   ^js [session]
   (.-getScriptInfoFromProjectService ^js session))
 
@@ -1102,6 +1238,7 @@
   (set! (.-getScriptInfoFromProjectService ^js session) value))
 
 (defn to-protocol-call-hierarchy-item
+  "**Returns:** `any`"
   ^js [session]
   (.-toProtocolCallHierarchyItem ^js session))
 
@@ -1110,6 +1247,7 @@
   (set! (.-toProtocolCallHierarchyItem ^js session) value))
 
 (defn to-protocol-call-hierarchy-incoming-call
+  "**Returns:** `any`"
   ^js [session]
   (.-toProtocolCallHierarchyIncomingCall ^js session))
 
@@ -1118,6 +1256,7 @@
   (set! (.-toProtocolCallHierarchyIncomingCall ^js session) value))
 
 (defn to-protocol-call-hierarchy-outgoing-call
+  "**Returns:** `any`"
   ^js [session]
   (.-toProtocolCallHierarchyOutgoingCall ^js session))
 
@@ -1126,6 +1265,7 @@
   (set! (.-toProtocolCallHierarchyOutgoingCall ^js session) value))
 
 (defn prepare-call-hierarchy
+  "**Returns:** `any`"
   ^js [session]
   (.-prepareCallHierarchy ^js session))
 
@@ -1134,6 +1274,7 @@
   (set! (.-prepareCallHierarchy ^js session) value))
 
 (defn provide-call-hierarchy-incoming-calls
+  "**Returns:** `any`"
   ^js [session]
   (.-provideCallHierarchyIncomingCalls ^js session))
 
@@ -1142,6 +1283,7 @@
   (set! (.-provideCallHierarchyIncomingCalls ^js session) value))
 
 (defn provide-call-hierarchy-outgoing-calls
+  "**Returns:** `any`"
   ^js [session]
   (.-provideCallHierarchyOutgoingCalls ^js session))
 
@@ -1163,6 +1305,7 @@
   (.exit ^js session))
 
 (defn not-required
+  "**Returns:** `any`"
   ^js [session]
   (.-notRequired ^js session))
 
@@ -1171,6 +1314,7 @@
   (set! (.-notRequired ^js session) value))
 
 (defn required-response
+  "**Returns:** `any`"
   ^js [session]
   (.-requiredResponse ^js session))
 
@@ -1179,6 +1323,7 @@
   (set! (.-requiredResponse ^js session) value))
 
 (defn handlers
+  "**Returns:** `any`"
   ^js [session]
   (.-handlers ^js session))
 
@@ -1196,6 +1341,7 @@
   (.addProtocolHandler ^js session command handler))
 
 (defn set-current-request
+  "**Returns:** `any`"
   ^js [session]
   (.-setCurrentRequest ^js session))
 
@@ -1204,6 +1350,7 @@
   (set! (.-setCurrentRequest ^js session) value))
 
 (defn reset-current-request
+  "**Returns:** `any`"
   ^js [session]
   (.-resetCurrentRequest ^js session))
 
@@ -1253,6 +1400,7 @@
   (.toStringMessage ^js session message))
 
 (defn format-options
+  "**Returns:** `any`"
   ^js [session]
   (.-getFormatOptions ^js session))
 
@@ -1261,6 +1409,7 @@
   (set! (.-getFormatOptions ^js session) value))
 
 (defn preferences
+  "**Returns:** `any`"
   ^js [session]
   (.-getPreferences ^js session))
 
@@ -1269,6 +1418,7 @@
   (set! (.-getPreferences ^js session) value))
 
 (defn host-format-options
+  "**Returns:** `any`"
   ^js [session]
   (.-getHostFormatOptions ^js session))
 
@@ -1277,6 +1427,7 @@
   (set! (.-getHostFormatOptions ^js session) value))
 
 (defn host-preferences
+  "**Returns:** `any`"
   ^js [session]
   (.-getHostPreferences ^js session))
 
@@ -1285,6 +1436,7 @@
   (set! (.-getHostPreferences ^js session) value))
 
 (defn map-to-original-location
+  "**Returns:** `any`"
   ^js [session]
   (.-mapToOriginalLocation ^js session))
 

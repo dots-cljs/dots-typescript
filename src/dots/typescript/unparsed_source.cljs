@@ -1,10 +1,12 @@
 (ns dots.typescript.unparsed-source)
 
 (defn kind
+  "**Returns:** `SyntaxKind.UnparsedSource`"
   ^js [unparsed-source]
   (.-kind ^js unparsed-source))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [unparsed-source]
   (.-fileName ^js unparsed-source))
 
@@ -13,6 +15,7 @@
   (set! (.-fileName ^js unparsed-source) value))
 
 (defn text
+  "**Returns:** `string`"
   ^js [unparsed-source]
   (.-text ^js unparsed-source))
 
@@ -21,10 +24,12 @@
   (set! (.-text ^js unparsed-source) value))
 
 (defn prologues
+  "**Returns:** `readonly UnparsedPrologue[]`"
   ^js [unparsed-source]
   (.-prologues ^js unparsed-source))
 
 (defn helpers
+  "**Returns:** `readonly UnscopedEmitHelper[] | undefined`"
   ^js [unparsed-source]
   (.-helpers ^js unparsed-source))
 
@@ -33,6 +38,7 @@
   (set! (.-helpers ^js unparsed-source) value))
 
 (defn referenced-files
+  "**Returns:** `readonly FileReference[]`"
   ^js [unparsed-source]
   (.-referencedFiles ^js unparsed-source))
 
@@ -41,6 +47,7 @@
   (set! (.-referencedFiles ^js unparsed-source) value))
 
 (defn type-reference-directives
+  "**Returns:** `readonly FileReference[] | undefined`"
   ^js [unparsed-source]
   (.-typeReferenceDirectives ^js unparsed-source))
 
@@ -49,6 +56,7 @@
   (set! (.-typeReferenceDirectives ^js unparsed-source) value))
 
 (defn lib-reference-directives
+  "**Returns:** `readonly FileReference[]`"
   ^js [unparsed-source]
   (.-libReferenceDirectives ^js unparsed-source))
 
@@ -57,6 +65,7 @@
   (set! (.-libReferenceDirectives ^js unparsed-source) value))
 
 (defn has-no-default-lib?
+  "**Returns:** `boolean | undefined`"
   ^js [unparsed-source]
   (.-hasNoDefaultLib ^js unparsed-source))
 
@@ -65,6 +74,7 @@
   (set! (.-hasNoDefaultLib ^js unparsed-source) value))
 
 (defn source-map-path
+  "**Returns:** `string | undefined`"
   ^js [unparsed-source]
   (.-sourceMapPath ^js unparsed-source))
 
@@ -73,6 +83,7 @@
   (set! (.-sourceMapPath ^js unparsed-source) value))
 
 (defn source-map-text
+  "**Returns:** `string | undefined`"
   ^js [unparsed-source]
   (.-sourceMapText ^js unparsed-source))
 
@@ -81,18 +92,22 @@
   (set! (.-sourceMapText ^js unparsed-source) value))
 
 (defn synthetic-references
+  "**Returns:** `readonly UnparsedSyntheticReference[] | undefined`"
   ^js [unparsed-source]
   (.-syntheticReferences ^js unparsed-source))
 
 (defn texts
+  "**Returns:** `readonly UnparsedSourceText[]`"
   ^js [unparsed-source]
   (.-texts ^js unparsed-source))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [unparsed-source]
   (.-flags ^js unparsed-source))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [unparsed-source]
   (.-parent ^js unparsed-source))
 
@@ -232,9 +247,11 @@
    (.forEachChild ^js unparsed-source cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [unparsed-source]
   (.-pos ^js unparsed-source))
 
 (defn end
+  "**Returns:** `number`"
   ^js [unparsed-source]
   (.-end ^js unparsed-source))

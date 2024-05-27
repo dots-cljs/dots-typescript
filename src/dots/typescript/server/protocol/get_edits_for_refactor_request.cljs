@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.GetEditsForRefactor`"
   ^js [get-edits-for-refactor-request]
   (.-command ^js get-edits-for-refactor-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js get-edits-for-refactor-request) value))
 
 (defn arguments
+  "**Returns:** `GetEditsForRefactorRequestArgs`"
   ^js [get-edits-for-refactor-request]
   (.-arguments ^js get-edits-for-refactor-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js get-edits-for-refactor-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [get-edits-for-refactor-request]
   (.-type ^js get-edits-for-refactor-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js get-edits-for-refactor-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [get-edits-for-refactor-request]
   (.-seq ^js get-edits-for-refactor-request))
 

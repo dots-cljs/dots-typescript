@@ -1,6 +1,7 @@
 (ns dots.typescript.classification-result)
 
 (defn final-lex-state
+  "**Returns:** `EndOfLineState`"
   ^js [classification-result]
   (.-finalLexState ^js classification-result))
 
@@ -9,6 +10,7 @@
   (set! (.-finalLexState ^js classification-result) value))
 
 (defn entries
+  "**Returns:** `ClassificationInfo[]`"
   ^js [classification-result]
   (.-entries ^js classification-result))
 

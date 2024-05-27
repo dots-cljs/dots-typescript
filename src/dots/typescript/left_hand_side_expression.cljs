@@ -1,14 +1,17 @@
 (ns dots.typescript.left-hand-side-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [left-hand-side-expression]
   (.-kind ^js left-hand-side-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [left-hand-side-expression]
   (.-flags ^js left-hand-side-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [left-hand-side-expression]
   (.-parent ^js left-hand-side-expression))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js left-hand-side-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [left-hand-side-expression]
   (.-pos ^js left-hand-side-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [left-hand-side-expression]
   (.-end ^js left-hand-side-expression))

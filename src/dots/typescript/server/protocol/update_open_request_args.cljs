@@ -2,7 +2,9 @@
   "Arguments to UpdateOpenRequest")
 
 (defn open-files
-  "List of newly open files"
+  "List of newly open files
+   
+   **Returns:** `OpenRequestArgs[] | undefined`"
   ^js [update-open-request-args]
   (.-openFiles ^js update-open-request-args))
 
@@ -12,7 +14,9 @@
   (set! (.-openFiles ^js update-open-request-args) value))
 
 (defn changed-files
-  "List of open files files that were changes"
+  "List of open files files that were changes
+   
+   **Returns:** `FileCodeEdits[] | undefined`"
   ^js [update-open-request-args]
   (.-changedFiles ^js update-open-request-args))
 
@@ -22,7 +26,9 @@
   (set! (.-changedFiles ^js update-open-request-args) value))
 
 (defn closed-files
-  "List of files that were closed"
+  "List of files that were closed
+   
+   **Returns:** `string[] | undefined`"
   ^js [update-open-request-args]
   (.-closedFiles ^js update-open-request-args))
 

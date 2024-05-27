@@ -1,18 +1,22 @@
 (ns dots.typescript.iteration-statement)
 
 (defn statement
+  "**Returns:** `Statement`"
   ^js [iteration-statement]
   (.-statement ^js iteration-statement))
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [iteration-statement]
   (.-kind ^js iteration-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [iteration-statement]
   (.-flags ^js iteration-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [iteration-statement]
   (.-parent ^js iteration-statement))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js iteration-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [iteration-statement]
   (.-pos ^js iteration-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [iteration-statement]
   (.-end ^js iteration-statement))

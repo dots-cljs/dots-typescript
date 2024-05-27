@@ -2,14 +2,17 @@
   (:require ["typescript" :as typescript]))
 
 (defn project-kind
+  "**Returns:** `ProjectKind`"
   ^js [project]
   (.-projectKind ^js project))
 
 (defn project-service
+  "**Returns:** `ProjectService`"
   ^js [project]
   (.-projectService ^js project))
 
 (defn document-registry
+  "**Returns:** `any`"
   ^js [project]
   (.-documentRegistry ^js project))
 
@@ -18,6 +21,7 @@
   (set! (.-documentRegistry ^js project) value))
 
 (defn compiler-options
+  "**Returns:** `any`"
   ^js [project]
   (.-compilerOptions ^js project))
 
@@ -26,6 +30,7 @@
   (set! (.-compilerOptions ^js project) value))
 
 (defn compile-on-save-enabled?
+  "**Returns:** `boolean`"
   ^js [project]
   (.-compileOnSaveEnabled ^js project))
 
@@ -34,6 +39,7 @@
   (set! (.-compileOnSaveEnabled ^js project) value))
 
 (defn watch-options
+  "**Returns:** `WatchOptions | undefined`"
   ^js [project]
   (.-watchOptions ^js project))
 
@@ -42,6 +48,7 @@
   (set! (.-watchOptions ^js project) value))
 
 (defn root-files
+  "**Returns:** `any`"
   ^js [project]
   (.-rootFiles ^js project))
 
@@ -50,6 +57,7 @@
   (set! (.-rootFiles ^js project) value))
 
 (defn root-files-map
+  "**Returns:** `any`"
   ^js [project]
   (.-rootFilesMap ^js project))
 
@@ -58,6 +66,7 @@
   (set! (.-rootFilesMap ^js project) value))
 
 (defn program
+  "**Returns:** `any`"
   ^js [project]
   (.-program ^js project))
 
@@ -66,6 +75,7 @@
   (set! (.-program ^js project) value))
 
 (defn external-files
+  "**Returns:** `any`"
   ^js [project]
   (.-externalFiles ^js project))
 
@@ -74,6 +84,7 @@
   (set! (.-externalFiles ^js project) value))
 
 (defn missing-files-map
+  "**Returns:** `any`"
   ^js [project]
   (.-missingFilesMap ^js project))
 
@@ -82,6 +93,7 @@
   (set! (.-missingFilesMap ^js project) value))
 
 (defn generated-files-map
+  "**Returns:** `any`"
   ^js [project]
   (.-generatedFilesMap ^js project))
 
@@ -90,6 +102,7 @@
   (set! (.-generatedFilesMap ^js project) value))
 
 (defn language-service
+  "**Returns:** `LanguageService`"
   ^js [project]
   (.-languageService ^js project))
 
@@ -98,6 +111,7 @@
   (set! (.-languageService ^js project) value))
 
 (defn language-service-enabled?
+  "**Returns:** `boolean`"
   ^js [project]
   (.-languageServiceEnabled ^js project))
 
@@ -106,14 +120,17 @@
   (set! (.-languageServiceEnabled ^js project) value))
 
 (defn trace
+  "**Returns:** `((s: string) => void) | undefined`"
   ^js [project]
   (.-trace ^js project))
 
 (defn realpath
+  "**Returns:** `((path: string) => string) | undefined`"
   ^js [project]
   (.-realpath ^js project))
 
 (defn builder-state
+  "**Returns:** `any`"
   ^js [project]
   (.-builderState ^js project))
 
@@ -122,7 +139,9 @@
   (set! (.-builderState ^js project) value))
 
 (defn updated-file-names
-  "Set of files names that were updated since the last call to getChangesSinceVersion."
+  "Set of files names that were updated since the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [project]
   (.-updatedFileNames ^js project))
 
@@ -132,7 +151,9 @@
   (set! (.-updatedFileNames ^js project) value))
 
 (defn last-reported-file-names
-  "Set of files that was returned from the last call to getChangesSinceVersion."
+  "Set of files that was returned from the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [project]
   (.-lastReportedFileNames ^js project))
 
@@ -142,7 +163,9 @@
   (set! (.-lastReportedFileNames ^js project) value))
 
 (defn last-reported-version
-  "Last version that was reported."
+  "Last version that was reported.
+   
+   **Returns:** `any`"
   ^js [project]
   (.-lastReportedVersion ^js project))
 
@@ -152,6 +175,7 @@
   (set! (.-lastReportedVersion ^js project) value))
 
 (defn project-errors
+  "**Returns:** `Diagnostic[] | undefined`"
   ^js [project]
   (.-projectErrors ^js project))
 
@@ -160,6 +184,7 @@
   (set! (.-projectErrors ^js project) value))
 
 (defn initial-load-pending
+  "**Returns:** `() => boolean`"
   ^js [project]
   (.-isInitialLoadPending ^js project))
 
@@ -168,6 +193,7 @@
   (set! (.-isInitialLoadPending ^js project) value))
 
 (defn cancellation-token
+  "**Returns:** `any`"
   ^js [project]
   (.-cancellationToken ^js project))
 
@@ -182,6 +208,7 @@
   (.isJsOnlyProject ^js project))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [project]
   (.-jsDocParsingMode ^js project))
 
@@ -232,6 +259,7 @@
   (.getScriptFileNames ^js project))
 
 (defn or-create-script-info-and-attach-to-project
+  "**Returns:** `any`"
   ^js [project]
   (.-getOrCreateScriptInfoAndAttachToProject ^js project))
 
@@ -361,6 +389,7 @@
   (.error ^js project s))
 
 (defn set-internal-compiler-options-for-emitting-js-files
+  "**Returns:** `any`"
   ^js [project]
   (.-setInternalCompilerOptionsForEmittingJsFiles ^js project))
 
@@ -473,6 +502,7 @@
   (.close ^js project))
 
 (defn detach-script-info-if-not-root
+  "**Returns:** `any`"
   ^js [project]
   (.-detachScriptInfoIfNotRoot ^js project))
 
@@ -616,6 +646,7 @@
   (.removeExistingTypings ^js project include))
 
 (defn update-graph-worker
+  "**Returns:** `any`"
   ^js [project]
   (.-updateGraphWorker ^js project))
 
@@ -624,6 +655,7 @@
   (set! (.-updateGraphWorker ^js project) value))
 
 (defn detach-script-info-from-project
+  "**Returns:** `any`"
   ^js [project]
   (.-detachScriptInfoFromProject ^js project))
 
@@ -632,6 +664,7 @@
   (set! (.-detachScriptInfoFromProject ^js project) value))
 
 (defn add-missing-file-watcher
+  "**Returns:** `any`"
   ^js [project]
   (.-addMissingFileWatcher ^js project))
 
@@ -640,6 +673,7 @@
   (set! (.-addMissingFileWatcher ^js project) value))
 
 (defn watched-missing-file
+  "**Returns:** `any`"
   ^js [project]
   (.-isWatchedMissingFile ^js project))
 
@@ -648,6 +682,7 @@
   (set! (.-isWatchedMissingFile ^js project) value))
 
 (defn create-generated-file-watcher
+  "**Returns:** `any`"
   ^js [project]
   (.-createGeneratedFileWatcher ^js project))
 
@@ -656,6 +691,7 @@
   (set! (.-createGeneratedFileWatcher ^js project) value))
 
 (defn valid-generated-file-watcher
+  "**Returns:** `any`"
   ^js [project]
   (.-isValidGeneratedFileWatcher ^js project))
 
@@ -664,6 +700,7 @@
   (set! (.-isValidGeneratedFileWatcher ^js project) value))
 
 (defn clear-generated-file-watch
+  "**Returns:** `any`"
   ^js [project]
   (.-clearGeneratedFileWatch ^js project))
 

@@ -1,14 +1,17 @@
 (ns dots.typescript.punctuation-token)
 
 (defn kind
+  "**Returns:** `TKind`"
   ^js [punctuation-token]
   (.-kind ^js punctuation-token))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [punctuation-token]
   (.-flags ^js punctuation-token))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [punctuation-token]
   (.-parent ^js punctuation-token))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js punctuation-token cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [punctuation-token]
   (.-pos ^js punctuation-token))
 
 (defn end
+  "**Returns:** `number`"
   ^js [punctuation-token]
   (.-end ^js punctuation-token))

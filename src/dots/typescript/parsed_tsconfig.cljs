@@ -1,6 +1,7 @@
 (ns dots.typescript.parsed-tsconfig)
 
 (defn raw
+  "**Returns:** `any`"
   ^js [parsed-tsconfig]
   (.-raw ^js parsed-tsconfig))
 
@@ -9,6 +10,7 @@
   (set! (.-raw ^js parsed-tsconfig) value))
 
 (defn options
+  "**Returns:** `CompilerOptions | undefined`"
   ^js [parsed-tsconfig]
   (.-options ^js parsed-tsconfig))
 
@@ -17,6 +19,7 @@
   (set! (.-options ^js parsed-tsconfig) value))
 
 (defn watch-options
+  "**Returns:** `WatchOptions | undefined`"
   ^js [parsed-tsconfig]
   (.-watchOptions ^js parsed-tsconfig))
 
@@ -25,6 +28,7 @@
   (set! (.-watchOptions ^js parsed-tsconfig) value))
 
 (defn type-acquisition
+  "**Returns:** `TypeAcquisition | undefined`"
   ^js [parsed-tsconfig]
   (.-typeAcquisition ^js parsed-tsconfig))
 
@@ -33,7 +37,9 @@
   (set! (.-typeAcquisition ^js parsed-tsconfig) value))
 
 (defn extended-config-path
-  "Note that the case of the config path has not yet been normalized, as no files have been imported into the project yet"
+  "Note that the case of the config path has not yet been normalized, as no files have been imported into the project yet
+   
+   **Returns:** `string | string[] | undefined`"
   ^js [parsed-tsconfig]
   (.-extendedConfigPath ^js parsed-tsconfig))
 

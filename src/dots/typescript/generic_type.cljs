@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [generic-type]
   (.-typeParameters ^js generic-type))
 
@@ -10,6 +11,7 @@
   (set! (.-typeParameters ^js generic-type) value))
 
 (defn outer-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [generic-type]
   (.-outerTypeParameters ^js generic-type))
 
@@ -18,6 +20,7 @@
   (set! (.-outerTypeParameters ^js generic-type) value))
 
 (defn local-type-parameters
+  "**Returns:** `TypeParameter[] | undefined`"
   ^js [generic-type]
   (.-localTypeParameters ^js generic-type))
 
@@ -26,6 +29,7 @@
   (set! (.-localTypeParameters ^js generic-type) value))
 
 (defn this-type
+  "**Returns:** `TypeParameter | undefined`"
   ^js [generic-type]
   (.-thisType ^js generic-type))
 
@@ -34,6 +38,7 @@
   (set! (.-thisType ^js generic-type) value))
 
 (defn object-flags
+  "**Returns:** `ObjectFlags`"
   ^js [generic-type]
   (.-objectFlags ^js generic-type))
 
@@ -42,6 +47,7 @@
   (set! (.-objectFlags ^js generic-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [generic-type]
   (.-flags ^js generic-type))
 
@@ -50,6 +56,7 @@
   (set! (.-flags ^js generic-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [generic-type]
   (.-symbol ^js generic-type))
 
@@ -58,6 +65,7 @@
   (set! (.-symbol ^js generic-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [generic-type]
   (.-pattern ^js generic-type))
 
@@ -66,6 +74,7 @@
   (set! (.-pattern ^js generic-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [generic-type]
   (.-aliasSymbol ^js generic-type))
 
@@ -74,6 +83,7 @@
   (set! (.-aliasSymbol ^js generic-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [generic-type]
   (.-aliasTypeArguments ^js generic-type))
 
@@ -200,6 +210,7 @@
   (.isIndexType ^js generic-type))
 
 (defn target
+  "**Returns:** `GenericType`"
   ^js [generic-type]
   (.-target ^js generic-type))
 
@@ -208,6 +219,7 @@
   (set! (.-target ^js generic-type) value))
 
 (defn node
+  "**Returns:** `TypeReferenceNode | ArrayTypeNode | TupleTypeNode | undefined`"
   ^js [generic-type]
   (.-node ^js generic-type))
 
@@ -216,6 +228,7 @@
   (set! (.-node ^js generic-type) value))
 
 (defn type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [generic-type]
   (.-typeArguments ^js generic-type))
 

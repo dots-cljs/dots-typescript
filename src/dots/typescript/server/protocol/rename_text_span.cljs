@@ -1,14 +1,17 @@
 (ns dots.typescript.server.protocol.rename-text-span)
 
 (defn prefix-text
+  "**Returns:** `string | undefined`"
   ^js [rename-text-span]
   (.-prefixText ^js rename-text-span))
 
 (defn suffix-text
+  "**Returns:** `string | undefined`"
   ^js [rename-text-span]
   (.-suffixText ^js rename-text-span))
 
 (defn context-start
+  "**Returns:** `Location | undefined`"
   ^js [rename-text-span]
   (.-contextStart ^js rename-text-span))
 
@@ -17,6 +20,7 @@
   (set! (.-contextStart ^js rename-text-span) value))
 
 (defn context-end
+  "**Returns:** `Location | undefined`"
   ^js [rename-text-span]
   (.-contextEnd ^js rename-text-span))
 
@@ -25,7 +29,9 @@
   (set! (.-contextEnd ^js rename-text-span) value))
 
 (defn start
-  "First character of the definition."
+  "First character of the definition.
+   
+   **Returns:** `Location`"
   ^js [rename-text-span]
   (.-start ^js rename-text-span))
 
@@ -35,7 +41,9 @@
   (set! (.-start ^js rename-text-span) value))
 
 (defn end
-  "One character past last character of the definition."
+  "One character past last character of the definition.
+   
+   **Returns:** `Location`"
   ^js [rename-text-span]
   (.-end ^js rename-text-span))
 

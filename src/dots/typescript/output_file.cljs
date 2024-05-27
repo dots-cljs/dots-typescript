@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
+  "**Returns:** `string`"
   ^js [output-file]
   (.-name ^js output-file))
 
@@ -10,6 +11,7 @@
   (set! (.-name ^js output-file) value))
 
 (defn write-byte-order-mark?
+  "**Returns:** `boolean`"
   ^js [output-file]
   (.-writeByteOrderMark ^js output-file))
 
@@ -18,6 +20,7 @@
   (set! (.-writeByteOrderMark ^js output-file) value))
 
 (defn text
+  "**Returns:** `string`"
   ^js [output-file]
   (.-text ^js output-file))
 

@@ -1,18 +1,22 @@
 (ns dots.typescript.jsx-text)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxText`"
   ^js [jsx-text]
   (.-kind ^js jsx-text))
 
 (defn parent
+  "**Returns:** `JsxElement | JsxFragment`"
   ^js [jsx-text]
   (.-parent ^js jsx-text))
 
 (defn contains-only-trivia-white-spaces?
+  "**Returns:** `boolean`"
   ^js [jsx-text]
   (.-containsOnlyTriviaWhiteSpaces ^js jsx-text))
 
 (defn text
+  "**Returns:** `string`"
   ^js [jsx-text]
   (.-text ^js jsx-text))
 
@@ -21,6 +25,7 @@
   (set! (.-text ^js jsx-text) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [jsx-text]
   (.-isUnterminated ^js jsx-text))
 
@@ -29,6 +34,7 @@
   (set! (.-isUnterminated ^js jsx-text) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [jsx-text]
   (.-hasExtendedUnicodeEscape ^js jsx-text))
 
@@ -37,6 +43,7 @@
   (set! (.-hasExtendedUnicodeEscape ^js jsx-text) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-text]
   (.-flags ^js jsx-text))
 
@@ -176,9 +183,11 @@
    (.forEachChild ^js jsx-text cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-text]
   (.-pos ^js jsx-text))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-text]
   (.-end ^js jsx-text))

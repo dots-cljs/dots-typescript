@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.PropertySignature`"
   ^js [property-signature]
   (.-kind ^js property-signature))
 
 (defn parent
+  "**Returns:** `InterfaceDeclaration | TypeLiteralNode`"
   ^js [property-signature]
   (.-parent ^js property-signature))
 
 (defn modifiers
+  "**Returns:** `NodeArray<Modifier> | undefined`"
   ^js [property-signature]
   (.-modifiers ^js property-signature))
 
 (defn name
+  "**Returns:** `PropertyName`"
   ^js [property-signature]
   (.-name ^js property-signature))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [property-signature]
   (.-questionToken ^js property-signature))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [property-signature]
   (.-type ^js property-signature))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [property-signature]
   (.-flags ^js property-signature))
 
@@ -165,9 +172,11 @@
    (.forEachChild ^js property-signature cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [property-signature]
   (.-pos ^js property-signature))
 
 (defn end
+  "**Returns:** `number`"
   ^js [property-signature]
   (.-end ^js property-signature))

@@ -3,7 +3,9 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
-  "The programmatic name of the refactoring"
+  "The programmatic name of the refactoring
+   
+   **Returns:** `string`"
   ^js [applicable-refactor-info]
   (.-name ^js applicable-refactor-info))
 
@@ -14,7 +16,9 @@
 
 (defn description
   "A description of this refactoring category to show to the user.
-   If the refactoring gets inlined (see below), this text will not be visible."
+   If the refactoring gets inlined (see below), this text will not be visible.
+   
+   **Returns:** `string`"
   ^js [applicable-refactor-info]
   (.-description ^js applicable-refactor-info))
 
@@ -29,7 +33,9 @@
    of a context menu. Non-inlineanable refactorings should always be shown inside
    their parent grouping.
    
-   If not specified, this value is assumed to be 'true'"
+   If not specified, this value is assumed to be 'true'
+   
+   **Returns:** `boolean | undefined`"
   ^js [applicable-refactor-info]
   (.-inlineable ^js applicable-refactor-info))
 
@@ -43,6 +49,7 @@
   (set! (.-inlineable ^js applicable-refactor-info) value))
 
 (defn actions
+  "**Returns:** `RefactorActionInfo[]`"
   ^js [applicable-refactor-info]
   (.-actions ^js applicable-refactor-info))
 

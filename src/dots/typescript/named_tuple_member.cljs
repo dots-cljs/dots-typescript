@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.NamedTupleMember`"
   ^js [named-tuple-member]
   (.-kind ^js named-tuple-member))
 
 (defn dot-dot-dot-token
+  "**Returns:** `Token<SyntaxKind.DotDotDotToken> | undefined`"
   ^js [named-tuple-member]
   (.-dotDotDotToken ^js named-tuple-member))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [named-tuple-member]
   (.-name ^js named-tuple-member))
 
 (defn question-token
+  "**Returns:** `Token<SyntaxKind.QuestionToken> | undefined`"
   ^js [named-tuple-member]
   (.-questionToken ^js named-tuple-member))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [named-tuple-member]
   (.-type ^js named-tuple-member))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [named-tuple-member]
   (.-flags ^js named-tuple-member))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [named-tuple-member]
   (.-parent ^js named-tuple-member))
 
@@ -165,9 +172,11 @@
    (.forEachChild ^js named-tuple-member cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [named-tuple-member]
   (.-pos ^js named-tuple-member))
 
 (defn end
+  "**Returns:** `number`"
   ^js [named-tuple-member]
   (.-end ^js named-tuple-member))

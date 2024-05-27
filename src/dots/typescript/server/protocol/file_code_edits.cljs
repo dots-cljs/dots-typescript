@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.file-code-edits)
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [file-code-edits]
   (.-fileName ^js file-code-edits))
 
@@ -9,6 +10,7 @@
   (set! (.-fileName ^js file-code-edits) value))
 
 (defn text-changes
+  "**Returns:** `CodeEdit[]`"
   ^js [file-code-edits]
   (.-textChanges ^js file-code-edits))
 

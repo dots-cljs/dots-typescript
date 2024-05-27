@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn element-type
+  "**Returns:** `Type`"
   ^js [evolving-array-type]
   (.-elementType ^js evolving-array-type))
 
@@ -10,6 +11,7 @@
   (set! (.-elementType ^js evolving-array-type) value))
 
 (defn final-array-type
+  "**Returns:** `Type | undefined`"
   ^js [evolving-array-type]
   (.-finalArrayType ^js evolving-array-type))
 
@@ -18,6 +20,7 @@
   (set! (.-finalArrayType ^js evolving-array-type) value))
 
 (defn object-flags
+  "**Returns:** `ObjectFlags`"
   ^js [evolving-array-type]
   (.-objectFlags ^js evolving-array-type))
 
@@ -26,6 +29,7 @@
   (set! (.-objectFlags ^js evolving-array-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [evolving-array-type]
   (.-flags ^js evolving-array-type))
 
@@ -34,6 +38,7 @@
   (set! (.-flags ^js evolving-array-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [evolving-array-type]
   (.-symbol ^js evolving-array-type))
 
@@ -42,6 +47,7 @@
   (set! (.-symbol ^js evolving-array-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [evolving-array-type]
   (.-pattern ^js evolving-array-type))
 
@@ -50,6 +56,7 @@
   (set! (.-pattern ^js evolving-array-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [evolving-array-type]
   (.-aliasSymbol ^js evolving-array-type))
 
@@ -58,6 +65,7 @@
   (set! (.-aliasSymbol ^js evolving-array-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [evolving-array-type]
   (.-aliasTypeArguments ^js evolving-array-type))
 

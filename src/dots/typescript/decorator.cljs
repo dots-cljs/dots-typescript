@@ -1,18 +1,22 @@
 (ns dots.typescript.decorator)
 
 (defn kind
+  "**Returns:** `SyntaxKind.Decorator`"
   ^js [decorator]
   (.-kind ^js decorator))
 
 (defn parent
+  "**Returns:** `NamedDeclaration`"
   ^js [decorator]
   (.-parent ^js decorator))
 
 (defn expression
+  "**Returns:** `LeftHandSideExpression`"
   ^js [decorator]
   (.-expression ^js decorator))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [decorator]
   (.-flags ^js decorator))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js decorator cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [decorator]
   (.-pos ^js decorator))
 
 (defn end
+  "**Returns:** `number`"
   ^js [decorator]
   (.-end ^js decorator))

@@ -2,7 +2,9 @@
   "The body of a \"references\" response message.")
 
 (defn refs
-  "The file locations referencing the symbol."
+  "The file locations referencing the symbol.
+   
+   **Returns:** `readonly ReferencesResponseItem[]`"
   ^js [references-response-body]
   (.-refs ^js references-response-body))
 
@@ -12,7 +14,9 @@
   (set! (.-refs ^js references-response-body) value))
 
 (defn symbol-name
-  "The name of the symbol."
+  "The name of the symbol.
+   
+   **Returns:** `string`"
   ^js [references-response-body]
   (.-symbolName ^js references-response-body))
 
@@ -22,7 +26,9 @@
   (set! (.-symbolName ^js references-response-body) value))
 
 (defn symbol-start-offset
-  "The start character offset of the symbol (on the line provided by the references request)."
+  "The start character offset of the symbol (on the line provided by the references request).
+   
+   **Returns:** `number`"
   ^js [references-response-body]
   (.-symbolStartOffset ^js references-response-body))
 
@@ -32,7 +38,9 @@
   (set! (.-symbolStartOffset ^js references-response-body) value))
 
 (defn symbol-display-string
-  "The full display name of the symbol."
+  "The full display name of the symbol.
+   
+   **Returns:** `string`"
   ^js [references-response-body]
   (.-symbolDisplayString ^js references-response-body))
 

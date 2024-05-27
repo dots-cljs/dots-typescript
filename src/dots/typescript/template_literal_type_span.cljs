@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.TemplateLiteralTypeSpan`"
   ^js [template-literal-type-span]
   (.-kind ^js template-literal-type-span))
 
 (defn parent
+  "**Returns:** `TemplateLiteralTypeNode`"
   ^js [template-literal-type-span]
   (.-parent ^js template-literal-type-span))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [template-literal-type-span]
   (.-type ^js template-literal-type-span))
 
 (defn literal
+  "**Returns:** `TemplateMiddle | TemplateTail`"
   ^js [template-literal-type-span]
   (.-literal ^js template-literal-type-span))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [template-literal-type-span]
   (.-flags ^js template-literal-type-span))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js template-literal-type-span cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [template-literal-type-span]
   (.-pos ^js template-literal-type-span))
 
 (defn end
+  "**Returns:** `number`"
   ^js [template-literal-type-span]
   (.-end ^js template-literal-type-span))

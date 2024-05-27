@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `NavigationTree | undefined`"
   ^js [nav-tree-response]
   (.-body ^js nav-tree-response))
 
@@ -10,6 +11,7 @@
   (set! (.-body ^js nav-tree-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [nav-tree-response]
   (.-type ^js nav-tree-response))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js nav-tree-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [nav-tree-response]
   (.-request_seq ^js nav-tree-response))
 
@@ -28,7 +32,9 @@
   (set! (.-request_seq ^js nav-tree-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [nav-tree-response]
   (.-success ^js nav-tree-response))
 
@@ -38,7 +44,9 @@
   (set! (.-success ^js nav-tree-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [nav-tree-response]
   (.-command ^js nav-tree-response))
 
@@ -49,7 +57,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [nav-tree-response]
   (.-message ^js nav-tree-response))
 
@@ -60,7 +70,9 @@
   (set! (.-message ^js nav-tree-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [nav-tree-response]
   (.-metadata ^js nav-tree-response))
 
@@ -70,7 +82,9 @@
   (set! (.-metadata ^js nav-tree-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [nav-tree-response]
   (.-performanceData ^js nav-tree-response))
 
@@ -80,7 +94,9 @@
   (set! (.-performanceData ^js nav-tree-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [nav-tree-response]
   (.-seq ^js nav-tree-response))
 

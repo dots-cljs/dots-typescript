@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocVariadicType`"
   ^js [js-doc-variadic-type]
   (.-kind ^js js-doc-variadic-type))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [js-doc-variadic-type]
   (.-type ^js js-doc-variadic-type))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-variadic-type]
   (.-flags ^js js-doc-variadic-type))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-variadic-type]
   (.-parent ^js js-doc-variadic-type))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js js-doc-variadic-type cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-variadic-type]
   (.-pos ^js js-doc-variadic-type))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-variadic-type]
   (.-end ^js js-doc-variadic-type))

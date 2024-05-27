@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [comment]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocOverrideTag`"
   ^js [js-doc-override-tag]
   (.-kind ^js js-doc-override-tag))
 
 (defn parent
+  "**Returns:** `JSDoc | JSDocTypeLiteral`"
   ^js [js-doc-override-tag]
   (.-parent ^js js-doc-override-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-override-tag]
   (.-tagName ^js js-doc-override-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-override-tag]
   (.-comment ^js js-doc-override-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-override-tag]
   (.-flags ^js js-doc-override-tag))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js js-doc-override-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-override-tag]
   (.-pos ^js js-doc-override-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-override-tag]
   (.-end ^js js-doc-override-tag))

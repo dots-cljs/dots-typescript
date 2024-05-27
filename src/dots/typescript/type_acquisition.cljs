@@ -1,6 +1,7 @@
 (ns dots.typescript.type-acquisition)
 
 (defn enable?
+  "**Returns:** `boolean | undefined`"
   ^js [type-acquisition]
   (.-enable ^js type-acquisition))
 
@@ -9,6 +10,7 @@
   (set! (.-enable ^js type-acquisition) value))
 
 (defn include
+  "**Returns:** `string[] | undefined`"
   ^js [type-acquisition]
   (.-include ^js type-acquisition))
 
@@ -17,6 +19,7 @@
   (set! (.-include ^js type-acquisition) value))
 
 (defn exclude
+  "**Returns:** `string[] | undefined`"
   ^js [type-acquisition]
   (.-exclude ^js type-acquisition))
 
@@ -25,6 +28,7 @@
   (set! (.-exclude ^js type-acquisition) value))
 
 (defn disable-filename-based-type-acquisition?
+  "**Returns:** `boolean | undefined`"
   ^js [type-acquisition]
   (.-disableFilenameBasedTypeAcquisition ^js type-acquisition))
 

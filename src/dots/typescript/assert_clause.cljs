@@ -1,26 +1,32 @@
 (ns dots.typescript.assert-clause)
 
 (defn token
+  "**Returns:** `SyntaxKind.WithKeyword | SyntaxKind.AssertKeyword`"
   ^js [assert-clause]
   (.-token ^js assert-clause))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ImportAttributes`"
   ^js [assert-clause]
   (.-kind ^js assert-clause))
 
 (defn parent
+  "**Returns:** `ExportDeclaration | ImportDeclaration`"
   ^js [assert-clause]
   (.-parent ^js assert-clause))
 
 (defn elements
+  "**Returns:** `NodeArray<ImportAttribute>`"
   ^js [assert-clause]
   (.-elements ^js assert-clause))
 
 (defn multi-line?
+  "**Returns:** `boolean | undefined`"
   ^js [assert-clause]
   (.-multiLine ^js assert-clause))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [assert-clause]
   (.-flags ^js assert-clause))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js assert-clause cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [assert-clause]
   (.-pos ^js assert-clause))
 
 (defn end
+  "**Returns:** `number`"
   ^js [assert-clause]
   (.-end ^js assert-clause))

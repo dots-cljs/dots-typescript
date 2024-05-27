@@ -2,7 +2,9 @@
   "Arguments for FileRequest messages.")
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [file-request-args]
   (.-file ^js file-request-args))
 
@@ -12,6 +14,7 @@
   (set! (.-file ^js file-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [file-request-args]
   (.-projectFileName ^js file-request-args))
 

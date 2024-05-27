@@ -2,7 +2,9 @@
   "Arguments for TodoCommentRequest request.")
 
 (defn descriptors
-  "Array of target TodoCommentDescriptors that describes TODO comments to be found"
+  "Array of target TodoCommentDescriptors that describes TODO comments to be found
+   
+   **Returns:** `TodoCommentDescriptor[]`"
   ^js [todo-comment-request-args]
   (.-descriptors ^js todo-comment-request-args))
 
@@ -12,7 +14,9 @@
   (set! (.-descriptors ^js todo-comment-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [todo-comment-request-args]
   (.-file ^js todo-comment-request-args))
 
@@ -22,6 +26,7 @@
   (set! (.-file ^js todo-comment-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [todo-comment-request-args]
   (.-projectFileName ^js todo-comment-request-args))
 

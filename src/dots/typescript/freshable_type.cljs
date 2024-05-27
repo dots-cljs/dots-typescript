@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn fresh-type
+  "**Returns:** `FreshableType`"
   ^js [freshable-type]
   (.-freshType ^js freshable-type))
 
@@ -10,6 +11,7 @@
   (set! (.-freshType ^js freshable-type) value))
 
 (defn regular-type
+  "**Returns:** `FreshableType`"
   ^js [freshable-type]
   (.-regularType ^js freshable-type))
 
@@ -18,6 +20,7 @@
   (set! (.-regularType ^js freshable-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [freshable-type]
   (.-flags ^js freshable-type))
 
@@ -26,6 +29,7 @@
   (set! (.-flags ^js freshable-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [freshable-type]
   (.-symbol ^js freshable-type))
 
@@ -34,6 +38,7 @@
   (set! (.-symbol ^js freshable-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [freshable-type]
   (.-pattern ^js freshable-type))
 
@@ -42,6 +47,7 @@
   (set! (.-pattern ^js freshable-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [freshable-type]
   (.-aliasSymbol ^js freshable-type))
 
@@ -50,6 +56,7 @@
   (set! (.-aliasSymbol ^js freshable-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [freshable-type]
   (.-aliasTypeArguments ^js freshable-type))
 

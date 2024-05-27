@@ -1,18 +1,22 @@
 (ns dots.typescript.throw-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ThrowStatement`"
   ^js [throw-statement]
   (.-kind ^js throw-statement))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [throw-statement]
   (.-expression ^js throw-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [throw-statement]
   (.-flags ^js throw-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [throw-statement]
   (.-parent ^js throw-statement))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js throw-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [throw-statement]
   (.-pos ^js throw-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [throw-statement]
   (.-end ^js throw-statement))

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.ProvideInlayHints`"
   ^js [inlay-hints-request]
   (.-command ^js inlay-hints-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js inlay-hints-request) value))
 
 (defn arguments
+  "**Returns:** `InlayHintsRequestArgs`"
   ^js [inlay-hints-request]
   (.-arguments ^js inlay-hints-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js inlay-hints-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [inlay-hints-request]
   (.-type ^js inlay-hints-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js inlay-hints-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [inlay-hints-request]
   (.-seq ^js inlay-hints-request))
 

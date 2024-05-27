@@ -1,18 +1,22 @@
 (ns dots.typescript.default-clause)
 
 (defn kind
+  "**Returns:** `SyntaxKind.DefaultClause`"
   ^js [default-clause]
   (.-kind ^js default-clause))
 
 (defn parent
+  "**Returns:** `CaseBlock`"
   ^js [default-clause]
   (.-parent ^js default-clause))
 
 (defn statements
+  "**Returns:** `NodeArray<Statement>`"
   ^js [default-clause]
   (.-statements ^js default-clause))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [default-clause]
   (.-flags ^js default-clause))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js default-clause cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [default-clause]
   (.-pos ^js default-clause))
 
 (defn end
+  "**Returns:** `number`"
   ^js [default-clause]
   (.-end ^js default-clause))

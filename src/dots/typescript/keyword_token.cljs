@@ -1,14 +1,17 @@
 (ns dots.typescript.keyword-token)
 
 (defn kind
+  "**Returns:** `TKind`"
   ^js [keyword-token]
   (.-kind ^js keyword-token))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [keyword-token]
   (.-flags ^js keyword-token))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [keyword-token]
   (.-parent ^js keyword-token))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js keyword-token cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [keyword-token]
   (.-pos ^js keyword-token))
 
 (defn end
+  "**Returns:** `number`"
   ^js [keyword-token]
   (.-end ^js keyword-token))

@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.definition-info)
 
 (defn unverified?
-  "When true, the file may or may not exist."
+  "When true, the file may or may not exist.
+   
+   **Returns:** `boolean | undefined`"
   ^js [definition-info]
   (.-unverified ^js definition-info))
 
@@ -11,7 +13,9 @@
   (set! (.-unverified ^js definition-info) value))
 
 (defn file
-  "File containing text span."
+  "File containing text span.
+   
+   **Returns:** `string`"
   ^js [definition-info]
   (.-file ^js definition-info))
 
@@ -21,7 +25,9 @@
   (set! (.-file ^js definition-info) value))
 
 (defn start
-  "First character of the definition."
+  "First character of the definition.
+   
+   **Returns:** `Location`"
   ^js [definition-info]
   (.-start ^js definition-info))
 
@@ -31,7 +37,9 @@
   (set! (.-start ^js definition-info) value))
 
 (defn end
-  "One character past last character of the definition."
+  "One character past last character of the definition.
+   
+   **Returns:** `Location`"
   ^js [definition-info]
   (.-end ^js definition-info))
 
@@ -41,6 +49,7 @@
   (set! (.-end ^js definition-info) value))
 
 (defn context-start
+  "**Returns:** `Location | undefined`"
   ^js [definition-info]
   (.-contextStart ^js definition-info))
 
@@ -49,6 +58,7 @@
   (set! (.-contextStart ^js definition-info) value))
 
 (defn context-end
+  "**Returns:** `Location | undefined`"
   ^js [definition-info]
   (.-contextEnd ^js definition-info))
 

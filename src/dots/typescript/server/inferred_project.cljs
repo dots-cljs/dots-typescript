@@ -21,7 +21,9 @@
    (.setCompilerOptions ^js inferred-project options)))
 
 (defn project-root-path
-  "this is canonical project root path"
+  "this is canonical project root path
+   
+   **Returns:** `string | undefined`"
   ^js [inferred-project]
   (.-projectRootPath ^js inferred-project))
 
@@ -57,14 +59,17 @@
   (.getTypeAcquisition ^js inferred-project))
 
 (defn project-kind
+  "**Returns:** `ProjectKind`"
   ^js [inferred-project]
   (.-projectKind ^js inferred-project))
 
 (defn project-service
+  "**Returns:** `ProjectService`"
   ^js [inferred-project]
   (.-projectService ^js inferred-project))
 
 (defn document-registry
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-documentRegistry ^js inferred-project))
 
@@ -73,6 +78,7 @@
   (set! (.-documentRegistry ^js inferred-project) value))
 
 (defn compiler-options
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-compilerOptions ^js inferred-project))
 
@@ -81,6 +87,7 @@
   (set! (.-compilerOptions ^js inferred-project) value))
 
 (defn compile-on-save-enabled?
+  "**Returns:** `boolean`"
   ^js [inferred-project]
   (.-compileOnSaveEnabled ^js inferred-project))
 
@@ -89,6 +96,7 @@
   (set! (.-compileOnSaveEnabled ^js inferred-project) value))
 
 (defn watch-options
+  "**Returns:** `WatchOptions | undefined`"
   ^js [inferred-project]
   (.-watchOptions ^js inferred-project))
 
@@ -97,6 +105,7 @@
   (set! (.-watchOptions ^js inferred-project) value))
 
 (defn root-files
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-rootFiles ^js inferred-project))
 
@@ -105,6 +114,7 @@
   (set! (.-rootFiles ^js inferred-project) value))
 
 (defn root-files-map
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-rootFilesMap ^js inferred-project))
 
@@ -113,6 +123,7 @@
   (set! (.-rootFilesMap ^js inferred-project) value))
 
 (defn program
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-program ^js inferred-project))
 
@@ -121,6 +132,7 @@
   (set! (.-program ^js inferred-project) value))
 
 (defn external-files
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-externalFiles ^js inferred-project))
 
@@ -129,6 +141,7 @@
   (set! (.-externalFiles ^js inferred-project) value))
 
 (defn missing-files-map
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-missingFilesMap ^js inferred-project))
 
@@ -137,6 +150,7 @@
   (set! (.-missingFilesMap ^js inferred-project) value))
 
 (defn generated-files-map
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-generatedFilesMap ^js inferred-project))
 
@@ -145,6 +159,7 @@
   (set! (.-generatedFilesMap ^js inferred-project) value))
 
 (defn language-service
+  "**Returns:** `LanguageService`"
   ^js [inferred-project]
   (.-languageService ^js inferred-project))
 
@@ -153,6 +168,7 @@
   (set! (.-languageService ^js inferred-project) value))
 
 (defn language-service-enabled?
+  "**Returns:** `boolean`"
   ^js [inferred-project]
   (.-languageServiceEnabled ^js inferred-project))
 
@@ -161,14 +177,17 @@
   (set! (.-languageServiceEnabled ^js inferred-project) value))
 
 (defn trace
+  "**Returns:** `((s: string) => void) | undefined`"
   ^js [inferred-project]
   (.-trace ^js inferred-project))
 
 (defn realpath
+  "**Returns:** `((path: string) => string) | undefined`"
   ^js [inferred-project]
   (.-realpath ^js inferred-project))
 
 (defn builder-state
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-builderState ^js inferred-project))
 
@@ -177,7 +196,9 @@
   (set! (.-builderState ^js inferred-project) value))
 
 (defn updated-file-names
-  "Set of files names that were updated since the last call to getChangesSinceVersion."
+  "Set of files names that were updated since the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [inferred-project]
   (.-updatedFileNames ^js inferred-project))
 
@@ -187,7 +208,9 @@
   (set! (.-updatedFileNames ^js inferred-project) value))
 
 (defn last-reported-file-names
-  "Set of files that was returned from the last call to getChangesSinceVersion."
+  "Set of files that was returned from the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [inferred-project]
   (.-lastReportedFileNames ^js inferred-project))
 
@@ -197,7 +220,9 @@
   (set! (.-lastReportedFileNames ^js inferred-project) value))
 
 (defn last-reported-version
-  "Last version that was reported."
+  "Last version that was reported.
+   
+   **Returns:** `any`"
   ^js [inferred-project]
   (.-lastReportedVersion ^js inferred-project))
 
@@ -207,6 +232,7 @@
   (set! (.-lastReportedVersion ^js inferred-project) value))
 
 (defn project-errors
+  "**Returns:** `Diagnostic[] | undefined`"
   ^js [inferred-project]
   (.-projectErrors ^js inferred-project))
 
@@ -215,6 +241,7 @@
   (set! (.-projectErrors ^js inferred-project) value))
 
 (defn initial-load-pending
+  "**Returns:** `() => boolean`"
   ^js [inferred-project]
   (.-isInitialLoadPending ^js inferred-project))
 
@@ -223,6 +250,7 @@
   (set! (.-isInitialLoadPending ^js inferred-project) value))
 
 (defn cancellation-token
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-cancellationToken ^js inferred-project))
 
@@ -237,6 +265,7 @@
   (.isJsOnlyProject ^js inferred-project))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [inferred-project]
   (.-jsDocParsingMode ^js inferred-project))
 
@@ -287,6 +316,7 @@
   (.getScriptFileNames ^js inferred-project))
 
 (defn or-create-script-info-and-attach-to-project
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-getOrCreateScriptInfoAndAttachToProject ^js inferred-project))
 
@@ -416,6 +446,7 @@
   (.error ^js inferred-project s))
 
 (defn set-internal-compiler-options-for-emitting-js-files
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-setInternalCompilerOptionsForEmittingJsFiles ^js inferred-project))
 
@@ -523,6 +554,7 @@
   (.getSourceFile ^js inferred-project path))
 
 (defn detach-script-info-if-not-root
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-detachScriptInfoIfNotRoot ^js inferred-project))
 
@@ -655,6 +687,7 @@
   (.removeExistingTypings ^js inferred-project include))
 
 (defn update-graph-worker
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-updateGraphWorker ^js inferred-project))
 
@@ -663,6 +696,7 @@
   (set! (.-updateGraphWorker ^js inferred-project) value))
 
 (defn detach-script-info-from-project
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-detachScriptInfoFromProject ^js inferred-project))
 
@@ -671,6 +705,7 @@
   (set! (.-detachScriptInfoFromProject ^js inferred-project) value))
 
 (defn add-missing-file-watcher
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-addMissingFileWatcher ^js inferred-project))
 
@@ -679,6 +714,7 @@
   (set! (.-addMissingFileWatcher ^js inferred-project) value))
 
 (defn watched-missing-file
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-isWatchedMissingFile ^js inferred-project))
 
@@ -687,6 +723,7 @@
   (set! (.-isWatchedMissingFile ^js inferred-project) value))
 
 (defn create-generated-file-watcher
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-createGeneratedFileWatcher ^js inferred-project))
 
@@ -695,6 +732,7 @@
   (set! (.-createGeneratedFileWatcher ^js inferred-project) value))
 
 (defn valid-generated-file-watcher
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-isValidGeneratedFileWatcher ^js inferred-project))
 
@@ -703,6 +741,7 @@
   (set! (.-isValidGeneratedFileWatcher ^js inferred-project) value))
 
 (defn clear-generated-file-watch
+  "**Returns:** `any`"
   ^js [inferred-project]
   (.-clearGeneratedFileWatch ^js inferred-project))
 

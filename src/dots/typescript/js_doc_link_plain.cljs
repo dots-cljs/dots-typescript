@@ -2,14 +2,17 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocLinkPlain`"
   ^js [js-doc-link-plain]
   (.-kind ^js js-doc-link-plain))
 
 (defn name
+  "**Returns:** `EntityName | JSDocMemberName | undefined`"
   ^js [js-doc-link-plain]
   (.-name ^js js-doc-link-plain))
 
 (defn text
+  "**Returns:** `string`"
   ^js [js-doc-link-plain]
   (.-text ^js js-doc-link-plain))
 
@@ -18,10 +21,12 @@
   (set! (.-text ^js js-doc-link-plain) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-link-plain]
   (.-flags ^js js-doc-link-plain))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-link-plain]
   (.-parent ^js js-doc-link-plain))
 
@@ -161,9 +166,11 @@
    (.forEachChild ^js js-doc-link-plain cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-link-plain]
   (.-pos ^js js-doc-link-plain))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-link-plain]
   (.-end ^js js-doc-link-plain))

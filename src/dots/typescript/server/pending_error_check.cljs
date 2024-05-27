@@ -1,6 +1,7 @@
 (ns dots.typescript.server.pending-error-check)
 
 (defn file-name
+  "**Returns:** `NormalizedPath`"
   ^js [pending-error-check]
   (.-fileName ^js pending-error-check))
 
@@ -9,6 +10,7 @@
   (set! (.-fileName ^js pending-error-check) value))
 
 (defn project
+  "**Returns:** `Project`"
   ^js [pending-error-check]
   (.-project ^js pending-error-check))
 

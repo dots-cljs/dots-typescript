@@ -1,6 +1,7 @@
 (ns dots.typescript.solution-builder-host)
 
 (defn report-error-summary
+  "**Returns:** `ReportEmitErrorSummary | undefined`"
   ^js [solution-builder-host]
   (.-reportErrorSummary ^js solution-builder-host))
 
@@ -32,6 +33,7 @@
    (.writeFile ^js solution-builder-host path data write-byte-order-mark?)))
 
 (defn custom-transformers
+  "**Returns:** `((project: string) => CustomTransformers | undefined) | undefined`"
   ^js [solution-builder-host]
   (.-getCustomTransformers ^js solution-builder-host))
 
@@ -73,6 +75,7 @@
   (.getParsedCommandLine ^js solution-builder-host file-name))
 
 (defn report-diagnostic
+  "**Returns:** `DiagnosticReporter`"
   ^js [solution-builder-host]
   (.-reportDiagnostic ^js solution-builder-host))
 
@@ -81,6 +84,7 @@
   (set! (.-reportDiagnostic ^js solution-builder-host) value))
 
 (defn report-solution-builder-status
+  "**Returns:** `DiagnosticReporter`"
   ^js [solution-builder-host]
   (.-reportSolutionBuilderStatus ^js solution-builder-host))
 
@@ -97,7 +101,9 @@
   (.afterProgramEmitAndDiagnostics ^js solution-builder-host program))
 
 (defn create-program
-  "Used to create the program when need for program creation or recreation detected"
+  "Used to create the program when need for program creation or recreation detected
+   
+   **Returns:** `CreateProgram<T>`"
   ^js [solution-builder-host]
   (.-createProgram ^js solution-builder-host))
 
@@ -338,6 +344,7 @@
   (.getModuleResolutionCache ^js solution-builder-host))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [solution-builder-host]
   (.-jsDocParsingMode ^js solution-builder-host))
 

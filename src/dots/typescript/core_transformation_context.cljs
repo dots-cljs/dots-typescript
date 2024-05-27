@@ -1,6 +1,7 @@
 (ns dots.typescript.core-transformation-context)
 
 (defn factory
+  "**Returns:** `NodeFactory`"
   ^js [core-transformation-context]
   (.-factory ^js core-transformation-context))
 

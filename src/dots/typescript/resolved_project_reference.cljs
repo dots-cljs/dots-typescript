@@ -1,6 +1,7 @@
 (ns dots.typescript.resolved-project-reference)
 
 (defn command-line
+  "**Returns:** `ParsedCommandLine`"
   ^js [resolved-project-reference]
   (.-commandLine ^js resolved-project-reference))
 
@@ -9,6 +10,7 @@
   (set! (.-commandLine ^js resolved-project-reference) value))
 
 (defn source-file
+  "**Returns:** `SourceFile`"
   ^js [resolved-project-reference]
   (.-sourceFile ^js resolved-project-reference))
 
@@ -17,6 +19,7 @@
   (set! (.-sourceFile ^js resolved-project-reference) value))
 
 (defn references
+  "**Returns:** `readonly (ResolvedProjectReference | undefined)[] | undefined`"
   ^js [resolved-project-reference]
   (.-references ^js resolved-project-reference))
 

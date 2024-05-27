@@ -1,14 +1,17 @@
 (ns dots.typescript.debugger-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.DebuggerStatement`"
   ^js [debugger-statement]
   (.-kind ^js debugger-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [debugger-statement]
   (.-flags ^js debugger-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [debugger-statement]
   (.-parent ^js debugger-statement))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js debugger-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [debugger-statement]
   (.-pos ^js debugger-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [debugger-statement]
   (.-end ^js debugger-statement))

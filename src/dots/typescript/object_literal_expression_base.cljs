@@ -5,18 +5,22 @@
    ObjectLiteralElement (e.g. PropertyAssignment, ShorthandPropertyAssignment etc.)")
 
 (defn properties
+  "**Returns:** `NodeArray<T>`"
   ^js [object-literal-expression-base]
   (.-properties ^js object-literal-expression-base))
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [object-literal-expression-base]
   (.-kind ^js object-literal-expression-base))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [object-literal-expression-base]
   (.-flags ^js object-literal-expression-base))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [object-literal-expression-base]
   (.-parent ^js object-literal-expression-base))
 
@@ -156,9 +160,11 @@
    (.forEachChild ^js object-literal-expression-base cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [object-literal-expression-base]
   (.-pos ^js object-literal-expression-base))
 
 (defn end
+  "**Returns:** `number`"
   ^js [object-literal-expression-base]
   (.-end ^js object-literal-expression-base))

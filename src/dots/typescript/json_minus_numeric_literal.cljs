@@ -1,22 +1,27 @@
 (ns dots.typescript.json-minus-numeric-literal)
 
 (defn kind
+  "**Returns:** `SyntaxKind.PrefixUnaryExpression`"
   ^js [json-minus-numeric-literal]
   (.-kind ^js json-minus-numeric-literal))
 
 (defn operator
+  "**Returns:** `SyntaxKind.MinusToken`"
   ^js [json-minus-numeric-literal]
   (.-operator ^js json-minus-numeric-literal))
 
 (defn operand
+  "**Returns:** `NumericLiteral`"
   ^js [json-minus-numeric-literal]
   (.-operand ^js json-minus-numeric-literal))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [json-minus-numeric-literal]
   (.-flags ^js json-minus-numeric-literal))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [json-minus-numeric-literal]
   (.-parent ^js json-minus-numeric-literal))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js json-minus-numeric-literal cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [json-minus-numeric-literal]
   (.-pos ^js json-minus-numeric-literal))
 
 (defn end
+  "**Returns:** `number`"
   ^js [json-minus-numeric-literal]
   (.-end ^js json-minus-numeric-literal))

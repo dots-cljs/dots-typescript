@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.UpdateOpen`"
   ^js [update-open-request]
   (.-command ^js update-open-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js update-open-request) value))
 
 (defn arguments
+  "**Returns:** `UpdateOpenRequestArgs`"
   ^js [update-open-request]
   (.-arguments ^js update-open-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js update-open-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [update-open-request]
   (.-type ^js update-open-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js update-open-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [update-open-request]
   (.-seq ^js update-open-request))
 

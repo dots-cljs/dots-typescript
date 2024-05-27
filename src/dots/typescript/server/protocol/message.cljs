@@ -3,7 +3,9 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [message]
   (.-seq ^js message))
 
@@ -13,7 +15,9 @@
   (set! (.-seq ^js message) value))
 
 (defn type
-  "One of \"request\", \"response\", or \"event\""
+  "One of \"request\", \"response\", or \"event\"
+   
+   **Returns:** `\"request\" | \"response\" | \"event\"`"
   ^js [message]
   (.-type ^js message))
 

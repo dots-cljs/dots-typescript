@@ -2,38 +2,47 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.PropertyDeclaration`"
   ^js [auto-accessor-property-declaration]
   (.-kind ^js auto-accessor-property-declaration))
 
 (defn parent
+  "**Returns:** `ClassLikeDeclaration`"
   ^js [auto-accessor-property-declaration]
   (.-parent ^js auto-accessor-property-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [auto-accessor-property-declaration]
   (.-modifiers ^js auto-accessor-property-declaration))
 
 (defn name
+  "**Returns:** `PropertyName`"
   ^js [auto-accessor-property-declaration]
   (.-name ^js auto-accessor-property-declaration))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [auto-accessor-property-declaration]
   (.-questionToken ^js auto-accessor-property-declaration))
 
 (defn exclamation-token
+  "**Returns:** `ExclamationToken | undefined`"
   ^js [auto-accessor-property-declaration]
   (.-exclamationToken ^js auto-accessor-property-declaration))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [auto-accessor-property-declaration]
   (.-type ^js auto-accessor-property-declaration))
 
 (defn initializer
+  "**Returns:** `Expression | undefined`"
   ^js [auto-accessor-property-declaration]
   (.-initializer ^js auto-accessor-property-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [auto-accessor-property-declaration]
   (.-flags ^js auto-accessor-property-declaration))
 
@@ -173,9 +182,11 @@
    (.forEachChild ^js auto-accessor-property-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [auto-accessor-property-declaration]
   (.-pos ^js auto-accessor-property-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [auto-accessor-property-declaration]
   (.-end ^js auto-accessor-property-declaration))

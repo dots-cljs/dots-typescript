@@ -1,18 +1,22 @@
 (ns dots.typescript.array-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ArrayType`"
   ^js [array-type-node]
   (.-kind ^js array-type-node))
 
 (defn element-type
+  "**Returns:** `TypeNode`"
   ^js [array-type-node]
   (.-elementType ^js array-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [array-type-node]
   (.-flags ^js array-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [array-type-node]
   (.-parent ^js array-type-node))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js array-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [array-type-node]
   (.-pos ^js array-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [array-type-node]
   (.-end ^js array-type-node))

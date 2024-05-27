@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [comment]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocThrowsTag`"
   ^js [js-doc-throws-tag]
   (.-kind ^js js-doc-throws-tag))
 
 (defn type-expression
+  "**Returns:** `JSDocTypeExpression | undefined`"
   ^js [js-doc-throws-tag]
   (.-typeExpression ^js js-doc-throws-tag))
 
 (defn parent
+  "**Returns:** `JSDoc | JSDocTypeLiteral`"
   ^js [js-doc-throws-tag]
   (.-parent ^js js-doc-throws-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-throws-tag]
   (.-tagName ^js js-doc-throws-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-throws-tag]
   (.-comment ^js js-doc-throws-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-throws-tag]
   (.-flags ^js js-doc-throws-tag))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js js-doc-throws-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-throws-tag]
   (.-pos ^js js-doc-throws-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-throws-tag]
   (.-end ^js js-doc-throws-tag))

@@ -67,6 +67,7 @@
   (.getDirectories ^js minimal-resolution-cache-host path))
 
 (defn use-case-sensitive-file-names?
+  "**Returns:** `boolean | (() => boolean) | undefined`"
   ^js [minimal-resolution-cache-host]
   (.-useCaseSensitiveFileNames ^js minimal-resolution-cache-host))
 

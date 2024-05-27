@@ -1,18 +1,22 @@
 (ns dots.typescript.external-module-reference)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ExternalModuleReference`"
   ^js [external-module-reference]
   (.-kind ^js external-module-reference))
 
 (defn parent
+  "**Returns:** `ImportEqualsDeclaration`"
   ^js [external-module-reference]
   (.-parent ^js external-module-reference))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [external-module-reference]
   (.-expression ^js external-module-reference))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [external-module-reference]
   (.-flags ^js external-module-reference))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js external-module-reference cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [external-module-reference]
   (.-pos ^js external-module-reference))
 
 (defn end
+  "**Returns:** `number`"
   ^js [external-module-reference]
   (.-end ^js external-module-reference))

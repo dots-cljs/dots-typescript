@@ -10,6 +10,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn target
+  "**Returns:** `GenericType`"
   ^js [type-reference]
   (.-target ^js type-reference))
 
@@ -18,6 +19,7 @@
   (set! (.-target ^js type-reference) value))
 
 (defn node
+  "**Returns:** `TypeReferenceNode | ArrayTypeNode | TupleTypeNode | undefined`"
   ^js [type-reference]
   (.-node ^js type-reference))
 
@@ -26,6 +28,7 @@
   (set! (.-node ^js type-reference) value))
 
 (defn type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [type-reference]
   (.-typeArguments ^js type-reference))
 
@@ -34,6 +37,7 @@
   (set! (.-typeArguments ^js type-reference) value))
 
 (defn object-flags
+  "**Returns:** `ObjectFlags`"
   ^js [type-reference]
   (.-objectFlags ^js type-reference))
 
@@ -42,6 +46,7 @@
   (set! (.-objectFlags ^js type-reference) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [type-reference]
   (.-flags ^js type-reference))
 
@@ -50,6 +55,7 @@
   (set! (.-flags ^js type-reference) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [type-reference]
   (.-symbol ^js type-reference))
 
@@ -58,6 +64,7 @@
   (set! (.-symbol ^js type-reference) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [type-reference]
   (.-pattern ^js type-reference))
 
@@ -66,6 +73,7 @@
   (set! (.-pattern ^js type-reference) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [type-reference]
   (.-aliasSymbol ^js type-reference))
 
@@ -74,6 +82,7 @@
   (set! (.-aliasSymbol ^js type-reference) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [type-reference]
   (.-aliasTypeArguments ^js type-reference))
 

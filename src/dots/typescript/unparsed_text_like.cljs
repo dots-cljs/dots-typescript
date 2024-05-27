@@ -1,18 +1,22 @@
 (ns dots.typescript.unparsed-text-like)
 
 (defn kind
+  "**Returns:** `SyntaxKind.UnparsedText | SyntaxKind.UnparsedInternalText`"
   ^js [unparsed-text-like]
   (.-kind ^js unparsed-text-like))
 
 (defn parent
+  "**Returns:** `UnparsedSource`"
   ^js [unparsed-text-like]
   (.-parent ^js unparsed-text-like))
 
 (defn data
+  "**Returns:** `string | undefined`"
   ^js [unparsed-text-like]
   (.-data ^js unparsed-text-like))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [unparsed-text-like]
   (.-flags ^js unparsed-text-like))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js unparsed-text-like cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [unparsed-text-like]
   (.-pos ^js unparsed-text-like))
 
 (defn end
+  "**Returns:** `number`"
   ^js [unparsed-text-like]
   (.-end ^js unparsed-text-like))

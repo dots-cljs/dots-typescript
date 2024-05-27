@@ -1,6 +1,7 @@
 (ns dots.typescript.emit-output)
 
 (defn output-files
+  "**Returns:** `OutputFile[]`"
   ^js [emit-output]
   (.-outputFiles ^js emit-output))
 
@@ -9,6 +10,7 @@
   (set! (.-outputFiles ^js emit-output) value))
 
 (defn emit-skipped?
+  "**Returns:** `boolean`"
   ^js [emit-output]
   (.-emitSkipped ^js emit-output))
 

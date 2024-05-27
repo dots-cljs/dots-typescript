@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [concat every? filter map reduce some?]))
 
 (defn sorted-array-brand
+  "**Returns:** `any`"
   ^js [sorted-readonly-array]
   (.-" __sortedArrayBrand" ^js sorted-readonly-array))
 
@@ -10,7 +11,9 @@
   (set! (.-" __sortedArrayBrand" ^js sorted-readonly-array) value))
 
 (defn length
-  "Gets the length of the array. This is a number one higher than the highest element defined in an array."
+  "Gets the length of the array. This is a number one higher than the highest element defined in an array.
+   
+   **Returns:** `number`"
   ^js [sorted-readonly-array]
   (.-length ^js sorted-readonly-array))
 

@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.GetSupportedCodeFixes`"
   ^js [get-supported-code-fixes-request]
   (.-command ^js get-supported-code-fixes-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js get-supported-code-fixes-request) value))
 
 (defn arguments
+  "**Returns:** `Partial<FileRequestArgs> | undefined`"
   ^js [get-supported-code-fixes-request]
   (.-arguments ^js get-supported-code-fixes-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js get-supported-code-fixes-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [get-supported-code-fixes-request]
   (.-type ^js get-supported-code-fixes-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js get-supported-code-fixes-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [get-supported-code-fixes-request]
   (.-seq ^js get-supported-code-fixes-request))
 

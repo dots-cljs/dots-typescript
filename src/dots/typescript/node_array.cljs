@@ -2,11 +2,14 @@
   (:refer-clojure :exclude [concat every? filter map reduce some?]))
 
 (defn has-trailing-comma?
+  "**Returns:** `boolean`"
   ^js [node-array]
   (.-hasTrailingComma ^js node-array))
 
 (defn length
-  "Gets the length of the array. This is a number one higher than the highest element defined in an array."
+  "Gets the length of the array. This is a number one higher than the highest element defined in an array.
+   
+   **Returns:** `number`"
   ^js [node-array]
   (.-length ^js node-array))
 
@@ -185,9 +188,11 @@
    (.reduceRight ^js node-array callbackfn initial-value)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [node-array]
   (.-pos ^js node-array))
 
 (defn end
+  "**Returns:** `number`"
   ^js [node-array]
   (.-end ^js node-array))

@@ -1,7 +1,9 @@
 (ns dots.typescript.diagnostic)
 
 (defn reports-unnecessary
-  "May store more in future. For now, this will simply be `true` to indicate when a diagnostic is an unused-identifier diagnostic."
+  "May store more in future. For now, this will simply be `true` to indicate when a diagnostic is an unused-identifier diagnostic.
+   
+   **Returns:** `{} | undefined`"
   ^js [diagnostic]
   (.-reportsUnnecessary ^js diagnostic))
 
@@ -11,6 +13,7 @@
   (set! (.-reportsUnnecessary ^js diagnostic) value))
 
 (defn reports-deprecated
+  "**Returns:** `{} | undefined`"
   ^js [diagnostic]
   (.-reportsDeprecated ^js diagnostic))
 
@@ -19,6 +22,7 @@
   (set! (.-reportsDeprecated ^js diagnostic) value))
 
 (defn source
+  "**Returns:** `string | undefined`"
   ^js [diagnostic]
   (.-source ^js diagnostic))
 
@@ -27,6 +31,7 @@
   (set! (.-source ^js diagnostic) value))
 
 (defn related-information
+  "**Returns:** `DiagnosticRelatedInformation[] | undefined`"
   ^js [diagnostic]
   (.-relatedInformation ^js diagnostic))
 
@@ -35,6 +40,7 @@
   (set! (.-relatedInformation ^js diagnostic) value))
 
 (defn category
+  "**Returns:** `DiagnosticCategory`"
   ^js [diagnostic]
   (.-category ^js diagnostic))
 
@@ -43,6 +49,7 @@
   (set! (.-category ^js diagnostic) value))
 
 (defn code
+  "**Returns:** `number`"
   ^js [diagnostic]
   (.-code ^js diagnostic))
 
@@ -51,6 +58,7 @@
   (set! (.-code ^js diagnostic) value))
 
 (defn file
+  "**Returns:** `SourceFile | undefined`"
   ^js [diagnostic]
   (.-file ^js diagnostic))
 
@@ -59,6 +67,7 @@
   (set! (.-file ^js diagnostic) value))
 
 (defn start
+  "**Returns:** `number | undefined`"
   ^js [diagnostic]
   (.-start ^js diagnostic))
 
@@ -67,6 +76,7 @@
   (set! (.-start ^js diagnostic) value))
 
 (defn length
+  "**Returns:** `number | undefined`"
   ^js [diagnostic]
   (.-length ^js diagnostic))
 
@@ -75,6 +85,7 @@
   (set! (.-length ^js diagnostic) value))
 
 (defn message-text
+  "**Returns:** `string | DiagnosticMessageChain`"
   ^js [diagnostic]
   (.-messageText ^js diagnostic))
 

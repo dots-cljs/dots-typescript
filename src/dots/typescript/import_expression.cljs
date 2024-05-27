@@ -1,14 +1,17 @@
 (ns dots.typescript.import-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ImportKeyword`"
   ^js [import-expression]
   (.-kind ^js import-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [import-expression]
   (.-flags ^js import-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [import-expression]
   (.-parent ^js import-expression))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js import-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [import-expression]
   (.-pos ^js import-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [import-expression]
   (.-end ^js import-expression))

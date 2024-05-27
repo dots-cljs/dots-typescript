@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn arguments
+  "**Returns:** `FileLocationRequestArgs`"
   ^js [file-location-request]
   (.-arguments ^js file-location-request))
 
@@ -11,6 +12,7 @@
   (set! (.-arguments ^js file-location-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [file-location-request]
   (.-type ^js file-location-request))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js file-location-request) value))
 
 (defn command
-  "The command to execute"
+  "The command to execute
+   
+   **Returns:** `string`"
   ^js [file-location-request]
   (.-command ^js file-location-request))
 
@@ -29,7 +33,9 @@
   (set! (.-command ^js file-location-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [file-location-request]
   (.-seq ^js file-location-request))
 

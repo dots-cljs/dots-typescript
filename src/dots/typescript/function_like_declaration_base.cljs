@@ -8,46 +8,57 @@
   (:refer-clojure :exclude [name type]))
 
 (defn asterisk-token
+  "**Returns:** `AsteriskToken | undefined`"
   ^js [function-like-declaration-base]
   (.-asteriskToken ^js function-like-declaration-base))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [function-like-declaration-base]
   (.-questionToken ^js function-like-declaration-base))
 
 (defn exclamation-token
+  "**Returns:** `ExclamationToken | undefined`"
   ^js [function-like-declaration-base]
   (.-exclamationToken ^js function-like-declaration-base))
 
 (defn body
+  "**Returns:** `Expression | Block | undefined`"
   ^js [function-like-declaration-base]
   (.-body ^js function-like-declaration-base))
 
 (defn kind
+  "**Returns:** `SyntaxKind.MethodSignature | SyntaxKind.MethodDeclaration | SyntaxKind.Constructor | SyntaxKind.GetAccessor | SyntaxKind.SetAccessor | SyntaxKind.CallSignature | SyntaxKind.ConstructSignature | ... 6 more ... | SyntaxKind.JSDocFunctionType`"
   ^js [function-like-declaration-base]
   (.-kind ^js function-like-declaration-base))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [function-like-declaration-base]
   (.-name ^js function-like-declaration-base))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [function-like-declaration-base]
   (.-typeParameters ^js function-like-declaration-base))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [function-like-declaration-base]
   (.-parameters ^js function-like-declaration-base))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [function-like-declaration-base]
   (.-type ^js function-like-declaration-base))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [function-like-declaration-base]
   (.-flags ^js function-like-declaration-base))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [function-like-declaration-base]
   (.-parent ^js function-like-declaration-base))
 
@@ -187,9 +198,11 @@
    (.forEachChild ^js function-like-declaration-base cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [function-like-declaration-base]
   (.-pos ^js function-like-declaration-base))
 
 (defn end
+  "**Returns:** `number`"
   ^js [function-like-declaration-base]
   (.-end ^js function-like-declaration-base))

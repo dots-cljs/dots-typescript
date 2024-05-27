@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [name]))
 
 (defn path
+  "**Returns:** `string`"
   ^js [amd-dependency]
   (.-path ^js amd-dependency))
 
@@ -10,6 +11,7 @@
   (set! (.-path ^js amd-dependency) value))
 
 (defn name
+  "**Returns:** `string | undefined`"
   ^js [amd-dependency]
   (.-name ^js amd-dependency))
 

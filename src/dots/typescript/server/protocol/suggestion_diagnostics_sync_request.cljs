@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.SuggestionDiagnosticsSync`"
   ^js [suggestion-diagnostics-sync-request]
   (.-command ^js suggestion-diagnostics-sync-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js suggestion-diagnostics-sync-request) value))
 
 (defn arguments
+  "**Returns:** `SemanticDiagnosticsSyncRequestArgs`"
   ^js [suggestion-diagnostics-sync-request]
   (.-arguments ^js suggestion-diagnostics-sync-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js suggestion-diagnostics-sync-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [suggestion-diagnostics-sync-request]
   (.-type ^js suggestion-diagnostics-sync-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js suggestion-diagnostics-sync-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [suggestion-diagnostics-sync-request]
   (.-seq ^js suggestion-diagnostics-sync-request))
 

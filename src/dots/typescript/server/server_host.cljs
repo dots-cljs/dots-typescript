@@ -89,6 +89,7 @@
   (.require ^js server-host initial-path module-name))
 
 (defn args
+  "**Returns:** `string[]`"
   ^js [server-host]
   (.-args ^js server-host))
 
@@ -97,6 +98,7 @@
   (set! (.-args ^js server-host) value))
 
 (defn new-line
+  "**Returns:** `string`"
   ^js [server-host]
   (.-newLine ^js server-host))
 
@@ -105,6 +107,7 @@
   (set! (.-newLine ^js server-host) value))
 
 (defn use-case-sensitive-file-names?
+  "**Returns:** `boolean`"
   ^js [server-host]
   (.-useCaseSensitiveFileNames ^js server-host))
 

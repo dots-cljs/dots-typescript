@@ -2,39 +2,49 @@
   (:refer-clojure :exclude [comment name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocParameterTag`"
   ^js [js-doc-parameter-tag]
   (.-kind ^js js-doc-parameter-tag))
 
 (defn parent
+  "**Returns:** `JSDoc`"
   ^js [js-doc-parameter-tag]
   (.-parent ^js js-doc-parameter-tag))
 
 (defn name
+  "**Returns:** `EntityName`"
   ^js [js-doc-parameter-tag]
   (.-name ^js js-doc-parameter-tag))
 
 (defn type-expression
+  "**Returns:** `JSDocTypeExpression | undefined`"
   ^js [js-doc-parameter-tag]
   (.-typeExpression ^js js-doc-parameter-tag))
 
 (defn name-first?
-  "Whether the property name came before the type -- non-standard for JSDoc, but Typescript-like"
+  "Whether the property name came before the type -- non-standard for JSDoc, but Typescript-like
+   
+   **Returns:** `boolean`"
   ^js [js-doc-parameter-tag]
   (.-isNameFirst ^js js-doc-parameter-tag))
 
 (defn bracketed?
+  "**Returns:** `boolean`"
   ^js [js-doc-parameter-tag]
   (.-isBracketed ^js js-doc-parameter-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-parameter-tag]
   (.-tagName ^js js-doc-parameter-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-parameter-tag]
   (.-comment ^js js-doc-parameter-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-parameter-tag]
   (.-flags ^js js-doc-parameter-tag))
 
@@ -174,9 +184,11 @@
    (.forEachChild ^js js-doc-parameter-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-parameter-tag]
   (.-pos ^js js-doc-parameter-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-parameter-tag]
   (.-end ^js js-doc-parameter-tag))

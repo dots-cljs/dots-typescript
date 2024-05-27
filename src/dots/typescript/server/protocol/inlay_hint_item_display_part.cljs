@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.inlay-hint-item-display-part)
 
 (defn text
+  "**Returns:** `string`"
   ^js [inlay-hint-item-display-part]
   (.-text ^js inlay-hint-item-display-part))
 
@@ -9,6 +10,7 @@
   (set! (.-text ^js inlay-hint-item-display-part) value))
 
 (defn span
+  "**Returns:** `FileSpan | undefined`"
   ^js [inlay-hint-item-display-part]
   (.-span ^js inlay-hint-item-display-part))
 

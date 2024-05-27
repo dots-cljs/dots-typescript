@@ -4857,27 +4857,35 @@
    (typescript/transform source transformers compiler-options)))
 
 (defn version-major-minor
+  "**Returns:** `\"5.4\"`"
   ^js []
   typescript/versionMajorMinor)
 
 (defn version
-  "The version of the TypeScript compiler release"
+  "The version of the TypeScript compiler release
+   
+   **Returns:** `string`"
   ^js []
   typescript/version)
 
 (defn sys
+  "**Returns:** `System`"
   ^js []
   typescript/sys)
 
 (defn unchanged-text-change-range
+  "**Returns:** `TextChangeRange`"
   ^js []
   typescript/unchangedTextChangeRange)
 
 (defn factory
+  "**Returns:** `NodeFactory`"
   ^js []
   typescript/factory)
 
 (defn services-version
-  "The version of the language service API"
+  "The version of the language service API
+   
+   **Returns:** `\"0.8\"`"
   ^js []
   typescript/servicesVersion)

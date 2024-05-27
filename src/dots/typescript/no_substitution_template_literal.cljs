@@ -1,10 +1,12 @@
 (ns dots.typescript.no-substitution-template-literal)
 
 (defn kind
+  "**Returns:** `SyntaxKind.NoSubstitutionTemplateLiteral`"
   ^js [no-substitution-template-literal]
   (.-kind ^js no-substitution-template-literal))
 
 (defn text
+  "**Returns:** `string`"
   ^js [no-substitution-template-literal]
   (.-text ^js no-substitution-template-literal))
 
@@ -13,6 +15,7 @@
   (set! (.-text ^js no-substitution-template-literal) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [no-substitution-template-literal]
   (.-isUnterminated ^js no-substitution-template-literal))
 
@@ -21,6 +24,7 @@
   (set! (.-isUnterminated ^js no-substitution-template-literal) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [no-substitution-template-literal]
   (.-hasExtendedUnicodeEscape ^js no-substitution-template-literal))
 
@@ -29,10 +33,12 @@
   (set! (.-hasExtendedUnicodeEscape ^js no-substitution-template-literal) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [no-substitution-template-literal]
   (.-flags ^js no-substitution-template-literal))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [no-substitution-template-literal]
   (.-parent ^js no-substitution-template-literal))
 
@@ -172,14 +178,17 @@
    (.forEachChild ^js no-substitution-template-literal cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [no-substitution-template-literal]
   (.-pos ^js no-substitution-template-literal))
 
 (defn end
+  "**Returns:** `number`"
   ^js [no-substitution-template-literal]
   (.-end ^js no-substitution-template-literal))
 
 (defn raw-text
+  "**Returns:** `string | undefined`"
   ^js [no-substitution-template-literal]
   (.-rawText ^js no-substitution-template-literal))
 

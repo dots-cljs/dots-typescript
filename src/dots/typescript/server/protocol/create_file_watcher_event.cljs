@@ -2,14 +2,17 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn event
+  "**Returns:** `\"createFileWatcher\"`"
   ^js [create-file-watcher-event]
   (.-event ^js create-file-watcher-event))
 
 (defn body
+  "**Returns:** `CreateFileWatcherEventBody`"
   ^js [create-file-watcher-event]
   (.-body ^js create-file-watcher-event))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [create-file-watcher-event]
   (.-type ^js create-file-watcher-event))
 
@@ -18,7 +21,9 @@
   (set! (.-type ^js create-file-watcher-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [create-file-watcher-event]
   (.-seq ^js create-file-watcher-event))
 

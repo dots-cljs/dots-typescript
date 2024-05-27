@@ -1,22 +1,27 @@
 (ns dots.typescript.case-clause)
 
 (defn kind
+  "**Returns:** `SyntaxKind.CaseClause`"
   ^js [case-clause]
   (.-kind ^js case-clause))
 
 (defn parent
+  "**Returns:** `CaseBlock`"
   ^js [case-clause]
   (.-parent ^js case-clause))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [case-clause]
   (.-expression ^js case-clause))
 
 (defn statements
+  "**Returns:** `NodeArray<Statement>`"
   ^js [case-clause]
   (.-statements ^js case-clause))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [case-clause]
   (.-flags ^js case-clause))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js case-clause cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [case-clause]
   (.-pos ^js case-clause))
 
 (defn end
+  "**Returns:** `number`"
   ^js [case-clause]
   (.-end ^js case-clause))

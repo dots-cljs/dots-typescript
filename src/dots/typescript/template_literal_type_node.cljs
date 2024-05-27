@@ -1,6 +1,7 @@
 (ns dots.typescript.template-literal-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TemplateLiteralType`"
   ^js [template-literal-type-node]
   (.-kind ^js template-literal-type-node))
 
@@ -9,18 +10,22 @@
   (set! (.-kind ^js template-literal-type-node) value))
 
 (defn head
+  "**Returns:** `TemplateHead`"
   ^js [template-literal-type-node]
   (.-head ^js template-literal-type-node))
 
 (defn template-spans
+  "**Returns:** `NodeArray<TemplateLiteralTypeSpan>`"
   ^js [template-literal-type-node]
   (.-templateSpans ^js template-literal-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [template-literal-type-node]
   (.-flags ^js template-literal-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [template-literal-type-node]
   (.-parent ^js template-literal-type-node))
 
@@ -160,9 +165,11 @@
    (.forEachChild ^js template-literal-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [template-literal-type-node]
   (.-pos ^js template-literal-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [template-literal-type-node]
   (.-end ^js template-literal-type-node))

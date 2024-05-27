@@ -2,7 +2,9 @@
   "Body of QuickInfoResponse.")
 
 (defn kind
-  "The symbol's kind (such as 'className' or 'parameterName' or plain 'text')."
+  "The symbol's kind (such as 'className' or 'parameterName' or plain 'text').
+   
+   **Returns:** `ScriptElementKind`"
   ^js [quick-info-response-body]
   (.-kind ^js quick-info-response-body))
 
@@ -12,7 +14,9 @@
   (set! (.-kind ^js quick-info-response-body) value))
 
 (defn kind-modifiers
-  "Optional modifiers for the kind (such as 'public')."
+  "Optional modifiers for the kind (such as 'public').
+   
+   **Returns:** `string`"
   ^js [quick-info-response-body]
   (.-kindModifiers ^js quick-info-response-body))
 
@@ -22,7 +26,9 @@
   (set! (.-kindModifiers ^js quick-info-response-body) value))
 
 (defn start
-  "Starting file location of symbol."
+  "Starting file location of symbol.
+   
+   **Returns:** `Location`"
   ^js [quick-info-response-body]
   (.-start ^js quick-info-response-body))
 
@@ -32,7 +38,9 @@
   (set! (.-start ^js quick-info-response-body) value))
 
 (defn end
-  "One past last character of symbol."
+  "One past last character of symbol.
+   
+   **Returns:** `Location`"
   ^js [quick-info-response-body]
   (.-end ^js quick-info-response-body))
 
@@ -42,7 +50,9 @@
   (set! (.-end ^js quick-info-response-body) value))
 
 (defn display-string
-  "Type and kind of symbol."
+  "Type and kind of symbol.
+   
+   **Returns:** `string`"
   ^js [quick-info-response-body]
   (.-displayString ^js quick-info-response-body))
 
@@ -53,7 +63,9 @@
 
 (defn documentation
   "Documentation associated with symbol.
-   Display parts when UserPreferences.displayPartsForJSDoc is true, flattened to string otherwise."
+   Display parts when UserPreferences.displayPartsForJSDoc is true, flattened to string otherwise.
+   
+   **Returns:** `string | SymbolDisplayPart[]`"
   ^js [quick-info-response-body]
   (.-documentation ^js quick-info-response-body))
 
@@ -64,7 +76,9 @@
   (set! (.-documentation ^js quick-info-response-body) value))
 
 (defn tags
-  "JSDoc tags associated with symbol."
+  "JSDoc tags associated with symbol.
+   
+   **Returns:** `JSDocTagInfo[]`"
   ^js [quick-info-response-body]
   (.-tags ^js quick-info-response-body))
 

@@ -2,7 +2,9 @@
   "Arguments to OpenExternalProjectsRequest")
 
 (defn projects
-  "List of external projects to open or update"
+  "List of external projects to open or update
+   
+   **Returns:** `ExternalProject[]`"
   ^js [open-external-projects-args]
   (.-projects ^js open-external-projects-args))
 

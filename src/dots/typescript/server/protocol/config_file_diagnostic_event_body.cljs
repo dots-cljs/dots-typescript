@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.config-file-diagnostic-event-body)
 
 (defn trigger-file
-  "The file which trigged the searching and error-checking of the config file"
+  "The file which trigged the searching and error-checking of the config file
+   
+   **Returns:** `string`"
   ^js [config-file-diagnostic-event-body]
   (.-triggerFile ^js config-file-diagnostic-event-body))
 
@@ -11,7 +13,9 @@
   (set! (.-triggerFile ^js config-file-diagnostic-event-body) value))
 
 (defn config-file
-  "The name of the found config file."
+  "The name of the found config file.
+   
+   **Returns:** `string`"
   ^js [config-file-diagnostic-event-body]
   (.-configFile ^js config-file-diagnostic-event-body))
 
@@ -21,7 +25,9 @@
   (set! (.-configFile ^js config-file-diagnostic-event-body) value))
 
 (defn diagnostics
-  "An arry of diagnostic information items for the found config file."
+  "An arry of diagnostic information items for the found config file.
+   
+   **Returns:** `DiagnosticWithFileName[]`"
   ^js [config-file-diagnostic-event-body]
   (.-diagnostics ^js config-file-diagnostic-event-body))
 

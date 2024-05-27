@@ -1,6 +1,7 @@
 (ns dots.typescript.watch-options)
 
 (defn watch-file
+  "**Returns:** `WatchFileKind | undefined`"
   ^js [watch-options]
   (.-watchFile ^js watch-options))
 
@@ -9,6 +10,7 @@
   (set! (.-watchFile ^js watch-options) value))
 
 (defn watch-directory
+  "**Returns:** `WatchDirectoryKind | undefined`"
   ^js [watch-options]
   (.-watchDirectory ^js watch-options))
 
@@ -17,6 +19,7 @@
   (set! (.-watchDirectory ^js watch-options) value))
 
 (defn fallback-polling
+  "**Returns:** `PollingWatchKind | undefined`"
   ^js [watch-options]
   (.-fallbackPolling ^js watch-options))
 
@@ -25,6 +28,7 @@
   (set! (.-fallbackPolling ^js watch-options) value))
 
 (defn synchronous-watch-directory?
+  "**Returns:** `boolean | undefined`"
   ^js [watch-options]
   (.-synchronousWatchDirectory ^js watch-options))
 
@@ -33,6 +37,7 @@
   (set! (.-synchronousWatchDirectory ^js watch-options) value))
 
 (defn exclude-directories
+  "**Returns:** `string[] | undefined`"
   ^js [watch-options]
   (.-excludeDirectories ^js watch-options))
 
@@ -41,6 +46,7 @@
   (set! (.-excludeDirectories ^js watch-options) value))
 
 (defn exclude-files
+  "**Returns:** `string[] | undefined`"
   ^js [watch-options]
   (.-excludeFiles ^js watch-options))
 

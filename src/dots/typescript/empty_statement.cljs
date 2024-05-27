@@ -1,14 +1,17 @@
 (ns dots.typescript.empty-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.EmptyStatement`"
   ^js [empty-statement]
   (.-kind ^js empty-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [empty-statement]
   (.-flags ^js empty-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [empty-statement]
   (.-parent ^js empty-statement))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js empty-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [empty-statement]
   (.-pos ^js empty-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [empty-statement]
   (.-end ^js empty-statement))

@@ -1,18 +1,22 @@
 (ns dots.typescript.unparsed-synthetic-reference)
 
 (defn kind
+  "**Returns:** `SyntaxKind.UnparsedSyntheticReference`"
   ^js [unparsed-synthetic-reference]
   (.-kind ^js unparsed-synthetic-reference))
 
 (defn parent
+  "**Returns:** `UnparsedSource`"
   ^js [unparsed-synthetic-reference]
   (.-parent ^js unparsed-synthetic-reference))
 
 (defn data
+  "**Returns:** `string | undefined`"
   ^js [unparsed-synthetic-reference]
   (.-data ^js unparsed-synthetic-reference))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [unparsed-synthetic-reference]
   (.-flags ^js unparsed-synthetic-reference))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js unparsed-synthetic-reference cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [unparsed-synthetic-reference]
   (.-pos ^js unparsed-synthetic-reference))
 
 (defn end
+  "**Returns:** `number`"
   ^js [unparsed-synthetic-reference]
   (.-end ^js unparsed-synthetic-reference))

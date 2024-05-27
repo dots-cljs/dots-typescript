@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `TodoComment[] | undefined`"
   ^js [todo-comments-response]
   (.-body ^js todo-comments-response))
 
@@ -11,6 +12,7 @@
   (set! (.-body ^js todo-comments-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [todo-comments-response]
   (.-type ^js todo-comments-response))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js todo-comments-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [todo-comments-response]
   (.-request_seq ^js todo-comments-response))
 
@@ -29,7 +33,9 @@
   (set! (.-request_seq ^js todo-comments-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [todo-comments-response]
   (.-success ^js todo-comments-response))
 
@@ -39,7 +45,9 @@
   (set! (.-success ^js todo-comments-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [todo-comments-response]
   (.-command ^js todo-comments-response))
 
@@ -50,7 +58,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [todo-comments-response]
   (.-message ^js todo-comments-response))
 
@@ -61,7 +71,9 @@
   (set! (.-message ^js todo-comments-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [todo-comments-response]
   (.-metadata ^js todo-comments-response))
 
@@ -71,7 +83,9 @@
   (set! (.-metadata ^js todo-comments-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [todo-comments-response]
   (.-performanceData ^js todo-comments-response))
 
@@ -81,7 +95,9 @@
   (set! (.-performanceData ^js todo-comments-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [todo-comments-response]
   (.-seq ^js todo-comments-response))
 

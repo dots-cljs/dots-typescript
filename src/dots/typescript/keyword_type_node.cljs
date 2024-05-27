@@ -1,14 +1,17 @@
 (ns dots.typescript.keyword-type-node)
 
 (defn kind
+  "**Returns:** `TKind`"
   ^js [keyword-type-node]
   (.-kind ^js keyword-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [keyword-type-node]
   (.-flags ^js keyword-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [keyword-type-node]
   (.-parent ^js keyword-type-node))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js keyword-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [keyword-type-node]
   (.-pos ^js keyword-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [keyword-type-node]
   (.-end ^js keyword-type-node))

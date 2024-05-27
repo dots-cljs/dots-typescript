@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.diagnostic-with-file-name)
 
 (defn file-name
-  "Name of the file the diagnostic is in"
+  "Name of the file the diagnostic is in
+   
+   **Returns:** `string`"
   ^js [diagnostic-with-file-name]
   (.-fileName ^js diagnostic-with-file-name))
 
@@ -11,7 +13,9 @@
   (set! (.-fileName ^js diagnostic-with-file-name) value))
 
 (defn start
-  "Starting file location at which text applies."
+  "Starting file location at which text applies.
+   
+   **Returns:** `Location`"
   ^js [diagnostic-with-file-name]
   (.-start ^js diagnostic-with-file-name))
 
@@ -21,7 +25,9 @@
   (set! (.-start ^js diagnostic-with-file-name) value))
 
 (defn end
-  "The last file location at which the text applies."
+  "The last file location at which the text applies.
+   
+   **Returns:** `Location`"
   ^js [diagnostic-with-file-name]
   (.-end ^js diagnostic-with-file-name))
 
@@ -31,7 +37,9 @@
   (set! (.-end ^js diagnostic-with-file-name) value))
 
 (defn text
-  "Text of diagnostic message."
+  "Text of diagnostic message.
+   
+   **Returns:** `string`"
   ^js [diagnostic-with-file-name]
   (.-text ^js diagnostic-with-file-name))
 
@@ -41,7 +49,9 @@
   (set! (.-text ^js diagnostic-with-file-name) value))
 
 (defn category
-  "The category of the diagnostic message, e.g. \"error\", \"warning\", or \"suggestion\"."
+  "The category of the diagnostic message, e.g. \"error\", \"warning\", or \"suggestion\".
+   
+   **Returns:** `string`"
   ^js [diagnostic-with-file-name]
   (.-category ^js diagnostic-with-file-name))
 
@@ -51,6 +61,7 @@
   (set! (.-category ^js diagnostic-with-file-name) value))
 
 (defn reports-unnecessary
+  "**Returns:** `{} | undefined`"
   ^js [diagnostic-with-file-name]
   (.-reportsUnnecessary ^js diagnostic-with-file-name))
 
@@ -59,6 +70,7 @@
   (set! (.-reportsUnnecessary ^js diagnostic-with-file-name) value))
 
 (defn reports-deprecated
+  "**Returns:** `{} | undefined`"
   ^js [diagnostic-with-file-name]
   (.-reportsDeprecated ^js diagnostic-with-file-name))
 
@@ -67,7 +79,9 @@
   (set! (.-reportsDeprecated ^js diagnostic-with-file-name) value))
 
 (defn related-information
-  "Any related spans the diagnostic may have, such as other locations relevant to an error, such as declarartion sites"
+  "Any related spans the diagnostic may have, such as other locations relevant to an error, such as declarartion sites
+   
+   **Returns:** `DiagnosticRelatedInformation[] | undefined`"
   ^js [diagnostic-with-file-name]
   (.-relatedInformation ^js diagnostic-with-file-name))
 
@@ -77,7 +91,9 @@
   (set! (.-relatedInformation ^js diagnostic-with-file-name) value))
 
 (defn code
-  "The error code of the diagnostic message."
+  "The error code of the diagnostic message.
+   
+   **Returns:** `number | undefined`"
   ^js [diagnostic-with-file-name]
   (.-code ^js diagnostic-with-file-name))
 
@@ -87,7 +103,9 @@
   (set! (.-code ^js diagnostic-with-file-name) value))
 
 (defn source
-  "The name of the plugin reporting the message."
+  "The name of the plugin reporting the message.
+   
+   **Returns:** `string | undefined`"
   ^js [diagnostic-with-file-name]
   (.-source ^js diagnostic-with-file-name))
 

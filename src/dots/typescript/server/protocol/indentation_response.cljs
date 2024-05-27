@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `IndentationResult | undefined`"
   ^js [indentation-response]
   (.-body ^js indentation-response))
 
@@ -11,6 +12,7 @@
   (set! (.-body ^js indentation-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [indentation-response]
   (.-type ^js indentation-response))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js indentation-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [indentation-response]
   (.-request_seq ^js indentation-response))
 
@@ -29,7 +33,9 @@
   (set! (.-request_seq ^js indentation-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [indentation-response]
   (.-success ^js indentation-response))
 
@@ -39,7 +45,9 @@
   (set! (.-success ^js indentation-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [indentation-response]
   (.-command ^js indentation-response))
 
@@ -50,7 +58,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [indentation-response]
   (.-message ^js indentation-response))
 
@@ -61,7 +71,9 @@
   (set! (.-message ^js indentation-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [indentation-response]
   (.-metadata ^js indentation-response))
 
@@ -71,7 +83,9 @@
   (set! (.-metadata ^js indentation-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [indentation-response]
   (.-performanceData ^js indentation-response))
 
@@ -81,7 +95,9 @@
   (set! (.-performanceData ^js indentation-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [indentation-response]
   (.-seq ^js indentation-response))
 

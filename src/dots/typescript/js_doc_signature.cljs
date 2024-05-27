@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocSignature`"
   ^js [js-doc-signature]
   (.-kind ^js js-doc-signature))
 
 (defn type-parameters
+  "**Returns:** `readonly JSDocTemplateTag[] | undefined`"
   ^js [js-doc-signature]
   (.-typeParameters ^js js-doc-signature))
 
 (defn parameters
+  "**Returns:** `readonly JSDocParameterTag[]`"
   ^js [js-doc-signature]
   (.-parameters ^js js-doc-signature))
 
 (defn type
+  "**Returns:** `JSDocReturnTag | undefined`"
   ^js [js-doc-signature]
   (.-type ^js js-doc-signature))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-signature]
   (.-flags ^js js-doc-signature))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-signature]
   (.-parent ^js js-doc-signature))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js js-doc-signature cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-signature]
   (.-pos ^js js-doc-signature))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-signature]
   (.-end ^js js-doc-signature))

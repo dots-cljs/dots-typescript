@@ -1,6 +1,7 @@
 (ns dots.typescript.build-invalided-project)
 
 (defn kind
+  "**Returns:** `InvalidatedProjectKind.Build`"
   ^js [build-invalided-project]
   (.-kind ^js build-invalided-project))
 
@@ -122,6 +123,7 @@
    (.emit ^js build-invalided-project target-source-file write-file cancellation-token emit-only-dts-files? custom-transformers)))
 
 (defn project
+  "**Returns:** `ResolvedConfigFileName`"
   ^js [build-invalided-project]
   (.-project ^js build-invalided-project))
 

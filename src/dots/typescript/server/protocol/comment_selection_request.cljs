@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.CommentSelection`"
   ^js [comment-selection-request]
   (.-command ^js comment-selection-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js comment-selection-request) value))
 
 (defn arguments
+  "**Returns:** `FileRangeRequestArgs`"
   ^js [comment-selection-request]
   (.-arguments ^js comment-selection-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js comment-selection-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [comment-selection-request]
   (.-type ^js comment-selection-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js comment-selection-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [comment-selection-request]
   (.-seq ^js comment-selection-request))
 

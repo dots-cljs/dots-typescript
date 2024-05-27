@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.definition-info-and-bound-span)
 
 (defn definitions
+  "**Returns:** `readonly DefinitionInfo[]`"
   ^js [definition-info-and-bound-span]
   (.-definitions ^js definition-info-and-bound-span))
 
@@ -9,6 +10,7 @@
   (set! (.-definitions ^js definition-info-and-bound-span) value))
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [definition-info-and-bound-span]
   (.-textSpan ^js definition-info-and-bound-span))
 

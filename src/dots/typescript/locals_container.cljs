@@ -1,14 +1,17 @@
 (ns dots.typescript.locals-container)
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [locals-container]
   (.-kind ^js locals-container))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [locals-container]
   (.-flags ^js locals-container))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [locals-container]
   (.-parent ^js locals-container))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js locals-container cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [locals-container]
   (.-pos ^js locals-container))
 
 (defn end
+  "**Returns:** `number`"
   ^js [locals-container]
   (.-end ^js locals-container))

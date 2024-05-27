@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `RefactorEditInfo | undefined`"
   ^js [get-edits-for-refactor-response]
   (.-body ^js get-edits-for-refactor-response))
 
@@ -10,6 +11,7 @@
   (set! (.-body ^js get-edits-for-refactor-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [get-edits-for-refactor-response]
   (.-type ^js get-edits-for-refactor-response))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js get-edits-for-refactor-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [get-edits-for-refactor-response]
   (.-request_seq ^js get-edits-for-refactor-response))
 
@@ -28,7 +32,9 @@
   (set! (.-request_seq ^js get-edits-for-refactor-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [get-edits-for-refactor-response]
   (.-success ^js get-edits-for-refactor-response))
 
@@ -38,7 +44,9 @@
   (set! (.-success ^js get-edits-for-refactor-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [get-edits-for-refactor-response]
   (.-command ^js get-edits-for-refactor-response))
 
@@ -49,7 +57,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [get-edits-for-refactor-response]
   (.-message ^js get-edits-for-refactor-response))
 
@@ -60,7 +70,9 @@
   (set! (.-message ^js get-edits-for-refactor-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [get-edits-for-refactor-response]
   (.-metadata ^js get-edits-for-refactor-response))
 
@@ -70,7 +82,9 @@
   (set! (.-metadata ^js get-edits-for-refactor-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [get-edits-for-refactor-response]
   (.-performanceData ^js get-edits-for-refactor-response))
 
@@ -80,7 +94,9 @@
   (set! (.-performanceData ^js get-edits-for-refactor-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [get-edits-for-refactor-response]
   (.-seq ^js get-edits-for-refactor-response))
 

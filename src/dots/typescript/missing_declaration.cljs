@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.MissingDeclaration`"
   ^js [missing-declaration]
   (.-kind ^js missing-declaration))
 
 (defn name
+  "**Returns:** `Identifier | undefined`"
   ^js [missing-declaration]
   (.-name ^js missing-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [missing-declaration]
   (.-flags ^js missing-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [missing-declaration]
   (.-parent ^js missing-declaration))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js missing-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [missing-declaration]
   (.-pos ^js missing-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [missing-declaration]
   (.-end ^js missing-declaration))

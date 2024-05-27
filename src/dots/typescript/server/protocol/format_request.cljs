@@ -7,6 +7,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Format`"
   ^js [format-request]
   (.-command ^js format-request))
 
@@ -15,6 +16,7 @@
   (set! (.-command ^js format-request) value))
 
 (defn arguments
+  "**Returns:** `FormatRequestArgs`"
   ^js [format-request]
   (.-arguments ^js format-request))
 
@@ -23,6 +25,7 @@
   (set! (.-arguments ^js format-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [format-request]
   (.-type ^js format-request))
 
@@ -31,7 +34,9 @@
   (set! (.-type ^js format-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [format-request]
   (.-seq ^js format-request))
 

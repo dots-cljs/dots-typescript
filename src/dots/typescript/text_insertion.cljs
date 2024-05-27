@@ -1,6 +1,7 @@
 (ns dots.typescript.text-insertion)
 
 (defn new-text
+  "**Returns:** `string`"
   ^js [text-insertion]
   (.-newText ^js text-insertion))
 
@@ -9,7 +10,9 @@
   (set! (.-newText ^js text-insertion) value))
 
 (defn caret-offset
-  "The position in newText the caret should point to after the insertion."
+  "The position in newText the caret should point to after the insertion.
+   
+   **Returns:** `number`"
   ^js [text-insertion]
   (.-caretOffset ^js text-insertion))
 

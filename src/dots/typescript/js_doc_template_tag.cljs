@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [comment]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocTemplateTag`"
   ^js [js-doc-template-tag]
   (.-kind ^js js-doc-template-tag))
 
 (defn constraint
+  "**Returns:** `JSDocTypeExpression | undefined`"
   ^js [js-doc-template-tag]
   (.-constraint ^js js-doc-template-tag))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration>`"
   ^js [js-doc-template-tag]
   (.-typeParameters ^js js-doc-template-tag))
 
 (defn parent
+  "**Returns:** `JSDoc | JSDocTypeLiteral`"
   ^js [js-doc-template-tag]
   (.-parent ^js js-doc-template-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-template-tag]
   (.-tagName ^js js-doc-template-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-template-tag]
   (.-comment ^js js-doc-template-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-template-tag]
   (.-flags ^js js-doc-template-tag))
 
@@ -165,9 +172,11 @@
    (.forEachChild ^js js-doc-template-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-template-tag]
   (.-pos ^js js-doc-template-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-template-tag]
   (.-end ^js js-doc-template-tag))

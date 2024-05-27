@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.PropertyAssignment`"
   ^js [property-assignment]
   (.-kind ^js property-assignment))
 
 (defn parent
+  "**Returns:** `ObjectLiteralExpression`"
   ^js [property-assignment]
   (.-parent ^js property-assignment))
 
 (defn name
+  "**Returns:** `PropertyName`"
   ^js [property-assignment]
   (.-name ^js property-assignment))
 
 (defn initializer
+  "**Returns:** `Expression`"
   ^js [property-assignment]
   (.-initializer ^js property-assignment))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [property-assignment]
   (.-flags ^js property-assignment))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js property-assignment cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [property-assignment]
   (.-pos ^js property-assignment))
 
 (defn end
+  "**Returns:** `number`"
   ^js [property-assignment]
   (.-end ^js property-assignment))

@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.GetApplicableRefactors`"
   ^js [get-applicable-refactors-request]
   (.-command ^js get-applicable-refactors-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js get-applicable-refactors-request) value))
 
 (defn arguments
+  "**Returns:** `GetApplicableRefactorsRequestArgs`"
   ^js [get-applicable-refactors-request]
   (.-arguments ^js get-applicable-refactors-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js get-applicable-refactors-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [get-applicable-refactors-request]
   (.-type ^js get-applicable-refactors-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js get-applicable-refactors-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [get-applicable-refactors-request]
   (.-seq ^js get-applicable-refactors-request))
 

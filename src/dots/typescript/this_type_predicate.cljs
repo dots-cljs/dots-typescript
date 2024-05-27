@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `TypePredicateKind.This`"
   ^js [this-type-predicate]
   (.-kind ^js this-type-predicate))
 
@@ -10,6 +11,7 @@
   (set! (.-kind ^js this-type-predicate) value))
 
 (defn parameter-name
+  "**Returns:** `undefined`"
   ^js [this-type-predicate]
   (.-parameterName ^js this-type-predicate))
 
@@ -18,6 +20,7 @@
   (set! (.-parameterName ^js this-type-predicate) value))
 
 (defn parameter-index
+  "**Returns:** `undefined`"
   ^js [this-type-predicate]
   (.-parameterIndex ^js this-type-predicate))
 
@@ -26,6 +29,7 @@
   (set! (.-parameterIndex ^js this-type-predicate) value))
 
 (defn type
+  "**Returns:** `Type`"
   ^js [this-type-predicate]
   (.-type ^js this-type-predicate))
 

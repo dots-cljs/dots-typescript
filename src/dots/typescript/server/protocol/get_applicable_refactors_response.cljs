@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `ApplicableRefactorInfo[] | undefined`"
   ^js [get-applicable-refactors-response]
   (.-body ^js get-applicable-refactors-response))
 
@@ -12,6 +13,7 @@
   (set! (.-body ^js get-applicable-refactors-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [get-applicable-refactors-response]
   (.-type ^js get-applicable-refactors-response))
 
@@ -20,7 +22,9 @@
   (set! (.-type ^js get-applicable-refactors-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [get-applicable-refactors-response]
   (.-request_seq ^js get-applicable-refactors-response))
 
@@ -30,7 +34,9 @@
   (set! (.-request_seq ^js get-applicable-refactors-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [get-applicable-refactors-response]
   (.-success ^js get-applicable-refactors-response))
 
@@ -40,7 +46,9 @@
   (set! (.-success ^js get-applicable-refactors-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [get-applicable-refactors-response]
   (.-command ^js get-applicable-refactors-response))
 
@@ -51,7 +59,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [get-applicable-refactors-response]
   (.-message ^js get-applicable-refactors-response))
 
@@ -62,7 +72,9 @@
   (set! (.-message ^js get-applicable-refactors-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [get-applicable-refactors-response]
   (.-metadata ^js get-applicable-refactors-response))
 
@@ -72,7 +84,9 @@
   (set! (.-metadata ^js get-applicable-refactors-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [get-applicable-refactors-response]
   (.-performanceData ^js get-applicable-refactors-response))
 
@@ -82,7 +96,9 @@
   (set! (.-performanceData ^js get-applicable-refactors-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [get-applicable-refactors-response]
   (.-seq ^js get-applicable-refactors-response))
 

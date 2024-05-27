@@ -1,18 +1,22 @@
 (ns dots.typescript.partially-emitted-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.PartiallyEmittedExpression`"
   ^js [partially-emitted-expression]
   (.-kind ^js partially-emitted-expression))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [partially-emitted-expression]
   (.-expression ^js partially-emitted-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [partially-emitted-expression]
   (.-flags ^js partially-emitted-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [partially-emitted-expression]
   (.-parent ^js partially-emitted-expression))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js partially-emitted-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [partially-emitted-expression]
   (.-pos ^js partially-emitted-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [partially-emitted-expression]
   (.-end ^js partially-emitted-expression))

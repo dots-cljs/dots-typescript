@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
+  "**Returns:** `string`"
   ^js [navigate-to-item]
   (.-name ^js navigate-to-item))
 
@@ -10,6 +11,7 @@
   (set! (.-name ^js navigate-to-item) value))
 
 (defn kind
+  "**Returns:** `ScriptElementKind`"
   ^js [navigate-to-item]
   (.-kind ^js navigate-to-item))
 
@@ -18,6 +20,7 @@
   (set! (.-kind ^js navigate-to-item) value))
 
 (defn kind-modifiers
+  "**Returns:** `string`"
   ^js [navigate-to-item]
   (.-kindModifiers ^js navigate-to-item))
 
@@ -26,6 +29,7 @@
   (set! (.-kindModifiers ^js navigate-to-item) value))
 
 (defn match-kind
+  "**Returns:** `\"exact\" | \"prefix\" | \"substring\" | \"camelCase\"`"
   ^js [navigate-to-item]
   (.-matchKind ^js navigate-to-item))
 
@@ -34,6 +38,7 @@
   (set! (.-matchKind ^js navigate-to-item) value))
 
 (defn case-sensitive?
+  "**Returns:** `boolean`"
   ^js [navigate-to-item]
   (.-isCaseSensitive ^js navigate-to-item))
 
@@ -42,6 +47,7 @@
   (set! (.-isCaseSensitive ^js navigate-to-item) value))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [navigate-to-item]
   (.-fileName ^js navigate-to-item))
 
@@ -50,6 +56,7 @@
   (set! (.-fileName ^js navigate-to-item) value))
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [navigate-to-item]
   (.-textSpan ^js navigate-to-item))
 
@@ -58,6 +65,7 @@
   (set! (.-textSpan ^js navigate-to-item) value))
 
 (defn container-name
+  "**Returns:** `string`"
   ^js [navigate-to-item]
   (.-containerName ^js navigate-to-item))
 
@@ -66,6 +74,7 @@
   (set! (.-containerName ^js navigate-to-item) value))
 
 (defn container-kind
+  "**Returns:** `ScriptElementKind`"
   ^js [navigate-to-item]
   (.-containerKind ^js navigate-to-item))
 

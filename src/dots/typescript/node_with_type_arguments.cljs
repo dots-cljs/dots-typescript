@@ -1,18 +1,22 @@
 (ns dots.typescript.node-with-type-arguments)
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [node-with-type-arguments]
   (.-typeArguments ^js node-with-type-arguments))
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [node-with-type-arguments]
   (.-kind ^js node-with-type-arguments))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [node-with-type-arguments]
   (.-flags ^js node-with-type-arguments))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [node-with-type-arguments]
   (.-parent ^js node-with-type-arguments))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js node-with-type-arguments cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [node-with-type-arguments]
   (.-pos ^js node-with-type-arguments))
 
 (defn end
+  "**Returns:** `number`"
   ^js [node-with-type-arguments]
   (.-end ^js node-with-type-arguments))

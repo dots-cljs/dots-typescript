@@ -2,7 +2,9 @@
   "Arguments for completions messages.")
 
 (defn prefix
-  "Optional prefix to apply to possible completions."
+  "Optional prefix to apply to possible completions.
+   
+   **Returns:** `string | undefined`"
   ^js [completions-request-args]
   (.-prefix ^js completions-request-args))
 
@@ -13,7 +15,9 @@
 
 (defn trigger-character
   "Character that was responsible for triggering completion.
-   Should be `undefined` if a user manually requested completion."
+   Should be `undefined` if a user manually requested completion.
+   
+   **Returns:** `CompletionsTriggerCharacter | undefined`"
   ^js [completions-request-args]
   (.-triggerCharacter ^js completions-request-args))
 
@@ -24,6 +28,7 @@
   (set! (.-triggerCharacter ^js completions-request-args) value))
 
 (defn trigger-kind
+  "**Returns:** `CompletionTriggerKind | undefined`"
   ^js [completions-request-args]
   (.-triggerKind ^js completions-request-args))
 
@@ -32,6 +37,7 @@
   (set! (.-triggerKind ^js completions-request-args) value))
 
 (defn include-external-module-exports?
+  "**Returns:** `boolean | undefined`"
   ^js [completions-request-args]
   (.-includeExternalModuleExports ^js completions-request-args))
 
@@ -40,6 +46,7 @@
   (set! (.-includeExternalModuleExports ^js completions-request-args) value))
 
 (defn include-insert-text-completions?
+  "**Returns:** `boolean | undefined`"
   ^js [completions-request-args]
   (.-includeInsertTextCompletions ^js completions-request-args))
 
@@ -48,7 +55,9 @@
   (set! (.-includeInsertTextCompletions ^js completions-request-args) value))
 
 (defn line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [completions-request-args]
   (.-line ^js completions-request-args))
 
@@ -58,7 +67,9 @@
   (set! (.-line ^js completions-request-args) value))
 
 (defn offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [completions-request-args]
   (.-offset ^js completions-request-args))
 
@@ -68,7 +79,9 @@
   (set! (.-offset ^js completions-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [completions-request-args]
   (.-file ^js completions-request-args))
 
@@ -78,6 +91,7 @@
   (set! (.-file ^js completions-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [completions-request-args]
   (.-projectFileName ^js completions-request-args))
 

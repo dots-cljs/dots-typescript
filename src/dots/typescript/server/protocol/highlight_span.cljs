@@ -2,6 +2,7 @@
   "Span augmented with extra information that denotes the kind of the highlighting to be used for span.")
 
 (defn kind
+  "**Returns:** `HighlightSpanKind`"
   ^js [highlight-span]
   (.-kind ^js highlight-span))
 
@@ -10,6 +11,7 @@
   (set! (.-kind ^js highlight-span) value))
 
 (defn context-start
+  "**Returns:** `Location | undefined`"
   ^js [highlight-span]
   (.-contextStart ^js highlight-span))
 
@@ -18,6 +20,7 @@
   (set! (.-contextStart ^js highlight-span) value))
 
 (defn context-end
+  "**Returns:** `Location | undefined`"
   ^js [highlight-span]
   (.-contextEnd ^js highlight-span))
 
@@ -26,7 +29,9 @@
   (set! (.-contextEnd ^js highlight-span) value))
 
 (defn start
-  "First character of the definition."
+  "First character of the definition.
+   
+   **Returns:** `Location`"
   ^js [highlight-span]
   (.-start ^js highlight-span))
 
@@ -36,7 +41,9 @@
   (set! (.-start ^js highlight-span) value))
 
 (defn end
-  "One character past last character of the definition."
+  "One character past last character of the definition.
+   
+   **Returns:** `Location`"
   ^js [highlight-span]
   (.-end ^js highlight-span))
 

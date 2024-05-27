@@ -1,22 +1,27 @@
 (ns dots.typescript.type-query-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TypeQuery`"
   ^js [type-query-node]
   (.-kind ^js type-query-node))
 
 (defn expr-name
+  "**Returns:** `EntityName`"
   ^js [type-query-node]
   (.-exprName ^js type-query-node))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [type-query-node]
   (.-typeArguments ^js type-query-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [type-query-node]
   (.-flags ^js type-query-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [type-query-node]
   (.-parent ^js type-query-node))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js type-query-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [type-query-node]
   (.-pos ^js type-query-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [type-query-node]
   (.-end ^js type-query-node))

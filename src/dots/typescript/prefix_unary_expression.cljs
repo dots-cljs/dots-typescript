@@ -1,22 +1,27 @@
 (ns dots.typescript.prefix-unary-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.PrefixUnaryExpression`"
   ^js [prefix-unary-expression]
   (.-kind ^js prefix-unary-expression))
 
 (defn operator
+  "**Returns:** `PrefixUnaryOperator`"
   ^js [prefix-unary-expression]
   (.-operator ^js prefix-unary-expression))
 
 (defn operand
+  "**Returns:** `UnaryExpression`"
   ^js [prefix-unary-expression]
   (.-operand ^js prefix-unary-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [prefix-unary-expression]
   (.-flags ^js prefix-unary-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [prefix-unary-expression]
   (.-parent ^js prefix-unary-expression))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js prefix-unary-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [prefix-unary-expression]
   (.-pos ^js prefix-unary-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [prefix-unary-expression]
   (.-end ^js prefix-unary-expression))

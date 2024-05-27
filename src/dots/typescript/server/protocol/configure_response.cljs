@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [configure-response]
   (.-type ^js configure-response))
 
@@ -12,7 +13,9 @@
   (set! (.-type ^js configure-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [configure-response]
   (.-request_seq ^js configure-response))
 
@@ -22,7 +25,9 @@
   (set! (.-request_seq ^js configure-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [configure-response]
   (.-success ^js configure-response))
 
@@ -32,7 +37,9 @@
   (set! (.-success ^js configure-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [configure-response]
   (.-command ^js configure-response))
 
@@ -43,7 +50,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [configure-response]
   (.-message ^js configure-response))
 
@@ -54,7 +63,9 @@
   (set! (.-message ^js configure-response) value))
 
 (defn body
-  "Contains message body if success === true."
+  "Contains message body if success === true.
+   
+   **Returns:** `any`"
   ^js [configure-response]
   (.-body ^js configure-response))
 
@@ -64,7 +75,9 @@
   (set! (.-body ^js configure-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [configure-response]
   (.-metadata ^js configure-response))
 
@@ -74,7 +87,9 @@
   (set! (.-metadata ^js configure-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [configure-response]
   (.-performanceData ^js configure-response))
 
@@ -84,7 +99,9 @@
   (set! (.-performanceData ^js configure-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [configure-response]
   (.-seq ^js configure-response))
 

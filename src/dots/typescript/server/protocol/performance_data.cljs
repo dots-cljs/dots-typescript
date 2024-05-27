@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.performance-data)
 
 (defn update-graph-duration-ms
-  "Time spent updating the program graph, in milliseconds."
+  "Time spent updating the program graph, in milliseconds.
+   
+   **Returns:** `number | undefined`"
   ^js [performance-data]
   (.-updateGraphDurationMs ^js performance-data))
 
@@ -11,7 +13,9 @@
   (set! (.-updateGraphDurationMs ^js performance-data) value))
 
 (defn create-auto-import-provider-program-duration-ms
-  "The time spent creating or updating the auto-import program, in milliseconds."
+  "The time spent creating or updating the auto-import program, in milliseconds.
+   
+   **Returns:** `number | undefined`"
   ^js [performance-data]
   (.-createAutoImportProviderProgramDurationMs ^js performance-data))
 

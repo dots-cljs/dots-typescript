@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn event
+  "**Returns:** `\"requestCompleted\"`"
   ^js [request-completed-event]
   (.-event ^js request-completed-event))
 
@@ -11,6 +12,7 @@
   (set! (.-event ^js request-completed-event) value))
 
 (defn body
+  "**Returns:** `RequestCompletedEventBody`"
   ^js [request-completed-event]
   (.-body ^js request-completed-event))
 
@@ -19,6 +21,7 @@
   (set! (.-body ^js request-completed-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [request-completed-event]
   (.-type ^js request-completed-event))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js request-completed-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [request-completed-event]
   (.-seq ^js request-completed-event))
 

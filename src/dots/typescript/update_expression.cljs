@@ -1,14 +1,17 @@
 (ns dots.typescript.update-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [update-expression]
   (.-kind ^js update-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [update-expression]
   (.-flags ^js update-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [update-expression]
   (.-parent ^js update-expression))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js update-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [update-expression]
   (.-pos ^js update-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [update-expression]
   (.-end ^js update-expression))

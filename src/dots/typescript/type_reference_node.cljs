@@ -1,22 +1,27 @@
 (ns dots.typescript.type-reference-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TypeReference`"
   ^js [type-reference-node]
   (.-kind ^js type-reference-node))
 
 (defn type-name
+  "**Returns:** `EntityName`"
   ^js [type-reference-node]
   (.-typeName ^js type-reference-node))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [type-reference-node]
   (.-typeArguments ^js type-reference-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [type-reference-node]
   (.-flags ^js type-reference-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [type-reference-node]
   (.-parent ^js type-reference-node))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js type-reference-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [type-reference-node]
   (.-pos ^js type-reference-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [type-reference-node]
   (.-end ^js type-reference-node))

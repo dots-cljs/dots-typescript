@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [key]))
 
 (defn key
+  "**Returns:** `string`"
   ^js [diagnostic-message]
   (.-key ^js diagnostic-message))
 
@@ -10,6 +11,7 @@
   (set! (.-key ^js diagnostic-message) value))
 
 (defn category
+  "**Returns:** `DiagnosticCategory`"
   ^js [diagnostic-message]
   (.-category ^js diagnostic-message))
 
@@ -18,6 +20,7 @@
   (set! (.-category ^js diagnostic-message) value))
 
 (defn code
+  "**Returns:** `number`"
   ^js [diagnostic-message]
   (.-code ^js diagnostic-message))
 
@@ -26,6 +29,7 @@
   (set! (.-code ^js diagnostic-message) value))
 
 (defn message
+  "**Returns:** `string`"
   ^js [diagnostic-message]
   (.-message ^js diagnostic-message))
 
@@ -34,6 +38,7 @@
   (set! (.-message ^js diagnostic-message) value))
 
 (defn reports-unnecessary
+  "**Returns:** `{} | undefined`"
   ^js [diagnostic-message]
   (.-reportsUnnecessary ^js diagnostic-message))
 
@@ -42,6 +47,7 @@
   (set! (.-reportsUnnecessary ^js diagnostic-message) value))
 
 (defn reports-deprecated
+  "**Returns:** `{} | undefined`"
   ^js [diagnostic-message]
   (.-reportsDeprecated ^js diagnostic-message))
 

@@ -1,6 +1,7 @@
 (ns dots.typescript.performance-event)
 
 (defn kind
+  "**Returns:** `\"UpdateGraph\" | \"CreatePackageJsonAutoImportProvider\"`"
   ^js [performance-event]
   (.-kind ^js performance-event))
 
@@ -9,6 +10,7 @@
   (set! (.-kind ^js performance-event) value))
 
 (defn duration-ms
+  "**Returns:** `number`"
   ^js [performance-event]
   (.-durationMs ^js performance-event))
 

@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.CompileOnSaveEmitFile`"
   ^js [compile-on-save-emit-file-request]
   (.-command ^js compile-on-save-emit-file-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js compile-on-save-emit-file-request) value))
 
 (defn arguments
+  "**Returns:** `CompileOnSaveEmitFileRequestArgs`"
   ^js [compile-on-save-emit-file-request]
   (.-arguments ^js compile-on-save-emit-file-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js compile-on-save-emit-file-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [compile-on-save-emit-file-request]
   (.-type ^js compile-on-save-emit-file-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js compile-on-save-emit-file-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [compile-on-save-emit-file-request]
   (.-seq ^js compile-on-save-emit-file-request))
 

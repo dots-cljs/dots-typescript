@@ -3,6 +3,7 @@
   (:require ["typescript" :as typescript]))
 
 (defn sorted-array-brand
+  "**Returns:** `any`"
   ^js []
   (.. typescript/server -emptyArray -" __sortedArrayBrand"))
 
@@ -11,7 +12,9 @@
   (set! (.. typescript/server -emptyArray -" __sortedArrayBrand") value))
 
 (defn length
-  "Gets the length of the array. This is a number one higher than the highest element defined in an array."
+  "Gets the length of the array. This is a number one higher than the highest element defined in an array.
+   
+   **Returns:** `number`"
   ^js []
   (.. typescript/server -emptyArray -length))
 

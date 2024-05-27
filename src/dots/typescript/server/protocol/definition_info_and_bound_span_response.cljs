@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `DefinitionInfoAndBoundSpan | undefined`"
   ^js [definition-info-and-bound-span-response]
   (.-body ^js definition-info-and-bound-span-response))
 
@@ -10,6 +11,7 @@
   (set! (.-body ^js definition-info-and-bound-span-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [definition-info-and-bound-span-response]
   (.-type ^js definition-info-and-bound-span-response))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js definition-info-and-bound-span-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [definition-info-and-bound-span-response]
   (.-request_seq ^js definition-info-and-bound-span-response))
 
@@ -28,7 +32,9 @@
   (set! (.-request_seq ^js definition-info-and-bound-span-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [definition-info-and-bound-span-response]
   (.-success ^js definition-info-and-bound-span-response))
 
@@ -38,7 +44,9 @@
   (set! (.-success ^js definition-info-and-bound-span-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [definition-info-and-bound-span-response]
   (.-command ^js definition-info-and-bound-span-response))
 
@@ -49,7 +57,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [definition-info-and-bound-span-response]
   (.-message ^js definition-info-and-bound-span-response))
 
@@ -60,7 +70,9 @@
   (set! (.-message ^js definition-info-and-bound-span-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [definition-info-and-bound-span-response]
   (.-metadata ^js definition-info-and-bound-span-response))
 
@@ -70,7 +82,9 @@
   (set! (.-metadata ^js definition-info-and-bound-span-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [definition-info-and-bound-span-response]
   (.-performanceData ^js definition-info-and-bound-span-response))
 
@@ -80,7 +94,9 @@
   (set! (.-performanceData ^js definition-info-and-bound-span-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [definition-info-and-bound-span-response]
   (.-seq ^js definition-info-and-bound-span-response))
 

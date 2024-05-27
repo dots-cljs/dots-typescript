@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn event
+  "**Returns:** `\"projectsUpdatedInBackground\"`"
   ^js [projects-updated-in-background-event]
   (.-event ^js projects-updated-in-background-event))
 
@@ -10,6 +11,7 @@
   (set! (.-event ^js projects-updated-in-background-event) value))
 
 (defn body
+  "**Returns:** `ProjectsUpdatedInBackgroundEventBody`"
   ^js [projects-updated-in-background-event]
   (.-body ^js projects-updated-in-background-event))
 
@@ -18,6 +20,7 @@
   (set! (.-body ^js projects-updated-in-background-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [projects-updated-in-background-event]
   (.-type ^js projects-updated-in-background-event))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js projects-updated-in-background-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [projects-updated-in-background-event]
   (.-seq ^js projects-updated-in-background-event))
 

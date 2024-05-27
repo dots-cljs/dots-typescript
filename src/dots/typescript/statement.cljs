@@ -1,14 +1,17 @@
 (ns dots.typescript.statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [statement]
   (.-kind ^js statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [statement]
   (.-flags ^js statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [statement]
   (.-parent ^js statement))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [statement]
   (.-pos ^js statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [statement]
   (.-end ^js statement))

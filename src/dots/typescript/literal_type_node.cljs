@@ -1,18 +1,22 @@
 (ns dots.typescript.literal-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.LiteralType`"
   ^js [literal-type-node]
   (.-kind ^js literal-type-node))
 
 (defn literal
+  "**Returns:** `LiteralExpression | NullLiteral | BooleanLiteral | PrefixUnaryExpression`"
   ^js [literal-type-node]
   (.-literal ^js literal-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [literal-type-node]
   (.-flags ^js literal-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [literal-type-node]
   (.-parent ^js literal-type-node))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js literal-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [literal-type-node]
   (.-pos ^js literal-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [literal-type-node]
   (.-end ^js literal-type-node))

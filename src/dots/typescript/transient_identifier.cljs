@@ -1,6 +1,7 @@
 (ns dots.typescript.transient-identifier)
 
 (defn resolved-symbol
+  "**Returns:** `Symbol`"
   ^js [transient-identifier]
   (.-resolvedSymbol ^js transient-identifier))
 
@@ -9,32 +10,40 @@
   (set! (.-resolvedSymbol ^js transient-identifier) value))
 
 (defn kind
+  "**Returns:** `SyntaxKind.Identifier`"
   ^js [transient-identifier]
   (.-kind ^js transient-identifier))
 
 (defn escaped-text
   "Prefer to use `id.unescapedText`. (Note: This is available only in services, not internally to the TypeScript compiler.)
-   Text of identifier, but if the identifier begins with two underscores, this will begin with three."
+   Text of identifier, but if the identifier begins with two underscores, this will begin with three.
+   
+   **Returns:** `__String`"
   ^js [transient-identifier]
   (.-escapedText ^js transient-identifier))
 
 (defn text
+  "**Returns:** `string`"
   ^js [transient-identifier]
   (.-text ^js transient-identifier))
 
 (defn original-keyword-kind
+  "**Returns:** `SyntaxKind | undefined`"
   ^js [transient-identifier]
   (.-originalKeywordKind ^js transient-identifier))
 
 (defn in-js-doc-namespace?
+  "**Returns:** `boolean | undefined`"
   ^js [transient-identifier]
   (.-isInJSDocNamespace ^js transient-identifier))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [transient-identifier]
   (.-flags ^js transient-identifier))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [transient-identifier]
   (.-parent ^js transient-identifier))
 
@@ -174,9 +183,11 @@
    (.forEachChild ^js transient-identifier cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [transient-identifier]
   (.-pos ^js transient-identifier))
 
 (defn end
+  "**Returns:** `number`"
   ^js [transient-identifier]
   (.-end ^js transient-identifier))

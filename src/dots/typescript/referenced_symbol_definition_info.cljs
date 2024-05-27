@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [name]))
 
 (defn display-parts
+  "**Returns:** `SymbolDisplayPart[]`"
   ^js [referenced-symbol-definition-info]
   (.-displayParts ^js referenced-symbol-definition-info))
 
@@ -10,6 +11,7 @@
   (set! (.-displayParts ^js referenced-symbol-definition-info) value))
 
 (defn kind
+  "**Returns:** `ScriptElementKind`"
   ^js [referenced-symbol-definition-info]
   (.-kind ^js referenced-symbol-definition-info))
 
@@ -18,6 +20,7 @@
   (set! (.-kind ^js referenced-symbol-definition-info) value))
 
 (defn name
+  "**Returns:** `string`"
   ^js [referenced-symbol-definition-info]
   (.-name ^js referenced-symbol-definition-info))
 
@@ -26,6 +29,7 @@
   (set! (.-name ^js referenced-symbol-definition-info) value))
 
 (defn container-kind
+  "**Returns:** `ScriptElementKind`"
   ^js [referenced-symbol-definition-info]
   (.-containerKind ^js referenced-symbol-definition-info))
 
@@ -34,6 +38,7 @@
   (set! (.-containerKind ^js referenced-symbol-definition-info) value))
 
 (defn container-name
+  "**Returns:** `string`"
   ^js [referenced-symbol-definition-info]
   (.-containerName ^js referenced-symbol-definition-info))
 
@@ -42,6 +47,7 @@
   (set! (.-containerName ^js referenced-symbol-definition-info) value))
 
 (defn unverified?
+  "**Returns:** `boolean | undefined`"
   ^js [referenced-symbol-definition-info]
   (.-unverified ^js referenced-symbol-definition-info))
 
@@ -50,6 +56,7 @@
   (set! (.-unverified ^js referenced-symbol-definition-info) value))
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [referenced-symbol-definition-info]
   (.-textSpan ^js referenced-symbol-definition-info))
 
@@ -58,6 +65,7 @@
   (set! (.-textSpan ^js referenced-symbol-definition-info) value))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [referenced-symbol-definition-info]
   (.-fileName ^js referenced-symbol-definition-info))
 
@@ -67,7 +75,9 @@
 
 (defn original-text-span
   "If the span represents a location that was remapped (e.g. via a .d.ts.map file),
-   then the original filename and span will be specified here"
+   then the original filename and span will be specified here
+   
+   **Returns:** `TextSpan | undefined`"
   ^js [referenced-symbol-definition-info]
   (.-originalTextSpan ^js referenced-symbol-definition-info))
 
@@ -78,6 +88,7 @@
   (set! (.-originalTextSpan ^js referenced-symbol-definition-info) value))
 
 (defn original-file-name
+  "**Returns:** `string | undefined`"
   ^js [referenced-symbol-definition-info]
   (.-originalFileName ^js referenced-symbol-definition-info))
 
@@ -87,7 +98,9 @@
 
 (defn context-span
   "If DocumentSpan.textSpan is the span for name of the declaration,
-   then this is the span for relevant declaration"
+   then this is the span for relevant declaration
+   
+   **Returns:** `TextSpan | undefined`"
   ^js [referenced-symbol-definition-info]
   (.-contextSpan ^js referenced-symbol-definition-info))
 
@@ -98,6 +111,7 @@
   (set! (.-contextSpan ^js referenced-symbol-definition-info) value))
 
 (defn original-context-span
+  "**Returns:** `TextSpan | undefined`"
   ^js [referenced-symbol-definition-info]
   (.-originalContextSpan ^js referenced-symbol-definition-info))
 

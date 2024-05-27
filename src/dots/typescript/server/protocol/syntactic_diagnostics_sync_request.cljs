@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.SyntacticDiagnosticsSync`"
   ^js [syntactic-diagnostics-sync-request]
   (.-command ^js syntactic-diagnostics-sync-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js syntactic-diagnostics-sync-request) value))
 
 (defn arguments
+  "**Returns:** `SyntacticDiagnosticsSyncRequestArgs`"
   ^js [syntactic-diagnostics-sync-request]
   (.-arguments ^js syntactic-diagnostics-sync-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js syntactic-diagnostics-sync-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [syntactic-diagnostics-sync-request]
   (.-type ^js syntactic-diagnostics-sync-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js syntactic-diagnostics-sync-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [syntactic-diagnostics-sync-request]
   (.-seq ^js syntactic-diagnostics-sync-request))
 

@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [update]))
 
 (defn statements
+  "**Returns:** `NodeArray<JsonObjectExpressionStatement>`"
   ^js [json-source-file]
   (.-statements ^js json-source-file))
 
 (defn kind
+  "**Returns:** `SyntaxKind.SourceFile`"
   ^js [json-source-file]
   (.-kind ^js json-source-file))
 
 (defn end-of-file-token
+  "**Returns:** `Token<SyntaxKind.EndOfFileToken>`"
   ^js [json-source-file]
   (.-endOfFileToken ^js json-source-file))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [json-source-file]
   (.-fileName ^js json-source-file))
 
@@ -22,6 +26,7 @@
   (set! (.-fileName ^js json-source-file) value))
 
 (defn text
+  "**Returns:** `string`"
   ^js [json-source-file]
   (.-text ^js json-source-file))
 
@@ -30,6 +35,7 @@
   (set! (.-text ^js json-source-file) value))
 
 (defn amd-dependencies
+  "**Returns:** `readonly AmdDependency[]`"
   ^js [json-source-file]
   (.-amdDependencies ^js json-source-file))
 
@@ -38,6 +44,7 @@
   (set! (.-amdDependencies ^js json-source-file) value))
 
 (defn module-name
+  "**Returns:** `string | undefined`"
   ^js [json-source-file]
   (.-moduleName ^js json-source-file))
 
@@ -46,6 +53,7 @@
   (set! (.-moduleName ^js json-source-file) value))
 
 (defn referenced-files
+  "**Returns:** `readonly FileReference[]`"
   ^js [json-source-file]
   (.-referencedFiles ^js json-source-file))
 
@@ -54,6 +62,7 @@
   (set! (.-referencedFiles ^js json-source-file) value))
 
 (defn type-reference-directives
+  "**Returns:** `readonly FileReference[]`"
   ^js [json-source-file]
   (.-typeReferenceDirectives ^js json-source-file))
 
@@ -62,6 +71,7 @@
   (set! (.-typeReferenceDirectives ^js json-source-file) value))
 
 (defn lib-reference-directives
+  "**Returns:** `readonly FileReference[]`"
   ^js [json-source-file]
   (.-libReferenceDirectives ^js json-source-file))
 
@@ -70,6 +80,7 @@
   (set! (.-libReferenceDirectives ^js json-source-file) value))
 
 (defn language-variant
+  "**Returns:** `LanguageVariant`"
   ^js [json-source-file]
   (.-languageVariant ^js json-source-file))
 
@@ -78,6 +89,7 @@
   (set! (.-languageVariant ^js json-source-file) value))
 
 (defn declaration-file?
+  "**Returns:** `boolean`"
   ^js [json-source-file]
   (.-isDeclarationFile ^js json-source-file))
 
@@ -91,7 +103,9 @@
     /// <reference no-default-lib=\"true\"/>
    
    If any other file has this comment, it signals not to include lib.d.ts
-   because this containing file is intended to act as a default library."
+   because this containing file is intended to act as a default library.
+   
+   **Returns:** `boolean`"
   ^js [json-source-file]
   (.-hasNoDefaultLib ^js json-source-file))
 
@@ -106,6 +120,7 @@
   (set! (.-hasNoDefaultLib ^js json-source-file) value))
 
 (defn language-version
+  "**Returns:** `ScriptTarget`"
   ^js [json-source-file]
   (.-languageVersion ^js json-source-file))
 
@@ -128,7 +143,9 @@
    `moduleResolution` is `Node16` or `NodeNext`, which is implied by the `module` setting
    of `Node16` or `NodeNext`, respectively, but may be overriden (eg, by a `moduleResolution`
    of `node`). If so, this field will be unset and source files will be considered to be
-   CommonJS-output-format by the node module transformer and type checker, regardless of extension or context."
+   CommonJS-output-format by the node module transformer and type checker, regardless of extension or context.
+   
+   **Returns:** `ResolutionMode`"
   ^js [json-source-file]
   (.-impliedNodeFormat ^js json-source-file))
 
@@ -191,10 +208,12 @@
   (.update ^js json-source-file new-text text-change-range))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [json-source-file]
   (.-flags ^js json-source-file))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [json-source-file]
   (.-parent ^js json-source-file))
 
@@ -334,9 +353,11 @@
    (.forEachChild ^js json-source-file cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [json-source-file]
   (.-pos ^js json-source-file))
 
 (defn end
+  "**Returns:** `number`"
   ^js [json-source-file]
   (.-end ^js json-source-file))

@@ -1,18 +1,22 @@
 (ns dots.typescript.object-binding-pattern)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ObjectBindingPattern`"
   ^js [object-binding-pattern]
   (.-kind ^js object-binding-pattern))
 
 (defn parent
+  "**Returns:** `VariableDeclaration | ParameterDeclaration | BindingElement`"
   ^js [object-binding-pattern]
   (.-parent ^js object-binding-pattern))
 
 (defn elements
+  "**Returns:** `NodeArray<BindingElement>`"
   ^js [object-binding-pattern]
   (.-elements ^js object-binding-pattern))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [object-binding-pattern]
   (.-flags ^js object-binding-pattern))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js object-binding-pattern cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [object-binding-pattern]
   (.-pos ^js object-binding-pattern))
 
 (defn end
+  "**Returns:** `number`"
   ^js [object-binding-pattern]
   (.-end ^js object-binding-pattern))

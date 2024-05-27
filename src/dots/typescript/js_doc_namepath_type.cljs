@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocNamepathType`"
   ^js [js-doc-namepath-type]
   (.-kind ^js js-doc-namepath-type))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [js-doc-namepath-type]
   (.-type ^js js-doc-namepath-type))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-namepath-type]
   (.-flags ^js js-doc-namepath-type))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-namepath-type]
   (.-parent ^js js-doc-namepath-type))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js js-doc-namepath-type cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-namepath-type]
   (.-pos ^js js-doc-namepath-type))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-namepath-type]
   (.-end ^js js-doc-namepath-type))

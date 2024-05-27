@@ -1,6 +1,7 @@
 (ns dots.typescript.classification-info)
 
 (defn length
+  "**Returns:** `number`"
   ^js [classification-info]
   (.-length ^js classification-info))
 
@@ -9,6 +10,7 @@
   (set! (.-length ^js classification-info) value))
 
 (defn classification
+  "**Returns:** `TokenClass`"
   ^js [classification-info]
   (.-classification ^js classification-info))
 

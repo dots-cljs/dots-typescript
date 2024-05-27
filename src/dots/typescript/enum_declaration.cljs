@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.EnumDeclaration`"
   ^js [enum-declaration]
   (.-kind ^js enum-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [enum-declaration]
   (.-modifiers ^js enum-declaration))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [enum-declaration]
   (.-name ^js enum-declaration))
 
 (defn members
+  "**Returns:** `NodeArray<EnumMember>`"
   ^js [enum-declaration]
   (.-members ^js enum-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [enum-declaration]
   (.-flags ^js enum-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [enum-declaration]
   (.-parent ^js enum-declaration))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js enum-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [enum-declaration]
   (.-pos ^js enum-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [enum-declaration]
   (.-end ^js enum-declaration))

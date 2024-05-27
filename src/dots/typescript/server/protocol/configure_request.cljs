@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Configure`"
   ^js [configure-request]
   (.-command ^js configure-request))
 
@@ -12,6 +13,7 @@
   (set! (.-command ^js configure-request) value))
 
 (defn arguments
+  "**Returns:** `ConfigureRequestArguments`"
   ^js [configure-request]
   (.-arguments ^js configure-request))
 
@@ -20,6 +22,7 @@
   (set! (.-arguments ^js configure-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [configure-request]
   (.-type ^js configure-request))
 
@@ -28,7 +31,9 @@
   (set! (.-type ^js configure-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [configure-request]
   (.-seq ^js configure-request))
 

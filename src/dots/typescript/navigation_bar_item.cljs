@@ -5,6 +5,7 @@
    Child items always have an empty array for their `childItems`.")
 
 (defn text
+  "**Returns:** `string`"
   ^js [navigation-bar-item]
   (.-text ^js navigation-bar-item))
 
@@ -13,6 +14,7 @@
   (set! (.-text ^js navigation-bar-item) value))
 
 (defn kind
+  "**Returns:** `ScriptElementKind`"
   ^js [navigation-bar-item]
   (.-kind ^js navigation-bar-item))
 
@@ -21,6 +23,7 @@
   (set! (.-kind ^js navigation-bar-item) value))
 
 (defn kind-modifiers
+  "**Returns:** `string`"
   ^js [navigation-bar-item]
   (.-kindModifiers ^js navigation-bar-item))
 
@@ -29,6 +32,7 @@
   (set! (.-kindModifiers ^js navigation-bar-item) value))
 
 (defn spans
+  "**Returns:** `TextSpan[]`"
   ^js [navigation-bar-item]
   (.-spans ^js navigation-bar-item))
 
@@ -37,6 +41,7 @@
   (set! (.-spans ^js navigation-bar-item) value))
 
 (defn child-items
+  "**Returns:** `NavigationBarItem[]`"
   ^js [navigation-bar-item]
   (.-childItems ^js navigation-bar-item))
 
@@ -45,6 +50,7 @@
   (set! (.-childItems ^js navigation-bar-item) value))
 
 (defn indent
+  "**Returns:** `number`"
   ^js [navigation-bar-item]
   (.-indent ^js navigation-bar-item))
 
@@ -53,6 +59,7 @@
   (set! (.-indent ^js navigation-bar-item) value))
 
 (defn bolded?
+  "**Returns:** `boolean`"
   ^js [navigation-bar-item]
   (.-bolded ^js navigation-bar-item))
 
@@ -61,6 +68,7 @@
   (set! (.-bolded ^js navigation-bar-item) value))
 
 (defn grayed?
+  "**Returns:** `boolean`"
   ^js [navigation-bar-item]
   (.-grayed ^js navigation-bar-item))
 

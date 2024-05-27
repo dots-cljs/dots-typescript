@@ -1,18 +1,22 @@
 (ns dots.typescript.computed-property-name)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ComputedPropertyName`"
   ^js [computed-property-name]
   (.-kind ^js computed-property-name))
 
 (defn parent
+  "**Returns:** `Declaration`"
   ^js [computed-property-name]
   (.-parent ^js computed-property-name))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [computed-property-name]
   (.-expression ^js computed-property-name))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [computed-property-name]
   (.-flags ^js computed-property-name))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js computed-property-name cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [computed-property-name]
   (.-pos ^js computed-property-name))
 
 (defn end
+  "**Returns:** `number`"
   ^js [computed-property-name]
   (.-end ^js computed-property-name))

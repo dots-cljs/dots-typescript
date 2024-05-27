@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.PrepareCallHierarchy`"
   ^js [prepare-call-hierarchy-request]
   (.-command ^js prepare-call-hierarchy-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js prepare-call-hierarchy-request) value))
 
 (defn arguments
+  "**Returns:** `FileLocationRequestArgs`"
   ^js [prepare-call-hierarchy-request]
   (.-arguments ^js prepare-call-hierarchy-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js prepare-call-hierarchy-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [prepare-call-hierarchy-request]
   (.-type ^js prepare-call-hierarchy-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js prepare-call-hierarchy-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [prepare-call-hierarchy-request]
   (.-seq ^js prepare-call-hierarchy-request))
 

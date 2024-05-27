@@ -5,6 +5,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Implementation`"
   ^js [implementation-request]
   (.-command ^js implementation-request))
 
@@ -13,6 +14,7 @@
   (set! (.-command ^js implementation-request) value))
 
 (defn arguments
+  "**Returns:** `FileLocationRequestArgs`"
   ^js [implementation-request]
   (.-arguments ^js implementation-request))
 
@@ -21,6 +23,7 @@
   (set! (.-arguments ^js implementation-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [implementation-request]
   (.-type ^js implementation-request))
 
@@ -29,7 +32,9 @@
   (set! (.-type ^js implementation-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [implementation-request]
   (.-seq ^js implementation-request))
 

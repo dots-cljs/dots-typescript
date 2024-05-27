@@ -2,7 +2,9 @@
   "Arguments for format messages.")
 
 (defn end-line
-  "Last line of range for which to format text in file."
+  "Last line of range for which to format text in file.
+   
+   **Returns:** `number`"
   ^js [format-request-args]
   (.-endLine ^js format-request-args))
 
@@ -12,7 +14,9 @@
   (set! (.-endLine ^js format-request-args) value))
 
 (defn end-offset
-  "Character offset on last line of range for which to format text in file."
+  "Character offset on last line of range for which to format text in file.
+   
+   **Returns:** `number`"
   ^js [format-request-args]
   (.-endOffset ^js format-request-args))
 
@@ -22,7 +26,9 @@
   (set! (.-endOffset ^js format-request-args) value))
 
 (defn options
-  "Format options to be used."
+  "Format options to be used.
+   
+   **Returns:** `FormatCodeSettings | undefined`"
   ^js [format-request-args]
   (.-options ^js format-request-args))
 
@@ -32,7 +38,9 @@
   (set! (.-options ^js format-request-args) value))
 
 (defn line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [format-request-args]
   (.-line ^js format-request-args))
 
@@ -42,7 +50,9 @@
   (set! (.-line ^js format-request-args) value))
 
 (defn offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [format-request-args]
   (.-offset ^js format-request-args))
 
@@ -52,7 +62,9 @@
   (set! (.-offset ^js format-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [format-request-args]
   (.-file ^js format-request-args))
 
@@ -62,6 +74,7 @@
   (set! (.-file ^js format-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [format-request-args]
   (.-projectFileName ^js format-request-args))
 

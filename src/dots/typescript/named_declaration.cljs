@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
+  "**Returns:** `DeclarationName | undefined`"
   ^js [named-declaration]
   (.-name ^js named-declaration))
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [named-declaration]
   (.-kind ^js named-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [named-declaration]
   (.-flags ^js named-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [named-declaration]
   (.-parent ^js named-declaration))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js named-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [named-declaration]
   (.-pos ^js named-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [named-declaration]
   (.-end ^js named-declaration))

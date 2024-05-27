@@ -3,6 +3,7 @@
    location where renaming should be invoked from")
 
 (defn edits
+  "**Returns:** `FileTextChanges[]`"
   ^js [refactor-edit-info]
   (.-edits ^js refactor-edit-info))
 
@@ -11,6 +12,7 @@
   (set! (.-edits ^js refactor-edit-info) value))
 
 (defn rename-filename
+  "**Returns:** `string | undefined`"
   ^js [refactor-edit-info]
   (.-renameFilename ^js refactor-edit-info))
 
@@ -19,6 +21,7 @@
   (set! (.-renameFilename ^js refactor-edit-info) value))
 
 (defn rename-location
+  "**Returns:** `number | undefined`"
   ^js [refactor-edit-info]
   (.-renameLocation ^js refactor-edit-info))
 
@@ -27,6 +30,7 @@
   (set! (.-renameLocation ^js refactor-edit-info) value))
 
 (defn commands
+  "**Returns:** `InstallPackageAction[] | undefined`"
   ^js [refactor-edit-info]
   (.-commands ^js refactor-edit-info))
 
@@ -35,6 +39,7 @@
   (set! (.-commands ^js refactor-edit-info) value))
 
 (defn not-applicable-reason
+  "**Returns:** `string | undefined`"
   ^js [refactor-edit-info]
   (.-notApplicableReason ^js refactor-edit-info))
 

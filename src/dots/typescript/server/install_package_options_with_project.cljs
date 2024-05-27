@@ -1,6 +1,7 @@
 (ns dots.typescript.server.install-package-options-with-project)
 
 (defn project-name
+  "**Returns:** `string`"
   ^js [install-package-options-with-project]
   (.-projectName ^js install-package-options-with-project))
 
@@ -9,6 +10,7 @@
   (set! (.-projectName ^js install-package-options-with-project) value))
 
 (defn project-root-path
+  "**Returns:** `Path`"
   ^js [install-package-options-with-project]
   (.-projectRootPath ^js install-package-options-with-project))
 
@@ -17,6 +19,7 @@
   (set! (.-projectRootPath ^js install-package-options-with-project) value))
 
 (defn file-name
+  "**Returns:** `Path`"
   ^js [install-package-options-with-project]
   (.-fileName ^js install-package-options-with-project))
 
@@ -25,6 +28,7 @@
   (set! (.-fileName ^js install-package-options-with-project) value))
 
 (defn package-name
+  "**Returns:** `string`"
   ^js [install-package-options-with-project]
   (.-packageName ^js install-package-options-with-project))
 

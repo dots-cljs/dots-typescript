@@ -1,14 +1,17 @@
 (ns dots.typescript.js-doc-all-type)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocAllType`"
   ^js [js-doc-all-type]
   (.-kind ^js js-doc-all-type))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-all-type]
   (.-flags ^js js-doc-all-type))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-all-type]
   (.-parent ^js js-doc-all-type))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js js-doc-all-type cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-all-type]
   (.-pos ^js js-doc-all-type))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-all-type]
   (.-end ^js js-doc-all-type))

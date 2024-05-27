@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.VariableDeclaration`"
   ^js [variable-declaration]
   (.-kind ^js variable-declaration))
 
 (defn parent
+  "**Returns:** `VariableDeclarationList | CatchClause`"
   ^js [variable-declaration]
   (.-parent ^js variable-declaration))
 
 (defn name
+  "**Returns:** `BindingName`"
   ^js [variable-declaration]
   (.-name ^js variable-declaration))
 
 (defn exclamation-token
+  "**Returns:** `ExclamationToken | undefined`"
   ^js [variable-declaration]
   (.-exclamationToken ^js variable-declaration))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [variable-declaration]
   (.-type ^js variable-declaration))
 
 (defn initializer
+  "**Returns:** `Expression | undefined`"
   ^js [variable-declaration]
   (.-initializer ^js variable-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [variable-declaration]
   (.-flags ^js variable-declaration))
 
@@ -165,9 +172,11 @@
    (.forEachChild ^js variable-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [variable-declaration]
   (.-pos ^js variable-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [variable-declaration]
   (.-end ^js variable-declaration))

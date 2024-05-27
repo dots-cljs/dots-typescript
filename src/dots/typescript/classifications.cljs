@@ -1,6 +1,7 @@
 (ns dots.typescript.classifications)
 
 (defn spans
+  "**Returns:** `number[]`"
   ^js [classifications]
   (.-spans ^js classifications))
 
@@ -9,6 +10,7 @@
   (set! (.-spans ^js classifications) value))
 
 (defn end-of-line-state
+  "**Returns:** `EndOfLineState`"
   ^js [classifications]
   (.-endOfLineState ^js classifications))
 

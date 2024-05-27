@@ -1,26 +1,32 @@
 (ns dots.typescript.assignment-expression)
 
 (defn left
+  "**Returns:** `LeftHandSideExpression`"
   ^js [assignment-expression]
   (.-left ^js assignment-expression))
 
 (defn operator-token
+  "**Returns:** `TOperator`"
   ^js [assignment-expression]
   (.-operatorToken ^js assignment-expression))
 
 (defn kind
+  "**Returns:** `SyntaxKind.BinaryExpression`"
   ^js [assignment-expression]
   (.-kind ^js assignment-expression))
 
 (defn right
+  "**Returns:** `Expression`"
   ^js [assignment-expression]
   (.-right ^js assignment-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [assignment-expression]
   (.-flags ^js assignment-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [assignment-expression]
   (.-parent ^js assignment-expression))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js assignment-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [assignment-expression]
   (.-pos ^js assignment-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [assignment-expression]
   (.-end ^js assignment-expression))

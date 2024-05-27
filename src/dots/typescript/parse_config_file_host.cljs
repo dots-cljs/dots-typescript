@@ -7,6 +7,7 @@
   (.getCurrentDirectory ^js parse-config-file-host))
 
 (defn use-case-sensitive-file-names?
+  "**Returns:** `boolean`"
   ^js [parse-config-file-host]
   (.-useCaseSensitiveFileNames ^js parse-config-file-host))
 
@@ -85,7 +86,9 @@
   (.getDirectories ^js parse-config-file-host path))
 
 (defn on-un-recoverable-config-file-diagnostic
-  "Reports unrecoverable error when parsing config file"
+  "Reports unrecoverable error when parsing config file
+   
+   **Returns:** `DiagnosticReporter`"
   ^js [parse-config-file-host]
   (.-onUnRecoverableConfigFileDiagnostic ^js parse-config-file-host))
 

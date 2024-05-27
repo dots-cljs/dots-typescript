@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.CompileOnSaveAffectedFileList`"
   ^js [compile-on-save-affected-file-list-request]
   (.-command ^js compile-on-save-affected-file-list-request))
 
@@ -12,6 +13,7 @@
   (set! (.-command ^js compile-on-save-affected-file-list-request) value))
 
 (defn arguments
+  "**Returns:** `FileRequestArgs`"
   ^js [compile-on-save-affected-file-list-request]
   (.-arguments ^js compile-on-save-affected-file-list-request))
 
@@ -20,6 +22,7 @@
   (set! (.-arguments ^js compile-on-save-affected-file-list-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [compile-on-save-affected-file-list-request]
   (.-type ^js compile-on-save-affected-file-list-request))
 
@@ -28,7 +31,9 @@
   (set! (.-type ^js compile-on-save-affected-file-list-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [compile-on-save-affected-file-list-request]
   (.-seq ^js compile-on-save-affected-file-list-request))
 

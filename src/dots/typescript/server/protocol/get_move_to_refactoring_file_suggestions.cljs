@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `{ newFileName: string; files: string[]; }`"
   ^js [get-move-to-refactoring-file-suggestions]
   (.-body ^js get-move-to-refactoring-file-suggestions))
 
@@ -12,6 +13,7 @@
   (set! (.-body ^js get-move-to-refactoring-file-suggestions) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [get-move-to-refactoring-file-suggestions]
   (.-type ^js get-move-to-refactoring-file-suggestions))
 
@@ -20,7 +22,9 @@
   (set! (.-type ^js get-move-to-refactoring-file-suggestions) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [get-move-to-refactoring-file-suggestions]
   (.-request_seq ^js get-move-to-refactoring-file-suggestions))
 
@@ -30,7 +34,9 @@
   (set! (.-request_seq ^js get-move-to-refactoring-file-suggestions) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [get-move-to-refactoring-file-suggestions]
   (.-success ^js get-move-to-refactoring-file-suggestions))
 
@@ -40,7 +46,9 @@
   (set! (.-success ^js get-move-to-refactoring-file-suggestions) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [get-move-to-refactoring-file-suggestions]
   (.-command ^js get-move-to-refactoring-file-suggestions))
 
@@ -51,7 +59,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [get-move-to-refactoring-file-suggestions]
   (.-message ^js get-move-to-refactoring-file-suggestions))
 
@@ -62,7 +72,9 @@
   (set! (.-message ^js get-move-to-refactoring-file-suggestions) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [get-move-to-refactoring-file-suggestions]
   (.-metadata ^js get-move-to-refactoring-file-suggestions))
 
@@ -72,7 +84,9 @@
   (set! (.-metadata ^js get-move-to-refactoring-file-suggestions) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [get-move-to-refactoring-file-suggestions]
   (.-performanceData ^js get-move-to-refactoring-file-suggestions))
 
@@ -82,7 +96,9 @@
   (set! (.-performanceData ^js get-move-to-refactoring-file-suggestions) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [get-move-to-refactoring-file-suggestions]
   (.-seq ^js get-move-to-refactoring-file-suggestions))
 

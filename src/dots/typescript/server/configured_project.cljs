@@ -4,11 +4,14 @@
    Otherwise it will create an InferredProject.")
 
 (defn canonical-config-file-path
+  "**Returns:** `NormalizedPath`"
   ^js [configured-project]
   (.-canonicalConfigFilePath ^js configured-project))
 
 (defn external-project-ref-count
-  "Ref count to the project when opened from external project"
+  "Ref count to the project when opened from external project
+   
+   **Returns:** `any`"
   ^js [configured-project]
   (.-externalProjectRefCount ^js configured-project))
 
@@ -18,6 +21,7 @@
   (set! (.-externalProjectRefCount ^js configured-project) value))
 
 (defn project-references
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-projectReferences ^js configured-project))
 
@@ -85,14 +89,17 @@
   (.getEffectiveTypeRoots ^js configured-project))
 
 (defn project-kind
+  "**Returns:** `ProjectKind`"
   ^js [configured-project]
   (.-projectKind ^js configured-project))
 
 (defn project-service
+  "**Returns:** `ProjectService`"
   ^js [configured-project]
   (.-projectService ^js configured-project))
 
 (defn document-registry
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-documentRegistry ^js configured-project))
 
@@ -101,6 +108,7 @@
   (set! (.-documentRegistry ^js configured-project) value))
 
 (defn compiler-options
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-compilerOptions ^js configured-project))
 
@@ -109,6 +117,7 @@
   (set! (.-compilerOptions ^js configured-project) value))
 
 (defn compile-on-save-enabled?
+  "**Returns:** `boolean`"
   ^js [configured-project]
   (.-compileOnSaveEnabled ^js configured-project))
 
@@ -117,6 +126,7 @@
   (set! (.-compileOnSaveEnabled ^js configured-project) value))
 
 (defn watch-options
+  "**Returns:** `WatchOptions | undefined`"
   ^js [configured-project]
   (.-watchOptions ^js configured-project))
 
@@ -125,6 +135,7 @@
   (set! (.-watchOptions ^js configured-project) value))
 
 (defn root-files
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-rootFiles ^js configured-project))
 
@@ -133,6 +144,7 @@
   (set! (.-rootFiles ^js configured-project) value))
 
 (defn root-files-map
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-rootFilesMap ^js configured-project))
 
@@ -141,6 +153,7 @@
   (set! (.-rootFilesMap ^js configured-project) value))
 
 (defn program
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-program ^js configured-project))
 
@@ -149,6 +162,7 @@
   (set! (.-program ^js configured-project) value))
 
 (defn external-files
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-externalFiles ^js configured-project))
 
@@ -157,6 +171,7 @@
   (set! (.-externalFiles ^js configured-project) value))
 
 (defn missing-files-map
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-missingFilesMap ^js configured-project))
 
@@ -165,6 +180,7 @@
   (set! (.-missingFilesMap ^js configured-project) value))
 
 (defn generated-files-map
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-generatedFilesMap ^js configured-project))
 
@@ -173,6 +189,7 @@
   (set! (.-generatedFilesMap ^js configured-project) value))
 
 (defn language-service
+  "**Returns:** `LanguageService`"
   ^js [configured-project]
   (.-languageService ^js configured-project))
 
@@ -181,6 +198,7 @@
   (set! (.-languageService ^js configured-project) value))
 
 (defn language-service-enabled?
+  "**Returns:** `boolean`"
   ^js [configured-project]
   (.-languageServiceEnabled ^js configured-project))
 
@@ -189,14 +207,17 @@
   (set! (.-languageServiceEnabled ^js configured-project) value))
 
 (defn trace
+  "**Returns:** `((s: string) => void) | undefined`"
   ^js [configured-project]
   (.-trace ^js configured-project))
 
 (defn realpath
+  "**Returns:** `((path: string) => string) | undefined`"
   ^js [configured-project]
   (.-realpath ^js configured-project))
 
 (defn builder-state
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-builderState ^js configured-project))
 
@@ -205,7 +226,9 @@
   (set! (.-builderState ^js configured-project) value))
 
 (defn updated-file-names
-  "Set of files names that were updated since the last call to getChangesSinceVersion."
+  "Set of files names that were updated since the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [configured-project]
   (.-updatedFileNames ^js configured-project))
 
@@ -215,7 +238,9 @@
   (set! (.-updatedFileNames ^js configured-project) value))
 
 (defn last-reported-file-names
-  "Set of files that was returned from the last call to getChangesSinceVersion."
+  "Set of files that was returned from the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [configured-project]
   (.-lastReportedFileNames ^js configured-project))
 
@@ -225,7 +250,9 @@
   (set! (.-lastReportedFileNames ^js configured-project) value))
 
 (defn last-reported-version
-  "Last version that was reported."
+  "Last version that was reported.
+   
+   **Returns:** `any`"
   ^js [configured-project]
   (.-lastReportedVersion ^js configured-project))
 
@@ -235,6 +262,7 @@
   (set! (.-lastReportedVersion ^js configured-project) value))
 
 (defn project-errors
+  "**Returns:** `Diagnostic[] | undefined`"
   ^js [configured-project]
   (.-projectErrors ^js configured-project))
 
@@ -243,6 +271,7 @@
   (set! (.-projectErrors ^js configured-project) value))
 
 (defn initial-load-pending
+  "**Returns:** `() => boolean`"
   ^js [configured-project]
   (.-isInitialLoadPending ^js configured-project))
 
@@ -251,6 +280,7 @@
   (set! (.-isInitialLoadPending ^js configured-project) value))
 
 (defn cancellation-token
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-cancellationToken ^js configured-project))
 
@@ -265,6 +295,7 @@
   (.isJsOnlyProject ^js configured-project))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [configured-project]
   (.-jsDocParsingMode ^js configured-project))
 
@@ -310,6 +341,7 @@
   (.getScriptFileNames ^js configured-project))
 
 (defn or-create-script-info-and-attach-to-project
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-getOrCreateScriptInfoAndAttachToProject ^js configured-project))
 
@@ -439,6 +471,7 @@
   (.error ^js configured-project s))
 
 (defn set-internal-compiler-options-for-emitting-js-files
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-setInternalCompilerOptionsForEmittingJsFiles ^js configured-project))
 
@@ -522,6 +555,7 @@
   (.getSourceFile ^js configured-project path))
 
 (defn detach-script-info-if-not-root
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-detachScriptInfoIfNotRoot ^js configured-project))
 
@@ -658,6 +692,7 @@
   (.removeExistingTypings ^js configured-project include))
 
 (defn update-graph-worker
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-updateGraphWorker ^js configured-project))
 
@@ -666,6 +701,7 @@
   (set! (.-updateGraphWorker ^js configured-project) value))
 
 (defn detach-script-info-from-project
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-detachScriptInfoFromProject ^js configured-project))
 
@@ -674,6 +710,7 @@
   (set! (.-detachScriptInfoFromProject ^js configured-project) value))
 
 (defn add-missing-file-watcher
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-addMissingFileWatcher ^js configured-project))
 
@@ -682,6 +719,7 @@
   (set! (.-addMissingFileWatcher ^js configured-project) value))
 
 (defn watched-missing-file
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-isWatchedMissingFile ^js configured-project))
 
@@ -690,6 +728,7 @@
   (set! (.-isWatchedMissingFile ^js configured-project) value))
 
 (defn create-generated-file-watcher
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-createGeneratedFileWatcher ^js configured-project))
 
@@ -698,6 +737,7 @@
   (set! (.-createGeneratedFileWatcher ^js configured-project) value))
 
 (defn valid-generated-file-watcher
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-isValidGeneratedFileWatcher ^js configured-project))
 
@@ -706,6 +746,7 @@
   (set! (.-isValidGeneratedFileWatcher ^js configured-project) value))
 
 (defn clear-generated-file-watch
+  "**Returns:** `any`"
   ^js [configured-project]
   (.-clearGeneratedFileWatch ^js configured-project))
 

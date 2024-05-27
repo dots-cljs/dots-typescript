@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [comment]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocEnumTag`"
   ^js [js-doc-enum-tag]
   (.-kind ^js js-doc-enum-tag))
 
 (defn parent
+  "**Returns:** `JSDoc`"
   ^js [js-doc-enum-tag]
   (.-parent ^js js-doc-enum-tag))
 
 (defn type-expression
+  "**Returns:** `JSDocTypeExpression`"
   ^js [js-doc-enum-tag]
   (.-typeExpression ^js js-doc-enum-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-enum-tag]
   (.-tagName ^js js-doc-enum-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-enum-tag]
   (.-comment ^js js-doc-enum-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-enum-tag]
   (.-flags ^js js-doc-enum-tag))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js js-doc-enum-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-enum-tag]
   (.-pos ^js js-doc-enum-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-enum-tag]
   (.-end ^js js-doc-enum-tag))

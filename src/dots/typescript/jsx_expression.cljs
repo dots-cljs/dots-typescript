@@ -1,22 +1,27 @@
 (ns dots.typescript.jsx-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxExpression`"
   ^js [jsx-expression]
   (.-kind ^js jsx-expression))
 
 (defn parent
+  "**Returns:** `JsxElement | JsxFragment | JsxAttributeLike`"
   ^js [jsx-expression]
   (.-parent ^js jsx-expression))
 
 (defn dot-dot-dot-token
+  "**Returns:** `Token<SyntaxKind.DotDotDotToken> | undefined`"
   ^js [jsx-expression]
   (.-dotDotDotToken ^js jsx-expression))
 
 (defn expression
+  "**Returns:** `Expression | undefined`"
   ^js [jsx-expression]
   (.-expression ^js jsx-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-expression]
   (.-flags ^js jsx-expression))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js jsx-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-expression]
   (.-pos ^js jsx-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-expression]
   (.-end ^js jsx-expression))

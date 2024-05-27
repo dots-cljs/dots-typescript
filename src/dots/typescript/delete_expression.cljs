@@ -1,18 +1,22 @@
 (ns dots.typescript.delete-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.DeleteExpression`"
   ^js [delete-expression]
   (.-kind ^js delete-expression))
 
 (defn expression
+  "**Returns:** `UnaryExpression`"
   ^js [delete-expression]
   (.-expression ^js delete-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [delete-expression]
   (.-flags ^js delete-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [delete-expression]
   (.-parent ^js delete-expression))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js delete-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [delete-expression]
   (.-pos ^js delete-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [delete-expression]
   (.-end ^js delete-expression))

@@ -1,6 +1,7 @@
 (ns dots.typescript.system)
 
 (defn args
+  "**Returns:** `string[]`"
   ^js [system]
   (.-args ^js system))
 
@@ -9,6 +10,7 @@
   (set! (.-args ^js system) value))
 
 (defn new-line
+  "**Returns:** `string`"
   ^js [system]
   (.-newLine ^js system))
 
@@ -17,6 +19,7 @@
   (set! (.-newLine ^js system) value))
 
 (defn use-case-sensitive-file-names?
+  "**Returns:** `boolean`"
   ^js [system]
   (.-useCaseSensitiveFileNames ^js system))
 

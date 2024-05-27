@@ -1,32 +1,40 @@
 (ns dots.typescript.identifier)
 
 (defn kind
+  "**Returns:** `SyntaxKind.Identifier`"
   ^js [identifier]
   (.-kind ^js identifier))
 
 (defn escaped-text
   "Prefer to use `id.unescapedText`. (Note: This is available only in services, not internally to the TypeScript compiler.)
-   Text of identifier, but if the identifier begins with two underscores, this will begin with three."
+   Text of identifier, but if the identifier begins with two underscores, this will begin with three.
+   
+   **Returns:** `__String`"
   ^js [identifier]
   (.-escapedText ^js identifier))
 
 (defn text
+  "**Returns:** `string`"
   ^js [identifier]
   (.-text ^js identifier))
 
 (defn original-keyword-kind
+  "**Returns:** `SyntaxKind | undefined`"
   ^js [identifier]
   (.-originalKeywordKind ^js identifier))
 
 (defn in-js-doc-namespace?
+  "**Returns:** `boolean | undefined`"
   ^js [identifier]
   (.-isInJSDocNamespace ^js identifier))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [identifier]
   (.-flags ^js identifier))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [identifier]
   (.-parent ^js identifier))
 
@@ -166,9 +174,11 @@
    (.forEachChild ^js identifier cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [identifier]
   (.-pos ^js identifier))
 
 (defn end
+  "**Returns:** `number`"
   ^js [identifier]
   (.-end ^js identifier))

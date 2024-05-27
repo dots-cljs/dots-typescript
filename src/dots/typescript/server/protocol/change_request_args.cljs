@@ -2,7 +2,9 @@
   "Arguments for change request message.")
 
 (defn insert-string
-  "Optional string to insert at location (file, line, offset)."
+  "Optional string to insert at location (file, line, offset).
+   
+   **Returns:** `string | undefined`"
   ^js [change-request-args]
   (.-insertString ^js change-request-args))
 
@@ -12,7 +14,9 @@
   (set! (.-insertString ^js change-request-args) value))
 
 (defn end-line
-  "Last line of range for which to format text in file."
+  "Last line of range for which to format text in file.
+   
+   **Returns:** `number`"
   ^js [change-request-args]
   (.-endLine ^js change-request-args))
 
@@ -22,7 +26,9 @@
   (set! (.-endLine ^js change-request-args) value))
 
 (defn end-offset
-  "Character offset on last line of range for which to format text in file."
+  "Character offset on last line of range for which to format text in file.
+   
+   **Returns:** `number`"
   ^js [change-request-args]
   (.-endOffset ^js change-request-args))
 
@@ -32,7 +38,9 @@
   (set! (.-endOffset ^js change-request-args) value))
 
 (defn options
-  "Format options to be used."
+  "Format options to be used.
+   
+   **Returns:** `FormatCodeSettings | undefined`"
   ^js [change-request-args]
   (.-options ^js change-request-args))
 
@@ -42,7 +50,9 @@
   (set! (.-options ^js change-request-args) value))
 
 (defn line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [change-request-args]
   (.-line ^js change-request-args))
 
@@ -52,7 +62,9 @@
   (set! (.-line ^js change-request-args) value))
 
 (defn offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [change-request-args]
   (.-offset ^js change-request-args))
 
@@ -62,7 +74,9 @@
   (set! (.-offset ^js change-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [change-request-args]
   (.-file ^js change-request-args))
 
@@ -72,6 +86,7 @@
   (set! (.-file ^js change-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [change-request-args]
   (.-projectFileName ^js change-request-args))
 

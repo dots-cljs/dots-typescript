@@ -2,7 +2,9 @@
   "Represents additional spans returned with a diagnostic which are relevant to it")
 
 (defn category
-  "The category of the related information message, e.g. \"error\", \"warning\", or \"suggestion\"."
+  "The category of the related information message, e.g. \"error\", \"warning\", or \"suggestion\".
+   
+   **Returns:** `string`"
   ^js [diagnostic-related-information]
   (.-category ^js diagnostic-related-information))
 
@@ -12,7 +14,9 @@
   (set! (.-category ^js diagnostic-related-information) value))
 
 (defn code
-  "The code used ot identify the related information"
+  "The code used ot identify the related information
+   
+   **Returns:** `number`"
   ^js [diagnostic-related-information]
   (.-code ^js diagnostic-related-information))
 
@@ -22,7 +26,9 @@
   (set! (.-code ^js diagnostic-related-information) value))
 
 (defn message
-  "Text of related or additional information."
+  "Text of related or additional information.
+   
+   **Returns:** `string`"
   ^js [diagnostic-related-information]
   (.-message ^js diagnostic-related-information))
 
@@ -32,7 +38,9 @@
   (set! (.-message ^js diagnostic-related-information) value))
 
 (defn span
-  "Associated location"
+  "Associated location
+   
+   **Returns:** `FileSpan | undefined`"
   ^js [diagnostic-related-information]
   (.-span ^js diagnostic-related-information))
 

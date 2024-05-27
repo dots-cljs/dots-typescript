@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.SelectionRange`"
   ^js [selection-range-request]
   (.-command ^js selection-range-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js selection-range-request) value))
 
 (defn arguments
+  "**Returns:** `SelectionRangeRequestArgs`"
   ^js [selection-range-request]
   (.-arguments ^js selection-range-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js selection-range-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [selection-range-request]
   (.-type ^js selection-range-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js selection-range-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [selection-range-request]
   (.-seq ^js selection-range-request))
 

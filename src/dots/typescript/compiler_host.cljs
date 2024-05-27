@@ -50,6 +50,7 @@
   (.getDefaultLibLocation ^js compiler-host))
 
 (defn write-file
+  "**Returns:** `WriteFileCallback`"
   ^js [compiler-host]
   (.-writeFile ^js compiler-host))
 
@@ -221,6 +222,7 @@
   (.getParsedCommandLine ^js compiler-host file-name))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [compiler-host]
   (.-jsDocParsingMode ^js compiler-host))
 

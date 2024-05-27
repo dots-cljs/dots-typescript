@@ -1,6 +1,7 @@
 (ns dots.typescript.call-hierarchy-outgoing-call)
 
 (defn to
+  "**Returns:** `CallHierarchyItem`"
   ^js [call-hierarchy-outgoing-call]
   (.-to ^js call-hierarchy-outgoing-call))
 
@@ -9,6 +10,7 @@
   (set! (.-to ^js call-hierarchy-outgoing-call) value))
 
 (defn from-spans
+  "**Returns:** `TextSpan[]`"
   ^js [call-hierarchy-outgoing-call]
   (.-fromSpans ^js call-hierarchy-outgoing-call))
 

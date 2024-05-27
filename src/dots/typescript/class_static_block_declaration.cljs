@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ClassStaticBlockDeclaration`"
   ^js [class-static-block-declaration]
   (.-kind ^js class-static-block-declaration))
 
 (defn parent
+  "**Returns:** `ClassDeclaration | ClassExpression`"
   ^js [class-static-block-declaration]
   (.-parent ^js class-static-block-declaration))
 
 (defn body
+  "**Returns:** `Block`"
   ^js [class-static-block-declaration]
   (.-body ^js class-static-block-declaration))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [class-static-block-declaration]
   (.-name ^js class-static-block-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [class-static-block-declaration]
   (.-flags ^js class-static-block-declaration))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js class-static-block-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [class-static-block-declaration]
   (.-pos ^js class-static-block-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [class-static-block-declaration]
   (.-end ^js class-static-block-declaration))

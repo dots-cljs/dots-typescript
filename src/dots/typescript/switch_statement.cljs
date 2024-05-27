@@ -1,18 +1,22 @@
 (ns dots.typescript.switch-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.SwitchStatement`"
   ^js [switch-statement]
   (.-kind ^js switch-statement))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [switch-statement]
   (.-expression ^js switch-statement))
 
 (defn case-block
+  "**Returns:** `CaseBlock`"
   ^js [switch-statement]
   (.-caseBlock ^js switch-statement))
 
 (defn possibly-exhaustive?
+  "**Returns:** `boolean | undefined`"
   ^js [switch-statement]
   (.-possiblyExhaustive ^js switch-statement))
 
@@ -21,10 +25,12 @@
   (set! (.-possiblyExhaustive ^js switch-statement) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [switch-statement]
   (.-flags ^js switch-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [switch-statement]
   (.-parent ^js switch-statement))
 
@@ -164,9 +170,11 @@
    (.forEachChild ^js switch-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [switch-statement]
   (.-pos ^js switch-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [switch-statement]
   (.-end ^js switch-statement))

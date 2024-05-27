@@ -2,50 +2,62 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.Constructor`"
   ^js [constructor-declaration]
   (.-kind ^js constructor-declaration))
 
 (defn parent
+  "**Returns:** `ClassLikeDeclaration`"
   ^js [constructor-declaration]
   (.-parent ^js constructor-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [constructor-declaration]
   (.-modifiers ^js constructor-declaration))
 
 (defn body
+  "**Returns:** `Block | undefined`"
   ^js [constructor-declaration]
   (.-body ^js constructor-declaration))
 
 (defn asterisk-token
+  "**Returns:** `AsteriskToken | undefined`"
   ^js [constructor-declaration]
   (.-asteriskToken ^js constructor-declaration))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [constructor-declaration]
   (.-questionToken ^js constructor-declaration))
 
 (defn exclamation-token
+  "**Returns:** `ExclamationToken | undefined`"
   ^js [constructor-declaration]
   (.-exclamationToken ^js constructor-declaration))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [constructor-declaration]
   (.-name ^js constructor-declaration))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [constructor-declaration]
   (.-typeParameters ^js constructor-declaration))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [constructor-declaration]
   (.-parameters ^js constructor-declaration))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [constructor-declaration]
   (.-type ^js constructor-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [constructor-declaration]
   (.-flags ^js constructor-declaration))
 
@@ -185,9 +197,11 @@
    (.forEachChild ^js constructor-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [constructor-declaration]
   (.-pos ^js constructor-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [constructor-declaration]
   (.-end ^js constructor-declaration))

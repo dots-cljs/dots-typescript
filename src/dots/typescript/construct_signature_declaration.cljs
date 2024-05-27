@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ConstructSignature`"
   ^js [construct-signature-declaration]
   (.-kind ^js construct-signature-declaration))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [construct-signature-declaration]
   (.-name ^js construct-signature-declaration))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [construct-signature-declaration]
   (.-typeParameters ^js construct-signature-declaration))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [construct-signature-declaration]
   (.-parameters ^js construct-signature-declaration))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [construct-signature-declaration]
   (.-type ^js construct-signature-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [construct-signature-declaration]
   (.-flags ^js construct-signature-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [construct-signature-declaration]
   (.-parent ^js construct-signature-declaration))
 
@@ -165,13 +172,16 @@
    (.forEachChild ^js construct-signature-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [construct-signature-declaration]
   (.-pos ^js construct-signature-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [construct-signature-declaration]
   (.-end ^js construct-signature-declaration))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [construct-signature-declaration]
   (.-questionToken ^js construct-signature-declaration))

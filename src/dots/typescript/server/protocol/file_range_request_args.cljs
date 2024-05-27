@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.file-range-request-args)
 
 (defn start-line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [file-range-request-args]
   (.-startLine ^js file-range-request-args))
 
@@ -11,7 +13,9 @@
   (set! (.-startLine ^js file-range-request-args) value))
 
 (defn start-offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [file-range-request-args]
   (.-startOffset ^js file-range-request-args))
 
@@ -21,7 +25,9 @@
   (set! (.-startOffset ^js file-range-request-args) value))
 
 (defn end-line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [file-range-request-args]
   (.-endLine ^js file-range-request-args))
 
@@ -31,7 +37,9 @@
   (set! (.-endLine ^js file-range-request-args) value))
 
 (defn end-offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [file-range-request-args]
   (.-endOffset ^js file-range-request-args))
 
@@ -41,7 +49,9 @@
   (set! (.-endOffset ^js file-range-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [file-range-request-args]
   (.-file ^js file-range-request-args))
 
@@ -51,6 +61,7 @@
   (set! (.-file ^js file-range-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [file-range-request-args]
   (.-projectFileName ^js file-range-request-args))
 

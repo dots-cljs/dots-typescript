@@ -1,6 +1,7 @@
 (ns dots.typescript.server.install-typing-host)
 
 (defn use-case-sensitive-file-names?
+  "**Returns:** `boolean`"
   ^js [install-typing-host]
   (.-useCaseSensitiveFileNames ^js install-typing-host))
 

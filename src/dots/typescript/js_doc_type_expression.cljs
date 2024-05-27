@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocTypeExpression`"
   ^js [js-doc-type-expression]
   (.-kind ^js js-doc-type-expression))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [js-doc-type-expression]
   (.-type ^js js-doc-type-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-type-expression]
   (.-flags ^js js-doc-type-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-type-expression]
   (.-parent ^js js-doc-type-expression))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js js-doc-type-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-type-expression]
   (.-pos ^js js-doc-type-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-type-expression]
   (.-end ^js js-doc-type-expression))

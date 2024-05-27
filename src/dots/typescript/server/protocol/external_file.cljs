@@ -8,7 +8,9 @@
    as a result of opening external project so they should be removed once external project is closed.")
 
 (defn file-name
-  "Name of file file"
+  "Name of file file
+   
+   **Returns:** `string`"
   ^js [external-file]
   (.-fileName ^js external-file))
 
@@ -18,7 +20,9 @@
   (set! (.-fileName ^js external-file) value))
 
 (defn script-kind
-  "Script kind of the file"
+  "Script kind of the file
+   
+   **Returns:** `ScriptKind | ScriptKindName | undefined`"
   ^js [external-file]
   (.-scriptKind ^js external-file))
 
@@ -28,7 +32,9 @@
   (set! (.-scriptKind ^js external-file) value))
 
 (defn has-mixed-content?
-  "Whether file has mixed content (i.e. .cshtml file that combines html markup with C#/JavaScript)"
+  "Whether file has mixed content (i.e. .cshtml file that combines html markup with C#/JavaScript)
+   
+   **Returns:** `boolean | undefined`"
   ^js [external-file]
   (.-hasMixedContent ^js external-file))
 
@@ -38,7 +44,9 @@
   (set! (.-hasMixedContent ^js external-file) value))
 
 (defn content
-  "Content of the file"
+  "Content of the file
+   
+   **Returns:** `string | undefined`"
   ^js [external-file]
   (.-content ^js external-file))
 

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn event
+  "**Returns:** `\"largeFileReferenced\"`"
   ^js [large-file-referenced-event]
   (.-event ^js large-file-referenced-event))
 
@@ -10,6 +11,7 @@
   (set! (.-event ^js large-file-referenced-event) value))
 
 (defn body
+  "**Returns:** `LargeFileReferencedEventBody`"
   ^js [large-file-referenced-event]
   (.-body ^js large-file-referenced-event))
 
@@ -18,6 +20,7 @@
   (set! (.-body ^js large-file-referenced-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [large-file-referenced-event]
   (.-type ^js large-file-referenced-event))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js large-file-referenced-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [large-file-referenced-event]
   (.-seq ^js large-file-referenced-event))
 

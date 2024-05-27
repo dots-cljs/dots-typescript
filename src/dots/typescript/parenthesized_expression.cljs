@@ -1,18 +1,22 @@
 (ns dots.typescript.parenthesized-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ParenthesizedExpression`"
   ^js [parenthesized-expression]
   (.-kind ^js parenthesized-expression))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [parenthesized-expression]
   (.-expression ^js parenthesized-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [parenthesized-expression]
   (.-flags ^js parenthesized-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [parenthesized-expression]
   (.-parent ^js parenthesized-expression))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js parenthesized-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [parenthesized-expression]
   (.-pos ^js parenthesized-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [parenthesized-expression]
   (.-end ^js parenthesized-expression))

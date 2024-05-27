@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn root
+  "**Returns:** `ConditionalRoot`"
   ^js [conditional-type]
   (.-root ^js conditional-type))
 
@@ -10,6 +11,7 @@
   (set! (.-root ^js conditional-type) value))
 
 (defn check-type
+  "**Returns:** `Type`"
   ^js [conditional-type]
   (.-checkType ^js conditional-type))
 
@@ -18,6 +20,7 @@
   (set! (.-checkType ^js conditional-type) value))
 
 (defn extends-type
+  "**Returns:** `Type`"
   ^js [conditional-type]
   (.-extendsType ^js conditional-type))
 
@@ -26,6 +29,7 @@
   (set! (.-extendsType ^js conditional-type) value))
 
 (defn resolved-true-type
+  "**Returns:** `Type | undefined`"
   ^js [conditional-type]
   (.-resolvedTrueType ^js conditional-type))
 
@@ -34,6 +38,7 @@
   (set! (.-resolvedTrueType ^js conditional-type) value))
 
 (defn resolved-false-type
+  "**Returns:** `Type | undefined`"
   ^js [conditional-type]
   (.-resolvedFalseType ^js conditional-type))
 
@@ -42,6 +47,7 @@
   (set! (.-resolvedFalseType ^js conditional-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [conditional-type]
   (.-flags ^js conditional-type))
 
@@ -50,6 +56,7 @@
   (set! (.-flags ^js conditional-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [conditional-type]
   (.-symbol ^js conditional-type))
 
@@ -58,6 +65,7 @@
   (set! (.-symbol ^js conditional-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [conditional-type]
   (.-pattern ^js conditional-type))
 
@@ -66,6 +74,7 @@
   (set! (.-pattern ^js conditional-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [conditional-type]
   (.-aliasSymbol ^js conditional-type))
 
@@ -74,6 +83,7 @@
   (set! (.-aliasSymbol ^js conditional-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [conditional-type]
   (.-aliasTypeArguments ^js conditional-type))
 

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn target
+  "**Returns:** `TupleType`"
   ^js [tuple-type-reference]
   (.-target ^js tuple-type-reference))
 
@@ -10,6 +11,7 @@
   (set! (.-target ^js tuple-type-reference) value))
 
 (defn node
+  "**Returns:** `TypeReferenceNode | ArrayTypeNode | TupleTypeNode | undefined`"
   ^js [tuple-type-reference]
   (.-node ^js tuple-type-reference))
 
@@ -18,6 +20,7 @@
   (set! (.-node ^js tuple-type-reference) value))
 
 (defn type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [tuple-type-reference]
   (.-typeArguments ^js tuple-type-reference))
 
@@ -26,6 +29,7 @@
   (set! (.-typeArguments ^js tuple-type-reference) value))
 
 (defn object-flags
+  "**Returns:** `ObjectFlags`"
   ^js [tuple-type-reference]
   (.-objectFlags ^js tuple-type-reference))
 
@@ -34,6 +38,7 @@
   (set! (.-objectFlags ^js tuple-type-reference) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [tuple-type-reference]
   (.-flags ^js tuple-type-reference))
 
@@ -42,6 +47,7 @@
   (set! (.-flags ^js tuple-type-reference) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [tuple-type-reference]
   (.-symbol ^js tuple-type-reference))
 
@@ -50,6 +56,7 @@
   (set! (.-symbol ^js tuple-type-reference) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [tuple-type-reference]
   (.-pattern ^js tuple-type-reference))
 
@@ -58,6 +65,7 @@
   (set! (.-pattern ^js tuple-type-reference) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [tuple-type-reference]
   (.-aliasSymbol ^js tuple-type-reference))
 
@@ -66,6 +74,7 @@
   (set! (.-aliasSymbol ^js tuple-type-reference) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [tuple-type-reference]
   (.-aliasTypeArguments ^js tuple-type-reference))
 

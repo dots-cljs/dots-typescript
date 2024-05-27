@@ -6,6 +6,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Rename`"
   ^js [rename-request]
   (.-command ^js rename-request))
 
@@ -14,6 +15,7 @@
   (set! (.-command ^js rename-request) value))
 
 (defn arguments
+  "**Returns:** `RenameRequestArgs`"
   ^js [rename-request]
   (.-arguments ^js rename-request))
 
@@ -22,6 +24,7 @@
   (set! (.-arguments ^js rename-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [rename-request]
   (.-type ^js rename-request))
 
@@ -30,7 +33,9 @@
   (set! (.-type ^js rename-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [rename-request]
   (.-seq ^js rename-request))
 

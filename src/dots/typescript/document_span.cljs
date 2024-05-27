@@ -1,6 +1,7 @@
 (ns dots.typescript.document-span)
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [document-span]
   (.-textSpan ^js document-span))
 
@@ -9,6 +10,7 @@
   (set! (.-textSpan ^js document-span) value))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [document-span]
   (.-fileName ^js document-span))
 
@@ -18,7 +20,9 @@
 
 (defn original-text-span
   "If the span represents a location that was remapped (e.g. via a .d.ts.map file),
-   then the original filename and span will be specified here"
+   then the original filename and span will be specified here
+   
+   **Returns:** `TextSpan | undefined`"
   ^js [document-span]
   (.-originalTextSpan ^js document-span))
 
@@ -29,6 +33,7 @@
   (set! (.-originalTextSpan ^js document-span) value))
 
 (defn original-file-name
+  "**Returns:** `string | undefined`"
   ^js [document-span]
   (.-originalFileName ^js document-span))
 
@@ -38,7 +43,9 @@
 
 (defn context-span
   "If DocumentSpan.textSpan is the span for name of the declaration,
-   then this is the span for relevant declaration"
+   then this is the span for relevant declaration
+   
+   **Returns:** `TextSpan | undefined`"
   ^js [document-span]
   (.-contextSpan ^js document-span))
 
@@ -49,6 +56,7 @@
   (set! (.-contextSpan ^js document-span) value))
 
 (defn original-context-span
+  "**Returns:** `TextSpan | undefined`"
   ^js [document-span]
   (.-originalContextSpan ^js document-span))
 

@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.OpenExternalProjects`"
   ^js [open-external-projects-request]
   (.-command ^js open-external-projects-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js open-external-projects-request) value))
 
 (defn arguments
+  "**Returns:** `OpenExternalProjectsArgs`"
   ^js [open-external-projects-request]
   (.-arguments ^js open-external-projects-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js open-external-projects-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [open-external-projects-request]
   (.-type ^js open-external-projects-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js open-external-projects-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [open-external-projects-request]
   (.-seq ^js open-external-projects-request))
 

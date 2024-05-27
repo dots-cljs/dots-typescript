@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.SatisfiesExpression`"
   ^js [satisfies-expression]
   (.-kind ^js satisfies-expression))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [satisfies-expression]
   (.-expression ^js satisfies-expression))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [satisfies-expression]
   (.-type ^js satisfies-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [satisfies-expression]
   (.-flags ^js satisfies-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [satisfies-expression]
   (.-parent ^js satisfies-expression))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js satisfies-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [satisfies-expression]
   (.-pos ^js satisfies-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [satisfies-expression]
   (.-end ^js satisfies-expression))

@@ -1,22 +1,27 @@
 (ns dots.typescript.with-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.WithStatement`"
   ^js [with-statement]
   (.-kind ^js with-statement))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [with-statement]
   (.-expression ^js with-statement))
 
 (defn statement
+  "**Returns:** `Statement`"
   ^js [with-statement]
   (.-statement ^js with-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [with-statement]
   (.-flags ^js with-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [with-statement]
   (.-parent ^js with-statement))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js with-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [with-statement]
   (.-pos ^js with-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [with-statement]
   (.-end ^js with-statement))

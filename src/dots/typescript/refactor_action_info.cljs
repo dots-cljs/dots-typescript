@@ -4,7 +4,9 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
-  "The programmatic name of the refactoring action"
+  "The programmatic name of the refactoring action
+   
+   **Returns:** `string`"
   ^js [refactor-action-info]
   (.-name ^js refactor-action-info))
 
@@ -16,7 +18,9 @@
 (defn description
   "A description of this refactoring action to show to the user.
    If the parent refactoring is inlined away, this will be the only text shown,
-   so this description should make sense by itself if the parent is inlineable=true"
+   so this description should make sense by itself if the parent is inlineable=true
+   
+   **Returns:** `string`"
   ^js [refactor-action-info]
   (.-description ^js refactor-action-info))
 
@@ -29,7 +33,9 @@
 
 (defn not-applicable-reason
   "A message to show to the user if the refactoring cannot be applied in
-   the current context."
+   the current context.
+   
+   **Returns:** `string | undefined`"
   ^js [refactor-action-info]
   (.-notApplicableReason ^js refactor-action-info))
 
@@ -40,7 +46,9 @@
   (set! (.-notApplicableReason ^js refactor-action-info) value))
 
 (defn kind
-  "The hierarchical dotted name of the refactor action."
+  "The hierarchical dotted name of the refactor action.
+   
+   **Returns:** `string | undefined`"
   ^js [refactor-action-info]
   (.-kind ^js refactor-action-info))
 
@@ -51,7 +59,9 @@
 
 (defn interactive?
   "Indicates that the action requires additional arguments to be passed
-   when calling `getEditsForRefactor`."
+   when calling `getEditsForRefactor`.
+   
+   **Returns:** `boolean | undefined`"
   ^js [refactor-action-info]
   (.-isInteractive ^js refactor-action-info))
 

@@ -1,18 +1,22 @@
 (ns dots.typescript.variable-declaration-list)
 
 (defn kind
+  "**Returns:** `SyntaxKind.VariableDeclarationList`"
   ^js [variable-declaration-list]
   (.-kind ^js variable-declaration-list))
 
 (defn parent
+  "**Returns:** `ForInStatement | ForOfStatement | ForStatement | VariableStatement`"
   ^js [variable-declaration-list]
   (.-parent ^js variable-declaration-list))
 
 (defn declarations
+  "**Returns:** `NodeArray<VariableDeclaration>`"
   ^js [variable-declaration-list]
   (.-declarations ^js variable-declaration-list))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [variable-declaration-list]
   (.-flags ^js variable-declaration-list))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js variable-declaration-list cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [variable-declaration-list]
   (.-pos ^js variable-declaration-list))
 
 (defn end
+  "**Returns:** `number`"
   ^js [variable-declaration-list]
   (.-end ^js variable-declaration-list))

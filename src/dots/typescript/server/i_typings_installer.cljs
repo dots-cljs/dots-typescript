@@ -45,5 +45,6 @@
   (.onProjectClosed ^js i-typings-installer p))
 
 (defn global-typings-cache-location
+  "**Returns:** `string | undefined`"
   ^js [i-typings-installer]
   (.-globalTypingsCacheLocation ^js i-typings-installer))

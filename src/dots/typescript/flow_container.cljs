@@ -1,14 +1,17 @@
 (ns dots.typescript.flow-container)
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [flow-container]
   (.-kind ^js flow-container))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [flow-container]
   (.-flags ^js flow-container))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [flow-container]
   (.-parent ^js flow-container))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js flow-container cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [flow-container]
   (.-pos ^js flow-container))
 
 (defn end
+  "**Returns:** `number`"
   ^js [flow-container]
   (.-end ^js flow-container))

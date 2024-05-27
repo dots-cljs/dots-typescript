@@ -1,6 +1,7 @@
 (ns dots.typescript.text-change-range)
 
 (defn span
+  "**Returns:** `TextSpan`"
   ^js [text-change-range]
   (.-span ^js text-change-range))
 
@@ -9,6 +10,7 @@
   (set! (.-span ^js text-change-range) value))
 
 (defn new-length
+  "**Returns:** `number`"
   ^js [text-change-range]
   (.-newLength ^js text-change-range))
 

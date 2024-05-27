@@ -1,6 +1,7 @@
 (ns dots.typescript.highlight-span)
 
 (defn file-name
+  "**Returns:** `string | undefined`"
   ^js [highlight-span]
   (.-fileName ^js highlight-span))
 
@@ -9,6 +10,7 @@
   (set! (.-fileName ^js highlight-span) value))
 
 (defn in-string
+  "**Returns:** `true | undefined`"
   ^js [highlight-span]
   (.-isInString ^js highlight-span))
 
@@ -17,6 +19,7 @@
   (set! (.-isInString ^js highlight-span) value))
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [highlight-span]
   (.-textSpan ^js highlight-span))
 
@@ -25,6 +28,7 @@
   (set! (.-textSpan ^js highlight-span) value))
 
 (defn context-span
+  "**Returns:** `TextSpan | undefined`"
   ^js [highlight-span]
   (.-contextSpan ^js highlight-span))
 
@@ -33,6 +37,7 @@
   (set! (.-contextSpan ^js highlight-span) value))
 
 (defn kind
+  "**Returns:** `HighlightSpanKind`"
   ^js [highlight-span]
   (.-kind ^js highlight-span))
 

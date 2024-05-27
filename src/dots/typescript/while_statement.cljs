@@ -1,22 +1,27 @@
 (ns dots.typescript.while-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.WhileStatement`"
   ^js [while-statement]
   (.-kind ^js while-statement))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [while-statement]
   (.-expression ^js while-statement))
 
 (defn statement
+  "**Returns:** `Statement`"
   ^js [while-statement]
   (.-statement ^js while-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [while-statement]
   (.-flags ^js while-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [while-statement]
   (.-parent ^js while-statement))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js while-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [while-statement]
   (.-pos ^js while-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [while-statement]
   (.-end ^js while-statement))

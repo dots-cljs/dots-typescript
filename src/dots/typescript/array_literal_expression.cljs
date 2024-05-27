@@ -1,18 +1,22 @@
 (ns dots.typescript.array-literal-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ArrayLiteralExpression`"
   ^js [array-literal-expression]
   (.-kind ^js array-literal-expression))
 
 (defn elements
+  "**Returns:** `NodeArray<Expression>`"
   ^js [array-literal-expression]
   (.-elements ^js array-literal-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [array-literal-expression]
   (.-flags ^js array-literal-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [array-literal-expression]
   (.-parent ^js array-literal-expression))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js array-literal-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [array-literal-expression]
   (.-pos ^js array-literal-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [array-literal-expression]
   (.-end ^js array-literal-expression))

@@ -2,34 +2,42 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.MethodSignature`"
   ^js [method-signature]
   (.-kind ^js method-signature))
 
 (defn parent
+  "**Returns:** `InterfaceDeclaration | TypeLiteralNode`"
   ^js [method-signature]
   (.-parent ^js method-signature))
 
 (defn modifiers
+  "**Returns:** `NodeArray<Modifier> | undefined`"
   ^js [method-signature]
   (.-modifiers ^js method-signature))
 
 (defn name
+  "**Returns:** `PropertyName`"
   ^js [method-signature]
   (.-name ^js method-signature))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [method-signature]
   (.-typeParameters ^js method-signature))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [method-signature]
   (.-parameters ^js method-signature))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [method-signature]
   (.-type ^js method-signature))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [method-signature]
   (.-flags ^js method-signature))
 
@@ -169,13 +177,16 @@
    (.forEachChild ^js method-signature cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [method-signature]
   (.-pos ^js method-signature))
 
 (defn end
+  "**Returns:** `number`"
   ^js [method-signature]
   (.-end ^js method-signature))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [method-signature]
   (.-questionToken ^js method-signature))

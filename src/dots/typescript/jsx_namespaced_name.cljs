@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name namespace]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxNamespacedName`"
   ^js [jsx-namespaced-name]
   (.-kind ^js jsx-namespaced-name))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [jsx-namespaced-name]
   (.-name ^js jsx-namespaced-name))
 
 (defn namespace
+  "**Returns:** `Identifier`"
   ^js [jsx-namespaced-name]
   (.-namespace ^js jsx-namespaced-name))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-namespaced-name]
   (.-flags ^js jsx-namespaced-name))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [jsx-namespaced-name]
   (.-parent ^js jsx-namespaced-name))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js jsx-namespaced-name cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-namespaced-name]
   (.-pos ^js jsx-namespaced-name))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-namespaced-name]
   (.-end ^js jsx-namespaced-name))

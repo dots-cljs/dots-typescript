@@ -1,14 +1,17 @@
 (ns dots.typescript.rename-location)
 
 (defn prefix-text
+  "**Returns:** `string | undefined`"
   ^js [rename-location]
   (.-prefixText ^js rename-location))
 
 (defn suffix-text
+  "**Returns:** `string | undefined`"
   ^js [rename-location]
   (.-suffixText ^js rename-location))
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [rename-location]
   (.-textSpan ^js rename-location))
 
@@ -17,6 +20,7 @@
   (set! (.-textSpan ^js rename-location) value))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [rename-location]
   (.-fileName ^js rename-location))
 
@@ -26,7 +30,9 @@
 
 (defn original-text-span
   "If the span represents a location that was remapped (e.g. via a .d.ts.map file),
-   then the original filename and span will be specified here"
+   then the original filename and span will be specified here
+   
+   **Returns:** `TextSpan | undefined`"
   ^js [rename-location]
   (.-originalTextSpan ^js rename-location))
 
@@ -37,6 +43,7 @@
   (set! (.-originalTextSpan ^js rename-location) value))
 
 (defn original-file-name
+  "**Returns:** `string | undefined`"
   ^js [rename-location]
   (.-originalFileName ^js rename-location))
 
@@ -46,7 +53,9 @@
 
 (defn context-span
   "If DocumentSpan.textSpan is the span for name of the declaration,
-   then this is the span for relevant declaration"
+   then this is the span for relevant declaration
+   
+   **Returns:** `TextSpan | undefined`"
   ^js [rename-location]
   (.-contextSpan ^js rename-location))
 
@@ -57,6 +66,7 @@
   (set! (.-contextSpan ^js rename-location) value))
 
 (defn original-context-span
+  "**Returns:** `TextSpan | undefined`"
   ^js [rename-location]
   (.-originalContextSpan ^js rename-location))
 

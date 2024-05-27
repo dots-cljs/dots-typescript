@@ -1,6 +1,7 @@
 (ns dots.typescript.server.handler-response)
 
 (defn response
+  "**Returns:** `{} | undefined`"
   ^js [handler-response]
   (.-response ^js handler-response))
 
@@ -9,6 +10,7 @@
   (set! (.-response ^js handler-response) value))
 
 (defn response-required?
+  "**Returns:** `boolean | undefined`"
   ^js [handler-response]
   (.-responseRequired ^js handler-response))
 

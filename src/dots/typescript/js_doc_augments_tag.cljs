@@ -4,26 +4,32 @@
   (:refer-clojure :exclude [comment]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocAugmentsTag`"
   ^js [js-doc-augments-tag]
   (.-kind ^js js-doc-augments-tag))
 
 (defn class
+  "**Returns:** `ExpressionWithTypeArguments & { readonly expression: Identifier | PropertyAccessEntityNameExpression; }`"
   ^js [js-doc-augments-tag]
   (.-class ^js js-doc-augments-tag))
 
 (defn parent
+  "**Returns:** `JSDoc | JSDocTypeLiteral`"
   ^js [js-doc-augments-tag]
   (.-parent ^js js-doc-augments-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-augments-tag]
   (.-tagName ^js js-doc-augments-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-augments-tag]
   (.-comment ^js js-doc-augments-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-augments-tag]
   (.-flags ^js js-doc-augments-tag))
 
@@ -163,9 +169,11 @@
    (.forEachChild ^js js-doc-augments-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-augments-tag]
   (.-pos ^js js-doc-augments-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-augments-tag]
   (.-end ^js js-doc-augments-tag))

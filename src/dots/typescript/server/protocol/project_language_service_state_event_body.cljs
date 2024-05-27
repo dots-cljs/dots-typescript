@@ -4,7 +4,9 @@
   "Project name that has changes in the state of language service.
    For configured projects this will be the config file path.
    For external projects this will be the name of the projects specified when project was open.
-   For inferred projects this event is not raised."
+   For inferred projects this event is not raised.
+   
+   **Returns:** `string`"
   ^js [project-language-service-state-event-body]
   (.-projectName ^js project-language-service-state-event-body))
 
@@ -18,7 +20,9 @@
 
 (defn language-service-enabled?
   "True if language service state switched from disabled to enabled
-   and false otherwise."
+   and false otherwise.
+   
+   **Returns:** `boolean`"
   ^js [project-language-service-state-event-body]
   (.-languageServiceEnabled ^js project-language-service-state-event-body))
 

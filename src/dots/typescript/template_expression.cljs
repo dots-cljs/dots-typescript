@@ -1,22 +1,27 @@
 (ns dots.typescript.template-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TemplateExpression`"
   ^js [template-expression]
   (.-kind ^js template-expression))
 
 (defn head
+  "**Returns:** `TemplateHead`"
   ^js [template-expression]
   (.-head ^js template-expression))
 
 (defn template-spans
+  "**Returns:** `NodeArray<TemplateSpan>`"
   ^js [template-expression]
   (.-templateSpans ^js template-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [template-expression]
   (.-flags ^js template-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [template-expression]
   (.-parent ^js template-expression))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js template-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [template-expression]
   (.-pos ^js template-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [template-expression]
   (.-end ^js template-expression))

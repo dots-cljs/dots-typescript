@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [unique-es-symbol-type]
   (.-symbol ^js unique-es-symbol-type))
 
@@ -10,6 +11,7 @@
   (set! (.-symbol ^js unique-es-symbol-type) value))
 
 (defn escaped-name
+  "**Returns:** `__String`"
   ^js [unique-es-symbol-type]
   (.-escapedName ^js unique-es-symbol-type))
 
@@ -18,6 +20,7 @@
   (set! (.-escapedName ^js unique-es-symbol-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [unique-es-symbol-type]
   (.-flags ^js unique-es-symbol-type))
 
@@ -26,6 +29,7 @@
   (set! (.-flags ^js unique-es-symbol-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [unique-es-symbol-type]
   (.-pattern ^js unique-es-symbol-type))
 
@@ -34,6 +38,7 @@
   (set! (.-pattern ^js unique-es-symbol-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [unique-es-symbol-type]
   (.-aliasSymbol ^js unique-es-symbol-type))
 
@@ -42,6 +47,7 @@
   (set! (.-aliasSymbol ^js unique-es-symbol-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [unique-es-symbol-type]
   (.-aliasTypeArguments ^js unique-es-symbol-type))
 

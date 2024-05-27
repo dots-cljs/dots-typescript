@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn object-type
+  "**Returns:** `Type`"
   ^js [indexed-access-type]
   (.-objectType ^js indexed-access-type))
 
@@ -10,6 +11,7 @@
   (set! (.-objectType ^js indexed-access-type) value))
 
 (defn index-type
+  "**Returns:** `Type`"
   ^js [indexed-access-type]
   (.-indexType ^js indexed-access-type))
 
@@ -18,6 +20,7 @@
   (set! (.-indexType ^js indexed-access-type) value))
 
 (defn constraint
+  "**Returns:** `Type | undefined`"
   ^js [indexed-access-type]
   (.-constraint ^js indexed-access-type))
 
@@ -26,6 +29,7 @@
   (set! (.-constraint ^js indexed-access-type) value))
 
 (defn simplified-for-reading
+  "**Returns:** `Type | undefined`"
   ^js [indexed-access-type]
   (.-simplifiedForReading ^js indexed-access-type))
 
@@ -34,6 +38,7 @@
   (set! (.-simplifiedForReading ^js indexed-access-type) value))
 
 (defn simplified-for-writing
+  "**Returns:** `Type | undefined`"
   ^js [indexed-access-type]
   (.-simplifiedForWriting ^js indexed-access-type))
 
@@ -42,6 +47,7 @@
   (set! (.-simplifiedForWriting ^js indexed-access-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [indexed-access-type]
   (.-flags ^js indexed-access-type))
 
@@ -50,6 +56,7 @@
   (set! (.-flags ^js indexed-access-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [indexed-access-type]
   (.-symbol ^js indexed-access-type))
 
@@ -58,6 +65,7 @@
   (set! (.-symbol ^js indexed-access-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [indexed-access-type]
   (.-pattern ^js indexed-access-type))
 
@@ -66,6 +74,7 @@
   (set! (.-pattern ^js indexed-access-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [indexed-access-type]
   (.-aliasSymbol ^js indexed-access-type))
 
@@ -74,6 +83,7 @@
   (set! (.-aliasSymbol ^js indexed-access-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [indexed-access-type]
   (.-aliasTypeArguments ^js indexed-access-type))
 

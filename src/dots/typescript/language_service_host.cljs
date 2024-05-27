@@ -295,6 +295,7 @@
   (.getParsedCommandLine ^js language-service-host file-name))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [language-service-host]
   (.-jsDocParsingMode ^js language-service-host))
 

@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `DiagnosticEventBody | undefined`"
   ^js [diagnostic-event]
   (.-body ^js diagnostic-event))
 
@@ -12,6 +13,7 @@
   (set! (.-body ^js diagnostic-event) value))
 
 (defn event
+  "**Returns:** `DiagnosticEventKind`"
   ^js [diagnostic-event]
   (.-event ^js diagnostic-event))
 
@@ -20,6 +22,7 @@
   (set! (.-event ^js diagnostic-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [diagnostic-event]
   (.-type ^js diagnostic-event))
 
@@ -28,7 +31,9 @@
   (set! (.-type ^js diagnostic-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [diagnostic-event]
   (.-seq ^js diagnostic-event))
 

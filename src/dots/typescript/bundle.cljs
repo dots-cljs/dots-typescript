@@ -1,22 +1,27 @@
 (ns dots.typescript.bundle)
 
 (defn kind
+  "**Returns:** `SyntaxKind.Bundle`"
   ^js [bundle]
   (.-kind ^js bundle))
 
 (defn prepends
+  "**Returns:** `readonly (UnparsedSource | InputFiles)[]`"
   ^js [bundle]
   (.-prepends ^js bundle))
 
 (defn source-files
+  "**Returns:** `readonly SourceFile[]`"
   ^js [bundle]
   (.-sourceFiles ^js bundle))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [bundle]
   (.-flags ^js bundle))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [bundle]
   (.-parent ^js bundle))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js bundle cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [bundle]
   (.-pos ^js bundle))
 
 (defn end
+  "**Returns:** `number`"
   ^js [bundle]
   (.-end ^js bundle))

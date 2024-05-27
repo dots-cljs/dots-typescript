@@ -1,18 +1,22 @@
 (ns dots.typescript.jsx-attributes)
 
 (defn properties
+  "**Returns:** `NodeArray<JsxAttributeLike>`"
   ^js [jsx-attributes]
   (.-properties ^js jsx-attributes))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JsxAttributes`"
   ^js [jsx-attributes]
   (.-kind ^js jsx-attributes))
 
 (defn parent
+  "**Returns:** `JsxOpeningLikeElement`"
   ^js [jsx-attributes]
   (.-parent ^js jsx-attributes))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-attributes]
   (.-flags ^js jsx-attributes))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js jsx-attributes cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-attributes]
   (.-pos ^js jsx-attributes))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-attributes]
   (.-end ^js jsx-attributes))

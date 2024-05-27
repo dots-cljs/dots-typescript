@@ -5,6 +5,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.References`"
   ^js [references-request]
   (.-command ^js references-request))
 
@@ -13,6 +14,7 @@
   (set! (.-command ^js references-request) value))
 
 (defn arguments
+  "**Returns:** `FileLocationRequestArgs`"
   ^js [references-request]
   (.-arguments ^js references-request))
 
@@ -21,6 +23,7 @@
   (set! (.-arguments ^js references-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [references-request]
   (.-type ^js references-request))
 
@@ -29,7 +32,9 @@
   (set! (.-type ^js references-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [references-request]
   (.-seq ^js references-request))
 

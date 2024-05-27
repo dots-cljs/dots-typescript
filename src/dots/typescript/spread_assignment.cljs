@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.SpreadAssignment`"
   ^js [spread-assignment]
   (.-kind ^js spread-assignment))
 
 (defn parent
+  "**Returns:** `ObjectLiteralExpression`"
   ^js [spread-assignment]
   (.-parent ^js spread-assignment))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [spread-assignment]
   (.-expression ^js spread-assignment))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [spread-assignment]
   (.-name ^js spread-assignment))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [spread-assignment]
   (.-flags ^js spread-assignment))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js spread-assignment cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [spread-assignment]
   (.-pos ^js spread-assignment))
 
 (defn end
+  "**Returns:** `number`"
   ^js [spread-assignment]
   (.-end ^js spread-assignment))

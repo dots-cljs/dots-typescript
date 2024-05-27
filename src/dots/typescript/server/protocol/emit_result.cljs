@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.emit-result)
 
 (defn emit-skipped?
+  "**Returns:** `boolean`"
   ^js [emit-result]
   (.-emitSkipped ^js emit-result))
 
@@ -9,6 +10,7 @@
   (set! (.-emitSkipped ^js emit-result) value))
 
 (defn diagnostics
+  "**Returns:** `Diagnostic[] | DiagnosticWithLinePosition[]`"
   ^js [emit-result]
   (.-diagnostics ^js emit-result))
 

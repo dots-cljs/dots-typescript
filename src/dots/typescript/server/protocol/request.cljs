@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [request]
   (.-type ^js request))
 
@@ -11,7 +12,9 @@
   (set! (.-type ^js request) value))
 
 (defn command
-  "The command to execute"
+  "The command to execute
+   
+   **Returns:** `string`"
   ^js [request]
   (.-command ^js request))
 
@@ -21,7 +24,9 @@
   (set! (.-command ^js request) value))
 
 (defn arguments
-  "Object containing arguments for the command"
+  "Object containing arguments for the command
+   
+   **Returns:** `any`"
   ^js [request]
   (.-arguments ^js request))
 
@@ -31,7 +36,9 @@
   (set! (.-arguments ^js request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [request]
   (.-seq ^js request))
 

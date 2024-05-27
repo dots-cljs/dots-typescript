@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.semantic-diagnostics-sync-request-args)
 
 (defn include-line-position?
+  "**Returns:** `boolean | undefined`"
   ^js [semantic-diagnostics-sync-request-args]
   (.-includeLinePosition ^js semantic-diagnostics-sync-request-args))
 
@@ -9,7 +10,9 @@
   (set! (.-includeLinePosition ^js semantic-diagnostics-sync-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [semantic-diagnostics-sync-request-args]
   (.-file ^js semantic-diagnostics-sync-request-args))
 
@@ -19,6 +22,7 @@
   (set! (.-file ^js semantic-diagnostics-sync-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [semantic-diagnostics-sync-request-args]
   (.-projectFileName ^js semantic-diagnostics-sync-request-args))
 

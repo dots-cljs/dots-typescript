@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.OptionalType`"
   ^js [optional-type-node]
   (.-kind ^js optional-type-node))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [optional-type-node]
   (.-type ^js optional-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [optional-type-node]
   (.-flags ^js optional-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [optional-type-node]
   (.-parent ^js optional-type-node))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js optional-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [optional-type-node]
   (.-pos ^js optional-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [optional-type-node]
   (.-end ^js optional-type-node))

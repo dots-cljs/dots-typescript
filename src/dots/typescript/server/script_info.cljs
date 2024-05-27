@@ -1,31 +1,39 @@
 (ns dots.typescript.server.script-info)
 
 (defn host
+  "**Returns:** `any`"
   ^js [script-info]
   (.-host ^js script-info))
 
 (defn file-name
+  "**Returns:** `NormalizedPath`"
   ^js [script-info]
   (.-fileName ^js script-info))
 
 (defn script-kind
+  "**Returns:** `ScriptKind`"
   ^js [script-info]
   (.-scriptKind ^js script-info))
 
 (defn has-mixed-content?
+  "**Returns:** `boolean`"
   ^js [script-info]
   (.-hasMixedContent ^js script-info))
 
 (defn path
+  "**Returns:** `Path`"
   ^js [script-info]
   (.-path ^js script-info))
 
 (defn containing-projects
-  "All projects that include this file"
+  "All projects that include this file
+   
+   **Returns:** `Project[]`"
   ^js [script-info]
   (.-containingProjects ^js script-info))
 
 (defn format-settings
+  "**Returns:** `any`"
   ^js [script-info]
   (.-formatSettings ^js script-info))
 
@@ -34,6 +42,7 @@
   (set! (.-formatSettings ^js script-info) value))
 
 (defn preferences
+  "**Returns:** `any`"
   ^js [script-info]
   (.-preferences ^js script-info))
 
@@ -72,6 +81,7 @@
   (.getSnapshot ^js script-info))
 
 (defn ensure-real-path
+  "**Returns:** `any`"
   ^js [script-info]
   (.-ensureRealPath ^js script-info))
 

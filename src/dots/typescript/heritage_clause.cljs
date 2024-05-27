@@ -1,22 +1,27 @@
 (ns dots.typescript.heritage-clause)
 
 (defn kind
+  "**Returns:** `SyntaxKind.HeritageClause`"
   ^js [heritage-clause]
   (.-kind ^js heritage-clause))
 
 (defn parent
+  "**Returns:** `ClassLikeDeclaration | InterfaceDeclaration`"
   ^js [heritage-clause]
   (.-parent ^js heritage-clause))
 
 (defn token
+  "**Returns:** `SyntaxKind.ExtendsKeyword | SyntaxKind.ImplementsKeyword`"
   ^js [heritage-clause]
   (.-token ^js heritage-clause))
 
 (defn types
+  "**Returns:** `NodeArray<ExpressionWithTypeArguments>`"
   ^js [heritage-clause]
   (.-types ^js heritage-clause))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [heritage-clause]
   (.-flags ^js heritage-clause))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js heritage-clause cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [heritage-clause]
   (.-pos ^js heritage-clause))
 
 (defn end
+  "**Returns:** `number`"
   ^js [heritage-clause]
   (.-end ^js heritage-clause))

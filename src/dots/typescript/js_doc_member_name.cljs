@@ -2,22 +2,27 @@
   "Class#method reference in JSDoc")
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocMemberName`"
   ^js [js-doc-member-name]
   (.-kind ^js js-doc-member-name))
 
 (defn left
+  "**Returns:** `EntityName | JSDocMemberName`"
   ^js [js-doc-member-name]
   (.-left ^js js-doc-member-name))
 
 (defn right
+  "**Returns:** `Identifier`"
   ^js [js-doc-member-name]
   (.-right ^js js-doc-member-name))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-member-name]
   (.-flags ^js js-doc-member-name))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-member-name]
   (.-parent ^js js-doc-member-name))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js js-doc-member-name cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-member-name]
   (.-pos ^js js-doc-member-name))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-member-name]
   (.-end ^js js-doc-member-name))

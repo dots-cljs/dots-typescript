@@ -2,50 +2,62 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.FunctionDeclaration`"
   ^js [function-declaration]
   (.-kind ^js function-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [function-declaration]
   (.-modifiers ^js function-declaration))
 
 (defn name
+  "**Returns:** `Identifier | undefined`"
   ^js [function-declaration]
   (.-name ^js function-declaration))
 
 (defn body
+  "**Returns:** `Block | undefined`"
   ^js [function-declaration]
   (.-body ^js function-declaration))
 
 (defn asterisk-token
+  "**Returns:** `AsteriskToken | undefined`"
   ^js [function-declaration]
   (.-asteriskToken ^js function-declaration))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [function-declaration]
   (.-questionToken ^js function-declaration))
 
 (defn exclamation-token
+  "**Returns:** `ExclamationToken | undefined`"
   ^js [function-declaration]
   (.-exclamationToken ^js function-declaration))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [function-declaration]
   (.-typeParameters ^js function-declaration))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [function-declaration]
   (.-parameters ^js function-declaration))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [function-declaration]
   (.-type ^js function-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [function-declaration]
   (.-flags ^js function-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [function-declaration]
   (.-parent ^js function-declaration))
 
@@ -185,9 +197,11 @@
    (.forEachChild ^js function-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [function-declaration]
   (.-pos ^js function-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [function-declaration]
   (.-end ^js function-declaration))

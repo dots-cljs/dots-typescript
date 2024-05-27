@@ -1,6 +1,7 @@
 (ns dots.typescript.update-output-file-stamps-project)
 
 (defn kind
+  "**Returns:** `InvalidatedProjectKind.UpdateOutputFileStamps`"
   ^js [update-output-file-stamps-project]
   (.-kind ^js update-output-file-stamps-project))
 
@@ -10,6 +11,7 @@
   (.updateOutputFileStatmps ^js update-output-file-stamps-project))
 
 (defn project
+  "**Returns:** `ResolvedConfigFileName`"
   ^js [update-output-file-stamps-project]
   (.-project ^js update-output-file-stamps-project))
 

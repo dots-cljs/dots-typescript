@@ -5,30 +5,37 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ImportEqualsDeclaration`"
   ^js [import-equals-declaration]
   (.-kind ^js import-equals-declaration))
 
 (defn parent
+  "**Returns:** `SourceFile | ModuleBlock`"
   ^js [import-equals-declaration]
   (.-parent ^js import-equals-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [import-equals-declaration]
   (.-modifiers ^js import-equals-declaration))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [import-equals-declaration]
   (.-name ^js import-equals-declaration))
 
 (defn type-only?
+  "**Returns:** `boolean`"
   ^js [import-equals-declaration]
   (.-isTypeOnly ^js import-equals-declaration))
 
 (defn module-reference
+  "**Returns:** `ModuleReference`"
   ^js [import-equals-declaration]
   (.-moduleReference ^js import-equals-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [import-equals-declaration]
   (.-flags ^js import-equals-declaration))
 
@@ -168,9 +175,11 @@
    (.forEachChild ^js import-equals-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [import-equals-declaration]
   (.-pos ^js import-equals-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [import-equals-declaration]
   (.-end ^js import-equals-declaration))

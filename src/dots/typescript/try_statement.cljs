@@ -1,26 +1,32 @@
 (ns dots.typescript.try-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TryStatement`"
   ^js [try-statement]
   (.-kind ^js try-statement))
 
 (defn try-block
+  "**Returns:** `Block`"
   ^js [try-statement]
   (.-tryBlock ^js try-statement))
 
 (defn catch-clause
+  "**Returns:** `CatchClause | undefined`"
   ^js [try-statement]
   (.-catchClause ^js try-statement))
 
 (defn finally-block
+  "**Returns:** `Block | undefined`"
   ^js [try-statement]
   (.-finallyBlock ^js try-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [try-statement]
   (.-flags ^js try-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [try-statement]
   (.-parent ^js try-statement))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js try-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [try-statement]
   (.-pos ^js try-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [try-statement]
   (.-end ^js try-statement))

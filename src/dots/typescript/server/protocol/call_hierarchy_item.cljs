@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
+  "**Returns:** `string`"
   ^js [call-hierarchy-item]
   (.-name ^js call-hierarchy-item))
 
@@ -10,6 +11,7 @@
   (set! (.-name ^js call-hierarchy-item) value))
 
 (defn kind
+  "**Returns:** `ScriptElementKind`"
   ^js [call-hierarchy-item]
   (.-kind ^js call-hierarchy-item))
 
@@ -18,6 +20,7 @@
   (set! (.-kind ^js call-hierarchy-item) value))
 
 (defn kind-modifiers
+  "**Returns:** `string | undefined`"
   ^js [call-hierarchy-item]
   (.-kindModifiers ^js call-hierarchy-item))
 
@@ -26,6 +29,7 @@
   (set! (.-kindModifiers ^js call-hierarchy-item) value))
 
 (defn file
+  "**Returns:** `string`"
   ^js [call-hierarchy-item]
   (.-file ^js call-hierarchy-item))
 
@@ -34,6 +38,7 @@
   (set! (.-file ^js call-hierarchy-item) value))
 
 (defn span
+  "**Returns:** `TextSpan`"
   ^js [call-hierarchy-item]
   (.-span ^js call-hierarchy-item))
 
@@ -42,6 +47,7 @@
   (set! (.-span ^js call-hierarchy-item) value))
 
 (defn selection-span
+  "**Returns:** `TextSpan`"
   ^js [call-hierarchy-item]
   (.-selectionSpan ^js call-hierarchy-item))
 
@@ -50,6 +56,7 @@
   (set! (.-selectionSpan ^js call-hierarchy-item) value))
 
 (defn container-name
+  "**Returns:** `string | undefined`"
   ^js [call-hierarchy-item]
   (.-containerName ^js call-hierarchy-item))
 

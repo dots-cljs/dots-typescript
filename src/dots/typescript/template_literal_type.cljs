@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn texts
+  "**Returns:** `readonly string[]`"
   ^js [template-literal-type]
   (.-texts ^js template-literal-type))
 
@@ -10,6 +11,7 @@
   (set! (.-texts ^js template-literal-type) value))
 
 (defn types
+  "**Returns:** `readonly Type[]`"
   ^js [template-literal-type]
   (.-types ^js template-literal-type))
 
@@ -18,6 +20,7 @@
   (set! (.-types ^js template-literal-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [template-literal-type]
   (.-flags ^js template-literal-type))
 
@@ -26,6 +29,7 @@
   (set! (.-flags ^js template-literal-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [template-literal-type]
   (.-symbol ^js template-literal-type))
 
@@ -34,6 +38,7 @@
   (set! (.-symbol ^js template-literal-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [template-literal-type]
   (.-pattern ^js template-literal-type))
 
@@ -42,6 +47,7 @@
   (set! (.-pattern ^js template-literal-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [template-literal-type]
   (.-aliasSymbol ^js template-literal-type))
 
@@ -50,6 +56,7 @@
   (set! (.-aliasSymbol ^js template-literal-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [template-literal-type]
   (.-aliasTypeArguments ^js template-literal-type))
 

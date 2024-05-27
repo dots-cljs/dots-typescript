@@ -1,22 +1,27 @@
 (ns dots.typescript.do-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.DoStatement`"
   ^js [do-statement]
   (.-kind ^js do-statement))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [do-statement]
   (.-expression ^js do-statement))
 
 (defn statement
+  "**Returns:** `Statement`"
   ^js [do-statement]
   (.-statement ^js do-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [do-statement]
   (.-flags ^js do-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [do-statement]
   (.-parent ^js do-statement))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js do-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [do-statement]
   (.-pos ^js do-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [do-statement]
   (.-end ^js do-statement))

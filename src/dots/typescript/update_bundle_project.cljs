@@ -1,6 +1,7 @@
 (ns dots.typescript.update-bundle-project)
 
 (defn kind
+  "**Returns:** `InvalidatedProjectKind.UpdateBundle`"
   ^js [update-bundle-project]
   (.-kind ^js update-bundle-project))
 
@@ -18,6 +19,7 @@
    (.emit ^js update-bundle-project write-file custom-transformers)))
 
 (defn project
+  "**Returns:** `ResolvedConfigFileName`"
   ^js [update-bundle-project]
   (.-project ^js update-bundle-project))
 

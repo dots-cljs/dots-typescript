@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.refactor-edit-info)
 
 (defn edits
+  "**Returns:** `FileCodeEdits[]`"
   ^js [refactor-edit-info]
   (.-edits ^js refactor-edit-info))
 
@@ -10,7 +11,9 @@
 
 (defn rename-location
   "An optional location where the editor should start a rename operation once
-   the refactoring edits have been applied"
+   the refactoring edits have been applied
+   
+   **Returns:** `Location | undefined`"
   ^js [refactor-edit-info]
   (.-renameLocation ^js refactor-edit-info))
 
@@ -21,6 +24,7 @@
   (set! (.-renameLocation ^js refactor-edit-info) value))
 
 (defn rename-filename
+  "**Returns:** `string | undefined`"
   ^js [refactor-edit-info]
   (.-renameFilename ^js refactor-edit-info))
 
@@ -29,6 +33,7 @@
   (set! (.-renameFilename ^js refactor-edit-info) value))
 
 (defn not-applicable-reason
+  "**Returns:** `string | undefined`"
   ^js [refactor-edit-info]
   (.-notApplicableReason ^js refactor-edit-info))
 

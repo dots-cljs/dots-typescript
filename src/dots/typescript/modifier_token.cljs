@@ -1,14 +1,17 @@
 (ns dots.typescript.modifier-token)
 
 (defn kind
+  "**Returns:** `TKind`"
   ^js [modifier-token]
   (.-kind ^js modifier-token))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [modifier-token]
   (.-flags ^js modifier-token))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [modifier-token]
   (.-parent ^js modifier-token))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js modifier-token cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [modifier-token]
   (.-pos ^js modifier-token))
 
 (defn end
+  "**Returns:** `number`"
   ^js [modifier-token]
   (.-end ^js modifier-token))

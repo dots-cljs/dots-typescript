@@ -1,6 +1,7 @@
 (ns dots.typescript.source-map-range)
 
 (defn source
+  "**Returns:** `SourceMapSource | undefined`"
   ^js [source-map-range]
   (.-source ^js source-map-range))
 
@@ -9,6 +10,7 @@
   (set! (.-source ^js source-map-range) value))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [source-map-range]
   (.-pos ^js source-map-range))
 
@@ -17,6 +19,7 @@
   (set! (.-pos ^js source-map-range) value))
 
 (defn end
+  "**Returns:** `number`"
   ^js [source-map-range]
   (.-end ^js source-map-range))
 

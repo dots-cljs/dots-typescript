@@ -1,6 +1,7 @@
 (ns dots.typescript.signature)
 
 (defn declaration
+  "**Returns:** `JSDocSignature | SignatureDeclaration | undefined`"
   ^js [signature]
   (.-declaration ^js signature))
 
@@ -9,6 +10,7 @@
   (set! (.-declaration ^js signature) value))
 
 (defn type-parameters
+  "**Returns:** `readonly TypeParameter[] | undefined`"
   ^js [signature]
   (.-typeParameters ^js signature))
 
@@ -17,6 +19,7 @@
   (set! (.-typeParameters ^js signature) value))
 
 (defn parameters
+  "**Returns:** `readonly Symbol[]`"
   ^js [signature]
   (.-parameters ^js signature))
 
@@ -25,6 +28,7 @@
   (set! (.-parameters ^js signature) value))
 
 (defn this-parameter
+  "**Returns:** `Symbol | undefined`"
   ^js [signature]
   (.-thisParameter ^js signature))
 

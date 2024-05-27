@@ -2,31 +2,39 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.TypeParameter`"
   ^js [type-parameter-declaration]
   (.-kind ^js type-parameter-declaration))
 
 (defn parent
+  "**Returns:** `DeclarationWithTypeParameterChildren | InferTypeNode`"
   ^js [type-parameter-declaration]
   (.-parent ^js type-parameter-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<Modifier> | undefined`"
   ^js [type-parameter-declaration]
   (.-modifiers ^js type-parameter-declaration))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [type-parameter-declaration]
   (.-name ^js type-parameter-declaration))
 
 (defn constraint
-  "Note: Consider calling `getEffectiveConstraintOfTypeParameter`"
+  "Note: Consider calling `getEffectiveConstraintOfTypeParameter`
+   
+   **Returns:** `TypeNode | undefined`"
   ^js [type-parameter-declaration]
   (.-constraint ^js type-parameter-declaration))
 
 (defn default
+  "**Returns:** `TypeNode | undefined`"
   ^js [type-parameter-declaration]
   (.-default ^js type-parameter-declaration))
 
 (defn expression
+  "**Returns:** `Expression | undefined`"
   ^js [type-parameter-declaration]
   (.-expression ^js type-parameter-declaration))
 
@@ -35,6 +43,7 @@
   (set! (.-expression ^js type-parameter-declaration) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [type-parameter-declaration]
   (.-flags ^js type-parameter-declaration))
 
@@ -174,9 +183,11 @@
    (.forEachChild ^js type-parameter-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [type-parameter-declaration]
   (.-pos ^js type-parameter-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [type-parameter-declaration]
   (.-end ^js type-parameter-declaration))

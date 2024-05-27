@@ -2,6 +2,7 @@
   "Location in source code expressed as (one-based) line and (one-based) column offset.")
 
 (defn line
+  "**Returns:** `number`"
   ^js [location]
   (.-line ^js location))
 
@@ -10,6 +11,7 @@
   (set! (.-line ^js location) value))
 
 (defn offset
+  "**Returns:** `number`"
   ^js [location]
   (.-offset ^js location))
 

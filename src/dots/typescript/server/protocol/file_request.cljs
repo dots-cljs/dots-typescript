@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn arguments
+  "**Returns:** `FileRequestArgs`"
   ^js [file-request]
   (.-arguments ^js file-request))
 
@@ -11,6 +12,7 @@
   (set! (.-arguments ^js file-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [file-request]
   (.-type ^js file-request))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js file-request) value))
 
 (defn command
-  "The command to execute"
+  "The command to execute
+   
+   **Returns:** `string`"
   ^js [file-request]
   (.-command ^js file-request))
 
@@ -29,7 +33,9 @@
   (set! (.-command ^js file-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [file-request]
   (.-seq ^js file-request))
 

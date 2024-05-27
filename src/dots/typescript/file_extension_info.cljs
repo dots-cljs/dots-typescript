@@ -1,6 +1,7 @@
 (ns dots.typescript.file-extension-info)
 
 (defn extension
+  "**Returns:** `string`"
   ^js [file-extension-info]
   (.-extension ^js file-extension-info))
 
@@ -9,6 +10,7 @@
   (set! (.-extension ^js file-extension-info) value))
 
 (defn mixed-content?
+  "**Returns:** `boolean`"
   ^js [file-extension-info]
   (.-isMixedContent ^js file-extension-info))
 
@@ -17,6 +19,7 @@
   (set! (.-isMixedContent ^js file-extension-info) value))
 
 (defn script-kind
+  "**Returns:** `ScriptKind | undefined`"
   ^js [file-extension-info]
   (.-scriptKind ^js file-extension-info))
 

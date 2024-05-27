@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [comment]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocAuthorTag`"
   ^js [js-doc-author-tag]
   (.-kind ^js js-doc-author-tag))
 
 (defn parent
+  "**Returns:** `JSDoc | JSDocTypeLiteral`"
   ^js [js-doc-author-tag]
   (.-parent ^js js-doc-author-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-author-tag]
   (.-tagName ^js js-doc-author-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-author-tag]
   (.-comment ^js js-doc-author-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-author-tag]
   (.-flags ^js js-doc-author-tag))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js js-doc-author-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-author-tag]
   (.-pos ^js js-doc-author-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-author-tag]
   (.-end ^js js-doc-author-tag))

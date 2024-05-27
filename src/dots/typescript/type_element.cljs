@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [type-element]
   (.-name ^js type-element))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [type-element]
   (.-questionToken ^js type-element))
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [type-element]
   (.-kind ^js type-element))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [type-element]
   (.-flags ^js type-element))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [type-element]
   (.-parent ^js type-element))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js type-element cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [type-element]
   (.-pos ^js type-element))
 
 (defn end
+  "**Returns:** `number`"
   ^js [type-element]
   (.-end ^js type-element))

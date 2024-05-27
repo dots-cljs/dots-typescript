@@ -1,18 +1,22 @@
 (ns dots.typescript.continue-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ContinueStatement`"
   ^js [continue-statement]
   (.-kind ^js continue-statement))
 
 (defn label
+  "**Returns:** `Identifier | undefined`"
   ^js [continue-statement]
   (.-label ^js continue-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [continue-statement]
   (.-flags ^js continue-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [continue-statement]
   (.-parent ^js continue-statement))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js continue-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [continue-statement]
   (.-pos ^js continue-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [continue-statement]
   (.-end ^js continue-statement))

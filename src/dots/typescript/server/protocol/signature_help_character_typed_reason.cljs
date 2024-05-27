@@ -3,6 +3,7 @@
    Depending on the character and the syntactic context, the request may or may not be served a result.")
 
 (defn kind
+  "**Returns:** `\"characterTyped\"`"
   ^js [signature-help-character-typed-reason]
   (.-kind ^js signature-help-character-typed-reason))
 
@@ -11,7 +12,9 @@
   (set! (.-kind ^js signature-help-character-typed-reason) value))
 
 (defn trigger-character
-  "Character that was responsible for triggering signature help."
+  "Character that was responsible for triggering signature help.
+   
+   **Returns:** `SignatureHelpTriggerCharacter`"
   ^js [signature-help-character-typed-reason]
   (.-triggerCharacter ^js signature-help-character-typed-reason))
 

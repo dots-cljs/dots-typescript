@@ -2,7 +2,9 @@
   "Host to create watch with root files and options")
 
 (defn root-files
-  "root files to use to generate program"
+  "root files to use to generate program
+   
+   **Returns:** `string[]`"
   ^js [watch-compiler-host-of-files-and-compiler-options]
   (.-rootFiles ^js watch-compiler-host-of-files-and-compiler-options))
 
@@ -12,7 +14,9 @@
   (set! (.-rootFiles ^js watch-compiler-host-of-files-and-compiler-options) value))
 
 (defn options
-  "Compiler options"
+  "Compiler options
+   
+   **Returns:** `CompilerOptions`"
   ^js [watch-compiler-host-of-files-and-compiler-options]
   (.-options ^js watch-compiler-host-of-files-and-compiler-options))
 
@@ -22,6 +26,7 @@
   (set! (.-options ^js watch-compiler-host-of-files-and-compiler-options) value))
 
 (defn watch-options
+  "**Returns:** `WatchOptions | undefined`"
   ^js [watch-compiler-host-of-files-and-compiler-options]
   (.-watchOptions ^js watch-compiler-host-of-files-and-compiler-options))
 
@@ -30,7 +35,9 @@
   (set! (.-watchOptions ^js watch-compiler-host-of-files-and-compiler-options) value))
 
 (defn project-references
-  "Project References"
+  "Project References
+   
+   **Returns:** `readonly ProjectReference[] | undefined`"
   ^js [watch-compiler-host-of-files-and-compiler-options]
   (.-projectReferences ^js watch-compiler-host-of-files-and-compiler-options))
 
@@ -67,7 +74,9 @@
   (.afterProgramCreate ^js watch-compiler-host-of-files-and-compiler-options program))
 
 (defn create-program
-  "Used to create the program when need for program creation or recreation detected"
+  "Used to create the program when need for program creation or recreation detected
+   
+   **Returns:** `CreateProgram<T>`"
   ^js [watch-compiler-host-of-files-and-compiler-options]
   (.-createProgram ^js watch-compiler-host-of-files-and-compiler-options))
 
@@ -308,6 +317,7 @@
   (.getModuleResolutionCache ^js watch-compiler-host-of-files-and-compiler-options))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [watch-compiler-host-of-files-and-compiler-options]
   (.-jsDocParsingMode ^js watch-compiler-host-of-files-and-compiler-options))
 

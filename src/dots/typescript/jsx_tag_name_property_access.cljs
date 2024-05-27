@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [name]))
 
 (defn expression
+  "**Returns:** `Identifier | ThisExpression | JsxTagNamePropertyAccess`"
   ^js [jsx-tag-name-property-access]
   (.-expression ^js jsx-tag-name-property-access))
 
 (defn kind
+  "**Returns:** `SyntaxKind.PropertyAccessExpression`"
   ^js [jsx-tag-name-property-access]
   (.-kind ^js jsx-tag-name-property-access))
 
 (defn question-dot-token
+  "**Returns:** `QuestionDotToken | undefined`"
   ^js [jsx-tag-name-property-access]
   (.-questionDotToken ^js jsx-tag-name-property-access))
 
 (defn name
+  "**Returns:** `MemberName`"
   ^js [jsx-tag-name-property-access]
   (.-name ^js jsx-tag-name-property-access))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [jsx-tag-name-property-access]
   (.-flags ^js jsx-tag-name-property-access))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [jsx-tag-name-property-access]
   (.-parent ^js jsx-tag-name-property-access))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js jsx-tag-name-property-access cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [jsx-tag-name-property-access]
   (.-pos ^js jsx-tag-name-property-access))
 
 (defn end
+  "**Returns:** `number`"
   ^js [jsx-tag-name-property-access]
   (.-end ^js jsx-tag-name-property-access))

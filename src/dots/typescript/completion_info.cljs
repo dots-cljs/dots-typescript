@@ -1,7 +1,9 @@
 (ns dots.typescript.completion-info)
 
 (defn flags
-  "For performance telemetry."
+  "For performance telemetry.
+   
+   **Returns:** `CompletionInfoFlags | undefined`"
   ^js [completion-info]
   (.-flags ^js completion-info))
 
@@ -11,7 +13,9 @@
   (set! (.-flags ^js completion-info) value))
 
 (defn global-completion?
-  "Not true for all global completions. This will be true if the enclosing scope matches a few syntax kinds. See `isSnippetScope`."
+  "Not true for all global completions. This will be true if the enclosing scope matches a few syntax kinds. See `isSnippetScope`.
+   
+   **Returns:** `boolean`"
   ^js [completion-info]
   (.-isGlobalCompletion ^js completion-info))
 
@@ -21,6 +25,7 @@
   (set! (.-isGlobalCompletion ^js completion-info) value))
 
 (defn member-completion?
+  "**Returns:** `boolean`"
   ^js [completion-info]
   (.-isMemberCompletion ^js completion-info))
 
@@ -31,7 +36,9 @@
 (defn optional-replacement-span
   "In the absence of `CompletionEntry[\"replacementSpan\"]`, the editor may choose whether to use
    this span or its default one. If `CompletionEntry[\"replacementSpan\"]` is defined, that span
-   must be used to commit that completion entry."
+   must be used to commit that completion entry.
+   
+   **Returns:** `TextSpan | undefined`"
   ^js [completion-info]
   (.-optionalReplacementSpan ^js completion-info))
 
@@ -43,7 +50,9 @@
   (set! (.-optionalReplacementSpan ^js completion-info) value))
 
 (defn new-identifier-location?
-  "true when the current location also allows for a new identifier"
+  "true when the current location also allows for a new identifier
+   
+   **Returns:** `boolean`"
   ^js [completion-info]
   (.-isNewIdentifierLocation ^js completion-info))
 
@@ -53,7 +62,9 @@
   (set! (.-isNewIdentifierLocation ^js completion-info) value))
 
 (defn incomplete
-  "Indicates to client to continue requesting completions on subsequent keystrokes."
+  "Indicates to client to continue requesting completions on subsequent keystrokes.
+   
+   **Returns:** `true | undefined`"
   ^js [completion-info]
   (.-isIncomplete ^js completion-info))
 
@@ -63,6 +74,7 @@
   (set! (.-isIncomplete ^js completion-info) value))
 
 (defn entries
+  "**Returns:** `CompletionEntry[]`"
   ^js [completion-info]
   (.-entries ^js completion-info))
 

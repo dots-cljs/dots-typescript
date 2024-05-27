@@ -153,69 +153,87 @@
   (.formatMessage typescript/server msg logger byte-length new-line))
 
 (defn empty-array
+  "**Returns:** `SortedReadonlyArray<never>`"
   ^js []
   (.-emptyArray typescript/server))
 
 (defn null-typings-installer
+  "**Returns:** `ITypingsInstaller`"
   ^js []
   (.-nullTypingsInstaller typescript/server))
 
 (defn max-program-size-for-non-ts-files
+  "**Returns:** `number`"
   ^js []
   (.-maxProgramSizeForNonTsFiles typescript/server))
 
 (defn projects-updated-in-background-event
+  "**Returns:** `\"projectsUpdatedInBackground\"`"
   ^js []
   (.-ProjectsUpdatedInBackgroundEvent typescript/server))
 
 (defn project-loading-start-event
+  "**Returns:** `\"projectLoadingStart\"`"
   ^js []
   (.-ProjectLoadingStartEvent typescript/server))
 
 (defn project-loading-finish-event
+  "**Returns:** `\"projectLoadingFinish\"`"
   ^js []
   (.-ProjectLoadingFinishEvent typescript/server))
 
 (defn large-file-referenced-event
+  "**Returns:** `\"largeFileReferenced\"`"
   ^js []
   (.-LargeFileReferencedEvent typescript/server))
 
 (defn config-file-diag-event
+  "**Returns:** `\"configFileDiag\"`"
   ^js []
   (.-ConfigFileDiagEvent typescript/server))
 
 (defn project-language-service-state-event
+  "**Returns:** `\"projectLanguageServiceState\"`"
   ^js []
   (.-ProjectLanguageServiceStateEvent typescript/server))
 
 (defn project-info-telemetry-event
-  "This will be converted to the payload of a protocol.TelemetryEvent in session.defaultEventHandler."
+  "This will be converted to the payload of a protocol.TelemetryEvent in session.defaultEventHandler.
+   
+   **Returns:** `\"projectInfo\"`"
   ^js []
   (.-ProjectInfoTelemetryEvent typescript/server))
 
 (defn open-file-info-telemetry-event
   "Info that we may send about a file that was just opened.
    Info about a file will only be sent once per session, even if the file changes in ways that might affect the info.
-   Currently this is only sent for '.js' files."
+   Currently this is only sent for '.js' files.
+   
+   **Returns:** `\"openFileInfo\"`"
   ^js []
   (.-OpenFileInfoTelemetryEvent typescript/server))
 
 (defn create-file-watcher-event
+  "**Returns:** `\"createFileWatcher\"`"
   ^js []
   (.-CreateFileWatcherEvent typescript/server))
 
 (defn create-directory-watcher-event
+  "**Returns:** `\"createDirectoryWatcher\"`"
   ^js []
   (.-CreateDirectoryWatcherEvent typescript/server))
 
 (defn close-file-watcher-event
+  "**Returns:** `\"closeFileWatcher\"`"
   ^js []
   (.-CloseFileWatcherEvent typescript/server))
 
 (defn null-cancellation-token
+  "**Returns:** `ServerCancellationToken`"
   ^js []
   (.-nullCancellationToken typescript/server))
 
 (defn command-names
+  "**Returns:** `any`"
   ^js []
   (.-CommandNames typescript/server))

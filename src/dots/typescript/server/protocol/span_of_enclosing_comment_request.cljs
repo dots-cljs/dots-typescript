@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.GetSpanOfEnclosingComment`"
   ^js [span-of-enclosing-comment-request]
   (.-command ^js span-of-enclosing-comment-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js span-of-enclosing-comment-request) value))
 
 (defn arguments
+  "**Returns:** `SpanOfEnclosingCommentRequestArgs`"
   ^js [span-of-enclosing-comment-request]
   (.-arguments ^js span-of-enclosing-comment-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js span-of-enclosing-comment-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [span-of-enclosing-comment-request]
   (.-type ^js span-of-enclosing-comment-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js span-of-enclosing-comment-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [span-of-enclosing-comment-request]
   (.-seq ^js span-of-enclosing-comment-request))
 

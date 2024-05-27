@@ -2,39 +2,49 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.MappedType`"
   ^js [mapped-type-node]
   (.-kind ^js mapped-type-node))
 
 (defn readonly-token
+  "**Returns:** `ReadonlyKeyword | PlusToken | MinusToken | undefined`"
   ^js [mapped-type-node]
   (.-readonlyToken ^js mapped-type-node))
 
 (defn type-parameter
+  "**Returns:** `TypeParameterDeclaration`"
   ^js [mapped-type-node]
   (.-typeParameter ^js mapped-type-node))
 
 (defn name-type
+  "**Returns:** `TypeNode | undefined`"
   ^js [mapped-type-node]
   (.-nameType ^js mapped-type-node))
 
 (defn question-token
+  "**Returns:** `QuestionToken | PlusToken | MinusToken | undefined`"
   ^js [mapped-type-node]
   (.-questionToken ^js mapped-type-node))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [mapped-type-node]
   (.-type ^js mapped-type-node))
 
 (defn members
-  "Used only to produce grammar errors"
+  "Used only to produce grammar errors
+   
+   **Returns:** `NodeArray<TypeElement> | undefined`"
   ^js [mapped-type-node]
   (.-members ^js mapped-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [mapped-type-node]
   (.-flags ^js mapped-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [mapped-type-node]
   (.-parent ^js mapped-type-node))
 
@@ -174,9 +184,11 @@
    (.forEachChild ^js mapped-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [mapped-type-node]
   (.-pos ^js mapped-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [mapped-type-node]
   (.-end ^js mapped-type-node))

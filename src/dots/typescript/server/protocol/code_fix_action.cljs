@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.code-fix-action)
 
 (defn fix-name
-  "Short name to identify the fix, for use by telemetry."
+  "Short name to identify the fix, for use by telemetry.
+   
+   **Returns:** `string`"
   ^js [code-fix-action]
   (.-fixName ^js code-fix-action))
 
@@ -12,7 +14,9 @@
 
 (defn fix-id
   "If present, one may call 'getCombinedCodeFix' with this fixId.
-   This may be omitted to indicate that the code fix can't be applied in a group."
+   This may be omitted to indicate that the code fix can't be applied in a group.
+   
+   **Returns:** `{} | undefined`"
   ^js [code-fix-action]
   (.-fixId ^js code-fix-action))
 
@@ -23,7 +27,9 @@
   (set! (.-fixId ^js code-fix-action) value))
 
 (defn fix-all-description
-  "Should be present if and only if 'fixId' is."
+  "Should be present if and only if 'fixId' is.
+   
+   **Returns:** `string | undefined`"
   ^js [code-fix-action]
   (.-fixAllDescription ^js code-fix-action))
 
@@ -33,7 +39,9 @@
   (set! (.-fixAllDescription ^js code-fix-action) value))
 
 (defn description
-  "Description of the code action to display in the UI of the editor"
+  "Description of the code action to display in the UI of the editor
+   
+   **Returns:** `string`"
   ^js [code-fix-action]
   (.-description ^js code-fix-action))
 
@@ -43,7 +51,9 @@
   (set! (.-description ^js code-fix-action) value))
 
 (defn changes
-  "Text changes to apply to each file as part of the code action"
+  "Text changes to apply to each file as part of the code action
+   
+   **Returns:** `FileCodeEdits[]`"
   ^js [code-fix-action]
   (.-changes ^js code-fix-action))
 
@@ -53,7 +63,9 @@
   (set! (.-changes ^js code-fix-action) value))
 
 (defn commands
-  "A command is an opaque object that should be passed to `ApplyCodeActionCommandRequestArgs` without modification."
+  "A command is an opaque object that should be passed to `ApplyCodeActionCommandRequestArgs` without modification.
+   
+   **Returns:** `{}[] | undefined`"
   ^js [code-fix-action]
   (.-commands ^js code-fix-action))
 

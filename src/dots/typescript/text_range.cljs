@@ -1,6 +1,7 @@
 (ns dots.typescript.text-range)
 
 (defn pos
+  "**Returns:** `number`"
   ^js [text-range]
   (.-pos ^js text-range))
 
@@ -9,6 +10,7 @@
   (set! (.-pos ^js text-range) value))
 
 (defn end
+  "**Returns:** `number`"
   ^js [text-range]
   (.-end ^js text-range))
 

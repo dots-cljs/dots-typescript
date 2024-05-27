@@ -1,6 +1,7 @@
 (ns dots.typescript.quick-info)
 
 (defn kind
+  "**Returns:** `ScriptElementKind`"
   ^js [quick-info]
   (.-kind ^js quick-info))
 
@@ -9,6 +10,7 @@
   (set! (.-kind ^js quick-info) value))
 
 (defn kind-modifiers
+  "**Returns:** `string`"
   ^js [quick-info]
   (.-kindModifiers ^js quick-info))
 
@@ -17,6 +19,7 @@
   (set! (.-kindModifiers ^js quick-info) value))
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [quick-info]
   (.-textSpan ^js quick-info))
 
@@ -25,6 +28,7 @@
   (set! (.-textSpan ^js quick-info) value))
 
 (defn display-parts
+  "**Returns:** `SymbolDisplayPart[] | undefined`"
   ^js [quick-info]
   (.-displayParts ^js quick-info))
 
@@ -33,6 +37,7 @@
   (set! (.-displayParts ^js quick-info) value))
 
 (defn documentation
+  "**Returns:** `SymbolDisplayPart[] | undefined`"
   ^js [quick-info]
   (.-documentation ^js quick-info))
 
@@ -41,6 +46,7 @@
   (set! (.-documentation ^js quick-info) value))
 
 (defn tags
+  "**Returns:** `JSDocTagInfo[] | undefined`"
   ^js [quick-info]
   (.-tags ^js quick-info))
 

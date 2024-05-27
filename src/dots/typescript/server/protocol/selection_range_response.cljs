@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `SelectionRange[] | undefined`"
   ^js [selection-range-response]
   (.-body ^js selection-range-response))
 
@@ -10,6 +11,7 @@
   (set! (.-body ^js selection-range-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [selection-range-response]
   (.-type ^js selection-range-response))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js selection-range-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [selection-range-response]
   (.-request_seq ^js selection-range-response))
 
@@ -28,7 +32,9 @@
   (set! (.-request_seq ^js selection-range-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [selection-range-response]
   (.-success ^js selection-range-response))
 
@@ -38,7 +44,9 @@
   (set! (.-success ^js selection-range-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [selection-range-response]
   (.-command ^js selection-range-response))
 
@@ -49,7 +57,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [selection-range-response]
   (.-message ^js selection-range-response))
 
@@ -60,7 +70,9 @@
   (set! (.-message ^js selection-range-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [selection-range-response]
   (.-metadata ^js selection-range-response))
 
@@ -70,7 +82,9 @@
   (set! (.-metadata ^js selection-range-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [selection-range-response]
   (.-performanceData ^js selection-range-response))
 
@@ -80,7 +94,9 @@
   (set! (.-performanceData ^js selection-range-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [selection-range-response]
   (.-seq ^js selection-range-response))
 

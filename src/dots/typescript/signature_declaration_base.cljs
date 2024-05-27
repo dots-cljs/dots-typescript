@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.MethodSignature | SyntaxKind.MethodDeclaration | SyntaxKind.Constructor | SyntaxKind.GetAccessor | SyntaxKind.SetAccessor | SyntaxKind.CallSignature | SyntaxKind.ConstructSignature | ... 6 more ... | SyntaxKind.JSDocFunctionType`"
   ^js [signature-declaration-base]
   (.-kind ^js signature-declaration-base))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [signature-declaration-base]
   (.-name ^js signature-declaration-base))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [signature-declaration-base]
   (.-typeParameters ^js signature-declaration-base))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [signature-declaration-base]
   (.-parameters ^js signature-declaration-base))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [signature-declaration-base]
   (.-type ^js signature-declaration-base))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [signature-declaration-base]
   (.-flags ^js signature-declaration-base))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [signature-declaration-base]
   (.-parent ^js signature-declaration-base))
 
@@ -165,9 +172,11 @@
    (.forEachChild ^js signature-declaration-base cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [signature-declaration-base]
   (.-pos ^js signature-declaration-base))
 
 (defn end
+  "**Returns:** `number`"
   ^js [signature-declaration-base]
   (.-end ^js signature-declaration-base))

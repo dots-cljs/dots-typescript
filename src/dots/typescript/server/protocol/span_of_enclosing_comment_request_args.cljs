@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.span-of-enclosing-comment-request-args)
 
 (defn only-multi-line?
-  "Requires that the enclosing span be a multi-line comment, or else the request returns undefined."
+  "Requires that the enclosing span be a multi-line comment, or else the request returns undefined.
+   
+   **Returns:** `boolean`"
   ^js [span-of-enclosing-comment-request-args]
   (.-onlyMultiLine ^js span-of-enclosing-comment-request-args))
 
@@ -11,7 +13,9 @@
   (set! (.-onlyMultiLine ^js span-of-enclosing-comment-request-args) value))
 
 (defn line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [span-of-enclosing-comment-request-args]
   (.-line ^js span-of-enclosing-comment-request-args))
 
@@ -21,7 +25,9 @@
   (set! (.-line ^js span-of-enclosing-comment-request-args) value))
 
 (defn offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [span-of-enclosing-comment-request-args]
   (.-offset ^js span-of-enclosing-comment-request-args))
 
@@ -31,7 +37,9 @@
   (set! (.-offset ^js span-of-enclosing-comment-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [span-of-enclosing-comment-request-args]
   (.-file ^js span-of-enclosing-comment-request-args))
 
@@ -41,6 +49,7 @@
   (set! (.-file ^js span-of-enclosing-comment-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [span-of-enclosing-comment-request-args]
   (.-projectFileName ^js span-of-enclosing-comment-request-args))
 

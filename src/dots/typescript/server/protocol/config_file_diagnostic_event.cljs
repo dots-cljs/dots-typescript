@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `ConfigFileDiagnosticEventBody | undefined`"
   ^js [config-file-diagnostic-event]
   (.-body ^js config-file-diagnostic-event))
 
@@ -12,6 +13,7 @@
   (set! (.-body ^js config-file-diagnostic-event) value))
 
 (defn event
+  "**Returns:** `\"configFileDiag\"`"
   ^js [config-file-diagnostic-event]
   (.-event ^js config-file-diagnostic-event))
 
@@ -20,6 +22,7 @@
   (set! (.-event ^js config-file-diagnostic-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [config-file-diagnostic-event]
   (.-type ^js config-file-diagnostic-event))
 
@@ -28,7 +31,9 @@
   (set! (.-type ^js config-file-diagnostic-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [config-file-diagnostic-event]
   (.-seq ^js config-file-diagnostic-event))
 

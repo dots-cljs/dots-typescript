@@ -1,6 +1,7 @@
 (ns dots.typescript.server.auto-import-provider-project)
 
 (defn host-project
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-hostProject ^js auto-import-provider-project))
 
@@ -9,6 +10,7 @@
   (set! (.-hostProject ^js auto-import-provider-project) value))
 
 (defn root-file-names
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-rootFileNames ^js auto-import-provider-project))
 
@@ -57,14 +59,17 @@
   (.getProjectReferences ^js auto-import-provider-project))
 
 (defn project-kind
+  "**Returns:** `ProjectKind`"
   ^js [auto-import-provider-project]
   (.-projectKind ^js auto-import-provider-project))
 
 (defn project-service
+  "**Returns:** `ProjectService`"
   ^js [auto-import-provider-project]
   (.-projectService ^js auto-import-provider-project))
 
 (defn document-registry
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-documentRegistry ^js auto-import-provider-project))
 
@@ -73,6 +78,7 @@
   (set! (.-documentRegistry ^js auto-import-provider-project) value))
 
 (defn compiler-options
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-compilerOptions ^js auto-import-provider-project))
 
@@ -81,6 +87,7 @@
   (set! (.-compilerOptions ^js auto-import-provider-project) value))
 
 (defn compile-on-save-enabled?
+  "**Returns:** `boolean`"
   ^js [auto-import-provider-project]
   (.-compileOnSaveEnabled ^js auto-import-provider-project))
 
@@ -89,6 +96,7 @@
   (set! (.-compileOnSaveEnabled ^js auto-import-provider-project) value))
 
 (defn watch-options
+  "**Returns:** `WatchOptions | undefined`"
   ^js [auto-import-provider-project]
   (.-watchOptions ^js auto-import-provider-project))
 
@@ -97,6 +105,7 @@
   (set! (.-watchOptions ^js auto-import-provider-project) value))
 
 (defn root-files
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-rootFiles ^js auto-import-provider-project))
 
@@ -105,6 +114,7 @@
   (set! (.-rootFiles ^js auto-import-provider-project) value))
 
 (defn root-files-map
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-rootFilesMap ^js auto-import-provider-project))
 
@@ -113,6 +123,7 @@
   (set! (.-rootFilesMap ^js auto-import-provider-project) value))
 
 (defn program
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-program ^js auto-import-provider-project))
 
@@ -121,6 +132,7 @@
   (set! (.-program ^js auto-import-provider-project) value))
 
 (defn external-files
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-externalFiles ^js auto-import-provider-project))
 
@@ -129,6 +141,7 @@
   (set! (.-externalFiles ^js auto-import-provider-project) value))
 
 (defn missing-files-map
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-missingFilesMap ^js auto-import-provider-project))
 
@@ -137,6 +150,7 @@
   (set! (.-missingFilesMap ^js auto-import-provider-project) value))
 
 (defn generated-files-map
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-generatedFilesMap ^js auto-import-provider-project))
 
@@ -145,6 +159,7 @@
   (set! (.-generatedFilesMap ^js auto-import-provider-project) value))
 
 (defn language-service
+  "**Returns:** `LanguageService`"
   ^js [auto-import-provider-project]
   (.-languageService ^js auto-import-provider-project))
 
@@ -153,6 +168,7 @@
   (set! (.-languageService ^js auto-import-provider-project) value))
 
 (defn language-service-enabled?
+  "**Returns:** `boolean`"
   ^js [auto-import-provider-project]
   (.-languageServiceEnabled ^js auto-import-provider-project))
 
@@ -161,14 +177,17 @@
   (set! (.-languageServiceEnabled ^js auto-import-provider-project) value))
 
 (defn trace
+  "**Returns:** `((s: string) => void) | undefined`"
   ^js [auto-import-provider-project]
   (.-trace ^js auto-import-provider-project))
 
 (defn realpath
+  "**Returns:** `((path: string) => string) | undefined`"
   ^js [auto-import-provider-project]
   (.-realpath ^js auto-import-provider-project))
 
 (defn builder-state
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-builderState ^js auto-import-provider-project))
 
@@ -177,7 +196,9 @@
   (set! (.-builderState ^js auto-import-provider-project) value))
 
 (defn updated-file-names
-  "Set of files names that were updated since the last call to getChangesSinceVersion."
+  "Set of files names that were updated since the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-updatedFileNames ^js auto-import-provider-project))
 
@@ -187,7 +208,9 @@
   (set! (.-updatedFileNames ^js auto-import-provider-project) value))
 
 (defn last-reported-file-names
-  "Set of files that was returned from the last call to getChangesSinceVersion."
+  "Set of files that was returned from the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-lastReportedFileNames ^js auto-import-provider-project))
 
@@ -197,7 +220,9 @@
   (set! (.-lastReportedFileNames ^js auto-import-provider-project) value))
 
 (defn last-reported-version
-  "Last version that was reported."
+  "Last version that was reported.
+   
+   **Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-lastReportedVersion ^js auto-import-provider-project))
 
@@ -207,6 +232,7 @@
   (set! (.-lastReportedVersion ^js auto-import-provider-project) value))
 
 (defn project-errors
+  "**Returns:** `Diagnostic[] | undefined`"
   ^js [auto-import-provider-project]
   (.-projectErrors ^js auto-import-provider-project))
 
@@ -215,6 +241,7 @@
   (set! (.-projectErrors ^js auto-import-provider-project) value))
 
 (defn initial-load-pending
+  "**Returns:** `() => boolean`"
   ^js [auto-import-provider-project]
   (.-isInitialLoadPending ^js auto-import-provider-project))
 
@@ -223,6 +250,7 @@
   (set! (.-isInitialLoadPending ^js auto-import-provider-project) value))
 
 (defn cancellation-token
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-cancellationToken ^js auto-import-provider-project))
 
@@ -237,6 +265,7 @@
   (.isJsOnlyProject ^js auto-import-provider-project))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [auto-import-provider-project]
   (.-jsDocParsingMode ^js auto-import-provider-project))
 
@@ -277,6 +306,7 @@
   (.getProjectVersion ^js auto-import-provider-project))
 
 (defn or-create-script-info-and-attach-to-project
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-getOrCreateScriptInfoAndAttachToProject ^js auto-import-provider-project))
 
@@ -406,6 +436,7 @@
   (.error ^js auto-import-provider-project s))
 
 (defn set-internal-compiler-options-for-emitting-js-files
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-setInternalCompilerOptionsForEmittingJsFiles ^js auto-import-provider-project))
 
@@ -508,6 +539,7 @@
   (.close ^js auto-import-provider-project))
 
 (defn detach-script-info-if-not-root
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-detachScriptInfoIfNotRoot ^js auto-import-provider-project))
 
@@ -634,6 +666,7 @@
   (.removeExistingTypings ^js auto-import-provider-project include))
 
 (defn update-graph-worker
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-updateGraphWorker ^js auto-import-provider-project))
 
@@ -642,6 +675,7 @@
   (set! (.-updateGraphWorker ^js auto-import-provider-project) value))
 
 (defn detach-script-info-from-project
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-detachScriptInfoFromProject ^js auto-import-provider-project))
 
@@ -650,6 +684,7 @@
   (set! (.-detachScriptInfoFromProject ^js auto-import-provider-project) value))
 
 (defn add-missing-file-watcher
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-addMissingFileWatcher ^js auto-import-provider-project))
 
@@ -658,6 +693,7 @@
   (set! (.-addMissingFileWatcher ^js auto-import-provider-project) value))
 
 (defn watched-missing-file
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-isWatchedMissingFile ^js auto-import-provider-project))
 
@@ -666,6 +702,7 @@
   (set! (.-isWatchedMissingFile ^js auto-import-provider-project) value))
 
 (defn create-generated-file-watcher
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-createGeneratedFileWatcher ^js auto-import-provider-project))
 
@@ -674,6 +711,7 @@
   (set! (.-createGeneratedFileWatcher ^js auto-import-provider-project) value))
 
 (defn valid-generated-file-watcher
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-isValidGeneratedFileWatcher ^js auto-import-provider-project))
 
@@ -682,6 +720,7 @@
   (set! (.-isValidGeneratedFileWatcher ^js auto-import-provider-project) value))
 
 (defn clear-generated-file-watch
+  "**Returns:** `any`"
   ^js [auto-import-provider-project]
   (.-clearGeneratedFileWatch ^js auto-import-provider-project))
 

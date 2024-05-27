@@ -3,7 +3,9 @@
    line, offset.")
 
 (defn files-to-search
-  "List of files to search for document highlights."
+  "List of files to search for document highlights.
+   
+   **Returns:** `string[]`"
   ^js [document-highlights-request-args]
   (.-filesToSearch ^js document-highlights-request-args))
 
@@ -13,7 +15,9 @@
   (set! (.-filesToSearch ^js document-highlights-request-args) value))
 
 (defn line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [document-highlights-request-args]
   (.-line ^js document-highlights-request-args))
 
@@ -23,7 +27,9 @@
   (set! (.-line ^js document-highlights-request-args) value))
 
 (defn offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [document-highlights-request-args]
   (.-offset ^js document-highlights-request-args))
 
@@ -33,7 +39,9 @@
   (set! (.-offset ^js document-highlights-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [document-highlights-request-args]
   (.-file ^js document-highlights-request-args))
 
@@ -43,6 +51,7 @@
   (set! (.-file ^js document-highlights-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [document-highlights-request-args]
   (.-projectFileName ^js document-highlights-request-args))
 

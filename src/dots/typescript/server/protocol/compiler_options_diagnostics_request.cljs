@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn arguments
+  "**Returns:** `CompilerOptionsDiagnosticsRequestArgs`"
   ^js [compiler-options-diagnostics-request]
   (.-arguments ^js compiler-options-diagnostics-request))
 
@@ -11,6 +12,7 @@
   (set! (.-arguments ^js compiler-options-diagnostics-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [compiler-options-diagnostics-request]
   (.-type ^js compiler-options-diagnostics-request))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js compiler-options-diagnostics-request) value))
 
 (defn command
-  "The command to execute"
+  "The command to execute
+   
+   **Returns:** `string`"
   ^js [compiler-options-diagnostics-request]
   (.-command ^js compiler-options-diagnostics-request))
 
@@ -29,7 +33,9 @@
   (set! (.-command ^js compiler-options-diagnostics-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [compiler-options-diagnostics-request]
   (.-seq ^js compiler-options-diagnostics-request))
 

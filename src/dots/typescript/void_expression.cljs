@@ -1,18 +1,22 @@
 (ns dots.typescript.void-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.VoidExpression`"
   ^js [void-expression]
   (.-kind ^js void-expression))
 
 (defn expression
+  "**Returns:** `UnaryExpression`"
   ^js [void-expression]
   (.-expression ^js void-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [void-expression]
   (.-flags ^js void-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [void-expression]
   (.-parent ^js void-expression))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js void-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [void-expression]
   (.-pos ^js void-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [void-expression]
   (.-end ^js void-expression))

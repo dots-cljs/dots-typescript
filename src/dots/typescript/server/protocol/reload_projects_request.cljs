@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.ReloadProjects`"
   ^js [reload-projects-request]
   (.-command ^js reload-projects-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js reload-projects-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [reload-projects-request]
   (.-type ^js reload-projects-request))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js reload-projects-request) value))
 
 (defn arguments
-  "Object containing arguments for the command"
+  "Object containing arguments for the command
+   
+   **Returns:** `any`"
   ^js [reload-projects-request]
   (.-arguments ^js reload-projects-request))
 
@@ -29,7 +33,9 @@
   (set! (.-arguments ^js reload-projects-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [reload-projects-request]
   (.-seq ^js reload-projects-request))
 

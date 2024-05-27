@@ -5,6 +5,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Definition`"
   ^js [definition-request]
   (.-command ^js definition-request))
 
@@ -13,6 +14,7 @@
   (set! (.-command ^js definition-request) value))
 
 (defn arguments
+  "**Returns:** `FileLocationRequestArgs`"
   ^js [definition-request]
   (.-arguments ^js definition-request))
 
@@ -21,6 +23,7 @@
   (set! (.-arguments ^js definition-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [definition-request]
   (.-type ^js definition-request))
 
@@ -29,7 +32,9 @@
   (set! (.-type ^js definition-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [definition-request]
   (.-seq ^js definition-request))
 

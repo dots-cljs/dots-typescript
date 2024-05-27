@@ -2,7 +2,9 @@
   "Object found in response messages defining a span of text in a specific source file.")
 
 (defn file
-  "File containing text span."
+  "File containing text span.
+   
+   **Returns:** `string`"
   ^js [file-span]
   (.-file ^js file-span))
 
@@ -12,7 +14,9 @@
   (set! (.-file ^js file-span) value))
 
 (defn start
-  "First character of the definition."
+  "First character of the definition.
+   
+   **Returns:** `Location`"
   ^js [file-span]
   (.-start ^js file-span))
 
@@ -22,7 +26,9 @@
   (set! (.-start ^js file-span) value))
 
 (defn end
-  "One character past last character of the definition."
+  "One character past last character of the definition.
+   
+   **Returns:** `Location`"
   ^js [file-span]
   (.-end ^js file-span))
 

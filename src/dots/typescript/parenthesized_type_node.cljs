@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ParenthesizedType`"
   ^js [parenthesized-type-node]
   (.-kind ^js parenthesized-type-node))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [parenthesized-type-node]
   (.-type ^js parenthesized-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [parenthesized-type-node]
   (.-flags ^js parenthesized-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [parenthesized-type-node]
   (.-parent ^js parenthesized-type-node))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js parenthesized-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [parenthesized-type-node]
   (.-pos ^js parenthesized-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [parenthesized-type-node]
   (.-end ^js parenthesized-type-node))

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn fresh-type
+  "**Returns:** `FreshableType`"
   ^js [enum-type]
   (.-freshType ^js enum-type))
 
@@ -10,6 +11,7 @@
   (set! (.-freshType ^js enum-type) value))
 
 (defn regular-type
+  "**Returns:** `FreshableType`"
   ^js [enum-type]
   (.-regularType ^js enum-type))
 
@@ -18,6 +20,7 @@
   (set! (.-regularType ^js enum-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [enum-type]
   (.-flags ^js enum-type))
 
@@ -26,6 +29,7 @@
   (set! (.-flags ^js enum-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [enum-type]
   (.-symbol ^js enum-type))
 
@@ -34,6 +38,7 @@
   (set! (.-symbol ^js enum-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [enum-type]
   (.-pattern ^js enum-type))
 
@@ -42,6 +47,7 @@
   (set! (.-pattern ^js enum-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [enum-type]
   (.-aliasSymbol ^js enum-type))
 
@@ -50,6 +56,7 @@
   (set! (.-aliasSymbol ^js enum-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [enum-type]
   (.-aliasTypeArguments ^js enum-type))
 

@@ -46,5 +46,6 @@
   (.. typescript/server -nullTypingsInstaller (onProjectClosed p)))
 
 (defn global-typings-cache-location
+  "**Returns:** `string | undefined`"
   ^js []
   (.. typescript/server -nullTypingsInstaller -globalTypingsCacheLocation))

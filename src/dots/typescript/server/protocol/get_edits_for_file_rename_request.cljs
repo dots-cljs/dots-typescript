@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.GetEditsForFileRename`"
   ^js [get-edits-for-file-rename-request]
   (.-command ^js get-edits-for-file-rename-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js get-edits-for-file-rename-request) value))
 
 (defn arguments
+  "**Returns:** `GetEditsForFileRenameRequestArgs`"
   ^js [get-edits-for-file-rename-request]
   (.-arguments ^js get-edits-for-file-rename-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js get-edits-for-file-rename-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [get-edits-for-file-rename-request]
   (.-type ^js get-edits-for-file-rename-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js get-edits-for-file-rename-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [get-edits-for-file-rename-request]
   (.-seq ^js get-edits-for-file-rename-request))
 

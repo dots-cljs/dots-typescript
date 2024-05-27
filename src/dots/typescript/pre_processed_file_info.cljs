@@ -1,6 +1,7 @@
 (ns dots.typescript.pre-processed-file-info)
 
 (defn referenced-files
+  "**Returns:** `FileReference[]`"
   ^js [pre-processed-file-info]
   (.-referencedFiles ^js pre-processed-file-info))
 
@@ -9,6 +10,7 @@
   (set! (.-referencedFiles ^js pre-processed-file-info) value))
 
 (defn type-reference-directives
+  "**Returns:** `FileReference[]`"
   ^js [pre-processed-file-info]
   (.-typeReferenceDirectives ^js pre-processed-file-info))
 
@@ -17,6 +19,7 @@
   (set! (.-typeReferenceDirectives ^js pre-processed-file-info) value))
 
 (defn lib-reference-directives
+  "**Returns:** `FileReference[]`"
   ^js [pre-processed-file-info]
   (.-libReferenceDirectives ^js pre-processed-file-info))
 
@@ -25,6 +28,7 @@
   (set! (.-libReferenceDirectives ^js pre-processed-file-info) value))
 
 (defn imported-files
+  "**Returns:** `FileReference[]`"
   ^js [pre-processed-file-info]
   (.-importedFiles ^js pre-processed-file-info))
 
@@ -33,6 +37,7 @@
   (set! (.-importedFiles ^js pre-processed-file-info) value))
 
 (defn ambient-external-modules
+  "**Returns:** `string[] | undefined`"
   ^js [pre-processed-file-info]
   (.-ambientExternalModules ^js pre-processed-file-info))
 
@@ -41,6 +46,7 @@
   (set! (.-ambientExternalModules ^js pre-processed-file-info) value))
 
 (defn lib-file?
+  "**Returns:** `boolean`"
   ^js [pre-processed-file-info]
   (.-isLibFile ^js pre-processed-file-info))
 

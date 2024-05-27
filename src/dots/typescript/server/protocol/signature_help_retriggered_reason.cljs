@@ -5,6 +5,7 @@
    `triggerCharacter` can be `undefined` for a retrigger caused by a cursor move.")
 
 (defn kind
+  "**Returns:** `\"retrigger\"`"
   ^js [signature-help-retriggered-reason]
   (.-kind ^js signature-help-retriggered-reason))
 
@@ -13,7 +14,9 @@
   (set! (.-kind ^js signature-help-retriggered-reason) value))
 
 (defn trigger-character
-  "Character that was responsible for triggering signature help."
+  "Character that was responsible for triggering signature help.
+   
+   **Returns:** `SignatureHelpRetriggerCharacter | undefined`"
   ^js [signature-help-retriggered-reason]
   (.-triggerCharacter ^js signature-help-retriggered-reason))
 

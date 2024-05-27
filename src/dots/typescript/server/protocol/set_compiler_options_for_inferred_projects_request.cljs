@@ -9,6 +9,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.CompilerOptionsForInferredProjects`"
   ^js [set-compiler-options-for-inferred-projects-request]
   (.-command ^js set-compiler-options-for-inferred-projects-request))
 
@@ -17,6 +18,7 @@
   (set! (.-command ^js set-compiler-options-for-inferred-projects-request) value))
 
 (defn arguments
+  "**Returns:** `SetCompilerOptionsForInferredProjectsArgs`"
   ^js [set-compiler-options-for-inferred-projects-request]
   (.-arguments ^js set-compiler-options-for-inferred-projects-request))
 
@@ -25,6 +27,7 @@
   (set! (.-arguments ^js set-compiler-options-for-inferred-projects-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [set-compiler-options-for-inferred-projects-request]
   (.-type ^js set-compiler-options-for-inferred-projects-request))
 
@@ -33,7 +36,9 @@
   (set! (.-type ^js set-compiler-options-for-inferred-projects-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [set-compiler-options-for-inferred-projects-request]
   (.-seq ^js set-compiler-options-for-inferred-projects-request))
 

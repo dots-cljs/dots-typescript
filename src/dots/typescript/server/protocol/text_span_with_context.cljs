@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.text-span-with-context)
 
 (defn context-start
+  "**Returns:** `Location | undefined`"
   ^js [text-span-with-context]
   (.-contextStart ^js text-span-with-context))
 
@@ -9,6 +10,7 @@
   (set! (.-contextStart ^js text-span-with-context) value))
 
 (defn context-end
+  "**Returns:** `Location | undefined`"
   ^js [text-span-with-context]
   (.-contextEnd ^js text-span-with-context))
 
@@ -17,7 +19,9 @@
   (set! (.-contextEnd ^js text-span-with-context) value))
 
 (defn start
-  "First character of the definition."
+  "First character of the definition.
+   
+   **Returns:** `Location`"
   ^js [text-span-with-context]
   (.-start ^js text-span-with-context))
 
@@ -27,7 +31,9 @@
   (set! (.-start ^js text-span-with-context) value))
 
 (defn end
-  "One character past last character of the definition."
+  "One character past last character of the definition.
+   
+   **Returns:** `Location`"
   ^js [text-span-with-context]
   (.-end ^js text-span-with-context))
 

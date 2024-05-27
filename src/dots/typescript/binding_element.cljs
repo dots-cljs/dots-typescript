@@ -2,30 +2,37 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.BindingElement`"
   ^js [binding-element]
   (.-kind ^js binding-element))
 
 (defn parent
+  "**Returns:** `BindingPattern`"
   ^js [binding-element]
   (.-parent ^js binding-element))
 
 (defn property-name
+  "**Returns:** `PropertyName | undefined`"
   ^js [binding-element]
   (.-propertyName ^js binding-element))
 
 (defn dot-dot-dot-token
+  "**Returns:** `DotDotDotToken | undefined`"
   ^js [binding-element]
   (.-dotDotDotToken ^js binding-element))
 
 (defn name
+  "**Returns:** `BindingName`"
   ^js [binding-element]
   (.-name ^js binding-element))
 
 (defn initializer
+  "**Returns:** `Expression | undefined`"
   ^js [binding-element]
   (.-initializer ^js binding-element))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [binding-element]
   (.-flags ^js binding-element))
 
@@ -165,9 +172,11 @@
    (.forEachChild ^js binding-element cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [binding-element]
   (.-pos ^js binding-element))
 
 (defn end
+  "**Returns:** `number`"
   ^js [binding-element]
   (.-end ^js binding-element))

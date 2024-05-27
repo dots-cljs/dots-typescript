@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.install-types-event-body)
 
 (defn event-id
-  "correlation id to match begin and end events"
+  "correlation id to match begin and end events
+   
+   **Returns:** `number`"
   ^js [install-types-event-body]
   (.-eventId ^js install-types-event-body))
 
@@ -11,7 +13,9 @@
   (set! (.-eventId ^js install-types-event-body) value))
 
 (defn packages
-  "list of packages to install"
+  "list of packages to install
+   
+   **Returns:** `readonly string[]`"
   ^js [install-types-event-body]
   (.-packages ^js install-types-event-body))
 

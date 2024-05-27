@@ -1,18 +1,22 @@
 (ns dots.typescript.named-exports)
 
 (defn kind
+  "**Returns:** `SyntaxKind.NamedExports`"
   ^js [named-exports]
   (.-kind ^js named-exports))
 
 (defn parent
+  "**Returns:** `ExportDeclaration`"
   ^js [named-exports]
   (.-parent ^js named-exports))
 
 (defn elements
+  "**Returns:** `NodeArray<ExportSpecifier>`"
   ^js [named-exports]
   (.-elements ^js named-exports))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [named-exports]
   (.-flags ^js named-exports))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js named-exports cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [named-exports]
   (.-pos ^js named-exports))
 
 (defn end
+  "**Returns:** `number`"
   ^js [named-exports]
   (.-end ^js named-exports))

@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.selection-range)
 
 (defn text-span
+  "**Returns:** `TextSpan`"
   ^js [selection-range]
   (.-textSpan ^js selection-range))
 
@@ -9,6 +10,7 @@
   (set! (.-textSpan ^js selection-range) value))
 
 (defn parent
+  "**Returns:** `SelectionRange | undefined`"
   ^js [selection-range]
   (.-parent ^js selection-range))
 

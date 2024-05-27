@@ -1,6 +1,7 @@
 (ns dots.typescript.compiler-options)
 
 (defn allow-importing-ts-extensions?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-allowImportingTsExtensions ^js compiler-options))
 
@@ -9,6 +10,7 @@
   (set! (.-allowImportingTsExtensions ^js compiler-options) value))
 
 (defn allow-js?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-allowJs ^js compiler-options))
 
@@ -17,6 +19,7 @@
   (set! (.-allowJs ^js compiler-options) value))
 
 (defn allow-arbitrary-extensions?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-allowArbitraryExtensions ^js compiler-options))
 
@@ -25,6 +28,7 @@
   (set! (.-allowArbitraryExtensions ^js compiler-options) value))
 
 (defn allow-synthetic-default-imports?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-allowSyntheticDefaultImports ^js compiler-options))
 
@@ -33,6 +37,7 @@
   (set! (.-allowSyntheticDefaultImports ^js compiler-options) value))
 
 (defn allow-umd-global-access?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-allowUmdGlobalAccess ^js compiler-options))
 
@@ -41,6 +46,7 @@
   (set! (.-allowUmdGlobalAccess ^js compiler-options) value))
 
 (defn allow-unreachable-code?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-allowUnreachableCode ^js compiler-options))
 
@@ -49,6 +55,7 @@
   (set! (.-allowUnreachableCode ^js compiler-options) value))
 
 (defn allow-unused-labels?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-allowUnusedLabels ^js compiler-options))
 
@@ -57,6 +64,7 @@
   (set! (.-allowUnusedLabels ^js compiler-options) value))
 
 (defn always-strict?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-alwaysStrict ^js compiler-options))
 
@@ -65,6 +73,7 @@
   (set! (.-alwaysStrict ^js compiler-options) value))
 
 (defn base-url
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-baseUrl ^js compiler-options))
 
@@ -73,6 +82,7 @@
   (set! (.-baseUrl ^js compiler-options) value))
 
 (defn charset
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-charset ^js compiler-options))
 
@@ -81,6 +91,7 @@
   (set! (.-charset ^js compiler-options) value))
 
 (defn check-js?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-checkJs ^js compiler-options))
 
@@ -89,6 +100,7 @@
   (set! (.-checkJs ^js compiler-options) value))
 
 (defn custom-conditions
+  "**Returns:** `string[] | undefined`"
   ^js [compiler-options]
   (.-customConditions ^js compiler-options))
 
@@ -97,6 +109,7 @@
   (set! (.-customConditions ^js compiler-options) value))
 
 (defn declaration?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-declaration ^js compiler-options))
 
@@ -105,6 +118,7 @@
   (set! (.-declaration ^js compiler-options) value))
 
 (defn declaration-map?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-declarationMap ^js compiler-options))
 
@@ -113,6 +127,7 @@
   (set! (.-declarationMap ^js compiler-options) value))
 
 (defn emit-declaration-only?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-emitDeclarationOnly ^js compiler-options))
 
@@ -121,6 +136,7 @@
   (set! (.-emitDeclarationOnly ^js compiler-options) value))
 
 (defn declaration-dir
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-declarationDir ^js compiler-options))
 
@@ -129,6 +145,7 @@
   (set! (.-declarationDir ^js compiler-options) value))
 
 (defn disable-size-limit?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-disableSizeLimit ^js compiler-options))
 
@@ -137,6 +154,7 @@
   (set! (.-disableSizeLimit ^js compiler-options) value))
 
 (defn disable-source-of-project-reference-redirect?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-disableSourceOfProjectReferenceRedirect ^js compiler-options))
 
@@ -145,6 +163,7 @@
   (set! (.-disableSourceOfProjectReferenceRedirect ^js compiler-options) value))
 
 (defn disable-solution-searching?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-disableSolutionSearching ^js compiler-options))
 
@@ -153,6 +172,7 @@
   (set! (.-disableSolutionSearching ^js compiler-options) value))
 
 (defn disable-referenced-project-load?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-disableReferencedProjectLoad ^js compiler-options))
 
@@ -161,6 +181,7 @@
   (set! (.-disableReferencedProjectLoad ^js compiler-options) value))
 
 (defn downlevel-iteration?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-downlevelIteration ^js compiler-options))
 
@@ -169,6 +190,7 @@
   (set! (.-downlevelIteration ^js compiler-options) value))
 
 (defn emit-bom?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-emitBOM ^js compiler-options))
 
@@ -177,6 +199,7 @@
   (set! (.-emitBOM ^js compiler-options) value))
 
 (defn emit-decorator-metadata?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-emitDecoratorMetadata ^js compiler-options))
 
@@ -185,6 +208,7 @@
   (set! (.-emitDecoratorMetadata ^js compiler-options) value))
 
 (defn exact-optional-property-types?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-exactOptionalPropertyTypes ^js compiler-options))
 
@@ -193,6 +217,7 @@
   (set! (.-exactOptionalPropertyTypes ^js compiler-options) value))
 
 (defn experimental-decorators?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-experimentalDecorators ^js compiler-options))
 
@@ -201,6 +226,7 @@
   (set! (.-experimentalDecorators ^js compiler-options) value))
 
 (defn force-consistent-casing-in-file-names?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-forceConsistentCasingInFileNames ^js compiler-options))
 
@@ -209,6 +235,7 @@
   (set! (.-forceConsistentCasingInFileNames ^js compiler-options) value))
 
 (defn ignore-deprecations
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-ignoreDeprecations ^js compiler-options))
 
@@ -217,6 +244,7 @@
   (set! (.-ignoreDeprecations ^js compiler-options) value))
 
 (defn import-helpers?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-importHelpers ^js compiler-options))
 
@@ -225,6 +253,7 @@
   (set! (.-importHelpers ^js compiler-options) value))
 
 (defn imports-not-used-as-values
+  "**Returns:** `ImportsNotUsedAsValues | undefined`"
   ^js [compiler-options]
   (.-importsNotUsedAsValues ^js compiler-options))
 
@@ -233,6 +262,7 @@
   (set! (.-importsNotUsedAsValues ^js compiler-options) value))
 
 (defn inline-source-map?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-inlineSourceMap ^js compiler-options))
 
@@ -241,6 +271,7 @@
   (set! (.-inlineSourceMap ^js compiler-options) value))
 
 (defn inline-sources?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-inlineSources ^js compiler-options))
 
@@ -249,6 +280,7 @@
   (set! (.-inlineSources ^js compiler-options) value))
 
 (defn isolated-modules?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-isolatedModules ^js compiler-options))
 
@@ -257,6 +289,7 @@
   (set! (.-isolatedModules ^js compiler-options) value))
 
 (defn jsx
+  "**Returns:** `JsxEmit | undefined`"
   ^js [compiler-options]
   (.-jsx ^js compiler-options))
 
@@ -265,6 +298,7 @@
   (set! (.-jsx ^js compiler-options) value))
 
 (defn keyof-strings-only?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-keyofStringsOnly ^js compiler-options))
 
@@ -273,6 +307,7 @@
   (set! (.-keyofStringsOnly ^js compiler-options) value))
 
 (defn lib
+  "**Returns:** `string[] | undefined`"
   ^js [compiler-options]
   (.-lib ^js compiler-options))
 
@@ -281,6 +316,7 @@
   (set! (.-lib ^js compiler-options) value))
 
 (defn locale
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-locale ^js compiler-options))
 
@@ -289,6 +325,7 @@
   (set! (.-locale ^js compiler-options) value))
 
 (defn map-root
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-mapRoot ^js compiler-options))
 
@@ -297,6 +334,7 @@
   (set! (.-mapRoot ^js compiler-options) value))
 
 (defn max-node-module-js-depth
+  "**Returns:** `number | undefined`"
   ^js [compiler-options]
   (.-maxNodeModuleJsDepth ^js compiler-options))
 
@@ -305,6 +343,7 @@
   (set! (.-maxNodeModuleJsDepth ^js compiler-options) value))
 
 (defn module
+  "**Returns:** `ModuleKind | undefined`"
   ^js [compiler-options]
   (.-module ^js compiler-options))
 
@@ -313,6 +352,7 @@
   (set! (.-module ^js compiler-options) value))
 
 (defn module-resolution
+  "**Returns:** `ModuleResolutionKind | undefined`"
   ^js [compiler-options]
   (.-moduleResolution ^js compiler-options))
 
@@ -321,6 +361,7 @@
   (set! (.-moduleResolution ^js compiler-options) value))
 
 (defn module-suffixes
+  "**Returns:** `string[] | undefined`"
   ^js [compiler-options]
   (.-moduleSuffixes ^js compiler-options))
 
@@ -329,6 +370,7 @@
   (set! (.-moduleSuffixes ^js compiler-options) value))
 
 (defn module-detection
+  "**Returns:** `ModuleDetectionKind | undefined`"
   ^js [compiler-options]
   (.-moduleDetection ^js compiler-options))
 
@@ -337,6 +379,7 @@
   (set! (.-moduleDetection ^js compiler-options) value))
 
 (defn new-line
+  "**Returns:** `NewLineKind | undefined`"
   ^js [compiler-options]
   (.-newLine ^js compiler-options))
 
@@ -345,6 +388,7 @@
   (set! (.-newLine ^js compiler-options) value))
 
 (defn no-emit?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noEmit ^js compiler-options))
 
@@ -353,6 +397,7 @@
   (set! (.-noEmit ^js compiler-options) value))
 
 (defn no-emit-helpers?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noEmitHelpers ^js compiler-options))
 
@@ -361,6 +406,7 @@
   (set! (.-noEmitHelpers ^js compiler-options) value))
 
 (defn no-emit-on-error?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noEmitOnError ^js compiler-options))
 
@@ -369,6 +415,7 @@
   (set! (.-noEmitOnError ^js compiler-options) value))
 
 (defn no-error-truncation?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noErrorTruncation ^js compiler-options))
 
@@ -377,6 +424,7 @@
   (set! (.-noErrorTruncation ^js compiler-options) value))
 
 (defn no-fallthrough-cases-in-switch?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noFallthroughCasesInSwitch ^js compiler-options))
 
@@ -385,6 +433,7 @@
   (set! (.-noFallthroughCasesInSwitch ^js compiler-options) value))
 
 (defn no-implicit-any?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noImplicitAny ^js compiler-options))
 
@@ -393,6 +442,7 @@
   (set! (.-noImplicitAny ^js compiler-options) value))
 
 (defn no-implicit-returns?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noImplicitReturns ^js compiler-options))
 
@@ -401,6 +451,7 @@
   (set! (.-noImplicitReturns ^js compiler-options) value))
 
 (defn no-implicit-this?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noImplicitThis ^js compiler-options))
 
@@ -409,6 +460,7 @@
   (set! (.-noImplicitThis ^js compiler-options) value))
 
 (defn no-strict-generic-checks?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noStrictGenericChecks ^js compiler-options))
 
@@ -417,6 +469,7 @@
   (set! (.-noStrictGenericChecks ^js compiler-options) value))
 
 (defn no-unused-locals?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noUnusedLocals ^js compiler-options))
 
@@ -425,6 +478,7 @@
   (set! (.-noUnusedLocals ^js compiler-options) value))
 
 (defn no-unused-parameters?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noUnusedParameters ^js compiler-options))
 
@@ -433,6 +487,7 @@
   (set! (.-noUnusedParameters ^js compiler-options) value))
 
 (defn no-implicit-use-strict?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noImplicitUseStrict ^js compiler-options))
 
@@ -441,6 +496,7 @@
   (set! (.-noImplicitUseStrict ^js compiler-options) value))
 
 (defn no-property-access-from-index-signature?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noPropertyAccessFromIndexSignature ^js compiler-options))
 
@@ -449,6 +505,7 @@
   (set! (.-noPropertyAccessFromIndexSignature ^js compiler-options) value))
 
 (defn assume-changes-only-affect-direct-dependencies?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-assumeChangesOnlyAffectDirectDependencies ^js compiler-options))
 
@@ -457,6 +514,7 @@
   (set! (.-assumeChangesOnlyAffectDirectDependencies ^js compiler-options) value))
 
 (defn no-lib?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noLib ^js compiler-options))
 
@@ -465,6 +523,7 @@
   (set! (.-noLib ^js compiler-options) value))
 
 (defn no-resolve?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noResolve ^js compiler-options))
 
@@ -473,6 +532,7 @@
   (set! (.-noResolve ^js compiler-options) value))
 
 (defn no-unchecked-indexed-access?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noUncheckedIndexedAccess ^js compiler-options))
 
@@ -481,6 +541,7 @@
   (set! (.-noUncheckedIndexedAccess ^js compiler-options) value))
 
 (defn out
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-out ^js compiler-options))
 
@@ -489,6 +550,7 @@
   (set! (.-out ^js compiler-options) value))
 
 (defn out-dir
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-outDir ^js compiler-options))
 
@@ -497,6 +559,7 @@
   (set! (.-outDir ^js compiler-options) value))
 
 (defn out-file
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-outFile ^js compiler-options))
 
@@ -505,6 +568,7 @@
   (set! (.-outFile ^js compiler-options) value))
 
 (defn paths
+  "**Returns:** `MapLike<string[]> | undefined`"
   ^js [compiler-options]
   (.-paths ^js compiler-options))
 
@@ -513,6 +577,7 @@
   (set! (.-paths ^js compiler-options) value))
 
 (defn preserve-const-enums?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-preserveConstEnums ^js compiler-options))
 
@@ -521,6 +586,7 @@
   (set! (.-preserveConstEnums ^js compiler-options) value))
 
 (defn no-implicit-override?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-noImplicitOverride ^js compiler-options))
 
@@ -529,6 +595,7 @@
   (set! (.-noImplicitOverride ^js compiler-options) value))
 
 (defn preserve-symlinks?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-preserveSymlinks ^js compiler-options))
 
@@ -537,6 +604,7 @@
   (set! (.-preserveSymlinks ^js compiler-options) value))
 
 (defn preserve-value-imports?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-preserveValueImports ^js compiler-options))
 
@@ -545,6 +613,7 @@
   (set! (.-preserveValueImports ^js compiler-options) value))
 
 (defn project
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-project ^js compiler-options))
 
@@ -553,6 +622,7 @@
   (set! (.-project ^js compiler-options) value))
 
 (defn react-namespace
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-reactNamespace ^js compiler-options))
 
@@ -561,6 +631,7 @@
   (set! (.-reactNamespace ^js compiler-options) value))
 
 (defn jsx-factory
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-jsxFactory ^js compiler-options))
 
@@ -569,6 +640,7 @@
   (set! (.-jsxFactory ^js compiler-options) value))
 
 (defn jsx-fragment-factory
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-jsxFragmentFactory ^js compiler-options))
 
@@ -577,6 +649,7 @@
   (set! (.-jsxFragmentFactory ^js compiler-options) value))
 
 (defn jsx-import-source
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-jsxImportSource ^js compiler-options))
 
@@ -585,6 +658,7 @@
   (set! (.-jsxImportSource ^js compiler-options) value))
 
 (defn composite?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-composite ^js compiler-options))
 
@@ -593,6 +667,7 @@
   (set! (.-composite ^js compiler-options) value))
 
 (defn incremental?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-incremental ^js compiler-options))
 
@@ -601,6 +676,7 @@
   (set! (.-incremental ^js compiler-options) value))
 
 (defn ts-build-info-file
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-tsBuildInfoFile ^js compiler-options))
 
@@ -609,6 +685,7 @@
   (set! (.-tsBuildInfoFile ^js compiler-options) value))
 
 (defn remove-comments?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-removeComments ^js compiler-options))
 
@@ -617,6 +694,7 @@
   (set! (.-removeComments ^js compiler-options) value))
 
 (defn resolve-package-json-exports?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-resolvePackageJsonExports ^js compiler-options))
 
@@ -625,6 +703,7 @@
   (set! (.-resolvePackageJsonExports ^js compiler-options) value))
 
 (defn resolve-package-json-imports?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-resolvePackageJsonImports ^js compiler-options))
 
@@ -633,6 +712,7 @@
   (set! (.-resolvePackageJsonImports ^js compiler-options) value))
 
 (defn root-dir
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-rootDir ^js compiler-options))
 
@@ -641,6 +721,7 @@
   (set! (.-rootDir ^js compiler-options) value))
 
 (defn root-dirs
+  "**Returns:** `string[] | undefined`"
   ^js [compiler-options]
   (.-rootDirs ^js compiler-options))
 
@@ -649,6 +730,7 @@
   (set! (.-rootDirs ^js compiler-options) value))
 
 (defn skip-lib-check?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-skipLibCheck ^js compiler-options))
 
@@ -657,6 +739,7 @@
   (set! (.-skipLibCheck ^js compiler-options) value))
 
 (defn skip-default-lib-check?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-skipDefaultLibCheck ^js compiler-options))
 
@@ -665,6 +748,7 @@
   (set! (.-skipDefaultLibCheck ^js compiler-options) value))
 
 (defn source-map?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-sourceMap ^js compiler-options))
 
@@ -673,6 +757,7 @@
   (set! (.-sourceMap ^js compiler-options) value))
 
 (defn source-root
+  "**Returns:** `string | undefined`"
   ^js [compiler-options]
   (.-sourceRoot ^js compiler-options))
 
@@ -681,6 +766,7 @@
   (set! (.-sourceRoot ^js compiler-options) value))
 
 (defn strict?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-strict ^js compiler-options))
 
@@ -689,6 +775,7 @@
   (set! (.-strict ^js compiler-options) value))
 
 (defn strict-function-types?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-strictFunctionTypes ^js compiler-options))
 
@@ -697,6 +784,7 @@
   (set! (.-strictFunctionTypes ^js compiler-options) value))
 
 (defn strict-bind-call-apply?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-strictBindCallApply ^js compiler-options))
 
@@ -705,6 +793,7 @@
   (set! (.-strictBindCallApply ^js compiler-options) value))
 
 (defn strict-null-checks?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-strictNullChecks ^js compiler-options))
 
@@ -713,6 +802,7 @@
   (set! (.-strictNullChecks ^js compiler-options) value))
 
 (defn strict-property-initialization?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-strictPropertyInitialization ^js compiler-options))
 
@@ -721,6 +811,7 @@
   (set! (.-strictPropertyInitialization ^js compiler-options) value))
 
 (defn strip-internal?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-stripInternal ^js compiler-options))
 
@@ -729,6 +820,7 @@
   (set! (.-stripInternal ^js compiler-options) value))
 
 (defn suppress-excess-property-errors?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-suppressExcessPropertyErrors ^js compiler-options))
 
@@ -737,6 +829,7 @@
   (set! (.-suppressExcessPropertyErrors ^js compiler-options) value))
 
 (defn suppress-implicit-any-index-errors?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-suppressImplicitAnyIndexErrors ^js compiler-options))
 
@@ -745,6 +838,7 @@
   (set! (.-suppressImplicitAnyIndexErrors ^js compiler-options) value))
 
 (defn target
+  "**Returns:** `ScriptTarget | undefined`"
   ^js [compiler-options]
   (.-target ^js compiler-options))
 
@@ -753,6 +847,7 @@
   (set! (.-target ^js compiler-options) value))
 
 (defn trace-resolution?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-traceResolution ^js compiler-options))
 
@@ -761,6 +856,7 @@
   (set! (.-traceResolution ^js compiler-options) value))
 
 (defn use-unknown-in-catch-variables?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-useUnknownInCatchVariables ^js compiler-options))
 
@@ -769,6 +865,7 @@
   (set! (.-useUnknownInCatchVariables ^js compiler-options) value))
 
 (defn resolve-json-module?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-resolveJsonModule ^js compiler-options))
 
@@ -777,6 +874,7 @@
   (set! (.-resolveJsonModule ^js compiler-options) value))
 
 (defn types
+  "**Returns:** `string[] | undefined`"
   ^js [compiler-options]
   (.-types ^js compiler-options))
 
@@ -785,7 +883,9 @@
   (set! (.-types ^js compiler-options) value))
 
 (defn type-roots
-  "Paths used to compute primary types search locations"
+  "Paths used to compute primary types search locations
+   
+   **Returns:** `string[] | undefined`"
   ^js [compiler-options]
   (.-typeRoots ^js compiler-options))
 
@@ -795,6 +895,7 @@
   (set! (.-typeRoots ^js compiler-options) value))
 
 (defn verbatim-module-syntax?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-verbatimModuleSyntax ^js compiler-options))
 
@@ -803,6 +904,7 @@
   (set! (.-verbatimModuleSyntax ^js compiler-options) value))
 
 (defn es-module-interop?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-esModuleInterop ^js compiler-options))
 
@@ -811,6 +913,7 @@
   (set! (.-esModuleInterop ^js compiler-options) value))
 
 (defn use-define-for-class-fields?
+  "**Returns:** `boolean | undefined`"
   ^js [compiler-options]
   (.-useDefineForClassFields ^js compiler-options))
 

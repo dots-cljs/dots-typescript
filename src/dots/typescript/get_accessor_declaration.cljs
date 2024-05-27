@@ -2,50 +2,62 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.GetAccessor`"
   ^js [get-accessor-declaration]
   (.-kind ^js get-accessor-declaration))
 
 (defn parent
+  "**Returns:** `ClassLikeDeclaration | InterfaceDeclaration | ObjectLiteralExpression | TypeLiteralNode`"
   ^js [get-accessor-declaration]
   (.-parent ^js get-accessor-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [get-accessor-declaration]
   (.-modifiers ^js get-accessor-declaration))
 
 (defn name
+  "**Returns:** `PropertyName`"
   ^js [get-accessor-declaration]
   (.-name ^js get-accessor-declaration))
 
 (defn body
+  "**Returns:** `Block | undefined`"
   ^js [get-accessor-declaration]
   (.-body ^js get-accessor-declaration))
 
 (defn asterisk-token
+  "**Returns:** `AsteriskToken | undefined`"
   ^js [get-accessor-declaration]
   (.-asteriskToken ^js get-accessor-declaration))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [get-accessor-declaration]
   (.-questionToken ^js get-accessor-declaration))
 
 (defn exclamation-token
+  "**Returns:** `ExclamationToken | undefined`"
   ^js [get-accessor-declaration]
   (.-exclamationToken ^js get-accessor-declaration))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [get-accessor-declaration]
   (.-typeParameters ^js get-accessor-declaration))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [get-accessor-declaration]
   (.-parameters ^js get-accessor-declaration))
 
 (defn type
+  "**Returns:** `TypeNode | undefined`"
   ^js [get-accessor-declaration]
   (.-type ^js get-accessor-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [get-accessor-declaration]
   (.-flags ^js get-accessor-declaration))
 
@@ -185,9 +197,11 @@
    (.forEachChild ^js get-accessor-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [get-accessor-declaration]
   (.-pos ^js get-accessor-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [get-accessor-declaration]
   (.-end ^js get-accessor-declaration))

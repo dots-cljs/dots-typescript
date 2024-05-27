@@ -6,6 +6,7 @@
   (:refer-clojure :exclude [next]))
 
 (defn message-text
+  "**Returns:** `string`"
   ^js [diagnostic-message-chain]
   (.-messageText ^js diagnostic-message-chain))
 
@@ -14,6 +15,7 @@
   (set! (.-messageText ^js diagnostic-message-chain) value))
 
 (defn category
+  "**Returns:** `DiagnosticCategory`"
   ^js [diagnostic-message-chain]
   (.-category ^js diagnostic-message-chain))
 
@@ -22,6 +24,7 @@
   (set! (.-category ^js diagnostic-message-chain) value))
 
 (defn code
+  "**Returns:** `number`"
   ^js [diagnostic-message-chain]
   (.-code ^js diagnostic-message-chain))
 
@@ -30,6 +33,7 @@
   (set! (.-code ^js diagnostic-message-chain) value))
 
 (defn next
+  "**Returns:** `DiagnosticMessageChain[] | undefined`"
   ^js [diagnostic-message-chain]
   (.-next ^js diagnostic-message-chain))
 

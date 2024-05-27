@@ -1,6 +1,7 @@
 (ns dots.typescript.text-span)
 
 (defn start
+  "**Returns:** `number`"
   ^js [text-span]
   (.-start ^js text-span))
 
@@ -9,6 +10,7 @@
   (set! (.-start ^js text-span) value))
 
 (defn length
+  "**Returns:** `number`"
   ^js [text-span]
   (.-length ^js text-span))
 

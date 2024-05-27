@@ -2,7 +2,9 @@
   "Represents a single signature to show in signature help.")
 
 (defn variadic?
-  "Whether the signature accepts a variable number of arguments."
+  "Whether the signature accepts a variable number of arguments.
+   
+   **Returns:** `boolean`"
   ^js [signature-help-item]
   (.-isVariadic ^js signature-help-item))
 
@@ -12,7 +14,9 @@
   (set! (.-isVariadic ^js signature-help-item) value))
 
 (defn prefix-display-parts
-  "The prefix display parts."
+  "The prefix display parts.
+   
+   **Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-item]
   (.-prefixDisplayParts ^js signature-help-item))
 
@@ -22,7 +26,9 @@
   (set! (.-prefixDisplayParts ^js signature-help-item) value))
 
 (defn suffix-display-parts
-  "The suffix display parts."
+  "The suffix display parts.
+   
+   **Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-item]
   (.-suffixDisplayParts ^js signature-help-item))
 
@@ -32,7 +38,9 @@
   (set! (.-suffixDisplayParts ^js signature-help-item) value))
 
 (defn separator-display-parts
-  "The separator display parts."
+  "The separator display parts.
+   
+   **Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-item]
   (.-separatorDisplayParts ^js signature-help-item))
 
@@ -42,7 +50,9 @@
   (set! (.-separatorDisplayParts ^js signature-help-item) value))
 
 (defn parameters
-  "The signature helps items for the parameters."
+  "The signature helps items for the parameters.
+   
+   **Returns:** `SignatureHelpParameter[]`"
   ^js [signature-help-item]
   (.-parameters ^js signature-help-item))
 
@@ -52,7 +62,9 @@
   (set! (.-parameters ^js signature-help-item) value))
 
 (defn documentation
-  "The signature's documentation"
+  "The signature's documentation
+   
+   **Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-item]
   (.-documentation ^js signature-help-item))
 
@@ -62,7 +74,9 @@
   (set! (.-documentation ^js signature-help-item) value))
 
 (defn tags
-  "The signature's JSDoc tags"
+  "The signature's JSDoc tags
+   
+   **Returns:** `JSDocTagInfo[]`"
   ^js [signature-help-item]
   (.-tags ^js signature-help-item))
 

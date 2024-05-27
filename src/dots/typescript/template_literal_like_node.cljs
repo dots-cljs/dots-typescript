@@ -1,6 +1,7 @@
 (ns dots.typescript.template-literal-like-node)
 
 (defn raw-text
+  "**Returns:** `string | undefined`"
   ^js [template-literal-like-node]
   (.-rawText ^js template-literal-like-node))
 
@@ -9,6 +10,7 @@
   (set! (.-rawText ^js template-literal-like-node) value))
 
 (defn text
+  "**Returns:** `string`"
   ^js [template-literal-like-node]
   (.-text ^js template-literal-like-node))
 
@@ -17,6 +19,7 @@
   (set! (.-text ^js template-literal-like-node) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [template-literal-like-node]
   (.-isUnterminated ^js template-literal-like-node))
 
@@ -25,6 +28,7 @@
   (set! (.-isUnterminated ^js template-literal-like-node) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [template-literal-like-node]
   (.-hasExtendedUnicodeEscape ^js template-literal-like-node))
 
@@ -33,14 +37,17 @@
   (set! (.-hasExtendedUnicodeEscape ^js template-literal-like-node) value))
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [template-literal-like-node]
   (.-kind ^js template-literal-like-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [template-literal-like-node]
   (.-flags ^js template-literal-like-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [template-literal-like-node]
   (.-parent ^js template-literal-like-node))
 
@@ -180,9 +187,11 @@
    (.forEachChild ^js template-literal-like-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [template-literal-like-node]
   (.-pos ^js template-literal-like-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [template-literal-like-node]
   (.-end ^js template-literal-like-node))

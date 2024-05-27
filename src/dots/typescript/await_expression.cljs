@@ -1,18 +1,22 @@
 (ns dots.typescript.await-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.AwaitExpression`"
   ^js [await-expression]
   (.-kind ^js await-expression))
 
 (defn expression
+  "**Returns:** `UnaryExpression`"
   ^js [await-expression]
   (.-expression ^js await-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [await-expression]
   (.-flags ^js await-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [await-expression]
   (.-parent ^js await-expression))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js await-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [await-expression]
   (.-pos ^js await-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [await-expression]
   (.-end ^js await-expression))

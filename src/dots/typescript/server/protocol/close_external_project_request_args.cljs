@@ -2,7 +2,9 @@
   "Arguments to CloseExternalProjectRequest request")
 
 (defn project-file-name
-  "Name of the project to close"
+  "Name of the project to close
+   
+   **Returns:** `string`"
   ^js [close-external-project-request-args]
   (.-projectFileName ^js close-external-project-request-args))
 

@@ -1,18 +1,22 @@
 (ns dots.typescript.union-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.UnionType`"
   ^js [union-type-node]
   (.-kind ^js union-type-node))
 
 (defn types
+  "**Returns:** `NodeArray<TypeNode>`"
   ^js [union-type-node]
   (.-types ^js union-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [union-type-node]
   (.-flags ^js union-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [union-type-node]
   (.-parent ^js union-type-node))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js union-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [union-type-node]
   (.-pos ^js union-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [union-type-node]
   (.-end ^js union-type-node))

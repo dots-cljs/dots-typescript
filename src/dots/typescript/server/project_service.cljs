@@ -1,51 +1,68 @@
 (ns dots.typescript.server.project-service)
 
 (defn node-modules-watchers
+  "**Returns:** `any`"
   ^js [project-service]
   (.-nodeModulesWatchers ^js project-service))
 
 (defn filename-to-script-info-version
   "Contains all the deleted script info's version information so that
    it does not reset when creating script info again
-   (and could have potentially collided with version where contents mismatch)"
+   (and could have potentially collided with version where contents mismatch)
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-filenameToScriptInfoVersion ^js project-service))
 
 (defn all-js-files-for-open-file-telemetry
+  "**Returns:** `any`"
   ^js [project-service]
   (.-allJsFilesForOpenFileTelemetry ^js project-service))
 
 (defn external-project-to-configured-project-map
-  "maps external project file name to list of config files that were the part of this project"
+  "maps external project file name to list of config files that were the part of this project
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-externalProjectToConfiguredProjectMap ^js project-service))
 
 (defn external-projects
-  "external projects (configuration and list of root files is not controlled by tsserver)"
+  "external projects (configuration and list of root files is not controlled by tsserver)
+   
+   **Returns:** `ExternalProject[]`"
   ^js [project-service]
   (.-externalProjects ^js project-service))
 
 (defn inferred-projects
-  "projects built from openFileRoots"
+  "projects built from openFileRoots
+   
+   **Returns:** `InferredProject[]`"
   ^js [project-service]
   (.-inferredProjects ^js project-service))
 
 (defn configured-projects
-  "projects specified by a tsconfig.json file"
+  "projects specified by a tsconfig.json file
+   
+   **Returns:** `Map<string, ConfiguredProject>`"
   ^js [project-service]
   (.-configuredProjects ^js project-service))
 
 (defn open-files
-  "Open files: with value being project root path, and key being Path of the file that is open"
+  "Open files: with value being project root path, and key being Path of the file that is open
+   
+   **Returns:** `Map<string, NormalizedPath | undefined>`"
   ^js [project-service]
   (.-openFiles ^js project-service))
 
 (defn open-files-with-non-rooted-disk-path
-  "Map of open files that are opened without complete path but have projectRoot as current directory"
+  "Map of open files that are opened without complete path but have projectRoot as current directory
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-openFilesWithNonRootedDiskPath ^js project-service))
 
 (defn compiler-options-for-inferred-projects
+  "**Returns:** `any`"
   ^js [project-service]
   (.-compilerOptionsForInferredProjects ^js project-service))
 
@@ -54,6 +71,7 @@
   (set! (.-compilerOptionsForInferredProjects ^js project-service) value))
 
 (defn compiler-options-for-inferred-projects-per-project-root
+  "**Returns:** `any`"
   ^js [project-service]
   (.-compilerOptionsForInferredProjectsPerProjectRoot ^js project-service))
 
@@ -62,6 +80,7 @@
   (set! (.-compilerOptionsForInferredProjectsPerProjectRoot ^js project-service) value))
 
 (defn watch-options-for-inferred-projects
+  "**Returns:** `any`"
   ^js [project-service]
   (.-watchOptionsForInferredProjects ^js project-service))
 
@@ -70,6 +89,7 @@
   (set! (.-watchOptionsForInferredProjects ^js project-service) value))
 
 (defn watch-options-for-inferred-projects-per-project-root
+  "**Returns:** `any`"
   ^js [project-service]
   (.-watchOptionsForInferredProjectsPerProjectRoot ^js project-service))
 
@@ -78,6 +98,7 @@
   (set! (.-watchOptionsForInferredProjectsPerProjectRoot ^js project-service) value))
 
 (defn type-acquisition-for-inferred-projects
+  "**Returns:** `any`"
   ^js [project-service]
   (.-typeAcquisitionForInferredProjects ^js project-service))
 
@@ -86,6 +107,7 @@
   (set! (.-typeAcquisitionForInferredProjects ^js project-service) value))
 
 (defn type-acquisition-for-inferred-projects-per-project-root
+  "**Returns:** `any`"
   ^js [project-service]
   (.-typeAcquisitionForInferredProjectsPerProjectRoot ^js project-service))
 
@@ -94,15 +116,19 @@
   (set! (.-typeAcquisitionForInferredProjectsPerProjectRoot ^js project-service) value))
 
 (defn project-to-size-map
-  "Project size for configured or external projects"
+  "Project size for configured or external projects
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-projectToSizeMap ^js project-service))
 
 (defn host-configuration
+  "**Returns:** `any`"
   ^js [project-service]
   (.-hostConfiguration ^js project-service))
 
 (defn safelist
+  "**Returns:** `any`"
   ^js [project-service]
   (.-safelist ^js project-service))
 
@@ -111,10 +137,12 @@
   (set! (.-safelist ^js project-service) value))
 
 (defn legacy-safelist
+  "**Returns:** `any`"
   ^js [project-service]
   (.-legacySafelist ^js project-service))
 
 (defn pending-project-updates
+  "**Returns:** `any`"
   ^js [project-service]
   (.-pendingProjectUpdates ^js project-service))
 
@@ -123,75 +151,94 @@
   (set! (.-pendingProjectUpdates ^js project-service) value))
 
 (defn current-directory
+  "**Returns:** `NormalizedPath`"
   ^js [project-service]
   (.-currentDirectory ^js project-service))
 
 (defn to-canonical-file-name
+  "**Returns:** `(f: string) => string`"
   ^js [project-service]
   (.-toCanonicalFileName ^js project-service))
 
 (defn host
+  "**Returns:** `ServerHost`"
   ^js [project-service]
   (.-host ^js project-service))
 
 (defn logger
+  "**Returns:** `Logger`"
   ^js [project-service]
   (.-logger ^js project-service))
 
 (defn cancellation-token
+  "**Returns:** `HostCancellationToken`"
   ^js [project-service]
   (.-cancellationToken ^js project-service))
 
 (defn use-single-inferred-project?
+  "**Returns:** `boolean`"
   ^js [project-service]
   (.-useSingleInferredProject ^js project-service))
 
 (defn use-inferred-project-per-project-root?
+  "**Returns:** `boolean`"
   ^js [project-service]
   (.-useInferredProjectPerProjectRoot ^js project-service))
 
 (defn typings-installer
+  "**Returns:** `ITypingsInstaller`"
   ^js [project-service]
   (.-typingsInstaller ^js project-service))
 
 (defn global-cache-location-directory-path
+  "**Returns:** `any`"
   ^js [project-service]
   (.-globalCacheLocationDirectoryPath ^js project-service))
 
 (defn throttle-wait-milliseconds
+  "**Returns:** `number | undefined`"
   ^js [project-service]
   (.-throttleWaitMilliseconds ^js project-service))
 
 (defn suppress-diagnostic-events
+  "**Returns:** `any`"
   ^js [project-service]
   (.-suppressDiagnosticEvents ^js project-service))
 
 (defn global-plugins
+  "**Returns:** `readonly string[]`"
   ^js [project-service]
   (.-globalPlugins ^js project-service))
 
 (defn plugin-probe-locations
+  "**Returns:** `readonly string[]`"
   ^js [project-service]
   (.-pluginProbeLocations ^js project-service))
 
 (defn allow-local-plugin-loads?
+  "**Returns:** `boolean`"
   ^js [project-service]
   (.-allowLocalPluginLoads ^js project-service))
 
 (defn types-map-location
+  "**Returns:** `string | undefined`"
   ^js [project-service]
   (.-typesMapLocation ^js project-service))
 
 (defn server-mode
+  "**Returns:** `LanguageServiceMode`"
   ^js [project-service]
   (.-serverMode ^js project-service))
 
 (defn seen-projects
-  "Tracks projects that we have already sent telemetry for."
+  "Tracks projects that we have already sent telemetry for.
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-seenProjects ^js project-service))
 
 (defn performance-event-handler
+  "**Returns:** `any`"
   ^js [project-service]
   (.-performanceEventHandler ^js project-service))
 
@@ -200,6 +247,7 @@
   (set! (.-performanceEventHandler ^js project-service) value))
 
 (defn pending-plugin-enablements
+  "**Returns:** `any`"
   ^js [project-service]
   (.-pendingPluginEnablements ^js project-service))
 
@@ -208,6 +256,7 @@
   (set! (.-pendingPluginEnablements ^js project-service) value))
 
 (defn current-plugin-enablement-promise
+  "**Returns:** `any`"
   ^js [project-service]
   (.-currentPluginEnablementPromise ^js project-service))
 
@@ -216,6 +265,7 @@
   (set! (.-currentPluginEnablementPromise ^js project-service) value))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [project-service]
   (.-jsDocParsingMode ^js project-service))
 
@@ -228,6 +278,7 @@
   (.toPath ^js project-service file-name))
 
 (defn load-types-map
+  "**Returns:** `any`"
   ^js [project-service]
   (.-loadTypesMap ^js project-service))
 
@@ -244,6 +295,7 @@
   (.updateTypingsForProject ^js project-service response))
 
 (defn delay-update-project-graph
+  "**Returns:** `any`"
   ^js [project-service]
   (.-delayUpdateProjectGraph ^js project-service))
 
@@ -252,6 +304,7 @@
   (set! (.-delayUpdateProjectGraph ^js project-service) value))
 
 (defn delay-update-project-graphs
+  "**Returns:** `any`"
   ^js [project-service]
   (.-delayUpdateProjectGraphs ^js project-service))
 
@@ -288,6 +341,7 @@
   (.getDefaultProjectForFile ^js project-service file-name ensure-project?))
 
 (defn do-ensure-default-project-for-file
+  "**Returns:** `any`"
   ^js [project-service]
   (.-doEnsureDefaultProjectForFile ^js project-service))
 
@@ -308,7 +362,9 @@
    This means,
    - we go through all the projects and update them if they are dirty
    - if updates reflect some change in structure or there was pending request to ensure projects for open files
-     ensure that each open script info has project"
+     ensure that each open script info has project
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-ensureProjectStructuresUptoDate ^js project-service))
 
@@ -348,6 +404,7 @@
   (.getHostPreferences ^js project-service))
 
 (defn on-source-file-changed
+  "**Returns:** `any`"
   ^js [project-service]
   (.-onSourceFileChanged ^js project-service))
 
@@ -356,6 +413,7 @@
   (set! (.-onSourceFileChanged ^js project-service) value))
 
 (defn handle-source-map-projects
+  "**Returns:** `any`"
   ^js [project-service]
   (.-handleSourceMapProjects ^js project-service))
 
@@ -364,6 +422,7 @@
   (set! (.-handleSourceMapProjects ^js project-service) value))
 
 (defn delay-update-source-info-projects
+  "**Returns:** `any`"
   ^js [project-service]
   (.-delayUpdateSourceInfoProjects ^js project-service))
 
@@ -372,6 +431,7 @@
   (set! (.-delayUpdateSourceInfoProjects ^js project-service) value))
 
 (defn delay-update-projects-of-script-info-path
+  "**Returns:** `any`"
   ^js [project-service]
   (.-delayUpdateProjectsOfScriptInfoPath ^js project-service))
 
@@ -380,6 +440,7 @@
   (set! (.-delayUpdateProjectsOfScriptInfoPath ^js project-service) value))
 
 (defn handle-deleted-file
+  "**Returns:** `any`"
   ^js [project-service]
   (.-handleDeletedFile ^js project-service))
 
@@ -388,6 +449,7 @@
   (set! (.-handleDeletedFile ^js project-service) value))
 
 (defn remove-project
+  "**Returns:** `any`"
   ^js [project-service]
   (.-removeProject ^js project-service))
 
@@ -396,6 +458,7 @@
   (set! (.-removeProject ^js project-service) value))
 
 (defn assign-orphan-script-infos-to-inferred-project
+  "**Returns:** `any`"
   ^js [project-service]
   (.-assignOrphanScriptInfosToInferredProject ^js project-service))
 
@@ -404,7 +467,9 @@
   (set! (.-assignOrphanScriptInfosToInferredProject ^js project-service) value))
 
 (defn close-open-file
-  "Remove this file from the set of open, non-configured files."
+  "Remove this file from the set of open, non-configured files.
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-closeOpenFile ^js project-service))
 
@@ -414,6 +479,7 @@
   (set! (.-closeOpenFile ^js project-service) value))
 
 (defn delete-script-info
+  "**Returns:** `any`"
   ^js [project-service]
   (.-deleteScriptInfo ^js project-service))
 
@@ -422,6 +488,7 @@
   (set! (.-deleteScriptInfo ^js project-service) value))
 
 (defn config-file-exists
+  "**Returns:** `any`"
   ^js [project-service]
   (.-configFileExists ^js project-service))
 
@@ -430,7 +497,9 @@
   (set! (.-configFileExists ^js project-service) value))
 
 (defn config-file-existence-impacts-root-of-inferred-project
-  "Returns true if the configFileExistenceInfo is needed/impacted by open files that are root of inferred project"
+  "Returns true if the configFileExistenceInfo is needed/impacted by open files that are root of inferred project
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-configFileExistenceImpactsRootOfInferredProject ^js project-service))
 
@@ -440,7 +509,9 @@
   (set! (.-configFileExistenceImpactsRootOfInferredProject ^js project-service) value))
 
 (defn stop-watching-config-files-for-closed-script-info
-  "This is called on file close, so that we stop watching the config file for this script info"
+  "This is called on file close, so that we stop watching the config file for this script info
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-stopWatchingConfigFilesForClosedScriptInfo ^js project-service))
 
@@ -455,7 +526,9 @@
    the compiler can assume it will always start searching in the
    current directory (the directory in which tsc was invoked).
    The server must start searching from the directory containing
-   the newly opened file."
+   the newly opened file.
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-forEachConfigFileLocation ^js project-service))
 
@@ -477,7 +550,9 @@
    The server must start searching from the directory containing
    the newly opened file.
    If script info is passed in, it is asserted to be open script info
-   otherwise just file name"
+   otherwise just file name
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-getConfigFileNameForFile ^js project-service))
 
@@ -494,6 +569,7 @@
   (set! (.-getConfigFileNameForFile ^js project-service) value))
 
 (defn print-projects
+  "**Returns:** `any`"
   ^js [project-service]
   (.-printProjects ^js project-service))
 
@@ -502,6 +578,7 @@
   (set! (.-printProjects ^js project-service) value))
 
 (defn configured-project-by-canonical-config-file-path
+  "**Returns:** `any`"
   ^js [project-service]
   (.-getConfiguredProjectByCanonicalConfigFilePath ^js project-service))
 
@@ -510,6 +587,7 @@
   (set! (.-getConfiguredProjectByCanonicalConfigFilePath ^js project-service) value))
 
 (defn find-external-project-by-project-name
+  "**Returns:** `any`"
   ^js [project-service]
   (.-findExternalProjectByProjectName ^js project-service))
 
@@ -518,7 +596,9 @@
   (set! (.-findExternalProjectByProjectName ^js project-service) value))
 
 (defn filename-for-exceeded-total-size-limit-for-non-ts-files
-  "Get a filename if the language service exceeds the maximum allowed program size; otherwise returns undefined."
+  "Get a filename if the language service exceeds the maximum allowed program size; otherwise returns undefined.
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-getFilenameForExceededTotalSizeLimitForNonTsFiles ^js project-service))
 
@@ -528,6 +608,7 @@
   (set! (.-getFilenameForExceededTotalSizeLimitForNonTsFiles ^js project-service) value))
 
 (defn create-external-project
+  "**Returns:** `any`"
   ^js [project-service]
   (.-createExternalProject ^js project-service))
 
@@ -536,6 +617,7 @@
   (set! (.-createExternalProject ^js project-service) value))
 
 (defn add-files-to-non-inferred-project
+  "**Returns:** `any`"
   ^js [project-service]
   (.-addFilesToNonInferredProject ^js project-service))
 
@@ -544,6 +626,7 @@
   (set! (.-addFilesToNonInferredProject ^js project-service) value))
 
 (defn update-non-inferred-project-files
+  "**Returns:** `any`"
   ^js [project-service]
   (.-updateNonInferredProjectFiles ^js project-service))
 
@@ -552,6 +635,7 @@
   (set! (.-updateNonInferredProjectFiles ^js project-service) value))
 
 (defn update-root-and-options-of-non-inferred-project
+  "**Returns:** `any`"
   ^js [project-service]
   (.-updateRootAndOptionsOfNonInferredProject ^js project-service))
 
@@ -560,6 +644,7 @@
   (set! (.-updateRootAndOptionsOfNonInferredProject ^js project-service) value))
 
 (defn send-config-file-diag-event
+  "**Returns:** `any`"
   ^js [project-service]
   (.-sendConfigFileDiagEvent ^js project-service))
 
@@ -568,6 +653,7 @@
   (set! (.-sendConfigFileDiagEvent ^js project-service) value))
 
 (defn or-create-inferred-project-for-project-root-path-if-enabled
+  "**Returns:** `any`"
   ^js [project-service]
   (.-getOrCreateInferredProjectForProjectRootPathIfEnabled ^js project-service))
 
@@ -576,6 +662,7 @@
   (set! (.-getOrCreateInferredProjectForProjectRootPathIfEnabled ^js project-service) value))
 
 (defn or-create-single-inferred-project-if-enabled
+  "**Returns:** `any`"
   ^js [project-service]
   (.-getOrCreateSingleInferredProjectIfEnabled ^js project-service))
 
@@ -584,6 +671,7 @@
   (set! (.-getOrCreateSingleInferredProjectIfEnabled ^js project-service) value))
 
 (defn or-create-single-inferred-without-project-root
+  "**Returns:** `any`"
   ^js [project-service]
   (.-getOrCreateSingleInferredWithoutProjectRoot ^js project-service))
 
@@ -592,6 +680,7 @@
   (set! (.-getOrCreateSingleInferredWithoutProjectRoot ^js project-service) value))
 
 (defn create-inferred-project
+  "**Returns:** `any`"
   ^js [project-service]
   (.-createInferredProject ^js project-service))
 
@@ -608,6 +697,7 @@
   (.getScriptInfo ^js project-service unchecked-file-name))
 
 (defn watch-closed-script-info
+  "**Returns:** `any`"
   ^js [project-service]
   (.-watchClosedScriptInfo ^js project-service))
 
@@ -616,6 +706,7 @@
   (set! (.-watchClosedScriptInfo ^js project-service) value))
 
 (defn create-node-modules-watcher
+  "**Returns:** `any`"
   ^js [project-service]
   (.-createNodeModulesWatcher ^js project-service))
 
@@ -624,6 +715,7 @@
   (set! (.-createNodeModulesWatcher ^js project-service) value))
 
 (defn watch-closed-script-info-in-node-modules
+  "**Returns:** `any`"
   ^js [project-service]
   (.-watchClosedScriptInfoInNodeModules ^js project-service))
 
@@ -632,6 +724,7 @@
   (set! (.-watchClosedScriptInfoInNodeModules ^js project-service) value))
 
 (defn modified-time
+  "**Returns:** `any`"
   ^js [project-service]
   (.-getModifiedTime ^js project-service))
 
@@ -640,6 +733,7 @@
   (set! (.-getModifiedTime ^js project-service) value))
 
 (defn refresh-script-info
+  "**Returns:** `any`"
   ^js [project-service]
   (.-refreshScriptInfo ^js project-service))
 
@@ -648,6 +742,7 @@
   (set! (.-refreshScriptInfo ^js project-service) value))
 
 (defn refresh-script-infos-in-directory
+  "**Returns:** `any`"
   ^js [project-service]
   (.-refreshScriptInfosInDirectory ^js project-service))
 
@@ -656,6 +751,7 @@
   (set! (.-refreshScriptInfosInDirectory ^js project-service) value))
 
 (defn stop-watching-script-info
+  "**Returns:** `any`"
   ^js [project-service]
   (.-stopWatchingScriptInfo ^js project-service))
 
@@ -664,6 +760,7 @@
   (set! (.-stopWatchingScriptInfo ^js project-service) value))
 
 (defn or-create-script-info-not-opened-by-client-for-normalized-path
+  "**Returns:** `any`"
   ^js [project-service]
   (.-getOrCreateScriptInfoNotOpenedByClientForNormalizedPath ^js project-service))
 
@@ -672,6 +769,7 @@
   (set! (.-getOrCreateScriptInfoNotOpenedByClientForNormalizedPath ^js project-service) value))
 
 (defn or-create-script-info-opened-by-client-for-normalized-path
+  "**Returns:** `any`"
   ^js [project-service]
   (.-getOrCreateScriptInfoOpenedByClientForNormalizedPath ^js project-service))
 
@@ -701,6 +799,7 @@
    (.getOrCreateScriptInfoForNormalizedPath ^js project-service file-name opened-by-client? file-content script-kind has-mixed-content? host-to-query-file-exists-on)))
 
 (defn or-create-script-info-worker
+  "**Returns:** `any`"
   ^js [project-service]
   (.-getOrCreateScriptInfoWorker ^js project-service))
 
@@ -727,6 +826,7 @@
   (.getScriptInfoForPath ^js project-service file-name))
 
 (defn add-source-info-to-source-map
+  "**Returns:** `any`"
   ^js [project-service]
   (.-addSourceInfoToSourceMap ^js project-service))
 
@@ -735,6 +835,7 @@
   (set! (.-addSourceInfoToSourceMap ^js project-service) value))
 
 (defn add-missing-source-map-file
+  "**Returns:** `any`"
   ^js [project-service]
   (.-addMissingSourceMapFile ^js project-service))
 
@@ -768,7 +869,9 @@
    If the config file is found and it refers to existing project, it reloads it either immediately
    or schedules it for reload depending on delayReload option
    If there is no existing project it just opens the configured project for the config file
-   reloadForInfo provides a way to filter out files to reload configured project for"
+   reloadForInfo provides a way to filter out files to reload configured project for
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-reloadConfiguredProjectForFiles ^js project-service))
 
@@ -782,7 +885,9 @@
   (set! (.-reloadConfiguredProjectForFiles ^js project-service) value))
 
 (defn remove-root-of-inferred-project-if-now-part-of-other-project
-  "Remove the root of inferred project if script info is part of another project"
+  "Remove the root of inferred project if script info is part of another project
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-removeRootOfInferredProjectIfNowPartOfOtherProject ^js project-service))
 
@@ -796,7 +901,9 @@
    It is called on the premise that all the configured projects are
    up to date.
    This will go through open files and assign them to inferred project if open file is not part of any other project
-   After that all the inferred project graphs are updated"
+   After that all the inferred project graphs are updated
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-ensureProjectForOpenFiles ^js project-service))
 
@@ -829,6 +936,7 @@
    (.openClientFile ^js project-service file-name file-content script-kind project-root-path)))
 
 (defn find-external-project-containing-open-script-info
+  "**Returns:** `any`"
   ^js [project-service]
   (.-findExternalProjectContainingOpenScriptInfo ^js project-service))
 
@@ -837,6 +945,7 @@
   (set! (.-findExternalProjectContainingOpenScriptInfo ^js project-service) value))
 
 (defn or-create-open-script-info
+  "**Returns:** `any`"
   ^js [project-service]
   (.-getOrCreateOpenScriptInfo ^js project-service))
 
@@ -845,6 +954,7 @@
   (set! (.-getOrCreateOpenScriptInfo ^js project-service) value))
 
 (defn assign-project-to-opened-script-info
+  "**Returns:** `any`"
   ^js [project-service]
   (.-assignProjectToOpenedScriptInfo ^js project-service))
 
@@ -853,6 +963,7 @@
   (set! (.-assignProjectToOpenedScriptInfo ^js project-service) value))
 
 (defn create-ancestor-projects
+  "**Returns:** `any`"
   ^js [project-service]
   (.-createAncestorProjects ^js project-service))
 
@@ -861,6 +972,7 @@
   (set! (.-createAncestorProjects ^js project-service) value))
 
 (defn ensure-project-children
+  "**Returns:** `any`"
   ^js [project-service]
   (.-ensureProjectChildren ^js project-service))
 
@@ -869,6 +981,7 @@
   (set! (.-ensureProjectChildren ^js project-service) value))
 
 (defn cleanup-after-opening-file
+  "**Returns:** `any`"
   ^js [project-service]
   (.-cleanupAfterOpeningFile ^js project-service))
 
@@ -897,6 +1010,7 @@
    (.openClientFileWithNormalizedPath ^js project-service file-name file-content script-kind has-mixed-content? project-root-path)))
 
 (defn remove-orphan-configured-projects
+  "**Returns:** `any`"
   ^js [project-service]
   (.-removeOrphanConfiguredProjects ^js project-service))
 
@@ -905,6 +1019,7 @@
   (set! (.-removeOrphanConfiguredProjects ^js project-service) value))
 
 (defn remove-orphan-script-infos
+  "**Returns:** `any`"
   ^js [project-service]
   (.-removeOrphanScriptInfos ^js project-service))
 
@@ -913,6 +1028,7 @@
   (set! (.-removeOrphanScriptInfos ^js project-service) value))
 
 (defn telemetry-on-open-file
+  "**Returns:** `any`"
   ^js [project-service]
   (.-telemetryOnOpenFile ^js project-service))
 
@@ -931,6 +1047,7 @@
   (.closeClientFile ^js project-service unchecked-file-name))
 
 (defn collect-changes
+  "**Returns:** `any`"
   ^js [project-service]
   (.-collectChanges ^js project-service))
 
@@ -939,6 +1056,7 @@
   (set! (.-collectChanges ^js project-service) value))
 
 (defn close-configured-project-referenced-from-external-project
+  "**Returns:** `any`"
   ^js [project-service]
   (.-closeConfiguredProjectReferencedFromExternalProject ^js project-service))
 
@@ -976,6 +1094,7 @@
   (.applySafeList ^js project-service proj))
 
 (defn apply-safe-list-worker
+  "**Returns:** `any`"
   ^js [project-service]
   (.-applySafeListWorker ^js project-service))
 
@@ -997,6 +1116,7 @@
   (.hasDeferredExtension ^js project-service))
 
 (defn enable-requested-plugins-async
+  "**Returns:** `any`"
   ^js [project-service]
   (.-enableRequestedPluginsAsync ^js project-service))
 
@@ -1005,6 +1125,7 @@
   (set! (.-enableRequestedPluginsAsync ^js project-service) value))
 
 (defn enable-requested-plugins-worker
+  "**Returns:** `any`"
   ^js [project-service]
   (.-enableRequestedPluginsWorker ^js project-service))
 
@@ -1013,6 +1134,7 @@
   (set! (.-enableRequestedPluginsWorker ^js project-service) value))
 
 (defn enable-requested-plugins-for-project-async
+  "**Returns:** `any`"
   ^js [project-service]
   (.-enableRequestedPluginsForProjectAsync ^js project-service))
 
@@ -1029,11 +1151,14 @@
   (.configurePlugin ^js project-service args))
 
 (defn filename-escape-regexp
-  "Makes a filename safe to insert in a RegExp"
+  "Makes a filename safe to insert in a RegExp
+   
+   **Returns:** `any`"
   ^js [project-service]
   (.-filenameEscapeRegexp ^js project-service))
 
 (defn escape-filename-for-regex
+  "**Returns:** `any`"
   ^js [project-service]
   (.-escapeFilenameForRegex ^js project-service))
 

@@ -1,18 +1,22 @@
 (ns dots.typescript.infer-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.InferType`"
   ^js [infer-type-node]
   (.-kind ^js infer-type-node))
 
 (defn type-parameter
+  "**Returns:** `TypeParameterDeclaration`"
   ^js [infer-type-node]
   (.-typeParameter ^js infer-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [infer-type-node]
   (.-flags ^js infer-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [infer-type-node]
   (.-parent ^js infer-type-node))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js infer-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [infer-type-node]
   (.-pos ^js infer-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [infer-type-node]
   (.-end ^js infer-type-node))

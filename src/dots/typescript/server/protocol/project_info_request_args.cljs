@@ -2,7 +2,9 @@
   "Arguments for ProjectInfoRequest request.")
 
 (defn need-file-name-list?
-  "Indicate if the file name list of the project is needed"
+  "Indicate if the file name list of the project is needed
+   
+   **Returns:** `boolean`"
   ^js [project-info-request-args]
   (.-needFileNameList ^js project-info-request-args))
 
@@ -12,7 +14,9 @@
   (set! (.-needFileNameList ^js project-info-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [project-info-request-args]
   (.-file ^js project-info-request-args))
 
@@ -22,6 +26,7 @@
   (set! (.-file ^js project-info-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [project-info-request-args]
   (.-projectFileName ^js project-info-request-args))
 

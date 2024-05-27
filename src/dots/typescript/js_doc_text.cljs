@@ -1,10 +1,12 @@
 (ns dots.typescript.js-doc-text)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocText`"
   ^js [js-doc-text]
   (.-kind ^js js-doc-text))
 
 (defn text
+  "**Returns:** `string`"
   ^js [js-doc-text]
   (.-text ^js js-doc-text))
 
@@ -13,10 +15,12 @@
   (set! (.-text ^js js-doc-text) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-text]
   (.-flags ^js js-doc-text))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-text]
   (.-parent ^js js-doc-text))
 
@@ -156,9 +160,11 @@
    (.forEachChild ^js js-doc-text cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-text]
   (.-pos ^js js-doc-text))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-text]
   (.-end ^js js-doc-text))

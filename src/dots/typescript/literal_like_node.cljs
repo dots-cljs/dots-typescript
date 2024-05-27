@@ -1,6 +1,7 @@
 (ns dots.typescript.literal-like-node)
 
 (defn text
+  "**Returns:** `string`"
   ^js [literal-like-node]
   (.-text ^js literal-like-node))
 
@@ -9,6 +10,7 @@
   (set! (.-text ^js literal-like-node) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [literal-like-node]
   (.-isUnterminated ^js literal-like-node))
 
@@ -17,6 +19,7 @@
   (set! (.-isUnterminated ^js literal-like-node) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [literal-like-node]
   (.-hasExtendedUnicodeEscape ^js literal-like-node))
 
@@ -25,14 +28,17 @@
   (set! (.-hasExtendedUnicodeEscape ^js literal-like-node) value))
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [literal-like-node]
   (.-kind ^js literal-like-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [literal-like-node]
   (.-flags ^js literal-like-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [literal-like-node]
   (.-parent ^js literal-like-node))
 
@@ -172,9 +178,11 @@
    (.forEachChild ^js literal-like-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [literal-like-node]
   (.-pos ^js literal-like-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [literal-like-node]
   (.-end ^js literal-like-node))

@@ -4,6 +4,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Exit`"
   ^js [exit-request]
   (.-command ^js exit-request))
 
@@ -12,6 +13,7 @@
   (set! (.-command ^js exit-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [exit-request]
   (.-type ^js exit-request))
 
@@ -20,7 +22,9 @@
   (set! (.-type ^js exit-request) value))
 
 (defn arguments
-  "Object containing arguments for the command"
+  "Object containing arguments for the command
+   
+   **Returns:** `any`"
   ^js [exit-request]
   (.-arguments ^js exit-request))
 
@@ -30,7 +34,9 @@
   (set! (.-arguments ^js exit-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [exit-request]
   (.-seq ^js exit-request))
 

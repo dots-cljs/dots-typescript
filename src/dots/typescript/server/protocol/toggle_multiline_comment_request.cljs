@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.ToggleMultilineComment`"
   ^js [toggle-multiline-comment-request]
   (.-command ^js toggle-multiline-comment-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js toggle-multiline-comment-request) value))
 
 (defn arguments
+  "**Returns:** `FileRangeRequestArgs`"
   ^js [toggle-multiline-comment-request]
   (.-arguments ^js toggle-multiline-comment-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js toggle-multiline-comment-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [toggle-multiline-comment-request]
   (.-type ^js toggle-multiline-comment-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js toggle-multiline-comment-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [toggle-multiline-comment-request]
   (.-seq ^js toggle-multiline-comment-request))
 

@@ -3,7 +3,9 @@
 
 (defn tmpfile
   "Name of temporary file into which to save server's view of
-   file contents."
+   file contents.
+   
+   **Returns:** `string`"
   ^js [saveto-request-args]
   (.-tmpfile ^js saveto-request-args))
 
@@ -14,7 +16,9 @@
   (set! (.-tmpfile ^js saveto-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [saveto-request-args]
   (.-file ^js saveto-request-args))
 
@@ -24,6 +28,7 @@
   (set! (.-file ^js saveto-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [saveto-request-args]
   (.-projectFileName ^js saveto-request-args))
 

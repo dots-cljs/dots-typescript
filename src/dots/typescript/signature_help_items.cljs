@@ -2,6 +2,7 @@
   "Represents a set of signature help items, and the preferred item that should be selected.")
 
 (defn items
+  "**Returns:** `SignatureHelpItem[]`"
   ^js [signature-help-items]
   (.-items ^js signature-help-items))
 
@@ -10,6 +11,7 @@
   (set! (.-items ^js signature-help-items) value))
 
 (defn applicable-span
+  "**Returns:** `TextSpan`"
   ^js [signature-help-items]
   (.-applicableSpan ^js signature-help-items))
 
@@ -18,6 +20,7 @@
   (set! (.-applicableSpan ^js signature-help-items) value))
 
 (defn selected-item-index
+  "**Returns:** `number`"
   ^js [signature-help-items]
   (.-selectedItemIndex ^js signature-help-items))
 
@@ -26,6 +29,7 @@
   (set! (.-selectedItemIndex ^js signature-help-items) value))
 
 (defn argument-index
+  "**Returns:** `number`"
   ^js [signature-help-items]
   (.-argumentIndex ^js signature-help-items))
 
@@ -34,6 +38,7 @@
   (set! (.-argumentIndex ^js signature-help-items) value))
 
 (defn argument-count
+  "**Returns:** `number`"
   ^js [signature-help-items]
   (.-argumentCount ^js signature-help-items))
 

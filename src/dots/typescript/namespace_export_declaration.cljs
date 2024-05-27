@@ -2,18 +2,22 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.NamespaceExportDeclaration`"
   ^js [namespace-export-declaration]
   (.-kind ^js namespace-export-declaration))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [namespace-export-declaration]
   (.-name ^js namespace-export-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [namespace-export-declaration]
   (.-flags ^js namespace-export-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [namespace-export-declaration]
   (.-parent ^js namespace-export-declaration))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js namespace-export-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [namespace-export-declaration]
   (.-pos ^js namespace-export-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [namespace-export-declaration]
   (.-end ^js namespace-export-declaration))

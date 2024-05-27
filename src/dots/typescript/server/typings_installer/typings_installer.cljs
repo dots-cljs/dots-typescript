@@ -1,46 +1,57 @@
 (ns dots.typescript.server.typings-installer.typings-installer)
 
 (defn install-typing-host
+  "**Returns:** `InstallTypingHost`"
   ^js [typings-installer]
   (.-installTypingHost ^js typings-installer))
 
 (defn global-cache-path
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-globalCachePath ^js typings-installer))
 
 (defn safe-list-path
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-safeListPath ^js typings-installer))
 
 (defn types-map-location
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-typesMapLocation ^js typings-installer))
 
 (defn throttle-limit
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-throttleLimit ^js typings-installer))
 
 (defn log
+  "**Returns:** `Log`"
   ^js [typings-installer]
   (.-log ^js typings-installer))
 
 (defn package-name-to-typing-location
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-packageNameToTypingLocation ^js typings-installer))
 
 (defn missing-typings-set
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-missingTypingsSet ^js typings-installer))
 
 (defn known-caches-set
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-knownCachesSet ^js typings-installer))
 
 (defn project-watchers
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-projectWatchers ^js typings-installer))
 
 (defn safe-list
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-safeList ^js typings-installer))
 
@@ -49,6 +60,7 @@
   (set! (.-safeList ^js typings-installer) value))
 
 (defn install-run-count
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-installRunCount ^js typings-installer))
 
@@ -57,6 +69,7 @@
   (set! (.-installRunCount ^js typings-installer) value))
 
 (defn in-flight-request-count
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-inFlightRequestCount ^js typings-installer))
 
@@ -65,6 +78,7 @@
   (set! (.-inFlightRequestCount ^js typings-installer) value))
 
 (defn types-registry
+  "**Returns:** `Map<string, MapLike<string>>`"
   ^js [typings-installer]
   (.-typesRegistry ^js typings-installer))
 
@@ -77,6 +91,7 @@
   (.closeProject ^js typings-installer req))
 
 (defn close-watchers
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-closeWatchers ^js typings-installer))
 
@@ -93,6 +108,7 @@
   (.install ^js typings-installer req))
 
 (defn initialize-safe-list
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-initializeSafeList ^js typings-installer))
 
@@ -101,6 +117,7 @@
   (set! (.-initializeSafeList ^js typings-installer) value))
 
 (defn process-cache-location
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-processCacheLocation ^js typings-installer))
 
@@ -109,6 +126,7 @@
   (set! (.-processCacheLocation ^js typings-installer) value))
 
 (defn filter-typings
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-filterTypings ^js typings-installer))
 
@@ -125,6 +143,7 @@
   (.ensurePackageDirectoryExists ^js typings-installer directory))
 
 (defn install-typings
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-installTypings ^js typings-installer))
 
@@ -133,6 +152,7 @@
   (set! (.-installTypings ^js typings-installer) value))
 
 (defn ensure-directory-exists
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-ensureDirectoryExists ^js typings-installer))
 
@@ -141,6 +161,7 @@
   (set! (.-ensureDirectoryExists ^js typings-installer) value))
 
 (defn watch-files
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-watchFiles ^js typings-installer))
 
@@ -149,6 +170,7 @@
   (set! (.-watchFiles ^js typings-installer) value))
 
 (defn create-set-typings
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-createSetTypings ^js typings-installer))
 
@@ -157,6 +179,7 @@
   (set! (.-createSetTypings ^js typings-installer) value))
 
 (defn install-typings-async
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-installTypingsAsync ^js typings-installer))
 
@@ -165,6 +188,7 @@
   (set! (.-installTypingsAsync ^js typings-installer) value))
 
 (defn execute-with-throttling
+  "**Returns:** `any`"
   ^js [typings-installer]
   (.-executeWithThrottling ^js typings-installer))
 
@@ -192,5 +216,6 @@
   (.sendResponse ^js typings-installer response))
 
 (defn latest-dist-tag
+  "**Returns:** `\"latest\"`"
   ^js [typings-installer]
   (.-latestDistTag ^js typings-installer))

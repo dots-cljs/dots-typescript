@@ -2,7 +2,9 @@
   "Reports config file diagnostics")
 
 (defn on-un-recoverable-config-file-diagnostic
-  "Reports unrecoverable error when parsing config file"
+  "Reports unrecoverable error when parsing config file
+   
+   **Returns:** `DiagnosticReporter`"
   ^js [config-file-diagnostics-reporter]
   (.-onUnRecoverableConfigFileDiagnostic ^js config-file-diagnostics-reporter))
 

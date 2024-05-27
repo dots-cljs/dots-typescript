@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Status`"
   ^js [status-request]
   (.-command ^js status-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js status-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [status-request]
   (.-type ^js status-request))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js status-request) value))
 
 (defn arguments
-  "Object containing arguments for the command"
+  "Object containing arguments for the command
+   
+   **Returns:** `any`"
   ^js [status-request]
   (.-arguments ^js status-request))
 
@@ -28,7 +32,9 @@
   (set! (.-arguments ^js status-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [status-request]
   (.-seq ^js status-request))
 

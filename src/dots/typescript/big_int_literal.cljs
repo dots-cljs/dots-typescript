@@ -1,10 +1,12 @@
 (ns dots.typescript.big-int-literal)
 
 (defn kind
+  "**Returns:** `SyntaxKind.BigIntLiteral`"
   ^js [big-int-literal]
   (.-kind ^js big-int-literal))
 
 (defn text
+  "**Returns:** `string`"
   ^js [big-int-literal]
   (.-text ^js big-int-literal))
 
@@ -13,6 +15,7 @@
   (set! (.-text ^js big-int-literal) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [big-int-literal]
   (.-isUnterminated ^js big-int-literal))
 
@@ -21,6 +24,7 @@
   (set! (.-isUnterminated ^js big-int-literal) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [big-int-literal]
   (.-hasExtendedUnicodeEscape ^js big-int-literal))
 
@@ -29,10 +33,12 @@
   (set! (.-hasExtendedUnicodeEscape ^js big-int-literal) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [big-int-literal]
   (.-flags ^js big-int-literal))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [big-int-literal]
   (.-parent ^js big-int-literal))
 
@@ -172,9 +178,11 @@
    (.forEachChild ^js big-int-literal cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [big-int-literal]
   (.-pos ^js big-int-literal))
 
 (defn end
+  "**Returns:** `number`"
   ^js [big-int-literal]
   (.-end ^js big-int-literal))

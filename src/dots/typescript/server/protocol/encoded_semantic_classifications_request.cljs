@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn arguments
+  "**Returns:** `EncodedSemanticClassificationsRequestArgs`"
   ^js [encoded-semantic-classifications-request]
   (.-arguments ^js encoded-semantic-classifications-request))
 
@@ -11,6 +12,7 @@
   (set! (.-arguments ^js encoded-semantic-classifications-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [encoded-semantic-classifications-request]
   (.-type ^js encoded-semantic-classifications-request))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js encoded-semantic-classifications-request) value))
 
 (defn command
-  "The command to execute"
+  "The command to execute
+   
+   **Returns:** `string`"
   ^js [encoded-semantic-classifications-request]
   (.-command ^js encoded-semantic-classifications-request))
 
@@ -29,7 +33,9 @@
   (set! (.-command ^js encoded-semantic-classifications-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [encoded-semantic-classifications-request]
   (.-seq ^js encoded-semantic-classifications-request))
 

@@ -1,6 +1,7 @@
 (ns dots.typescript.resolved-type-reference-directive)
 
 (defn primary?
+  "**Returns:** `boolean`"
   ^js [resolved-type-reference-directive]
   (.-primary ^js resolved-type-reference-directive))
 
@@ -9,6 +10,7 @@
   (set! (.-primary ^js resolved-type-reference-directive) value))
 
 (defn resolved-file-name
+  "**Returns:** `string | undefined`"
   ^js [resolved-type-reference-directive]
   (.-resolvedFileName ^js resolved-type-reference-directive))
 
@@ -17,6 +19,7 @@
   (set! (.-resolvedFileName ^js resolved-type-reference-directive) value))
 
 (defn package-id
+  "**Returns:** `PackageId | undefined`"
   ^js [resolved-type-reference-directive]
   (.-packageId ^js resolved-type-reference-directive))
 
@@ -25,7 +28,9 @@
   (set! (.-packageId ^js resolved-type-reference-directive) value))
 
 (defn external-library-import?
-  "True if `resolvedFileName` comes from `node_modules`."
+  "True if `resolvedFileName` comes from `node_modules`.
+   
+   **Returns:** `boolean | undefined`"
   ^js [resolved-type-reference-directive]
   (.-isExternalLibraryImport ^js resolved-type-reference-directive))
 

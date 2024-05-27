@@ -3,18 +3,22 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.SemicolonClassElement`"
   ^js [semicolon-class-element]
   (.-kind ^js semicolon-class-element))
 
 (defn parent
+  "**Returns:** `ClassLikeDeclaration`"
   ^js [semicolon-class-element]
   (.-parent ^js semicolon-class-element))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [semicolon-class-element]
   (.-name ^js semicolon-class-element))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [semicolon-class-element]
   (.-flags ^js semicolon-class-element))
 
@@ -154,9 +158,11 @@
    (.forEachChild ^js semicolon-class-element cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [semicolon-class-element]
   (.-pos ^js semicolon-class-element))
 
 (defn end
+  "**Returns:** `number`"
   ^js [semicolon-class-element]
   (.-end ^js semicolon-class-element))

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.WatchChange`"
   ^js [watch-change-request]
   (.-command ^js watch-change-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js watch-change-request) value))
 
 (defn arguments
+  "**Returns:** `WatchChangeRequestArgs | readonly WatchChangeRequestArgs[]`"
   ^js [watch-change-request]
   (.-arguments ^js watch-change-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js watch-change-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [watch-change-request]
   (.-type ^js watch-change-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js watch-change-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [watch-change-request]
   (.-seq ^js watch-change-request))
 

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [update]))
 
 (defn extended-source-files
+  "**Returns:** `string[] | undefined`"
   ^js [ts-config-source-file]
   (.-extendedSourceFiles ^js ts-config-source-file))
 
@@ -10,18 +11,22 @@
   (set! (.-extendedSourceFiles ^js ts-config-source-file) value))
 
 (defn statements
+  "**Returns:** `NodeArray<JsonObjectExpressionStatement>`"
   ^js [ts-config-source-file]
   (.-statements ^js ts-config-source-file))
 
 (defn kind
+  "**Returns:** `SyntaxKind.SourceFile`"
   ^js [ts-config-source-file]
   (.-kind ^js ts-config-source-file))
 
 (defn end-of-file-token
+  "**Returns:** `Token<SyntaxKind.EndOfFileToken>`"
   ^js [ts-config-source-file]
   (.-endOfFileToken ^js ts-config-source-file))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [ts-config-source-file]
   (.-fileName ^js ts-config-source-file))
 
@@ -30,6 +35,7 @@
   (set! (.-fileName ^js ts-config-source-file) value))
 
 (defn text
+  "**Returns:** `string`"
   ^js [ts-config-source-file]
   (.-text ^js ts-config-source-file))
 
@@ -38,6 +44,7 @@
   (set! (.-text ^js ts-config-source-file) value))
 
 (defn amd-dependencies
+  "**Returns:** `readonly AmdDependency[]`"
   ^js [ts-config-source-file]
   (.-amdDependencies ^js ts-config-source-file))
 
@@ -46,6 +53,7 @@
   (set! (.-amdDependencies ^js ts-config-source-file) value))
 
 (defn module-name
+  "**Returns:** `string | undefined`"
   ^js [ts-config-source-file]
   (.-moduleName ^js ts-config-source-file))
 
@@ -54,6 +62,7 @@
   (set! (.-moduleName ^js ts-config-source-file) value))
 
 (defn referenced-files
+  "**Returns:** `readonly FileReference[]`"
   ^js [ts-config-source-file]
   (.-referencedFiles ^js ts-config-source-file))
 
@@ -62,6 +71,7 @@
   (set! (.-referencedFiles ^js ts-config-source-file) value))
 
 (defn type-reference-directives
+  "**Returns:** `readonly FileReference[]`"
   ^js [ts-config-source-file]
   (.-typeReferenceDirectives ^js ts-config-source-file))
 
@@ -70,6 +80,7 @@
   (set! (.-typeReferenceDirectives ^js ts-config-source-file) value))
 
 (defn lib-reference-directives
+  "**Returns:** `readonly FileReference[]`"
   ^js [ts-config-source-file]
   (.-libReferenceDirectives ^js ts-config-source-file))
 
@@ -78,6 +89,7 @@
   (set! (.-libReferenceDirectives ^js ts-config-source-file) value))
 
 (defn language-variant
+  "**Returns:** `LanguageVariant`"
   ^js [ts-config-source-file]
   (.-languageVariant ^js ts-config-source-file))
 
@@ -86,6 +98,7 @@
   (set! (.-languageVariant ^js ts-config-source-file) value))
 
 (defn declaration-file?
+  "**Returns:** `boolean`"
   ^js [ts-config-source-file]
   (.-isDeclarationFile ^js ts-config-source-file))
 
@@ -99,7 +112,9 @@
     /// <reference no-default-lib=\"true\"/>
    
    If any other file has this comment, it signals not to include lib.d.ts
-   because this containing file is intended to act as a default library."
+   because this containing file is intended to act as a default library.
+   
+   **Returns:** `boolean`"
   ^js [ts-config-source-file]
   (.-hasNoDefaultLib ^js ts-config-source-file))
 
@@ -114,6 +129,7 @@
   (set! (.-hasNoDefaultLib ^js ts-config-source-file) value))
 
 (defn language-version
+  "**Returns:** `ScriptTarget`"
   ^js [ts-config-source-file]
   (.-languageVersion ^js ts-config-source-file))
 
@@ -136,7 +152,9 @@
    `moduleResolution` is `Node16` or `NodeNext`, which is implied by the `module` setting
    of `Node16` or `NodeNext`, respectively, but may be overriden (eg, by a `moduleResolution`
    of `node`). If so, this field will be unset and source files will be considered to be
-   CommonJS-output-format by the node module transformer and type checker, regardless of extension or context."
+   CommonJS-output-format by the node module transformer and type checker, regardless of extension or context.
+   
+   **Returns:** `ResolutionMode`"
   ^js [ts-config-source-file]
   (.-impliedNodeFormat ^js ts-config-source-file))
 
@@ -199,10 +217,12 @@
   (.update ^js ts-config-source-file new-text text-change-range))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [ts-config-source-file]
   (.-flags ^js ts-config-source-file))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [ts-config-source-file]
   (.-parent ^js ts-config-source-file))
 
@@ -342,9 +362,11 @@
    (.forEachChild ^js ts-config-source-file cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [ts-config-source-file]
   (.-pos ^js ts-config-source-file))
 
 (defn end
+  "**Returns:** `number`"
   ^js [ts-config-source-file]
   (.-end ^js ts-config-source-file))

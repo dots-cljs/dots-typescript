@@ -2,6 +2,7 @@
   (:require ["typescript" :as typescript]))
 
 (defn args
+  "**Returns:** `string[]`"
   ^js []
   (.-args typescript/sys))
 
@@ -10,6 +11,7 @@
   (set! (.-args typescript/sys) value))
 
 (defn new-line
+  "**Returns:** `string`"
   ^js []
   (.-newLine typescript/sys))
 
@@ -18,6 +20,7 @@
   (set! (.-newLine typescript/sys) value))
 
 (defn use-case-sensitive-file-names?
+  "**Returns:** `boolean`"
   ^js []
   (.-useCaseSensitiveFileNames typescript/sys))
 

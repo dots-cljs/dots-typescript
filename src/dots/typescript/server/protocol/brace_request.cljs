@@ -5,6 +5,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Brace`"
   ^js [brace-request]
   (.-command ^js brace-request))
 
@@ -13,6 +14,7 @@
   (set! (.-command ^js brace-request) value))
 
 (defn arguments
+  "**Returns:** `FileLocationRequestArgs`"
   ^js [brace-request]
   (.-arguments ^js brace-request))
 
@@ -21,6 +23,7 @@
   (set! (.-arguments ^js brace-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [brace-request]
   (.-type ^js brace-request))
 
@@ -29,7 +32,9 @@
   (set! (.-type ^js brace-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [brace-request]
   (.-seq ^js brace-request))
 

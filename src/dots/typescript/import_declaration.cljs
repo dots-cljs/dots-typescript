@@ -1,35 +1,44 @@
 (ns dots.typescript.import-declaration)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ImportDeclaration`"
   ^js [import-declaration]
   (.-kind ^js import-declaration))
 
 (defn parent
+  "**Returns:** `SourceFile | ModuleBlock`"
   ^js [import-declaration]
   (.-parent ^js import-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [import-declaration]
   (.-modifiers ^js import-declaration))
 
 (defn import-clause
+  "**Returns:** `ImportClause | undefined`"
   ^js [import-declaration]
   (.-importClause ^js import-declaration))
 
 (defn module-specifier
-  "If this is not a StringLiteral it will be a grammar error."
+  "If this is not a StringLiteral it will be a grammar error.
+   
+   **Returns:** `Expression`"
   ^js [import-declaration]
   (.-moduleSpecifier ^js import-declaration))
 
 (defn assert-clause
+  "**Returns:** `AssertClause | undefined`"
   ^js [import-declaration]
   (.-assertClause ^js import-declaration))
 
 (defn attributes
+  "**Returns:** `ImportAttributes | undefined`"
   ^js [import-declaration]
   (.-attributes ^js import-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [import-declaration]
   (.-flags ^js import-declaration))
 
@@ -169,9 +178,11 @@
    (.forEachChild ^js import-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [import-declaration]
   (.-pos ^js import-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [import-declaration]
   (.-end ^js import-declaration))

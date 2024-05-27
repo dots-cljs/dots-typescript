@@ -1,6 +1,7 @@
 (ns dots.typescript.server.host-configuration)
 
 (defn format-code-options
+  "**Returns:** `FormatCodeSettings`"
   ^js [host-configuration]
   (.-formatCodeOptions ^js host-configuration))
 
@@ -9,6 +10,7 @@
   (set! (.-formatCodeOptions ^js host-configuration) value))
 
 (defn preferences
+  "**Returns:** `UserPreferences`"
   ^js [host-configuration]
   (.-preferences ^js host-configuration))
 
@@ -17,6 +19,7 @@
   (set! (.-preferences ^js host-configuration) value))
 
 (defn host-info
+  "**Returns:** `string`"
   ^js [host-configuration]
   (.-hostInfo ^js host-configuration))
 
@@ -25,6 +28,7 @@
   (set! (.-hostInfo ^js host-configuration) value))
 
 (defn extra-file-extensions
+  "**Returns:** `FileExtensionInfo[] | undefined`"
   ^js [host-configuration]
   (.-extraFileExtensions ^js host-configuration))
 
@@ -33,6 +37,7 @@
   (set! (.-extraFileExtensions ^js host-configuration) value))
 
 (defn watch-options
+  "**Returns:** `WatchOptions | undefined`"
   ^js [host-configuration]
   (.-watchOptions ^js host-configuration))
 

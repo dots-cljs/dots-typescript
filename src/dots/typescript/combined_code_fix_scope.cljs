@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [type]))
 
 (defn type
+  "**Returns:** `\"file\"`"
   ^js [combined-code-fix-scope]
   (.-type ^js combined-code-fix-scope))
 
@@ -10,6 +11,7 @@
   (set! (.-type ^js combined-code-fix-scope) value))
 
 (defn file-name
+  "**Returns:** `string`"
   ^js [combined-code-fix-scope]
   (.-fileName ^js combined-code-fix-scope))
 

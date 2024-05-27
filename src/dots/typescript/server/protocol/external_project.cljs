@@ -2,7 +2,9 @@
   "Represent an external project")
 
 (defn project-file-name
-  "Project name"
+  "Project name
+   
+   **Returns:** `string`"
   ^js [external-project]
   (.-projectFileName ^js external-project))
 
@@ -12,7 +14,9 @@
   (set! (.-projectFileName ^js external-project) value))
 
 (defn root-files
-  "List of root files in project"
+  "List of root files in project
+   
+   **Returns:** `ExternalFile[]`"
   ^js [external-project]
   (.-rootFiles ^js external-project))
 
@@ -22,7 +26,9 @@
   (set! (.-rootFiles ^js external-project) value))
 
 (defn options
-  "Compiler options for the project"
+  "Compiler options for the project
+   
+   **Returns:** `ExternalProjectCompilerOptions`"
   ^js [external-project]
   (.-options ^js external-project))
 
@@ -32,7 +38,9 @@
   (set! (.-options ^js external-project) value))
 
 (defn type-acquisition
-  "Explicitly specified type acquisition for the project"
+  "Explicitly specified type acquisition for the project
+   
+   **Returns:** `TypeAcquisition | undefined`"
   ^js [external-project]
   (.-typeAcquisition ^js external-project))
 

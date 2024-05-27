@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [instantiable-type]
   (.-flags ^js instantiable-type))
 
@@ -10,6 +11,7 @@
   (set! (.-flags ^js instantiable-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [instantiable-type]
   (.-symbol ^js instantiable-type))
 
@@ -18,6 +20,7 @@
   (set! (.-symbol ^js instantiable-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [instantiable-type]
   (.-pattern ^js instantiable-type))
 
@@ -26,6 +29,7 @@
   (set! (.-pattern ^js instantiable-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [instantiable-type]
   (.-aliasSymbol ^js instantiable-type))
 
@@ -34,6 +38,7 @@
   (set! (.-aliasSymbol ^js instantiable-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [instantiable-type]
   (.-aliasTypeArguments ^js instantiable-type))
 

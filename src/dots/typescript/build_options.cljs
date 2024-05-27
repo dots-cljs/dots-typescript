@@ -1,6 +1,7 @@
 (ns dots.typescript.build-options)
 
 (defn dry?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-dry ^js build-options))
 
@@ -9,6 +10,7 @@
   (set! (.-dry ^js build-options) value))
 
 (defn force?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-force ^js build-options))
 
@@ -17,6 +19,7 @@
   (set! (.-force ^js build-options) value))
 
 (defn verbose?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-verbose ^js build-options))
 
@@ -25,6 +28,7 @@
   (set! (.-verbose ^js build-options) value))
 
 (defn incremental?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-incremental ^js build-options))
 
@@ -33,6 +37,7 @@
   (set! (.-incremental ^js build-options) value))
 
 (defn assume-changes-only-affect-direct-dependencies?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-assumeChangesOnlyAffectDirectDependencies ^js build-options))
 
@@ -41,6 +46,7 @@
   (set! (.-assumeChangesOnlyAffectDirectDependencies ^js build-options) value))
 
 (defn declaration?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-declaration ^js build-options))
 
@@ -49,6 +55,7 @@
   (set! (.-declaration ^js build-options) value))
 
 (defn declaration-map?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-declarationMap ^js build-options))
 
@@ -57,6 +64,7 @@
   (set! (.-declarationMap ^js build-options) value))
 
 (defn emit-declaration-only?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-emitDeclarationOnly ^js build-options))
 
@@ -65,6 +73,7 @@
   (set! (.-emitDeclarationOnly ^js build-options) value))
 
 (defn source-map?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-sourceMap ^js build-options))
 
@@ -73,6 +82,7 @@
   (set! (.-sourceMap ^js build-options) value))
 
 (defn inline-source-map?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-inlineSourceMap ^js build-options))
 
@@ -81,6 +91,7 @@
   (set! (.-inlineSourceMap ^js build-options) value))
 
 (defn trace-resolution?
+  "**Returns:** `boolean | undefined`"
   ^js [build-options]
   (.-traceResolution ^js build-options))
 

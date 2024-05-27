@@ -2,7 +2,9 @@
   "Host to create watch with config file")
 
 (defn config-file-name
-  "Name of the config file to compile"
+  "Name of the config file to compile
+   
+   **Returns:** `string`"
   ^js [watch-compiler-host-of-config-file]
   (.-configFileName ^js watch-compiler-host-of-config-file))
 
@@ -12,7 +14,9 @@
   (set! (.-configFileName ^js watch-compiler-host-of-config-file) value))
 
 (defn options-to-extend
-  "Options to extend"
+  "Options to extend
+   
+   **Returns:** `CompilerOptions | undefined`"
   ^js [watch-compiler-host-of-config-file]
   (.-optionsToExtend ^js watch-compiler-host-of-config-file))
 
@@ -22,6 +26,7 @@
   (set! (.-optionsToExtend ^js watch-compiler-host-of-config-file) value))
 
 (defn watch-options-to-extend
+  "**Returns:** `WatchOptions | undefined`"
   ^js [watch-compiler-host-of-config-file]
   (.-watchOptionsToExtend ^js watch-compiler-host-of-config-file))
 
@@ -30,6 +35,7 @@
   (set! (.-watchOptionsToExtend ^js watch-compiler-host-of-config-file) value))
 
 (defn extra-file-extensions
+  "**Returns:** `readonly FileExtensionInfo[] | undefined`"
   ^js [watch-compiler-host-of-config-file]
   (.-extraFileExtensions ^js watch-compiler-host-of-config-file))
 
@@ -88,7 +94,9 @@
   (.afterProgramCreate ^js watch-compiler-host-of-config-file program))
 
 (defn create-program
-  "Used to create the program when need for program creation or recreation detected"
+  "Used to create the program when need for program creation or recreation detected
+   
+   **Returns:** `CreateProgram<T>`"
   ^js [watch-compiler-host-of-config-file]
   (.-createProgram ^js watch-compiler-host-of-config-file))
 
@@ -307,6 +315,7 @@
   (.getModuleResolutionCache ^js watch-compiler-host-of-config-file))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [watch-compiler-host-of-config-file]
   (.-jsDocParsingMode ^js watch-compiler-host-of-config-file))
 
@@ -386,7 +395,9 @@
   (.clearTimeout ^js watch-compiler-host-of-config-file timeout-id))
 
 (defn on-un-recoverable-config-file-diagnostic
-  "Reports unrecoverable error when parsing config file"
+  "Reports unrecoverable error when parsing config file
+   
+   **Returns:** `DiagnosticReporter`"
   ^js [watch-compiler-host-of-config-file]
   (.-onUnRecoverableConfigFileDiagnostic ^js watch-compiler-host-of-config-file))
 

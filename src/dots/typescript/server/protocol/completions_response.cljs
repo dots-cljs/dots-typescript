@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `CompletionEntry[] | undefined`"
   ^js [completions-response]
   (.-body ^js completions-response))
 
@@ -10,6 +11,7 @@
   (set! (.-body ^js completions-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [completions-response]
   (.-type ^js completions-response))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js completions-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [completions-response]
   (.-request_seq ^js completions-response))
 
@@ -28,7 +32,9 @@
   (set! (.-request_seq ^js completions-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [completions-response]
   (.-success ^js completions-response))
 
@@ -38,7 +44,9 @@
   (set! (.-success ^js completions-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [completions-response]
   (.-command ^js completions-response))
 
@@ -49,7 +57,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [completions-response]
   (.-message ^js completions-response))
 
@@ -60,7 +70,9 @@
   (set! (.-message ^js completions-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [completions-response]
   (.-metadata ^js completions-response))
 
@@ -70,7 +82,9 @@
   (set! (.-metadata ^js completions-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [completions-response]
   (.-performanceData ^js completions-response))
 
@@ -80,7 +94,9 @@
   (set! (.-performanceData ^js completions-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [completions-response]
   (.-seq ^js completions-response))
 

@@ -1,26 +1,32 @@
 (ns dots.typescript.element-access-chain)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ElementAccessExpression`"
   ^js [element-access-chain]
   (.-kind ^js element-access-chain))
 
 (defn expression
+  "**Returns:** `LeftHandSideExpression`"
   ^js [element-access-chain]
   (.-expression ^js element-access-chain))
 
 (defn question-dot-token
+  "**Returns:** `QuestionDotToken | undefined`"
   ^js [element-access-chain]
   (.-questionDotToken ^js element-access-chain))
 
 (defn argument-expression
+  "**Returns:** `Expression`"
   ^js [element-access-chain]
   (.-argumentExpression ^js element-access-chain))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [element-access-chain]
   (.-flags ^js element-access-chain))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [element-access-chain]
   (.-parent ^js element-access-chain))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js element-access-chain cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [element-access-chain]
   (.-pos ^js element-access-chain))
 
 (defn end
+  "**Returns:** `number`"
   ^js [element-access-chain]
   (.-end ^js element-access-chain))

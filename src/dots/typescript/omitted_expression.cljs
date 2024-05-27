@@ -1,14 +1,17 @@
 (ns dots.typescript.omitted-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.OmittedExpression`"
   ^js [omitted-expression]
   (.-kind ^js omitted-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [omitted-expression]
   (.-flags ^js omitted-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [omitted-expression]
   (.-parent ^js omitted-expression))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js omitted-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [omitted-expression]
   (.-pos ^js omitted-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [omitted-expression]
   (.-end ^js omitted-expression))

@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn object-flags
+  "**Returns:** `ObjectFlags`"
   ^js [substitution-type]
   (.-objectFlags ^js substitution-type))
 
@@ -10,6 +11,7 @@
   (set! (.-objectFlags ^js substitution-type) value))
 
 (defn base-type
+  "**Returns:** `Type`"
   ^js [substitution-type]
   (.-baseType ^js substitution-type))
 
@@ -18,6 +20,7 @@
   (set! (.-baseType ^js substitution-type) value))
 
 (defn constraint
+  "**Returns:** `Type`"
   ^js [substitution-type]
   (.-constraint ^js substitution-type))
 
@@ -26,6 +29,7 @@
   (set! (.-constraint ^js substitution-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [substitution-type]
   (.-flags ^js substitution-type))
 
@@ -34,6 +38,7 @@
   (set! (.-flags ^js substitution-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [substitution-type]
   (.-symbol ^js substitution-type))
 
@@ -42,6 +47,7 @@
   (set! (.-symbol ^js substitution-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [substitution-type]
   (.-pattern ^js substitution-type))
 
@@ -50,6 +56,7 @@
   (set! (.-pattern ^js substitution-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [substitution-type]
   (.-aliasSymbol ^js substitution-type))
 
@@ -58,6 +65,7 @@
   (set! (.-aliasSymbol ^js substitution-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [substitution-type]
   (.-aliasTypeArguments ^js substitution-type))
 

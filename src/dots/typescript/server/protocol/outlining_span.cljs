@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.outlining-span)
 
 (defn text-span
-  "The span of the document to actually collapse."
+  "The span of the document to actually collapse.
+   
+   **Returns:** `TextSpan`"
   ^js [outlining-span]
   (.-textSpan ^js outlining-span))
 
@@ -11,7 +13,9 @@
   (set! (.-textSpan ^js outlining-span) value))
 
 (defn hint-span
-  "The span of the document to display when the user hovers over the collapsed span."
+  "The span of the document to display when the user hovers over the collapsed span.
+   
+   **Returns:** `TextSpan`"
   ^js [outlining-span]
   (.-hintSpan ^js outlining-span))
 
@@ -21,7 +25,9 @@
   (set! (.-hintSpan ^js outlining-span) value))
 
 (defn banner-text
-  "The text to display in the editor for the collapsed region."
+  "The text to display in the editor for the collapsed region.
+   
+   **Returns:** `string`"
   ^js [outlining-span]
   (.-bannerText ^js outlining-span))
 
@@ -32,7 +38,9 @@
 
 (defn auto-collapse?
   "Whether or not this region should be automatically collapsed when
-   the 'Collapse to Definitions' command is invoked."
+   the 'Collapse to Definitions' command is invoked.
+   
+   **Returns:** `boolean`"
   ^js [outlining-span]
   (.-autoCollapse ^js outlining-span))
 
@@ -43,7 +51,9 @@
   (set! (.-autoCollapse ^js outlining-span) value))
 
 (defn kind
-  "Classification of the contents of the span"
+  "Classification of the contents of the span
+   
+   **Returns:** `OutliningSpanKind`"
   ^js [outlining-span]
   (.-kind ^js outlining-span))
 

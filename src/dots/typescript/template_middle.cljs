@@ -1,14 +1,17 @@
 (ns dots.typescript.template-middle)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TemplateMiddle`"
   ^js [template-middle]
   (.-kind ^js template-middle))
 
 (defn parent
+  "**Returns:** `TemplateLiteralTypeSpan | TemplateSpan`"
   ^js [template-middle]
   (.-parent ^js template-middle))
 
 (defn raw-text
+  "**Returns:** `string | undefined`"
   ^js [template-middle]
   (.-rawText ^js template-middle))
 
@@ -17,6 +20,7 @@
   (set! (.-rawText ^js template-middle) value))
 
 (defn text
+  "**Returns:** `string`"
   ^js [template-middle]
   (.-text ^js template-middle))
 
@@ -25,6 +29,7 @@
   (set! (.-text ^js template-middle) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [template-middle]
   (.-isUnterminated ^js template-middle))
 
@@ -33,6 +38,7 @@
   (set! (.-isUnterminated ^js template-middle) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [template-middle]
   (.-hasExtendedUnicodeEscape ^js template-middle))
 
@@ -41,6 +47,7 @@
   (set! (.-hasExtendedUnicodeEscape ^js template-middle) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [template-middle]
   (.-flags ^js template-middle))
 
@@ -180,9 +187,11 @@
    (.forEachChild ^js template-middle cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [template-middle]
   (.-pos ^js template-middle))
 
 (defn end
+  "**Returns:** `number`"
   ^js [template-middle]
   (.-end ^js template-middle))

@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [comment]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocSatisfiesTag`"
   ^js [js-doc-satisfies-tag]
   (.-kind ^js js-doc-satisfies-tag))
 
 (defn type-expression
+  "**Returns:** `JSDocTypeExpression`"
   ^js [js-doc-satisfies-tag]
   (.-typeExpression ^js js-doc-satisfies-tag))
 
 (defn parent
+  "**Returns:** `JSDoc | JSDocTypeLiteral`"
   ^js [js-doc-satisfies-tag]
   (.-parent ^js js-doc-satisfies-tag))
 
 (defn tag-name
+  "**Returns:** `Identifier`"
   ^js [js-doc-satisfies-tag]
   (.-tagName ^js js-doc-satisfies-tag))
 
 (defn comment
+  "**Returns:** `string | NodeArray<JSDocComment> | undefined`"
   ^js [js-doc-satisfies-tag]
   (.-comment ^js js-doc-satisfies-tag))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-satisfies-tag]
   (.-flags ^js js-doc-satisfies-tag))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js js-doc-satisfies-tag cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-satisfies-tag]
   (.-pos ^js js-doc-satisfies-tag))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-satisfies-tag]
   (.-end ^js js-doc-satisfies-tag))

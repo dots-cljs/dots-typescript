@@ -3,7 +3,9 @@
 
 (defn search-value
   "Search term to navigate to from current location; term can
-   be '.*' or an identifier prefix."
+   be '.*' or an identifier prefix.
+   
+   **Returns:** `string`"
   ^js [navto-request-args]
   (.-searchValue ^js navto-request-args))
 
@@ -14,7 +16,9 @@
   (set! (.-searchValue ^js navto-request-args) value))
 
 (defn max-result-count
-  "Optional limit on the number of items to return."
+  "Optional limit on the number of items to return.
+   
+   **Returns:** `number | undefined`"
   ^js [navto-request-args]
   (.-maxResultCount ^js navto-request-args))
 
@@ -24,7 +28,9 @@
   (set! (.-maxResultCount ^js navto-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string | undefined`"
   ^js [navto-request-args]
   (.-file ^js navto-request-args))
 
@@ -35,7 +41,9 @@
 
 (defn current-file-only?
   "Optional flag to indicate we want results for just the current file
-   or the entire project."
+   or the entire project.
+   
+   **Returns:** `boolean | undefined`"
   ^js [navto-request-args]
   (.-currentFileOnly ^js navto-request-args))
 
@@ -46,6 +54,7 @@
   (set! (.-currentFileOnly ^js navto-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [navto-request-args]
   (.-projectFileName ^js navto-request-args))
 

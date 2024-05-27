@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.file-span-with-context)
 
 (defn file
-  "File containing text span."
+  "File containing text span.
+   
+   **Returns:** `string`"
   ^js [file-span-with-context]
   (.-file ^js file-span-with-context))
 
@@ -11,7 +13,9 @@
   (set! (.-file ^js file-span-with-context) value))
 
 (defn start
-  "First character of the definition."
+  "First character of the definition.
+   
+   **Returns:** `Location`"
   ^js [file-span-with-context]
   (.-start ^js file-span-with-context))
 
@@ -21,7 +25,9 @@
   (set! (.-start ^js file-span-with-context) value))
 
 (defn end
-  "One character past last character of the definition."
+  "One character past last character of the definition.
+   
+   **Returns:** `Location`"
   ^js [file-span-with-context]
   (.-end ^js file-span-with-context))
 
@@ -31,6 +37,7 @@
   (set! (.-end ^js file-span-with-context) value))
 
 (defn context-start
+  "**Returns:** `Location | undefined`"
   ^js [file-span-with-context]
   (.-contextStart ^js file-span-with-context))
 
@@ -39,6 +46,7 @@
   (set! (.-contextStart ^js file-span-with-context) value))
 
 (defn context-end
+  "**Returns:** `Location | undefined`"
   ^js [file-span-with-context]
   (.-contextEnd ^js file-span-with-context))
 

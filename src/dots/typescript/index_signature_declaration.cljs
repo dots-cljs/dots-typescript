@@ -2,34 +2,42 @@
   (:refer-clojure :exclude [name type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.IndexSignature`"
   ^js [index-signature-declaration]
   (.-kind ^js index-signature-declaration))
 
 (defn parent
+  "**Returns:** `ObjectTypeDeclaration`"
   ^js [index-signature-declaration]
   (.-parent ^js index-signature-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [index-signature-declaration]
   (.-modifiers ^js index-signature-declaration))
 
 (defn type
+  "**Returns:** `TypeNode`"
   ^js [index-signature-declaration]
   (.-type ^js index-signature-declaration))
 
 (defn name
+  "**Returns:** `PropertyName | undefined`"
   ^js [index-signature-declaration]
   (.-name ^js index-signature-declaration))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [index-signature-declaration]
   (.-typeParameters ^js index-signature-declaration))
 
 (defn parameters
+  "**Returns:** `NodeArray<ParameterDeclaration>`"
   ^js [index-signature-declaration]
   (.-parameters ^js index-signature-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [index-signature-declaration]
   (.-flags ^js index-signature-declaration))
 
@@ -169,13 +177,16 @@
    (.forEachChild ^js index-signature-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [index-signature-declaration]
   (.-pos ^js index-signature-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [index-signature-declaration]
   (.-end ^js index-signature-declaration))
 
 (defn question-token
+  "**Returns:** `QuestionToken | undefined`"
   ^js [index-signature-declaration]
   (.-questionToken ^js index-signature-declaration))

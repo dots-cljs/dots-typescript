@@ -1,26 +1,32 @@
 (ns dots.typescript.if-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.IfStatement`"
   ^js [if-statement]
   (.-kind ^js if-statement))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [if-statement]
   (.-expression ^js if-statement))
 
 (defn then-statement
+  "**Returns:** `Statement`"
   ^js [if-statement]
   (.-thenStatement ^js if-statement))
 
 (defn else-statement
+  "**Returns:** `Statement | undefined`"
   ^js [if-statement]
   (.-elseStatement ^js if-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [if-statement]
   (.-flags ^js if-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [if-statement]
   (.-parent ^js if-statement))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js if-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [if-statement]
   (.-pos ^js if-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [if-statement]
   (.-end ^js if-statement))

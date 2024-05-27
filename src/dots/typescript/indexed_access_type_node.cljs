@@ -1,22 +1,27 @@
 (ns dots.typescript.indexed-access-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.IndexedAccessType`"
   ^js [indexed-access-type-node]
   (.-kind ^js indexed-access-type-node))
 
 (defn object-type
+  "**Returns:** `TypeNode`"
   ^js [indexed-access-type-node]
   (.-objectType ^js indexed-access-type-node))
 
 (defn index-type
+  "**Returns:** `TypeNode`"
   ^js [indexed-access-type-node]
   (.-indexType ^js indexed-access-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [indexed-access-type-node]
   (.-flags ^js indexed-access-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [indexed-access-type-node]
   (.-parent ^js indexed-access-type-node))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js indexed-access-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [indexed-access-type-node]
   (.-pos ^js indexed-access-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [indexed-access-type-node]
   (.-end ^js indexed-access-type-node))

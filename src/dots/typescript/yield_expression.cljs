@@ -1,22 +1,27 @@
 (ns dots.typescript.yield-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.YieldExpression`"
   ^js [yield-expression]
   (.-kind ^js yield-expression))
 
 (defn asterisk-token
+  "**Returns:** `AsteriskToken | undefined`"
   ^js [yield-expression]
   (.-asteriskToken ^js yield-expression))
 
 (defn expression
+  "**Returns:** `Expression | undefined`"
   ^js [yield-expression]
   (.-expression ^js yield-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [yield-expression]
   (.-flags ^js yield-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [yield-expression]
   (.-parent ^js yield-expression))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js yield-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [yield-expression]
   (.-pos ^js yield-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [yield-expression]
   (.-end ^js yield-expression))

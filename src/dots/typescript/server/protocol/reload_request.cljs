@@ -6,6 +6,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Reload`"
   ^js [reload-request]
   (.-command ^js reload-request))
 
@@ -14,6 +15,7 @@
   (set! (.-command ^js reload-request) value))
 
 (defn arguments
+  "**Returns:** `ReloadRequestArgs`"
   ^js [reload-request]
   (.-arguments ^js reload-request))
 
@@ -22,6 +24,7 @@
   (set! (.-arguments ^js reload-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [reload-request]
   (.-type ^js reload-request))
 
@@ -30,7 +33,9 @@
   (set! (.-type ^js reload-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [reload-request]
   (.-seq ^js reload-request))
 

@@ -4,6 +4,7 @@
    - startLocation and endLocation - a pair of Location objects that store start/end line and offset of the error span.")
 
 (defn message
+  "**Returns:** `string`"
   ^js [diagnostic-with-line-position]
   (.-message ^js diagnostic-with-line-position))
 
@@ -12,6 +13,7 @@
   (set! (.-message ^js diagnostic-with-line-position) value))
 
 (defn start
+  "**Returns:** `number`"
   ^js [diagnostic-with-line-position]
   (.-start ^js diagnostic-with-line-position))
 
@@ -20,6 +22,7 @@
   (set! (.-start ^js diagnostic-with-line-position) value))
 
 (defn length
+  "**Returns:** `number`"
   ^js [diagnostic-with-line-position]
   (.-length ^js diagnostic-with-line-position))
 
@@ -28,6 +31,7 @@
   (set! (.-length ^js diagnostic-with-line-position) value))
 
 (defn start-location
+  "**Returns:** `Location`"
   ^js [diagnostic-with-line-position]
   (.-startLocation ^js diagnostic-with-line-position))
 
@@ -36,6 +40,7 @@
   (set! (.-startLocation ^js diagnostic-with-line-position) value))
 
 (defn end-location
+  "**Returns:** `Location`"
   ^js [diagnostic-with-line-position]
   (.-endLocation ^js diagnostic-with-line-position))
 
@@ -44,6 +49,7 @@
   (set! (.-endLocation ^js diagnostic-with-line-position) value))
 
 (defn category
+  "**Returns:** `string`"
   ^js [diagnostic-with-line-position]
   (.-category ^js diagnostic-with-line-position))
 
@@ -52,6 +58,7 @@
   (set! (.-category ^js diagnostic-with-line-position) value))
 
 (defn code
+  "**Returns:** `number`"
   ^js [diagnostic-with-line-position]
   (.-code ^js diagnostic-with-line-position))
 
@@ -60,7 +67,9 @@
   (set! (.-code ^js diagnostic-with-line-position) value))
 
 (defn reports-unnecessary
-  "May store more in future. For now, this will simply be `true` to indicate when a diagnostic is an unused-identifier diagnostic."
+  "May store more in future. For now, this will simply be `true` to indicate when a diagnostic is an unused-identifier diagnostic.
+   
+   **Returns:** `{} | undefined`"
   ^js [diagnostic-with-line-position]
   (.-reportsUnnecessary ^js diagnostic-with-line-position))
 
@@ -70,6 +79,7 @@
   (set! (.-reportsUnnecessary ^js diagnostic-with-line-position) value))
 
 (defn reports-deprecated
+  "**Returns:** `{} | undefined`"
   ^js [diagnostic-with-line-position]
   (.-reportsDeprecated ^js diagnostic-with-line-position))
 
@@ -78,6 +88,7 @@
   (set! (.-reportsDeprecated ^js diagnostic-with-line-position) value))
 
 (defn related-information
+  "**Returns:** `DiagnosticRelatedInformation[] | undefined`"
   ^js [diagnostic-with-line-position]
   (.-relatedInformation ^js diagnostic-with-line-position))
 

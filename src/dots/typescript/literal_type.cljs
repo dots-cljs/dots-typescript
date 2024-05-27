@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [symbol]))
 
 (defn value
+  "**Returns:** `string | number | PseudoBigInt`"
   ^js [literal-type]
   (.-value ^js literal-type))
 
@@ -10,6 +11,7 @@
   (set! (.-value ^js literal-type) value))
 
 (defn fresh-type
+  "**Returns:** `FreshableType`"
   ^js [literal-type]
   (.-freshType ^js literal-type))
 
@@ -18,6 +20,7 @@
   (set! (.-freshType ^js literal-type) value))
 
 (defn regular-type
+  "**Returns:** `FreshableType`"
   ^js [literal-type]
   (.-regularType ^js literal-type))
 
@@ -26,6 +29,7 @@
   (set! (.-regularType ^js literal-type) value))
 
 (defn flags
+  "**Returns:** `TypeFlags`"
   ^js [literal-type]
   (.-flags ^js literal-type))
 
@@ -34,6 +38,7 @@
   (set! (.-flags ^js literal-type) value))
 
 (defn symbol
+  "**Returns:** `Symbol`"
   ^js [literal-type]
   (.-symbol ^js literal-type))
 
@@ -42,6 +47,7 @@
   (set! (.-symbol ^js literal-type) value))
 
 (defn pattern
+  "**Returns:** `DestructuringPattern | undefined`"
   ^js [literal-type]
   (.-pattern ^js literal-type))
 
@@ -50,6 +56,7 @@
   (set! (.-pattern ^js literal-type) value))
 
 (defn alias-symbol
+  "**Returns:** `Symbol | undefined`"
   ^js [literal-type]
   (.-aliasSymbol ^js literal-type))
 
@@ -58,6 +65,7 @@
   (set! (.-aliasSymbol ^js literal-type) value))
 
 (defn alias-type-arguments
+  "**Returns:** `readonly Type[] | undefined`"
   ^js [literal-type]
   (.-aliasTypeArguments ^js literal-type))
 

@@ -1,6 +1,7 @@
 (ns dots.typescript.extended-config-cache-entry)
 
 (defn extended-result
+  "**Returns:** `TsConfigSourceFile`"
   ^js [extended-config-cache-entry]
   (.-extendedResult ^js extended-config-cache-entry))
 
@@ -9,6 +10,7 @@
   (set! (.-extendedResult ^js extended-config-cache-entry) value))
 
 (defn extended-config
+  "**Returns:** `ParsedTsconfig | undefined`"
   ^js [extended-config-cache-entry]
   (.-extendedConfig ^js extended-config-cache-entry))
 

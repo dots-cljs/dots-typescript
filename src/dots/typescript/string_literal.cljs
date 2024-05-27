@@ -1,10 +1,12 @@
 (ns dots.typescript.string-literal)
 
 (defn kind
+  "**Returns:** `SyntaxKind.StringLiteral`"
   ^js [string-literal]
   (.-kind ^js string-literal))
 
 (defn text
+  "**Returns:** `string`"
   ^js [string-literal]
   (.-text ^js string-literal))
 
@@ -13,6 +15,7 @@
   (set! (.-text ^js string-literal) value))
 
 (defn unterminated?
+  "**Returns:** `boolean | undefined`"
   ^js [string-literal]
   (.-isUnterminated ^js string-literal))
 
@@ -21,6 +24,7 @@
   (set! (.-isUnterminated ^js string-literal) value))
 
 (defn has-extended-unicode-escape?
+  "**Returns:** `boolean | undefined`"
   ^js [string-literal]
   (.-hasExtendedUnicodeEscape ^js string-literal))
 
@@ -29,10 +33,12 @@
   (set! (.-hasExtendedUnicodeEscape ^js string-literal) value))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [string-literal]
   (.-flags ^js string-literal))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [string-literal]
   (.-parent ^js string-literal))
 
@@ -172,9 +178,11 @@
    (.forEachChild ^js string-literal cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [string-literal]
   (.-pos ^js string-literal))
 
 (defn end
+  "**Returns:** `number`"
   ^js [string-literal]
   (.-end ^js string-literal))

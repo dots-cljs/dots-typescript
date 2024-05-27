@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [type]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.SyntheticExpression`"
   ^js [synthetic-expression]
   (.-kind ^js synthetic-expression))
 
 (defn spread?
+  "**Returns:** `boolean`"
   ^js [synthetic-expression]
   (.-isSpread ^js synthetic-expression))
 
 (defn type
+  "**Returns:** `Type`"
   ^js [synthetic-expression]
   (.-type ^js synthetic-expression))
 
 (defn tuple-name-source
+  "**Returns:** `ParameterDeclaration | NamedTupleMember | undefined`"
   ^js [synthetic-expression]
   (.-tupleNameSource ^js synthetic-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [synthetic-expression]
   (.-flags ^js synthetic-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [synthetic-expression]
   (.-parent ^js synthetic-expression))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js synthetic-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [synthetic-expression]
   (.-pos ^js synthetic-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [synthetic-expression]
   (.-end ^js synthetic-expression))

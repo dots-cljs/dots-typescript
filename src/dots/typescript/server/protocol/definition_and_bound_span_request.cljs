@@ -2,10 +2,12 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.DefinitionAndBoundSpan`"
   ^js [definition-and-bound-span-request]
   (.-command ^js definition-and-bound-span-request))
 
 (defn arguments
+  "**Returns:** `FileLocationRequestArgs`"
   ^js [definition-and-bound-span-request]
   (.-arguments ^js definition-and-bound-span-request))
 
@@ -14,6 +16,7 @@
   (set! (.-arguments ^js definition-and-bound-span-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [definition-and-bound-span-request]
   (.-type ^js definition-and-bound-span-request))
 
@@ -22,7 +25,9 @@
   (set! (.-type ^js definition-and-bound-span-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [definition-and-bound-span-request]
   (.-seq ^js definition-and-bound-span-request))
 

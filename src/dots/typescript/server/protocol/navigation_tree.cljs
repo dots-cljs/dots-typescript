@@ -2,6 +2,7 @@
   "protocol.NavigationTree is identical to ts.NavigationTree, except using protocol.TextSpan instead of ts.TextSpan")
 
 (defn text
+  "**Returns:** `string`"
   ^js [navigation-tree]
   (.-text ^js navigation-tree))
 
@@ -10,6 +11,7 @@
   (set! (.-text ^js navigation-tree) value))
 
 (defn kind
+  "**Returns:** `ScriptElementKind`"
   ^js [navigation-tree]
   (.-kind ^js navigation-tree))
 
@@ -18,6 +20,7 @@
   (set! (.-kind ^js navigation-tree) value))
 
 (defn kind-modifiers
+  "**Returns:** `string`"
   ^js [navigation-tree]
   (.-kindModifiers ^js navigation-tree))
 
@@ -26,6 +29,7 @@
   (set! (.-kindModifiers ^js navigation-tree) value))
 
 (defn spans
+  "**Returns:** `TextSpan[]`"
   ^js [navigation-tree]
   (.-spans ^js navigation-tree))
 
@@ -34,6 +38,7 @@
   (set! (.-spans ^js navigation-tree) value))
 
 (defn name-span
+  "**Returns:** `TextSpan | undefined`"
   ^js [navigation-tree]
   (.-nameSpan ^js navigation-tree))
 
@@ -42,6 +47,7 @@
   (set! (.-nameSpan ^js navigation-tree) value))
 
 (defn child-items
+  "**Returns:** `NavigationTree[] | undefined`"
   ^js [navigation-tree]
   (.-childItems ^js navigation-tree))
 

@@ -1,34 +1,42 @@
 (ns dots.typescript.conditional-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ConditionalExpression`"
   ^js [conditional-expression]
   (.-kind ^js conditional-expression))
 
 (defn condition
+  "**Returns:** `Expression`"
   ^js [conditional-expression]
   (.-condition ^js conditional-expression))
 
 (defn question-token
+  "**Returns:** `QuestionToken`"
   ^js [conditional-expression]
   (.-questionToken ^js conditional-expression))
 
 (defn when-true
+  "**Returns:** `Expression`"
   ^js [conditional-expression]
   (.-whenTrue ^js conditional-expression))
 
 (defn colon-token
+  "**Returns:** `ColonToken`"
   ^js [conditional-expression]
   (.-colonToken ^js conditional-expression))
 
 (defn when-false
+  "**Returns:** `Expression`"
   ^js [conditional-expression]
   (.-whenFalse ^js conditional-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [conditional-expression]
   (.-flags ^js conditional-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [conditional-expression]
   (.-parent ^js conditional-expression))
 
@@ -168,9 +176,11 @@
    (.forEachChild ^js conditional-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [conditional-expression]
   (.-pos ^js conditional-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [conditional-expression]
   (.-end ^js conditional-expression))

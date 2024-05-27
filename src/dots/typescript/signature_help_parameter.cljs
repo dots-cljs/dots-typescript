@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [name]))
 
 (defn name
+  "**Returns:** `string`"
   ^js [signature-help-parameter]
   (.-name ^js signature-help-parameter))
 
@@ -10,6 +11,7 @@
   (set! (.-name ^js signature-help-parameter) value))
 
 (defn documentation
+  "**Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-parameter]
   (.-documentation ^js signature-help-parameter))
 
@@ -18,6 +20,7 @@
   (set! (.-documentation ^js signature-help-parameter) value))
 
 (defn display-parts
+  "**Returns:** `SymbolDisplayPart[]`"
   ^js [signature-help-parameter]
   (.-displayParts ^js signature-help-parameter))
 
@@ -26,6 +29,7 @@
   (set! (.-displayParts ^js signature-help-parameter) value))
 
 (defn optional?
+  "**Returns:** `boolean`"
   ^js [signature-help-parameter]
   (.-isOptional ^js signature-help-parameter))
 
@@ -34,6 +38,7 @@
   (set! (.-isOptional ^js signature-help-parameter) value))
 
 (defn rest?
+  "**Returns:** `boolean | undefined`"
   ^js [signature-help-parameter]
   (.-isRest ^js signature-help-parameter))
 

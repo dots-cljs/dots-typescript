@@ -3,6 +3,7 @@
    The language service will unconditionally attempt to provide a result.")
 
 (defn kind
+  "**Returns:** `\"invoked\"`"
   ^js [signature-help-invoked-reason]
   (.-kind ^js signature-help-invoked-reason))
 
@@ -11,6 +12,7 @@
   (set! (.-kind ^js signature-help-invoked-reason) value))
 
 (defn trigger-character
+  "**Returns:** `undefined`"
   ^js [signature-help-invoked-reason]
   (.-triggerCharacter ^js signature-help-invoked-reason))
 

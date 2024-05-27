@@ -8,6 +8,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Open`"
   ^js [open-request]
   (.-command ^js open-request))
 
@@ -16,6 +17,7 @@
   (set! (.-command ^js open-request) value))
 
 (defn arguments
+  "**Returns:** `OpenRequestArgs`"
   ^js [open-request]
   (.-arguments ^js open-request))
 
@@ -24,6 +26,7 @@
   (set! (.-arguments ^js open-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [open-request]
   (.-type ^js open-request))
 
@@ -32,7 +35,9 @@
   (set! (.-type ^js open-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [open-request]
   (.-seq ^js open-request))
 

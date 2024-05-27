@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.ApplyCodeActionCommand`"
   ^js [apply-code-action-command-request]
   (.-command ^js apply-code-action-command-request))
 
@@ -10,6 +11,7 @@
   (set! (.-command ^js apply-code-action-command-request) value))
 
 (defn arguments
+  "**Returns:** `ApplyCodeActionCommandRequestArgs`"
   ^js [apply-code-action-command-request]
   (.-arguments ^js apply-code-action-command-request))
 
@@ -18,6 +20,7 @@
   (set! (.-arguments ^js apply-code-action-command-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [apply-code-action-command-request]
   (.-type ^js apply-code-action-command-request))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js apply-code-action-command-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [apply-code-action-command-request]
   (.-seq ^js apply-code-action-command-request))
 

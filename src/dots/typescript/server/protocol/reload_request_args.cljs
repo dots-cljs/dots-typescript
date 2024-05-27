@@ -3,7 +3,9 @@
 
 (defn tmpfile
   "Name of temporary file from which to reload file
-   contents. May be same as file."
+   contents. May be same as file.
+   
+   **Returns:** `string`"
   ^js [reload-request-args]
   (.-tmpfile ^js reload-request-args))
 
@@ -14,7 +16,9 @@
   (set! (.-tmpfile ^js reload-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [reload-request-args]
   (.-file ^js reload-request-args))
 
@@ -24,6 +28,7 @@
   (set! (.-file ^js reload-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [reload-request-args]
   (.-projectFileName ^js reload-request-args))
 

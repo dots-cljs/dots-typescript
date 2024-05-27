@@ -1,23 +1,29 @@
 (ns dots.typescript.js-doc-type-literal)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocTypeLiteral`"
   ^js [js-doc-type-literal]
   (.-kind ^js js-doc-type-literal))
 
 (defn js-doc-property-tags
+  "**Returns:** `readonly JSDocPropertyLikeTag[] | undefined`"
   ^js [js-doc-type-literal]
   (.-jsDocPropertyTags ^js js-doc-type-literal))
 
 (defn array-type?
-  "If true, then this type literal represents an *array* of its type."
+  "If true, then this type literal represents an *array* of its type.
+   
+   **Returns:** `boolean`"
   ^js [js-doc-type-literal]
   (.-isArrayType ^js js-doc-type-literal))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-type-literal]
   (.-flags ^js js-doc-type-literal))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-type-literal]
   (.-parent ^js js-doc-type-literal))
 
@@ -157,9 +163,11 @@
    (.forEachChild ^js js-doc-type-literal cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-type-literal]
   (.-pos ^js js-doc-type-literal))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-type-literal]
   (.-end ^js js-doc-type-literal))

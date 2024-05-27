@@ -6,6 +6,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Quickinfo`"
   ^js [quick-info-request]
   (.-command ^js quick-info-request))
 
@@ -14,6 +15,7 @@
   (set! (.-command ^js quick-info-request) value))
 
 (defn arguments
+  "**Returns:** `FileLocationRequestArgs`"
   ^js [quick-info-request]
   (.-arguments ^js quick-info-request))
 
@@ -22,6 +24,7 @@
   (set! (.-arguments ^js quick-info-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [quick-info-request]
   (.-type ^js quick-info-request))
 
@@ -30,7 +33,9 @@
   (set! (.-type ^js quick-info-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [quick-info-request]
   (.-seq ^js quick-info-request))
 

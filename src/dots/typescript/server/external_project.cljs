@@ -3,6 +3,7 @@
    These are created only if a host explicitly calls `openExternalProject`.")
 
 (defn external-project-name
+  "**Returns:** `string`"
   ^js [external-project]
   (.-externalProjectName ^js external-project))
 
@@ -11,6 +12,7 @@
   (set! (.-externalProjectName ^js external-project) value))
 
 (defn compile-on-save-enabled?
+  "**Returns:** `boolean`"
   ^js [external-project]
   (.-compileOnSaveEnabled ^js external-project))
 
@@ -19,6 +21,7 @@
   (set! (.-compileOnSaveEnabled ^js external-project) value))
 
 (defn excluded-files
+  "**Returns:** `readonly NormalizedPath[]`"
   ^js [external-project]
   (.-excludedFiles ^js external-project))
 
@@ -37,14 +40,17 @@
   (.getExcludedFiles ^js external-project))
 
 (defn project-kind
+  "**Returns:** `ProjectKind`"
   ^js [external-project]
   (.-projectKind ^js external-project))
 
 (defn project-service
+  "**Returns:** `ProjectService`"
   ^js [external-project]
   (.-projectService ^js external-project))
 
 (defn document-registry
+  "**Returns:** `any`"
   ^js [external-project]
   (.-documentRegistry ^js external-project))
 
@@ -53,6 +59,7 @@
   (set! (.-documentRegistry ^js external-project) value))
 
 (defn compiler-options
+  "**Returns:** `any`"
   ^js [external-project]
   (.-compilerOptions ^js external-project))
 
@@ -61,6 +68,7 @@
   (set! (.-compilerOptions ^js external-project) value))
 
 (defn watch-options
+  "**Returns:** `WatchOptions | undefined`"
   ^js [external-project]
   (.-watchOptions ^js external-project))
 
@@ -69,6 +77,7 @@
   (set! (.-watchOptions ^js external-project) value))
 
 (defn root-files
+  "**Returns:** `any`"
   ^js [external-project]
   (.-rootFiles ^js external-project))
 
@@ -77,6 +86,7 @@
   (set! (.-rootFiles ^js external-project) value))
 
 (defn root-files-map
+  "**Returns:** `any`"
   ^js [external-project]
   (.-rootFilesMap ^js external-project))
 
@@ -85,6 +95,7 @@
   (set! (.-rootFilesMap ^js external-project) value))
 
 (defn program
+  "**Returns:** `any`"
   ^js [external-project]
   (.-program ^js external-project))
 
@@ -93,6 +104,7 @@
   (set! (.-program ^js external-project) value))
 
 (defn external-files
+  "**Returns:** `any`"
   ^js [external-project]
   (.-externalFiles ^js external-project))
 
@@ -101,6 +113,7 @@
   (set! (.-externalFiles ^js external-project) value))
 
 (defn missing-files-map
+  "**Returns:** `any`"
   ^js [external-project]
   (.-missingFilesMap ^js external-project))
 
@@ -109,6 +122,7 @@
   (set! (.-missingFilesMap ^js external-project) value))
 
 (defn generated-files-map
+  "**Returns:** `any`"
   ^js [external-project]
   (.-generatedFilesMap ^js external-project))
 
@@ -117,6 +131,7 @@
   (set! (.-generatedFilesMap ^js external-project) value))
 
 (defn language-service
+  "**Returns:** `LanguageService`"
   ^js [external-project]
   (.-languageService ^js external-project))
 
@@ -125,6 +140,7 @@
   (set! (.-languageService ^js external-project) value))
 
 (defn language-service-enabled?
+  "**Returns:** `boolean`"
   ^js [external-project]
   (.-languageServiceEnabled ^js external-project))
 
@@ -133,14 +149,17 @@
   (set! (.-languageServiceEnabled ^js external-project) value))
 
 (defn trace
+  "**Returns:** `((s: string) => void) | undefined`"
   ^js [external-project]
   (.-trace ^js external-project))
 
 (defn realpath
+  "**Returns:** `((path: string) => string) | undefined`"
   ^js [external-project]
   (.-realpath ^js external-project))
 
 (defn builder-state
+  "**Returns:** `any`"
   ^js [external-project]
   (.-builderState ^js external-project))
 
@@ -149,7 +168,9 @@
   (set! (.-builderState ^js external-project) value))
 
 (defn updated-file-names
-  "Set of files names that were updated since the last call to getChangesSinceVersion."
+  "Set of files names that were updated since the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [external-project]
   (.-updatedFileNames ^js external-project))
 
@@ -159,7 +180,9 @@
   (set! (.-updatedFileNames ^js external-project) value))
 
 (defn last-reported-file-names
-  "Set of files that was returned from the last call to getChangesSinceVersion."
+  "Set of files that was returned from the last call to getChangesSinceVersion.
+   
+   **Returns:** `any`"
   ^js [external-project]
   (.-lastReportedFileNames ^js external-project))
 
@@ -169,7 +192,9 @@
   (set! (.-lastReportedFileNames ^js external-project) value))
 
 (defn last-reported-version
-  "Last version that was reported."
+  "Last version that was reported.
+   
+   **Returns:** `any`"
   ^js [external-project]
   (.-lastReportedVersion ^js external-project))
 
@@ -179,6 +204,7 @@
   (set! (.-lastReportedVersion ^js external-project) value))
 
 (defn project-errors
+  "**Returns:** `Diagnostic[] | undefined`"
   ^js [external-project]
   (.-projectErrors ^js external-project))
 
@@ -187,6 +213,7 @@
   (set! (.-projectErrors ^js external-project) value))
 
 (defn initial-load-pending
+  "**Returns:** `() => boolean`"
   ^js [external-project]
   (.-isInitialLoadPending ^js external-project))
 
@@ -195,6 +222,7 @@
   (set! (.-isInitialLoadPending ^js external-project) value))
 
 (defn cancellation-token
+  "**Returns:** `any`"
   ^js [external-project]
   (.-cancellationToken ^js external-project))
 
@@ -209,6 +237,7 @@
   (.isJsOnlyProject ^js external-project))
 
 (defn js-doc-parsing-mode
+  "**Returns:** `JSDocParsingMode | undefined`"
   ^js [external-project]
   (.-jsDocParsingMode ^js external-project))
 
@@ -259,6 +288,7 @@
   (.getScriptFileNames ^js external-project))
 
 (defn or-create-script-info-and-attach-to-project
+  "**Returns:** `any`"
   ^js [external-project]
   (.-getOrCreateScriptInfoAndAttachToProject ^js external-project))
 
@@ -388,6 +418,7 @@
   (.error ^js external-project s))
 
 (defn set-internal-compiler-options-for-emitting-js-files
+  "**Returns:** `any`"
   ^js [external-project]
   (.-setInternalCompilerOptionsForEmittingJsFiles ^js external-project))
 
@@ -500,6 +531,7 @@
   (.close ^js external-project))
 
 (defn detach-script-info-if-not-root
+  "**Returns:** `any`"
   ^js [external-project]
   (.-detachScriptInfoIfNotRoot ^js external-project))
 
@@ -631,6 +663,7 @@
   (.removeExistingTypings ^js external-project include))
 
 (defn update-graph-worker
+  "**Returns:** `any`"
   ^js [external-project]
   (.-updateGraphWorker ^js external-project))
 
@@ -639,6 +672,7 @@
   (set! (.-updateGraphWorker ^js external-project) value))
 
 (defn detach-script-info-from-project
+  "**Returns:** `any`"
   ^js [external-project]
   (.-detachScriptInfoFromProject ^js external-project))
 
@@ -647,6 +681,7 @@
   (set! (.-detachScriptInfoFromProject ^js external-project) value))
 
 (defn add-missing-file-watcher
+  "**Returns:** `any`"
   ^js [external-project]
   (.-addMissingFileWatcher ^js external-project))
 
@@ -655,6 +690,7 @@
   (set! (.-addMissingFileWatcher ^js external-project) value))
 
 (defn watched-missing-file
+  "**Returns:** `any`"
   ^js [external-project]
   (.-isWatchedMissingFile ^js external-project))
 
@@ -663,6 +699,7 @@
   (set! (.-isWatchedMissingFile ^js external-project) value))
 
 (defn create-generated-file-watcher
+  "**Returns:** `any`"
   ^js [external-project]
   (.-createGeneratedFileWatcher ^js external-project))
 
@@ -671,6 +708,7 @@
   (set! (.-createGeneratedFileWatcher ^js external-project) value))
 
 (defn valid-generated-file-watcher
+  "**Returns:** `any`"
   ^js [external-project]
   (.-isValidGeneratedFileWatcher ^js external-project))
 
@@ -679,6 +717,7 @@
   (set! (.-isValidGeneratedFileWatcher ^js external-project) value))
 
 (defn clear-generated-file-watch
+  "**Returns:** `any`"
   ^js [external-project]
   (.-clearGeneratedFileWatch ^js external-project))
 

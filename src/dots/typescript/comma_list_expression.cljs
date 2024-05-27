@@ -2,18 +2,22 @@
   "A list of comma-separated expressions. This node is only created by transformations.")
 
 (defn kind
+  "**Returns:** `SyntaxKind.CommaListExpression`"
   ^js [comma-list-expression]
   (.-kind ^js comma-list-expression))
 
 (defn elements
+  "**Returns:** `NodeArray<Expression>`"
   ^js [comma-list-expression]
   (.-elements ^js comma-list-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [comma-list-expression]
   (.-flags ^js comma-list-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [comma-list-expression]
   (.-parent ^js comma-list-expression))
 
@@ -153,9 +157,11 @@
    (.forEachChild ^js comma-list-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [comma-list-expression]
   (.-pos ^js comma-list-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [comma-list-expression]
   (.-end ^js comma-list-expression))

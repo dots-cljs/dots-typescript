@@ -1,14 +1,17 @@
 (ns dots.typescript.member-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind`"
   ^js [member-expression]
   (.-kind ^js member-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [member-expression]
   (.-flags ^js member-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [member-expression]
   (.-parent ^js member-expression))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js member-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [member-expression]
   (.-pos ^js member-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [member-expression]
   (.-end ^js member-expression))

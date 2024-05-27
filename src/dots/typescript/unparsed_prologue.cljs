@@ -1,18 +1,22 @@
 (ns dots.typescript.unparsed-prologue)
 
 (defn kind
+  "**Returns:** `SyntaxKind.UnparsedPrologue`"
   ^js [unparsed-prologue]
   (.-kind ^js unparsed-prologue))
 
 (defn parent
+  "**Returns:** `UnparsedSource`"
   ^js [unparsed-prologue]
   (.-parent ^js unparsed-prologue))
 
 (defn data
+  "**Returns:** `string`"
   ^js [unparsed-prologue]
   (.-data ^js unparsed-prologue))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [unparsed-prologue]
   (.-flags ^js unparsed-prologue))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js unparsed-prologue cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [unparsed-prologue]
   (.-pos ^js unparsed-prologue))
 
 (defn end
+  "**Returns:** `number`"
   ^js [unparsed-prologue]
   (.-end ^js unparsed-prologue))

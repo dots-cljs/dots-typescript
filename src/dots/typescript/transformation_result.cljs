@@ -1,7 +1,9 @@
 (ns dots.typescript.transformation-result)
 
 (defn transformed
-  "Gets the transformed source files."
+  "Gets the transformed source files.
+   
+   **Returns:** `T[]`"
   ^js [transformation-result]
   (.-transformed ^js transformation-result))
 
@@ -11,7 +13,9 @@
   (set! (.-transformed ^js transformation-result) value))
 
 (defn diagnostics
-  "Gets diagnostics for the transformation."
+  "Gets diagnostics for the transformation.
+   
+   **Returns:** `DiagnosticWithLocation[] | undefined`"
   ^js [transformation-result]
   (.-diagnostics ^js transformation-result))
 

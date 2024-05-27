@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.GetOutliningSpans`"
   ^js [outlining-spans-request]
   (.-command ^js outlining-spans-request))
 
@@ -11,6 +12,7 @@
   (set! (.-command ^js outlining-spans-request) value))
 
 (defn arguments
+  "**Returns:** `FileRequestArgs`"
   ^js [outlining-spans-request]
   (.-arguments ^js outlining-spans-request))
 
@@ -19,6 +21,7 @@
   (set! (.-arguments ^js outlining-spans-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [outlining-spans-request]
   (.-type ^js outlining-spans-request))
 
@@ -27,7 +30,9 @@
   (set! (.-type ^js outlining-spans-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [outlining-spans-request]
   (.-seq ^js outlining-spans-request))
 

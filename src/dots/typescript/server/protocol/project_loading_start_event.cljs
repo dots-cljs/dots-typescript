@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn event
+  "**Returns:** `\"projectLoadingStart\"`"
   ^js [project-loading-start-event]
   (.-event ^js project-loading-start-event))
 
@@ -10,6 +11,7 @@
   (set! (.-event ^js project-loading-start-event) value))
 
 (defn body
+  "**Returns:** `ProjectLoadingStartEventBody`"
   ^js [project-loading-start-event]
   (.-body ^js project-loading-start-event))
 
@@ -18,6 +20,7 @@
   (set! (.-body ^js project-loading-start-event) value))
 
 (defn type
+  "**Returns:** `\"event\"`"
   ^js [project-loading-start-event]
   (.-type ^js project-loading-start-event))
 
@@ -26,7 +29,9 @@
   (set! (.-type ^js project-loading-start-event) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [project-loading-start-event]
   (.-seq ^js project-loading-start-event))
 

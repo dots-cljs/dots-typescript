@@ -1,30 +1,37 @@
 (ns dots.typescript.call-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.CallExpression`"
   ^js [call-expression]
   (.-kind ^js call-expression))
 
 (defn expression
+  "**Returns:** `LeftHandSideExpression`"
   ^js [call-expression]
   (.-expression ^js call-expression))
 
 (defn question-dot-token
+  "**Returns:** `QuestionDotToken | undefined`"
   ^js [call-expression]
   (.-questionDotToken ^js call-expression))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [call-expression]
   (.-typeArguments ^js call-expression))
 
 (defn arguments
+  "**Returns:** `NodeArray<Expression>`"
   ^js [call-expression]
   (.-arguments ^js call-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [call-expression]
   (.-flags ^js call-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [call-expression]
   (.-parent ^js call-expression))
 
@@ -164,9 +171,11 @@
    (.forEachChild ^js call-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [call-expression]
   (.-pos ^js call-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [call-expression]
   (.-end ^js call-expression))

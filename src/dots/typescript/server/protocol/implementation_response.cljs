@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `FileSpanWithContext[] | undefined`"
   ^js [implementation-response]
   (.-body ^js implementation-response))
 
@@ -11,6 +12,7 @@
   (set! (.-body ^js implementation-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [implementation-response]
   (.-type ^js implementation-response))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js implementation-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [implementation-response]
   (.-request_seq ^js implementation-response))
 
@@ -29,7 +33,9 @@
   (set! (.-request_seq ^js implementation-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [implementation-response]
   (.-success ^js implementation-response))
 
@@ -39,7 +45,9 @@
   (set! (.-success ^js implementation-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [implementation-response]
   (.-command ^js implementation-response))
 
@@ -50,7 +58,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [implementation-response]
   (.-message ^js implementation-response))
 
@@ -61,7 +71,9 @@
   (set! (.-message ^js implementation-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [implementation-response]
   (.-metadata ^js implementation-response))
 
@@ -71,7 +83,9 @@
   (set! (.-metadata ^js implementation-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [implementation-response]
   (.-performanceData ^js implementation-response))
 
@@ -81,7 +95,9 @@
   (set! (.-performanceData ^js implementation-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [implementation-response]
   (.-seq ^js implementation-response))
 

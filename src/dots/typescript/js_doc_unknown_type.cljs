@@ -1,14 +1,17 @@
 (ns dots.typescript.js-doc-unknown-type)
 
 (defn kind
+  "**Returns:** `SyntaxKind.JSDocUnknownType`"
   ^js [js-doc-unknown-type]
   (.-kind ^js js-doc-unknown-type))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [js-doc-unknown-type]
   (.-flags ^js js-doc-unknown-type))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [js-doc-unknown-type]
   (.-parent ^js js-doc-unknown-type))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js js-doc-unknown-type cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [js-doc-unknown-type]
   (.-pos ^js js-doc-unknown-type))
 
 (defn end
+  "**Returns:** `number`"
   ^js [js-doc-unknown-type]
   (.-end ^js js-doc-unknown-type))

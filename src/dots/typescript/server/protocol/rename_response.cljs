@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `RenameResponseBody | undefined`"
   ^js [rename-response]
   (.-body ^js rename-response))
 
@@ -11,6 +12,7 @@
   (set! (.-body ^js rename-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [rename-response]
   (.-type ^js rename-response))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js rename-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [rename-response]
   (.-request_seq ^js rename-response))
 
@@ -29,7 +33,9 @@
   (set! (.-request_seq ^js rename-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [rename-response]
   (.-success ^js rename-response))
 
@@ -39,7 +45,9 @@
   (set! (.-success ^js rename-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [rename-response]
   (.-command ^js rename-response))
 
@@ -50,7 +58,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [rename-response]
   (.-message ^js rename-response))
 
@@ -61,7 +71,9 @@
   (set! (.-message ^js rename-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [rename-response]
   (.-metadata ^js rename-response))
 
@@ -71,7 +83,9 @@
   (set! (.-metadata ^js rename-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [rename-response]
   (.-performanceData ^js rename-response))
 
@@ -81,7 +95,9 @@
   (set! (.-performanceData ^js rename-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [rename-response]
   (.-seq ^js rename-response))
 

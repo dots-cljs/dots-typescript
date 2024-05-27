@@ -2,7 +2,9 @@
   "Instances of this interface specify errorcodes on a specific location in a sourcefile.")
 
 (defn error-codes
-  "Errorcodes we want to get the fixes for."
+  "Errorcodes we want to get the fixes for.
+   
+   **Returns:** `readonly number[]`"
   ^js [code-fix-request-args]
   (.-errorCodes ^js code-fix-request-args))
 
@@ -12,7 +14,9 @@
   (set! (.-errorCodes ^js code-fix-request-args) value))
 
 (defn start-line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [code-fix-request-args]
   (.-startLine ^js code-fix-request-args))
 
@@ -22,7 +26,9 @@
   (set! (.-startLine ^js code-fix-request-args) value))
 
 (defn start-offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [code-fix-request-args]
   (.-startOffset ^js code-fix-request-args))
 
@@ -32,7 +38,9 @@
   (set! (.-startOffset ^js code-fix-request-args) value))
 
 (defn end-line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [code-fix-request-args]
   (.-endLine ^js code-fix-request-args))
 
@@ -42,7 +50,9 @@
   (set! (.-endLine ^js code-fix-request-args) value))
 
 (defn end-offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [code-fix-request-args]
   (.-endOffset ^js code-fix-request-args))
 
@@ -52,7 +62,9 @@
   (set! (.-endOffset ^js code-fix-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [code-fix-request-args]
   (.-file ^js code-fix-request-args))
 
@@ -62,6 +74,7 @@
   (set! (.-file ^js code-fix-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [code-fix-request-args]
   (.-projectFileName ^js code-fix-request-args))
 

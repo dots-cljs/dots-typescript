@@ -2,10 +2,12 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `LinkedEditingRangesBody`"
   ^js [linked-editing-range-response]
   (.-body ^js linked-editing-range-response))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [linked-editing-range-response]
   (.-type ^js linked-editing-range-response))
 
@@ -14,7 +16,9 @@
   (set! (.-type ^js linked-editing-range-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [linked-editing-range-response]
   (.-request_seq ^js linked-editing-range-response))
 
@@ -24,7 +28,9 @@
   (set! (.-request_seq ^js linked-editing-range-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [linked-editing-range-response]
   (.-success ^js linked-editing-range-response))
 
@@ -34,7 +40,9 @@
   (set! (.-success ^js linked-editing-range-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [linked-editing-range-response]
   (.-command ^js linked-editing-range-response))
 
@@ -45,7 +53,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [linked-editing-range-response]
   (.-message ^js linked-editing-range-response))
 
@@ -56,7 +66,9 @@
   (set! (.-message ^js linked-editing-range-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [linked-editing-range-response]
   (.-metadata ^js linked-editing-range-response))
 
@@ -66,7 +78,9 @@
   (set! (.-metadata ^js linked-editing-range-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [linked-editing-range-response]
   (.-performanceData ^js linked-editing-range-response))
 
@@ -76,7 +90,9 @@
   (set! (.-performanceData ^js linked-editing-range-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [linked-editing-range-response]
   (.-seq ^js linked-editing-range-response))
 

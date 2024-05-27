@@ -2,7 +2,9 @@
   "Represents a set of changes that happen in project")
 
 (defn added
-  "List of added files"
+  "List of added files
+   
+   **Returns:** `string[] | FileWithProjectReferenceRedirectInfo[]`"
   ^js [project-changes]
   (.-added ^js project-changes))
 
@@ -12,7 +14,9 @@
   (set! (.-added ^js project-changes) value))
 
 (defn removed
-  "List of removed files"
+  "List of removed files
+   
+   **Returns:** `string[] | FileWithProjectReferenceRedirectInfo[]`"
   ^js [project-changes]
   (.-removed ^js project-changes))
 
@@ -22,7 +26,9 @@
   (set! (.-removed ^js project-changes) value))
 
 (defn updated
-  "List of updated files"
+  "List of updated files
+   
+   **Returns:** `string[] | FileWithProjectReferenceRedirectInfo[]`"
   ^js [project-changes]
   (.-updated ^js project-changes))
 
@@ -33,7 +39,9 @@
 
 (defn updated-redirects
   "List of files that have had their project reference redirect status updated
-   Only provided when the synchronizeProjectList request has includeProjectReferenceRedirectInfo set to true"
+   Only provided when the synchronizeProjectList request has includeProjectReferenceRedirectInfo set to true
+   
+   **Returns:** `FileWithProjectReferenceRedirectInfo[] | undefined`"
   ^js [project-changes]
   (.-updatedRedirects ^js project-changes))
 

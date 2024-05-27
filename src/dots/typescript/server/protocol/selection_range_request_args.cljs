@@ -1,6 +1,7 @@
 (ns dots.typescript.server.protocol.selection-range-request-args)
 
 (defn locations
+  "**Returns:** `Location[]`"
   ^js [selection-range-request-args]
   (.-locations ^js selection-range-request-args))
 
@@ -9,7 +10,9 @@
   (set! (.-locations ^js selection-range-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [selection-range-request-args]
   (.-file ^js selection-range-request-args))
 
@@ -19,6 +22,7 @@
   (set! (.-file ^js selection-range-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [selection-range-request-args]
   (.-projectFileName ^js selection-range-request-args))
 

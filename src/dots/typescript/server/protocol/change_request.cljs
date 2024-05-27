@@ -5,6 +5,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Change`"
   ^js [change-request]
   (.-command ^js change-request))
 
@@ -13,6 +14,7 @@
   (set! (.-command ^js change-request) value))
 
 (defn arguments
+  "**Returns:** `ChangeRequestArgs`"
   ^js [change-request]
   (.-arguments ^js change-request))
 
@@ -21,6 +23,7 @@
   (set! (.-arguments ^js change-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [change-request]
   (.-type ^js change-request))
 
@@ -29,7 +32,9 @@
   (set! (.-type ^js change-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [change-request]
   (.-seq ^js change-request))
 

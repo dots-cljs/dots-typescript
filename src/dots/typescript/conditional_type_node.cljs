@@ -1,30 +1,37 @@
 (ns dots.typescript.conditional-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ConditionalType`"
   ^js [conditional-type-node]
   (.-kind ^js conditional-type-node))
 
 (defn check-type
+  "**Returns:** `TypeNode`"
   ^js [conditional-type-node]
   (.-checkType ^js conditional-type-node))
 
 (defn extends-type
+  "**Returns:** `TypeNode`"
   ^js [conditional-type-node]
   (.-extendsType ^js conditional-type-node))
 
 (defn true-type
+  "**Returns:** `TypeNode`"
   ^js [conditional-type-node]
   (.-trueType ^js conditional-type-node))
 
 (defn false-type
+  "**Returns:** `TypeNode`"
   ^js [conditional-type-node]
   (.-falseType ^js conditional-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [conditional-type-node]
   (.-flags ^js conditional-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [conditional-type-node]
   (.-parent ^js conditional-type-node))
 
@@ -164,9 +171,11 @@
    (.forEachChild ^js conditional-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [conditional-type-node]
   (.-pos ^js conditional-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [conditional-type-node]
   (.-end ^js conditional-type-node))

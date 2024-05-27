@@ -6,7 +6,9 @@
 (defn name
   "Name of the package.
    Should not include `@types`.
-   If accessing a non-index file, this should include its name e.g. \"foo/bar\"."
+   If accessing a non-index file, this should include its name e.g. \"foo/bar\".
+   
+   **Returns:** `string`"
   ^js [package-id]
   (.-name ^js package-id))
 
@@ -19,7 +21,9 @@
 
 (defn sub-module-name
   "Name of a submodule within this package.
-   May be \"\"."
+   May be \"\".
+   
+   **Returns:** `string`"
   ^js [package-id]
   (.-subModuleName ^js package-id))
 
@@ -30,7 +34,9 @@
   (set! (.-subModuleName ^js package-id) value))
 
 (defn version
-  "Version of the package, e.g. \"1.2.3\""
+  "Version of the package, e.g. \"1.2.3\"
+   
+   **Returns:** `string`"
   ^js [package-id]
   (.-version ^js package-id))
 

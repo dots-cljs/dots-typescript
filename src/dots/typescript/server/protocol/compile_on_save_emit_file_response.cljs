@@ -2,6 +2,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body?
+  "**Returns:** `boolean | EmitResult`"
   ^js [compile-on-save-emit-file-response]
   (.-body ^js compile-on-save-emit-file-response))
 
@@ -10,6 +11,7 @@
   (set! (.-body ^js compile-on-save-emit-file-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [compile-on-save-emit-file-response]
   (.-type ^js compile-on-save-emit-file-response))
 
@@ -18,7 +20,9 @@
   (set! (.-type ^js compile-on-save-emit-file-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [compile-on-save-emit-file-response]
   (.-request_seq ^js compile-on-save-emit-file-response))
 
@@ -28,7 +32,9 @@
   (set! (.-request_seq ^js compile-on-save-emit-file-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [compile-on-save-emit-file-response]
   (.-success ^js compile-on-save-emit-file-response))
 
@@ -38,7 +44,9 @@
   (set! (.-success ^js compile-on-save-emit-file-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [compile-on-save-emit-file-response]
   (.-command ^js compile-on-save-emit-file-response))
 
@@ -49,7 +57,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [compile-on-save-emit-file-response]
   (.-message ^js compile-on-save-emit-file-response))
 
@@ -60,7 +70,9 @@
   (set! (.-message ^js compile-on-save-emit-file-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [compile-on-save-emit-file-response]
   (.-metadata ^js compile-on-save-emit-file-response))
 
@@ -70,7 +82,9 @@
   (set! (.-metadata ^js compile-on-save-emit-file-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [compile-on-save-emit-file-response]
   (.-performanceData ^js compile-on-save-emit-file-response))
 
@@ -80,7 +94,9 @@
   (set! (.-performanceData ^js compile-on-save-emit-file-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [compile-on-save-emit-file-response]
   (.-seq ^js compile-on-save-emit-file-response))
 

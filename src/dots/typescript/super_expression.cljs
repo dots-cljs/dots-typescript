@@ -1,14 +1,17 @@
 (ns dots.typescript.super-expression)
 
 (defn kind
+  "**Returns:** `SyntaxKind.SuperKeyword`"
   ^js [super-expression]
   (.-kind ^js super-expression))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [super-expression]
   (.-flags ^js super-expression))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [super-expression]
   (.-parent ^js super-expression))
 
@@ -148,9 +151,11 @@
    (.forEachChild ^js super-expression cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [super-expression]
   (.-pos ^js super-expression))
 
 (defn end
+  "**Returns:** `number`"
   ^js [super-expression]
   (.-end ^js super-expression))

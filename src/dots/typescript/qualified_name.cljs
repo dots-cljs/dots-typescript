@@ -1,22 +1,27 @@
 (ns dots.typescript.qualified-name)
 
 (defn kind
+  "**Returns:** `SyntaxKind.QualifiedName`"
   ^js [qualified-name]
   (.-kind ^js qualified-name))
 
 (defn left
+  "**Returns:** `EntityName`"
   ^js [qualified-name]
   (.-left ^js qualified-name))
 
 (defn right
+  "**Returns:** `Identifier`"
   ^js [qualified-name]
   (.-right ^js qualified-name))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [qualified-name]
   (.-flags ^js qualified-name))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [qualified-name]
   (.-parent ^js qualified-name))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js qualified-name cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [qualified-name]
   (.-pos ^js qualified-name))
 
 (defn end
+  "**Returns:** `number`"
   ^js [qualified-name]
   (.-end ^js qualified-name))

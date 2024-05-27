@@ -4,30 +4,37 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ExportAssignment`"
   ^js [export-assignment]
   (.-kind ^js export-assignment))
 
 (defn parent
+  "**Returns:** `SourceFile`"
   ^js [export-assignment]
   (.-parent ^js export-assignment))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [export-assignment]
   (.-modifiers ^js export-assignment))
 
 (defn export-equals?
+  "**Returns:** `boolean | undefined`"
   ^js [export-assignment]
   (.-isExportEquals ^js export-assignment))
 
 (defn expression
+  "**Returns:** `Expression`"
   ^js [export-assignment]
   (.-expression ^js export-assignment))
 
 (defn name
+  "**Returns:** `Identifier | StringLiteral | NumericLiteral | undefined`"
   ^js [export-assignment]
   (.-name ^js export-assignment))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [export-assignment]
   (.-flags ^js export-assignment))
 
@@ -167,9 +174,11 @@
    (.forEachChild ^js export-assignment cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [export-assignment]
   (.-pos ^js export-assignment))
 
 (defn end
+  "**Returns:** `number`"
   ^js [export-assignment]
   (.-end ^js export-assignment))

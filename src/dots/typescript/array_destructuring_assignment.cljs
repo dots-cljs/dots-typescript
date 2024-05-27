@@ -1,26 +1,32 @@
 (ns dots.typescript.array-destructuring-assignment)
 
 (defn left
+  "**Returns:** `ArrayLiteralExpression`"
   ^js [array-destructuring-assignment]
   (.-left ^js array-destructuring-assignment))
 
 (defn operator-token
+  "**Returns:** `EqualsToken`"
   ^js [array-destructuring-assignment]
   (.-operatorToken ^js array-destructuring-assignment))
 
 (defn kind
+  "**Returns:** `SyntaxKind.BinaryExpression`"
   ^js [array-destructuring-assignment]
   (.-kind ^js array-destructuring-assignment))
 
 (defn right
+  "**Returns:** `Expression`"
   ^js [array-destructuring-assignment]
   (.-right ^js array-destructuring-assignment))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [array-destructuring-assignment]
   (.-flags ^js array-destructuring-assignment))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [array-destructuring-assignment]
   (.-parent ^js array-destructuring-assignment))
 
@@ -160,9 +166,11 @@
    (.forEachChild ^js array-destructuring-assignment cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [array-destructuring-assignment]
   (.-pos ^js array-destructuring-assignment))
 
 (defn end
+  "**Returns:** `number`"
   ^js [array-destructuring-assignment]
   (.-end ^js array-destructuring-assignment))

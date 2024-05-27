@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.project-loading-start-event-body)
 
 (defn project-name
-  "name of the project"
+  "name of the project
+   
+   **Returns:** `string`"
   ^js [project-loading-start-event-body]
   (.-projectName ^js project-loading-start-event-body))
 
@@ -11,7 +13,9 @@
   (set! (.-projectName ^js project-loading-start-event-body) value))
 
 (defn reason
-  "reason for loading"
+  "reason for loading
+   
+   **Returns:** `string`"
   ^js [project-loading-start-event-body]
   (.-reason ^js project-loading-start-event-body))
 

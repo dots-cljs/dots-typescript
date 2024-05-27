@@ -1,38 +1,47 @@
 (ns dots.typescript.import-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.ImportType`"
   ^js [import-type-node]
   (.-kind ^js import-type-node))
 
 (defn type-of?
+  "**Returns:** `boolean`"
   ^js [import-type-node]
   (.-isTypeOf ^js import-type-node))
 
 (defn argument
+  "**Returns:** `TypeNode`"
   ^js [import-type-node]
   (.-argument ^js import-type-node))
 
 (defn assertions
+  "**Returns:** `ImportTypeAssertionContainer | undefined`"
   ^js [import-type-node]
   (.-assertions ^js import-type-node))
 
 (defn attributes
+  "**Returns:** `ImportAttributes | undefined`"
   ^js [import-type-node]
   (.-attributes ^js import-type-node))
 
 (defn qualifier
+  "**Returns:** `EntityName | undefined`"
   ^js [import-type-node]
   (.-qualifier ^js import-type-node))
 
 (defn type-arguments
+  "**Returns:** `NodeArray<TypeNode> | undefined`"
   ^js [import-type-node]
   (.-typeArguments ^js import-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [import-type-node]
   (.-flags ^js import-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [import-type-node]
   (.-parent ^js import-type-node))
 
@@ -172,9 +181,11 @@
    (.forEachChild ^js import-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [import-type-node]
   (.-pos ^js import-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [import-type-node]
   (.-end ^js import-type-node))

@@ -1,7 +1,9 @@
 (ns dots.typescript.server.protocol.navigation-bar-item)
 
 (defn text
-  "The item's display text."
+  "The item's display text.
+   
+   **Returns:** `string`"
   ^js [navigation-bar-item]
   (.-text ^js navigation-bar-item))
 
@@ -11,7 +13,9 @@
   (set! (.-text ^js navigation-bar-item) value))
 
 (defn kind
-  "The symbol's kind (such as 'className' or 'parameterName')."
+  "The symbol's kind (such as 'className' or 'parameterName').
+   
+   **Returns:** `ScriptElementKind`"
   ^js [navigation-bar-item]
   (.-kind ^js navigation-bar-item))
 
@@ -21,7 +25,9 @@
   (set! (.-kind ^js navigation-bar-item) value))
 
 (defn kind-modifiers
-  "Optional modifiers for the kind (such as 'public')."
+  "Optional modifiers for the kind (such as 'public').
+   
+   **Returns:** `string | undefined`"
   ^js [navigation-bar-item]
   (.-kindModifiers ^js navigation-bar-item))
 
@@ -31,7 +37,9 @@
   (set! (.-kindModifiers ^js navigation-bar-item) value))
 
 (defn spans
-  "The definition locations of the item."
+  "The definition locations of the item.
+   
+   **Returns:** `TextSpan[]`"
   ^js [navigation-bar-item]
   (.-spans ^js navigation-bar-item))
 
@@ -41,7 +49,9 @@
   (set! (.-spans ^js navigation-bar-item) value))
 
 (defn child-items
-  "Optional children."
+  "Optional children.
+   
+   **Returns:** `NavigationBarItem[] | undefined`"
   ^js [navigation-bar-item]
   (.-childItems ^js navigation-bar-item))
 
@@ -51,7 +61,9 @@
   (set! (.-childItems ^js navigation-bar-item) value))
 
 (defn indent
-  "Number of levels deep this item should appear."
+  "Number of levels deep this item should appear.
+   
+   **Returns:** `number`"
   ^js [navigation-bar-item]
   (.-indent ^js navigation-bar-item))
 

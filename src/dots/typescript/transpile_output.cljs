@@ -1,6 +1,7 @@
 (ns dots.typescript.transpile-output)
 
 (defn output-text
+  "**Returns:** `string`"
   ^js [transpile-output]
   (.-outputText ^js transpile-output))
 
@@ -9,6 +10,7 @@
   (set! (.-outputText ^js transpile-output) value))
 
 (defn diagnostics
+  "**Returns:** `Diagnostic[] | undefined`"
   ^js [transpile-output]
   (.-diagnostics ^js transpile-output))
 
@@ -17,6 +19,7 @@
   (set! (.-diagnostics ^js transpile-output) value))
 
 (defn source-map-text
+  "**Returns:** `string | undefined`"
   ^js [transpile-output]
   (.-sourceMapText ^js transpile-output))
 

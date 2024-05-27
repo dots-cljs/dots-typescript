@@ -1,22 +1,27 @@
 (ns dots.typescript.labeled-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.LabeledStatement`"
   ^js [labeled-statement]
   (.-kind ^js labeled-statement))
 
 (defn label
+  "**Returns:** `Identifier`"
   ^js [labeled-statement]
   (.-label ^js labeled-statement))
 
 (defn statement
+  "**Returns:** `Statement`"
   ^js [labeled-statement]
   (.-statement ^js labeled-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [labeled-statement]
   (.-flags ^js labeled-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [labeled-statement]
   (.-parent ^js labeled-statement))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js labeled-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [labeled-statement]
   (.-pos ^js labeled-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [labeled-statement]
   (.-end ^js labeled-statement))

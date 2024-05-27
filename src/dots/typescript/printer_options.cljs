@@ -1,6 +1,7 @@
 (ns dots.typescript.printer-options)
 
 (defn remove-comments?
+  "**Returns:** `boolean | undefined`"
   ^js [printer-options]
   (.-removeComments ^js printer-options))
 
@@ -9,6 +10,7 @@
   (set! (.-removeComments ^js printer-options) value))
 
 (defn new-line
+  "**Returns:** `NewLineKind | undefined`"
   ^js [printer-options]
   (.-newLine ^js printer-options))
 
@@ -17,6 +19,7 @@
   (set! (.-newLine ^js printer-options) value))
 
 (defn omit-trailing-semicolon?
+  "**Returns:** `boolean | undefined`"
   ^js [printer-options]
   (.-omitTrailingSemicolon ^js printer-options))
 
@@ -25,6 +28,7 @@
   (set! (.-omitTrailingSemicolon ^js printer-options) value))
 
 (defn no-emit-helpers?
+  "**Returns:** `boolean | undefined`"
   ^js [printer-options]
   (.-noEmitHelpers ^js printer-options))
 

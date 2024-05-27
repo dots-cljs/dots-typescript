@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.MetaProperty`"
   ^js [meta-property]
   (.-kind ^js meta-property))
 
 (defn keyword-token
+  "**Returns:** `SyntaxKind.ImportKeyword | SyntaxKind.NewKeyword`"
   ^js [meta-property]
   (.-keywordToken ^js meta-property))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [meta-property]
   (.-name ^js meta-property))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [meta-property]
   (.-flags ^js meta-property))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [meta-property]
   (.-parent ^js meta-property))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js meta-property cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [meta-property]
   (.-pos ^js meta-property))
 
 (defn end
+  "**Returns:** `number`"
   ^js [meta-property]
   (.-end ^js meta-property))

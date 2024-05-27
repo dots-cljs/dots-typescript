@@ -1,6 +1,7 @@
 (ns dots.typescript.apply-code-action-command-result)
 
 (defn success-message
+  "**Returns:** `string`"
   ^js [apply-code-action-command-result]
   (.-successMessage ^js apply-code-action-command-result))
 

@@ -3,6 +3,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn body
+  "**Returns:** `ProjectInfo | undefined`"
   ^js [project-info-response]
   (.-body ^js project-info-response))
 
@@ -11,6 +12,7 @@
   (set! (.-body ^js project-info-response) value))
 
 (defn type
+  "**Returns:** `\"response\"`"
   ^js [project-info-response]
   (.-type ^js project-info-response))
 
@@ -19,7 +21,9 @@
   (set! (.-type ^js project-info-response) value))
 
 (defn request-seq
-  "Sequence number of the request message."
+  "Sequence number of the request message.
+   
+   **Returns:** `number`"
   ^js [project-info-response]
   (.-request_seq ^js project-info-response))
 
@@ -29,7 +33,9 @@
   (set! (.-request_seq ^js project-info-response) value))
 
 (defn success?
-  "Outcome of the request."
+  "Outcome of the request.
+   
+   **Returns:** `boolean`"
   ^js [project-info-response]
   (.-success ^js project-info-response))
 
@@ -39,7 +45,9 @@
   (set! (.-success ^js project-info-response) value))
 
 (defn command
-  "The command requested."
+  "The command requested.
+   
+   **Returns:** `string`"
   ^js [project-info-response]
   (.-command ^js project-info-response))
 
@@ -50,7 +58,9 @@
 
 (defn message
   "If success === false, this should always be provided.
-   Otherwise, may (or may not) contain a success message."
+   Otherwise, may (or may not) contain a success message.
+   
+   **Returns:** `string | undefined`"
   ^js [project-info-response]
   (.-message ^js project-info-response))
 
@@ -61,7 +71,9 @@
   (set! (.-message ^js project-info-response) value))
 
 (defn metadata
-  "Contains extra information that plugin can include to be passed on"
+  "Contains extra information that plugin can include to be passed on
+   
+   **Returns:** `unknown`"
   ^js [project-info-response]
   (.-metadata ^js project-info-response))
 
@@ -71,7 +83,9 @@
   (set! (.-metadata ^js project-info-response) value))
 
 (defn performance-data
-  "Exposes information about the performance of this request-response pair."
+  "Exposes information about the performance of this request-response pair.
+   
+   **Returns:** `PerformanceData | undefined`"
   ^js [project-info-response]
   (.-performanceData ^js project-info-response))
 
@@ -81,7 +95,9 @@
   (set! (.-performanceData ^js project-info-response) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [project-info-response]
   (.-seq ^js project-info-response))
 

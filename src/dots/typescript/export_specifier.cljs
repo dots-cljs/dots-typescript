@@ -2,26 +2,32 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ExportSpecifier`"
   ^js [export-specifier]
   (.-kind ^js export-specifier))
 
 (defn parent
+  "**Returns:** `NamedExports`"
   ^js [export-specifier]
   (.-parent ^js export-specifier))
 
 (defn type-only?
+  "**Returns:** `boolean`"
   ^js [export-specifier]
   (.-isTypeOnly ^js export-specifier))
 
 (defn property-name
+  "**Returns:** `Identifier | undefined`"
   ^js [export-specifier]
   (.-propertyName ^js export-specifier))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [export-specifier]
   (.-name ^js export-specifier))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [export-specifier]
   (.-flags ^js export-specifier))
 
@@ -161,9 +167,11 @@
    (.forEachChild ^js export-specifier cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [export-specifier]
   (.-pos ^js export-specifier))
 
 (defn end
+  "**Returns:** `number`"
   ^js [export-specifier]
   (.-end ^js export-specifier))

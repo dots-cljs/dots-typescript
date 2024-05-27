@@ -1,18 +1,22 @@
 (ns dots.typescript.break-statement)
 
 (defn kind
+  "**Returns:** `SyntaxKind.BreakStatement`"
   ^js [break-statement]
   (.-kind ^js break-statement))
 
 (defn label
+  "**Returns:** `Identifier | undefined`"
   ^js [break-statement]
   (.-label ^js break-statement))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [break-statement]
   (.-flags ^js break-statement))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [break-statement]
   (.-parent ^js break-statement))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js break-statement cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [break-statement]
   (.-pos ^js break-statement))
 
 (defn end
+  "**Returns:** `number`"
   ^js [break-statement]
   (.-end ^js break-statement))

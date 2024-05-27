@@ -6,7 +6,9 @@
    the text span is empty.  For a deletion, newText is empty.")
 
 (defn start
-  "First character of the text span to edit."
+  "First character of the text span to edit.
+   
+   **Returns:** `Location`"
   ^js [code-edit]
   (.-start ^js code-edit))
 
@@ -16,7 +18,9 @@
   (set! (.-start ^js code-edit) value))
 
 (defn end
-  "One character past last character of the text span to edit."
+  "One character past last character of the text span to edit.
+   
+   **Returns:** `Location`"
   ^js [code-edit]
   (.-end ^js code-edit))
 
@@ -27,7 +31,9 @@
 
 (defn new-text
   "Replace the span defined above with this string (may be
-   the empty string)."
+   the empty string).
+   
+   **Returns:** `string`"
   ^js [code-edit]
   (.-newText ^js code-edit))
 

@@ -1,6 +1,7 @@
 (ns dots.typescript.parse-config-host)
 
 (defn use-case-sensitive-file-names?
+  "**Returns:** `boolean`"
   ^js [parse-config-host]
   (.-useCaseSensitiveFileNames ^js parse-config-host))
 

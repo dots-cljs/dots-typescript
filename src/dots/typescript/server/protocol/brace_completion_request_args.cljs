@@ -2,7 +2,9 @@
   "Argument for BraceCompletionRequest request.")
 
 (defn opening-brace
-  "Kind of opening brace"
+  "Kind of opening brace
+   
+   **Returns:** `string`"
   ^js [brace-completion-request-args]
   (.-openingBrace ^js brace-completion-request-args))
 
@@ -12,7 +14,9 @@
   (set! (.-openingBrace ^js brace-completion-request-args) value))
 
 (defn line
-  "The line number for the request (1-based)."
+  "The line number for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [brace-completion-request-args]
   (.-line ^js brace-completion-request-args))
 
@@ -22,7 +26,9 @@
   (set! (.-line ^js brace-completion-request-args) value))
 
 (defn offset
-  "The character offset (on the line) for the request (1-based)."
+  "The character offset (on the line) for the request (1-based).
+   
+   **Returns:** `number`"
   ^js [brace-completion-request-args]
   (.-offset ^js brace-completion-request-args))
 
@@ -32,7 +38,9 @@
   (set! (.-offset ^js brace-completion-request-args) value))
 
 (defn file
-  "The file for the request (absolute pathname required)."
+  "The file for the request (absolute pathname required).
+   
+   **Returns:** `string`"
   ^js [brace-completion-request-args]
   (.-file ^js brace-completion-request-args))
 
@@ -42,6 +50,7 @@
   (set! (.-file ^js brace-completion-request-args) value))
 
 (defn project-file-name
+  "**Returns:** `string | undefined`"
   ^js [brace-completion-request-args]
   (.-projectFileName ^js brace-completion-request-args))
 

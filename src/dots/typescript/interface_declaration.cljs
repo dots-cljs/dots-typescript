@@ -2,34 +2,42 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.InterfaceDeclaration`"
   ^js [interface-declaration]
   (.-kind ^js interface-declaration))
 
 (defn modifiers
+  "**Returns:** `NodeArray<ModifierLike> | undefined`"
   ^js [interface-declaration]
   (.-modifiers ^js interface-declaration))
 
 (defn name
+  "**Returns:** `Identifier`"
   ^js [interface-declaration]
   (.-name ^js interface-declaration))
 
 (defn type-parameters
+  "**Returns:** `NodeArray<TypeParameterDeclaration> | undefined`"
   ^js [interface-declaration]
   (.-typeParameters ^js interface-declaration))
 
 (defn heritage-clauses
+  "**Returns:** `NodeArray<HeritageClause> | undefined`"
   ^js [interface-declaration]
   (.-heritageClauses ^js interface-declaration))
 
 (defn members
+  "**Returns:** `NodeArray<TypeElement>`"
   ^js [interface-declaration]
   (.-members ^js interface-declaration))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [interface-declaration]
   (.-flags ^js interface-declaration))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [interface-declaration]
   (.-parent ^js interface-declaration))
 
@@ -169,9 +177,11 @@
    (.forEachChild ^js interface-declaration cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [interface-declaration]
   (.-pos ^js interface-declaration))
 
 (defn end
+  "**Returns:** `number`"
   ^js [interface-declaration]
   (.-end ^js interface-declaration))

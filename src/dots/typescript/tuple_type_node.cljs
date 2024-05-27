@@ -1,18 +1,22 @@
 (ns dots.typescript.tuple-type-node)
 
 (defn kind
+  "**Returns:** `SyntaxKind.TupleType`"
   ^js [tuple-type-node]
   (.-kind ^js tuple-type-node))
 
 (defn elements
+  "**Returns:** `NodeArray<TypeNode | NamedTupleMember>`"
   ^js [tuple-type-node]
   (.-elements ^js tuple-type-node))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [tuple-type-node]
   (.-flags ^js tuple-type-node))
 
 (defn parent
+  "**Returns:** `Node`"
   ^js [tuple-type-node]
   (.-parent ^js tuple-type-node))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js tuple-type-node cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [tuple-type-node]
   (.-pos ^js tuple-type-node))
 
 (defn end
+  "**Returns:** `number`"
   ^js [tuple-type-node]
   (.-end ^js tuple-type-node))

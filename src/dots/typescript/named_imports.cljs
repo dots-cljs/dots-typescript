@@ -1,18 +1,22 @@
 (ns dots.typescript.named-imports)
 
 (defn kind
+  "**Returns:** `SyntaxKind.NamedImports`"
   ^js [named-imports]
   (.-kind ^js named-imports))
 
 (defn parent
+  "**Returns:** `ImportClause`"
   ^js [named-imports]
   (.-parent ^js named-imports))
 
 (defn elements
+  "**Returns:** `NodeArray<ImportSpecifier>`"
   ^js [named-imports]
   (.-elements ^js named-imports))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [named-imports]
   (.-flags ^js named-imports))
 
@@ -152,9 +156,11 @@
    (.forEachChild ^js named-imports cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [named-imports]
   (.-pos ^js named-imports))
 
 (defn end
+  "**Returns:** `number`"
   ^js [named-imports]
   (.-end ^js named-imports))

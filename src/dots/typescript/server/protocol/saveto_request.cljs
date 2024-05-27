@@ -7,6 +7,7 @@
   (:refer-clojure :exclude [seq type]))
 
 (defn command
+  "**Returns:** `CommandTypes.Saveto`"
   ^js [saveto-request]
   (.-command ^js saveto-request))
 
@@ -15,6 +16,7 @@
   (set! (.-command ^js saveto-request) value))
 
 (defn arguments
+  "**Returns:** `SavetoRequestArgs`"
   ^js [saveto-request]
   (.-arguments ^js saveto-request))
 
@@ -23,6 +25,7 @@
   (set! (.-arguments ^js saveto-request) value))
 
 (defn type
+  "**Returns:** `\"request\"`"
   ^js [saveto-request]
   (.-type ^js saveto-request))
 
@@ -31,7 +34,9 @@
   (set! (.-type ^js saveto-request) value))
 
 (defn seq
-  "Sequence number of the message"
+  "Sequence number of the message
+   
+   **Returns:** `number`"
   ^js [saveto-request]
   (.-seq ^js saveto-request))
 

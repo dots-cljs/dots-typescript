@@ -1,22 +1,27 @@
 (ns dots.typescript.unparsed-prepend)
 
 (defn kind
+  "**Returns:** `SyntaxKind.UnparsedPrepend`"
   ^js [unparsed-prepend]
   (.-kind ^js unparsed-prepend))
 
 (defn parent
+  "**Returns:** `UnparsedSource`"
   ^js [unparsed-prepend]
   (.-parent ^js unparsed-prepend))
 
 (defn data
+  "**Returns:** `string`"
   ^js [unparsed-prepend]
   (.-data ^js unparsed-prepend))
 
 (defn texts
+  "**Returns:** `readonly UnparsedTextLike[]`"
   ^js [unparsed-prepend]
   (.-texts ^js unparsed-prepend))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [unparsed-prepend]
   (.-flags ^js unparsed-prepend))
 
@@ -156,9 +161,11 @@
    (.forEachChild ^js unparsed-prepend cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [unparsed-prepend]
   (.-pos ^js unparsed-prepend))
 
 (defn end
+  "**Returns:** `number`"
   ^js [unparsed-prepend]
   (.-end ^js unparsed-prepend))

@@ -2,22 +2,27 @@
   (:refer-clojure :exclude [name]))
 
 (defn kind
+  "**Returns:** `SyntaxKind.ImportAttribute`"
   ^js [assert-entry]
   (.-kind ^js assert-entry))
 
 (defn parent
+  "**Returns:** `ImportAttributes`"
   ^js [assert-entry]
   (.-parent ^js assert-entry))
 
 (defn name
+  "**Returns:** `ImportAttributeName`"
   ^js [assert-entry]
   (.-name ^js assert-entry))
 
 (defn value
+  "**Returns:** `Expression`"
   ^js [assert-entry]
   (.-value ^js assert-entry))
 
 (defn flags
+  "**Returns:** `NodeFlags`"
   ^js [assert-entry]
   (.-flags ^js assert-entry))
 
@@ -157,9 +162,11 @@
    (.forEachChild ^js assert-entry cb-node cb-node-array)))
 
 (defn pos
+  "**Returns:** `number`"
   ^js [assert-entry]
   (.-pos ^js assert-entry))
 
 (defn end
+  "**Returns:** `number`"
   ^js [assert-entry]
   (.-end ^js assert-entry))
