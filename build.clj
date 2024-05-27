@@ -7,11 +7,11 @@
 (def class-dir "target/classes")
 (def jar-file (format "target/%s-%s.jar" (name lib) version))
 
-(def basis (delay (b/create-basis {:project "deps.edn"})))
+(def basis (delay (b/create-basis {:root nil})))
 
 (def pom-data
   [[:description "ClojureScript wrapper for TypeScript"]
-   [:url ""]
+   [:url "https://github.com/dots-cljs/dots-typescript"]
    [:licenses
     [:license
      [:name "MIT License"]
