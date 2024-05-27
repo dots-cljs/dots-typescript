@@ -36,7 +36,7 @@ See [cljdoc].
 ## License
 
 Distributed under the [MIT License].  
-Copyright &copy; 2022 [Ferdinand Beyer]
+Copyright &copy; 2024 [Ferdinand Beyer]
 
 [Ferdinand Beyer]: https://fbeyer.com
 [MIT License]: https://opensource.org/licenses/MIT
