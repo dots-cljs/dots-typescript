@@ -5,11 +5,11 @@
 (defn sorted-array-brand
   "**Returns:** `any`"
   ^js []
-  (.. typescript/server -emptyArray -" __sortedArrayBrand"))
+  (unchecked-get (.-emptyArray typescript/server) " __sortedArrayBrand"))
 
 (defn set-sorted-array-brand!
   ^js [value]
-  (set! (.. typescript/server -emptyArray -" __sortedArrayBrand") value))
+  (unchecked-set (.-emptyArray typescript/server) " __sortedArrayBrand" value))
 
 (defn length
   "Gets the length of the array. This is a number one higher than the highest element defined in an array.

@@ -4,11 +4,11 @@
 (defn sorted-array-brand
   "**Returns:** `any`"
   ^js [sorted-readonly-array]
-  (.-" __sortedArrayBrand" ^js sorted-readonly-array))
+  (unchecked-get ^js sorted-readonly-array " __sortedArrayBrand"))
 
 (defn set-sorted-array-brand!
   ^js [sorted-readonly-array value]
-  (set! (.-" __sortedArrayBrand" ^js sorted-readonly-array) value))
+  (unchecked-set ^js sorted-readonly-array " __sortedArrayBrand" value))
 
 (defn length
   "Gets the length of the array. This is a number one higher than the highest element defined in an array.
