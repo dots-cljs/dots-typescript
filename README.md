@@ -16,13 +16,13 @@ Distributed via [Clojars][clojars].
 Add this to your `deps.edn`:
 
 ```clojure
-io.github.dots-cljs/dots-typescript {:mvn/version "v5.4.5-6"}
+io.github.dots-cljs/dots-typescript {:mvn/version "v5.4.5-10"}
 ```
 
 Or this to your `shadow-cljs.edn`:
 
 ```clojure
-[io.github.dots-cljs/dots-typescript "v5.4.5-6"]
+[io.github.dots-cljs/dots-typescript "v5.4.5-10"]
 ```
 
 We use the versioning scheme `UPSTREAM-COMMITS`:
